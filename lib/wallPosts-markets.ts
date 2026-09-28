@@ -1,6 +1,7 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T29SEP = 1790636400000; // 2026-09-29 08:00 KST
 const T23 = 1790118000000; // 2026-09-23 08:00 KST
 const T22 = 1790031600000; // 2026-09-22 08:00 KST
 const T21 = 1789945200000; // 2026-09-21 08:00 KST
@@ -26,6 +27,11 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9440, symbol: "코스피", nickname: "육천팔백팔십구", holdingLabel: "인덱스 보유", content: "어제 6889.74 -2.70%. 시가 7057.86. 외인 3.60조 기관 1.33조 매도. 오늘은 삼성 배당락", createdAt: T29SEP - 0, likes: 44, comments: 2, },
+  { id: 9441, symbol: "삼성전자", nickname: "이십칠만배당락", holdingLabel: "삼성전자 보유", content: "어제 270000 -5.43%. 오늘은 배당락. 기준일 내일 30. 우선주 -5.91", createdAt: T29SEP - 1800000, likes: 43, comments: 2, },
+  { id: 9442, symbol: "SK하이닉스", nickname: "닉스백칠육팔", holdingLabel: "하이닉스 보유", content: "어제 176만8천 -5.05%. 솔리다임 미상장 검토 소식. 삼성5%대랑 같이", createdAt: T29SEP - 3600000, likes: 42, comments: 2, },
+  { id: 9443, symbol: "SK스퀘어", nickname: "스퀘어칠쩜오육", holdingLabel: "관심", content: "어제 -7.56%. 연휴전 +5.03 하루만에 토함. 지주가 본업보다 더뺌", createdAt: T29SEP - 5400000, likes: 41, comments: 2, },
+  { id: 9444, symbol: "LG에너지솔루션", nickname: "엔솔삼쩜오육", holdingLabel: "관심", content: "어제 +3.56%. 지수 빨간날 배터리만 강함. 현대 +0.28 바이오 +2.49", createdAt: T29SEP - 7200000, likes: 40, comments: 2, },
   { id: 9426, symbol: "코스피", nickname: "칠천팔십재개장", holdingLabel: "인덱스 보유", content: "전일 종가 7080.92(+0.90%). 고가 7153.99. 오늘 재개장. 내일 삼성 배당락", createdAt: T28 - 0, likes: 44, comments: 2, },
   { id: 9427, symbol: "삼성전자", nickname: "배당막차이팔", holdingLabel: "삼성전자 보유", content: "전일 285500(+3.25%). 오늘이 3분기 배당 마지막 매수. 기준일 30 배당락 29. 약30조", createdAt: T28 - 1800000, likes: 43, comments: 2, },
   { id: 9428, symbol: "SK하이닉스", nickname: "닉스백팔육이", holdingLabel: "하이닉스 보유", content: "전일 186만2천 +1.20%. 고가 190만. 삼성 28만대랑 같이 움직임", createdAt: T28 - 3600000, likes: 42, comments: 2, },
@@ -174,6 +180,26 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9440: [
+    { id: 1, nickname: "육천팔백팔십구", holdingLabel: "관망", content: "7000 내준 하루. 시가가 6889 위인지",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "배당락오늘", holdingLabel: "관심종목", content: "삼성 배당락이 지수에도 조금 무게", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9441: [
+    { id: 1, nickname: "이십칠만배당락", holdingLabel: "삼성전자 보유", content: "어제까지가 마지막 매수였음. 오늘은 권리 빠짐",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "금리쇼크", holdingLabel: "관심종목", content: "실적호재가 하루를 못막음", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9442: [
+    { id: 1, nickname: "닉스백칠육팔", holdingLabel: "하이닉스 보유", content: "솔리다임은 검토지 공시아님",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "마이크론삼십", holdingLabel: "관심종목", content: "30일 실적 코멘트가 다음", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9443: [
+    { id: 1, nickname: "스퀘어칠쩜오육", holdingLabel: "관심", content: "지주 할증이 약한날에 먼저 빠짐",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "닉스대비", holdingLabel: "관심종목", content: "본업 -5 지주 -7 갭 같이봄", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9444: [
+    { id: 1, nickname: "엔솔삼쩜오육", holdingLabel: "관심", content: "순환 하루. 수주공시는 아님",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "시가확인", holdingLabel: "관심종목", content: "오늘 시가가 강세 잇는지", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
   9426: [
     { id: 1, nickname: "칠천팔십재개장", holdingLabel: "관망", content: "7080은 전일종가. 시가 나오면 바꿈", createdAt: T28 + 600000, likes: 5 },
     { id: 2, nickname: "배당락내일", holdingLabel: "관심종목", content: "29일 배당락이 지수에도 조금 무게줌", createdAt: T28 + 1200000, likes: 4 },
@@ -709,6 +735,11 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9445, symbol: "한장요약", nickname: "팔만삼천십오", holdingLabel: "관망", content: "BTC 83015, 금 4146, 이더 2667, 은 61.11. 금리에 같이 쉼", createdAt: T29SEP - 0, likes: 44, comments: 2, },
+  { id: 9446, symbol: "비트코인", nickname: "비트팔만삼공", holdingLabel: "BTC 보유", content: "자정 83015 -1.78%. 업비트 1.1298억. 김프 -0.02. 경고선 82800", createdAt: T29SEP - 1800000, likes: 43, comments: 2, },
+  { id: 9447, symbol: "금", nickname: "금사천일사육", holdingLabel: "금 ETF", content: "현물 4145.88 -3.27%. 선물 4176.80. 주말 4285에서 내려옴", createdAt: T29SEP - 3600000, likes: 42, comments: 2, },
+  { id: 9448, symbol: "이더리움", nickname: "이더이육육칠", holdingLabel: "관심", content: "이더 2667 -0.59%. 비트보다 덜뺌. 김프 -0.10", createdAt: T29SEP - 5400000, likes: 41, comments: 2, },
+  { id: 9449, symbol: "은", nickname: "은육십일", holdingLabel: "관심", content: "은 61.11 -4.92%. 선물 -5.1%. 금보다 더뺌. 주말 64대", createdAt: T29SEP - 7200000, likes: 40, comments: 2, },
   { id: 9431, symbol: "한장요약", nickname: "팔만사천육백", holdingLabel: "관망", content: "BTC 84601, 금 4285, 이더 2713, 은 64. 비트펀드 주간 24억", createdAt: T28 - 0, likes: 44, comments: 2, },
   { id: 9432, symbol: "비트코인", nickname: "비트팔만사육", holdingLabel: "BTC 보유", content: "주말 84601. 23일 86558에서 내려옴. 펀드 주간 24억. 경고선 82800~83000", createdAt: T28 - 1800000, likes: 43, comments: 2, },
   { id: 9433, symbol: "금", nickname: "금사천이팔오", holdingLabel: "금 ETF", content: "금 4285. 주간종가 4287.25 -2.08%. 4300 반납. 저가 4244", createdAt: T28 - 3600000, likes: 42, comments: 2, },
@@ -838,6 +869,26 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9445: [
+    { id: 1, nickname: "팔만삼천십오", holdingLabel: "관망", content: "비트랑 금이 같이 내린 밤",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "은육십일", holdingLabel: "관망", content: "은이 더 세게 빠짐", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9446: [
+    { id: 1, nickname: "비트팔만삼공", holdingLabel: "BTC 보유", content: "82800 아래 몇시간인지",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "펀딩마이너스", holdingLabel: "관심", content: "미결제 65.2만 비트 감소", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9447: [
+    { id: 1, nickname: "금사천일사육", holdingLabel: "금 ETF", content: "4100이 다음 눈금",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "금리오공일", holdingLabel: "관심", content: "10년 5.2%가 무이자 금속 누름", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9448: [
+    { id: 1, nickname: "이더이육육칠", holdingLabel: "관심", content: "2700아래 습관되는지",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "점유조금", holdingLabel: "관심", content: "비트보다 덜뺀 하루", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9449: [
+    { id: 1, nickname: "은육십일", holdingLabel: "관심", content: "61대가 저가인지",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "금은비율", holdingLabel: "관심", content: "비율 약68. 주말67에서 벌어짐", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
   9431: [
     { id: 1, nickname: "팔만사천육백", holdingLabel: "관망", content: "가격은 내려도 펀드는 담은 주", createdAt: T28 + 600000, likes: 5 },
     { id: 2, nickname: "금사천이팔오", holdingLabel: "관망", content: "금이랑 비트가 같이 쉼", createdAt: T28 + 1200000, likes: 4 },
@@ -1293,6 +1344,10 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9450, symbol: "한장요약", nickname: "계양에이육", holdingLabel: "관심", content: "내일부터 계양A6 사흘청약 663가구. 본청약지연 60%. 내일 집코노미", createdAt: T29SEP - 0, likes: 44, comments: 2, },
+  { id: 9451, symbol: "공급정책", nickname: "계양육백육십삼", holdingLabel: "관심", content: "59제곱 5.3억 84제곱 7.1억. 전매3년 실거주의무없음. 입주 2029.6", createdAt: T29SEP - 1800000, likes: 43, comments: 2, },
+  { id: 9452, symbol: "공급정책", nickname: "지연육십퍼", holdingLabel: "관심", content: "35곳중 21곳 한달이상 지연. 왕숙2 84A 7.32억 추정대비 +30%", createdAt: T29SEP - 3600000, likes: 42, comments: 2, },
+  { id: 9453, symbol: "공급정책", nickname: "집코노미삼십", holdingLabel: "관심", content: "내일 코엑스. 안심신탁 상담. 전세금 HUG에 맡김", createdAt: T29SEP - 5400000, likes: 41, comments: 2, },
   { id: 9436, symbol: "한장요약", nickname: "만이천호전환", holdingLabel: "관심", content: "3기 분양전환 1.2만호 순수임대로 검토. 부천대장 최단기착공. 공공기관 2차이전", createdAt: T28 - 0, likes: 44, comments: 2, },
   { id: 9437, symbol: "공급정책", nickname: "분양전환임대", holdingLabel: "관심", content: "이미 사전청약 착공 단지는 제외. 분양예정이던 집이 임대로 남음", createdAt: T28 - 1800000, likes: 43, comments: 2, },
   { id: 9438, symbol: "공급정책", nickname: "부천대장착공", holdingLabel: "관심", content: "최단기 착공 모델. 계획숫자 말고 흙. 다른 3기가 따라올수있음", createdAt: T28 - 3600000, likes: 42, comments: 2, },
@@ -1401,6 +1456,22 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9450: [
+    { id: 1, nickname: "계양에이육", holdingLabel: "관심", content: "추석끝나자 본청약 달력",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "지연육십퍼", holdingLabel: "관심", content: "속도정책이랑 현장지연 같은주", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9451: [
+    { id: 1, nickname: "계양육백육십삼", holdingLabel: "관심", content: "경쟁률이 다음",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "대장십월", holdingLabel: "관심종목", content: "부천대장 A-2는 10월 대기", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9452: [
+    { id: 1, nickname: "지연육십퍼", holdingLabel: "관심", content: "창릉 S1 150명 본청약 포기",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "건축비", holdingLabel: "관심종목", content: "기본형 232.8만 7월보다 +4.07%", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  9453: [
+    { id: 1, nickname: "집코노미삼십", holdingLabel: "관심", content: "상담건수가 가입으로 이어지는지",     createdAt: T29SEP + 600000, likes: 5 },
+    { id: 2, nickname: "지티엑스비", holdingLabel: "관심", content: "B노선 2030 개통 목표", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
   9436: [
     { id: 1, nickname: "만이천호전환", holdingLabel: "관심", content: "어제 취임 안심신탁이랑 다른줄", createdAt: T28 + 600000, likes: 5 },
     { id: 2, nickname: "부천대장착공", holdingLabel: "관심", content: "1.2만은 검토. 고시가 달력", createdAt: T28 + 1200000, likes: 4 },

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.29 Daily Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="136" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="136" rx="4" fill="#c084fc"/>
+  <text x="116" y="170" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#c084fc">Starship Flight 14 reached a first orbit, then splashed…</text>
+  <text x="116" y="200" font-family="Arial" font-size="17" fill="#9ca3af">Ship 41. Twenty-six Starlink V3s deployed, and contact held on all 26.</text>
+  <text x="985" y="192" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">Orbit</text>
+  <rect x="60" y="268" width="960" height="136" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="268" width="8" height="136" rx="4" fill="#a78bfa"/>
+  <text x="116" y="316" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#a78bfa">The flight was said to add about 26 terabits of Starlink…</text>
+  <text x="116" y="346" font-family="Arial" font-size="17" fill="#9ca3af">Each V3 is about 1 Tbps. About ten times a Falcon 9 V2 Mini.</text>
+  <text x="985" y="338" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">26 Tbps</text>
+  <rect x="60" y="414" width="960" height="136" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="414" width="8" height="136" rx="4" fill="#4ade80"/>
+  <text x="116" y="462" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#4ade80">The UAE listed Tesla FSD Supervised validation in its…</text>
+  <text x="116" y="492" font-family="Arial" font-size="17" fill="#9ca3af">Dubai Mobility Labs listed 248 scenarios. That is not a pass count.</text>
+  <text x="985" y="484" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">FSD</text>
+  <rect x="60" y="560" width="960" height="136" rx="14" fill="#0a1a0a" stroke="#22c55e" stroke-width="2"/>
+  <rect x="60" y="560" width="8" height="136" rx="4" fill="#22c55e"/>
+  <text x="116" y="608" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#22c55e">U.S. Tesla APR rose 0.50 percentage points on several trims</text>
+  <text x="116" y="638" font-family="Arial" font-size="17" fill="#9ca3af">Model 3 Premium 2.49%. Model Y Base and Premium 1.99%.</text>
+  <text x="985" y="630" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22c55e" text-anchor="end">+50 bps</text>
+  <rect x="60" y="706" width="960" height="136" rx="14" fill="#1a0a10" stroke="#fb7185" stroke-width="2"/>
+  <rect x="60" y="706" width="8" height="136" rx="4" fill="#fb7185"/>
+  <text x="116" y="754" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#fb7185">The Roadster event moved to October 15 after severe…</text>
+  <text x="116" y="784" font-family="Arial" font-size="17" fill="#9ca3af">It is outdoors. It had been October 1.</text>
+  <text x="985" y="776" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb7185" text-anchor="end">Oct 15</text>
+  <rect x="60" y="852" width="960" height="136" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="852" width="8" height="136" rx="4" fill="#ef4444"/>
+  <text x="116" y="900" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#ef4444">Final September U.S. consumer sentiment printed 48.1</text>
+  <text x="116" y="930" font-family="Arial" font-size="17" fill="#9ca3af">August 51.7, a year ago 55.1. Current 50.9, expectations 46.3.</text>
+  <text x="985" y="922" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">48.1</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: first orbit · 26 sats · UAE validation · APR +50bps · Roadster Oct 15 · 48.1</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

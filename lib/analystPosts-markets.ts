@@ -1,6 +1,37 @@
 import type { AnalystMockPost, AnalystMockComment } from "@/lib/analystPosts";
 
 export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
+  // ── 2026-09-29 KR ──────────────────────
+  {
+    id: -2442, alias: "여의도 수리 #40", symbol: "한장요약",
+    content: "어제 코스피는 6,889.74로 2.70% 내렸습니다. 삼성전자 27만 원, 오늘은 배당락일입니다. 하이닉스는 176만 8,000원입니다.",
+    likes: 28, comments: 2, created_at: "2026-09-29T06:00:00.000Z", liked: false,
+  },
+  {
+    id: -2443, alias: "성수 너구리 #25", symbol: "코스피",
+    content: "코스피가 191.18포인트 내린 6,889.74입니다. 외국인 3조 6,010억 원, 기관 1조 3,332억 원을 순매도했습니다.",
+    likes: 27, comments: 2, created_at: "2026-09-29T06:08:00.000Z", liked: false,
+  },
+  {
+    id: -2444, alias: "판교 치타 #33", symbol: "삼성전자",
+    content: "삼성전자 어제 종가는 27만 원(−5.43%)입니다. 오늘은 배당락일이고 기준일은 내일 30일입니다.",
+    likes: 26, comments: 2, created_at: "2026-09-29T06:16:00.000Z", liked: false,
+  },
+  {
+    id: -2445, alias: "삼성동 여우 #19", symbol: "SK하이닉스",
+    content: "SK하이닉스는 176만 8,000원으로 5.05% 내렸습니다. 솔리다임 미국 상장 검토 소식이 같은 날에 붙었습니다.",
+    likes: 25, comments: 2, created_at: "2026-09-29T06:24:00.000Z", liked: false,
+  },
+  {
+    id: -2446, alias: "잠실 백로 #36", symbol: "SK스퀘어",
+    content: "SK스퀘어는 7.56% 내리며 연휴 전 할증을 토해 냈습니다. 하이닉스 본업보다 지주가 더 빠졌습니다.",
+    likes: 24, comments: 2, created_at: "2026-09-29T06:32:00.000Z", liked: false,
+  },
+  {
+    id: -2447, alias: "역삼 판다 #90", symbol: "LG에너지솔루션",
+    content: "LG에너지솔루션은 3.56% 올랐습니다. 지수가 빠진 날 배터리·바이오가 순환 칸이었습니다.",
+    likes: 23, comments: 2, created_at: "2026-09-29T06:40:00.000Z", liked: false,
+  },
   // ── 2026-09-28 KR ──────────────────────
   {
     id: -2427, alias: "여의도 수리 #39", symbol: "한장요약",
@@ -596,6 +627,31 @@ export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
+  // ── 2026-09-29 KR 댓글 ──────────────────────
+  [-2442]: [
+    { alias: "인천 갈매기 #65", content: "어제 종가 6,889.74와 오늘 배당락을 표에 두겠습니다.", created_at: "2026-09-29T06:10:00.000Z" },
+    { alias: "합정 수달 #20", content: "외국인 매도가 하루 만에 줄어드는지가 반등 두께입니다.", created_at: "2026-09-29T06:17:00.000Z" },
+  ],
+  [-2443]: [
+    { alias: "마포 살괭이 #21", content: "7,000선은 심리적 선입니다. 오늘 시가가 출발입니다.", created_at: "2026-09-29T06:10:00.000Z" },
+    { alias: "판교 늑대 #103", content: "마이크론 30일 실적이 메모리 심리를 다시 적습니다.", created_at: "2026-09-29T06:17:00.000Z" },
+  ],
+  [-2444]: [
+    { alias: "인천 갈매기 #65", content: "배당락 갭과 금리 충격을 한 숫자로 더하지 않겠습니다.", created_at: "2026-09-29T06:10:00.000Z" },
+    { alias: "압구정 치타 #57", content: "27만 원은 어제 종가입니다. 오늘 시가가 확인입니다.", created_at: "2026-09-29T06:17:00.000Z" },
+  ],
+  [-2445]: [
+    { alias: "잠실 백로 #42", content: "솔리다임은 검토입니다. 상장 서류가 확인입니다.", created_at: "2026-09-29T06:10:00.000Z" },
+    { alias: "청담 여우 #24", content: "176만 8,000원 위 시가가 다음입니다.", created_at: "2026-09-29T06:17:00.000Z" },
+  ],
+  [-2446]: [
+    { alias: "역삼 판다 #90", content: "지주 7.56%는 하루 할증이 걷힌 숫자입니다.", created_at: "2026-09-29T06:10:00.000Z" },
+    { alias: "해운대 고래 #16", content: "하이닉스와 괴리를 같이 보겠습니다.", created_at: "2026-09-29T06:17:00.000Z" },
+  ],
+  [-2447]: [
+    { alias: "삼성동 올빼미 #32", content: "3.56%는 어제 상대강도입니다. 수주 공시는 아닙니다.", created_at: "2026-09-29T06:10:00.000Z" },
+    { alias: "판교 늑대 #103", content: "오늘 시가가 강세를 잇는지가 확인입니다.", created_at: "2026-09-29T06:17:00.000Z" },
+  ],
   // ── 2026-09-28 KR 댓글 ──────────────────────
   [-2427]: [
     { alias: "인천 갈매기 #64", content: "전일 종가 7,080.92와 오늘 배당 막차를 표에 두겠습니다.", created_at: "2026-09-28T06:10:00.000Z" },
@@ -1183,6 +1239,32 @@ export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
 };
 
 export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
+  // ── 2026-09-29 SAFE ──────────────────────
+  {
+    id: -2448, alias: "온체인 매 #14", symbol: "한장요약",
+    content: "비트코인이 자정께 8만 3,015달러입니다. 금 현물은 약 4,146달러, 은은 61.11달러, 이더는 2,667달러입니다.",
+    likes: 28, comments: 2, created_at: "2026-09-29T09:00:00.000Z", liked: false,
+  },
+  {
+    id: -2449, alias: "금벌레 학 #26", symbol: "비트코인",
+    content: "비트코인 83,015달러, 1.78% 내렸습니다. 김치 프리미엄은 −0.02%이고 8만 2,800달러가 경고선입니다.",
+    likes: 27, comments: 2, created_at: "2026-09-29T09:08:00.000Z", liked: false,
+  },
+  {
+    id: -2450, alias: "은빛 갈매기 #16", symbol: "금",
+    content: "금 현물이 4,145.88달러로 3.27% 내렸습니다. 미국 10년 금리 5.2%대가 무이자 금속을 눌렀습니다.",
+    likes: 26, comments: 2, created_at: "2026-09-29T09:16:00.000Z", liked: false,
+  },
+  {
+    id: -2451, alias: "알트 수달 #32", symbol: "이더리움",
+    content: "이더리움이 2,667달러로 0.59% 내렸습니다. 비트보다 낙폭이 작았습니다.",
+    likes: 25, comments: 2, created_at: "2026-09-29T09:24:00.000Z", liked: false,
+  },
+  {
+    id: -2452, alias: "청산 올빼미 #18", symbol: "은",
+    content: "은 현물이 61.11달러로 4.92% 내렸습니다. 금보다 더 빠진 하루입니다.",
+    likes: 24, comments: 2, created_at: "2026-09-29T09:32:00.000Z", liked: false,
+  },
   // ── 2026-09-28 SAFE ──────────────────────
   {
     id: -2433, alias: "온체인 매 #13", symbol: "한장요약",
@@ -1665,6 +1747,27 @@ export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {
+  // ── 2026-09-29 SAFE 댓글 ──────────────────────
+  [-2448]: [
+    { alias: "종로 까치 #54", content: "8만 3,015달러와 금 4,146달러를 같은 표에 두겠습니다.", created_at: "2026-09-29T09:10:00.000Z" },
+    { alias: "광화문 여우 #75", content: "은이 금보다 더 빠진 밤입니다.", created_at: "2026-09-29T09:17:00.000Z" },
+  ],
+  [-2449]: [
+    { alias: "여의도 수리 #41", content: "8만 2,800달러 경고선과 자정 가격을 나눠 적겠습니다.", created_at: "2026-09-29T09:10:00.000Z" },
+    { alias: "송파 독수리 #79", content: "김치 프리미엄 −0.02%는 국내가 해외와 거의 같다는 뜻입니다.", created_at: "2026-09-29T09:17:00.000Z" },
+  ],
+  [-2450]: [
+    { alias: "역삼 판다 #90", content: "4,100달러가 다음 눈금입니다.", created_at: "2026-09-29T09:10:00.000Z" },
+    { alias: "해운대 고래 #16", content: "10년 5.2%와 달러 인덱스를 같이 보겠습니다.", created_at: "2026-09-29T09:17:00.000Z" },
+  ],
+  [-2451]: [
+    { alias: "분당 매 #44", content: "2,700달러 아래가 습관이 되는지가 다음입니다.", created_at: "2026-09-29T09:10:00.000Z" },
+    { alias: "한남 재규어 #40", content: "비트보다 덜 빠진 하루입니다.", created_at: "2026-09-29T09:17:00.000Z" },
+  ],
+  [-2452]: [
+    { alias: "삼성동 올빼미 #32", content: "61달러대가 하루 저가인지가 확인입니다.", created_at: "2026-09-29T09:10:00.000Z" },
+    { alias: "판교 늑대 #103", content: "금·은 비율 약 68과 금 4,146달러를 같이 보겠습니다.", created_at: "2026-09-29T09:17:00.000Z" },
+  ],
   // ── 2026-09-28 SAFE 댓글 ──────────────────────
   [-2433]: [
     { alias: "종로 까치 #53", content: "8만 4,600달러와 펀드 24억 달러를 같은 표에 두겠습니다.", created_at: "2026-09-28T09:10:00.000Z" },
@@ -2140,6 +2243,27 @@ export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = 
 };
 
 export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
+  // ── 2026-09-29 KR-RE ──────────────────────
+  {
+    id: -2453, alias: "전세 참새 #13", symbol: "한장요약",
+    content: "인천 계양 A6가 내일부터 사흘 청약을 받습니다. 본청약 지연 60%와 내일 집코노미 박람회가 같은 화면입니다.",
+    likes: 28, comments: 2, created_at: "2026-09-29T10:00:00.000Z", liked: false,
+  },
+  {
+    id: -2454, alias: "갱신 백로 #44", symbol: "공급정책",
+    content: "계양 A6는 663가구입니다. 전용 59㎡ 약 5억 3천만 원, 입주는 2029년 6월입니다.",
+    likes: 27, comments: 2, created_at: "2026-09-29T10:08:00.000Z", liked: false,
+  },
+  {
+    id: -2455, alias: "동북 학 #27", symbol: "공급정책",
+    content: "사전청약 지구 35곳 중 21곳이 본청약을 한 달 이상 미뤘습니다. 왕숙2 확정가는 추정가보다 약 30% 올랐습니다.",
+    likes: 26, comments: 2, created_at: "2026-09-29T10:16:00.000Z", liked: false,
+  },
+  {
+    id: -2456, alias: "정책 너구리 #30", symbol: "공급정책",
+    content: "내일 코엑스 집코노미에서 안심신탁 상담이 열립니다. 전세금을 보증공사에 맡기는 3자 계약입니다.",
+    likes: 25, comments: 2, created_at: "2026-09-29T10:24:00.000Z", liked: false,
+  },
   // ── 2026-09-28 KR-RE ──────────────────────
   {
     id: -2438, alias: "전세 참새 #12", symbol: "한장요약",
@@ -2544,6 +2668,23 @@ export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {
+  // ── 2026-09-29 KR-RE 댓글 ──────────────────────
+  [-2453]: [
+    { alias: "성수 너구리 #28", content: "계양 청약 사흘과 지연 60%를 한 정책으로 합치지 않겠습니다.", created_at: "2026-09-29T10:10:00.000Z" },
+    { alias: "삼성동 올빼미 #32", content: "내일 박람회는 상담 창구입니다. 청약 접수는 다른 장소입니다.", created_at: "2026-09-29T10:17:00.000Z" },
+  ],
+  [-2454]: [
+    { alias: "역삼 판다 #90", content: "경쟁률과 계약률이 다음 숫자입니다.", created_at: "2026-09-29T10:10:00.000Z" },
+    { alias: "해운대 고래 #16", content: "대장 A-2 10월 공고일이 달력을 두껍게 합니다.", created_at: "2026-09-29T10:17:00.000Z" },
+  ],
+  [-2455]: [
+    { alias: "한남 재규어 #40", content: "21곳은 지구 숫자입니다. 단지별 새 공고일이 확인입니다.", created_at: "2026-09-29T10:10:00.000Z" },
+    { alias: "마포 살괭이 #21", content: "창릉 포기 150명이 다른 단지로 퍼지는지를 보겠습니다.", created_at: "2026-09-29T10:17:00.000Z" },
+  ],
+  [-2456]: [
+    { alias: "삼성동 올빼미 #32", content: "안심신탁 가입이 상담 다음입니다.", created_at: "2026-09-29T10:10:00.000Z" },
+    { alias: "판교 늑대 #103", content: "GTX-B 2030과 앵커기업 명단이 입지를 구체화합니다.", created_at: "2026-09-29T10:17:00.000Z" },
+  ],
   // ── 2026-09-28 KR-RE 댓글 ──────────────────────
   [-2438]: [
     { alias: "성수 너구리 #27", content: "1만 2,000호 전환과 부천 대장을 한 정책으로 합치지 않겠습니다.", created_at: "2026-09-28T10:10:00.000Z" },

@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T29SEP = 1790636400000; // 2026.09.29 08:00 KST
 const T28SEP = 1790550000000; // 2026.09.28 08:00 KST
 const T23SEP = 1790118000000; // 2026.09.23 08:00 KST
 const T22SEP = 1790031600000; // 2026.09.22 08:00 KST
@@ -131,7 +132,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T28SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T29SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -150,6 +151,28 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-29 신규 ────────────────
+  { id: 122056, symbol: "SPCX", nickname: "첫궤도십사", holdingLabel: "관심종목",
+    content: "스타십14 첫궤도 275km T+26분. S41. 26기 전개 연락전부. 걸프착수 31/33. 태평양 11:57 하와이북쪽",
+    createdAt: T29SEP + 8*60_000, likes: 24, comments: 2 },
+  { id: 122057, symbol: "SPCX", nickname: "브이삼이십육", holdingLabel: "관심종목",
+    content: "스타링크V3 26기. 기당 1Tbps 이번 26Tbps. 팰컨9 V2미니 약10배. 60기면 약20배. 연락전부",
+    createdAt: T29SEP + 16*60_000, likes: 23, comments: 2 },
+  { id: 122058, symbol: "TSLA", nickname: "아랍에프에스디", holdingLabel: "관심종목",
+    content: "UAE 규제실험실 Tesla Motors FSD Supervised 검증. 두바이랩 248시나리오. 통과숫자아님. 2030 25%",
+    createdAt: T29SEP + 24*60_000, likes: 22, comments: 2 },
+  { id: 122059, symbol: "TSLA", nickname: "할부오십비피", holdingLabel: "관심종목",
+    content: "미국할부 +0.50%p. 3프리미엄 2.49. Y베이스·프리미엄 1.99. 프로모 9/30전후",
+    createdAt: T29SEP + 32*60_000, likes: 21, comments: 2 },
+  { id: 122060, symbol: "TSLA", nickname: "로드스터십오", holdingLabel: "관심종목",
+    content: "로드스터 행사 10/15로 연기. 야외 악천후. 원래 10/1 맥그리거 와코",
+    createdAt: T29SEP + 40*60_000, likes: 20, comments: 2 },
+  { id: 122061, symbol: "MACRO", nickname: "심리사팔일", holdingLabel: "관심종목",
+    content: "미시간 9월최종 48.1. 8월51.7 작년55.1. 현재50.9 기대46.3 물가기대4.6. 공식은 넉달최저",
+    createdAt: T29SEP + 48*60_000, likes: 19, comments: 2 },
+  { id: 122062, symbol: "AI", nickname: "게이츠핵에이아이", holdingLabel: "관심종목",
+    content: "게이츠 발언. AI세계협력이 핵협상보다 더 어렵다. 조약아님 의견",
+    createdAt: T29SEP + 56*60_000, likes: 18, comments: 2 },
   // ── 2026-09-28 신규 ────────────────
   { id: 122039, symbol: "TSLA", nickname: "노르웨이구팔", holdingLabel: "관심종목",
     content: "노르웨이 화면 올해 98% 전기차. 모델Y 300% 앞선다는 줄. 8월공식 배터리전기 98.7. 그달 Y는 19위",
@@ -5183,6 +5206,34 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  122056: [
+    { id: 1220561, nickname: "브이삼이십육", holdingLabel: "관심종목", content: "275km는 궤도. 착수는 계획된 바다", createdAt: T29SEP + 720000, likes: 5 },
+    { id: 1220562, nickname: "할부오십비피", holdingLabel: "관심종목", content: "26기 며칠뒤 건강이 확인", createdAt: T29SEP + 900000, likes: 4 },
+  ],
+  122057: [
+    { id: 1220571, nickname: "아랍에프에스디", holdingLabel: "관심종목", content: "1Tbps는 설계. 실제속도가 다음", createdAt: T29SEP + 780000, likes: 5 },
+    { id: 1220572, nickname: "로드스터십오", holdingLabel: "관심종목", content: "60기 한방은 목표", createdAt: T29SEP + 960000, likes: 4 },
+  ],
+  122058: [
+    { id: 1220581, nickname: "할부오십비피", holdingLabel: "관심종목", content: "248은 장면수. 무인허가 아님", createdAt: T29SEP + 840000, likes: 5 },
+    { id: 1220582, nickname: "심리사팔일", holdingLabel: "관심종목", content: "출시공고가 구독칸", createdAt: T29SEP + 1020000, likes: 4 },
+  ],
+  122059: [
+    { id: 1220591, nickname: "로드스터십오", holdingLabel: "관심종목", content: "0.50%p는 표. 10월표가 다음", createdAt: T29SEP + 900000, likes: 5 },
+    { id: 1220592, nickname: "게이츠핵에이아이", holdingLabel: "관심종목", content: "분기말 인도와 만료 같이", createdAt: T29SEP + 1080000, likes: 4 },
+  ],
+  122060: [
+    { id: 1220601, nickname: "심리사팔일", holdingLabel: "관심종목", content: "15일은 날짜. 스펙은 무대", createdAt: T29SEP + 960000, likes: 5 },
+    { id: 1220602, nickname: "첫궤도십사", holdingLabel: "관심종목", content: "양산연도는 아직", createdAt: T29SEP + 1140000, likes: 4 },
+  ],
+  122061: [
+    { id: 1220611, nickname: "게이츠핵에이아이", holdingLabel: "관심종목", content: "48.1이 확정. 사상2번째최저와 결이다름", createdAt: T29SEP + 1020000, likes: 5 },
+    { id: 1220612, nickname: "브이삼이십육", holdingLabel: "관심종목", content: "10월예비치랑 4.6% 같이봄", createdAt: T29SEP + 1200000, likes: 4 },
+  ],
+  122062: [
+    { id: 1220621, nickname: "첫궤도십사", holdingLabel: "관심종목", content: "한줄 의견. 제재발표 아님", createdAt: T29SEP + 1080000, likes: 5 },
+    { id: 1220622, nickname: "아랍에프에스디", holdingLabel: "관심종목", content: "수출통제 초안이 달력", createdAt: T29SEP + 1260000, likes: 4 },
+  ],
   122039: [
     { id: 1220391, nickname: "중국오오공", holdingLabel: "관심종목", content: "300%는 화면. 8월공식은 Y 19위", createdAt: T28SEP + 720000, likes: 5 },
     { id: 1220392, nickname: "나스닥이십삼배", holdingLabel: "관심종목", content: "9월 월말파일이랑 연간1위 같이봄", createdAt: T28SEP + 900000, likes: 4 },
