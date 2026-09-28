@@ -1,4 +1,14 @@
 #!/usr/bin/env node
+/**
+ * 금지. 2026-09-28 이후 실행하면 안 됩니다.
+ * 분량 맞추려 같은 숫자·정의를 문장만 바꿔 뒤에 붙였고, 독자가 반복으로 읽었습니다.
+ * 본문이 짧으면 새 배경·새 각도만 직접 쓰고, node scripts/validate-report-korean.js 로 거르세요.
+ */
+console.error(
+  "expand-short-reports.js 는 폐기입니다. 같은 사실을 다시 붙이지 말고 소재별 문장만 쓰세요.",
+);
+process.exit(1);
+
 /** 분량 미달 본문에만, 리포트마다 다른 문장을 붙인다. 공통 꼬리 문장 금지. */
 const fs = require("fs");
 const path = require("path");

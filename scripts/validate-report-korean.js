@@ -76,6 +76,9 @@ const FILLER_ONCE = [
   "숫자는 오늘 기준이며 다음 화면이 같으면 이야기가 두꺼워집니다",
   "한 번의 고점이나 시가는",
   "오늘 숫자는 화면·집계 기준이며 다음 공시가 같으면",
+  "이 아침 추가로 적어 둘 배경입니다",
+  "같은 주 숫자만 다시 정리하면",
+  "초보가 기억하면 좋은 한 줄은",
 ];
 
 /** 2026-09-11~ 금지: 초보가 못 읽는 금지·분리 지시문 */
@@ -163,6 +166,16 @@ function parseReports(src) {
   return reports;
 }
 
+function unescapeTsChar(n) {
+  if (n === "n") return "\n";
+  if (n === "t") return "\t";
+  if (n === "r") return "\r";
+  if (n === '"') return '"';
+  if (n === "'") return "'";
+  if (n === "\\") return "\\";
+  return n;
+}
+
 function extractQuoted(chunk, key) {
   const idx = chunk.indexOf(key);
   if (idx === -1) return "";
@@ -172,7 +185,7 @@ function extractQuoted(chunk, key) {
     let i = 1;
     while (i < rest.length) {
       if (rest[i] === "\\") {
-        out += rest[i + 1];
+        out += unescapeTsChar(rest[i + 1]);
         i += 2;
         continue;
       }
@@ -186,7 +199,7 @@ function extractQuoted(chunk, key) {
     let i = 1;
     while (i < rest.length) {
       if (rest[i] === "\\") {
-        out += rest[i + 1];
+        out += unescapeTsChar(rest[i + 1]);
         i += 2;
         continue;
       }
@@ -288,6 +301,26 @@ function validateSectionSeparation(r, file) {
   return errors;
 }
 
+function validateNearDup(r, file) {
+  const errors = [];
+  if (r.date < BODY_RESET_SINCE) return errors;
+  if (!r.body) return errors;
+  const { findRepeatSentences, findPairs } = require("./lib/report-similarity");
+  const sents = findRepeatSentences(r.body);
+  if (sents.length) {
+    errors.push(
+      `${file} ${r.id} body: 같은 사실을 문장만 바꿔 반복 (${sents.length}쌍, 예: "${sents[0].a}"). 앞 섹션에 적었으면 뒤에서는 새 각도만 쓰세요.`,
+    );
+  }
+  const pairs = findPairs(r.body);
+  if (pairs.length) {
+    errors.push(
+      `${file} ${r.id} body: 유사 문단 ${pairs.length}쌍 (예: ${pairs[0].jaccard}%). 분량 맞추려고 같은 숫자를 다시 쓰지 마세요.`,
+    );
+  }
+  return errors;
+}
+
 function validateRichness(r, file) {
   const errors = [];
   const isSummary =
@@ -296,8 +329,8 @@ function validateRichness(r, file) {
     /summary-(kr|safe|krre)/.test(r.id);
 
   const MIN_SUMMARY_LEN = 90;
-  const MIN_BODY_SUMMARY = 800;
-  const MIN_BODY_DETAIL = 1000;
+  const MIN_BODY_SUMMARY = 560;
+  const MIN_BODY_DETAIL = 680;
 
   if (r.summary && r.summary.length < MIN_SUMMARY_LEN) {
     errors.push(
@@ -334,7 +367,7 @@ function validateRichness(r, file) {
     if (!isSummary && r.body) {
       const whatMatch = r.body.match(/■ 무슨 일인가요\n\n([\s\S]*?)\n\n■/);
       if (whatMatch) {
-        const paras = whatMatch[1].split(/\n\n/).filter((p) => p.trim().length > 40);
+        const paras = whatMatch[1].split(/\n\n/).filter((p) => p.trim().length > 24);
         if (paras.length < 3) {
           errors.push(
             `${file} ${r.id} body: ■ 무슨 일인가요 문단 부족 (${paras.length}개 < 3개). 스크린샷·뉴스를 초보 문단으로 풀으세요.`,
@@ -343,7 +376,7 @@ function validateRichness(r, file) {
       }
       const moreMatch = r.body.match(/■ 조금만 더 알려드리면\n\n([\s\S]*?)\n\n■/);
       if (moreMatch) {
-        const paras = moreMatch[1].split(/\n\n/).filter((p) => p.trim().length > 40);
+        const paras = moreMatch[1].split(/\n\n/).filter((p) => p.trim().length > 24);
         if (paras.length < 2) {
           errors.push(
             `${file} ${r.id} body: ■ 조금만 더 알려드리면 문단 부족 (${paras.length}개 < 2개). 웹 검색으로 배경을 보충하세요.`,
@@ -352,7 +385,7 @@ function validateRichness(r, file) {
       }
       const longMatch = r.body.match(/■ 장기적으로 보면\n\n([\s\S]*?)\n\n■/);
       if (longMatch) {
-        const paras = longMatch[1].split(/\n\n/).filter((p) => p.trim().length > 40);
+        const paras = longMatch[1].split(/\n\n/).filter((p) => p.trim().length > 24);
         if (paras.length < 2) {
           errors.push(
             `${file} ${r.id} body: ■ 장기적으로 보면 문단 부족 (${paras.length}개 < 2개).`,
@@ -361,7 +394,7 @@ function validateRichness(r, file) {
       }
       const investMatch = r.body.match(/■ 투자 시사점\n\n([\s\S]*?)(\n\ninvestus|$)/);
       if (investMatch) {
-        const paras = investMatch[1].split(/\n\n/).filter((p) => p.trim().length > 30);
+        const paras = investMatch[1].split(/\n\n/).filter((p) => p.trim().length > 20);
         if (paras.length < 2) {
           errors.push(
             `${file} ${r.id} body: ■ 투자 시사점 문단 부족 (${paras.length}개 < 2개).`,
@@ -373,7 +406,7 @@ function validateRichness(r, file) {
     if (isSummary && r.body) {
       const bigPic = r.body.match(/■ 오늘의 큰 그림\n\n([\s\S]*?)\n\n■/);
       if (bigPic) {
-        const paras = bigPic[1].split(/\n\n/).filter((p) => p.trim().length > 40);
+        const paras = bigPic[1].split(/\n\n/).filter((p) => p.trim().length > 24);
         if (paras.length < 3) {
           errors.push(
             `${file} ${r.id} body: ■ 오늘의 큰 그림 문단 부족 (${paras.length}개 < 3개).`,
@@ -518,6 +551,7 @@ for (const file of FILES) {
     if (r.date >= VALIDATE_RICH_SINCE && RICH_FILES.has(file)) {
       allErrors.push(...validateRichness(r, file));
       allErrors.push(...validateSectionSeparation(r, file));
+      allErrors.push(...validateNearDup(r, file));
     }
   }
 }
