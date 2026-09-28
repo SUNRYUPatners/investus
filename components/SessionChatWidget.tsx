@@ -28,6 +28,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
   const [submitErr, setSubmitErr] = useState("");
   const [hasNewPulse, setHasNewPulse] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
   const sinceRef = useRef(Date.now() - 8 * 60_000);
   const lastMsgAtRef = useRef(0);
   const panelOpenRef = useRef(panelOpen);
@@ -49,6 +50,32 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
       replyTimersRef.current = [];
     };
   }, []);
+
+  // 모바일 키보드가 올라오면 팝업을 보이는 화면 안에 유지
+  useEffect(() => {
+    if (!panelOpen) return;
+    const overlay = overlayRef.current;
+    const vv = window.visualViewport;
+    if (!overlay || !vv) return;
+
+    const apply = () => {
+      if (window.matchMedia("(min-width: 1024px)").matches) {
+        overlay.style.removeProperty("--session-chat-keyboard-inset");
+        return;
+      }
+      const overlap = Math.max(0, window.innerHeight - (vv.offsetTop + vv.height));
+      overlay.style.setProperty("--session-chat-keyboard-inset", `${Math.round(overlap)}px`);
+    };
+
+    apply();
+    vv.addEventListener("resize", apply);
+    vv.addEventListener("scroll", apply);
+    return () => {
+      vv.removeEventListener("resize", apply);
+      vv.removeEventListener("scroll", apply);
+      overlay.style.removeProperty("--session-chat-keyboard-inset");
+    };
+  }, [panelOpen]);
 
   // 모바일: 팝업 열릴 때 뒤 페이지 스크롤 잠금
   useEffect(() => {
@@ -344,23 +371,24 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
         </div>
       )}
 
-      {/* Panel — overlay와 시트 분리 (모바일 스크롤 격리) */}
+      {/* Panel — 모바일은 화면 한가운데 팝업, 데스크톱은 우측 하단 */}
       {panelOpen && (
-        <>
+        <div
+          ref={overlayRef}
+          className="session-chat-overlay"
+          onClick={() => setPanelOpen(false)}
+          onTouchMove={(e) => {
+            if (e.target === e.currentTarget) e.preventDefault();
+          }}
+          role="presentation"
+        >
           <div
-            className="fixed inset-0 z-[46] bg-black/40 lg:bg-black/20"
-            onClick={() => setPanelOpen(false)}
-            onTouchMove={(e) => e.preventDefault()}
-            role="presentation"
-            aria-hidden
-          />
-          <div
-            className="session-chat-sheet fixed inset-x-0 bottom-0 z-[47] flex flex-col border shadow-2xl overflow-hidden
-              h-[min(78dvh,560px)] max-h-[78dvh] min-h-0 rounded-t-2xl max-lg:pb-[env(safe-area-inset-bottom,0px)]
-              lg:left-auto lg:right-6 lg:bottom-[calc(58px+16px+env(safe-area-inset-bottom,0px))] lg:w-[380px] lg:h-[min(560px,78dvh)] lg:max-h-[78dvh] lg:rounded-2xl"
+            className="session-chat-sheet flex flex-col border shadow-2xl overflow-hidden"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}
             role="dialog"
+            aria-modal="true"
             aria-label="장중 실시간 시황방"
+            onClick={(e) => e.stopPropagation()}
           >
             <div
               className="flex items-center justify-between px-4 py-3 border-b shrink-0"
@@ -541,7 +569,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
               )}
             </div>
           </div>
-        </>
+        </div>
       )}
     </>
   );

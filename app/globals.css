@@ -404,3 +404,60 @@ html[data-sticky-ad="hidden"] .session-chat-fab-host {
   box-shadow: 0 0 6px rgba(52, 211, 153, 0.8);
   flex-shrink: 0;
 }
+
+/* 모바일: 하단 시트 대신 네비·광고 위 사용 영역 한가운데 팝업 */
+.session-chat-overlay {
+  --session-chat-keyboard-inset: 0px;
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: max(16px, env(safe-area-inset-top, 0px)) 16px
+    max(
+      var(--session-chat-keyboard-inset),
+      calc(
+        var(--session-chat-nav-h) + var(--session-chat-safe-bottom) +
+        var(--session-chat-sticky-ad-h) + 12px
+      )
+    )
+    16px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+html[data-sticky-ad="hidden"] .session-chat-overlay {
+  padding-bottom: max(
+    var(--session-chat-keyboard-inset),
+    calc(var(--session-chat-nav-h) + var(--session-chat-safe-bottom) + 12px)
+  );
+}
+
+.session-chat-sheet {
+  position: relative;
+  z-index: 1;
+  width: min(420px, 100%);
+  height: min(560px, 100%);
+  max-height: 100%;
+  min-height: 0;
+  border-radius: 16px;
+}
+
+@media (min-width: 1024px) {
+  .session-chat-overlay {
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 24px calc(var(--session-chat-sticky-ad-h) + 16px + env(safe-area-inset-bottom, 0px)) 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  html[data-sticky-ad="hidden"] .session-chat-overlay {
+    padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .session-chat-sheet {
+    width: 380px;
+    height: min(560px, 78dvh);
+    max-height: 78dvh;
+  }
+}
