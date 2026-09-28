@@ -70,6 +70,14 @@ const SECTION_BOILERPLATES = [
   "해자를 기록",
 ];
 
+/** 1회라도 실패 — 분량 맞추려 섹션마다 붙이던 패딩 문장 */
+const FILLER_ONCE = [
+  "초보 말로 한 번 더 적습니다",
+  "숫자는 오늘 기준이며 다음 화면이 같으면 이야기가 두꺼워집니다",
+  "한 번의 고점이나 시가는",
+  "오늘 숫자는 화면·집계 기준이며 다음 공시가 같으면",
+];
+
 /** 2026-09-11~ 금지: 초보가 못 읽는 금지·분리 지시문 */
 const TONE_BANNED_SINCE = "2026-09-11";
 const TONE_BANNED = [
@@ -218,7 +226,18 @@ function extractSection(body, heading) {
 function validateSectionSeparation(r, file) {
   const errors = [];
   if (r.date < BODY_RESET_SINCE) return errors;
-  if (!r.body || r.isPinned || r.subject === "한장요약") return errors;
+  if (!r.body) return errors;
+
+  for (const phrase of FILLER_ONCE) {
+    if ((r.body && r.body.includes(phrase)) || (r.summary && r.summary.includes(phrase)) || (r.title && r.title.includes(phrase))) {
+      errors.push(
+        `${file} ${r.id}: 패딩 문장 "${phrase}" 금지. 섹션마다 같은 꼬리를 붙이지 말고 소재별 문단만 쓰세요.`,
+      );
+      break;
+    }
+  }
+
+  if (r.isPinned || r.subject === "한장요약") return errors;
 
   for (const phrase of SECTION_BOILERPLATES) {
     const boilerCount = (r.body.match(new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || [])
