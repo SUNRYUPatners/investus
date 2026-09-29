@@ -315,8 +315,8 @@ export function MorningBriefingCard({
                   <p className="text-[11px] font-semibold leading-snug" style={{ color: "var(--text)" }}>
                     {title}
                   </p>
-                  {!open && (
-                    <p className="text-[10px] line-clamp-2 mt-0.5" style={{ color: "var(--muted)" }}>
+                  {!open && summary && (
+                    <p className="text-[11px] leading-relaxed mt-1" style={{ color: "var(--muted)" }}>
                       {summary}
                     </p>
                   )}
@@ -344,12 +344,12 @@ export function MorningBriefingCard({
                   ) : null}
                   {body ? (
                     <div
-                      className="text-[11px] leading-relaxed whitespace-pre-line max-h-[40vh] overflow-y-auto rounded-lg p-2.5"
+                      className="text-[12px] leading-relaxed whitespace-pre-line max-h-[50vh] overflow-y-auto rounded-lg p-2.5"
                       style={{ background: "var(--bg)", color: "var(--muted)" }}
                     >
                       {body}
                     </div>
-                  ) : !r.imageOnly ? (
+                  ) : !r.imageOnly && briefing.source !== "session-news" ? (
                     <p className="text-[11px]" style={{ color: "var(--muted)" }}>
                       {isKo ? "본문이 이미지·요약 중심인 리포트입니다." : "This report is summary/image focused."}
                     </p>

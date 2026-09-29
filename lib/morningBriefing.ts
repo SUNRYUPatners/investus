@@ -66,12 +66,6 @@ function reportsForDate(dateKey: string): Report[] {
   return SEED_REPORTS.filter((r) => reportDateKey(r) === dateKey);
 }
 
-function shorten(s: string, max: number): string {
-  const t = s.replace(/\s+/g, " ").trim();
-  if (t.length <= max) return t;
-  return `${t.slice(0, max - 1)}…`;
-}
-
 /** 장전 — getOrCreatePreMarketBriefing (Tesla·SpaceX·Mag7). 장후 — getOrCreatePostMarketBriefing */
 export function buildSessionBriefing(now = new Date()): SessionBriefing | null {
   const dateKey = latestDateKey();
@@ -88,22 +82,15 @@ export function buildSessionBriefing(now = new Date()): SessionBriefing | null {
 
   const pick = [pinned, ...rest].filter(Boolean).slice(0, 5) as Report[];
 
-  const headline = pinned
-    ? shorten(pinned.summary || pinned.title, 140)
-    : shorten(rest[0]?.summary || rest[0]?.title || "", 140);
-  const headlineEn = pinned
-    ? shorten(pinned.summaryEn || pinned.titleEn || "", 140)
-    : shorten(rest[0]?.summaryEn || rest[0]?.titleEn || "", 140);
+  const headline = (pinned?.summary || pinned?.title || rest[0]?.summary || rest[0]?.title || "").trim();
+  const headlineEn = (pinned?.summaryEn || pinned?.titleEn || rest[0]?.summaryEn || rest[0]?.titleEn || "").trim();
 
   const bullets = pick
-    .map((r) => {
-      const t = (r.subject || r.title).replace(/^20\d{2}[.\-/]\d{2}[.\-/]\d{2}\s*/, "");
-      return shorten(t, 72);
-    })
+    .map((r) => (r.title || r.subject || "").replace(/^20\d{2}[.\-/]\d{2}[.\-/]\d{2}\s*/, "").trim())
     .filter(Boolean)
     .slice(0, 3);
   const bulletsEn = pick
-    .map((r) => shorten((r.titleEn || r.subject || r.title).replace(/^20\d{2}[.\-/]\d{2}[.\-/]\d{2}\s*/, ""), 72))
+    .map((r) => (r.titleEn || r.title || r.subject || "").replace(/^20\d{2}[.\-/]\d{2}[.\-/]\d{2}\s*/, "").trim())
     .filter(Boolean)
     .slice(0, 3);
 

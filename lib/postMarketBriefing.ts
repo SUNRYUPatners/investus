@@ -148,7 +148,8 @@ export function lastCompletedSessionDate(now = new Date()): string {
 
 function kvKey(phase: BriefPhase, dateKey: string) {
   // v5: SPCX도 company-news·시세 조회 (이전엔 general 피드 키워드만 → 매일 「헤드라인 없음」)
-  const prefix = phase === "pre" ? "pre-market-briefing:v4" : "post-market-briefing:v5";
+  // v6: 제목·요약·본문을 완전한 문장으로. 72자 절단 캐시는 쓰지 않음.
+  const prefix = phase === "pre" ? "pre-market-briefing:v6" : "post-market-briefing:v6";
   return `${prefix}:${dateKey}`;
 }
 
@@ -453,11 +454,15 @@ function newsRowsToItem(symbol: string, rows: NewsLine[]): GeneratedItem {
     title: "",
     summary: "",
     body: "",
-    titleEn: cleanNewsText(top.headline.slice(0, 72)),
-    summaryEn: cleanNewsText((top.summary || top.headline).slice(0, 180)),
+    titleEn: cleanNewsText(top.headline),
+    summaryEn: cleanNewsText(top.summary || top.headline),
     bodyEn: rows
       .slice(0, 3)
-      .map((n) => `· ${cleanNewsText(n.headline)}${n.summary ? `\n${cleanNewsText(n.summary)}` : ""}`)
+      .map((n) => {
+        const head = cleanNewsText(n.headline);
+        const sum = cleanNewsText(n.summary);
+        return sum && sum !== head ? `${head} ${sum}` : head;
+      })
       .join("\n\n"),
   };
 }
@@ -691,7 +696,7 @@ ${JSON.stringify(payload)}`;
       },
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
-        max_tokens: 3500,
+        max_tokens: 8000,
         messages: [{ role: "user", content: prompt }],
       }),
       signal: AbortSignal.timeout(30_000),
@@ -819,7 +824,13 @@ async function generateWithClaude(
 ${spcxRule}
 뉴스가 없는 종목은 생략하거나 「당일 헤드라인 없음 + 등락」만. 비슷한 뉴스는 하나로 합쳐라.
 투자 권유·목표가·매수/매도 금지.
-한국어는 증권사 데스크 톤. 영어는 concise US desk English. 두 언어는 같은 사실이어야 한다.
+한국어는 증권사 데스크의 합니다체. 영어는 완전한 문장의 US desk English. 두 언어는 같은 사실이어야 한다.
+
+글 규칙 (필수):
+- titleKo는 주어와 동사가 있는 완전한 한 문장이다. 「습니다」또는 「입니다」로 끝내라. 물음표, 말줄임, 「좋은 소식?」, 단어 나열로 끝내지 마라.
+- summaryKo는 3문장이다. 누가, 무엇을, 뉴스에 있는 숫자를 넣어 펼치지 않아도 한 번에 이해되게 하라. 각 문장을 마침표로 끝내라.
+- bodyKo는 빈 줄로 나눈 2문단이다. 문단마다 3문장 이상. 첫 문단은 오늘 일어난 일, 둘째 문단은 왜 눈에 띄는지와 다음에 확인할 일정. 문장 중간에서 끊지 마라.
+- titleEn, summaryEn, bodyEn도 같은 사실을 완전한 문장으로. 헤드라인 조각 금지.
 
 당일·프리 등락:
 ${quotes}
@@ -828,7 +839,7 @@ ${quotes}
 ${newsBlock}
 
 JSON만 출력:
-{"headlineKo":"세션 핵심 한 줄(80자 이내)","headlineEn":"one-line session takeaway","items":[{"symbol":"TSLA","titleKo":"짧은 제목","titleEn":"short title","summaryKo":"2문장","summaryEn":"2 sentences","bodyKo":"4~6문장. 뉴스 근거.","bodyEn":"4-6 sentences grounded in the news."}]}
+{"headlineKo":"세션을 한 문장으로 마무리","headlineEn":"one complete sentence","items":[{"symbol":"TSLA","titleKo":"완전한 합니다체 한 문장","titleEn":"one complete sentence","summaryKo":"세 문장.","summaryEn":"three complete sentences","bodyKo":"첫 문단 세 문장.\\n\\n둘째 문단 세 문장.","bodyEn":"paragraph one\\n\\nparagraph two"}]}
 items는 6~8개. Tesla·SpaceX(SPCX)를 앞에 두고 나머진 임팩트 순. SPCX는 필수.`;
 
   try {
@@ -841,7 +852,7 @@ items는 6~8개. Tesla·SpaceX(SPCX)를 앞에 두고 나머진 임팩트 순. S
       },
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
-        max_tokens: 4000,
+        max_tokens: 8000,
         messages: [{ role: "user", content: prompt }],
       }),
       signal: AbortSignal.timeout(45_000),
@@ -877,8 +888,8 @@ export function storedToBriefing(stored: PostMarketStored, phase: BriefPhase = "
     labelEn: phase === "pre" ? "Pre-market brief" : "After-close brief",
     headline: stored.headline || "",
     headlineEn: stored.headlineEn || undefined,
-    bullets: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.title || ""}`.slice(0, 72)),
-    bulletsEn: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.titleEn || it.title || ""}`.slice(0, 72)),
+    bullets: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.title || ""}`.trim()),
+    bulletsEn: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.titleEn || it.title || ""}`.trim()),
     reports: stored.items.map((it, i) => ({
       id: `${phase === "pre" ? "am" : "pm"}-${stored.dateKey}-${it.symbol}-${i}`,
       title: `${it.symbol} · ${it.title || ""}`,

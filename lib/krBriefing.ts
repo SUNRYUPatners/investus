@@ -5,8 +5,8 @@ import type { BriefPhase, SessionBriefing } from "@/lib/morningBriefing";
 import { getReportsForMarket } from "@/lib/markets/reports";
 import { reportDateKey } from "@/lib/subscription";
 
-const KV_PRE = "kr-pre-briefing:";
-const KV_POST = "kr-post-briefing:";
+const KV_PRE = "kr-pre-briefing:v2:";
+const KV_POST = "kr-post-briefing:v2:";
 const KV_TTL = 7 * 24 * 3600;
 
 type BriefItem = {
@@ -69,12 +69,6 @@ function kvKey(phase: BriefPhase, dateKey: string) {
   return `${phase === "pre" ? KV_PRE : KV_POST}${dateKey}`;
 }
 
-function shorten(s: string, max: number): string {
-  const t = s.replace(/\s+/g, " ").trim();
-  if (t.length <= max) return t;
-  return `${t.slice(0, max - 1)}…`;
-}
-
 function extractJson(text: string): {
   headlineKo?: string;
   headlineEn?: string;
@@ -99,8 +93,8 @@ function storedToSession(stored: KrBriefStored): SessionBriefing {
     labelEn: phase === "pre" ? "Pre-market brief" : "After-close brief",
     headline: stored.headline || stored.headlineEn || "",
     headlineEn: stored.headlineEn || undefined,
-    bullets: stored.items.slice(0, 3).map((it) => shorten(`${it.symbol} · ${it.title}`, 72)),
-    bulletsEn: stored.items.slice(0, 3).map((it) => shorten(`${it.symbol} · ${it.titleEn || it.title}`, 72)),
+    bullets: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.title}`.trim()),
+    bulletsEn: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.titleEn || it.title}`.trim()),
     reports: stored.items.map((it, i) => ({
       id: `kr-${stored.phase}-${stored.dateKey}-${it.symbol}-${i}`,
       title: `${it.symbol} · ${it.title}`,
@@ -130,9 +124,7 @@ function buildFromReports(phase: BriefPhase, dateKey: string): SessionBriefing |
   const rest = dayReports.filter((r) => r.id !== pinned?.id);
   const pick = [pinned, ...rest].filter((r): r is NonNullable<typeof r> => !!r).slice(0, 5);
 
-  const headline = pinned
-    ? shorten(pinned.summary || pinned.title, 140)
-    : shorten(rest[0]?.summary || rest[0]?.title || "", 140);
+  const headline = (pinned?.summary || pinned?.title || rest[0]?.summary || rest[0]?.title || "").trim();
 
   return {
     phase,
@@ -145,7 +137,8 @@ function buildFromReports(phase: BriefPhase, dateKey: string): SessionBriefing |
         ? headline || "개장 전 한국장 핵심을 확인하세요"
         : headline || "장마감 후 한국장 핵심을 확인하세요",
     bullets: pick
-      .map((r) => shorten((r.subject || r.title).replace(/^20\d{2}[.\-/]\d{2}[.\-/]\d{2}\s*/, ""), 72))
+      .map((r) => (r.title || r.subject || "").replace(/^20\d{2}[.\-/]\d{2}[.\-/]\d{2}\s*/, "").trim())
+      .filter(Boolean)
       .slice(0, 3),
     reports: pick.slice(0, 4).map((r) => ({
       id: r.id,
@@ -169,8 +162,8 @@ function fallbackFromNews(phase: BriefPhase, dateKey: string, headlines: string[
     const u = universe[i % universe.length];
     return {
       symbol: u.name,
-      title: shorten(title, 72),
-      summary: shorten(title, 180),
+      title,
+      summary: title,
       body: phase === "pre"
         ? `장전 뉴스 헤드라인 기준입니다. ${title}`
         : `장후 뉴스 헤드라인 기준입니다. ${title}`,
@@ -179,7 +172,7 @@ function fallbackFromNews(phase: BriefPhase, dateKey: string, headlines: string[
   return {
     dateKey,
     phase,
-    headline: shorten(headlines[0], 100),
+    headline: headlines[0].trim(),
     items,
     generatedAt: Date.now(),
   };
@@ -220,14 +213,19 @@ async function generateWithClaude(
 
 시총 탑10 중심: ${focus}
 아래는 실제 뉴스 헤드라인이다. 없는 사실·수치를 지어내지 마라.
-투자 권유·목표가·매수/매도 금지. 증권사 데스크 톤.
+투자 권유·목표가·매수/매도 금지. 증권사 데스크의 합니다체.
 ${phase === "pre" ? "개장 전 체크포인트·환율·미국 마감 영향 위주." : "당일 장 마감 후 수급·섹터·시총 상위 흐름 위주."}
+
+글 규칙 (필수):
+- titleKo는 주어와 동사가 있는 완전한 한 문장이다. 「습니다」또는 「입니다」로 끝내라. 물음표·말줄임·단어 나열 금지.
+- summaryKo는 3문장이다. 종목, 등락, 뉴스에 있는 숫자를 넣어 펼치지 않아도 이해되게 하라.
+- bodyKo는 빈 줄로 나눈 2문단, 문단마다 3문장 이상. 첫 문단은 오늘 일어난 일, 둘째 문단은 왜 눈에 띄는지와 다음에 볼 일정. 문장 중간에서 끊지 마라.
 
 뉴스:
 ${newsBlock}
 
 JSON만:
-{"headlineKo":"핵심 한 줄(80자)","items":[{"symbol":"삼성전자","titleKo":"짧은 제목","summaryKo":"2문장","bodyKo":"4~6문장"}]}
+{"headlineKo":"세션을 한 문장으로 마무리","items":[{"symbol":"삼성전자","titleKo":"완전한 합니다체 한 문장","summaryKo":"세 문장.","bodyKo":"첫 문단 세 문장.\\n\\n둘째 문단 세 문장."}]}
 items 4~6개. 시총 상위 종목명을 symbol에 사용.`;
 
   try {
@@ -240,7 +238,7 @@ items 4~6개. 시총 상위 종목명을 symbol에 사용.`;
       },
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
-        max_tokens: 3500,
+        max_tokens: 6000,
         messages: [{ role: "user", content: prompt }],
       }),
       signal: AbortSignal.timeout(45_000),
