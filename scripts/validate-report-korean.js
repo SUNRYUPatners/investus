@@ -113,6 +113,18 @@ const SCREENSHOT_META = [
   "색깔이 갈렸",
   "화면 복기 카드",
 ];
+/** 2026-09-30~: 영상·사진 설명, 캡처에 없다는 문장 금지 */
+const SCREENSHOT_ABSENCE_SINCE = "2026-09-30";
+const SCREENSHOT_ABSENCE = [
+  "캡처에 없습니다",
+  "캡처에 없어",
+  "영상 속",
+  "글 아래에 있습니다",
+  "사진에는",
+  "화면에 없습니다",
+  "카드에 없습니다",
+  "이 글에 없습니다",
+];
 
 /** 한글 SVG(-en 제외) caption·본문 텍스트 검증 패턴 */
 const SVG_BAD_PATTERNS = [
@@ -608,6 +620,16 @@ function validateScreenshotTranscript(r, file) {
         `${file} ${r.id}: 스크린샷을 화면 묘사로 쓰지 마세요 ("${phrase}"). 화면에 적힌 글을 거의 그대로 옮긴 뒤 풀이하세요.`,
       );
       break;
+    }
+  }
+  if (r.date >= SCREENSHOT_ABSENCE_SINCE) {
+    for (const phrase of SCREENSHOT_ABSENCE) {
+      if (text.includes(phrase)) {
+        errors.push(
+          `${file} ${r.id}: 영상·사진 설명은 넣지 마세요 ("${phrase}"). 적힌 글과 숫자만 옮기세요.`,
+        );
+        break;
+      }
     }
   }
   return errors;

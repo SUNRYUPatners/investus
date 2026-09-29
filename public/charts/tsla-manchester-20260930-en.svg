@@ -20,24 +20,24 @@
   <rect x="60" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">🚪</text>
   <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Doors up</text>
-  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Gold car</text>
-  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Show-floor photo</text>
+  <text x="210" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Gold car</text>
+  <text x="210" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Show-floor photo</text>
   <rect x="390" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🎟</text>
   <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Invite</text>
-  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Recruiting</text>
-  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Not a sales launch</text>
+  <text x="540" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Recruiting</text>
+  <text x="540" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Not a sales launch</text>
   <rect x="720" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">🇪🇺</text>
   <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">UK</text>
-  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Not in the 8</text>
-  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Absent from today's Europe list</text>
+  <text x="870" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Not in the 8</text>
+  <text x="870" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Absent from today's Europe list</text>
   <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="658" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">The line says come see the future. Ticket price and seats are not in the capture.</text>
+  <text x="540" y="648" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">The line says come see the future. Ticket price and seats are not in the capture.</text>
   <rect x="60" y="810" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="840" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
-  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">A show car in a city is not a road approval. Watch whether hiring posts follow. This is not a factory announcement.</text>
-  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="838" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
+  <text x="540" y="864" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">A show car in a city is not a road approval. Watch whether hiring posts follow. This is not a factory announcement.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

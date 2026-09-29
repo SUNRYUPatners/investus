@@ -41,11 +41,11 @@
   <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">두 표</text>
   <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">현물과 선물을 섞지 않음</text>
   <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="776" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">산업 수요가 약하면 금 반등을 다 따라가지 못하는 날이 나옵니다.</text>
+  <text x="540" y="766" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">산업 수요가 약하면 금 반등을 다 따라가지 못하는 날이 나옵니다.</text>
   <rect x="60" y="878" width="960" height="140" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="908" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">비율 68이 줄어드는지가 장기 전망의 확인입니다. 하루 0.07달러는 방향보다 멈춤에 가깝습니다.</text>
-  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="906" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">비율 68이 줄어드는지가 장기 전망의 확인입니다. 하루 0.07달러는 방향보다 멈춤에 가깝습니다.</text>
+  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

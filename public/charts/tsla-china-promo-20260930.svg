@@ -17,7 +17,7 @@
   <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">20일 안 두 번째</text>
   <rect x="80" y="220" width="920" height="132" rx="18" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#4ade80" text-anchor="middle">2번째</text>
-  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">카드에는 위안 금액이 없습니다. 금액은 9월 25일 안내입니다.</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">10월 31일까지 모델3 5,000위안, 일부 모델Y 7,000위안입니다.</text>
   <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">3️⃣</text>
   <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">5천</text>
@@ -42,12 +42,13 @@
   <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">두 잔금 할인은 겹쳐 쓸 수 없습니다.</text>
   <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">목록 가격은 그대로라는 보도입니다.</text>
   <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="736" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">8월 중국 인도는 5만 47대로 1년 전보다 12% 줄었고, 모델Y는 26% 줄었습니다.</text>
+  <text x="540" y="726" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">8월 중국 인도는 5만 47대로 1년 전보다 12% 줄었고, 모델Y는 26% 줄었습니다. 10월 31일까지 모델3 잔금 5,000위안,</text>
+  <text x="540" y="750" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">일부 모델Y 7,000위안입니다. 9월 7일 재고 모델Y는 10,000위안이었고 두 할인은 겹치지 않습니다.</text>
   <rect x="60" y="850" width="960" height="168" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="880" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">9월 7일 안은 9월 30일까지 인도하는 재고차였습니다. 이번 안은 할인 폭은 줄고 맞춤 주문 기간은 늘어났습니다. 목록가 인하와</text>
-  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">잔금 할인은 다릅니다.</text>
-  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">9월 7일 안은 9월 30일까지 인도하는 재고차였습니다. 이번 안은 할인 폭은 줄고 맞춤 주문 기간은 늘어났습니다. 목록가 인하와</text>
+  <text x="540" y="924" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">잔금 할인은 다릅니다.</text>
+  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

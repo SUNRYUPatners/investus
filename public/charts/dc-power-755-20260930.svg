@@ -17,7 +17,7 @@
   <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">전력 수요</text>
   <rect x="80" y="220" width="920" height="132" rx="18" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
   <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#94a3b8" text-anchor="middle">755%</text>
-  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">기준 연도와 보고서 이름은 카드에 없습니다.</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">2029년까지 데이터센터 전력 수요가 급증한다는 문장입니다.</text>
   <rect x="80" y="372" width="192" height="176" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="1.5"/>
   <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">⚡</text>
   <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#94a3b8" text-anchor="middle">755%</text>
@@ -42,12 +42,12 @@
   <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">건설비와 전력 배수는 단위가 다릅니다.</text>
   <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">냉각을 넣는지에 따라 배수가 갈립니다.</text>
   <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="736" font-family="Arial" font-size="17" fill="#94a3b8" text-anchor="middle">건물이 먼저 서고 변압기가 늦으면 두 숫자의 시간표가 어긋납니다.</text>
+  <text x="540" y="726" font-family="Arial" font-size="17" fill="#94a3b8" text-anchor="middle">건물이 먼저 서고 변압기가 늦으면 두 숫자의 시간표가 어긋납니다.</text>
   <rect x="60" y="850" width="960" height="168" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="880" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">어떤 표는 장비만, 어떤 표는 냉각까지 넣습니다. 755%를 다른 기관 숫자 옆에 놓으려면 각주가 필요합니다. 태양광 목표는 그 전기의</text>
-  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">공급 쪽입니다.</text>
-  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">어떤 표는 장비만, 어떤 표는 냉각까지 넣습니다. 755%를 다른 기관 숫자 옆에 놓으려면 각주가 필요합니다. 태양광 목표는 그 전기의</text>
+  <text x="540" y="924" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">공급 쪽입니다.</text>
+  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

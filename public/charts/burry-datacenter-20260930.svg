@@ -42,12 +42,14 @@
   <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">오래 안 감</text>
   <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">차트와 문장을 분리</text>
   <rect x="60" y="722" width="960" height="142" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="768" font-family="Arial" font-size="17" fill="#94a3b8" text-anchor="middle">국내총생산 성장이 데이터센터 건설에 기대고, 자금은 부채와 부외 금융이라는 네 줄이 차트 위에 있습니다.</text>
+  <text x="540" y="758" font-family="Arial" font-size="17" fill="#94a3b8" text-anchor="middle">국내총생산 성장이 데이터센터 건설에 기대고, 자금은 부채와 부외 금융이라는 네 줄이 차트 위에 있습니다. 2023년 이후</text>
+  <text x="540" y="781" font-family="Arial" font-size="17" fill="#94a3b8" text-anchor="middle">데이터센터는 510억 달러 늘고 그 밖 민간 건설은 1,200억 달러 줄었습니다. 6월에는 데이터센터를 뺀 민간 건설이 1년</text>
+  <text x="540" y="804" font-family="Arial" font-size="17" fill="#94a3b8" text-anchor="middle">전보다 7.9% 줄었다고 적혀 있습니다.</text>
   <rect x="60" y="874" width="960" height="168" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="904" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">파란 선은 주택·공장·상점을 한데 묶습니다. 애플을 뺀 현금흐름 문장은 회사별 결산과 대조해야 합니다. 차트 자체가 현금흐름표는</text>
-  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">아닙니다.</text>
-  <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="902" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="928" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">파란 선은 주택·공장·상점을 한데 묶습니다. 애플을 뺀 현금흐름 문장은 회사별 결산과 대조해야 합니다. 차트 자체가 현금흐름표는</text>
+  <text x="540" y="948" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">아닙니다.</text>
+  <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

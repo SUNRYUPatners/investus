@@ -20,25 +20,27 @@
   <rect x="60" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">4️⃣</text>
   <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">4.8</text>
-  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">이번 모델</text>
-  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">4.6보다 크다고 적힘</text>
+  <text x="210" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">이번 모델</text>
+  <text x="210" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">4.6보다 크다고 적혀 있습니다</text>
   <rect x="390" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🧩</text>
   <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">C++</text>
-  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">새 스택</text>
-  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">학습 소프트웨어를 바꿈</text>
+  <text x="540" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">새 스택</text>
+  <text x="540" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">이 스택에서 학습하는 첫 그록입니다</text>
   <rect x="720" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">🚫</text>
-  <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">표 없음</text>
-  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">벤치마크</text>
-  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">점수 표는 캡처에 없음</text>
+  <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">🔢</text>
+  <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">2.5조</text>
+  <text x="870" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">파라미터</text>
+  <text x="870" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">학습 때 조정하는 숫자의 개수입니다</text>
   <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="658" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">파라미터는 학습 때 조정하는 숫자의 개수입니다. 개수가 크다고 모든 시험에서 이긴다는 뜻은 아닙니다.</text>
+  <text x="540" y="648" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">파라미터는 학습 때 조정하는 숫자의 개수입니다. 개수가 크다고 모든 시험에서 이긴다는 뜻은 아닙니다. 그록 4.8은</text>
+  <text x="540" y="672" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">2.5조로 그록 4.6보다 크고, 새 C++ 스택에서 학습하는 첫 그록이라고 적혀 있습니다. 845억 달러 계약과 이</text>
+  <text x="540" y="696" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">파라미터 수는 더하지 않습니다.</text>
   <rect x="60" y="810" width="960" height="176" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
-  <text x="540" y="840" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">845억 달러 계약은 고객 용량이고, 이 글은 그 위에서 돌릴 모델 크기입니다. 둘을 한 표에 더하지 않습니다. 공개 일정은 이 글에</text>
-  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">없습니다.</text>
-  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="838" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="864" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">845억 달러 계약은 고객 용량이고, 이 글은 그 위에서 돌릴 모델 크기입니다. 둘을 한 표에 더하지 않습니다. 파라미터는 학습 때</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">조정하는 숫자의 개수입니다.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

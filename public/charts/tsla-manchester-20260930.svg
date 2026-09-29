@@ -20,25 +20,26 @@
   <rect x="60" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">🚪</text>
   <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">문 개방</text>
-  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">금색 차</text>
-  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">전시장 조명 아래 사진</text>
+  <text x="210" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">금색 차</text>
+  <text x="210" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">전시장 조명 아래 사진</text>
   <rect x="390" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🎟</text>
   <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">초대</text>
-  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">채용 형식</text>
-  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">영업 개시 문서가 아님</text>
+  <text x="540" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">채용 형식</text>
+  <text x="540" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">영업 개시 문서가 아님</text>
   <rect x="720" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">🇪🇺</text>
   <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">영국</text>
-  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">8개국 밖</text>
-  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">오늘 유럽 목록에 없음</text>
+  <text x="870" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">8개국 밖</text>
+  <text x="870" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">오늘 유럽 목록에 없음</text>
   <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="658" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">미래를 보러 오라는 문장입니다. 티켓 가격과 좌석 수는 캡처에 없습니다.</text>
+  <text x="540" y="648" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">미래를 보러 오라는 문장입니다. 테슬라에서의 다음 삶이 맨체스터로 오고, 사이버캡도 같이 가져옵니다. 채용</text>
+  <text x="540" y="672" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">행사와 그 나라 도로 허가는 다른 날입니다.</text>
   <rect x="60" y="810" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="840" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">전시 차량이 도시에 온 것과 그 나라 도로에서 소프트웨어를 켜는 허가는 다릅니다. 고용 공고가 따라오는지를 다음에 봅니다. 생산</text>
-  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">라인이 생긴 발표는 아닙니다.</text>
-  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="838" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="864" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">전시 차량이 도시에 온 것과 그 나라 도로에서 소프트웨어를 켜는 허가는 다릅니다. 고용 공고가 따라오는지를 다음에 봅니다. 생산</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">라인이 생긴 발표는 아닙니다.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

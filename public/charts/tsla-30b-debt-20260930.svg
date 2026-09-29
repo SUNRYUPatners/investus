@@ -41,12 +41,13 @@
   <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">피치</text>
   <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">스페이스X보다 한 단계 낮음</text>
   <rect x="60" y="722" width="960" height="142" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="768" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">인공지능, 옵티머스, 사이버캡이 규모를 키우기 전에 자본을 자리에 둔다는 해석이 붙었습니다.</text>
+  <text x="540" y="758" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">인공지능, 옵티머스, 사이버캡이 규모를 키우기 전에 자본을 자리에 둔다는 해석이 붙었습니다. 3년 만기 200억 달러와</text>
+  <text x="540" y="781" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">리볼버 100억 달러로 최대 300억 달러입니다. 피치는 이미 쓴 부채 약 60억 달러와 이 한도를 나눠 적었습니다.</text>
   <rect x="60" y="874" width="960" height="168" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="904" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">피치는 코텍스 2 건설과 학습이 지출의 큰 이유라고 적었습니다. 중국 운전자금 만기는 2026년 9월에서 2027년 3월입니다. 한도와</text>
-  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">잔액은 다른 칸입니다.</text>
-  <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="902" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="928" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">피치는 코텍스 2 건설과 학습이 지출의 큰 이유라고 적었습니다. 중국 운전자금 만기는 2026년 9월에서 2027년 3월입니다. 한도와</text>
+  <text x="540" y="948" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">잔액은 다른 칸입니다.</text>
+  <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

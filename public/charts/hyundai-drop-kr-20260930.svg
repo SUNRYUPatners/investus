@@ -35,11 +35,11 @@
   <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">교보</text>
   <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">80만에서 조정, 매수</text>
   <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="690" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">원가 절감은 2027년, 주행 데이터는 2028년부터라는 삼성증권 일정입니다.</text>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">원가 절감은 2027년, 주행 데이터는 2028년부터라는 삼성증권 일정입니다.</text>
   <rect x="60" y="848" width="960" height="144" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="878" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="910" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">눈높이는 내려도 매수 의견이 남은 하우스입니다. 하루 1.27%와 분기 생산 차질 대수를 한 칸에 더하지 않습니다.</text>
-  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="876" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="902" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">눈높이는 내려도 매수 의견이 남은 하우스입니다. 하루 1.27%와 분기 생산 차질 대수를 한 칸에 더하지 않습니다.</text>
+  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

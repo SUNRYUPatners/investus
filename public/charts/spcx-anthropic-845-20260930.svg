@@ -36,13 +36,14 @@
   <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">2031년 그림</text>
   <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">초록은 지상, 보라는 궤도 연산입니다.</text>
   <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="686" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">큰 연산이 모델 경쟁의 아래층을 가른다는 문장입니다. 2024년 0.3기가와트에서 2031년 66.6까지 막대가</text>
-  <text x="540" y="710" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">커집니다.</text>
+  <text x="540" y="676" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">큰 연산이 모델 경쟁의 아래층을 가른다는 문장입니다. 2024년 0.3기가와트에서 2031년 66.6까지 막대가</text>
+  <text x="540" y="700" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">커집니다. 약정은 2029년까지 최대 845억 달러이고, 이전에 알려진 상한 약 450억 달러의 거의 두 배입니다.</text>
+  <text x="540" y="724" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">초록은 지상, 보라는 궤도입니다.</text>
   <rect x="60" y="838" width="960" height="172" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
-  <text x="540" y="868" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">순손실 420억 달러와 올해 인프라 의무 518억 달러는 다른 글의 재무 숫자입니다. 약정 상한과 올해 지출을 한 칸에 더하지</text>
-  <text x="540" y="918" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">않습니다. 궤도 비중은 2029년 이후 두꺼워진다는 설명입니다.</text>
-  <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="866" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="892" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">순손실 420억 달러와 올해 인프라 의무 518억 달러는 다른 글의 재무 숫자입니다. 약정 상한과 올해 지출을 한 칸에 더하지</text>
+  <text x="540" y="912" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">않습니다. 궤도 비중은 2029년 이후 두꺼워진다는 설명입니다.</text>
+  <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

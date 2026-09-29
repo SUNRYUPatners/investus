@@ -38,9 +38,9 @@
   <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">국경절 앞 실물 수요가 문장에 있습니다.</text>
   <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">유가 90달러 위는 금리 기대를 통해 금속을 누릅니다.</text>
   <rect x="60" y="800" width="960" height="148" rx="14" fill="#1c1805" stroke="#facc15" stroke-width="1"/>
-  <text x="540" y="830" font-family="Arial" font-size="18" fill="#facc15" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">중앙은행 매수는 가격 하단 전망의 배경입니다. 화요일 47달러가 그 톤 수의 결과는 아닙니다.</text>
-  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="828" font-family="Arial" font-size="18" fill="#facc15" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="854" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">중앙은행 매수는 가격 하단 전망의 배경입니다. 화요일 47달러가 그 톤 수의 결과는 아닙니다.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

@@ -131,20 +131,23 @@ ${inner}
 }
 
 function foot(p, footer, ko, y){
-  return `  <text x="540" y="${y}" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">${esc(footer)} · ${DATE}</text>
+  const cap = footer && footer !== DATE ? footer : "";
+  const line = cap ? `${cap} · ${DATE}` : DATE;
+  return `  <text x="540" y="${y}" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">${esc(line)}</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">${ko ? BRAND_KO : BRAND_EN}</text>`;
 }
 
 function noteBox(p, o, y, h, ko){
   return `  <rect x="60" y="${y}" width="960" height="${h}" rx="14" fill="${p.card}" stroke="${p.fg}" stroke-width="1"/>
-  <text x="540" y="${y+30}" font-family="Arial" font-size="18" fill="${p.fg}" text-anchor="middle">${esc(o.noteHead || (ko ? '왜 중요한가' : 'Why it matters'))}</text>
-${ml(o.noteSub, 540, y+62, 16, 940, 4, 22, `font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle"`)}`;
+  <text x="540" y="${y+28}" font-family="Arial" font-size="18" fill="${p.fg}" text-anchor="middle">${esc(o.noteHead || (ko ? '왜 중요한가' : 'Why it matters'))}</text>
+${ml(o.noteSub, 540, y+54, 16, 940, 7, 20, `font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle"`)}`;
 }
 
 function quoteBox(p, text, y, h, size, maxLines, lh){
+  const lines = Math.max(maxLines, 6);
   return `  <rect x="60" y="${y}" width="960" height="${h}" rx="16" fill="#0f172a" stroke="#374151"/>
-${ml(text, 540, y+46, size, 930, maxLines, lh, `font-family="Arial" font-size="${size}" fill="${p.fg}" text-anchor="middle"`)}`;
+${ml(text, 540, y+36, size, 930, lines, lh, `font-family="Arial" font-size="${size}" fill="${p.fg}" text-anchor="middle"`)}`;
 }
 
 // ── L1 · 숫자 히어로 + KPI 카드 3개 + 인용 + 왜중요한가 ─────────────────────

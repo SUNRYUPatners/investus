@@ -20,25 +20,28 @@
   <rect x="60" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">🚗</text>
   <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">구매</text>
-  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">한 사람</text>
-  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">판매 통계가 아님</text>
+  <text x="210" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">한 사람이 샀습니다</text>
+  <text x="210" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">판매 통계가 아니라 9월 28일</text>
+  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">후기입니다</text>
   <rect x="390" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🤖</text>
   <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">더 나아짐</text>
-  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">소프트웨어</text>
-  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">사람은 더 못한다고</text>
+  <text x="540" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">주행은 더 잘해진다고</text>
+  <text x="540" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">사람은 더 못해진다고 적혀 있습니다</text>
   <rect x="720" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">💵</text>
   <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">비슷한 값</text>
-  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">비교 차종 없음</text>
-  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">영수증이 아님</text>
+  <text x="870" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">다른 차는 이유가 없다</text>
+  <text x="870" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">비슷한 가격이면 다른 차를 살 이유가</text>
+  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">없다고 합니다</text>
   <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="658" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">선택은 차냐, 차와 운전사냐였습니다. 비슷한 가격이면 다른 차를 살 이유가 없다고 합니다.</text>
+  <text x="540" y="648" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">선택은 차냐, 차와 운전사냐였습니다. 감독 완전자율주행은 모두가 말하는 만큼 좋고, 앞으로 더 나아지는 반면</text>
+  <text x="540" y="672" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">사람은 더 못해진다고 합니다. 비슷한 가격이면 다른 차를 살 이유가 정말 없다고 적혀 있습니다.</text>
   <rect x="60" y="810" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="840" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">노르웨이 등록과 오스틴 요금이 수량·가격의 표입니다. 이 글은 그 표를 산 이유에 가깝습니다. 사고율은 안전보고서 마일에서 따로</text>
-  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">봅니다.</text>
-  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="838" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="864" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">한 사람의 구매 후기입니다. 노르웨이 등록 순위와 오스틴 호출 요금이 수량과 가격의 표이고, 이 글은 그 표를 산 이유에 가깝습니다.</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">사고율 비교는 안전보고서의 마일에서 따로 봐야 합니다. 비슷한 가격이라는 문장에도 비교 차종은 적혀 있지 않습니다.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

@@ -34,12 +34,12 @@
   <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Expected close</text>
   <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Needs approvals</text>
   <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="686" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">The company says the team helps build hardware, software, and systems around emerging models.</text>
+  <text x="540" y="676" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">The company says the team helps build hardware, software, and systems around emerging models.</text>
   <rect x="60" y="838" width="960" height="172" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="1"/>
-  <text x="540" y="868" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">Why it matters</text>
-  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">No near-term profit impact was disclosed. Rosenblatt's target is $700, Stifel's $635, and Bank of America's $720,</text>
-  <text x="540" y="918" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">all with buy-side language.</text>
-  <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="866" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">Why it matters</text>
+  <text x="540" y="892" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">No near-term profit impact was disclosed. Rosenblatt's target is $700, Stifel's $635, and Bank of America's $720,</text>
+  <text x="540" y="912" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">all with buy-side language.</text>
+  <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

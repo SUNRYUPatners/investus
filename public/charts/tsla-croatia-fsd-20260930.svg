@@ -42,12 +42,14 @@
   <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">찬성 쪽 인구 비중은 65% 가운데 12.66%입니다.</text>
   <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전 세계 합산은 열여섯 나라라는 글이 따로 있습니다.</text>
   <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="736" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">잠정 형식승인을 각 나라가 다시 인정하는 방식입니다. 슬로베니아, 체코, 크로아티아가 9월에 연달아 들어왔습니다.</text>
+  <text x="540" y="726" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">잠정 형식승인을 각 나라가 다시 인정하는 방식입니다. 슬로베니아, 체코, 크로아티아가 9월에 연달아 들어왔습니다.</text>
+  <text x="540" y="750" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">네덜란드는 4월 10일, 벨기에는 6월 10일, 체코는 9월 21일, 크로아티아는 9월 29일입니다. 인구를 더하면 유럽연합 65%</text>
+  <text x="540" y="774" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">가운데 12.66%이고, 유럽 전역 승인은 아직 대기입니다.</text>
   <rect x="60" y="850" width="960" height="168" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="880" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">배포 버튼은 나라마다 따로 눌립니다. 지도가 넓어져도 무인 영업 허가와는 문서가 다릅니다. 다음에 볼 것은 크로아티아에서 실제로</text>
-  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">켜지는 날입니다.</text>
-  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">배포 버튼은 나라마다 따로 눌립니다. 지도가 넓어져도 무인 영업 허가와는 문서가 다릅니다. 다음에 볼 것은 크로아티아에서 실제로</text>
+  <text x="540" y="924" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">켜지는 날입니다.</text>
+  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

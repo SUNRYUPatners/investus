@@ -42,11 +42,11 @@
   <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">지방 합계에 계양을 더하면 두 번 셉니다.</text>
   <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">지역 제한 때문에 전국 합이 경쟁률이 아닙니다.</text>
   <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="740" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">사전청약 당첨자와 오늘 일반 접수는 계양 안에서도 날짜가 다릅니다.</text>
+  <text x="540" y="730" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">사전청약 당첨자와 오늘 일반 접수는 계양 안에서도 날짜가 다릅니다.</text>
   <rect x="60" y="842" width="960" height="148" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="1"/>
-  <text x="540" y="872" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">한 주의 청약을 한 날짜의 당첨으로 적지 않습니다. 단지별 배수가 주택 수요 전망의 확인입니다.</text>
-  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="870" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">한 주의 청약을 한 날짜의 당첨으로 적지 않습니다. 단지별 배수가 주택 수요 전망의 확인입니다.</text>
+  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

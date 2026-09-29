@@ -38,10 +38,10 @@
   <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">구독 안내 작은 글은 월 99달러입니다.</text>
   <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">사람이 앉은 감독 거리와 무인 영업 거리는 다릅니다.</text>
   <rect x="60" y="780" width="960" height="210" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="810" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">피치는 2분기 활성 구독 148만, 1년 전보다 56%라고 적었습니다. 거리 장부와 돈 내는 계정은 다른 표입니다. 다음 실적 주석이 둘을</text>
-  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">맞춰 줍니다.</text>
-  <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="808" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="834" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">피치는 2분기 활성 구독 148만, 1년 전보다 56%라고 적었습니다. 거리 장부와 돈 내는 계정은 다른 표입니다. 다음 실적 주석이 둘을</text>
+  <text x="540" y="854" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">맞춰 줍니다.</text>
+  <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

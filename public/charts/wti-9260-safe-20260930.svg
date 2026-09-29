@@ -42,11 +42,11 @@
   <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">우회 물량이 늘면 프리미엄은 얇아집니다.</text>
   <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금속 반등과 유가 유지는 다른 반응입니다.</text>
   <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="740" font-family="Arial" font-size="18" fill="#f97316" text-anchor="middle">제안 거절과 제재 완화 검토가 한 주에 같이 있습니다.</text>
+  <text x="540" y="730" font-family="Arial" font-size="18" fill="#f97316" text-anchor="middle">제안 거절과 제재 완화 검토가 한 주에 같이 있습니다.</text>
   <rect x="60" y="842" width="960" height="148" rx="14" fill="#20130a" stroke="#f97316" stroke-width="1"/>
-  <text x="540" y="872" font-family="Arial" font-size="18" fill="#f97316" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">92달러는 해협 헤드라인과 송유관 유량 사이의 화요일 가격입니다. 하루 목표가를 확정한 수치는 아닙니다.</text>
-  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="870" font-family="Arial" font-size="18" fill="#f97316" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">92달러는 해협 헤드라인과 송유관 유량 사이의 화요일 가격입니다. 하루 목표가를 확정한 수치는 아닙니다.</text>
+  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

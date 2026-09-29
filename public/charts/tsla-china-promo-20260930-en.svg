@@ -42,12 +42,12 @@
   <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">The two tail-payment offers cannot be stacked.</text>
   <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">List prices were reported unchanged.</text>
   <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="736" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">August China deliveries were 50,047, down 12% year over year, and Model Y fell 26%.</text>
+  <text x="540" y="726" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">August China deliveries were 50,047, down 12% year over year, and Model Y fell 26%.</text>
   <rect x="60" y="850" width="960" height="168" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="880" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
-  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">The Sept. 7 offer was inventory delivered by Sept. 30. This round is a smaller Model Y cut on a longer custom-order</text>
-  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">window. A list-price cut and a tail discount differ.</text>
-  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">The Sept. 7 offer was inventory delivered by Sept. 30. This round is a smaller Model Y cut on a longer custom-order</text>
+  <text x="540" y="924" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">window. A list-price cut and a tail discount differ.</text>
+  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

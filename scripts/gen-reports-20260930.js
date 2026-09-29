@@ -135,20 +135,23 @@ ${inner}
 }
 
 function foot(p, footer, ko, y){
-  return `  <text x="540" y="${y}" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">${esc(footer)} · ${DATE}</text>
+  const cap = footer && footer !== DATE ? footer : "";
+  const line = cap ? `${cap} · ${DATE}` : DATE;
+  return `  <text x="540" y="${y}" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">${esc(line)}</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">${ko ? BRAND_KO : BRAND_EN}</text>`;
 }
 
 function noteBox(p, o, y, h, ko){
   return `  <rect x="60" y="${y}" width="960" height="${h}" rx="14" fill="${p.card}" stroke="${p.fg}" stroke-width="1"/>
-  <text x="540" y="${y+30}" font-family="Arial" font-size="18" fill="${p.fg}" text-anchor="middle">${esc(o.noteHead || (ko ? '왜 중요한가' : 'Why it matters'))}</text>
-${ml(o.noteSub, 540, y+58, 16, 940, 5, 22, `font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle"`)}`;
+  <text x="540" y="${y+28}" font-family="Arial" font-size="18" fill="${p.fg}" text-anchor="middle">${esc(o.noteHead || (ko ? '왜 중요한가' : 'Why it matters'))}</text>
+${ml(o.noteSub, 540, y+54, 16, 940, 7, 20, `font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle"`)}`;
 }
 
 function quoteBox(p, text, y, h, size, maxLines, lh){
+  const lines = Math.max(maxLines, 6);
   return `  <rect x="60" y="${y}" width="960" height="${h}" rx="16" fill="#0f172a" stroke="#374151"/>
-${ml(text, 540, y+46, size, 930, maxLines, lh, `font-family="Arial" font-size="${size}" fill="${p.fg}" text-anchor="middle"`)}`;
+${ml(text, 540, y+36, size, 930, lines, lh, `font-family="Arial" font-size="${size}" fill="${p.fg}" text-anchor="middle"`)}`;
 }
 
 // ── L1 · 숫자 히어로 + KPI 카드 3개 + 인용 + 왜중요한가 ─────────────────────
@@ -213,8 +216,8 @@ function L3(o, ko){
   <rect x="${x}" y="386" width="300" height="210" rx="16" fill="${p.card}" stroke="${p.fg}" stroke-width="2"/>
   <text x="${x+150}" y="438" font-family="Arial" font-size="40" text-anchor="middle">${c.icon}</text>
 ${ml(c.big, x+150, 492, 26, 272, 1, 28, `font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
-${ml(c.mid, x+150, 524, 17, 272, 2, 20, `font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle"`)}
-${ml(c.sub, x+150, 568, 14, 274, 2, 18, `font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle"`)}`;
+${ml(c.mid, x+150, 524, 16, 272, 2, 20, `font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle"`)}
+${ml(c.sub, x+150, 568, 15, 274, 3, 18, `font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle"`)}`;
   }).join('');
   return shell(p, `${head(p, o.badge, ko)}
 ${ml(o.title, 540, 106, 28, 970, 2, 34, `font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle"`)}

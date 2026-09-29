@@ -38,9 +38,9 @@
   <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">2023년 9월 사전청약 단지입니다.</text>
   <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">창구는 10월 2일까지 사흘입니다.</text>
   <rect x="60" y="800" width="960" height="148" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="1"/>
-  <text x="540" y="830" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">경쟁률은 아직 없습니다. 10월 21일이 38가구 일반의 배수를 보여 줍니다. 663과 251을 같은 모집 수로 적지 않습니다.</text>
-  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="828" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="854" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">경쟁률은 아직 없습니다. 10월 21일이 38가구 일반의 배수를 보여 줍니다. 663과 251을 같은 모집 수로 적지 않습니다.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

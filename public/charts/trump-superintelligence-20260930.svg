@@ -14,10 +14,10 @@
   <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">인공지능을 초지능으로 부르겠다는 속보가 돌았습니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <rect x="360" y="166" width="360" height="46" rx="23" fill="#94a3b818" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="196" font-family="Arial" font-size="20" fill="#94a3b8" text-anchor="middle">오찬 목록 · 영상 19초</text>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#94a3b8" text-anchor="middle">오찬 목록</text>
   <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">🇺🇸</text>
   <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#94a3b8" text-anchor="middle">초지능</text>
-  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">행정명령 원문은 이 화면에 없습니다.</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">이름을 바꾸고 자체 감시와 위원회를 말합니다.</text>
   <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="450" width="300" height="178" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
   <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">1️⃣</text>
@@ -35,11 +35,13 @@
   <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">사용 감독</text>
   <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">목록의 세 번째 줄</text>
   <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="690" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">아메리카 닷 거브 출범 영상은 기술로 정부를 바꾸자는 구상에 공개 감사를 표했다고 적습니다.</text>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">아메리카 닷 거브 출범 영상은 기술로 정부를 바꾸자는 구상에 공개 감사를 표했다고 적습니다. 오찬 목록은</text>
+  <text x="540" y="704" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">이름을 초지능으로 바꾸고, 자체 감시와 감독 위원회를 말합니다. 기술 지도자를 칭찬하고 산업이</text>
+  <text x="540" y="728" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">산업혁명보다 커질 수 있다고 했습니다.</text>
   <rect x="60" y="842" width="960" height="172" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="872" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">소셜 목록과 관보는 다른 종이입니다. 데이터센터 건설 차트와 별칭도 다른 표입니다. 원문 링크가 나오면 그때 효력을 읽습니다.</text>
-  <text x="540" y="1030" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="870" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">소셜 목록과 관보는 다른 종이입니다. 데이터센터 건설 차트와 별칭도 다른 표입니다. 원문 링크가 나오면 그때 효력을 읽습니다.</text>
+  <text x="540" y="1030" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

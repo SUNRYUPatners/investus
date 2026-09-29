@@ -42,13 +42,13 @@
   <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Won't last</text>
   <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Separate from the chart</text>
   <rect x="60" y="722" width="960" height="142" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="768" font-family="Arial" font-size="17" fill="#94a3b8" text-anchor="middle">Four lines above the chart say GDP growth is leaning on data-center buildout funded by debt and</text>
-  <text x="540" y="791" font-family="Arial" font-size="17" fill="#94a3b8" text-anchor="middle">off-balance-sheet paper.</text>
+  <text x="540" y="758" font-family="Arial" font-size="17" fill="#94a3b8" text-anchor="middle">Four lines above the chart say GDP growth is leaning on data-center buildout funded by debt and</text>
+  <text x="540" y="781" font-family="Arial" font-size="17" fill="#94a3b8" text-anchor="middle">off-balance-sheet paper.</text>
   <rect x="60" y="874" width="960" height="168" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="904" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">Why it matters</text>
-  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">The blue line bundles housing, factories, and shops. The free-cash-flow line needs company filings. The chart is not a</text>
-  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">cash-flow statement.</text>
-  <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="902" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">Why it matters</text>
+  <text x="540" y="928" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">The blue line bundles housing, factories, and shops. The free-cash-flow line needs company filings. The chart is not a</text>
+  <text x="540" y="948" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">cash-flow statement.</text>
+  <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

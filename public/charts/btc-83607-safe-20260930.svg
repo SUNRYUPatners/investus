@@ -34,11 +34,12 @@
   <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">이더</text>
   <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">같은 시각 이웃</text>
   <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="686" font-family="Arial" font-size="19" fill="#f7931a" text-anchor="middle">국채 금리와 해협 뉴스가 위험자산 할인을 키운 밤입니다. 파생 잔고 숫자는 이 표에 없습니다.</text>
+  <text x="540" y="676" font-family="Arial" font-size="19" fill="#f7931a" text-anchor="middle">국채 금리와 해협 뉴스가 위험자산 할인을 키운 밤입니다. 비트코인은 8만 3,607달러, 전일 보고보다</text>
+  <text x="540" y="702" font-family="Arial" font-size="19" fill="#f7931a" text-anchor="middle">538달러 높습니다.</text>
   <rect x="60" y="844" width="960" height="148" rx="14" fill="#201408" stroke="#f7931a" stroke-width="1"/>
-  <text x="540" y="874" font-family="Arial" font-size="18" fill="#f7931a" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">블랙록과 피델리티의 장기 배분 전망은 하루 538달러와 시계가 다릅니다. 목표 가격을 매일 내놓지는 않습니다.</text>
-  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#f7931a" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="898" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">블랙록과 피델리티의 장기 배분 전망은 하루 538달러와 시계가 다릅니다. 목표 가격을 매일 내놓지는 않습니다.</text>
+  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

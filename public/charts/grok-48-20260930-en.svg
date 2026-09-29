@@ -20,25 +20,25 @@
   <rect x="60" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">4️⃣</text>
   <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">4.8</text>
-  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">This model</text>
-  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Larger than 4.6</text>
+  <text x="210" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">This model</text>
+  <text x="210" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Larger than 4.6</text>
   <rect x="390" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🧩</text>
   <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">C++</text>
-  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">New stack</text>
-  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Training software changed</text>
+  <text x="540" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">New stack</text>
+  <text x="540" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Training software changed</text>
   <rect x="720" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">🚫</text>
   <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">No table</text>
-  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Benchmark</text>
-  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Scores are not in the capture</text>
+  <text x="870" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Benchmark</text>
+  <text x="870" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Scores are not in the capture</text>
   <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="658" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Parameter count is how many numbers the model adjusts. Bigger is not an automatic win on every test.</text>
+  <text x="540" y="648" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Parameter count is how many numbers the model adjusts. Bigger is not an automatic win on every test.</text>
   <rect x="60" y="810" width="960" height="176" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
-  <text x="540" y="840" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
-  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">The $84.5 billion agreement is customer capacity. This post is model size. Do not add them. No release date is on the</text>
-  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">post.</text>
-  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30 · 2026.09.30</text>
+  <text x="540" y="838" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
+  <text x="540" y="864" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">The $84.5 billion agreement is customer capacity. This post is model size. Do not add them. No release date is on the</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">post.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>
