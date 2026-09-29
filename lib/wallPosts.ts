@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T30SEP = 1790722800000; // 2026.09.30 08:00 KST
 const T29SEP = 1790636400000; // 2026.09.29 08:00 KST
 const T28SEP = 1790550000000; // 2026.09.28 08:00 KST
 const T23SEP = 1790118000000; // 2026.09.23 08:00 KST
@@ -132,7 +133,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T29SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T30SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -151,6 +152,70 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-30 신규 ────────────────
+  { id: 122080, symbol: "TSLA", nickname: "크로아티아여덟", holdingLabel: "관심종목",
+    content: "크로아티아 FSD 승인. 유럽 8번째. 인구 합치면 65% 중 12.66. 세계 카운트는 16이라는 글도 있음",
+    createdAt: T30SEP + 8*60_000, likes: 24, comments: 2 },
+  { id: 122081, symbol: "SPCX", nickname: "연산팔백사십오", holdingLabel: "관심종목",
+    content: "앤트로픽이 스페이스X 연산 2029년까지 최대 845억달러. 예전 상한 450억의 거의 두배라는 글. 2031년 그림은 66.6기가와트",
+    createdAt: T30SEP + 16*60_000, likes: 23, comments: 2 },
+  { id: 122082, symbol: "TSLA", nickname: "태양광이백", holdingLabel: "관심종목",
+    content: "머스크가 테슬라·스페이스X 태양광 모듈 연 200기가와트 목표라고. 지금 미국 모듈 능력의 대략 세배라는 비교",
+    createdAt: T30SEP + 24*60_000, likes: 22, comments: 2 },
+  { id: 122083, symbol: "TSLA", nickname: "회신머리", holdingLabel: "관심종목",
+    content: "SEC 인수합병국 앞으로 된 테슬라 9월29일 회신 표지가 돌음. 본문은 안 보이고 합병 발표문은 아님",
+    createdAt: T30SEP + 32*60_000, likes: 21, comments: 2 },
+  { id: 122084, symbol: "TSLA", nickname: "마일백오십억", holdingLabel: "관심종목",
+    content: "FSD 안전보고서 15007023418마일. 도시 5843156839. 140억 다음 29일에 10억 더 달렸다는 카드도 있음",
+    createdAt: T30SEP + 40*60_000, likes: 20, comments: 2 },
+  { id: 122085, symbol: "SPCX", nickname: "그록이사점팔", holdingLabel: "관심종목",
+    content: "그록 4.8 파라미터 2.5조. 4.6보다 크다. 스페이스XAI 새 C++ 스택에서 학습하는 첫 그록이라는 글",
+    createdAt: T30SEP + 48*60_000, likes: 19, comments: 2 },
+  { id: 122086, symbol: "MACRO", nickname: "초지능목록", holdingLabel: "관심종목",
+    content: "오찬 속보는 AI를 초지능으로 바꾼다는 목록. 아메리카고브 영상은 기술로 정부 바꾸자는 감사. 명령 원문은 화면에 없음",
+    createdAt: T30SEP + 56*60_000, likes: 18, comments: 2 },
+  { id: 122087, symbol: "MACRO", nickname: "건설오백십", holdingLabel: "관심종목",
+    content: "2023년 이후 데이터센터 건설 +510억, 나머지 민간건설 -1200억. 6월 데이터센터 제외 민간건설 전년 -7.9%라는 차트",
+    createdAt: T30SEP + 64*60_000, likes: 17, comments: 2 },
+  { id: 122088, symbol: "TSLA", nickname: "맨체스터캡", holdingLabel: "관심종목",
+    content: "테슬라 영국이 맨체스터 라이프앳테슬라에 사이버캡 가져온다고. 판매일·가격은 글에 없음",
+    createdAt: T30SEP + 72*60_000, likes: 16, comments: 2 },
+  { id: 122089, symbol: "SPCX", nickname: "작업대열다섯", holdingLabel: "관심종목",
+    content: "F14 끝난 지 하루도 안 돼 F15용 작업대가 궤도발사대에 들어갔다는 41초 영상. 이륙시각은 없음",
+    createdAt: T30SEP + 80*60_000, likes: 15, comments: 2 },
+  { id: 122090, symbol: "TSLA", nickname: "오스틴팔점삼", holdingLabel: "관심종목",
+    content: "오스틴 월요 저녁 사이버캡 8.33달러 11분, 우버엑스 10.90달러 9분. 지난주 같은 슬롯은 16.89달러였음",
+    createdAt: T30SEP + 88*60_000, likes: 24, comments: 2 },
+  { id: 122091, symbol: "SPCX", nickname: "방열타일", holdingLabel: "관심종목",
+    content: "돌아온 스타십을 엔지니어가 처음 손으로 보고 방열 개선을 오늘 비행에 넣는다는 1분35초 영상",
+    createdAt: T30SEP + 96*60_000, likes: 23, comments: 2 },
+  { id: 122092, symbol: "TSLA", nickname: "세미오십", holdingLabel: "관심종목",
+    content: "HMD가 테슬라 세미 50대, 약 1500만달러 주문. 플릿은 700대 거의 디젤 피터빌트라는 모터트렌드 인용",
+    createdAt: T30SEP + 104*60_000, likes: 22, comments: 2 },
+  { id: 122093, symbol: "AMD", nickname: "월드랩스", holdingLabel: "관심종목",
+    content: "AMD가 월드랩스 약 82억달러 전액 주식 인수. 9월28일 발표, 올해 안 클로징 기대. 페이페이 리 연구팀",
+    createdAt: T30SEP + 112*60_000, likes: 21, comments: 2 },
+  { id: 122094, symbol: "TSLA", nickname: "한도삼백억", holdingLabel: "관심종목",
+    content: "테슬라 신용한도 최대 300억. 3년 텀론 200억에 리볼버 100억. 피치는 기회 되면 확보하는 계획이라고 적음",
+    createdAt: T30SEP + 120*60_000, likes: 20, comments: 2 },
+  { id: 122095, symbol: "TSLA", nickname: "중국잔금", holdingLabel: "관심종목",
+    content: "중국 인센티브 이달 두번째. 10월31일까지 모델3 잔금 5천위안, 일부 모델Y 7천위안. 9월7일 재고 Y는 1만위안이었음",
+    createdAt: T30SEP + 128*60_000, likes: 19, comments: 2 },
+  { id: 122096, symbol: "TSLA", nickname: "노르웨이구십팔", holdingLabel: "관심종목",
+    content: "노르웨이 올해 신차 98% 전기차. 모델Y가 다음 모델보다 300% 넘게 앞선다는 9월27일 글. 대수표는 없음",
+    createdAt: T30SEP + 136*60_000, likes: 18, comments: 2 },
+  { id: 122097, symbol: "MACRO", nickname: "전력칠백오십", holdingLabel: "관심종목",
+    content: "데이터센터 전력수요 2029년까지 755% 급증이라는 한줄. 기준연도랑 보고서 이름은 카드에 없음",
+    createdAt: T30SEP + 144*60_000, likes: 17, comments: 2 },
+  { id: 122098, symbol: "TSLA", nickname: "인도사십팔만", holdingLabel: "관심종목",
+    content: "3분기 인도 예측시장 거의 49만대. 그래프는 48.7만에 1천. 마감은 동부 10월3일 자정. 공식 숫자는 아직",
+    createdAt: T30SEP + 152*60_000, likes: 16, comments: 2 },
+  { id: 122099, symbol: "SPCX", nickname: "연환산천억", holdingLabel: "관심종목",
+    content: "12월 스페이스X 연환산 매출 1000억달러 이상. 물음표 아니고 더 안해도 그 수준이라는 말. 월별표는 없음",
+    createdAt: T30SEP + 160*60_000, likes: 15, comments: 2 },
+  { id: 122100, symbol: "TSLA", nickname: "운전사대신", holdingLabel: "관심종목",
+    content: "경제학자 글. 차냐 차+운전사냐에서 테슬라를 샀다. 트림이랑 가격은 없음. 9월28일",
+    createdAt: T30SEP + 168*60_000, likes: 24, comments: 2 },
   // ── 2026-09-29 신규 ────────────────
   { id: 122056, symbol: "SPCX", nickname: "첫궤도십사", holdingLabel: "관심종목",
     content: "스타십14 첫궤도 275km T+26분. S41. 26기 전개 연락전부. 걸프착수 31/33. 태평양 11:57 하와이북쪽",
@@ -5206,6 +5271,90 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  122080: [
+    { id: 1220801, nickname: "연산팔백사십오", holdingLabel: "관심종목", content: "8은 유럽, 16은 세계. 같은 숫자 아님", createdAt: T30SEP + 720000, likes: 5 },
+    { id: 1220802, nickname: "회신머리", holdingLabel: "관심종목", content: "전역 승인은 아직이고 나라별 배포임", createdAt: T30SEP + 900000, likes: 4 },
+  ],
+  122081: [
+    { id: 1220811, nickname: "태양광이백", holdingLabel: "관심종목", content: "845억은 약정 상한. 올해 지출 518억이랑 다른 칸", createdAt: T30SEP + 780000, likes: 5 },
+    { id: 1220812, nickname: "마일백오십억", holdingLabel: "관심종목", content: "66.6은 2031년 모델이지 올해 가동용량 아님", createdAt: T30SEP + 960000, likes: 4 },
+  ],
+  122082: [
+    { id: 1220821, nickname: "회신머리", holdingLabel: "관심종목", content: "200은 목표 문장이지 올해 공장 명판 아님", createdAt: T30SEP + 840000, likes: 5 },
+    { id: 1220822, nickname: "그록이사점팔", holdingLabel: "관심종목", content: "전력 차트랑 이 목표는 건물/전기로 나눠 읽자", createdAt: T30SEP + 1020000, likes: 4 },
+  ],
+  122083: [
+    { id: 1220831, nickname: "마일백오십억", holdingLabel: "관심종목", content: "표지랑 계약서는 다름. 본문 안 읽힘", createdAt: T30SEP + 900000, likes: 5 },
+    { id: 1220832, nickname: "초지능목록", holdingLabel: "관심종목", content: "스페이스X는 비상장. 주주투표 일정 없으면 질문 단계", createdAt: T30SEP + 1080000, likes: 4 },
+  ],
+  122084: [
+    { id: 1220841, nickname: "그록이사점팔", holdingLabel: "관심종목", content: "두 카드 숫자가 조금 다름. 기준 시각이 다른 듯", createdAt: T30SEP + 960000, likes: 5 },
+    { id: 1220842, nickname: "건설오백십", holdingLabel: "관심종목", content: "감독 마일이랑 무인 영업거리는 다른 표", createdAt: T30SEP + 1140000, likes: 4 },
+  ],
+  122085: [
+    { id: 1220851, nickname: "초지능목록", holdingLabel: "관심종목", content: "파라미터 수랑 벤치 점수는 다른 칸. 표는 없음", createdAt: T30SEP + 1020000, likes: 5 },
+    { id: 1220852, nickname: "맨체스터캡", holdingLabel: "관심종목", content: "845억 계약이랑 이 모델 크기는 더하지 말자", createdAt: T30SEP + 1200000, likes: 4 },
+  ],
+  122086: [
+    { id: 1220861, nickname: "건설오백십", holdingLabel: "관심종목", content: "소셜 목록이랑 관보는 다름. 원문 링크 없음", createdAt: T30SEP + 1080000, likes: 5 },
+    { id: 1220862, nickname: "작업대열다섯", holdingLabel: "관심종목", content: "데이터센터 건설 차트랑 별칭은 다른 표", createdAt: T30SEP + 1260000, likes: 4 },
+  ],
+  122087: [
+    { id: 1220871, nickname: "맨체스터캡", holdingLabel: "관심종목", content: "지출 변화랑 착공 허가는 다른 통계", createdAt: T30SEP + 1140000, likes: 5 },
+    { id: 1220872, nickname: "오스틴팔점삼", holdingLabel: "관심종목", content: "오래 안 간다는 문장은 의견. 차트 숫자랑 분리", createdAt: T30SEP + 1320000, likes: 4 },
+  ],
+  122088: [
+    { id: 1220881, nickname: "작업대열다섯", holdingLabel: "관심종목", content: "채용 행사랑 도로 허가는 다른 날", createdAt: T30SEP + 1200000, likes: 5 },
+    { id: 1220882, nickname: "방열타일", holdingLabel: "관심종목", content: "영국은 오늘 유럽 8개국 목록에 안 보임", createdAt: T30SEP + 1380000, likes: 4 },
+  ],
+  122089: [
+    { id: 1220891, nickname: "오스틴팔점삼", holdingLabel: "관심종목", content: "작업대랑 발사 허가는 다름", createdAt: T30SEP + 1260000, likes: 5 },
+    { id: 1220892, nickname: "세미오십", holdingLabel: "관심종목", content: "비계 없이 스탠드로 점검한다는 설명", createdAt: T30SEP + 1440000, likes: 4 },
+  ],
+  122090: [
+    { id: 1220901, nickname: "방열타일", holdingLabel: "관심종목", content: "한 장 견적이지 월평균 운임 아님", createdAt: T30SEP + 1320000, likes: 5 },
+    { id: 1220902, nickname: "월드랩스", holdingLabel: "관심종목", content: "가격은 이겼고 시간은 우버가 아직 짧음", createdAt: T30SEP + 1500000, likes: 4 },
+  ],
+  122091: [
+    { id: 1220911, nickname: "세미오십", holdingLabel: "관심종목", content: "타일 매수는 글에 없음", createdAt: T30SEP + 1380000, likes: 5 },
+    { id: 1220912, nickname: "한도삼백억", holdingLabel: "관심종목", content: "착수 복기랑 건진 뒤 작업은 다른 편", createdAt: T30SEP + 1560000, likes: 4 },
+  ],
+  122092: [
+    { id: 1220921, nickname: "월드랩스", holdingLabel: "관심종목", content: "50은 700의 일부. 전량 교체 아님", createdAt: T30SEP + 1440000, likes: 5 },
+    { id: 1220922, nickname: "중국잔금", holdingLabel: "관심종목", content: "대당 30만은 합계를 나눈 평균", createdAt: T30SEP + 1620000, likes: 4 },
+  ],
+  122093: [
+    { id: 1220931, nickname: "한도삼백억", holdingLabel: "관심종목", content: "현금 인출이 아니라 신주. 지분 희석 있음", createdAt: T30SEP + 1500000, likes: 5 },
+    { id: 1220932, nickname: "노르웨이구십팔", holdingLabel: "관심종목", content: "다음 분기 매출에 바로 더해진다고 회사는 안 밝힘", createdAt: T30SEP + 1680000, likes: 4 },
+  ],
+  122094: [
+    { id: 1220941, nickname: "중국잔금", holdingLabel: "관심종목", content: "한도랑 이미 쓴 빚은 다름. 기존 부채는 약 60억 쪽", createdAt: T30SEP + 1560000, likes: 5 },
+    { id: 1220942, nickname: "전력칠백오십", holdingLabel: "관심종목", content: "BBB는 등급이지 목표주가 아님", createdAt: T30SEP + 1740000, likes: 4 },
+  ],
+  122095: [
+    { id: 1220951, nickname: "노르웨이구십팔", holdingLabel: "관심종목", content: "목록가 인하랑 잔금 할인은 다름", createdAt: T30SEP + 1620000, likes: 5 },
+    { id: 1220952, nickname: "인도사십팔만", holdingLabel: "관심종목", content: "8월 인도는 Y가 줄고 3는 늘었다", createdAt: T30SEP + 1800000, likes: 4 },
+  ],
+  122096: [
+    { id: 1220961, nickname: "전력칠백오십", holdingLabel: "관심종목", content: "신차 등록 비중이랑 전체 도로 재고는 다름", createdAt: T30SEP + 1680000, likes: 5 },
+    { id: 1220962, nickname: "연환산천억", holdingLabel: "관심종목", content: "2위 차 이름은 카드에 없음", createdAt: T30SEP + 1860000, likes: 4 },
+  ],
+  122097: [
+    { id: 1220971, nickname: "인도사십팔만", holdingLabel: "관심종목", content: "건설비 510억이랑 전력 배수는 단위가 다름", createdAt: T30SEP + 1740000, likes: 5 },
+    { id: 1220972, nickname: "운전사대신", holdingLabel: "관심종목", content: "755 각주 없으면 다른 기관 배수랑 나란히 두지 말자", createdAt: T30SEP + 1920000, likes: 4 },
+  ],
+  122098: [
+    { id: 1220981, nickname: "연환산천억", holdingLabel: "관심종목", content: "베팅 분포랑 회사 가이던스는 다름", createdAt: T30SEP + 1800000, likes: 5 },
+    { id: 1220982, nickname: "크로아티아여덟", holdingLabel: "관심종목", content: "분기는 9월30일에 닫힘", createdAt: T30SEP + 1980000, likes: 4 },
+  ],
+  122099: [
+    { id: 1220991, nickname: "운전사대신", holdingLabel: "관심종목", content: "연환산이랑 연간 합계는 다름", createdAt: T30SEP + 1860000, likes: 5 },
+    { id: 1220992, nickname: "연산팔백사십오", holdingLabel: "관심종목", content: "845억 약정이랑 12월 속도를 더하지 말자", createdAt: T30SEP + 2040000, likes: 4 },
+  ],
+  122100: [
+    { id: 1221001, nickname: "크로아티아여덟", holdingLabel: "관심종목", content: "후기 한 건이랑 등록 통계는 다름", createdAt: T30SEP + 1920000, likes: 5 },
+    { id: 1221002, nickname: "태양광이백", holdingLabel: "관심종목", content: "비슷한 가격의 비교 차종은 안 적힘", createdAt: T30SEP + 2100000, likes: 4 },
+  ],
   122056: [
     { id: 1220561, nickname: "브이삼이십육", holdingLabel: "관심종목", content: "275km는 궤도. 착수는 계획된 바다", createdAt: T29SEP + 720000, likes: 5 },
     { id: 1220562, nickname: "할부오십비피", holdingLabel: "관심종목", content: "26기 며칠뒤 건강이 확인", createdAt: T29SEP + 900000, likes: 4 },

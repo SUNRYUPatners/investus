@@ -1,0 +1,233 @@
+module.exports = [
+  {
+    "id": "seed-1819",
+    "slug": "tsla-croatia-fsd",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "테슬라 감독 완전자율주행이 크로아티아에서 승인돼 유럽은 여덟 나라가 됐습니다",
+    "summary": "크로아티아가 9월 29일 합류하면서 유럽 승인국은 여덟입니다. 인구를 더하면 유럽연합 65% 가운데 12.66%이고, 전 세계 합산은 열여섯 나라라는 글이 있습니다. 유럽 전역 승인은 아직입니다.",
+    "titleEn": "Tesla FSD Supervised is approved in Croatia, the eighth European country",
+    "summaryEn": "Eight European approvals. Population share 12.66% of 65%. Worldwide count listed as 16."
+  },
+  {
+    "id": "seed-1820",
+    "slug": "spcx-anthropic-845",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "앤트로픽이 2029년까지 스페이스X 연산에 최대 845억 달러를 쓰겠다고 밝혔습니다",
+    "summary": "앤트로픽은 스페이스X의 엔비디아 기반 연산 용량을 2029년까지 최대 845억 달러어치 쓰기로 했다고 공시했습니다. 이전에 알려진 상한의 거의 두 배라는 설명이 붙었습니다. 그림에는 2031년 66.6기가와트가 있습니다.",
+    "titleEn": "Anthropic disclosed up to $84.5 billion of SpaceX compute through 2029",
+    "summaryEn": "NVIDIA-based capacity. Nearly double a previously disclosed cap. Chart shows 66.6 GW by 2031."
+  },
+  {
+    "id": "seed-1821",
+    "slug": "tsla-solar-200gw",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "테슬라와 스페이스X가 태양광 모듈 연 200기가와트를 겨냥한다는 말이 나왔습니다",
+    "summary": "일론 머스크는 테슬라와 스페이스X가 태양광 모듈을 한 해 200기가와트 만드는 쪽을 보고 있다고 했습니다. 오늘 미국 모듈 능력의 약 세 배입니다. 그 전력은 땅과 궤도의 인공지능에 쓴다는 해석이 붙었습니다.",
+    "titleEn": "Tesla and SpaceX are described as targeting 200 GW of solar modules a year",
+    "summaryEn": "About three times current U.S. module capacity. Framed as power for AI on Earth and in orbit."
+  },
+  {
+    "id": "seed-1822",
+    "slug": "tsla-sec-ma",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "테슬라가 증권거래위원회 인수합병 사무소에 보낸 9월 29일 회신 표지가 돌았습니다",
+    "summary": "화면에는 테슬라의 9월 29일자 회신이 인수합병 사무소, 기업금융국 앞으로 되어 있습니다. 소셜은 스페이스X 합병이 임박했냐고 묻습니다. 표지 한 장만으로 합병 발표가 확인된 것은 아닙니다.",
+    "titleEn": "A Sept. 29 Tesla letter to the SEC mergers office is circulating",
+    "summaryEn": "Cover page only. Social asks about a SpaceX merger. That question is not a deal announcement."
+  },
+  {
+    "id": "seed-1823",
+    "slug": "tsla-fsd-15b",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "테슬라 감독 완전자율주행 누적 거리가 150억 마일을 넘었다는 안전보고서가 있습니다",
+    "summary": "차량 안전보고서에는 누적 15,007,023,418마일이 찍혀 있습니다. 도시 구간은 5,843,156,839마일입니다. 8월 31일 140억 이후 29일 만에 10억 마일이 더해졌다는 글이 함께 있습니다.",
+    "titleEn": "Tesla's supervised self-driving log passed 15 billion miles",
+    "summaryEn": "Safety report shows 15,007,023,418 miles and 5,843,156,839 city miles. About 1 billion miles in 29 days."
+  },
+  {
+    "id": "seed-1824",
+    "slug": "grok-48",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "그록 4.8이 파라미터 2.5조로 그록 4.6보다 크고, 새 소프트웨어 스택에서 처음 학습된다고 합니다",
+    "summary": "그록 4.8은 파라미터 2.5조로 그록 4.6보다 크다고 적혔습니다. 스페이스X 인공지능의 새 C++ 소프트웨어 스택에서 학습하는 첫 그록이라는 문장입니다. 공개 일정은 이 글에 없습니다.",
+    "titleEn": "Grok 4.8 is described as 2.5 trillion parameters on a new C++ stack",
+    "summaryEn": "Larger than Grok 4.6. Called the first Grok trained on SpaceX AI's new software stack."
+  },
+  {
+    "id": "seed-1825",
+    "slug": "trump-superintelligence",
+    "category": "매크로",
+    "color": "slate",
+    "subject": "매크로",
+    "title": "인공지능을 초지능으로 부르겠다는 오찬 속보와, 정부 기술 전환에 대한 감사 인사가 같이 돌았습니다",
+    "summary": "오찬 속보는 인공지능을 초지능으로 부르고, 자체 감시와 감독 위원회를 말한다고 적었습니다. 다른 영상은 아메리카 닷 거브 출범에서 기술로 정부를 바꾸자는 구상에 감사를 표했다고 합니다. 행정명령 원문은 이 화면에서 확인되지 않습니다.",
+    "titleEn": "Posts describe an AI renaming and a public thanks at an America.gov launch",
+    "summaryEn": "Social recap of a lunch, plus a launch clip. The order text is not on these screens."
+  },
+  {
+    "id": "seed-1826",
+    "slug": "burry-datacenter",
+    "category": "매크로",
+    "color": "slate",
+    "subject": "매크로",
+    "title": "2023년 이후 데이터센터 건설은 510억 달러 늘고 나머지 민간 건설은 1,200억 달러 줄었다는 차트가 있습니다",
+    "summary": "2023년 이후 연간 건설 지출 변화는 데이터센터 +510억 달러, 그 밖 민간 건설 -1,200억 달러로 적혔습니다. 6월에는 데이터센터를 뺀 민간 건설이 1년 전보다 7.9% 줄었다고 합니다. 오래가지 않을 것이라는 의견이 따라옵니다.",
+    "titleEn": "A chart shows data-center construction up $51B and everything else down $120B",
+    "summaryEn": "Change since 2023. Private construction outside data centers fell 7.9% year over year in June."
+  },
+  {
+    "id": "seed-1827",
+    "slug": "tsla-manchester",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "테슬라가 맨체스터에서 채용 행사를 열고 사이버캡도 가져온다고 알렸습니다",
+    "summary": "테슬라 영국 계정은 다음 라이프 앳 테슬라 행사를 맨체스터에서 열고 사이버캡도 가져온다고 했습니다. 미래가 보고 싶으면 오라는 초대장입니다. 판매 개시일이나 가격은 이 글에 없습니다.",
+    "titleEn": "Tesla is bringing a Life at Tesla event, and a Cybercab, to Manchester",
+    "summaryEn": "A recruiting-style invitation. No price or on-sale date on the post."
+  },
+  {
+    "id": "seed-1828",
+    "slug": "starship-f15-stand",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "14번째 비행 다음 날도 안 돼 15번째 비행용 작업대가 궤도 발사대에 들어갔다고 합니다",
+    "summary": "스페이스X는 14번째 비행이 끝난 지 하루가 안 돼 15번째 비행 준비로 새 작업대를 궤도 발사대에 넣었다고 적혔습니다. 비계 없이 마운트 곳곳에 닿게 한다는 설명입니다. 발사 시각은 이 글에 없습니다.",
+    "titleEn": "A Flight 15 work stand went into the orbital mount less than a day after Flight 14",
+    "summaryEn": "Described as faster, safer access without scaffolding. No launch time on the post."
+  },
+  {
+    "id": "seed-1829",
+    "slug": "tsla-austin-fare",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "오스틴 월요일 저녁에 사이버캡 8.33달러가 우버엑스 10.90달러보다 쌌습니다",
+    "summary": "월요일 오후 러시아워 비교는 사이버캡 8.33달러·11분, 모델Y 9.51달러·17분, 우버엑스 10.90달러·9분, 컴포트 일렉트릭 12.93달러·8분입니다. 두 로보택시가 저녁에 우버보다 싼 것은 처음이라는 문장입니다. 지난주 같은 시간대 사이버캡은 16.89달러였습니다.",
+    "titleEn": "An Austin Monday evening Cybercab fare was $8.33 against UberX at $10.90",
+    "summaryEn": "Both robotaxi options undercut Uber on price. Uber was still faster. Last week the same slot was $16.89."
+  },
+  {
+    "id": "seed-1830",
+    "slug": "starship-heatshield",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "우주에서 돌아온 스타십을 엔지니어가 직접 보고 방열 개선을 다음 비행에 넣겠다고 했습니다",
+    "summary": "스페이스X는 엔지니어가 귀환한 스타십을 처음으로 손으로 살폈고, 배운 점이 방열판 개선으로 이어져 오늘 비행에 보인다고 했습니다. 스타십 시리즈 최신 편을 보라는 안내입니다. 타일 매수는 이 글에 없습니다.",
+    "titleEn": "SpaceX says engineers inspected a returned Starship and will show heat-shield changes",
+    "summaryEn": "Lessons from the vehicle after space. A series episode, not a tile count."
+  },
+  {
+    "id": "seed-1831",
+    "slug": "tsla-hmd-semi",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "HMD 트럭킹이 테슬라 세미 50대를 주문했고 규모는 약 1,500만 달러로 적혔습니다",
+    "summary": "회사는 대형 트럭 약 700대를 굴리고 거의 전부 디젤 피터빌트라고 합니다. 공동창업자 헨리 말루카스가 약 1,500만 달러 규모로 세미 50대를 주문했습니다. 세미를 기적이라고 불렀다는 인용입니다.",
+    "titleEn": "HMD Trucking is reported to be buying 50 Tesla Semis for about $15 million",
+    "summaryEn": "Fleet of about 700 rigs, mostly diesel. Co-founder called the Semi a miracle."
+  },
+  {
+    "id": "seed-1832",
+    "slug": "amd-world-labs",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "AMD",
+    "title": "AMD가 페이페이 리의 월드랩스를 약 82억 달러에 인수하기로 했습니다",
+    "summary": "AMD는 인공지능 모델·연구실 월드랩스를 인수하기로 합의했다고 9월 28일 밝혔습니다. 전액 주식이고 약 82억 달러입니다. 연구자와 모델 전문가를 데려와 하드웨어·소프트웨어·시스템을 만들겠다는 문장입니다.",
+    "titleEn": "AMD agreed to acquire Fei-Fei Li's World Labs for about $8.2 billion",
+    "summaryEn": "All-stock deal announced Sept. 28. Expected to close by the end of 2026, subject to approvals."
+  },
+  {
+    "id": "seed-1833",
+    "slug": "tsla-30b-debt",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "테슬라가 3년 만기 200억 달러와 리볼버 100억 달러로 최대 300억 달러 한도를 열었다고 합니다",
+    "summary": "새 신용 한도는 200억 달러 3년 만기 대출과 100억 달러 리볼버로, 더 늘릴 여지가 있다고 적혔습니다. 피치는 최대 300억 달러 설비를 기회 되면 확보하려는 계획이라고 설명했습니다. 인공지능·옵티머스·사이버캡 확장 전에 돈을 갖춰 둔다는 해석이 붙습니다.",
+    "titleEn": "Tesla is described as opening up to $30 billion of credit facilities",
+    "summaryEn": "A $20 billion three-year term loan and $10 billion of revolvers, with room to expand."
+  },
+  {
+    "id": "seed-1834",
+    "slug": "tsla-china-promo",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "테슬라가 20일 안에 두 번째로 중국 가격 인센티브를 조정했다는 속보가 있습니다",
+    "summary": "예측 시장 글은 테슬라가 20일 만에 두 번째로 중국 가격을 낮췄다고 적었습니다. 9월 25일 안은 모델3 잔금 5,000위안, 일부 모델Y 7,000위안을 10월 31일 주문까지 적용합니다. 9월 7일 재고차 모델Y 할인은 10,000위안이었습니다.",
+    "titleEn": "A post says Tesla cut China prices for the second time in 20 days",
+    "summaryEn": "Sept. 25 offer: 5,000 yuan off Model 3 and 7,000 yuan off select Model Y through Oct. 31."
+  },
+  {
+    "id": "seed-1835",
+    "slug": "norway-ev-98",
+    "category": "매크로",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "올해 노르웨이 신차의 98%가 전기차이고 모델Y가 다음 모델을 300% 넘게 앞선다는 속보가 있습니다",
+    "summary": "올해 노르웨이에서 팔린 새 차의 98%가 전기차이고, 테슬라 모델Y가 다음 모델을 300% 넘게 앞선다는 글입니다. 날짜는 9월 27일로 적혀 있습니다. 차종 이름과 대수 표는 이 카드에 없습니다.",
+    "titleEn": "A post says 98% of new cars in Norway this year are EVs, led by Model Y",
+    "summaryEn": "Model Y ahead of the next model by over 300%. Dated Sept. 27. No unit table on the card."
+  },
+  {
+    "id": "seed-1836",
+    "slug": "dc-power-755",
+    "category": "매크로",
+    "color": "slate",
+    "subject": "매크로",
+    "title": "미국 데이터센터 전력 수요가 2029년까지 755% 늘어난다는 속보가 있습니다",
+    "summary": "미국 데이터센터 전력 수요가 2029년까지 755% 급증한다는 한 줄 속보입니다. 기준 연도와 출처 보고서는 그 카드에 없습니다. 같은 아침의 건설 지출 차트와는 단위가 다릅니다.",
+    "titleEn": "A post says U.S. data-center power demand surges 755% by 2029",
+    "summaryEn": "One-line claim. Base year and source report are not on the card."
+  },
+  {
+    "id": "seed-1837",
+    "slug": "tsla-q3-kalshi",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "예측 시장이 테슬라 3분기 인도를 49만 대 안팎, 중심은 48만 7천 대로 보고 있습니다",
+    "summary": "3분기에 거의 49만 대를 인도할 것이라는 글이 있습니다. 그래프 캡션은 48만 7천 대 예측에 1천을 더한 눈금입니다. 시장은 동부시간 10월 3일 자정에 닫힌다고 적혀 있습니다.",
+    "titleEn": "A prediction market centers Tesla's third-quarter deliveries near 487,000",
+    "summaryEn": "Headline says nearly 490,000. The chart label is 487K plus 1K. Market ends Oct. 3."
+  },
+  {
+    "id": "seed-1838",
+    "slug": "spcx-arr-100b",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "올해 12월 스페이스X 연환산 매출이 1,000억 달러를 넘을 것이라는 말이 적혔습니다",
+    "summary": "올해 12월 1,000억 달러 이상의 연환산 매출에 도달할 것으로 기대한다는 문장입니다. 그 숫자는 물음표가 아니고, 기본적으로 아무것도 더하지 않아도 도달하는 수준이라고 했습니다. 월별 매출표는 이 글에 없습니다.",
+    "titleEn": "Elon Musk is quoted expecting SpaceX annualized revenue above $100 billion in December",
+    "summaryEn": "Described as not a question mark, and as what they would reach if they basically did nothing more."
+  },
+  {
+    "id": "seed-1839",
+    "slug": "tabarrok-tesla",
+    "category": "종목분석",
+    "color": "green",
+    "subject": "테슬라",
+    "title": "경제학자 한 사람이 차를 살 바에는 운전사를 빼는 쪽이 낫다며 테슬라를 샀다고 적었습니다",
+    "summary": "선택은 차냐 차와 운전사냐였고, 감독 주행은 사람들이 말하는 만큼 좋으며 앞으로 더 나아지는 반면 사람은 더 못해진다는 글입니다. 비슷한 가격이면 다른 차를 살 이유가 없다고 마무리합니다. 트림과 가격은 없습니다.",
+    "titleEn": "An economist wrote that he bought a Tesla because FSD only gets better",
+    "summaryEn": "A personal purchase note. No trim or price. Framed as car versus car-plus-driver."
+  }
+];
