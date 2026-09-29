@@ -12,6 +12,8 @@ const VALIDATE_SINCE = "2026-08-29";
 const VALIDATE_RICH_SINCE = "2026-09-02";
 /** 2026-09-10~ 본문 리셋 — 초보 이해 구조 */
 const BODY_RESET_SINCE = "2026-09-10";
+/** 2026-09-30~ 개별 3단 — 스크린샷 그대로 + 뉴스 보충 + 기관·하우스 뷰 */
+const BODY_HOUSE_SINCE = "2026-09-30";
 
 /** date: "2026.09.04" | "2026-09-04" → "2026-09-04" */
 function normalizeDate(d) {
@@ -29,6 +31,11 @@ const ALLOW = new Set([
   // 기업명·기술 약어는 한글 문장 안에서도 영어 유지 (2026-09-09~) — 억지 음역 금지
   "asml", "tsmc", "euv", "nbis", "pltr", "nebius", "nvidia", "tesla", "spacex",
   "fsd", "llm", "agi", "ipo", "adr", "etfs", "usd", "mw", "mwh", "gwh",
+  // 기관·하우스 뷰에 나오는 영문 하우스명 (2026-09-30~)
+  "goldman", "sachs", "morgan", "stanley", "jpmorgan", "barclays", "deutsche",
+  "nomura", "wedbush", "mizuho", "jefferies", "bernstein", "blackrock",
+  "fidelity", "morningstar", "wellsfargo", "citigroup", "hsbc", "macquarie",
+  "overweight", "outperform", "piper", "sandler", "canaccord",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */
@@ -96,7 +103,9 @@ const TONE_BANNED = [
   "다른 화면의 숫자",
 ];
 
-/** 2026-09-29~: 스크린샷을 「그래프를 보여 줬다」고 묘사하지 말고, 적힌 글을 옮긴다 */
+const HOUSE_NAME_RE =
+  /골드만|모건스탠리|JP모건|제이피모건|뱅크오브아메리카|뱅크 오브 아메리카|씨티그룹|씨티증권|바클레이|도이치|노무라|삼성증권|미래에셋|NH투자|한국투자|키움|신한투자|KB증권|대신증권|메리츠|유안타|하나증권|모닝스타|웰스파고|웨드부시|미즈호|제프리스|번스타인|블랙록|피델리티|아크인베스트|맥쿼리|하이투자|교보증권|유진투자|이베스트|한화투자|CLSA|UBS|HSBC/;
+const HOUSE_PT_RE = /목표가|목표 주가|목표주가|목표 가격|밸류에이션|적정가치|적정 가치|전망/;
 const SCREENSHOT_META_SINCE = "2026-09-29";
 const SCREENSHOT_META = [
   "보여 줬습니다",
@@ -280,10 +289,12 @@ function validateSectionSeparation(r, file) {
   }
 
   const useNew = r.date >= BODY_RESET_SINCE;
+  const useHouse = r.date >= BODY_HOUSE_SINCE;
   const detail = extractSection(
     r.body,
     useNew ? "■ 무슨 일인가요" : "■ 상세",
   );
+  const more = extractSection(r.body, "■ 조금만 더 알려드리면");
   const longTerm = extractSection(
     r.body,
     useNew ? "■ 장기적으로 보면" : "■ 장기 투자 관점",
@@ -292,11 +303,19 @@ function validateSectionSeparation(r, file) {
     r.body,
     useNew ? "■ 투자 시사점" : "■ 투자시사점",
   );
-  const sections = [
-    [useNew ? "무슨 일" : "상세", detail],
-    [useNew ? "장기" : "장기투자", longTerm],
-    ["투자시사점", invest],
-  ].filter(([, text]) => text.length > 80);
+  const house = extractSection(r.body, "■ 기관·하우스 뷰");
+  const sections = (useHouse
+    ? [
+        ["무슨 일", detail],
+        ["조금만 더", more],
+        ["기관·하우스 뷰", house],
+      ]
+    : [
+        [useNew ? "무슨 일" : "상세", detail],
+        [useNew ? "장기" : "장기투자", longTerm],
+        ["투자시사점", invest],
+      ]
+  ).filter(([, text]) => text.length > 80);
 
   for (let i = 0; i < sections.length; i++) {
     for (let j = i + 1; j < sections.length; j++) {
@@ -365,15 +384,18 @@ function validateRichness(r, file) {
   }
 
   const useNew = r.date >= BODY_RESET_SINCE;
+  const useHouse = r.date >= BODY_HOUSE_SINCE;
 
   if (useNew) {
     const requiredSummary = ["■ 오늘의 큰 그림", "■ 투자 시사점"];
-    const requiredDetail = [
-      "■ 무슨 일인가요",
-      "■ 조금만 더 알려드리면",
-      "■ 장기적으로 보면",
-      "■ 투자 시사점",
-    ];
+    const requiredDetail = useHouse
+      ? ["■ 무슨 일인가요", "■ 조금만 더 알려드리면", "■ 기관·하우스 뷰"]
+      : [
+          "■ 무슨 일인가요",
+          "■ 조금만 더 알려드리면",
+          "■ 장기적으로 보면",
+          "■ 투자 시사점",
+        ];
     for (const sec of isSummary ? requiredSummary : requiredDetail) {
       if (r.body && !r.body.includes(sec)) {
         errors.push(`${file} ${r.id} body: 필수 섹션 누락 (${sec})`);
@@ -386,7 +408,7 @@ function validateRichness(r, file) {
         const paras = whatMatch[1].split(/\n\n/).filter((p) => p.trim().length > 24);
         if (paras.length < 3) {
           errors.push(
-            `${file} ${r.id} body: ■ 무슨 일인가요 문단 부족 (${paras.length}개 < 3개). 스크린샷·뉴스를 초보 문단으로 풀으세요.`,
+            `${file} ${r.id} body: ■ 무슨 일인가요 문단 부족 (${paras.length}개 < 3개). 스크린샷 글·이모지를 그대로 옮기세요.`,
           );
         }
       }
@@ -395,26 +417,59 @@ function validateRichness(r, file) {
         const paras = moreMatch[1].split(/\n\n/).filter((p) => p.trim().length > 24);
         if (paras.length < 2) {
           errors.push(
-            `${file} ${r.id} body: ■ 조금만 더 알려드리면 문단 부족 (${paras.length}개 < 2개). 웹 검색으로 배경을 보충하세요.`,
+            `${file} ${r.id} body: ■ 조금만 더 알려드리면 문단 부족 (${paras.length}개 < 2개). 관련 뉴스로 보충하세요.`,
           );
         }
       }
-      const longMatch = r.body.match(/■ 장기적으로 보면\n\n([\s\S]*?)\n\n■/);
-      if (longMatch) {
-        const paras = longMatch[1].split(/\n\n/).filter((p) => p.trim().length > 24);
-        if (paras.length < 2) {
+      if (useHouse) {
+        if (r.body.includes("■ 장기적으로 보면")) {
           errors.push(
-            `${file} ${r.id} body: ■ 장기적으로 보면 문단 부족 (${paras.length}개 < 2개).`,
+            `${file} ${r.id} body: 2026-09-30~ 개별은 ■ 장기적으로 보면 대신 ■ 기관·하우스 뷰.`,
           );
         }
-      }
-      const investMatch = r.body.match(/■ 투자 시사점\n\n([\s\S]*?)(\n\ninvestus|$)/);
-      if (investMatch) {
-        const paras = investMatch[1].split(/\n\n/).filter((p) => p.trim().length > 20);
-        if (paras.length < 2) {
+        if (r.body.includes("■ 투자 시사점")) {
           errors.push(
-            `${file} ${r.id} body: ■ 투자 시사점 문단 부족 (${paras.length}개 < 2개).`,
+            `${file} ${r.id} body: 2026-09-30~ 개별은 ■ 투자 시사점 대신 ■ 기관·하우스 뷰로 닫으세요.`,
           );
+        }
+        const houseMatch = r.body.match(/■ 기관·하우스 뷰\n\n([\s\S]*?)(\n\ninvestus|$)/);
+        if (houseMatch) {
+          const houseText = houseMatch[1];
+          const paras = houseText.split(/\n\n/).filter((p) => p.trim().length > 24);
+          if (paras.length < 2) {
+            errors.push(
+              `${file} ${r.id} body: ■ 기관·하우스 뷰 문단 부족 (${paras.length}개 < 2개).`,
+            );
+          }
+          if (!HOUSE_NAME_RE.test(houseText)) {
+            errors.push(
+              `${file} ${r.id} body: ■ 기관·하우스 뷰에 대형기관·증권 하우스 이름이 없습니다. 검색한 공개 전망만 쓰세요.`,
+            );
+          }
+          if (!HOUSE_PT_RE.test(houseText)) {
+            errors.push(
+              `${file} ${r.id} body: ■ 기관·하우스 뷰에 목표가·밸류에이션·전망 숫자가 없습니다. 창작 금지, 검색한 공개값만.`,
+            );
+          }
+        }
+      } else {
+        const longMatch = r.body.match(/■ 장기적으로 보면\n\n([\s\S]*?)\n\n■/);
+        if (longMatch) {
+          const paras = longMatch[1].split(/\n\n/).filter((p) => p.trim().length > 24);
+          if (paras.length < 2) {
+            errors.push(
+              `${file} ${r.id} body: ■ 장기적으로 보면 문단 부족 (${paras.length}개 < 2개).`,
+            );
+          }
+        }
+        const investMatch = r.body.match(/■ 투자 시사점\n\n([\s\S]*?)(\n\ninvestus|$)/);
+        if (investMatch) {
+          const paras = investMatch[1].split(/\n\n/).filter((p) => p.trim().length > 20);
+          if (paras.length < 2) {
+            errors.push(
+              `${file} ${r.id} body: ■ 투자 시사점 문단 부족 (${paras.length}개 < 2개).`,
+            );
+          }
         }
       }
     }
