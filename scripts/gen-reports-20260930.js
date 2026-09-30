@@ -192,7 +192,7 @@ ${ml(c.mid, x+150, 524, 17, 272, 2, 21, `font-family="Arial" font-size="17" fill
 ${ml(c.sub, x+150, 566, 15, 274, 2, 19, `font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle"`)}`;
   }).join('');
   const lines = o.detailLines.map((t, i) =>
-    ml(t, 100, 668 + i*36, 21, 890, 1, 24, `font-family="Arial" font-size="21" fill="#e5e7eb"`)).join('\n');
+    ml(t, 90, 700 + i*34, 18, 900, 1, 22, `font-family="Arial" font-size="18" fill="#e5e7eb"`)).join('\n');
   return shell(p, `${head(p, o.badge, ko)}
 ${ml(o.title, 540, 108, 28, 970, 2, 36, `font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle"`)}
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
@@ -200,10 +200,10 @@ ${ml(o.title, 540, 108, 28, 970, 2, 36, `font-family="Arial Black,Arial" font-si
 ${ml(o.heroBig, 540, 290, 52, 940, 1, 54, `font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
 ${ml(o.heroSub, 540, 334, 18, 940, 2, 24, `font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle"`)}
   <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>${cards}
-  <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">${esc(o.detailHead)}</text>
+  <rect x="60" y="616" width="960" height="168" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="648" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">${esc(o.detailHead)}</text>
 ${lines}
-${noteBox(p, o, 780, 210, ko)}
+${noteBox(p, o, 796, 196, ko)}
 ${foot(p, o.footer, ko, 1012)}`);
 }
 

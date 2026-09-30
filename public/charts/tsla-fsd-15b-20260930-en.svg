@@ -32,15 +32,15 @@
   <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">29 days</text>
   <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">1 billion mi</text>
   <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">After 14 billion</text>
-  <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">OTHER CARD THE SAME MORNING</text>
-  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">Another card shows 15,000,508,571 miles.</text>
-  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">Small type on the subscribe card says $99 a month.</text>
-  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">Supervised miles are not driverless commercial miles.</text>
-  <rect x="60" y="780" width="960" height="210" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="808" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
-  <text x="540" y="834" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Fitch cited 1.48 million active subscriptions in Q2, up 56% year over year. Distance and paying accounts are different</text>
-  <text x="540" y="854" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">tables.</text>
+  <rect x="60" y="616" width="960" height="168" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="648" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">OTHER CARD THE SAME MORNING</text>
+  <text x="90" y="700" font-family="Arial" font-size="18" fill="#e5e7eb">Another card shows 15,000,508,571 miles.</text>
+  <text x="90" y="734" font-family="Arial" font-size="18" fill="#e5e7eb">Small type on the subscribe card says $99 a month.</text>
+  <text x="90" y="768" font-family="Arial" font-size="18" fill="#e5e7eb">Supervised miles are not driverless commercial miles.</text>
+  <rect x="60" y="796" width="960" height="196" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="824" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
+  <text x="540" y="850" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Fitch cited 1.48 million active subscriptions in Q2, up 56% year over year. Distance and paying accounts are different</text>
+  <text x="540" y="870" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">tables.</text>
   <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

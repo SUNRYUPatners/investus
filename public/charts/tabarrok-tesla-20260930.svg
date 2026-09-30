@@ -11,36 +11,35 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.30</text>
-  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">차를 살 바에는 운전사를 빼는 쪽이라며 테슬라를 샀다는 글입니다</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">차를 살 때 운전사까지 같이 사는 쪽이라 테슬라를 샀습니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="236" font-family="Arial" font-size="72" text-anchor="middle">✍️</text>
   <text x="540" y="292" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">차 vs 운전사</text>
-  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">9월 28일 후기. 트림과 가격은 없습니다.</text>
+  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">9월 28일 구매입니다. 감독 자율주행이 사람보다 나아진다는 이유입니다.</text>
   <line x1="80" y1="376" x2="1000" y2="376" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">🚗</text>
   <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">구매</text>
-  <text x="210" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">한 사람이 샀습니다</text>
-  <text x="210" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">판매 통계가 아니라 9월 28일</text>
-  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">후기입니다</text>
+  <text x="210" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">차와 운전사</text>
+  <text x="210" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">차만 사는 쪽 대신 운전사까지 포함</text>
   <rect x="390" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🤖</text>
   <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">더 나아짐</text>
-  <text x="540" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">주행은 더 잘해진다고</text>
-  <text x="540" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">사람은 더 못해진다고 적혀 있습니다</text>
+  <text x="540" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">소프트웨어가 운전</text>
+  <text x="540" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">사람은 더 못해진다는 대비</text>
   <rect x="720" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">💵</text>
   <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">비슷한 값</text>
   <text x="870" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">다른 차는 이유가 없다</text>
-  <text x="870" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">비슷한 가격이면 다른 차를 살 이유가</text>
-  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">없다고 합니다</text>
+  <text x="870" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">비슷한 가격이면 다른 차를 안 삼</text>
   <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="648" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">선택은 차냐, 차와 운전사냐였습니다. 감독 완전자율주행은 모두가 말하는 만큼 좋고, 앞으로 더 나아지는 반면</text>
-  <text x="540" y="672" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">사람은 더 못해진다고 합니다. 비슷한 가격이면 다른 차를 살 이유가 정말 없다고 적혀 있습니다.</text>
+  <text x="540" y="648" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">선택은 차만 살지, 차와 운전사를 같이 살지였습니다. 감독 완전자율주행은 사람들이 말하는 만큼 좋고, 앞으로는 더</text>
+  <text x="540" y="672" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">운전을 잘하게 됩니다. 사람은 반대로 더 못해집니다. 비슷한 가격이면 다른 차를 살 이유가 정말 없습니다.</text>
   <rect x="60" y="810" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="838" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="864" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">한 사람의 구매 후기입니다. 노르웨이 등록 순위와 오스틴 호출 요금이 수량과 가격의 표이고, 이 글은 그 표를 산 이유에 가깝습니다.</text>
-  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">사고율 비교는 안전보고서의 마일에서 따로 봐야 합니다. 비슷한 가격이라는 문장에도 비교 차종은 적혀 있지 않습니다.</text>
+  <text x="540" y="864" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">한 사람의 구매 이유입니다. 노르웨이 등록 대수와 오스틴 호출 요금이 수량과 가격을 보여주고, 이 구매는 그 숫자를 산 이유에</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">가깝습니다. 사고율은 안전보고서의 마일에서 확인합니다. 감독 주행은 버전이 오를수록 나아지고, 사람은 나이가 들수록 반응이</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">느려진다는 대비입니다.</text>
   <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.09.30</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
