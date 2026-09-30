@@ -130,6 +130,16 @@ function validateCommentQuality(commentsSection, postsSection, label) {
     }
   }
 
+  const contrastRe = /다름(?!니)|다른 칸|다른 표|다른 날|다른 통계|다른 편/;
+  const contrast = entries.filter(
+    (e) => postDates.get(e.postId) === latestDate && contrastRe.test(e.content),
+  );
+  if (contrast.length >= 3) {
+    errors.push(
+      `${label}: 당일 댓글 ${contrast.length}개가 "~다름/다른 칸" 틀 — 예: "${contrast[0].content.slice(0, 32)}". 글마다 질문·숫자·다음 일정·현장으로 바꾸세요.`,
+    );
+  }
+
   return errors;
 }
 
