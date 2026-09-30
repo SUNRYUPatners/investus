@@ -5,6 +5,7 @@ description: >-
   SEED_REPORTS, charts SVG(public/charts만·빈공간 없이 한 장 꽉),
   본문 3단(스크린샷 그대로→뉴스 보충→기관 뷰·목표가), 종토방/애널 포스트,
   스크린샷 반영 시 사용. PNG·01.investus 폴더 저장은 폐지.
+  카드뉴스 뽑아줘는 이 스킬이 아니라 investus-card-news. instagram/만, 배포 금지.
 ---
 
 # Investus 리포트 업데이트 스킬
