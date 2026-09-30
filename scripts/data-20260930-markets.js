@@ -92,7 +92,7 @@ NH투자증권은 목표주가 48만 원과 매수를 유지했습니다. 올해
   {
     id: "kr-seed-256", slug: "hyundai-drop-kr", category: "종목분석", color: "slate", subject: "현대차",
     title: "현대차가 1.27% 하락해 반도체 배당락 반등과 다른 마감을 보였습니다",
-    summary: "뉴스핌 시가총액 상위 등락에서 현대차는 1.27% 내렸습니다. 삼성바이오로직스는 1.07%, KB금융은 0.40% 하락으로 같이 적혔습니다. 종가 원화는 그 문장에 없습니다.",
+    summary: "시가총액 상위에서 현대차는 1.27% 내렸습니다. 삼성바이오로직스는 1.07%, KB금융은 0.40% 내렸습니다. 반도체 배당락 반등과 다른 마감이고, 자동차·바이오·금융이 같이 밀렸습니다.",
     titleEn: "Hyundai Motor fell 1.27%, apart from Samsung's ex-dividend gain",
     summaryEn: "Listed among large-cap decliners. The won close was not in that sentence.",
     body: D(
@@ -116,7 +116,7 @@ NH투자증권은 목표주가 48만 원과 매수를 유지했습니다. 올해
   {
     id: "kr-seed-257", slug: "semco-mlcc-kr", category: "종목분석", color: "blue", subject: "삼성전기",
     title: "삼성전기가 1.93% 오른 152만 8,000원으로 마감하고 서버 부품 장기 계약이 붙었습니다",
-    summary: "종가는 2만 9,000원(1.93%) 오른 152만 8,000원입니다. 인공지능 서버용 부품 장기 공급 계약 2,900억 원이 호재로 적혔습니다. 하나증권 목표주가는 300만 원입니다.",
+    summary: "종가는 2만 9,000원(1.93%) 오른 152만 8,000원입니다. 인공지능 서버용 부품 장기 공급 계약은 2,900억 원입니다. 하나증권 목표주가는 300만 원입니다.",
     titleEn: "Samsung Electro-Mechanics closed at 1,528,000 won, up 1.93%, on a server-parts contract",
     summaryEn: "A 290 billion won long-term supply deal was cited. Hana keeps a 3 million won target.",
     body: D(
@@ -160,7 +160,7 @@ const SAFE = [
   {
     id: "safe-seed-230", slug: "btc-83607-safe", category: "종목분석", color: "orange", subject: "비트코인",
     title: "비트코인이 8만 3,607달러로 전일 꼭지보다 소폭 높았습니다",
-    summary: "동부 오후 2시 45분 가격은 8만 3,607.21달러입니다. 전일 보고보다 538달러 높고, 1년 전보다는 낮습니다. 시가총액은 약 1조 3,300억 달러로 적혔습니다.",
+    summary: "동부 오후 2시 45분 가격은 8만 3,607.21달러입니다. 전일 보고보다 538달러 높고, 1년 전보다는 낮습니다. 시가총액은 약 1조 3,300억 달러입니다.",
     titleEn: "Bitcoin printed $83,607, a little above the prior day's mark",
     summaryEn: "Up $538 from the previous Fortune mark. Market value listed near $1.33 trillion.",
     body: D(
@@ -204,7 +204,7 @@ const SAFE = [
   {
     id: "safe-seed-232", slug: "eth-2694-safe", category: "종목분석", color: "indigo", subject: "이더리움",
     title: "이더리움이 2,693.71달러로 전일 보고보다 소폭 올랐습니다",
-    summary: "동부 오후 시세는 2,693.71달러입니다. 전일 보고보다 23.95달러 높습니다. 다른 시각에는 2,698달러, 하루 1.8%로도 적혔습니다. 두 시계를 평균하지 않습니다.",
+    summary: "동부 오후 시세는 2,693.71달러입니다. 전일 보고보다 23.95달러 높습니다. 다른 시각에는 2,698달러, 하루 1.8%입니다. 두 시계를 평균하지 않습니다.",
     titleEn: "Ether was $2,693.71, a little above the prior day's mark",
     summaryEn: "Up about $24 on the Fortune mark. Another print showed $2,698, up 1.8%.",
     body: D(
@@ -226,7 +226,7 @@ const SAFE = [
   {
     id: "safe-seed-233", slug: "silver-61-safe", category: "종목분석", color: "slate", subject: "은",
     title: "은 현물이 61.05달러로 금 반등보다 조용했습니다",
-    summary: "화요일 은 현물은 61.05달러, 하루 0.11%입니다. 금은 1.14% 올랐습니다. 선물 은은 다른 표에서 60.65달러, 5%대 하락으로도 적혀 있습니다. 두 표를 평균하지 않습니다.",
+    summary: "화요일 은 현물은 61.05달러, 하루 0.11%입니다. 금은 1.14% 올랐습니다. 선물 은은 60.65달러, 5%대 하락입니다. 현물과 선물을 평균하지 않습니다.",
     titleEn: "Spot silver held $61.05 while gold bounced harder",
     summaryEn: "Up 0.11% on the spot desk. A futures print showed $60.65, a separate table.",
     body: D(

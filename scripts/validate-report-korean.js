@@ -113,6 +113,22 @@ const SCREENSHOT_META = [
   "색깔이 갈렸",
   "화면 복기 카드",
 ];
+/** 2026-09-30~: 제목·요약은 발행 문장. 남의 글을 받아 적는 말투 금지 */
+const PUBLISHER_TITLE_SINCE = "2026-09-30";
+const PUBLISHER_TITLE_BANNED = [
+  "적었습니다",
+  "적혔습니다",
+  "적혀 있",
+  "적혀있",
+  "글입니다",
+  "글이 있습니다",
+  "속보가 있습니다",
+  "말이 나왔",
+  "차트가 있습니다",
+  "그래프 캡션",
+  "트림과 가격은 없",
+];
+
 /** 2026-09-30~: 영상·사진 설명, 캡처에 없다는 문장 금지 */
 const SCREENSHOT_ABSENCE_SINCE = "2026-09-30";
 const SCREENSHOT_ABSENCE = [
@@ -607,6 +623,22 @@ function validateReport(r, file) {
   }
   errors.push(...validateTone(r, file));
   errors.push(...validateScreenshotTranscript(r, file));
+  errors.push(...validatePublisherTitle(r, file));
+  return errors;
+}
+
+function validatePublisherTitle(r, file) {
+  const errors = [];
+  if (!r.date || r.date < PUBLISHER_TITLE_SINCE) return errors;
+  const text = `${r.title || ""}\n${r.summary || ""}`;
+  for (const phrase of PUBLISHER_TITLE_BANNED) {
+    if (text.includes(phrase)) {
+      errors.push(
+        `${file} ${r.id}: 제목·요약은 발행 문장으로 쓰세요 ("${phrase}"). ~적었습니다·~글이 있습니다·~속보가 있습니다 금지.`,
+      );
+      break;
+    }
+  }
   return errors;
 }
 

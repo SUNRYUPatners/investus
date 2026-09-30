@@ -15,7 +15,7 @@
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">🚀</text>
   <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#c084fc" text-anchor="middle">하루 미만</text>
-  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">14번째 비행 다음 날도 안 돼 준비 중이라는 글입니다.</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">14번째 비행 다음 날도 안 돼 15번째 비행을 준비합니다.</text>
   <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="400" width="300" height="200" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">영상</text>
@@ -34,9 +34,9 @@
   <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">함선 번호도 없음</text>
   <rect x="60" y="616" width="960" height="168" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="648" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">이 글이 말하는 것</text>
-  <text x="90" y="700" font-family="Arial" font-size="18" fill="#e5e7eb">발판이 빨리 들어가면 다음 창까지 정비 시간이 줄어듭니다. 14번째 비행이 끝난 지 하루가 안 돼 15번째 비행…</text>
-  <text x="90" y="734" font-family="Arial" font-size="18" fill="#e5e7eb">오늘의 글은 착수 복기가 아니라 다음 발을 위한 철골입니다.</text>
-  <text x="90" y="768" font-family="Arial" font-size="18" fill="#e5e7eb">비계를 안 쓴다는 말은 고정 스탠드로 같은 점검을 하겠다는 뜻입니다.</text>
+  <text x="90" y="700" font-family="Arial" font-size="18" fill="#e5e7eb">15번째 비행용 작업대가 궤도 발사대에 들어갔습니다.</text>
+  <text x="90" y="734" font-family="Arial" font-size="18" fill="#e5e7eb">착수 복기가 아니라 다음 비행을 위한 철골입니다.</text>
+  <text x="90" y="768" font-family="Arial" font-size="18" fill="#e5e7eb">비계 대신 고정 스탠드로 같은 점검을 합니다.</text>
   <rect x="60" y="796" width="960" height="196" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="824" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
   <text x="540" y="850" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">궤도 발사대는 부스터가 돌아오도록 만든 탑입니다. 작업대는 그 탑의 발판입니다. 발사 면허와 철골 입고는 다른 종이입니다.</text>

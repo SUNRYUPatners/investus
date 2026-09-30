@@ -28,15 +28,15 @@ const US = [
     tickers: ["MACRO"],
     title: "2026년 9월 30일 한장 요약입니다. 크로아티아 승인·845억 달러 연산·200기가와트 태양광을 모았습니다",
     summary:
-      "테슬라 감독 완전자율주행이 크로아티아에서 승인돼 유럽은 여덟 나라입니다. 앤트로픽은 2029년까지 스페이스X 연산에 최대 845억 달러를 쓰겠다고 밝혔습니다. 테슬라와 스페이스X는 태양광 모듈 연 200기가와트를 겨냥한다고 적혔습니다.",
+      "테슬라 감독 완전자율주행이 크로아티아에서 승인돼 유럽은 여덟 나라입니다. 앤트로픽은 2029년까지 스페이스X 연산에 최대 845억 달러를 쓰겠다고 밝혔습니다. 테슬라와 스페이스X는 태양광 모듈을 연 200기가와트 만드는 쪽을 보고 있습니다.",
     titleEn: "2026.09.30 snapshot: Croatia FSD, $84.5B compute, 200 GW solar",
     summaryEn: "Watch: Croatia approval · $84.5B · 200 GW · 15 billion miles · Austin $8.33.",
     body: summaryBody({
-      big: `9월 30일 수요일입니다. 테슬라 감독 완전자율주행이 크로아티아에서 승인됐습니다. 유럽 승인 국가는 여덟이고, 인구 비중을 더하면 유럽연합의 65% 가운데 12.66%입니다. 전 세계 합산은 열여섯 나라라는 글이 따로 있습니다.
+      big: `9월 30일 수요일입니다. 테슬라 감독 완전자율주행이 크로아티아에서 승인됐습니다. 유럽 승인 국가는 여덟이고, 인구 비중을 더하면 유럽연합의 65% 가운데 12.66%입니다. 전 세계 합산은 열여섯 나라입니다.
 
-앤트로픽은 2029년까지 스페이스X의 엔비디아 기반 연산에 최대 845억 달러를 쓰기로 했다고 밝혔습니다. 이전에 공개된 상한의 거의 두 배라는 설명이 붙었습니다. 같은 글의 그림은 2031년 활성 연산 66.6기가와트입니다.
+앤트로픽은 2029년까지 스페이스X의 엔비디아 기반 연산에 최대 845억 달러를 쓰기로 했다고 밝혔습니다. 이전에 공개된 상한의 거의 두 배입니다. 활성 연산은 2031년 66.6기가와트입니다.
 
-테슬라와 스페이스X는 태양광 모듈을 연 200기가와트 만드는 쪽을 보고 있다고 적혔습니다. 오늘 미국 모듈 능력의 약 세 배입니다. 감독 주행 누적 거리는 안전보고서 기준 150억 마일을 넘었습니다.
+테슬라와 스페이스X는 태양광 모듈을 연 200기가와트 만드는 쪽을 보고 있습니다. 오늘 미국 모듈 능력의 약 세 배입니다. 감독 주행 누적 거리는 안전보고서 기준 150억 마일을 넘었습니다.
 
 오스틴 월요일 저녁 러시아워에서 사이버캡 요금은 8.33달러, 우버엑스는 10.90달러였습니다. AMD는 월드랩스를 약 82억 달러에 사기로 했습니다. 테슬라는 최대 300억 달러 차입 한도를 기회 되면 쓰겠다는 신용평가 설명이 있습니다.`,
       invest: `표에 적어 둘 것은 유럽 승인 나라 수, 연산 계약 상한, 태양광 200기가와트, 주행거리 보고서, 오스틴 요금입니다.
@@ -62,7 +62,7 @@ push({
   tickers: ["TSLA"],
   title: "테슬라 감독 완전자율주행이 크로아티아에서 승인돼 유럽은 여덟 나라가 됐습니다",
   summary:
-    "크로아티아가 9월 29일 합류하면서 유럽 승인국은 여덟입니다. 인구를 더하면 유럽연합 65% 가운데 12.66%이고, 전 세계 합산은 열여섯 나라라는 글이 있습니다. 유럽 전역 승인은 아직입니다.",
+    "크로아티아가 9월 29일 합류하면서 유럽 승인국은 여덟입니다. 인구를 더하면 유럽연합 65% 가운데 12.66%이고, 전 세계는 열여섯 나라입니다. 유럽 전역 승인은 아직입니다.",
   titleEn: "Tesla FSD Supervised is approved in Croatia, the eighth European country",
   summaryEn: "Eight European approvals. Population share 12.66% of 65%. Worldwide count listed as 16.",
   body: D(
@@ -142,9 +142,9 @@ push({
   color: "green",
   subject: "테슬라",
   tickers: ["TSLA", "SPCX"],
-  title: "테슬라와 스페이스X가 태양광 모듈 연 200기가와트를 겨냥한다는 말이 나왔습니다",
+  title: "테슬라와 스페이스X는 태양광 모듈을 연 200기가와트 만드는 쪽을 보고 있습니다",
   summary:
-    "일론 머스크는 테슬라와 스페이스X가 태양광 모듈을 한 해 200기가와트 만드는 쪽을 보고 있다고 했습니다. 오늘 미국 모듈 능력의 약 세 배입니다. 그 전력은 땅과 궤도의 인공지능에 쓴다는 해석이 붙었습니다.",
+    "일론 머스크는 테슬라와 스페이스X의 태양광 모듈 목표를 연 200기가와트로 말했습니다. 오늘 미국 모듈 능력의 약 세 배입니다. 그 전력은 땅과 궤도의 인공지능에 씁니다.",
   titleEn: "Tesla and SpaceX are described as targeting 200 GW of solar modules a year",
   summaryEn: "About three times current U.S. module capacity. Framed as power for AI on Earth and in orbit.",
   body: D(
@@ -174,9 +174,9 @@ push({
   color: "green",
   subject: "테슬라",
   tickers: ["TSLA"],
-  title: "테슬라가 증권거래위원회 인수합병 사무소에 보낸 9월 29일 회신 표지가 돌았습니다",
+  title: "테슬라가 증권당국 인수합병 부서에 9월 29일 답장을 보냈습니다",
   summary:
-    "테슬라가 9월 29일 인수합병 사무소, 기업금융국에 회신을 보냈습니다. 소셜은 스페이스X 합병이 임박했냐고 묻습니다. 편지 머리만으로 합병 발표가 확인된 것은 아닙니다.",
+    "테슬라가 9월 29일 기업금융국 인수합병 사무소에 답장을 보냈습니다. 사람들이 묻는 말은 스페이스X와 곧 합병하느냐입니다. 이 답장은 계약 서명이 아니라 규제 기관에 보낸 첫 장입니다.",
   titleEn: "A Sept. 29 Tesla letter to the SEC mergers office is circulating",
   summaryEn: "Cover page only. Social asks about a SpaceX merger. That question is not a deal announcement.",
   body: D(
@@ -211,7 +211,7 @@ push({
   color: "green",
   subject: "테슬라",
   tickers: ["TSLA"],
-  title: "테슬라 감독 완전자율주행 누적 거리가 150억 마일을 넘었다는 안전보고서가 있습니다",
+  title: "테슬라 감독 완전자율주행이 150억 마일을 넘었습니다",
   summary:
     "8월 27일 안전보고서는 감독 완전자율주행 15,007,023,418마일, 도시 5,843,156,839마일입니다. 8월 31일 140억 이후 29일 만에 10억 마일이 더해졌습니다. 구독은 월 99달러이고 지금은 29일마다 10억 마일을 답니다.",
   titleEn: "Tesla's supervised self-driving log passed 15 billion miles",
@@ -245,9 +245,9 @@ push({
   color: "purple",
   subject: "스페이스X",
   tickers: ["SPCX"],
-  title: "그록 4.8이 파라미터 2.5조로 그록 4.6보다 크고, 새 소프트웨어 스택에서 처음 학습된다고 합니다",
+  title: "그록 4.8은 파라미터 2.5조로 그록 4.6보다 크고, 새 C++ 스택에서 처음 학습합니다",
   summary:
-    "그록 4.8은 파라미터 2.5조로 그록 4.6보다 크다고 적혔습니다. 스페이스X 인공지능의 새 C++ 소프트웨어 스택에서 학습하는 첫 그록이라는 문장입니다. 두 문장이 이 글의 전부입니다.",
+    "그록 4.8의 파라미터는 2.5조로 그록 4.6보다 큽니다. 스페이스X 인공지능의 새 C++ 소프트웨어 스택에서 학습하는 첫 그록입니다. 파라미터는 학습 때 조정하는 숫자의 개수입니다.",
   titleEn: "Grok 4.8 is described as 2.5 trillion parameters on a new C++ stack",
   summaryEn: "Larger than Grok 4.6. Called the first Grok trained on SpaceX AI's new software stack.",
   body: D(
@@ -275,9 +275,9 @@ push({
   color: "slate",
   subject: "매크로",
   tickers: ["MACRO"],
-  title: "인공지능을 초지능으로 부르겠다는 오찬 속보와, 정부 기술 전환에 대한 감사 인사가 같이 돌았습니다",
+  title: "인공지능을 초지능으로 부르고, 자체 감시와 감독 위원회를 둡니다",
   summary:
-    "오찬 속보는 인공지능을 초지능으로 부르고, 자체 감시와 감독 위원회를 말한다고 적었습니다. 아메리카 닷 거브 출범에서는 기술로 정부를 바꾸자는 구상에 감사를 표했다고 합니다.",
+    "오찬에서는 인공지능을 초지능으로 부르고, 자체 감시와 사용을 지켜볼 위원회를 말합니다. 아메리카 닷 거브 출범에서는 기술로 정부를 바꾸는 구상에 감사를 표했습니다. 이름 변경의 효력은 관보가 나와야 확정됩니다.",
   titleEn: "Posts describe an AI renaming and a public thanks at an America.gov launch",
   summaryEn: "Social recap of a lunch, plus a launch clip. The order text is not on these screens.",
   body: D(
@@ -320,9 +320,9 @@ push({
   color: "slate",
   subject: "매크로",
   tickers: ["MACRO"],
-  title: "2023년 이후 데이터센터 건설은 510억 달러 늘고 나머지 민간 건설은 1,200억 달러 줄었다는 차트가 있습니다",
+  title: "2023년 이후 데이터센터 건설은 510억 달러 늘고 나머지 민간 건설은 1,200억 달러 줄었습니다",
   summary:
-    "2023년 이후 연간 건설 지출 변화는 데이터센터 +510억 달러, 그 밖 민간 건설 -1,200억 달러로 적혔습니다. 6월에는 데이터센터를 뺀 민간 건설이 1년 전보다 7.9% 줄었다고 합니다. 오래가지 않을 것이라는 의견이 따라옵니다.",
+    "2023년 이후 연간 건설 지출은 데이터센터가 510억 달러 늘고, 그 밖 민간 건설은 1,200억 달러 줄었습니다. 6월에는 데이터센터를 뺀 민간 건설이 1년 전보다 7.9% 줄었습니다. 오래가지 않을 것이라는 의견이 따라옵니다.",
   titleEn: "A chart shows data-center construction up $51B and everything else down $120B",
   summaryEn: "Change since 2023. Private construction outside data centers fell 7.9% year over year in June.",
   body: D(
@@ -362,9 +362,9 @@ push({
   color: "green",
   subject: "테슬라",
   tickers: ["TSLA"],
-  title: "테슬라가 맨체스터에서 채용 행사를 열고 사이버캡도 가져온다고 알렸습니다",
+  title: "테슬라는 맨체스터 채용 행사에 사이버캡을 가져옵니다",
   summary:
-    "테슬라 영국 계정은 다음 라이프 앳 테슬라 행사를 맨체스터에서 열고 사이버캡도 가져온다고 했습니다. 미래를 보러 오라는 초대장입니다. 판매 개시 문장은 없습니다.",
+    "테슬라에서의 다음 삶이 맨체스터로 옵니다. 사이버캡도 같이 가져오고, 미래를 보러 오라는 초대입니다. 라이프 앳 테슬라 채용 행사입니다. 영국 도로에서 소프트웨어를 켜는 허가와는 다른 날입니다.",
   titleEn: "Tesla is bringing a Life at Tesla event, and a Cybercab, to Manchester",
   summaryEn: "A recruiting-style invitation. No price or on-sale date on the post.",
   body: D(
@@ -392,9 +392,9 @@ push({
   color: "purple",
   subject: "스페이스X",
   tickers: ["SPCX"],
-  title: "14번째 비행 다음 날도 안 돼 15번째 비행용 작업대가 궤도 발사대에 들어갔다고 합니다",
+  title: "14번째 비행 다음 날도 안 돼 15번째 비행용 작업대가 궤도 발사대에 들어갔습니다",
   summary:
-    "스페이스X는 14번째 비행이 끝난 지 하루가 안 돼 15번째 비행 준비로 새 작업대를 궤도 발사대에 넣었다고 적혔습니다. 비계 없이 마운트 곳곳에 닿게 한다는 설명입니다.",
+    "스페이스X는 14번째 비행이 끝난 지 하루가 안 돼 15번째 비행 준비로 새 작업대를 궤도 발사대에 넣었습니다. 비계 없이 마운트 곳곳에 빠르고 안전하게 닿게 합니다.",
   titleEn: "A Flight 15 work stand went into the orbital mount less than a day after Flight 14",
   summaryEn: "Described as faster, safer access without scaffolding. No launch time on the post.",
   body: D(
@@ -463,7 +463,7 @@ push({
   tickers: ["SPCX"],
   title: "우주에서 돌아온 스타십을 엔지니어가 직접 보고 방열 개선을 다음 비행에 넣겠다고 했습니다",
   summary:
-    "스페이스X는 엔지니어가 귀환한 스타십을 처음으로 손으로 살폈고, 배운 점이 방열판 개선으로 이어져 오늘 비행에 보인다고 했습니다. 스타십 시리즈 최신 편을 보라는 안내입니다.",
+    "스페이스X 엔지니어가 귀환한 스타십을 처음으로 손으로 살폈습니다. 배운 점이 방열판 개선으로 이어져 오늘 비행에 보입니다. 다시 들어올 때 마찰열을 막는 타일 이야기입니다.",
   titleEn: "SpaceX says engineers inspected a returned Starship and will show heat-shield changes",
   summaryEn: "Lessons from the vehicle after space. A series episode, not a tile count.",
   body: D(
@@ -493,9 +493,9 @@ push({
   color: "green",
   subject: "테슬라",
   tickers: ["TSLA"],
-  title: "HMD 트럭킹이 테슬라 세미 50대를 주문했고 규모는 약 1,500만 달러로 적혔습니다",
+  title: "HMD 트럭킹이 테슬라 세미 50대를 약 1,500만 달러에 주문했습니다",
   summary:
-    "회사는 대형 트럭 약 700대를 굴리고 거의 전부 디젤 피터빌트라고 합니다. 공동창업자 헨리 말루카스가 약 1,500만 달러 규모로 세미 50대를 주문했습니다. 세미를 기적이라고 불렀다는 인용입니다.",
+    "HMD는 대형 트럭 약 700대를 굴리고 거의 전부가 디젤 피터빌트입니다. 공동창업자 헨리 말루카스가 약 1,500만 달러 규모로 세미 50대를 주문했습니다. 세미를 기적이라고 불렀습니다.",
   titleEn: "HMD Trucking is reported to be buying 50 Tesla Semis for about $15 million",
   summaryEn: "Fleet of about 700 rigs, mostly diesel. Co-founder called the Semi a miracle.",
   body: D(
@@ -557,9 +557,9 @@ push({
   color: "green",
   subject: "테슬라",
   tickers: ["TSLA"],
-  title: "테슬라가 3년 만기 200억 달러와 리볼버 100억 달러로 최대 300억 달러 한도를 열었다고 합니다",
+  title: "테슬라는 3년 200억 달러와 리볼버 100억 달러로 최대 300억 달러 한도를 열었습니다",
   summary:
-    "새 신용 한도는 200억 달러 3년 만기 대출과 100억 달러 리볼버로, 더 늘릴 여지가 있다고 적혔습니다. 피치는 최대 300억 달러 설비를 기회 되면 확보하려는 계획이라고 설명했습니다. 인공지능·옵티머스·사이버캡 확장 전에 돈을 갖춰 둔다는 해석이 붙습니다.",
+    "새 신용 한도는 200억 달러 3년 만기 대출과 100억 달러 리볼버이고, 더 늘릴 여지가 있습니다. 피치는 최대 300억 달러 설비를 기회 되면 확보하는 계획이라고 설명했습니다. 인공지능·옵티머스·사이버캡 확장 전에 돈을 갖춰 둡니다.",
   titleEn: "Tesla is described as opening up to $30 billion of credit facilities",
   summaryEn: "A $20 billion three-year term loan and $10 billion of revolvers, with room to expand.",
   body: D(
@@ -587,9 +587,9 @@ push({
   color: "green",
   subject: "테슬라",
   tickers: ["TSLA"],
-  title: "테슬라가 20일 안에 두 번째로 중국 가격 인센티브를 조정했다는 속보가 있습니다",
+  title: "테슬라가 20일 안에 두 번째로 중국 가격 인센티브를 조정했습니다",
   summary:
-    "예측 시장 글은 테슬라가 20일 만에 두 번째로 중국 가격을 낮췄다고 적었습니다. 9월 25일 안은 모델3 잔금 5,000위안, 일부 모델Y 7,000위안을 10월 31일 주문까지 적용합니다. 9월 7일 재고차 모델Y 할인은 10,000위안이었습니다.",
+    "테슬라는 20일 만에 두 번째로 중국 가격을 낮췄습니다. 9월 25일 안은 모델3 잔금 5,000위안, 일부 모델Y 7,000위안을 10월 31일 주문까지 적용합니다. 9월 7일 재고차 모델Y 할인은 10,000위안이었습니다.",
   titleEn: "A post says Tesla cut China prices for the second time in 20 days",
   summaryEn: "Sept. 25 offer: 5,000 yuan off Model 3 and 7,000 yuan off select Model Y through Oct. 31.",
   body: D(
@@ -617,9 +617,9 @@ push({
   color: "green",
   subject: "테슬라",
   tickers: ["TSLA"],
-  title: "올해 노르웨이 신차의 98%가 전기차이고 모델Y가 다음 모델을 300% 넘게 앞선다는 속보가 있습니다",
+  title: "올해 노르웨이 신차의 98%는 전기차이고, 모델Y가 다음 모델을 300% 넘게 앞섭니다",
   summary:
-    "올해 노르웨이에서 팔린 새 차의 98%가 전기차이고, 테슬라 모델Y가 다음 모델을 300% 넘게 앞선다는 글입니다. 날짜는 9월 27일로 적혀 있습니다. 신차 등록 비중입니다.",
+    "올해 노르웨이에서 팔린 새 차의 98%가 전기차입니다. 테슬라 모델Y는 다음 모델을 300% 넘게 앞섭니다. 기준일은 9월 27일이고, 올해 신차 등록 비중입니다.",
   titleEn: "A post says 98% of new cars in Norway this year are EVs, led by Model Y",
   summaryEn: "Model Y ahead of the next model by over 300%. Dated Sept. 27. No unit table on the card.",
   body: D(
@@ -649,9 +649,9 @@ push({
   color: "slate",
   subject: "매크로",
   tickers: ["MACRO"],
-  title: "미국 데이터센터 전력 수요가 2029년까지 755% 늘어난다는 속보가 있습니다",
+  title: "미국 데이터센터 전력 수요는 2029년까지 755% 늘어납니다",
   summary:
-    "미국 데이터센터 전력 수요가 2029년까지 755% 급증한다는 한 줄 속보입니다. 건설비 510억 달러와는 단위가 다른 전력 이야기입니다. 퍼센트와 달러는 더하지 않습니다.",
+    "미국 데이터센터 전력 수요는 2029년까지 755% 급증합니다. 건설비 510억 달러와는 단위가 다른 전력 이야기입니다. 퍼센트와 달러는 더하지 않고, 시간표도 다를 수 있습니다.",
   titleEn: "A post says U.S. data-center power demand surges 755% by 2029",
   summaryEn: "One-line claim. Base year and source report are not on the card.",
   body: D(
@@ -683,7 +683,7 @@ push({
   tickers: ["TSLA"],
   title: "예측 시장이 테슬라 3분기 인도를 49만 대 안팎, 중심은 48만 7천 대로 보고 있습니다",
   summary:
-    "3분기에 거의 49만 대를 인도할 것이라는 글이 있습니다. 그래프 캡션은 48만 7천 대 예측에 1천을 더한 눈금입니다. 시장은 동부시간 10월 3일 자정에 닫힌다고 적혀 있습니다.",
+    "3분기 인도 예측은 거의 49만 대이고, 중심은 48만 7천 대에 1천을 더한 눈금입니다. 시장은 동부시간 10월 3일 자정에 닫힙니다. 분기는 9월 30일에 달력이 닫힙니다.",
   titleEn: "A prediction market centers Tesla's third-quarter deliveries near 487,000",
   summaryEn: "Headline says nearly 490,000. The chart label is 487K plus 1K. Market ends Oct. 3.",
   body: D(
@@ -711,9 +711,9 @@ push({
   color: "purple",
   subject: "스페이스X",
   tickers: ["SPCX"],
-  title: "올해 12월 스페이스X 연환산 매출이 1,000억 달러를 넘을 것이라는 말이 적혔습니다",
+  title: "올해 12월 스페이스X 연환산 매출은 1,000억 달러를 넘을 것으로 기대합니다",
   summary:
-    "올해 12월 1,000억 달러 이상의 연환산 매출에 도달할 것으로 기대한다는 문장입니다. 그 숫자는 물음표가 아니고, 기본적으로 아무것도 더하지 않아도 도달하는 수준이라고 했습니다.",
+    "올해 12월 1,000억 달러 이상의 연환산 매출에 도달할 것으로 기대합니다. 그 숫자는 물음표가 아니고, 기본적으로 아무것도 더하지 않아도 도달하는 수준입니다. 연환산은 한 달 속도를 열두 달로 펼친 값입니다.",
   titleEn: "Elon Musk is quoted expecting SpaceX annualized revenue above $100 billion in December",
   summaryEn: "Described as not a question mark, and as what they would reach if they basically did nothing more.",
   body: D(
@@ -741,9 +741,9 @@ push({
   color: "green",
   subject: "테슬라",
   tickers: ["TSLA"],
-  title: "경제학자 한 사람이 차를 살 바에는 운전사를 빼는 쪽이 낫다며 테슬라를 샀다고 적었습니다",
+  title: "차를 살 바에는 운전사까지 같이 사는 쪽이어서 테슬라를 샀습니다",
   summary:
-    "선택은 차냐 차와 운전사냐였고, 감독 주행은 사람들이 말하는 만큼 좋으며 앞으로 더 나아지는 반면 사람은 더 못해진다는 글입니다. 비슷한 가격이면 다른 차를 살 이유가 없다고 마무리합니다. 트림과 가격은 없습니다.",
+    "선택은 차냐, 차와 운전사냐였습니다. 감독 완전자율주행은 사람들이 말하는 만큼 좋고, 앞으로 더 나아지는 반면 사람은 더 못해집니다. 비슷한 가격이면 다른 차를 살 이유가 없습니다.",
   titleEn: "An economist wrote that he bought a Tesla because FSD only gets better",
   summaryEn: "A personal purchase note. No trim or price. Framed as car versus car-plus-driver.",
   body: D(

@@ -15,7 +15,7 @@
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">🇳🇴</text>
   <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">98%</text>
-  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">모델Y가 다음 모델을 300% 넘게 앞선다는 9월 27일 글입니다.</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">모델Y가 다음 모델을 300% 넘게 앞섭니다. 기준일은 9월 27일입니다.</text>
   <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">신차</text>
@@ -35,7 +35,7 @@
   <rect x="60" y="616" width="960" height="168" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="648" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">읽는 법</text>
   <text x="90" y="700" font-family="Arial" font-size="18" fill="#e5e7eb">도로 위 모든 차의 비중이 아니라 올해 새 차입니다.</text>
-  <text x="90" y="734" font-family="Arial" font-size="18" fill="#e5e7eb">300%는 2위의 네 배라는 비교로 읽힙니다. 올해 노르웨이 신차의 98%가 전기차이고 모델Y가 다음 모델을 300%…</text>
+  <text x="90" y="734" font-family="Arial" font-size="18" fill="#e5e7eb">모델Y는 다음 모델을 300% 넘게 앞섭니다.</text>
   <text x="90" y="768" font-family="Arial" font-size="18" fill="#e5e7eb">월보가 나오면 그 표가 기준이 됩니다.</text>
   <rect x="60" y="796" width="960" height="196" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="824" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>

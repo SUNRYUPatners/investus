@@ -38,7 +38,7 @@ module.exports = function (add) {
       {icon:"🎯", big:"63만", mid:"유안타", sub:"목표주가 상향, 매수"},
     ],
     quote:"DS투자증권은 3분기 영업이익 104조 원으로 시장 평균 111조 원보다 낮게 봤습니다. 환율이 이유입니다.",
-    noteSub:"목표주가 53만 원 매수 유지는 그 낮은 눈높이와 같이 있습니다. 하루 주가 방향과 분기 이익 추정은 다른 표입니다. 거래대금은 한 종목 4조 원대로 적혔습니다.",
+    noteSub:"목표주가 53만 원 매수 유지는 그 낮은 눈높이와 같이 있습니다. 하루 주가 방향과 분기 이익 추정은 다른 표입니다. 거래대금은 한 종목 4조 원대입니다.",
   },{
     badge:"005930", title:"Samsung closed at 272,500 won on the ex-dividend day",
     heroIcon:"📈", heroBig:"272,500", heroSub:"Up 0.93%. Open 266,000, high 276,000.",
@@ -125,7 +125,7 @@ module.exports = function (add) {
 
   go("semco-mlcc-kr","L6","SEC",{
     badge:"009150", breaking:"서버 부품", title:"삼성전기가 1.93% 오른 152만 8,000원입니다",
-    heroBig:"1,528,000", heroSub:"장기 공급 계약 2,900억 원이 호재로 적혔습니다.",
+    heroBig:"1,528,000", heroSub:"장기 공급 계약은 2,900억 원입니다.",
     grid:[
       {icon:"📄", big:"2,900억", mid:"계약", sub:"서버용 부품"},
       {icon:"⏱", big:"48~56주", mid:"리드타임", sub:"정상은 12주"},
