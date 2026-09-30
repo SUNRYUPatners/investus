@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061520"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#38bdf8"/><stop offset="100%" style="stop-color:#0ea5e9"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#38bdf830" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#38bdf8" text-anchor="middle">CRWV</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.10.01</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">코어위브가 베라 루빈 NVL72를 연다고 밝혔습니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">🖥️</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#38bdf8" text-anchor="middle">NVL72</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">코그니션이 첫 고객으로 실제 업무를 돌립니다.</text>
+  <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="400" width="300" height="200" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
+  <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">제품</text>
+  <text x="210" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#38bdf8" text-anchor="middle">NVL72</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">베라 루빈</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">랙 규모</text>
+  <rect x="390" y="400" width="300" height="200" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
+  <text x="540" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">첫 고객</text>
+  <text x="540" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#38bdf8" text-anchor="middle">코그니션</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">생산 작업</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">점유율은 아님</text>
+  <rect x="720" y="400" width="300" height="200" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
+  <text x="870" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">없는 것</text>
+  <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#38bdf8" text-anchor="middle">출하대수</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">오늘 발표</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">용량으로 환산 안 함</text>
+  <rect x="60" y="616" width="960" height="168" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="648" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">오늘 확인된 것</text>
+  <text x="90" y="700" font-family="Arial" font-size="18" fill="#e5e7eb">이용 가능하다고 알린 회사는 코어위브입니다.</text>
+  <text x="90" y="734" font-family="Arial" font-size="18" fill="#e5e7eb">첫 고객은 코그니션입니다.</text>
+  <text x="90" y="768" font-family="Arial" font-size="18" fill="#e5e7eb">출하 대수는 이 발표에 없습니다.</text>
+  <rect x="60" y="796" width="960" height="196" rx="14" fill="#0a1a26" stroke="#38bdf8" stroke-width="1"/>
+  <text x="540" y="824" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="850" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">차세대 랙이 열렸다는 소식과 전 세계 설치 대수는 다릅니다. 다음 고객 이름이 나와야 한 곳 너머로 읽습니다. 엔비디아 공급 일정과</text>
+  <text x="540" y="870" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">코어위브 매출 가이던스는 같은 날 공시가 아닙니다. 랙 한 대를 연 것과 데이터센터 동 전체를 채운 것은 규모가 다릅니다. 첫 고객의</text>
+  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">업무가 학습인지 서비스인지는 오늘 글이 생산 작업이라고만 말합니다. 두 번째 이용 회사가 나와야 공급이 한 곳을 넘어섭니다. 랙</text>
+  <text x="540" y="910" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">이름과 고객 이름이 같이 나온 날이므로, 출하 대수 없는 발표로 남깁니다. 출하 대수가 없어 용량으로 환산하지 않습니다. 랙 이름과</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">고객 이름만 오늘 남깁니다.</text>
+  <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.10.01</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

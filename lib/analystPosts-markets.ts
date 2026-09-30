@@ -1,6 +1,37 @@
 import type { AnalystMockPost, AnalystMockComment } from "@/lib/analystPosts";
 
 export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
+  // ── 2026-10-01 KR ──────────────────────
+  {
+    id: -2473, alias: "여의도 수리 #52", symbol: "한장요약",
+    content: "코스피는 6,838.04로 0.48% 내렸습니다. 외국인 순매도는 2조 520억 원입니다. 삼성전자는 26만 8,500원, SK하이닉스는 177만 6,000원입니다.",
+    likes: 22, comments: 2, created_at: "2026-10-01T00:10:00.000Z", liked: false,
+  },
+  {
+    id: -2474, alias: "성수 너구리 #38", symbol: "삼성전자",
+    content: "삼성전자는 26만 8,500원으로 1.47% 내렸습니다. 우선주는 19만 5,200원, 4.31% 하락입니다. 외국인 창구 순매도는 8,667억 원입니다.",
+    likes: 21, comments: 2, created_at: "2026-10-01T01:10:00.000Z", liked: false,
+  },
+  {
+    id: -2475, alias: "판교 치타 #46", symbol: "SK하이닉스",
+    content: "SK하이닉스는 177만 6,000원으로 0.62% 올랐습니다. 외국인 창구에서는 6,085억 원 순매도입니다. 가격과 수급의 부호가 갈렸습니다.",
+    likes: 20, comments: 2, created_at: "2026-10-01T02:10:00.000Z", liked: false,
+  },
+  {
+    id: -2476, alias: "삼성동 여우 #33", symbol: "수급",
+    content: "외국인 순매도는 2조 520억 원, 기관은 7,680억 원입니다. 개인은 1조 1,667억 원을 순매수했습니다. 프로그램 매매 합계는 1조 2,305억 원 매도 우위입니다.",
+    likes: 19, comments: 2, created_at: "2026-10-01T03:10:00.000Z", liked: false,
+  },
+  {
+    id: -2477, alias: "잠실 백로 #48", symbol: "현대차",
+    content: "현대차는 34만 5,000원으로 1.43% 내렸습니다. 삼성증권은 목표주가를 50만 원으로 낮추고 매수 의견은 유지했습니다. 교보증권 목표주가는 74만 원입니다.",
+    likes: 18, comments: 2, created_at: "2026-10-01T04:10:00.000Z", liked: false,
+  },
+  {
+    id: -2478, alias: "역삼 판다 #55", symbol: "코스닥",
+    content: "코스닥은 855.91로 0.72% 올랐습니다. 코스피와 하루 부호가 갈렸습니다. 달러-원은 3.9원 내린 1,352.8원입니다.",
+    likes: 17, comments: 2, created_at: "2026-10-01T05:10:00.000Z", liked: false,
+  },
   // ── 2026-09-30 KR ──────────────────────
   {
     id: -2457, alias: "여의도 수리 #41", symbol: "한장요약",
@@ -658,6 +689,31 @@ export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
+  // ── 2026-10-01 KR 댓글 ──────────────────────
+  [-2473]: [
+    { alias: "종로 까치 #71", content: "6943에 열렸다가 6818까지 밀리고 6838에 닫았어", created_at: "2026-10-01T00:16:00.000Z" },
+    { alias: "광화문 여우 #72", content: "삼성은 내리고 하이닉스는 올랐어. 같은 업종인데 종가가 갈렸어", created_at: "2026-10-01T00:22:00.000Z" },
+  ],
+  [-2474]: [
+    { alias: "여의도 수리 #73", content: "4,000원 내린 종가야. 우선주 낙폭이 보통주보다 깊어", created_at: "2026-10-01T01:16:00.000Z" },
+    { alias: "송파 독수리 #74", content: "유안타 목표 63만은 이 종가랑 거리가 있어", created_at: "2026-10-01T01:22:00.000Z" },
+  ],
+  [-2475]: [
+    { alias: "분당 매 #75", content: "1만1천 원 올랐어. 외국인은 그 종목을 팔았어", created_at: "2026-10-01T02:16:00.000Z" },
+    { alias: "성수 너구리 #76", content: "iM 목표 350만은 유지야. 어제 1만 원 상승의 결론은 아니야", created_at: "2026-10-01T02:22:00.000Z" },
+  ],
+  [-2476]: [
+    { alias: "역삼 판다 #77", content: "개인이 샀는데도 지수는 0.48% 내렸어", created_at: "2026-10-01T03:16:00.000Z" },
+    { alias: "한남 재규어 #78", content: "차익은 276억 매수고 비차익이 1조2581억 매도야. 합은 매도", created_at: "2026-10-01T03:22:00.000Z" },
+  ],
+  [-2477]: [
+    { alias: "삼성동 올빼미 #79", content: "5,000원 내린 종가야. KB금융이랑 생명은 더 깊게 빠졌어", created_at: "2026-10-01T04:16:00.000Z" },
+    { alias: "해운대 고래 #80", content: "삼성증권 50만이랑 교보 74만을 평균 내진 말자", created_at: "2026-10-01T04:22:00.000Z" },
+  ],
+  [-2478]: [
+    { alias: "마포 살쾡이 #81", content: "6.11포인트 오른 855.91이야. 코스피랑 부호가 갈렸어", created_at: "2026-10-01T05:16:00.000Z" },
+    { alias: "판교 늑대 #82", content: "3.9원은 원화 변동이야. 퍼센트로 다시 쓰지 마", created_at: "2026-10-01T05:22:00.000Z" },
+  ],
   // ── 2026-09-30 KR 댓글 ──────────────────────
   [-2457]: [
     { alias: "여의도 수리 #51", content: "코스피 6,870.81과 외국인 2조 9,033억 원을 먼저 적었습니다.", created_at: "2026-09-30T07:00:00.000Z" },
@@ -1295,6 +1351,27 @@ export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
 };
 
 export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
+  // ── 2026-10-01 SAFE ──────────────────────
+  {
+    id: -2479, alias: "은빛 갈매기 #28", symbol: "한장요약",
+    content: "키트코 저녁 기준 금 현물은 4,156.10달러로 0.60% 내렸습니다. WTI는 90.42달러 부근입니다. 비트코인은 8만 4,376달러로 되돌아왔습니다.",
+    likes: 22, comments: 2, created_at: "2026-10-01T00:20:00.000Z", liked: false,
+  },
+  {
+    id: -2480, alias: "청산 올빼미 #31", symbol: "금",
+    content: "키트코 저녁 시황의 금 현물은 4,156.10달러로 0.60% 내렸습니다. 같은 시각 은은 60.180달러로 1.90% 내렸습니다. 아침 4,200달러대와 섞지 않습니다.",
+    likes: 21, comments: 2, created_at: "2026-10-01T01:20:00.000Z", liked: false,
+  },
+  {
+    id: -2481, alias: "원유 학 #19", symbol: "원유",
+    content: "키트코 저녁 시황에서 WTI는 90.42달러 부근, 브렌트는 103.50달러 부근입니다. 하루 등락 폭은 그 문장에 없습니다. 해협 유조선 피격 보도가 있습니다.",
+    likes: 20, comments: 2, created_at: "2026-10-01T02:20:00.000Z", liked: false,
+  },
+  {
+    id: -2482, alias: "달러 여우 #24", symbol: "비트코인",
+    content: "비트코인은 8만 5,598.94달러까지 올랐다가 8만 4,376.09달러로 되돌아왔습니다. 그 스냅샷에서는 약 0.9% 상승입니다. 재료는 예상보다 낮은 8월 개인소비지출 물가입니다.",
+    likes: 19, comments: 2, created_at: "2026-10-01T03:20:00.000Z", liked: false,
+  },
   // ── 2026-09-30 SAFE ──────────────────────
   {
     id: -2463, alias: "은빛 갈매기 #17", symbol: "한장요약",
@@ -1834,6 +1911,23 @@ export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {
+  // ── 2026-10-01 SAFE 댓글 ──────────────────────
+  [-2479]: [
+    { alias: "은빛 갈매기 #83", content: "아침 4211달러랑 저녁 4156달러를 평균 내진 마", created_at: "2026-10-01T00:26:00.000Z" },
+    { alias: "청산 올빼미 #84", content: "비트 고점 85598 다음에 84376이야. 그 시각 약 0.9% 상승", created_at: "2026-10-01T00:32:00.000Z" },
+  ],
+  [-2480]: [
+    { alias: "달러 여우 #85", content: "4213까지 올랐다가 저녁에 4156이야. 평균 종가 만들지 마", created_at: "2026-10-01T01:26:00.000Z" },
+    { alias: "원유 학 #86", content: "물가는 예상보다 낮았는데 금은 저녁에 내렸어", created_at: "2026-10-01T01:32:00.000Z" },
+  ],
+  [-2481]: [
+    { alias: "금 백로 #87", content: "등락 폭은 그 문장에 없었어. 수준만 적자", created_at: "2026-10-01T02:26:00.000Z" },
+    { alias: "알트 수달 #88", content: "수출이 돌아왔다는 말이랑 피격 보도가 같이 있어", created_at: "2026-10-01T02:32:00.000Z" },
+  ],
+  [-2482]: [
+    { alias: "인천 갈매기 #89", content: "고점이랑 되돌아온 가격을 평균 내진 마", created_at: "2026-10-01T03:26:00.000Z" },
+    { alias: "잠실 백로 #90", content: "근원 물가 전년 3.0%가 예상 3.3%보다 낮았어", created_at: "2026-10-01T03:32:00.000Z" },
+  ],
   // ── 2026-09-30 SAFE 댓글 ──────────────────────
   [-2463]: [
     { alias: "은빛 갈매기 #18", content: "비트코인 8만 3,607달러는 포춘 오후 시각입니다.", created_at: "2026-09-30T07:06:00.000Z" },
@@ -2355,6 +2449,27 @@ export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = 
 };
 
 export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
+  // ── 2026-10-01 KR-RE ──────────────────────
+  {
+    id: -2483, alias: "전세 참새 #26", symbol: "한장요약",
+    content: "광명 에듀하임 426세대는 오늘 기타지역 1순위입니다. 계양 A6 이번 모집은 251세대이고 접수가 이어집니다. 화서역 호수공원 아너스빌은 오늘 당첨자를 발표합니다.",
+    likes: 22, comments: 2, created_at: "2026-10-01T00:30:00.000Z", liked: false,
+  },
+  {
+    id: -2484, alias: "갱신 백로 #57", symbol: "공급정책",
+    content: "인천 계양 A6 본청약 접수가 오늘도 이어집니다. 이번 모집은 251세대, 그중 일반공급은 38세대입니다. 당첨자 발표는 10월 21일입니다.",
+    likes: 21, comments: 2, created_at: "2026-10-01T01:30:00.000Z", liked: false,
+  },
+  {
+    id: -2485, alias: "동북 학 #39", symbol: "공급정책",
+    content: "광명 시티프라디움 에듀하임은 오늘 기타지역 1순위입니다. 426세대 중 일반 190세대, 특별 236세대입니다. 당첨자 발표는 10월 12일입니다.",
+    likes: 20, comments: 2, created_at: "2026-10-01T02:30:00.000Z", liked: false,
+  },
+  {
+    id: -2486, alias: "정책 너구리 #42", symbol: "공급정책",
+    content: "화서역 호수공원 아너스빌은 오늘 당첨자를 발표합니다. 수원 권선구 서둔동 단지입니다. 세대수는 이 아침에 확인하지 못했습니다.",
+    likes: 19, comments: 2, created_at: "2026-10-01T03:30:00.000Z", liked: false,
+  },
   // ── 2026-09-30 KR-RE ──────────────────────
   {
     id: -2469, alias: "전세 참새 #14", symbol: "한장요약",
@@ -2801,6 +2916,23 @@ export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {
+  // ── 2026-10-01 KR-RE 댓글 ──────────────────────
+  [-2483]: [
+    { alias: "전세 참새 #91", content: "광명 해당지역은 어제고 기타지역이 오늘이야", created_at: "2026-10-01T00:36:00.000Z" },
+    { alias: "갱신 백로 #92", content: "663이랑 251을 더하면 공급을 두 번 세", created_at: "2026-10-01T00:42:00.000Z" },
+  ],
+  [-2484]: [
+    { alias: "동북 학 #93", content: "일반 창은 10월 2일까지야. 발표는 21일", created_at: "2026-10-01T01:36:00.000Z" },
+    { alias: "정책 너구리 #94", content: "59제곱미터 529세대는 공급 규모 쪽이야. 오늘 용지 251이 아니야", created_at: "2026-10-01T01:42:00.000Z" },
+  ],
+  [-2485]: [
+    { alias: "압구정 치타 #95", content: "해당지역은 어제 끝났고 오늘이 기타지역이야", created_at: "2026-10-01T02:36:00.000Z" },
+    { alias: "청담 여우 #96", content: "발표는 12일, 계약은 24일부터 사흘이야", created_at: "2026-10-01T02:42:00.000Z" },
+  ],
+  [-2486]: [
+    { alias: "성수 수달 #97", content: "오늘은 발표야. 광명처럼 접수하는 날이 아니야", created_at: "2026-10-01T03:36:00.000Z" },
+    { alias: "여의도 학 #98", content: "세대수 없는 단지를 공급 합계에 넣지 마", created_at: "2026-10-01T03:42:00.000Z" },
+  ],
   // ── 2026-09-30 KR-RE 댓글 ──────────────────────
   [-2469]: [
     { alias: "전세 참새 #15", content: "계양 이번 모집 251가구는 공급 663과 다른 숫자입니다.", created_at: "2026-09-30T07:12:00.000Z" },

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0d02"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#fb923c"/><stop offset="100%" style="stop-color:#f97316"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#fb923c30" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#fb923c" text-anchor="middle">화서역</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.10.01</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">화서역 아너스빌이 오늘 당첨자를 발표합니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">📣</text>
+  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#fb923c" text-anchor="middle">발표</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">수원 권선구 서둔동. 세대수는 비워 둡니다.</text>
+  <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
+  <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">오늘 접수</text>
+  <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">광명·계양</text>
+  <text x="270" y="496" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">창이 열린 쪽</text>
+  <text x="540" y="455" font-family="Arial Black,Arial" font-size="40" fill="#fb923c" text-anchor="middle">&#8594;</text>
+  <rect x="600" y="356" width="420" height="168" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="2"/>
+  <text x="810" y="400" font-family="Arial" font-size="20" fill="#fb923c" text-anchor="middle">오늘 발표</text>
+  <text x="810" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#fb923c" text-anchor="middle">화서역</text>
+  <text x="810" y="496" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">당첨자</text>
+  <rect x="60" y="548" width="300" height="164" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">📍</text>
+  <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c" text-anchor="middle">서둔동</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">권선구</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">위치만 확인</text>
+  <rect x="390" y="548" width="300" height="164" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">❓</text>
+  <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c" text-anchor="middle">미확인</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">세대수</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">합계에 넣지 않음</text>
+  <rect x="720" y="548" width="300" height="164" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">📣</text>
+  <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c" text-anchor="middle">10/1</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">발표일</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">이투데이 일정</text>
+  <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="766" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">화서역 호수공원 아너스빌이 오늘 당첨자를 발표합니다. 이투데이는 경기 수원시 권선구 서둔동 단지를 10월 1일</text>
+  <text x="540" y="791" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">일정으로 적었습니다. 부동산114와 청약홈을 인용한 오늘의 청약 일정입니다. 세대수는 이 아침에 확인하지</text>
+  <text x="540" y="816" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">못했습니다. 없는 숫자를 채워 경쟁률을 만들지 않습니다.</text>
+  <rect x="60" y="878" width="960" height="140" rx="14" fill="#20130a" stroke="#fb923c" stroke-width="1"/>
+  <text x="540" y="906" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">같은 날 광명은 기타지역 접수, 계양은 본청약 접수, 화서역은 발표입니다. 접수 창과 발표일을 한 단계로 부르지 않습니다. 주간</text>
+  <text x="540" y="952" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">달력은 화서역을 포함한 세 곳이 10월 1일 발표라고 적습니다. 나머지 두 곳의 이름과 세대수는 이 리포트에 넣지 않습니다.</text>
+  <text x="540" y="972" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">발표일만 확인된 단지입니다. 광명 접수, 계양 접수와 단계를 섞지 않습니다. 세대수가 나온 뒤에야 공급 표에 올립니다. 수원 권선구</text>
+  <text x="540" y="992" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">서둔동이라는 위치만 오늘 확인입니다. 경쟁률 칸은 비웁니다. 나머지 발표 단지의 이름은 넣지 않습니다. 세대수가 확인된 뒤에</text>
+  <text x="540" y="1012" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">공급을 셉니다. 오늘은 발표일입니다. 세대수 칸은 비어 있습니다.</text>
+  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.10.01</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#c084fc30" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">FCC</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.10.01</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">위성 광대역용 주파수를 1,000메가헤르츠 넘게 엽니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <rect x="360" y="166" width="360" height="46" rx="23" fill="#c084fc18" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">1,000MHz 추가</text>
+  <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">📡</text>
+  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#c084fc" text-anchor="middle">+25%</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">의장 브렌던 카의 하향 용량 설명입니다.</text>
+  <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="450" width="300" height="178" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">📶</text>
+  <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">12.7</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">기가헤르츠</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">연 대역</text>
+  <rect x="390" y="450" width="300" height="178" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">📶</text>
+  <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">42</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">기가헤르츠</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">같이 연 대역</text>
+  <rect x="720" y="450" width="300" height="178" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">📋</text>
+  <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">1450</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">메가헤르츠</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Ku·Ka 추가 예고</text>
+  <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">9월 30일 미국 연방통신위원회가 위성 광대역을 위해 1,000메가헤르츠가 넘는 주파수를 추가로 열었습니다.</text>
+  <text x="540" y="704" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">12.7기가헤르츠 대역과 42기가헤르츠 대역입니다. 스타링크가 대상에 들어갑니다. 의장 브렌던 카는 하향</text>
+  <text x="540" y="728" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">용량이 25% 늘어나고, 기존 인터넷 사업자와 더 세게 경쟁할 수 있다고 했습니다. 의결은 보고서·명령, 수정</text>
+  <text x="540" y="752" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">제안 명령, 추가 규칙제정 예고 두 건입니다. 사건 번호는 SB 25-180, GN 22-352, GN 26-54, GN 14-177,</text>
+  <text x="540" y="776" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">WT 23-158입니다. 추가 예고는 Ku·Ka에서 최대 1,450메가헤르츠와 D밴드 138.25기가헤르츠, 그리고</text>
+  <text x="540" y="800" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">달·궤도 정비 주파수입니다.</text>
+  <rect x="60" y="842" width="960" height="172" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="870" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">열린 대역은 면허의 시작입니다. 위성이 그 주파수로 바로 판매를 늘린다는 문장은 아닙니다. 카 의장 성명과 고메스 위원 쪽 성명이</text>
+  <text x="540" y="916" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">같이 나왔습니다. 용량 25%는 의장 설명이고, 다음 발사 일정과는 별도입니다. 추가로 예고한 Ku·Ka 대역과 달 정비 주파수는 이번</text>
+  <text x="540" y="936" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">명령과 같은 날의 다음 단계입니다. 위성이 새 대역으로 바로 요금을 바꾼다는 뜻은 아닙니다. 지상 통신사와의 경쟁 문장은 의장</text>
+  <text x="540" y="956" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">설명으로 남습니다.</text>
+  <text x="540" y="1030" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.10.01</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

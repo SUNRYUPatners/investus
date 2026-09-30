@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.10.01 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="100" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="100" rx="4" fill="#c084fc"/>
+  <text x="116" y="158" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">스타십이 해마다 연산 300기가와트 이상을 올리겠다고 합니다</text>
+  <text x="116" y="192" font-family="Arial" font-size="16" fill="#9ca3af">달과 화성 표면까지 약 100만 톤이라는 비교가 있습니다.</text>
+  <text x="985" y="172" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">300GW</text>
+  <rect x="60" y="232" width="960" height="100" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="232" width="8" height="100" rx="4" fill="#c084fc"/>
+  <text x="116" y="268" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">씨티증권은 스페이스X 가치를 12조 달러로 봅니다</text>
+  <text x="116" y="302" font-family="Arial" font-size="16" fill="#9ca3af">주당 900달러. 14번째 비행을 이정표로 봅니다.</text>
+  <text x="985" y="282" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">12조$</text>
+  <rect x="60" y="342" width="960" height="100" rx="14" fill="#06121f" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="342" width="8" height="100" rx="4" fill="#60a5fa"/>
+  <text x="116" y="378" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">마이크론 매출은 542억 달러, 이익은 33.42달러입니다</text>
+  <text x="116" y="412" font-family="Arial" font-size="16" fill="#9ca3af">다음 분기 가이던스 매출은 620억 달러입니다.</text>
+  <text x="985" y="392" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">542억$</text>
+  <rect x="60" y="452" width="960" height="100" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="452" width="8" height="100" rx="4" fill="#4ade80"/>
+  <text x="116" y="488" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">노르웨이 9월 모델Y는 4,796대로 다음 아홉 차를 넘습니다</text>
+  <text x="116" y="522" font-family="Arial" font-size="16" fill="#9ca3af">그다음 아홉 차종 합은 3,455대입니다.</text>
+  <text x="985" y="502" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">4796대</text>
+  <rect x="60" y="562" width="960" height="100" rx="14" fill="#0a1a0a" stroke="#86efac" stroke-width="2"/>
+  <rect x="60" y="562" width="8" height="100" rx="4" fill="#86efac"/>
+  <text x="116" y="598" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#86efac">어제 오스틴 사이버캡은 371대, 무인은 248대입니다</text>
+  <text x="116" y="632" font-family="Arial" font-size="16" fill="#9ca3af">9월 말에는 합계 400대를 넘긴 날이 있습니다.</text>
+  <text x="985" y="612" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#86efac" text-anchor="end">371대</text>
+  <rect x="60" y="672" width="960" height="100" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="672" width="8" height="100" rx="4" fill="#ef4444"/>
+  <text x="116" y="708" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">미국 10년 국채 금리는 5.302%로 52주 최고입니다</text>
+  <text x="116" y="742" font-family="Arial" font-size="16" fill="#9ca3af">오후 1시 15분 트레이드웹, 하루 0.047 상승.</text>
+  <text x="985" y="722" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">5.302%</text>
+  <rect x="60" y="782" width="960" height="100" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="782" width="8" height="100" rx="4" fill="#4ade80"/>
+  <text x="116" y="818" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">프리몬트 옵티머스 연말 목표는 주 1,000대입니다</text>
+  <text x="116" y="852" font-family="Arial" font-size="16" fill="#9ca3af">지금은 주 수백 대 전언이고, 목표는 연말입니다.</text>
+  <text x="985" y="832" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">1000대</text>
+  <rect x="60" y="892" width="960" height="100" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="892" width="8" height="100" rx="4" fill="#facc15"/>
+  <text x="116" y="928" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15">2027년 5월 전 합병 확률은 예측시장에서 69%입니다</text>
+  <text x="116" y="962" font-family="Arial" font-size="16" fill="#9ca3af">서명된 계약이 아니라 칼시 가격입니다.</text>
+  <text x="985" y="942" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#facc15" text-anchor="end">69%</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">300기가와트 · 12조 달러 · 마이크론 542억 · 모델Y 4,796대 · 사이버캡 371대 · 금리 5.302% · 옵티머스 · 69%</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

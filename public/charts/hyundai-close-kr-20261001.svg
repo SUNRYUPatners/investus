@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0a10"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#fb7185"/><stop offset="100%" style="stop-color:#f43f5e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#fb718530" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#fb7185" text-anchor="middle">현대차</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.10.01</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">현대차는 34만 5,000원으로 마감했습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <rect x="360" y="166" width="360" height="46" rx="23" fill="#fb718518" stroke="#fb7185" stroke-width="1"/>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#fb7185" text-anchor="middle">1.43% 하락</text>
+  <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">🚗</text>
+  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#fb7185" text-anchor="middle">345,000</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">5,000원 하락. 지수 0.48%보다 깊습니다.</text>
+  <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="450" width="300" height="178" rx="16" fill="#201018" stroke="#fb7185" stroke-width="2"/>
+  <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">📉</text>
+  <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185" text-anchor="middle">-5,000</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">원</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">1.43%</text>
+  <rect x="390" y="450" width="300" height="178" rx="16" fill="#201018" stroke="#fb7185" stroke-width="2"/>
+  <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">🎯</text>
+  <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185" text-anchor="middle">50만</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">삼성증권</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">60만에서 하향, 매수</text>
+  <rect x="720" y="450" width="300" height="178" rx="16" fill="#201018" stroke="#fb7185" stroke-width="2"/>
+  <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">🎯</text>
+  <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185" text-anchor="middle">74만</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">교보</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">50만과 평균 안 냄</text>
+  <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#fb7185" text-anchor="middle">현대차는 5,000원(1.43%) 내린 34만 5,000원에 마감했습니다. 코스피는 0.48% 하락이었습니다. 자동차</text>
+  <text x="540" y="706" font-family="Arial" font-size="19" fill="#fb7185" text-anchor="middle">대형주는 지수보다 더 깊게 밀린 쪽입니다. KB금융은 16만 8,800원으로 2.71%, 삼성생명은 28만</text>
+  <text x="540" y="732" font-family="Arial" font-size="19" fill="#fb7185" text-anchor="middle">2,000원으로 2.93% 내렸습니다. 금융주 낙폭과 자동차 낙폭을 한 이유로 묶지 않습니다.</text>
+  <rect x="60" y="848" width="960" height="144" rx="14" fill="#201018" stroke="#fb7185" stroke-width="1"/>
+  <text x="540" y="876" font-family="Arial" font-size="18" fill="#fb7185" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="902" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">삼성전자 하락, 하이닉스 상승, 현대차 하락이 한 화면의 세 줄입니다. 업종을 건너 평균 등락을 만들지 않습니다. 다음 확인할 것은</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">오늘 자동차 시초가와 환율 1,352원대가 나란히 가는지입니다. 금융주 낙폭과 자동차 낙폭의 이유를 한 문장으로 만들지 않습니다.</text>
+  <text x="540" y="942" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">목표주가 변경은 어제 이미 있던 하우스 숫자입니다. 5,000원 하루 하락과 수십만 원 목표의 거리를 한 문장으로 줄이지 않습니다.</text>
+  <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">금융주 세 종목의 낙폭을 자동차와 한 이유로 묶지 않습니다. 50만 원과 74만 원 목표는 그대로 둡니다. 매수 꼬리표도 남습니다.</text>
+  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.10.01</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
