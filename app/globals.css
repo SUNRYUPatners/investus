@@ -33,8 +33,8 @@ vercel-toolbar,
   --border: #d5dbe6;
   --mint: #b38f38;
   --mint-rgb: 179, 143, 56;
-  --logo-bg: #1a365d;
-  --logo-bg-rgb: 26, 54, 93;
+  --logo-bg: #0a0a23;
+  --logo-bg-rgb: 10, 10, 35;
   --logo-icon: #b38f38;
   --navy: #1a365d;
   --navy-rgb: 26, 54, 93;
@@ -62,8 +62,8 @@ html[data-theme="dark"] {
   --border: #243250;
   --mint: #d4b56a;
   --mint-rgb: 212, 181, 106;
-  --logo-bg: #1a365d;
-  --logo-bg-rgb: 26, 54, 93;
+  --logo-bg: #0a0a23;
+  --logo-bg-rgb: 10, 10, 35;
   --logo-icon: #d4b56a;
   --navy: #d4b56a;
   --navy-rgb: 212, 181, 106;

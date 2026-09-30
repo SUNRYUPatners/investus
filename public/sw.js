@@ -21,8 +21,8 @@ self.addEventListener("push", (e) => {
   e.waitUntil(
     self.registration.showNotification(data.title, {
       body: data.message,
-      icon: "/logo-sunryu.jpeg",
-      badge: "/logo-sunryu.jpeg",
+      icon: "/icons/icon-192.png",
+      badge: "/icons/icon-192.png",
       data: { url: data.url },
       tag: "report-update",
       renotify: true,
