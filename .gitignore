@@ -57,3 +57,6 @@ lib/test-new.ts
 app/api/market-data/test.ts
 *.MP4
 *.mov
+
+# 인스타 업로드용 로컬 카드. 사이트에 올리지 않음
+/instagram/
