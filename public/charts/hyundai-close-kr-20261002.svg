@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0a10"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#fb7185"/><stop offset="100%" style="stop-color:#f43f5e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#fb718530" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#fb7185" text-anchor="middle">현대차</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.10.02</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">현대차는 34만 9,000원으로 마감했습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <rect x="360" y="166" width="360" height="46" rx="23" fill="#fb718518" stroke="#fb7185" stroke-width="1"/>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#fb7185" text-anchor="middle">1.16% 상승</text>
+  <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">🚗</text>
+  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#fb7185" text-anchor="middle">349,000</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">4,000원 상승. 환율은 1,358.4원입니다.</text>
+  <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="450" width="300" height="178" rx="16" fill="#201018" stroke="#fb7185" stroke-width="2"/>
+  <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">📈</text>
+  <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185" text-anchor="middle">+4,000</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">원</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">1.16%</text>
+  <rect x="390" y="450" width="300" height="178" rx="16" fill="#201018" stroke="#fb7185" stroke-width="2"/>
+  <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">💱</text>
+  <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185" text-anchor="middle">1358.4</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">원/달러</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">5.6원 상승</text>
+  <rect x="720" y="450" width="300" height="178" rx="16" fill="#201018" stroke="#fb7185" stroke-width="2"/>
+  <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">🎯</text>
+  <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185" text-anchor="middle">50만</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">삼성증권</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">매수 유지</text>
+  <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#fb7185" text-anchor="middle">현대차는 전장보다 4,000원(1.16%) 오른 34만 9,000원에 마감했습니다. 장 초반 약세를 오후가</text>
+  <text x="540" y="706" font-family="Arial" font-size="19" fill="#fb7185" text-anchor="middle">되돌렸습니다. 원·달러가 5.6원 오른 1,358.4원으로 마감한 날입니다. 수출 채산성이 환율과 같이 읽힌</text>
+  <text x="540" y="732" font-family="Arial" font-size="19" fill="#fb7185" text-anchor="middle">마감입니다. 기아는 0.44% 올랐습니다. 현대모비스는 4.09% 올랐고, 6,000억 원 규모 램프 사업 분리 매각이</text>
+  <text x="540" y="758" font-family="Arial" font-size="19" fill="#fb7185" text-anchor="middle">그 종목 옆에 적혔습니다.</text>
+  <rect x="60" y="848" width="960" height="144" rx="14" fill="#201018" stroke="#fb7185" stroke-width="1"/>
+  <text x="540" y="876" font-family="Arial" font-size="18" fill="#fb7185" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="902" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">35만 원 선이 바로 위입니다. 하루 4,000원이 그 선을 넘긴 숫자는 아닙니다. 다음 확인할 것은 오늘 시초가가 34만 9,000원을</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">지키는지입니다. 개별 호재 공시보다 환율과 업종 온기가 앞에 있던 날입니다. 월 판매 대수가 나오면 그 칸을 따로 올립니다.</text>
+  <text x="540" y="942" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">4,000원과 판매 대수를 한 이유로 묶지 않습니다.</text>
+  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.10.02</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

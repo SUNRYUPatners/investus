@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#c084fc30" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.10.02</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">스타링크가 지구 궤도에 약 1만 1,153기 있습니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="238" font-family="Arial Black,Arial" font-size="86" font-weight="900" fill="#c084fc" text-anchor="middle" opacity=".15">🌍</text>
+  <text x="540" y="238" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#c084fc" text-anchor="middle">🌍</text>
+  <text x="540" y="298" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">11,153</text>
+  <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">점 하나가 위성 한 대입니다. 사상 최대 별자리입니다.</text>
+  <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🛰️</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">11,153기</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">지금</text>
+  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">그림 가운데 숫자입니다</text>
+  <rect x="390" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">📡</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">V3</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">다음 단계</text>
+  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">기당 대역이 커집니다</text>
+  <rect x="720" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🚀</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">주 단위</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">발사 리듬</text>
+  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">대수가 더해지는 칸입니다</text>
+  <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="676" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">지금 지구를 도는 스타링크는 약 1만 1,150기입니다. 스페이스X는 이미 사상 최대 위성 별자리를 지었습니다.</text>
+  <text x="540" y="700" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">이제 새로운 스타링크 V3 전개로 네트워크를 완전히 다른 단계로 올리려 합니다. 그림 가운데 숫자는 1만</text>
+  <text x="540" y="724" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">1,153기입니다. 점 하나가 위성 한 대입니다.</text>
+  <rect x="60" y="838" width="960" height="172" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="866" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="892" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">월요일 스타십이 V3를 전개한 뒤의 집계입니다. 기당 설계 대역이 커지면 같은 1만 기라도 지상에 내려주는 용량이 달라집니다. 다음</text>
+  <text x="540" y="912" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">확인할 것은 주 단위 발사 리듬이 이 1만 1,153기에 얼마나 빨리 더해지는지입니다. 점의 개수와 기당 대역을 한 줄로 더하지</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">않습니다.</text>
+  <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.10.02</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.10.02 청약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="282" rx="14" fill="#06121f" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="282" rx="4" fill="#60a5fa"/>
+  <text x="116" y="223" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#60a5fa">광명 에듀하임 2순위 접수는 오늘입니다</text>
+  <text x="116" y="319" font-family="Arial" font-size="17" fill="#9ca3af">426세대. 일반 190, 특별 236. 발표는 10월 12일.</text>
+  <text x="985" y="263" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">426</text>
+  <rect x="60" y="414" width="960" height="282" rx="14" fill="#052015" stroke="#34d399" stroke-width="2"/>
+  <rect x="60" y="414" width="8" height="282" rx="4" fill="#34d399"/>
+  <text x="116" y="515" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#34d399">계양 A6 일반공급 창이 오늘 오후 5시에 닫힙니다</text>
+  <text x="116" y="611" font-family="Arial" font-size="17" fill="#9ca3af">공급 규모 663세대. 발표는 10월 21일.</text>
+  <text x="985" y="555" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#34d399" text-anchor="end">17시</text>
+  <rect x="60" y="706" width="960" height="282" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="706" width="8" height="282" rx="4" fill="#fb923c"/>
+  <text x="116" y="807" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#fb923c">광명 에듀하임은 당첨일부터 전매가 3년입니다</text>
+  <text x="116" y="903" font-family="Arial" font-size="17" fill="#9ca3af">투기과열지구 민영입니다. 상한제는 적용되지 않습니다.</text>
+  <text x="985" y="847" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">3년</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">광명 426 · 2순위 오늘 · 계양 17시 마감 · 전매 3년 · 발표 10월 12일·21일</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.10.02</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">2027년형 모델3와 모델Y가 차량 전기를 밖으로 보냅니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="72" text-anchor="middle">🔌</text>
+  <text x="540" y="292" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">V2L</text>
+  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">중국·호주·뉴질랜드에서 먼저 열립니다.</text>
+  <line x1="80" y1="376" x2="1000" y2="376" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">🏕️</text>
+  <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">캠핑</text>
+  <text x="210" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">공구</text>
+  <text x="210" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">아웃렛 어댑터를 켭니다</text>
+  <rect x="390" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🌏</text>
+  <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">3국</text>
+  <text x="540" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">먼저</text>
+  <text x="540" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">다른 나라는 뒤에 엽니다</text>
+  <rect x="720" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">🚫</text>
+  <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">개조불가</text>
+  <text x="870" y="524" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">기존 차</text>
+  <text x="870" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">2027년형에만 붙습니다</text>
+  <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="648" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">테슬라가 2027년형 모델3와 모델Y에 차량투로드 기능을 중국, 호주, 뉴질랜드에서 공식 열었습니다. 다른 나라는</text>
+  <text x="540" y="672" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">뒤에 열릴 예정입니다. 차 배터리로 다른 기기를 켭니다. 테슬라 아웃렛 어댑터, 캠핑 장비, 선풍기, 공구가 그</text>
+  <text x="540" y="696" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">목록입니다. 이미 나온 모델3와 모델Y에는 이 기능을 나중에 넣지 못합니다.</text>
+  <rect x="60" y="810" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="838" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="864" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">차량투로드는 집에 전기를 되파는 양방향 충전과는 칸이 다릅니다. 바깥 콘센트로 기기를 켜는 기능입니다. 2027년형은 다음</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">모델이어입니다. 오늘 재고가 아니라 다음 연식에 붙는 기능입니다. 다음 확인할 것은 미국과 유럽 일정입니다.</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">중국·호주·뉴질랜드가 먼저 열린 시장입니다.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.10.02</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

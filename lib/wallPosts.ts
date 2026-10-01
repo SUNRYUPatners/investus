@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T02OCT = 1790895600000; // 2026.10.02 08:00 KST
 const T01OCT = 1790809200000; // 2026.10.01 08:00 KST
 const T30SEP = 1790722800000; // 2026.09.30 08:00 KST
 const T29SEP = 1790636400000; // 2026.09.29 08:00 KST
@@ -134,7 +135,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T01OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T02OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -153,6 +154,79 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-02 신규 ────────────────
+  { id: 122124, symbol: "TSLA", nickname: "이점사테라", holdingLabel: "관심종목",
+    content: "충전 Q3. 칸 2700개 +15%. 2.4TWh +29%. 세션 6900만. 휘발유 11억리터, 탄소 44억kg. 로보택시 7.0GWh",
+    createdAt: T02OCT + 8*60_000, likes: 24, comments: 2 },
+  { id: 122125, symbol: "NKE", nickname: "나이키사팔", holdingLabel: "관심종목",
+    content: "나이키 EPS 0.48 vs 0.44. 매출 112억 vs 113억. 북미 +2%, 중국 -26%. 연간 EPS 가이드 1.15~1.35. Pace 25억 절감",
+    createdAt: T02OCT + 16*60_000, likes: 23, comments: 2 },
+  { id: 122126, symbol: "TSLA", nickname: "프랑스육십일", holdingLabel: "관심종목",
+    content: "유럽 9월 테슬라. 프랑스 +61.9% 스웨덴 +38.4% 노르웨이 +2.2%. 스웨덴은 이번달 38% 급증. 새 모델Y",
+    createdAt: T02OCT + 24*60_000, likes: 22, comments: 2 },
+  { id: 122127, symbol: "TSLA", nickname: "이탈리아최고", holdingLabel: "관심종목",
+    content: "이탈리아 2026년 9월 테슬라 판매 역대 9월 최고. 대수는 아직 문장에 없어. 프랑스 61.9%랑 같은 달",
+    createdAt: T02OCT + 32*60_000, likes: 21, comments: 2 },
+  { id: 122128, symbol: "TSLA", nickname: "대만수입일위", holdingLabel: "관심종목",
+    content: "대만 9월 수입차 1위 테슬라. 2토요타 3벤츠 4렉서스 5BMW. 교통부. 시승 tesla.com 대만 드라이브",
+    createdAt: T02OCT + 40*60_000, likes: 20, comments: 2 },
+  { id: 122129, symbol: "SPCX", nickname: "날개칠십오", holdingLabel: "관심종목",
+    content: "스타링크 크기. V1.5 11m, V2미니 30m, V3 60m, AI첫 75m. 스타마인드 태양광 25만W, ISS보다 약 20% 많대",
+    createdAt: T02OCT + 48*60_000, likes: 19, comments: 2 },
+  { id: 122130, symbol: "SPCX", nickname: "만천백오십삼", holdingLabel: "관심종목",
+    content: "스타링크 지금 약 11150기, 그림은 11153. 사상 최대 별자리. V3가 다음 단계. 점 하나 = 위성 한 대",
+    createdAt: T02OCT + 56*60_000, likes: 18, comments: 2 },
+  { id: 122131, symbol: "AMZN", nickname: "원전육백구십", holdingLabel: "관심종목",
+    content: "아마존이 컨스텔레이션에서 원전 690MW 20년 계약. 90MW는 캘버트클리프스 업그레이드 신규. 블룸버그",
+    createdAt: T02OCT + 64*60_000, likes: 17, comments: 2 },
+  { id: 122132, symbol: "GOOGL", nickname: "선캐처티피유", holdingLabel: "관심종목",
+    content: "구글 선캐처. 팰컨9에 TPU 4개. 킬로당 200달러면 궤도 연산 수지. 트랜스포터18. 15분 켜고 식힘. 2027년 두 대",
+    createdAt: T02OCT + 72*60_000, likes: 16, comments: 2 },
+  { id: 122133, symbol: "MACRO", nickname: "동결칠십육", holdingLabel: "관심종목",
+    content: "10/28 연준. 동결 76.2% 인상 23.8%. 나흘 전 인상 70%대. 10년물 하루 -5bp. 내일 고용",
+    createdAt: T02OCT + 80*60_000, likes: 15, comments: 2 },
+  { id: 122134, symbol: "TSLA", nickname: "터키금요일", holdingLabel: "관심종목",
+    content: "터키 FSD 감독 금요 승인 가능 보도. 중요 단계. 공식 확인은 발표 후. 무인 허가랑 다른 칸",
+    createdAt: T02OCT + 88*60_000, likes: 24, comments: 2 },
+  { id: 122135, symbol: "TSLA", nickname: "국방보도", holdingLabel: "관심종목",
+    content: "머스크가 미군이랑 미래전장 그린다는 보도. AI 로봇 첨단무기. 엔터 계정 제목. 공문은 발표 후",
+    createdAt: T02OCT + 96*60_000, likes: 23, comments: 2 },
+  { id: 122136, symbol: "SPCX", nickname: "하루세발", holdingLabel: "관심종목",
+    content: "스페이스X 오늘 세 발 목표. 크루13 F9, 트랜스포터18 F9, NROL-97 헤비. 크루13은 4명 ISS로 성공. 선캐처도 18에",
+    createdAt: T02OCT + 104*60_000, likes: 22, comments: 2 },
+  { id: 122137, symbol: "TSLA", nickname: "램칠십이", holdingLabel: "관심종목",
+    content: "AI5 램 반으로 72GB LP5. AI6는 1/3로 144GB LP6. 옵티머스 물량·원가. 대역폭이 병목. 로봇 200GB 추정, 세계 연 450억GB",
+    createdAt: T02OCT + 112*60_000, likes: 21, comments: 2 },
+  { id: 122138, symbol: "TSLA", nickname: "스파크스배차", holdingLabel: "관심종목",
+    content: "테슬라 스파크스 세미 배차원 채용. 공장→허브→목적지. 직무 2819778 정규직. 생산 커지면 물류도 키운대",
+    createdAt: T02OCT + 120*60_000, likes: 20, comments: 2 },
+  { id: 122139, symbol: "TSLA", nickname: "첨부오십오", holdingLabel: "관심종목",
+    content: "미국 Q2 신차 55%가 판매 때 FSD 선택. Q3는 60~65%로 올라간대. 나중 구독이랑 더하지 마",
+    createdAt: T02OCT + 128*60_000, likes: 19, comments: 2 },
+  { id: 122140, symbol: "TSLA", nickname: "칠백칠십육", holdingLabel: "관심종목",
+    content: "중국 모델Y 롱 TL2 앞모터. 176kW 236마력 238Nm. 항속 +25km, CLTC 776km. 롱 33만9천위안. 대기 3~6주",
+    createdAt: T02OCT + 136*60_000, likes: 18, comments: 2 },
+  { id: 122141, symbol: "MACRO", nickname: "정부지분보도", holdingLabel: "관심종목",
+    content: "트럼프가 오픈AI 앤트로픽 등 AI 회사에 정부가 큰 지분 가질 수 있대. 속보 제목. 지분율 금액은 없어",
+    createdAt: T02OCT + 144*60_000, likes: 17, comments: 2 },
+  { id: 122142, symbol: "MACRO", nickname: "삼점이일삼", holdingLabel: "관심종목",
+    content: "일본 10년 3.1299% +0.0332. 30년 최고. 오전 2:26 JST. 엔화랑 원달러 같이 보는 숫자",
+    createdAt: T02OCT + 152*60_000, likes: 16, comments: 2 },
+  { id: 122143, symbol: "TSLA", nickname: "오십만이십", holdingLabel: "관심종목",
+    content: "칼시 테슬라 Q3 50만대 확률 20%. 예측시장. 아주 강세라는 평가. 공시 대수가 확정이야",
+    createdAt: T02OCT + 160*60_000, likes: 15, comments: 2 },
+  { id: 122144, symbol: "TSLA", nickname: "이천이칠브이엘", holdingLabel: "관심종목",
+    content: "2027 모델3·Y V2L 중국 호주 뉴질랜드. 차 배터리로 캠핑·공구. 기존 차는 개조 불가. 다른 나라는 뒤",
+    createdAt: T02OCT + 168*60_000, likes: 24, comments: 2 },
+  { id: 122145, symbol: "MACRO", nickname: "성장오십", holdingLabel: "관심종목",
+    content: "머스크 내년 GDP 성장이 전년보다 50% 이상 높아진대. 경제가 50% 커진다는 말이 아님. 가속도 비교",
+    createdAt: T02OCT + 176*60_000, likes: 23, comments: 2 },
+  { id: 122146, symbol: "MACRO", nickname: "천백억사십오", holdingLabel: "관심종목",
+    content: "무디스. 미국 DC가 2030까지 전력 45GW 더하려면 투자 1100억달러. 아마존 690MW는 그 안의 한 줄",
+    createdAt: T02OCT + 184*60_000, likes: 22, comments: 2 },
+  { id: 122147, symbol: "SPCX", nickname: "잠금팔십일", holdingLabel: "관심종목",
+    content: "SPCX 81% 아직 잠김. 지금 19%. 10/9·24에 +5% 657백만주. 11~12/8에 +15%. 61%는 2027년 6월, 머스크 64억주. 10/9에 328백만주 거래가능",
+    createdAt: T02OCT + 192*60_000, likes: 21, comments: 2 },
   // ── 2026-10-01 신규 ────────────────
   { id: 122101, symbol: "SPCX", nickname: "망원경궤도", holdingLabel: "관심종목",
     content: "스타십으로 더 무거운 우주망원경을 접지 않고 올리자는 글. 머스크는 궤도랑 달에 큰 망원경을 놓겠대",
@@ -5342,6 +5416,102 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  122124: [
+    { id: 1221241, nickname: "나이키사팔", holdingLabel: "관심종목", content: "2.4테라와트시랑 7.0기가와트시는 단위가 달라. 섞지 마", createdAt: T02OCT + 720000, likes: 5 },
+    { id: 1221242, nickname: "이탈리아최고", holdingLabel: "관심종목", content: "기다리는 사람이 줄어든 건 칸이 받아준 자리야", createdAt: T02OCT + 900000, likes: 4 },
+  ],
+  122125: [
+    { id: 1221251, nickname: "프랑스육십일", holdingLabel: "관심종목", content: "이익은 넘겼고 매출은 조금 밑돌았어", createdAt: T02OCT + 780000, likes: 5 },
+    { id: 1221252, nickname: "대만수입일위", holdingLabel: "관심종목", content: "북미 2%랑 중국 26% 감소를 한 평균으로 만들지 마", createdAt: T02OCT + 960000, likes: 4 },
+  ],
+  122126: [
+    { id: 1221261, nickname: "이탈리아최고", holdingLabel: "관심종목", content: "프랑스 61.9%가 제일 큰 숫자야", createdAt: T02OCT + 840000, likes: 5 },
+    { id: 1221262, nickname: "날개칠십오", holdingLabel: "관심종목", content: "독일 영국이 나오면 유럽 9월 표가 닫혀", createdAt: T02OCT + 1020000, likes: 4 },
+  ],
+  122127: [
+    { id: 1221271, nickname: "대만수입일위", holdingLabel: "관심종목", content: "순위야. 대수가 나오면 그때 표에 올려", createdAt: T02OCT + 900000, likes: 5 },
+    { id: 1221272, nickname: "만천백오십삼", holdingLabel: "관심종목", content: "남유럽에서 최고가 나온 달이 의미 있어", createdAt: T02OCT + 1080000, likes: 4 },
+  ],
+  122128: [
+    { id: 1221281, nickname: "날개칠십오", holdingLabel: "관심종목", content: "수입차 표야. 전체 승용이랑 섞지 마", createdAt: T02OCT + 960000, likes: 5 },
+    { id: 1221282, nickname: "원전육백구십", holdingLabel: "관심종목", content: "시승 창이 열려 있으면 인도 창도 살아 있는 거야", createdAt: T02OCT + 1140000, likes: 4 },
+  ],
+  122129: [
+    { id: 1221291, nickname: "만천백오십삼", holdingLabel: "관심종목", content: "60미터는 이미 올라간 V3야. 75미터는 다음 세대", createdAt: T02OCT + 1020000, likes: 5 },
+    { id: 1221292, nickname: "선캐처티피유", holdingLabel: "관심종목", content: "25만 와트는 정거장보다 큰 한 대의 전력이야", createdAt: T02OCT + 1200000, likes: 4 },
+  ],
+  122130: [
+    { id: 1221301, nickname: "원전육백구십", holdingLabel: "관심종목", content: "11150이랑 11153은 같은 아침의 반올림이야", createdAt: T02OCT + 1080000, likes: 5 },
+    { id: 1221302, nickname: "동결칠십육", holdingLabel: "관심종목", content: "대수랑 기당 대역을 한 줄로 더하지 마", createdAt: T02OCT + 1260000, likes: 4 },
+  ],
+  122131: [
+    { id: 1221311, nickname: "선캐처티피유", holdingLabel: "관심종목", content: "690 안에 90이 들어 있어. 더하면 합이 커져", createdAt: T02OCT + 1140000, likes: 5 },
+    { id: 1221312, nickname: "터키금요일", holdingLabel: "관심종목", content: "이미 돌아가는 원전을 키우는 계약이야. 소형모듈 신설이 아니야", createdAt: T02OCT + 1320000, likes: 4 },
+  ],
+  122132: [
+    { id: 1221321, nickname: "동결칠십육", holdingLabel: "관심종목", content: "200달러는 2030년대 목표야. 오늘 발사 단가가 아니야", createdAt: T02OCT + 1200000, likes: 5 },
+    { id: 1221322, nickname: "국방보도", holdingLabel: "관심종목", content: "4개는 시험이야. 데이터센터 한 동이 올라간 게 아니야", createdAt: T02OCT + 1380000, likes: 4 },
+  ],
+  122133: [
+    { id: 1221331, nickname: "터키금요일", holdingLabel: "관심종목", content: "76.2랑 23.8을 더하면 그 회의 표야", createdAt: T02OCT + 1260000, likes: 5 },
+    { id: 1221332, nickname: "하루세발", holdingLabel: "관심종목", content: "내일 고용이 다음 숫자야. 오늘 5bp는 하루야", createdAt: T02OCT + 1440000, likes: 4 },
+  ],
+  122134: [
+    { id: 1221341, nickname: "국방보도", holdingLabel: "관심종목", content: "보도야. 금요일 문장이 나오면 표에 올려", createdAt: T02OCT + 1320000, likes: 5 },
+    { id: 1221342, nickname: "램칠십이", holdingLabel: "관심종목", content: "감독이랑 무인은 다른 허가야", createdAt: T02OCT + 1500000, likes: 4 },
+  ],
+  122135: [
+    { id: 1221351, nickname: "하루세발", holdingLabel: "관심종목", content: "제목이야. 임명장이 나오면 그때 칸이 열려", createdAt: T02OCT + 1380000, likes: 5 },
+    { id: 1221352, nickname: "스파크스배차", holdingLabel: "관심종목", content: "옵티머스 양산이랑 국방 수요는 따로 보자", createdAt: T02OCT + 1560000, likes: 4 },
+  ],
+  122136: [
+    { id: 1221361, nickname: "램칠십이", holdingLabel: "관심종목", content: "세 칸이 다 닫혀야 하루 세 발이야", createdAt: T02OCT + 1440000, likes: 5 },
+    { id: 1221362, nickname: "첨부오십오", holdingLabel: "관심종목", content: "유인이랑 라이드셰어랑 정찰이 하루에 겹쳤어", createdAt: T02OCT + 1620000, likes: 4 },
+  ],
+  122137: [
+    { id: 1221371, nickname: "스파크스배차", holdingLabel: "관심종목", content: "72GB는 칩 사양이야. 200GB는 로봇 한 대 추정이야", createdAt: T02OCT + 1500000, likes: 5 },
+    { id: 1221372, nickname: "칠백칠십육", holdingLabel: "관심종목", content: "450억GB는 올해 세계 생산이야. 2조는 100억 대 가정이야", createdAt: T02OCT + 1680000, likes: 4 },
+  ],
+  122138: [
+    { id: 1221381, nickname: "첨부오십오", holdingLabel: "관심종목", content: "채용 한 자리가 연간 대수는 아니야", createdAt: T02OCT + 1560000, likes: 5 },
+    { id: 1221382, nickname: "정부지분보도", holdingLabel: "관심종목", content: "스파크스가 기가 옆이야. 인도 스케줄 신호로 읽어", createdAt: T02OCT + 1740000, likes: 4 },
+  ],
+  122139: [
+    { id: 1221391, nickname: "칠백칠십육", holdingLabel: "관심종목", content: "55는 닫힌 분기야. 60~65는 전망이야", createdAt: T02OCT + 1620000, likes: 5 },
+    { id: 1221392, nickname: "삼점이일삼", holdingLabel: "관심종목", content: "판매 때 고른 비율이랑 나중에 켠 구독은 다른 칸이야", createdAt: T02OCT + 1800000, likes: 4 },
+  ],
+  122140: [
+    { id: 1221401, nickname: "정부지분보도", holdingLabel: "관심종목", content: "776은 중국 순환이야. EPA랑 바꾸지 마", createdAt: T02OCT + 1680000, likes: 5 },
+    { id: 1221402, nickname: "오십만이십", holdingLabel: "관심종목", content: "25킬로미터는 모터 효율이야. 배터리 용량이 커진 게 아니야", createdAt: T02OCT + 1860000, likes: 4 },
+  ],
+  122141: [
+    { id: 1221411, nickname: "삼점이일삼", holdingLabel: "관심종목", content: "제목이야. 법안 번호가 나오면 칸이 열려", createdAt: T02OCT + 1740000, likes: 5 },
+    { id: 1221412, nickname: "이천이칠브이엘", holdingLabel: "관심종목", content: "오픈AI랑 앤트로픽 가치를 오늘 제목으로 바꾸지 마", createdAt: T02OCT + 1920000, likes: 4 },
+  ],
+  122142: [
+    { id: 1221421, nickname: "오십만이십", holdingLabel: "관심종목", content: "3.1299는 그 시각 스냅샷이야. 종가랑 섞지 마", createdAt: T02OCT + 1800000, likes: 5 },
+    { id: 1221422, nickname: "성장오십", holdingLabel: "관심종목", content: "미국 10년이랑 평균 내지 마. 두 나라 표야", createdAt: T02OCT + 1980000, likes: 4 },
+  ],
+  122143: [
+    { id: 1221431, nickname: "이천이칠브이엘", holdingLabel: "관심종목", content: "20%는 가격이야. 가이던스가 아니야", createdAt: T02OCT + 1860000, likes: 5 },
+    { id: 1221432, nickname: "천백억사십오", holdingLabel: "관심종목", content: "유럽 9월이랑 대만 1위는 월별 힌트야. 분기 공시가 다음이야", createdAt: T02OCT + 2040000, likes: 4 },
+  ],
+  122144: [
+    { id: 1221441, nickname: "성장오십", holdingLabel: "관심종목", content: "집에 되파는 양방향이랑 다른 칸이야. 바깥 콘센트야", createdAt: T02OCT + 1920000, likes: 5 },
+    { id: 1221442, nickname: "잠금팔십일", holdingLabel: "관심종목", content: "2027년형이야. 오늘 재고에 바로 안 붙어", createdAt: T02OCT + 2100000, likes: 4 },
+  ],
+  122145: [
+    { id: 1221451, nickname: "천백억사십오", holdingLabel: "관심종목", content: "성장률이 높아진다는 거야. 경제 규모 50%가 아니야", createdAt: T02OCT + 1980000, likes: 5 },
+    { id: 1221452, nickname: "이점사테라", holdingLabel: "관심종목", content: "공식 속보치가 나오면 그 칸에 적어", createdAt: T02OCT + 2160000, likes: 4 },
+  ],
+  122146: [
+    { id: 1221461, nickname: "잠금팔십일", holdingLabel: "관심종목", content: "45GW는 나라 전체야. 690MW랑 더하면 단위가 섞여", createdAt: T02OCT + 2040000, likes: 5 },
+    { id: 1221462, nickname: "나이키사팔", holdingLabel: "관심종목", content: "궤도 시험이랑 지상 45GW는 다른 일정이야", createdAt: T02OCT + 2220000, likes: 4 },
+  ],
+  122147: [
+    { id: 1221471, nickname: "이점사테라", holdingLabel: "관심종목", content: "328백만이랑 657백만을 더하지 마. 하루분이랑 이틀 합이야", createdAt: T02OCT + 2100000, likes: 5 },
+    { id: 1221472, nickname: "프랑스육십일", holdingLabel: "관심종목", content: "풀린다고 다 파는 게 아니야. 75% 이상은 여전히 장외야", createdAt: T02OCT + 2280000, likes: 4 },
+  ],
   122101: [
     { id: 1221011, nickname: "연산삼백", holdingLabel: "관심종목", content: "접는 장치 대신 무게로 위험을 옮기자는 이야기야", createdAt: T01OCT + 720000, likes: 5 },
     { id: 1221012, nickname: "마이크론삼삼", holdingLabel: "관심종목", content: "달에 두는 망원경은 통신 위성이랑 목적이 달라", createdAt: T01OCT + 900000, likes: 4 },
