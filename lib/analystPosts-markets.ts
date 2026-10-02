@@ -1434,7 +1434,7 @@ export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
     likes: 18, comments: 2, created_at: "2026-10-02T04:20:00.000Z", liked: false,
   },
   {
-    id: -2498, alias: undefined, symbol: "WTI원유",
+    id: -2498, alias: "원유 학 #64", symbol: "WTI원유",
     content: "WTI는 유럽 세션 기준 91.80달러로 1.5% 올랐습니다. COMEX 표의 90.42달러와 시각이 다릅니다.",
     likes: 17, comments: 2, created_at: "2026-10-02T05:20:00.000Z", liked: false,
   },
@@ -2016,12 +2016,12 @@ export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = 
     { alias: "성수 매 #30", content: "원·달러 1,358.4원과 달러인덱스를 한 퍼센트로 나누지 않겠습니다.", created_at: "2026-10-02T03:32:00.000Z" },
   ],
   [-2497]: [
-    { alias: "분당 재규어 #22", content: "91.80달러는 유럽 세션입니다. 90.42달러와 평균 내지 않겠습니다.", created_at: "2026-10-02T04:26:00.000Z" },
-    { alias: "판교 고래 #07", content: "브렌트 100달러와 WTI를 한 배럴로 섞지 않겠습니다.", created_at: "2026-10-02T04:32:00.000Z" },
+    { alias: "분당 재규어 #22", content: "101.60은 어제 오후 3시 22분입니다.", created_at: "2026-10-02T04:26:00.000Z" },
+    { alias: "판교 고래 #07", content: "원·달러 1,358.4원과 달러인덱스를 한 퍼센트로 나누지 않겠습니다.", created_at: "2026-10-02T04:32:00.000Z" },
   ],
   [-2498]: [
-    { alias: undefined, content: undefined, created_at: "2026-10-02T05:26:00.000Z" },
-    { alias: undefined, content: undefined, created_at: "2026-10-02T05:32:00.000Z" },
+    { alias: "노원 치타 #08", content: "91.80달러는 유럽 세션입니다. 90.42달러와 평균 내지 않겠습니다.", created_at: "2026-10-02T05:26:00.000Z" },
+    { alias: "목동 여우 #41", content: "브렌트 100달러와 WTI를 한 배럴로 섞지 않겠습니다.", created_at: "2026-10-02T05:32:00.000Z" },
   ],
   // ── 2026-10-01 SAFE 댓글 ──────────────────────
   [-2479]: [

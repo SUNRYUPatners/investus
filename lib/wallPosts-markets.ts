@@ -833,7 +833,7 @@ export const MOCK_POSTS_SAFE: Post[] = [
   { id: 9532, symbol: "비트코인", nickname: "이더이천육백", holdingLabel: "관심", content: "비트 84778.89 +1.46%. 시가 83556 고점 85247 저점 83139. ETF는 1.48억 유출로 돌아섰대", createdAt: T02OCT - 3600000, likes: 38, comments: 2, },
   { id: 9533, symbol: "이더리움", nickname: "달러백일점육", holdingLabel: "관망", content: "이더 10/1 09:30 ET 2688.17. 같은 시각 비트는 83448. 비트 종가 84778이랑 섞지 마. 이더 종가는 이 표에 없어", createdAt: T02OCT - 5400000, likes: 37, comments: 2, },
   { id: 9534, symbol: "달러인덱스", nickname: "유가구십일", holdingLabel: "관심", content: "DXY 15:22 101.60, 전날 101.45. 원달러 1358.4 +5.6원. PCE는 낮았는데 성장·고용이 달러를 받쳤어", createdAt: T02OCT - 7200000, likes: 36, comments: 2, },
-  { id: 9535, symbol: "WTI원유", nickname: undefined, holdingLabel: undefined, content: "WTI 유럽세션 91.80 +1.5%. 브렌트 100 넘봄. COMEX 표는 90.42. 시각이 다른 두 자리", createdAt: T02OCT - 9000000, likes: 35, comments: 2, },
+  { id: 9535, symbol: "WTI원유", nickname: "구십일점팔", holdingLabel: "관심", content: "WTI 유럽세션 91.80 +1.5%. 브렌트 100 넘봄. COMEX 표는 90.42. 시각이 다른 두 자리", createdAt: T02OCT - 9000000, likes: 35, comments: 2, },
   { id: 9500, symbol: "한장요약", nickname: "금사천일백", holdingLabel: "관망", content: "키트코 저녁 금 4156.10달러, 0.60% 하락. 은 60.18. WTI 90.42 부근, 브렌트 103.50. 비트는 85598 찍고 84376.", createdAt: T01OCT - 0, likes: 40, comments: 2, },
   { id: 9501, symbol: "금", nickname: "은육십점일", holdingLabel: "금 보유", content: "저녁 금 4156.10달러, 0.60% 하락. 은은 같은 문장에서 60.180, 1.90% 하락. 아침 4211이랑 섞지 마.", createdAt: T01OCT - 1800000, likes: 39, comments: 2, },
   { id: 9502, symbol: "원유", nickname: "유가구십점사", holdingLabel: "관심", content: "WTI 90.42달러 부근, 브렌트 103.50 부근. 키트코 저녁. 해협 유조선 피격 보도 있고 협상은 더뎌.", createdAt: T01OCT - 3600000, likes: 38, comments: 2, },
@@ -999,8 +999,8 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
     { id: 2, nickname: "구십점사", holdingLabel: "관심", content: "내일 고용이 달러의 다음 숫자야", createdAt: T02OCT + 1200000, likes: 3 },
   ],
   9535: [
-    { id: 1, nickname: undefined, holdingLabel: "관심", content: "91.80이랑 90.42를 평균 내지 마", createdAt: T02OCT + 600000, likes: 4 },
-    { id: 2, nickname: undefined, holdingLabel: "관심", content: "수출이 돌아와도 90달러대가 바로 안 사라져", createdAt: T02OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "브렌트백", holdingLabel: "관심", content: "91.80이랑 90.42를 평균 내지 마", createdAt: T02OCT + 600000, likes: 4 },
+    { id: 2, nickname: "송유관재개", holdingLabel: "관심", content: "수출이 돌아와도 90달러대가 바로 안 사라져", createdAt: T02OCT + 1200000, likes: 3 },
   ],
   9500: [
     { id: 1, nickname: "저녁시각", holdingLabel: "관심", content: "아침 4211달러랑 저녁 4156달러를 평균 내진 마", createdAt: T01OCT + 600000, likes: 4 },
