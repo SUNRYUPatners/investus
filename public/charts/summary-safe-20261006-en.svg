@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.10.06 Safe assets</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="165" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="165" rx="4" fill="#f7931a"/>
+  <text x="116" y="181" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#f7931a">Bitcoin closed at $85,829, down 0.78%</text>
+  <text x="116" y="237" font-family="Arial" font-size="17" fill="#9ca3af">The high was $86,989.</text>
+  <text x="985" y="204" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f7931a" text-anchor="end">85829</text>
+  <rect x="60" y="297" width="960" height="165" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="297" width="8" height="165" rx="4" fill="#facc15"/>
+  <text x="116" y="356" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#facc15">Gold was $4,153 at 9:10 a.m. Eastern</text>
+  <text x="116" y="412" font-family="Arial" font-size="17" fill="#9ca3af">The 10-year yield is 5.31%.</text>
+  <text x="985" y="379" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#facc15" text-anchor="end">4153</text>
+  <rect x="60" y="472" width="960" height="165" rx="14" fill="#0c1017" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="472" width="8" height="165" rx="4" fill="#94a3b8"/>
+  <text x="116" y="531" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#94a3b8">Silver rose 2.17% to $61.70</text>
+  <text x="116" y="587" font-family="Arial" font-size="17" fill="#9ca3af">The bounce led gold.</text>
+  <text x="985" y="554" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">61.70</text>
+  <rect x="60" y="647" width="960" height="165" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="647" width="8" height="165" rx="4" fill="#38bdf8"/>
+  <text x="116" y="706" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#38bdf8">The dollar index moved above 102.5</text>
+  <text x="116" y="762" font-family="Arial" font-size="17" fill="#9ca3af">The euro is at 1.116.</text>
+  <text x="985" y="729" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">102.5</text>
+  <rect x="60" y="822" width="960" height="165" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="822" width="8" height="165" rx="4" fill="#ef4444"/>
+  <text x="116" y="881" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#ef4444">The U.S. 10-year is 5.31%, a 24-year high</text>
+  <text x="116" y="937" font-family="Arial" font-size="17" fill="#9ca3af">ISM services prices are 74.0.</text>
+  <text x="985" y="904" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">5.31%</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Bitcoin $85,829 · gold $4,153 · silver $61.70 · DXY 102.5 · 10-year 5.31%</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

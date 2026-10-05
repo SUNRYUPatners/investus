@@ -1,6 +1,7 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T06OCT = 1791241200000; // 2026-10-06 08:00 KST
 const T02OCT = 1790895600000; // 2026-10-02 08:00 KST
 const T01OCT = 1790809200000; // 2026-10-01 08:00 KST
 const T30SEP = 1790722800000; // 2026-09-30 08:00 KST
@@ -30,6 +31,12 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9550, symbol: "한장요약", nickname: "칠천삼점이칠", holdingLabel: "인덱스", content: "금요 코스피 7003.74 +0.46%. 기관 3813억 매수, 외인 1367억 매도, 개인 1조7205억 매도. 삼성 보합 276000, 닉스 1841000. 오늘 연휴 후 개장", createdAt: T06OCT - 0, likes: 40, comments: 2, },
+  { id: 9551, symbol: "삼성전자", nickname: "보합이십칠만", holdingLabel: "삼성 보유", content: "삼성 금요 보합 276000. 외인 1086억 개인 5889억 매도, 기관 1587 기타 5403 매수. 8일 잠정, 영업익 눈높이 109.5조", createdAt: T06OCT - 1800000, likes: 39, comments: 2, },
+  { id: 9552, symbol: "SK하이닉스", nickname: "백팔십사만일", holdingLabel: "하이닉스 보유", content: "하이닉스 184만1천 +0.44% +8000. 외인 2229 개인 8096 매도, 기관 1319 기타 9053 매수. ADR -0.06%. 자사주 15~17일", createdAt: T06OCT - 3600000, likes: 38, comments: 2, },
+  { id: 9553, symbol: "SK스퀘어", nickname: "백십육만스퀘", holdingLabel: "지주 관심", content: "SK스퀘어 116만 +0.43% +5000. 시총 4위 지주. 닉스 옆자리. 9월 시총 약 10% 늘었던 흐름", createdAt: T06OCT - 5400000, likes: 37, comments: 2, },
+  { id: 9554, symbol: "LG에너지솔루션", nickname: "삼십칠만엔솔", holdingLabel: "배터리 보유", content: "LG엔솔 371000 +2.91% +10500. 금요 시총상위 두드러진 오름. 현대차는 346500 -0.72%로 갈림", createdAt: T06OCT - 7200000, likes: 36, comments: 2, },
+  { id: 9555, symbol: "수급", nickname: "기관삼팔일삼", holdingLabel: "관망", content: "금요 기관 3813억 매수, 외인 1367억 매도, 개인 1조7205억 매도. 투톱 외인 약 3315억 매도, 기타 1.45조 받음. 지난주 외인 8.32조", createdAt: T06OCT - 9000000, likes: 35, comments: 2, },
   { id: 9520, symbol: "한장요약", nickname: "육천구백칠십일", holdingLabel: "인덱스", content: "어제 코스피 6971.35, +1.95%. 기관 4171억 매수, 외국인 3366억 매도, 개인 1조7115억 매도. 삼성 276000, 하이닉스 1833000.", createdAt: T02OCT - 0, likes: 40, comments: 2, },
   { id: 9521, symbol: "삼성전자", nickname: "이십칠만육천", holdingLabel: "삼성 보유", content: "삼성 276000, +2.79%. 시가 266500에서 264500까지 밀렸다가 올랐어. 우선주 204500 +4.76%. 외인 창구 2027억 매도. 자사주 막바지", createdAt: T02OCT - 1800000, likes: 39, comments: 2, },
   { id: 9522, symbol: "SK하이닉스", nickname: "백팔십삼만", holdingLabel: "하이닉스 보유", content: "하이닉스 183만3천 +3.21%. 장중 174만9천까지 밀렸다가 V자. 외인 창구 2145억 매도. 자사주 15~17일쯤 마지막", createdAt: T02OCT - 3600000, likes: 38, comments: 2, },
@@ -201,6 +208,30 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9550: [
+    { id: 1, nickname: "시가육천구백", holdingLabel: "관심", content: "7000선 종가야. 시가 6938에서 올렸어", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "사흘거래", holdingLabel: "관심", content: "이번주 거래 사흘이야. 삼전 잠정은 8일", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9551: [
+    { id: 1, nickname: "잠정팔일", holdingLabel: "관심", content: "보합이야. 닉스랑 평균 내지 마", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "자사주초중순", holdingLabel: "관심", content: "109.5조는 눈높이야. 공시가 8일", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9552: [
+    { id: 1, nickname: "에이디알따로", holdingLabel: "관심", content: "8000원 오른 종가야. ADR이랑 섞지 마", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "십오일전후", holdingLabel: "관심", content: "자사주는 삼전보다 뒤에 끝나", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9553: [
+    { id: 1, nickname: "지주할인", holdingLabel: "관심", content: "116만은 지주 종가야. 닉스 종가가 아니야", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "닉스곱하지마", holdingLabel: "관심", content: "할인을 숫자로 새로 나누지 마", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9554: [
+    { id: 1, nickname: "완성차갈림", holdingLabel: "관심", content: "2.91%가 그날 상위 탄력이야", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "수주확정아냐", holdingLabel: "관심", content: "현대차 약세랑 한 업종 평균 내지 마", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9555: [
+    { id: 1, nickname: "하루외인", holdingLabel: "관심", content: "1367억은 하루야. 8.32조는 지난주야", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "키움범위", holdingLabel: "관심", content: "키움 6800~7300은 주간 범위야", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
   9520: [
     { id: 1, nickname: "시가육천칠백", holdingLabel: "관심", content: "6760까지 밀렸다가 6970을 되찾았어", createdAt: T02OCT + 600000, likes: 4 },
     { id: 2, nickname: "개인매도", holdingLabel: "관심", content: "삼전이랑 닉스가 같이 올랐어. 마이크론 다음날이야", createdAt: T02OCT + 1200000, likes: 3 },
@@ -828,6 +859,12 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9560, symbol: "한장요약", nickname: "요약팔오팔이", holdingLabel: "BTC 보유", content: "비트 85829 -0.78%. 금 09:10 ET 4153. 은 61.70 +2.17%. DXY 102.5 위. 유로 1.116. 10년 5.31%", createdAt: T06OCT - 0, likes: 40, comments: 2, },
+  { id: 9561, symbol: "비트코인", nickname: "비트팔만오천", holdingLabel: "금 보유", content: "비트 85829.02 -0.78%. 시가 86499 고점 86989 저점 84956. 지난분기 약 43%. 주식 30일 상관 0.69", createdAt: T06OCT - 1800000, likes: 39, comments: 2, },
+  { id: 9562, symbol: "금", nickname: "금사천일백오십", holdingLabel: "은 관심", content: "금 10/5 09:10 ET 4153. 10/2보다 65달러 낮음. 고용 2.9만, 실업 4.2%. 10년 5.31%. 10월 인상 22~24%", createdAt: T06OCT - 3600000, likes: 38, comments: 2, },
+  { id: 9563, symbol: "은", nickname: "은육십일점칠", holdingLabel: "관망", content: "은 08:05 ET 61.70 +2.17% 전일 60.39. 1년전 48.00 +28.55%. 7시 스냅 61.80. 금보다 먼저 튐", createdAt: T06OCT - 5400000, likes: 37, comments: 2, },
+  { id: 9564, symbol: "달러인덱스", nickname: "달러백이점오", holdingLabel: "금리 관심", content: "DXY 102.5 위. 유로 1.116, 2025.5 이후 최저. 프랑스 재정·스페인 선거. 원달러 금요 1350.6 -7.8원", createdAt: T06OCT - 7200000, likes: 36, comments: 2, },
+  { id: 9565, symbol: "미국10년", nickname: "십년오점삼일", holdingLabel: "관심", content: "미 10년 5.31% 2002.4 이후 최고. 30년 5.66%. ISM 서비스 54.9 물가 74.0. 10월 인상 22~24%", createdAt: T06OCT - 9000000, likes: 35, comments: 2, },
   { id: 9530, symbol: "한장요약", nickname: "금사천일백오십칠", holdingLabel: "금 보유", content: "금 COMEX 4157.41 -0.60%. 비트 84778.89 +1.46% 고점 85247. 이더 2688.17. DXY 101.60. WTI 91.80", createdAt: T02OCT - 0, likes: 40, comments: 2, },
   { id: 9531, symbol: "금", nickname: "비트팔만사천", holdingLabel: "BTC 보유", content: "금 COMEX 4157.41, 전일 4182.31에서 -24.9. PCE는 낮았는데 금리·유가가 눌렀어. 유럽 세션 4182는 다른 시각", createdAt: T02OCT - 1800000, likes: 39, comments: 2, },
   { id: 9532, symbol: "비트코인", nickname: "이더이천육백", holdingLabel: "관심", content: "비트 84778.89 +1.46%. 시가 83556 고점 85247 저점 83139. ETF는 1.48억 유출로 돌아섰대", createdAt: T02OCT - 3600000, likes: 38, comments: 2, },
@@ -978,6 +1015,30 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9560: [
+    { id: 1, nickname: "고점팔만육", holdingLabel: "관심", content: "4153이랑 은 61.70은 아침 시각이야", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "상관영점육", holdingLabel: "관심", content: "10년 5.31이랑 금을 한 공식으로 곱하지 마", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9561: [
+    { id: 1, nickname: "아침사천", holdingLabel: "관심", content: "85829가 종가야. 86989는 고점이야", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "고용이만구", holdingLabel: "관심", content: "0.69는 상관이야. 수익률이 아니야", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9562: [
+    { id: 1, nickname: "시각다른은", holdingLabel: "관심", content: "4153은 아침 시각이야. 종가로 부르지 마", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "일년이십팔", holdingLabel: "관심", content: "2.9만은 고용이야. 금 온스가 아니야", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9563: [
+    { id: 1, nickname: "인덱스따로", holdingLabel: "관심", content: "61.70이랑 61.80은 시각이 달라", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "유로약세", holdingLabel: "관심", content: "28.55%는 1년이야. 하루가 아니야", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9564: [
+    { id: 1, nickname: "십년삼십년", holdingLabel: "관심", content: "102.5는 인덱스야. 1350.6이랑 나누지 마", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "물가칠십사", holdingLabel: "관심", content: "유로 약세가 인덱스 이야기야. 미 금리만의 달러가 아니야", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9565: [
+    { id: 1, nickname: "이더같이봄", holdingLabel: "관심", content: "5.31이 10년이야. 30년이랑 평균 내지 마", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "의사록수요일", holdingLabel: "관심", content: "74.0은 물가지수야. 금리 퍼센트가 아니야", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
   9530: [
     { id: 1, nickname: "씨오멕스종가", holdingLabel: "관심", content: "4157이랑 4182는 시각이 달라. 평균 내지 마", createdAt: T02OCT + 600000, likes: 4 },
     { id: 2, nickname: "고용내일", holdingLabel: "관심", content: "내일 고용이 금이랑 달러의 다음 숫자야", createdAt: T02OCT + 1200000, likes: 3 },
@@ -1517,6 +1578,10 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9570, symbol: "한장요약", nickname: "전세팔십육", holdingLabel: "관심", content: "서울 전세 86주 연속. 매물 20497 -13.8%. 세제개편 후 15억이하 매매 약 79%, 6억이하 25%. 공적주택 119만호", createdAt: T06OCT - 0, likes: 40, comments: 2, },
+  { id: 9571, symbol: "전세", nickname: "매물이만사백", holdingLabel: "전세 관심", content: "서울 전세 86주 연속. 5개구 올해 10% 넘김. 매물 20497, 10·15직전 23779 대비 -13.8%. 하반기 입주 18994", createdAt: T06OCT - 1800000, likes: 39, comments: 2, },
+  { id: 9572, symbol: "서울매매", nickname: "십오억칠십구", holdingLabel: "매매 관심", content: "8·3 이후 서울 매매 약 79%가 15억이하. 6억이하 25%. 9~15억 26.3%, 25억초과 5.8%. 대출 한도가 칸을 갈라", createdAt: T06OCT - 3600000, likes: 38, comments: 2, },
+  { id: 9573, symbol: "정책", nickname: "공공백십구만", holdingLabel: "정책 관심", content: "공적주택 2030까지 119만호, 연 24만. 수도권 92만 77%. 4Q~내년말 입주가능 15만, 순공급 6.6만. 인허가 +50%. 실거주 유예 2027.12.31", createdAt: T06OCT - 5400000, likes: 37, comments: 2, },
   { id: 9540, symbol: "한장요약", nickname: "광명이순위", holdingLabel: "관심", content: "오늘 광명 에듀하임 2순위 426세대. 계양 일반은 오후 5시 마감. 광명 발표 10/12, 계양 10/21. 전매 3년", createdAt: T02OCT - 0, likes: 40, comments: 2, },
   { id: 9541, symbol: "공급정책", nickname: "이순위통장", holdingLabel: "청약 준비", content: "광명 에듀하임 오늘 2순위. 426세대 일반 190. 청약금 없음. 59형 최고 8.79억, 84형 11.98억. 발표 10/12 계약 24~26일", createdAt: T02OCT - 1800000, likes: 39, comments: 2, },
   { id: 9542, symbol: "공급정책", nickname: "계양오후다섯", holdingLabel: "관심", content: "계양 A6 오늘 17시 일반공급 마감. 663세대. 발표 10/21, 계약 12/15~18, 입주 2029.6. 59형 약 5.3억", createdAt: T02OCT - 3600000, likes: 38, comments: 2, },
@@ -1641,6 +1706,22 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9570: [
+    { id: 1, nickname: "연속팔십육", holdingLabel: "관심", content: "86주는 연속 상승이야. 한 주 숫자가 아니야", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "입주하반기", holdingLabel: "관심", content: "119만은 2030까지야. 올해 입주가 아니야", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9571: [
+    { id: 1, nickname: "이만사백구십", holdingLabel: "관심", content: "20497이 이달 2일 매물이야", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "대출한도육억", holdingLabel: "관심", content: "18994는 하반기 입주 예정이야. 이번주 공급이 아니야", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9572: [
+    { id: 1, nickname: "건수비중", holdingLabel: "관심", content: "79%는 건수 비중이야. 금액 합이 아니야", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "육억이십오", holdingLabel: "관심", content: "6억이하 25%랑 79%를 한 평균으로 만들지 마", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
+  9573: [
+    { id: 1, nickname: "목표백십구", holdingLabel: "관심", content: "119만은 목표야. 15만은 가까운 입주 가능이야", createdAt: T06OCT + 600000, likes: 4 },
+    { id: 2, nickname: "인허가오십", holdingLabel: "관심", content: "인허가 50%랑 입주를 한 단계로 보지 마", createdAt: T06OCT + 1200000, likes: 3 },
+  ],
   9540: [
     { id: 1, nickname: "일순위끝", holdingLabel: "관심", content: "1순위는 끝났고 오늘이 2순위야", createdAt: T02OCT + 600000, likes: 4 },
     { id: 2, nickname: "오후다섯시", holdingLabel: "관심", content: "계양은 오늘 17시에 창이 닫혀", createdAt: T02OCT + 1200000, likes: 3 },

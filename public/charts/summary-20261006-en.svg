@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.10.06 Daily Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="100" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="100" rx="4" fill="#c084fc"/>
+  <text x="116" y="158" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">SpaceX closed at $171.09, up 7.63%</text>
+  <text x="116" y="192" font-family="Arial" font-size="16" fill="#9ca3af">Morgan Stanley keeps a $300 target.</text>
+  <text x="985" y="172" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">171.09</text>
+  <rect x="60" y="232" width="960" height="100" rx="14" fill="#06121f" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="232" width="8" height="100" rx="4" fill="#60a5fa"/>
+  <text x="116" y="268" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">Nvidia became the first $6 trillion company</text>
+  <text x="116" y="302" font-family="Arial" font-size="16" fill="#9ca3af">The Nasdaq also closed at a record.</text>
+  <text x="985" y="282" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">$6T</text>
+  <rect x="60" y="342" width="960" height="100" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="342" width="8" height="100" rx="4" fill="#4ade80"/>
+  <text x="116" y="378" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">Model Y and Model 3 took 1st and 2nd in Dutch new cars</text>
+  <text x="116" y="412" font-family="Arial" font-size="16" fill="#9ca3af">The whole market, not just EVs. Share 8.7%.</text>
+  <text x="985" y="392" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">1-2</text>
+  <rect x="60" y="452" width="960" height="100" rx="14" fill="#0a1a0a" stroke="#22c55e" stroke-width="2"/>
+  <rect x="60" y="452" width="8" height="100" rx="4" fill="#22c55e"/>
+  <text x="116" y="488" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22c55e">Texas authorized Cybercabs rose from 45 to 169</text>
+  <text x="116" y="522" font-family="Arial" font-size="16" fill="#9ca3af">589 robotaxis are authorized in Texas.</text>
+  <text x="985" y="502" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22c55e" text-anchor="end">169</text>
+  <rect x="60" y="562" width="960" height="100" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="562" width="8" height="100" rx="4" fill="#a78bfa"/>
+  <text x="116" y="598" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">SpaceXAI is becoming SpaceXSI</text>
+  <text x="116" y="632" font-family="Arial" font-size="16" fill="#9ca3af">S1 is the first orbital compute satellite.</text>
+  <text x="985" y="612" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">SI</text>
+  <rect x="60" y="672" width="960" height="100" rx="14" fill="#1a0a10" stroke="#fb7185" stroke-width="2"/>
+  <rect x="60" y="672" width="8" height="100" rx="4" fill="#fb7185"/>
+  <text x="116" y="708" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb7185">Gasoline cars fell below 50% of global sales</text>
+  <text x="116" y="742" font-family="Arial" font-size="16" fill="#9ca3af">First-half share is 49%.</text>
+  <text x="985" y="722" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb7185" text-anchor="end">49%</text>
+  <rect x="60" y="782" width="960" height="100" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="782" width="8" height="100" rx="4" fill="#c084fc"/>
+  <text x="116" y="818" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">Kalshi prices a 70% chance of a Tesla-SpaceX merger</text>
+  <text x="116" y="852" font-family="Arial" font-size="16" fill="#9ca3af">Before 2028. Odds are not a deal.</text>
+  <text x="985" y="832" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">70%</text>
+  <rect x="60" y="892" width="960" height="100" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="892" width="8" height="100" rx="4" fill="#f59e0b"/>
+  <text x="116" y="928" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b">Micron net income is modeled up about 25 times in two years</text>
+  <text x="116" y="962" font-family="Arial" font-size="16" fill="#9ca3af">The 2027 row is $199 billion.</text>
+  <text x="985" y="942" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f59e0b" text-anchor="end">25x</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">$171.09 · Nvidia $6T · Dutch 1-2 · Cybercab 169 · gasoline 49% · Kalshi 70%</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

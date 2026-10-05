@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.10.06</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">오스틴 사이버캡 목격이 8만 6,870건입니다</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="380" y="160" width="320" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">하루 최고</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#4ade80" text-anchor="middle">86,870</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">어제 목격입니다. 무인 운행은 670건입니다.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">👁️</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">86,870</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">목격</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">하루 최고</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🤖</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">670</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">무인</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">감독과 다른 칸</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🏭</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">출고</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">기가텍사스</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">루츠의 네 조건</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">✅</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">수요</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">선택</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">사람들이 고릅니다</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">목격 건수는 도로에 나온 차와 운행 횟수가 겹친 자리입니다</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">인가 대수와는 다른 칸입니다</text>
+  <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="726" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">사이버캡 스포터 집계입니다. 어제 오스틴 목격은 8만 6,870건으로 새 기록입니다. 그중 무인 운행은 670건입니다. 9월</text>
+  <text x="540" y="750" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">초부터 10월 3일까지 막대가 오른쪽에서 가장 높습니다. 제프 루츠는 꽤 큰 이동이라고 했습니다. 안전과 성능이 숫자로</text>
+  <text x="540" y="774" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">좋아지고, 현장 운영이 넓어지고, 사이버캡이 기가텍사스에서 흘러나오고, 사람들이 그 차를 고를 때 이 막대가 올라간다고</text>
+  <text x="540" y="798" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">했습니다.</text>
+  <rect x="60" y="850" width="960" height="168" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">목격 건수는 도로에 나온 차와 운행 횟수가 겹친 자리입니다. 인가 대수와는 다른 칸입니다. 무인 칸이 전체보다 작은 것은 아직 감독</text>
+  <text x="540" y="924" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">운행이 많다는 뜻입니다. 다음 확인할 것은 댈러스 출범 일정입니다. 하루 최고와 인가 대수를 한 표로 더하지 않습니다.</text>
+  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">2026.10.06</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
