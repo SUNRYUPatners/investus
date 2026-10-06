@@ -17,7 +17,7 @@ import { useLocale } from "@/contexts/LocaleContext";
 import { useMarket } from "@/contexts/MarketContext";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION } from "@/lib/subscription";
-import { SubscribeBlurOverlay } from "@/components/SubscribeGate";
+import { ExampleSubscribeBar } from "@/components/SubscribeGate";
 import { getMarketConfig } from "@/lib/markets/config";
 import { formatMarketPrice } from "@/lib/markets/formatPrice";
 import type { MarketId } from "@/lib/markets/types";
@@ -462,11 +462,6 @@ export default function SearchPage() {
                     <span className="ml-auto text-[10px]" style={{ color: "var(--muted)" }}>{t.search.cioPicks}</span>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <SubscribeBlurOverlay
-                      locked={picksLocked}
-                      title="Investus 추천주식"
-                      description={`CIO 선정 종목은 Pro 구독 후 열람할 수 있습니다. 월 ${SUBSCRIPTION.priceKrw.toLocaleString("ko-KR")}원`}
-                    >
                     {recommendedStocks.map(({ stock, hasLivePrice }) => (
                       <StockRow
                         key={stock.symbol}
@@ -477,7 +472,9 @@ export default function SearchPage() {
                         market={market}
                       />
                     ))}
-                    </SubscribeBlurOverlay>
+                    {picksLocked && (
+                      <ExampleSubscribeBar text="이 목록이 구독하면 매일 보는 추천 주식입니다. 보유 종목 등락도 같은 형식으로 열립니다." />
+                    )}
                   </div>
                 </div>
                 )}

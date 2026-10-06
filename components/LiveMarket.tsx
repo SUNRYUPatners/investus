@@ -13,8 +13,8 @@ import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { SectionInfo } from "./SectionInfo";
 import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
 import { useAuth } from "@/hooks/useAuth";
-import { SUBSCRIPTION, proPriceSummaryKo } from "@/lib/subscription";
-import { SubscribeBlurOverlay } from "@/components/SubscribeGate";
+import { SUBSCRIPTION } from "@/lib/subscription";
+import { ExampleSubscribeBar } from "@/components/SubscribeGate";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[]; liveAt?: number };
 
@@ -323,15 +323,11 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.cioPicks}</span>
         </div>
         <p className="text-[11px] mb-3 leading-relaxed" style={{ color: "var(--muted)" }}>
-          <span className="font-semibold" style={{ color: "var(--text)" }}>유료 구독 상품</span>
-          {" — "}CIO 선정 추천주식 열람 · {proPriceSummaryKo()}
+          {picksLocked
+            ? "CIO가 고른 종목입니다. 아래는 구독 화면에 뜨는 예시입니다."
+            : "CIO가 고른 종목입니다."}
         </p>
         <div className="relative">
-          <SubscribeBlurOverlay
-            locked={picksLocked}
-            title="Investus 추천주식"
-            description={`유료 구독 상품입니다. CIO 추천주식 열람 · ${proPriceSummaryKo()}`}
-          >
           {recScroll.canLeft && (
             <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
               style={{ background: "linear-gradient(to right, var(--bg) 40%, transparent)" }}>
@@ -349,8 +345,10 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
               <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />
             </div>
           )}
-          </SubscribeBlurOverlay>
         </div>
+        {picksLocked && (
+          <ExampleSubscribeBar text="이 카드가 구독하면 매일 보는 추천 주식입니다. 보유 종목 등락 분석도 같은 자리에서 열립니다." />
+        )}
       </section>
 
       {/* S&P 500 섹터 히트맵 */}

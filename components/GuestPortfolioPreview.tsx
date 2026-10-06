@@ -1,32 +1,24 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Wallet } from "lucide-react";
 import { openGuestLogin } from "@/lib/guestLogin";
 import { useLocaleCode } from "@/contexts/LocaleContext";
+import type { Quote } from "@/lib/api";
 import type { MarketId } from "@/lib/markets/types";
+import { EXAMPLE_MARKET_ROWS, EXAMPLE_US_HOLDINGS } from "@/lib/samplePortfolio";
 
-const SAMPLES: Record<MarketId, { symbol: string; name: string; change: number; value: string }[]> = {
-  us: [
-    { symbol: "NVDA", name: "NVIDIA", change: 1.82, value: "$12,480" },
-    { symbol: "AAPL", name: "Apple", change: -0.41, value: "$8,210" },
-    { symbol: "MSFT", name: "Microsoft", change: 0.63, value: "$6,940" },
-  ],
-  kr: [
-    { symbol: "005930", name: "삼성전자", change: 0.94, value: "1,240만원" },
-    { symbol: "000660", name: "SK하이닉스", change: 1.21, value: "860만원" },
-    { symbol: "005380", name: "현대차", change: -0.32, value: "410만원" },
-  ],
-  safe: [
-    { symbol: "BTC", name: "비트코인", change: 2.14, value: "$8,420" },
-    { symbol: "ETH", name: "이더리움", change: 1.05, value: "$2,180" },
-    { symbol: "GLD", name: "금", change: 0.28, value: "$3,050" },
-  ],
-  "kr-re": [
-    { symbol: "APT", name: "수도권 아파트", change: 0.12, value: "9.4억" },
-    { symbol: "JEONSE", name: "전세 지수", change: -0.08, value: "4.1억" },
-    { symbol: "REIT", name: "리츠 예시", change: 0.41, value: "1,280만원" },
-  ],
-};
+type Row = { symbol: string; name: string; shares?: number };
+
+function rowsFor(market: MarketId): Row[] {
+  if (market === "us") return EXAMPLE_US_HOLDINGS;
+  return EXAMPLE_MARKET_ROWS[market] ?? [];
+}
+
+function fmtUsd(n: number) {
+  return "$" + n.toLocaleString("en-US", { maximumFractionDigits: 0 });
+}
 
 export function GuestPortfolioPreview({
   market,
@@ -37,7 +29,25 @@ export function GuestPortfolioPreview({
 }) {
   const locale = useLocaleCode();
   const isKo = locale === "ko";
-  const rows = SAMPLES[market] ?? SAMPLES.us;
+  const rows = rowsFor(market);
+  const [live, setLive] = useState<Record<string, { price: number; changePercent: number }>>({});
+
+  useEffect(() => {
+    const url = market === "us" ? "/api/market-data" : `/api/market-data?market=${market}`;
+    let cancelled = false;
+    fetch(url)
+      .then((r) => r.json())
+      .then((d: { quotes?: Quote[] }) => {
+        if (cancelled) return;
+        const map: Record<string, { price: number; changePercent: number }> = {};
+        for (const q of d.quotes ?? []) {
+          if (q.price > 0) map[q.symbol] = { price: q.price, changePercent: q.changePercent };
+        }
+        setLive(map);
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [market]);
 
   const connect = () => {
     openGuestLogin();
@@ -69,37 +79,53 @@ export function GuestPortfolioPreview({
       </div>
       <p className="px-4 text-[11px] leading-relaxed mb-2" style={{ color: "var(--muted)" }}>
         {isKo
-          ? "내 종목을 넣으면 매일 아침 AI가 이렇게 흐름을 정리합니다."
-          : "Add your holdings and AI will summarize the flow like this every morning."}
+          ? "등록된 계좌를 예시로 열었습니다. 구독하고 내 종목을 넣으면 이 칸이 내 계좌로 바뀝니다."
+          : "This is a registered account, shown as an example. Subscribe and add your holdings to replace it."}
       </p>
-      <div className="px-4 pb-2 space-y-2 opacity-80">
-        {rows.map((r) => (
-          <div key={r.symbol} className="flex items-center justify-between gap-2">
-            <div>
-              <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{r.name}</p>
-              <p className="text-[10px] font-mono" style={{ color: "var(--muted)" }}>{r.symbol}</p>
+      <div className="px-4 pb-2 space-y-2">
+        {rows.map((r) => {
+          const q = live[r.symbol];
+          const change = q?.changePercent;
+          const value = q && r.shares
+            ? fmtUsd(r.shares * q.price)
+            : q
+              ? fmtUsd(q.price)
+              : "—";
+          return (
+            <div key={r.symbol} className="flex items-center justify-between gap-2">
+              <div>
+                <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{r.name}</p>
+                <p className="text-[10px] font-mono" style={{ color: "var(--muted)" }}>{r.symbol}</p>
+              </div>
+              <div className="text-right">
+                <p className="text-sm font-mono font-semibold" style={{ color: "var(--text)" }}>{value}</p>
+                <p
+                  className="text-[11px] font-mono font-semibold"
+                  style={{ color: change == null ? "var(--muted)" : change >= 0 ? "var(--up)" : "var(--down)" }}
+                >
+                  {change == null ? "—" : `${change >= 0 ? "+" : ""}${change.toFixed(2)}%`}
+                </p>
+              </div>
             </div>
-            <div className="text-right">
-              <p className="text-sm font-mono font-semibold" style={{ color: "var(--text)" }}>{r.value}</p>
-              <p
-                className="text-[11px] font-mono font-semibold"
-                style={{ color: r.change >= 0 ? "var(--up)" : "var(--down)" }}
-              >
-                {r.change >= 0 ? "+" : ""}{r.change.toFixed(2)}%
-              </p>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       {variant === "card" && (
       <div className="px-4 pb-3.5 pt-1">
+        <Link
+          href="/subscribe"
+          className="block w-full py-2.5 rounded-xl text-center text-[12px] font-bold"
+          style={{ background: "var(--mint)", color: "var(--on-accent)" }}
+        >
+          {isKo ? "구독하고 내 종목으로 보기" : "Subscribe and use my holdings"}
+        </Link>
         <button
           type="button"
           onClick={connect}
-          className="w-full py-2.5 rounded-xl text-[12px] font-bold"
-          style={{ background: "var(--mint)", color: "var(--on-accent)" }}
+          className="w-full mt-2 py-2 text-[11px] font-semibold"
+          style={{ color: "var(--muted)" }}
         >
-          {isKo ? "내 자산 연동하기" : "Link my assets"}
+          {isKo ? "먼저 계정 연동하기" : "Link an account first"}
         </button>
       </div>
       )}

@@ -7,8 +7,8 @@ import { NYSE_HOLIDAYS, isMarketOpen } from "@/lib/marketHours";
 import { isMarketSessionOpen } from "@/lib/markets/hours";
 import { getMarketConfig } from "@/lib/markets/config";
 import type { MarketId } from "@/lib/markets/types";
-import { marketHref } from "@/lib/markets/marketPath";
 import { useRouter } from "next/navigation";
+import { ExampleAnalysisCard } from "@/components/ExampleAnalysisCard";
 
 type LiveQ = { symbol: string; price: number; change: number; changePercent: number };
 type MacroIndex = { symbol: string; value: number; changePercent?: number };
@@ -255,29 +255,7 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
   if (!loaded) return null;
 
   if (holdings.length === 0) {
-    return (
-      <div className="px-4 lg:px-0 mt-3">
-        <button
-          type="button"
-          onClick={() => router.push(marketHref(market, "portfolio"))}
-          className="w-full rounded-2xl border p-4 text-left transition-opacity active:opacity-80"
-          style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.2)" }}
-        >
-          <div className="flex items-center gap-2 mb-1.5">
-            <Sparkles className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
-            <span className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
-              {cfg.labelKo} 포트폴리오 분석
-            </span>
-          </div>
-          <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
-            보유 종목을 등록하면 이 시장 기준으로 AI 등락 분석을 받을 수 있습니다. 미국 시장 데이터와는 분리됩니다.
-          </p>
-          <p className="text-[11px] font-semibold mt-2" style={{ color: "var(--mint)" }}>
-            포트폴리오 등록하기 →
-          </p>
-        </button>
-      </div>
-    );
+    return <ExampleAnalysisCard market={market} />;
   }
 
   const remaining = INTRADAY_LIMIT - intradayUsed;

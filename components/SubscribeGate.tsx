@@ -46,6 +46,37 @@ export function SubscribeGate({ title, description, className = "", compact }: P
   );
 }
 
+/** 잠그지 않고, 방금 본 화면이 구독 예시라는 줄과 구독 버튼 */
+export function ExampleSubscribeBar({
+  text = "위에서 본 화면이 구독하면 매일 열리는 자리입니다. 추천 주식과 내 보유 종목 등락을 이 형식으로 받습니다.",
+}: {
+  text?: string;
+}) {
+  return (
+    <div
+      className="mt-3 rounded-2xl border px-4 py-3 flex items-center gap-3"
+      style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.28)" }}
+    >
+      <span
+        className="text-[9px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0"
+        style={{ background: "rgba(var(--mint-rgb),0.14)", color: "var(--mint)" }}
+      >
+        예시
+      </span>
+      <p className="flex-1 min-w-0 text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
+        {text}
+      </p>
+      <Link
+        href="/subscribe"
+        className="flex-shrink-0 px-3 py-2 rounded-xl text-[11px] font-bold"
+        style={{ background: "var(--mint)", color: "var(--on-accent)" }}
+      >
+        구독
+      </Link>
+    </div>
+  );
+}
+
 /** 블러 오버레이 + 구독 CTA */
 export function SubscribeBlurOverlay({
   children,
