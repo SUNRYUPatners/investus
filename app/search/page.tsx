@@ -17,6 +17,7 @@ import { useLocale } from "@/contexts/LocaleContext";
 import { useMarket } from "@/contexts/MarketContext";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION } from "@/lib/subscription";
+import { PreviewFade } from "@/components/SubscribeGate";
 import { getMarketConfig } from "@/lib/markets/config";
 import { formatMarketPrice } from "@/lib/markets/formatPrice";
 import type { MarketId } from "@/lib/markets/types";
@@ -459,13 +460,37 @@ export default function SearchPage() {
                       {t.search.picks}
                     </h2>
                     {picksLocked ? (
-                      <Link href="/subscribe" className="ml-auto text-[11px] font-bold" style={{ color: "var(--mint)" }}>
-                        구독하기
-                      </Link>
+                      <span
+                        className="ml-auto text-[9px] font-bold px-1.5 py-0.5 rounded-full"
+                        style={{ background: "rgba(var(--mint-rgb),0.14)", color: "var(--mint)" }}
+                      >
+                        예시
+                      </span>
                     ) : (
                       <span className="ml-auto text-[10px]" style={{ color: "var(--muted)" }}>{t.search.cioPicks}</span>
                     )}
                   </div>
+                  {picksLocked ? (
+                    <div
+                      className="rounded-2xl border overflow-hidden"
+                      style={{ background: "var(--card)", borderColor: "var(--border)" }}
+                    >
+                      <PreviewFade label="구독하고 이어서 보기" maxHeight={132}>
+                        <div className="flex flex-col gap-2 px-3 pt-3">
+                          {recommendedStocks.map(({ stock, hasLivePrice }) => (
+                            <StockRow
+                              key={stock.symbol}
+                              stock={stock}
+                              hasLivePrice={hasLivePrice}
+                              inWatchlist={list.includes(stock.symbol)}
+                              onToggle={() => toggle(stock.symbol)}
+                              market={market}
+                            />
+                          ))}
+                        </div>
+                      </PreviewFade>
+                    </div>
+                  ) : (
                   <div className="flex flex-col gap-2">
                     {recommendedStocks.map(({ stock, hasLivePrice }) => (
                       <StockRow
@@ -478,6 +503,7 @@ export default function SearchPage() {
                       />
                     ))}
                   </div>
+                  )}
                 </div>
                 )}
 

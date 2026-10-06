@@ -14,7 +14,7 @@ import { SectionInfo } from "./SectionInfo";
 import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION } from "@/lib/subscription";
-import Link from "next/link";
+import { PreviewFade } from "@/components/SubscribeGate";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[]; liveAt?: number };
 
@@ -321,13 +321,30 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
             </h2>
           </div>
           {picksLocked ? (
-            <Link href="/subscribe" className="text-[11px] font-bold" style={{ color: "var(--mint)" }}>
-              구독하기
-            </Link>
+            <span
+              className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
+              style={{ background: "rgba(var(--mint-rgb),0.14)", color: "var(--mint)" }}
+            >
+              예시
+            </span>
           ) : (
             <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.cioPicks}</span>
           )}
         </div>
+        {picksLocked ? (
+          <div
+            className="rounded-2xl border overflow-hidden"
+            style={{ background: "var(--card)", borderColor: "var(--border)" }}
+          >
+            <PreviewFade label="구독하고 이어서 보기" maxHeight={112}>
+              <div className="flex gap-3 px-3 pt-3">
+                {loading
+                  ? Array.from({ length: 3 }).map((_, i) => <CardSkeleton key={i} />)
+                  : recommended.map((s) => <StockCard key={s.symbol} stock={s} />)}
+              </div>
+            </PreviewFade>
+          </div>
+        ) : (
         <div className="relative">
           {recScroll.canLeft && (
             <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
@@ -347,6 +364,7 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
             </div>
           )}
         </div>
+        )}
       </section>
 
       {/* S&P 500 섹터 히트맵 */}
