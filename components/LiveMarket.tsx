@@ -14,7 +14,7 @@ import { SectionInfo } from "./SectionInfo";
 import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION } from "@/lib/subscription";
-import { ExampleSubscribeBar } from "@/components/SubscribeGate";
+import Link from "next/link";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[]; liveAt?: number };
 
@@ -313,20 +313,21 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
 
       {/* 추천주식 — Pro 유료 상품 (지수·인기종목 아래) */}
       <section className="px-4 lg:px-0 pt-6" aria-label="Investus 추천주식 유료 상품">
-        <div className="flex items-center justify-between mb-1.5">
+        <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-1.5">
             <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
             <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
               {t.market.picks}
             </h2>
           </div>
-          <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.cioPicks}</span>
+          {picksLocked ? (
+            <Link href="/subscribe" className="text-[11px] font-bold" style={{ color: "var(--mint)" }}>
+              구독하기
+            </Link>
+          ) : (
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.cioPicks}</span>
+          )}
         </div>
-        <p className="text-[11px] mb-3 leading-relaxed" style={{ color: "var(--muted)" }}>
-          {picksLocked
-            ? "CIO가 고른 종목입니다. 아래는 구독 화면에 뜨는 예시입니다."
-            : "CIO가 고른 종목입니다."}
-        </p>
         <div className="relative">
           {recScroll.canLeft && (
             <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
@@ -346,9 +347,6 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
             </div>
           )}
         </div>
-        {picksLocked && (
-          <ExampleSubscribeBar text="이 카드가 구독하면 매일 보는 추천 주식입니다. 보유 종목 등락 분석도 같은 자리에서 열립니다." />
-        )}
       </section>
 
       {/* S&P 500 섹터 히트맵 */}

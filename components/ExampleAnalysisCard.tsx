@@ -1,17 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { Sparkles } from "lucide-react";
 import type { Quote } from "@/lib/api";
 import { getMarketConfig } from "@/lib/markets/config";
 import type { MarketId } from "@/lib/markets/types";
 import { EXAMPLE_MARKET_ROWS, EXAMPLE_US_HOLDINGS } from "@/lib/samplePortfolio";
+import { PreviewFade } from "@/components/SubscribeGate";
 
 function topic(name: string) {
   const c = name.charCodeAt(name.length - 1);
   if (c < 0xac00 || c > 0xd7a3) return /[lmnrLMNR]$/.test(name) ? "은" : "는";
   return (c - 0xac00) % 28 === 0 ? "는" : "은";
+}
+
+function fmtPct(n: number) {
+  return `${n > 0 ? "+" : ""}${n.toFixed(2)}%`;
 }
 
 export function ExampleAnalysisCard({ market }: { market: MarketId }) {
@@ -38,12 +42,17 @@ export function ExampleAnalysisCard({ market }: { market: MarketId }) {
     return () => { cancelled = true; };
   }, [market]);
 
-  const lines = rows.map((r) => {
-    const pct = quotes[r.symbol];
-    if (typeof pct !== "number") return `${r.name} 시세를 불러오는 중입니다.`;
-    const sign = pct > 0 ? "+" : "";
-    return `${r.name}${topic(r.name)} 오늘 ${sign}${pct.toFixed(2)}%입니다.`;
-  });
+  const ready = rows.every((r) => typeof quotes[r.symbol] === "number");
+  const lead = ready
+    ? rows.map((r) => `${r.name}${topic(r.name)} 오늘 ${fmtPct(quotes[r.symbol])}입니다.`).join(" ")
+    : "오늘 등락을 불러오는 중입니다.";
+  const ranked = ready
+    ? [...rows].sort((a, b) => Math.abs(quotes[b.symbol]) - Math.abs(quotes[a.symbol]))
+    : rows;
+  const mover = ranked[0];
+  const follow = ready && mover
+    ? `하루 움직임이 가장 큰 종목은 ${mover.name}(${fmtPct(quotes[mover.symbol])})입니다. 구독 화면에서는 이 다음에, 그 등락이 오늘 뉴스와 어떻게 이어지는지 문단이 붙습니다.`
+    : "구독 화면에서는 이 다음에 오늘 뉴스와 연결한 문단이 붙습니다.";
 
   return (
     <div className="px-4 lg:px-0 mt-3">
@@ -63,25 +72,16 @@ export function ExampleAnalysisCard({ market }: { market: MarketId }) {
             예시
           </span>
         </div>
-        <div className="px-4 pt-3 pb-2">
-          {rows.map((r, i) => (
-            <p key={r.symbol} className="text-[12px] leading-relaxed mb-1" style={{ color: "var(--text)" }}>
-              {lines[i]}
+        <PreviewFade label="구독하고 이어서 보기" maxHeight={132}>
+          <div className="px-4 pt-3 pb-10">
+            <p className="text-[12px] leading-relaxed" style={{ color: "var(--text)" }}>
+              {lead}
             </p>
-          ))}
-          <p className="text-[12px] leading-relaxed mt-2" style={{ color: "var(--muted)" }}>
-            구독하고 내 종목을 넣으면, 왜 움직였는지까지 이 칸에 이어집니다.
-          </p>
-        </div>
-        <div className="px-4 pb-4">
-          <Link
-            href="/subscribe"
-            className="block w-full py-2.5 rounded-xl text-center text-[12px] font-bold"
-            style={{ background: "var(--mint)", color: "var(--on-accent)" }}
-          >
-            구독하고 내 종목으로 보기
-          </Link>
-        </div>
+            <p className="text-[12px] leading-relaxed mt-2" style={{ color: "var(--muted)" }}>
+              {follow}
+            </p>
+          </div>
+        </PreviewFade>
       </div>
     </div>
   );

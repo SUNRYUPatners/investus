@@ -17,7 +17,6 @@ import { useLocale } from "@/contexts/LocaleContext";
 import { useMarket } from "@/contexts/MarketContext";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION } from "@/lib/subscription";
-import { ExampleSubscribeBar } from "@/components/SubscribeGate";
 import { getMarketConfig } from "@/lib/markets/config";
 import { formatMarketPrice } from "@/lib/markets/formatPrice";
 import type { MarketId } from "@/lib/markets/types";
@@ -459,7 +458,13 @@ export default function SearchPage() {
                     >
                       {t.search.picks}
                     </h2>
-                    <span className="ml-auto text-[10px]" style={{ color: "var(--muted)" }}>{t.search.cioPicks}</span>
+                    {picksLocked ? (
+                      <Link href="/subscribe" className="ml-auto text-[11px] font-bold" style={{ color: "var(--mint)" }}>
+                        구독하기
+                      </Link>
+                    ) : (
+                      <span className="ml-auto text-[10px]" style={{ color: "var(--muted)" }}>{t.search.cioPicks}</span>
+                    )}
                   </div>
                   <div className="flex flex-col gap-2">
                     {recommendedStocks.map(({ stock, hasLivePrice }) => (
@@ -472,9 +477,6 @@ export default function SearchPage() {
                         market={market}
                       />
                     ))}
-                    {picksLocked && (
-                      <ExampleSubscribeBar text="이 목록이 구독하면 매일 보는 추천 주식입니다. 보유 종목 등락도 같은 형식으로 열립니다." />
-                    )}
                   </div>
                 </div>
                 )}

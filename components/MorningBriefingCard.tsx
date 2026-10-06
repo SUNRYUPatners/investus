@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Bell, ChevronDown, Lock, Moon, Sun, Wallet } from "lucide-react";
+import { Bell, ChevronDown, Moon, Sun, Wallet } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { PreviewFade } from "@/components/SubscribeGate";
 import { openGuestLogin } from "@/lib/guestLogin";
 import type { SessionBriefing } from "@/lib/morningBriefing";
 
@@ -191,40 +192,55 @@ export function MorningBriefingCard({
 
   if (!isPro) {
     return (
-      <div
-        className="rounded-2xl border p-4"
+      <section
+        className="rounded-2xl border overflow-hidden p-4"
         style={{
-          background: `linear-gradient(135deg, ${accent}14 0%, var(--card) 55%)`,
-          borderColor: `${accent}40`,
+          background: `linear-gradient(135deg, ${accent}1a 0%, var(--card) 50%)`,
+          borderColor: `${accent}4d`,
         }}
+        aria-label={label}
       >
         <div className="flex items-center justify-between gap-2 mb-2">
-          <div className="flex items-center gap-2">
-            <Icon className="w-4 h-4" style={{ color: accent }} />
+          <div className="flex items-center gap-2 min-w-0">
+            <Icon className="w-4 h-4 flex-shrink-0" style={{ color: accent }} />
             <span
               className="text-[9px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: `${accent}26`, color: accent }}
+              style={{ background: `${accent}2e`, color: accent }}
             >
-              {label} · Pro
+              {label}
+            </span>
+            <span
+              className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
+              style={{ background: "rgba(var(--mint-rgb),0.14)", color: "var(--mint)" }}
+            >
+              {isKo ? "예시" : "Sample"}
             </span>
           </div>
           <LangToggle value={viewLang} onChange={setViewLang} />
         </div>
-        <p className="text-sm font-bold mb-1 leading-snug" style={{ color: "var(--text)" }}>
-          {teaserTitle}
-        </p>
-        <p className="text-[12px] leading-relaxed mb-3 line-clamp-2" style={{ color: "var(--muted)" }}>
-          {headline}
-        </p>
-        <Link
-          href="/subscribe"
-          className="inline-flex items-center gap-1.5 text-[12px] font-bold px-3 py-2 rounded-xl"
-          style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}
-        >
-          <Lock className="w-3.5 h-3.5" />
-          {isKo ? `Pro로 ${briefing.labelKo} 열기` : "Unlock with Pro"}
-        </Link>
-      </div>
+        <PreviewFade label={isKo ? "구독하고 이어서 보기" : "Subscribe to continue"} maxHeight={156}>
+          <p className="text-sm font-bold leading-snug mb-2" style={{ color: "var(--text)" }}>
+            {headline || teaserTitle}
+          </p>
+          {bullets.length > 0 && (
+            <ul className="flex flex-col gap-1.5 mb-2">
+              {bullets.map((b, i) => (
+                <li key={i} className="flex gap-2 text-[12px] leading-snug" style={{ color: "var(--muted)" }}>
+                  <span className="font-bold flex-shrink-0" style={{ color: accent }}>{i + 1}.</span>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          <div className="flex flex-col gap-1.5">
+            {briefing.reports.slice(0, 3).map((r) => (
+              <p key={r.id} className="text-[11px] font-semibold leading-snug" style={{ color: "var(--text)" }}>
+                {pickText(viewEn, r.title, r.titleEn)}
+              </p>
+            ))}
+          </div>
+        </PreviewFade>
+      </section>
     );
   }
 

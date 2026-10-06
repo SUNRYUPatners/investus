@@ -46,33 +46,34 @@ export function SubscribeGate({ title, description, className = "", compact }: P
   );
 }
 
-/** 잠그지 않고, 방금 본 화면이 구독 예시라는 줄과 구독 버튼 */
-export function ExampleSubscribeBar({
-  text = "위에서 본 화면이 구독하면 매일 열리는 자리입니다. 추천 주식과 내 보유 종목 등락을 이 형식으로 받습니다.",
+/** 구독 화면을 위에서 읽히게 두고, 아래만 흐리며 구독 버튼을 올린다. */
+export function PreviewFade({
+  children,
+  label = "구독하고 이어서 보기",
+  maxHeight = 168,
 }: {
-  text?: string;
+  children: React.ReactNode;
+  label?: string;
+  maxHeight?: number;
 }) {
   return (
-    <div
-      className="mt-3 rounded-2xl border px-4 py-3 flex items-center gap-3"
-      style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.28)" }}
-    >
-      <span
-        className="text-[9px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0"
-        style={{ background: "rgba(var(--mint-rgb),0.14)", color: "var(--mint)" }}
-      >
-        예시
-      </span>
-      <p className="flex-1 min-w-0 text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
-        {text}
-      </p>
-      <Link
-        href="/subscribe"
-        className="flex-shrink-0 px-3 py-2 rounded-xl text-[11px] font-bold"
-        style={{ background: "var(--mint)", color: "var(--on-accent)" }}
-      >
-        구독
-      </Link>
+    <div>
+      <div className="relative overflow-hidden pointer-events-none select-none" style={{ maxHeight }} aria-hidden>
+        {children}
+        <div
+          className="absolute inset-x-0 bottom-0 h-14"
+          style={{ background: "linear-gradient(to bottom, transparent, var(--card))" }}
+        />
+      </div>
+      <div className="flex justify-center px-4 pb-3 -mt-1">
+        <Link
+          href="/subscribe"
+          className="px-4 py-2 rounded-xl text-[12px] font-bold"
+          style={{ background: "var(--mint)", color: "var(--on-accent)" }}
+        >
+          {label}
+        </Link>
+      </div>
     </div>
   );
 }

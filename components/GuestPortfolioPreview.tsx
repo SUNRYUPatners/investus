@@ -77,11 +77,6 @@ export function GuestPortfolioPreview({
           </span>
         </div>
       </div>
-      <p className="px-4 text-[11px] leading-relaxed mb-2" style={{ color: "var(--muted)" }}>
-        {isKo
-          ? "등록된 계좌를 예시로 열었습니다. 구독하고 내 종목을 넣으면 이 칸이 내 계좌로 바뀝니다."
-          : "This is a registered account, shown as an example. Subscribe and add your holdings to replace it."}
-      </p>
       <div className="px-4 pb-2 space-y-2">
         {rows.map((r) => {
           const q = live[r.symbol];
@@ -117,7 +112,7 @@ export function GuestPortfolioPreview({
           className="block w-full py-2.5 rounded-xl text-center text-[12px] font-bold"
           style={{ background: "var(--mint)", color: "var(--on-accent)" }}
         >
-          {isKo ? "구독하고 내 종목으로 보기" : "Subscribe and use my holdings"}
+          {isKo ? "구독하고 내 계좌로 바꾸기" : "Subscribe and use my account"}
         </Link>
         <button
           type="button"
