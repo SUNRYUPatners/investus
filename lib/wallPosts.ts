@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T07OCT = 1791327600000; // 2026.10.07 08:00 KST
 const T06OCT = 1791241200000; // 2026.10.06 08:00 KST
 const T02OCT = 1790895600000; // 2026.10.02 08:00 KST
 const T01OCT = 1790809200000; // 2026.10.01 08:00 KST
@@ -136,7 +137,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T06OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T07OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -155,6 +156,82 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-07 신규 ────────────────
+  { id: 122172, symbol: "SPCX", nickname: "일주일이칠이", holdingLabel: "관심종목",
+    content: "SPCX 172.38 주간+25.70 +17.52%. 10/6 종가 171.92 +0.49% 고가 176.42. 시총 약 2.27조$",
+    createdAt: T07OCT + 8*60_000, likes: 24, comments: 2 },
+  { id: 122173, symbol: "TSLA", nickname: "일본와이유일위", holdingLabel: "관심종목",
+    content: "일본 상반기 외국차 차종 모델Y 1위. JATO 1~6월. 외산EV 6개월 연속1위 점유48%. 19광역 1위 38곳 5위안",
+    createdAt: T07OCT + 16*60_000, likes: 23, comments: 2 },
+  { id: 122174, symbol: "TSLA", nickname: "삼분기사십팔만", holdingLabel: "관심종목",
+    content: "TSLA Q3 생산 464391 인도 486532. 3/Y 478237. 기타 8295. 저장 13.7GWh. 컨센 461974 상회. 실적 10/21",
+    createdAt: T07OCT + 24*60_000, likes: 22, comments: 2 },
+  { id: 122175, symbol: "XLK", nickname: "기술격차사상", holdingLabel: "관심종목",
+    content: "XLK가 나머지 S&P를 사상 최대 격차. Mag7 시총 34%+. S&P 7818.93 +0.58% 장중 7844.52. 올해 28번째 최고종가",
+    createdAt: T07OCT + 32*60_000, likes: 21, comments: 2 },
+  { id: 122176, symbol: "META", nickname: "메타천달러", holdingLabel: "관심종목",
+    content: "WF 메타 PT 1000 ←796 +204 OW. 뮤즈 기대 타당. 2027 EPS 저점. 9/8 공개 후 주가 약+20%. 거리평균 약797",
+    createdAt: T07OCT + 40*60_000, likes: 20, comments: 2 },
+  { id: 122177, symbol: "SPCX", nickname: "두산삼백팔십", holdingLabel: "관심종목",
+    content: "두산 380MW DGT6-300H S2 창원 출하. SpaceXSI 첫 대미 가스터빈. 미국계약 12대 중 5대 향으로 거론",
+    createdAt: T07OCT + 48*60_000, likes: 19, comments: 2 },
+  { id: 122178, symbol: "NVDA", nickname: "환매이십퍼", holdingLabel: "관심종목",
+    content: "NVDA 캔터 2030까지 환매 15~20%. 누적 1.116조$ = 시총 20%. 직전분기 capex <FCF 4%. 한도 1500억$. 종가 238.90",
+    createdAt: T07OCT + 56*60_000, likes: 18, comments: 2 },
+  { id: 122179, symbol: "SPCX", nickname: "루이지애나허브", holdingLabel: "관심종목",
+    content: "SPCX 버밀리언 화물허브 신청. 15.75마일 중량도로+걸프부두. 민간. 공사 2027.3~2032.9. 허가 P202608331 9/29접수",
+    createdAt: T07OCT + 64*60_000, likes: 17, comments: 2 },
+  { id: 122180, symbol: "MU", nickname: "마이크론삼백칠십", holdingLabel: "관심종목",
+    content: "MU FQ4 NI 377억$ vs AAPL 297.9억$. 2년 42배. 매출 542.3억. FCF 332억. 가이던스 615억±. 캔터 PT 2000",
+    createdAt: T07OCT + 72*60_000, likes: 16, comments: 2 },
+  { id: 122181, symbol: "MACRO", nickname: "칠십팔개월확장", holdingLabel: "관심종목",
+    content: "미국 확장 78개월 연속. 1854후 6번째. 평균49 중앙38. 기록 128개월(09~20). 넘기면 2031초. 9월 고용 2.9만",
+    createdAt: T07OCT + 80*60_000, likes: 15, comments: 2 },
+  { id: 122182, symbol: "SPX", nickname: "칠천팔백십팔", holdingLabel: "관심종목",
+    content: "S&P 7818.93 +0.58% +44.98 사상최고종가. 장중 7844.52. 시총 첫 71조$. 나스닥100도 ATH. 올해 28번째",
+    createdAt: T07OCT + 88*60_000, likes: 24, comments: 2 },
+  { id: 122183, symbol: "TSLA", nickname: "십오일합병루머", holdingLabel: "관심종목",
+    content: "TSLA+SPCX 합병 루머 10/15 로드스터. 캘시 올해 20%. 전날 2028전 70%는 다른 만기. 공시 아님",
+    createdAt: T07OCT + 96*60_000, likes: 23, comments: 2 },
+  { id: 122184, symbol: "SPCX", nickname: "브이삼이십육기", holdingLabel: "관심종목",
+    content: "스타십14 V3 26기 전개. 기당 1Tbps V2미니 10배. 26기 연락전부. 다음 60기면 팰컨9 대비 약20배",
+    createdAt: T07OCT + 104*60_000, likes: 22, comments: 2 },
+  { id: 122185, symbol: "TLT", nickname: "십년오점삼사", holdingLabel: "관심종목",
+    content: "10년 고점 5.34% 30년 5.70% 2002후 최고. 회사채 매도 번짐. 10/6 10년 5.270% -4bp. ISM물가 74.0",
+    createdAt: T07OCT + 112*60_000, likes: 21, comments: 2 },
+  { id: 122186, symbol: "AMD", nickname: "리사수요급", holdingLabel: "관심종목",
+    content: "AMD 리사수 수요>공급 수년. 2027 공급 크게 확대. 메모리 부족. 종가 649.42 +2.80%. 씨티 PT 800 미즈호 705",
+    createdAt: T07OCT + 120*60_000, likes: 20, comments: 2 },
+  { id: 122187, symbol: "GOOGL", nickname: "구글십억원전", holdingLabel: "관심종목",
+    content: "GOOGL 컨스텔레이션 원전전력 약 10억$ 임박. 데이터센터. 기존 NextEra·Southern. AMZN 690MW. WF PT 417",
+    createdAt: T07OCT + 128*60_000, likes: 19, comments: 2 },
+  { id: 122188, symbol: "TSLA", nickname: "에이아이오칠십이", holdingLabel: "관심종목",
+    content: "TSLA AI5 72GB(절반) AI6 144GB(약1/3). 머스크 확인. 옵티머스는 최대스펙보다 물량. 대역폭 유지",
+    createdAt: T07OCT + 136*60_000, likes: 18, comments: 2 },
+  { id: 122189, symbol: "TSLA", nickname: "텍사스십도시", holdingLabel: "관심종목",
+    content: "TSLA 로보택시 플릿지원 21명 채용. 텍사스 10도시 엘패소~오스틴. 야간 공고 복수. 인가 확대 옆 인력칸",
+    createdAt: T07OCT + 144*60_000, likes: 17, comments: 2 },
+  { id: 122190, symbol: "SPCX", nickname: "도킹칠시간", holdingLabel: "관심종목",
+    content: "SPCX ISS 최단도킹 5자리 전부. 크루13 10/1 7시간55분. CRS-31 11:23. 전부 드래곤. NASA 계약 +9.46억$ 총59.2억",
+    createdAt: T07OCT + 152*60_000, likes: 16, comments: 2 },
+  { id: 122191, symbol: "SPCX", nickname: "케이프삼십이마일", holdingLabel: "관심종목",
+    content: "SPCX 플로리다 32마일 천연가스관 제안. 케이프 스타십 연료. 제안 단계. 루이지애나 도로와 다른 주",
+    createdAt: T07OCT + 160*60_000, likes: 15, comments: 2 },
+  { id: 122192, symbol: "TSLA", nickname: "휴스턴백사십사", holdingLabel: "관심종목",
+    content: "휴스턴 주차장 사이버캡 144대. 10/24 부지. 시험 드나듦. 출고 임박 관측. 인가 169와 다른 칸",
+    createdAt: T07OCT + 168*60_000, likes: 24, comments: 2 },
+  { id: 122193, symbol: "ARKK", nickname: "캐시우드구십", holdingLabel: "관심종목",
+    content: "캐시우드 미국 AI 투자붐. 세계 DC금융 약90% 미국. 신규 제조·DC 첫해 100%상각. 실효세↓ 환급↑",
+    createdAt: T07OCT + 176*60_000, likes: 23, comments: 2 },
+  { id: 122194, symbol: "TSLA", nickname: "독일장관승인", holdingLabel: "관심종목",
+    content: "독일 교통장관 빌거 테슬라 운전자지원 EU 전역승인 추진. 필요시 독일 자체 경로. FSD 독일 진전 평가",
+    createdAt: T07OCT + 184*60_000, likes: 22, comments: 2 },
+  { id: 122195, symbol: "JPM", nickname: "다이먼부채", holdingLabel: "관심종목",
+    content: "다이먼 정부 끝없이 못 빌려. 미 정부부채 ATH. 같은주 10년 5.34%. 국채·회사채 매도 아침 발언",
+    createdAt: T07OCT + 192*60_000, likes: 21, comments: 2 },
+  { id: 122196, symbol: "SPCX", nickname: "스타마인드백만", holdingLabel: "관심종목",
+    content: "스타마인드 100만기 모습 공개. 점은 축척아님. 10기 안팎 군집 10Tbps. 결맞는 연산이 목표. S1 첫세대",
+    createdAt: T07OCT + 200*60_000, likes: 20, comments: 2 },
   // ── 2026-10-06 신규 ────────────────
   { id: 122148, symbol: "SPCX", nickname: "조너스삼백", holdingLabel: "관심종목",
     content: "MS 조너스 SPCX OW 300. 성장조정 40% 할인. 스타십15 앞. 주가 171.09 +7.63%. 캐치가 상장후 최대 촉매",
@@ -5490,6 +5567,106 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  122172: [
+    { id: 1221721, nickname: "일본와이유일위", holdingLabel: "관심종목", content: "172.38이랑 171.92는 시각이 달라", createdAt: T07OCT + 720000, likes: 5 },
+    { id: 1221722, nickname: "기술격차사상", holdingLabel: "관심종목", content: "17.52%는 일주일이야. 하루가 아니야", createdAt: T07OCT + 900000, likes: 4 },
+  ],
+  122173: [
+    { id: 1221731, nickname: "삼분기사십팔만", holdingLabel: "관심종목", content: "외국차 전체 표야. 전기차만의 표가 아니야", createdAt: T07OCT + 780000, likes: 5 },
+    { id: 1221732, nickname: "메타천달러", holdingLabel: "관심종목", content: "9400대는 닛케이 추정이야. 하반기 등록이 다음이야", createdAt: T07OCT + 960000, likes: 4 },
+  ],
+  122174: [
+    { id: 1221741, nickname: "기술격차사상", holdingLabel: "관심종목", content: "486532는 인도야. 생산은 464391", createdAt: T07OCT + 840000, likes: 5 },
+    { id: 1221742, nickname: "두산삼백팔십", holdingLabel: "관심종목", content: "13.7은 기가와시야. 대수가 아니야", createdAt: T07OCT + 1020000, likes: 4 },
+  ],
+  122175: [
+    { id: 1221751, nickname: "메타천달러", holdingLabel: "관심종목", content: "34%는 시총 비중이야. 하루 등락이 아니야", createdAt: T07OCT + 900000, likes: 5 },
+    { id: 1221752, nickname: "환매이십퍼", holdingLabel: "관심종목", content: "7818.93이 종가야. 7844는 장중", createdAt: T07OCT + 1080000, likes: 4 },
+  ],
+  122176: [
+    { id: 1221761, nickname: "두산삼백팔십", holdingLabel: "관심종목", content: "1000은 목표야. 종가가 아니야", createdAt: T07OCT + 960000, likes: 5 },
+    { id: 1221762, nickname: "루이지애나허브", holdingLabel: "관심종목", content: "2027은 저점 가정이야. 올해 실적이 아니야", createdAt: T07OCT + 1140000, likes: 4 },
+  ],
+  122177: [
+    { id: 1221771, nickname: "환매이십퍼", holdingLabel: "관심종목", content: "380은 메가와트야. 달러가 아니야", createdAt: T07OCT + 1020000, likes: 5 },
+    { id: 1221772, nickname: "마이크론삼백칠십", holdingLabel: "관심종목", content: "12대 계약이야. 오늘 출하는 1대", createdAt: T07OCT + 1200000, likes: 4 },
+  ],
+  122178: [
+    { id: 1221781, nickname: "루이지애나허브", holdingLabel: "관심종목", content: "1.116조는 2030 누적 모형이야", createdAt: T07OCT + 1080000, likes: 5 },
+    { id: 1221782, nickname: "칠십팔개월확장", holdingLabel: "관심종목", content: "1500억은 이사회가 열어 둔 한도야. 다음 실적 환매가 확인이야", createdAt: T07OCT + 1260000, likes: 4 },
+  ],
+  122179: [
+    { id: 1221791, nickname: "마이크론삼백칠십", holdingLabel: "관심종목", content: "신청서에 발사대는 없어. 화물 허브야", createdAt: T07OCT + 1140000, likes: 5 },
+    { id: 1221792, nickname: "칠천팔백십팔", holdingLabel: "관심종목", content: "15.75마일은 중량 도로야. 연안 허가 심사가 다음이야", createdAt: T07OCT + 1320000, likes: 4 },
+  ],
+  122180: [
+    { id: 1221801, nickname: "칠십팔개월확장", holdingLabel: "관심종목", content: "377억은 마이크론 순이익이야. 애플이 더 작은 칸", createdAt: T07OCT + 1200000, likes: 5 },
+    { id: 1221802, nickname: "십오일합병루머", holdingLabel: "관심종목", content: "2000은 목표가야. 종가가 아니야", createdAt: T07OCT + 1380000, likes: 4 },
+  ],
+  122181: [
+    { id: 1221811, nickname: "칠천팔백십팔", holdingLabel: "관심종목", content: "78은 개월이야. 금리 퍼센트가 아니야", createdAt: T07OCT + 1260000, likes: 5 },
+    { id: 1221812, nickname: "브이삼이십육기", holdingLabel: "관심종목", content: "128은 기록이야. 이번 사이클이 아직 아님", createdAt: T07OCT + 1440000, likes: 4 },
+  ],
+  122182: [
+    { id: 1221821, nickname: "십오일합병루머", holdingLabel: "관심종목", content: "7818.93이 종가야. 7835는 장중 통과", createdAt: T07OCT + 1320000, likes: 5 },
+    { id: 1221822, nickname: "십년오점삼사", holdingLabel: "관심종목", content: "71조는 시총이야. 지수 포인트가 아니야", createdAt: T07OCT + 1500000, likes: 4 },
+  ],
+  122183: [
+    { id: 1221831, nickname: "브이삼이십육기", holdingLabel: "관심종목", content: "20%는 올해 계약이야. 70%는 2028전", createdAt: T07OCT + 1380000, likes: 5 },
+    { id: 1221832, nickname: "리사수요급", holdingLabel: "관심종목", content: "루머야. 합병 공시가 아니야", createdAt: T07OCT + 1560000, likes: 4 },
+  ],
+  122184: [
+    { id: 1221841, nickname: "십년오점삼사", holdingLabel: "관심종목", content: "1Tbps는 설계 용량이야. 체감 속도가 다음", createdAt: T07OCT + 1440000, likes: 5 },
+    { id: 1221842, nickname: "구글십억원전", holdingLabel: "관심종목", content: "60기는 목표야. 이번은 26기", createdAt: T07OCT + 1620000, likes: 4 },
+  ],
+  122185: [
+    { id: 1221851, nickname: "리사수요급", holdingLabel: "관심종목", content: "5.34는 고점이야. 5.270은 다음날", createdAt: T07OCT + 1500000, likes: 5 },
+    { id: 1221852, nickname: "에이아이오칠십이", holdingLabel: "관심종목", content: "5.70은 30년이야. 10년이 아니야", createdAt: T07OCT + 1680000, likes: 4 },
+  ],
+  122186: [
+    { id: 1221861, nickname: "구글십억원전", holdingLabel: "관심종목", content: "800은 씨티 목표야. 649는 종가", createdAt: T07OCT + 1560000, likes: 5 },
+    { id: 1221862, nickname: "텍사스십도시", holdingLabel: "관심종목", content: "2027은 공급 확대 해야. 올해 가이던스가 아니야", createdAt: T07OCT + 1740000, likes: 4 },
+  ],
+  122187: [
+    { id: 1221871, nickname: "에이아이오칠십이", holdingLabel: "관심종목", content: "10억은 계약 규모 거론이야. 서명 전", createdAt: T07OCT + 1620000, likes: 5 },
+    { id: 1221872, nickname: "도킹칠시간", holdingLabel: "관심종목", content: "417은 알파벳 목표야. 10억이랑 나누지 마", createdAt: T07OCT + 1800000, likes: 4 },
+  ],
+  122188: [
+    { id: 1221881, nickname: "텍사스십도시", holdingLabel: "관심종목", content: "72는 AI5야. 144는 AI6", createdAt: T07OCT + 1680000, likes: 5 },
+    { id: 1221882, nickname: "케이프삼십이마일", holdingLabel: "관심종목", content: "용량 축소야. 대역폭 삭제 아냐", createdAt: T07OCT + 1860000, likes: 4 },
+  ],
+  122189: [
+    { id: 1221891, nickname: "도킹칠시간", holdingLabel: "관심종목", content: "21명은 채용이야. 인가 대수가 아니야", createdAt: T07OCT + 1740000, likes: 5 },
+    { id: 1221892, nickname: "휴스턴백사십사", holdingLabel: "관심종목", content: "10도시는 텍사스야. 전국이 아니야", createdAt: T07OCT + 1920000, likes: 4 },
+  ],
+  122190: [
+    { id: 1221901, nickname: "케이프삼십이마일", holdingLabel: "관심종목", content: "7시간55분은 크루13 도킹이야. 크루12 언도킹이 오늘 동부 오전이야", createdAt: T07OCT + 1800000, likes: 5 },
+    { id: 1221902, nickname: "캐시우드구십", holdingLabel: "관심종목", content: "5자리는 미국 기록이야. 세계 절대가 아님", createdAt: T07OCT + 1980000, likes: 4 },
+  ],
+  122191: [
+    { id: 1221911, nickname: "휴스턴백사십사", holdingLabel: "관심종목", content: "32마일은 플로리다 관이야", createdAt: T07OCT + 1860000, likes: 5 },
+    { id: 1221912, nickname: "독일장관승인", holdingLabel: "관심종목", content: "제안이야. 착공 공고가 아니야", createdAt: T07OCT + 2040000, likes: 4 },
+  ],
+  122192: [
+    { id: 1221921, nickname: "캐시우드구십", holdingLabel: "관심종목", content: "144는 주차 대수야. 인가 169랑 달라", createdAt: T07OCT + 1920000, likes: 5 },
+    { id: 1221922, nickname: "다이먼부채", holdingLabel: "관심종목", content: "10/24는 부지 날짜야. 오늘 출고 공시 아님", createdAt: T07OCT + 2100000, likes: 4 },
+  ],
+  122193: [
+    { id: 1221931, nickname: "독일장관승인", holdingLabel: "관심종목", content: "90%는 데이터센터 금융이야. 시총이 아니야", createdAt: T07OCT + 1980000, likes: 5 },
+    { id: 1221932, nickname: "스타마인드백만", holdingLabel: "관심종목", content: "100%는 첫해 상각이야. 세율 숫자가 아니야", createdAt: T07OCT + 2160000, likes: 4 },
+  ],
+  122194: [
+    { id: 1221941, nickname: "다이먼부채", holdingLabel: "관심종목", content: "장관 발언이야. 허가 공문이 아니야", createdAt: T07OCT + 2040000, likes: 5 },
+    { id: 1221942, nickname: "일주일이칠이", holdingLabel: "관심종목", content: "전역 승인이 목표야. 오늘 발효 아님", createdAt: T07OCT + 2220000, likes: 4 },
+  ],
+  122195: [
+    { id: 1221951, nickname: "스타마인드백만", holdingLabel: "관심종목", content: "발언이야. 신용강등이 아니야", createdAt: T07OCT + 2100000, likes: 5 },
+    { id: 1221952, nickname: "일본와이유일위", holdingLabel: "관심종목", content: "부채는 잔액이야. 오늘 밤 의사록이 다음이야", createdAt: T07OCT + 2280000, likes: 4 },
+  ],
+  122196: [
+    { id: 1221961, nickname: "일주일이칠이", holdingLabel: "관심종목", content: "100만은 그림이야. 오늘 발사 수가 아니야", createdAt: T07OCT + 2160000, likes: 5 },
+    { id: 1221962, nickname: "삼분기사십팔만", holdingLabel: "관심종목", content: "10Tbps는 군집 안 대역폭이야", createdAt: T07OCT + 2340000, likes: 4 },
+  ],
   122148: [
     { id: 1221481, nickname: "스페이스엑스에스아이", holdingLabel: "관심종목", content: "300은 목표야. 171.09는 종가야", createdAt: T06OCT + 720000, likes: 5 },
     { id: 1221482, nickname: "목격팔만육천", holdingLabel: "관심종목", content: "40%는 성장 맞춘 비교야. 시총 40%가 아니야", createdAt: T06OCT + 900000, likes: 4 },
