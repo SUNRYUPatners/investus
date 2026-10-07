@@ -32,12 +32,12 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
-  { id: 9580, symbol: "한장요약", nickname: "육천구백사십일", holdingLabel: "인덱스", content: "어제 코스피 6941.39 -0.89%. 외인 1조7509억 매도, 개인 7406억 매수. 삼성 272000 -1.45%, 닉스 1773000 -3.69%. 엔솔 390000 +5.12%", createdAt: T07OCT - 0, likes: 40, comments: 2, },
-  { id: 9581, symbol: "삼성전자", nickname: "이십칠만이천", holdingLabel: "삼성 보유", content: "삼성 272000 -1.45% -4000. 외인 5667억 매도. 시가 278500 고가 279000. 내일 잠정, 영업익 눈높이 106.9조", createdAt: T07OCT - 1800000, likes: 39, comments: 2, },
-  { id: 9582, symbol: "SK하이닉스", nickname: "백칠십칠만삼", holdingLabel: "하이닉스 보유", content: "하이닉스 177만3천 -3.69% -68000. 외인 1조4066억 매도 창구1위. 솔리다임 상장설. 자사주 15~17일", createdAt: T07OCT - 3600000, likes: 38, comments: 2, },
-  { id: 9583, symbol: "LG에너지솔루션", nickname: "삼십구만엔솔", holdingLabel: "배터리 보유", content: "LG엔솔 390000 +5.12% +19000. 투톱 빠진 날 배터리. 삼성증권 3Q OP 3517억 컨센+14%. 목표가 46만", createdAt: T07OCT - 5400000, likes: 37, comments: 2, },
-  { id: 9584, symbol: "삼성바이오로직스", nickname: "백삼십일만바", holdingLabel: "바이오 관심", content: "삼바 131만 -3.25% -44000. 유증 신주발행가액 확정. 수주 공시 있어도 희석 걱정. 130만 선이 다음", createdAt: T07OCT - 7200000, likes: 36, comments: 2, },
-  { id: 9585, symbol: "수급", nickname: "외인일조칠천", holdingLabel: "관망", content: "외인 유가 1조7509억 매도. 개인 7406억 매수, 기관 보합. 전기전자 외인 1조5402억. 코스닥 919.92 +2.98%", createdAt: T07OCT - 9000000, likes: 35, comments: 2, },
+  { id: 9580, symbol: "한장요약", nickname: "칠천피멘탈", holdingLabel: "인덱스", content: "어제 코스피 6941로 0.89% 빠짐 ㅋㅋ 외인이 1조7509억 던지고 개인이 7406억 받음. 삼성은 27만2천, 닉스는 177만3천인데 엔솔만 39만에 5% 오름. 나만 반도체 존버 중.", createdAt: T07OCT - 0, likes: 40, comments: 2, },
+  { id: 9581, symbol: "삼성전자", nickname: "삼전물린놈", holdingLabel: "삼성 보유", content: "삼성 27만2천원, 1.45% 빠짐. 외인이 5667억 팔았고 시가 27만8500까지 갔다가 밀림. 내일 잠정인데 영업이익 눈높이 106조면 나는 일단 홀딩.", createdAt: T07OCT - 1800000, likes: 39, comments: 2, },
+  { id: 9582, symbol: "SK하이닉스", nickname: "닉스존버", holdingLabel: "하이닉스 보유", content: "하이닉스 177만3천, 3.69%면 6만8천원 빠진 거임 ㄷㄷ. 외인 1조4066억이 창구 1위. 솔리다임 상장은 아직 썰이고 자사주는 15일부터래. 손절이냐 물타냐.", createdAt: T07OCT - 3600000, likes: 38, comments: 2, },
+  { id: 9583, symbol: "LG에너지솔루션", nickname: "엔솔반등", holdingLabel: "배터리 보유", content: "엔솔 39만원에 5.12% ㅋㅋ 반도체 투톱 빠질 때 배터리만 살아남. 삼성증권이 3분기 영업이익 3517억에 목표 46만. 나는 오늘 익절 참음.", createdAt: T07OCT - 5400000, likes: 37, comments: 2, },
+  { id: 9584, symbol: "삼성바이오로직스", nickname: "바이오희석", holdingLabel: "바이오 관심", content: "삼바 131만원, 3.25% 하락. 유증 발행가 나왔는데 수주가 좋아도 주식 늘어나면 짜증남. 130만 선에서 버틸지 형들 의견 좀.", createdAt: T07OCT - 7200000, likes: 36, comments: 2, },
+  { id: 9585, symbol: "수급", nickname: "수급보는눈", holdingLabel: "관망", content: "외인이 코스피에서 1조7509억 던짐. 개인 7406억 사고 기관은 보합. 전기전자만 1조5402억. 코스닥은 919로 2.98% 오름. 지수 평균 내면 멘탈 나감 ㅋㅋ.", createdAt: T07OCT - 9000000, likes: 35, comments: 2, },
   { id: 9550, symbol: "한장요약", nickname: "칠천삼점이칠", holdingLabel: "인덱스", content: "금요 코스피 7003.74 +0.46%. 기관 3813억 매수, 외인 1367억 매도, 개인 1조7205억 매도. 삼성 보합 276000, 닉스 1841000. 오늘 연휴 후 개장", createdAt: T06OCT - 0, likes: 40, comments: 2, },
   { id: 9551, symbol: "삼성전자", nickname: "보합이십칠만", holdingLabel: "삼성 보유", content: "삼성 금요 보합 276000. 외인 1086억 개인 5889억 매도, 기관 1587 기타 5403 매수. 8일 잠정, 영업익 눈높이 109.5조", createdAt: T06OCT - 1800000, likes: 39, comments: 2, },
   { id: 9552, symbol: "SK하이닉스", nickname: "백팔십사만일", holdingLabel: "하이닉스 보유", content: "하이닉스 184만1천 +0.44% +8000. 외인 2229 개인 8096 매도, 기관 1319 기타 9053 매수. ADR -0.06%. 자사주 15~17일", createdAt: T06OCT - 3600000, likes: 38, comments: 2, },
@@ -216,28 +216,28 @@ export const MOCK_POSTS_KR: Post[] = [
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
   9580: [
-    { id: 1, nickname: "시가칠천사십", holdingLabel: "관심", content: "6941은 종가야. 시가 7044에서 내려왔어", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "칠천선하루", holdingLabel: "관심", content: "삼전 잠정은 내일 8일이야", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "장중멘탈", holdingLabel: "관심", content: "시가 7044에서 6941까지 밀린 거면 장중 멘탈 터졌을 듯 ㅋㅋ", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "내일보고", holdingLabel: "관심", content: "내일 잠정 보고 홀딩 유지할지 정할래. 오늘은 손 안 댐", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9581: [
-    { id: 1, nickname: "내일잠정", holdingLabel: "관심", content: "272000이 종가야. 276000은 전날", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "백육조눈높이", holdingLabel: "관심", content: "106.9조는 눈높이야. 내일 공시", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "하루깎임", holdingLabel: "관심", content: "전날 27만6천에서 27만2천이면 하루 만에 또 깎임. 물림", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "잠정기대", holdingLabel: "관심", content: "106조 넘기면 오늘 빠진 거 금방 회복 아님? 기대 반 걱정 반", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9582: [
-    { id: 1, nickname: "상장설창구", holdingLabel: "관심", content: "177만3천이 종가야. 184만1천은 전날", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "자사주십오", holdingLabel: "관심", content: "상장설이야. 공시된 상장이 아니야", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "계좌닫음", holdingLabel: "관심", content: "전날 184만이었는데 177만이면 계좌 열기가 싫음 ㅋㅋ", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "자사주달력", holdingLabel: "관심", content: "상장 썰만 돌고 공시 없으면 나는 자사주 날짜만 봄", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9583: [
-    { id: 1, nickname: "사십육만목표", holdingLabel: "관심", content: "39만이 종가야. 46만은 목표", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "수주삼십기가", holdingLabel: "관심", content: "3517억은 증권 추정치야. 잠정이 아님", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "아직싼가", holdingLabel: "관심", content: "목표 46만 보면 오늘 39만은 아직 싼 느낌. 나만 그래?", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "실적춤", holdingLabel: "관심", content: "증권사 추정이 잠정보다 높으면 실적 때 또 춤출 수도 ㅋㅋ", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9584: [
-    { id: 1, nickname: "유증발행가", holdingLabel: "관심", content: "131만이 종가야. 유증 발행가랑 달라", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "희석수주", holdingLabel: "관심", content: "수주 공시랑 희석은 다른 칸", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "유증헷갈", holdingLabel: "관심", content: "발행가보다 종가가 높으면 유증 받아도 되는 건지 헷갈림", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "희석속쓰림", holdingLabel: "관심", content: "수주 좋다고 좋아하다가 주식 수 늘어나면 속 쓰림", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9585: [
-    { id: 1, nickname: "전기전자창구", holdingLabel: "관심", content: "1조7509억은 유가증권 하루야", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "코스닥구백이십", holdingLabel: "관심", content: "코스닥 +2.98%랑 코스피를 평균 내지 마", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "받아도버거", holdingLabel: "관심", content: "하루에 1조 넘게 던지면 개인이 받아도 버거움 ㅋㅋ", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "계좌원망", holdingLabel: "관심", content: "코스닥만 오르고 코스피 빠지면 내 계좌는 왜 코스피 쪽이냐", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9550: [
     { id: 1, nickname: "시가육천구백", holdingLabel: "관심", content: "7000선 종가야. 시가 6938에서 올렸어", createdAt: T06OCT + 600000, likes: 4 },
@@ -890,12 +890,12 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
-  { id: 9590, symbol: "한장요약", nickname: "요약팔만육천", holdingLabel: "관심", content: "BTC 자정 86647 +1.25%, 뉴욕 85650 -0.06%. 금 4180.99. ETH 2723. DXY 101.30. 10년 5.270% -4bp", createdAt: T07OCT - 0, likes: 40, comments: 2, },
-  { id: 9591, symbol: "비트코인", nickname: "비트자정팔육", holdingLabel: "BTC 보유", content: "BTC 자정 86647 +1.25%. 뉴욕 85650 -0.06% 고점 86450. 도미 59.13%. 현물ETF -1.206억$. 주간 84000~87722", createdAt: T07OCT - 1800000, likes: 39, comments: 2, },
-  { id: 9592, symbol: "금", nickname: "금사천일백팔", holdingLabel: "금 보유", content: "금 현물 4180.99 전일 4175.70. 선물 정산 4156.3. 10년 5.270%로 하루 쉼. DXY 101.30", createdAt: T07OCT - 3600000, likes: 38, comments: 2, },
-  { id: 9593, symbol: "이더리움", nickname: "이더이천칠백", holdingLabel: "이더 관심", content: "ETH 2723.15 +0.76%. 도미 11.29% -0.04%p. BTC 도미 59.13%. 전체시총 2.91조$ -0.14%. 거래대금 733억 -15.59%", createdAt: T07OCT - 5400000, likes: 37, comments: 2, },
-  { id: 9594, symbol: "달러인덱스", nickname: "달러백일점삼", holdingLabel: "관망", content: "DXY 101.30 부근 3개월 고점 시험. 원달러 화요 1343.6. 10년은 하루 쉼. 금 4181 옆자리", createdAt: T07OCT - 7200000, likes: 36, comments: 2, },
-  { id: 9595, symbol: "미국10년", nickname: "십년오점이칠", holdingLabel: "금리 관심", content: "미 10년 5.270% -4bp. 전날 고점 5.34%, 30년 고점 5.70%. ISM물가 74.0. 오늘밤 의사록", createdAt: T07OCT - 9000000, likes: 35, comments: 2, },
+  { id: 9590, symbol: "한장요약", nickname: "자정시세", holdingLabel: "관심", content: "비트 자정에 86647달러로 1.25% 올랐다가 뉴욕에선 85650. 금은 4180, 이더는 2723, 달러인덱스는 101.30, 10년 금리는 5.270으로 하루 쉼. 밤새 차트 본 사람 손 ㅋㅋ.", createdAt: T07OCT - 0, likes: 40, comments: 2, },
+  { id: 9591, symbol: "비트코인", nickname: "비트존버", holdingLabel: "BTC 보유", content: "자정엔 86647까지 갔는데 뉴욕은 85650으로 맥 빠짐. 현물 펀드에서 1.2억 달러 빠졌대. 이번 주 범위가 8만4천에서 8만7천이라 나는 상단 터치 전에 익절 고민.", createdAt: T07OCT - 1800000, likes: 39, comments: 2, },
+  { id: 9592, symbol: "금", nickname: "금묻어둔놈", holdingLabel: "금 보유", content: "금 4180달러, 전날 4175에서 겨우 옴. 선물은 4156. 금리 하루 쉬었다고 금이 날아간 건 아님 ㅋㅋ. 나는 그냥 묻어 둠.", createdAt: T07OCT - 3600000, likes: 38, comments: 2, },
+  { id: 9593, symbol: "이더리움", nickname: "이더아쉬움", holdingLabel: "이더 관심", content: "이더 2723달러에 0.76%면 비트보다 힘이 약함. 점유 11%대 그대로고 거래대금은 15% 줄었대. 오르긴 했는데 사람 없는 상승 느낌.", createdAt: T07OCT - 5400000, likes: 37, comments: 2, },
+  { id: 9594, symbol: "달러인덱스", nickname: "환율보는눈", holdingLabel: "관망", content: "달러인덱스 101.30이면 석 달 고점 근처. 원달러는 1343원. 금리 하루 쉬었는데 환율은 왜 아직도 높음? 여행 가는 사람 울겠네.", createdAt: T07OCT - 7200000, likes: 36, comments: 2, },
+  { id: 9595, symbol: "미국10년", nickname: "채권떨림", holdingLabel: "금리 관심", content: "10년 금리 5.270으로 하루 내림. 전날엔 5.34까지 갔고 30년은 5.70. 오늘 밤 의사록인데 채권 가진 사람 또 잠 설치려나.", createdAt: T07OCT - 9000000, likes: 35, comments: 2, },
   { id: 9560, symbol: "한장요약", nickname: "요약팔오팔이", holdingLabel: "BTC 보유", content: "비트 85829 -0.78%. 금 09:10 ET 4153. 은 61.70 +2.17%. DXY 102.5 위. 유로 1.116. 10년 5.31%", createdAt: T06OCT - 0, likes: 40, comments: 2, },
   { id: 9561, symbol: "비트코인", nickname: "비트팔만오천", holdingLabel: "금 보유", content: "비트 85829.02 -0.78%. 시가 86499 고점 86989 저점 84956. 지난분기 약 43%. 주식 30일 상관 0.69", createdAt: T06OCT - 1800000, likes: 39, comments: 2, },
   { id: 9562, symbol: "금", nickname: "금사천일백오십", holdingLabel: "은 관심", content: "금 10/5 09:10 ET 4153. 10/2보다 65달러 낮음. 고용 2.9만, 실업 4.2%. 10년 5.31%. 10월 인상 22~24%", createdAt: T06OCT - 3600000, likes: 38, comments: 2, },
@@ -1053,28 +1053,28 @@ export const MOCK_POSTS_SAFE: Post[] = [
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
   9590: [
-    { id: 1, nickname: "자정뉴욕", holdingLabel: "관심", content: "86647이랑 85650은 시각이 달라", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "의사록밤", holdingLabel: "관심", content: "5.270은 10년이야. 5.70은 30년 고점", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "자랑가격", holdingLabel: "관심", content: "자정이랑 뉴욕이 다르면 어느 가격으로 자랑해야 함 ㅋㅋ", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "커피아깝", holdingLabel: "관심", content: "30년 들고 있으면 오늘 커피값도 아까울 듯", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9591: [
-    { id: 1, nickname: "유출일억이", holdingLabel: "관심", content: "86647은 자정이야. 85650은 뉴욕", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "주간팔만사", holdingLabel: "관심", content: "유출 1.2억이랑 가격을 나누지 마", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "익절놓침", holdingLabel: "관심", content: "뉴욕에서 맥 빠진 거 보고 익절 타이밍 놓침", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "믿음안감", holdingLabel: "관심", content: "펀드에서 돈 빠지는데 가격만 오르면 믿음이 안 감", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9592: [
-    { id: 1, nickname: "현물선물", holdingLabel: "관심", content: "4180은 현물이야. 4156은 선물", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "사천이백앞", holdingLabel: "관심", content: "0.13% 반등이야. 큰 급등이 아니야", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "실물파", holdingLabel: "관심", content: "현물이랑 선물 가격 다르면 나는 그냥 실물 생각하는 편", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "제목민망", holdingLabel: "관심", content: "0.1%면 뉴스 제목 만들기 민망한 수준 ㅋㅋ 존버 유지", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9593: [
-    { id: 1, nickname: "점유십일", holdingLabel: "관심", content: "2723은 이더야. 86647이랑 나누지 마", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "시총이점이구", holdingLabel: "관심", content: "11.29%는 점유율이야. 하루 등락이 아니야", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "알트서러움", holdingLabel: "관심", content: "비트 오를 때 이더가 반 박자 늦으면 알트 보유자 서러움", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "따라오른거", holdingLabel: "관심", content: "점유 그대로면 오늘 오른 건 그냥 시장 따라서 오른 거임", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9594: [
-    { id: 1, nickname: "인덱스원달러", holdingLabel: "관심", content: "101.30은 인덱스야. 1343이랑 나누지 마", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "삼개월고점", holdingLabel: "관심", content: "3개월 고점 시험이야. 사상 최고가 아님", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "환전한숨", holdingLabel: "관심", content: "1343원이면 환전할 때마다 한숨. 인덱스 숫자보다 이게 체감", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "위로맞나", holdingLabel: "관심", content: "석 달 고점이면 아직 역사적 꼭지는 아니라는 위로임?", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9595: [
-    { id: 1, nickname: "고점오일사", holdingLabel: "관심", content: "5.270이 이날 10년이야. 5.34는 고점", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "삼십년고점", holdingLabel: "관심", content: "의사록이 다음이야. 이미 인상이 아님", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "숨돌림", holdingLabel: "관심", content: "전날 5.34 보고 놀란 사람 오늘은 조금 숨 돌림", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "글한줄공포", holdingLabel: "관심", content: "오늘 밤 글 한 줄에 금리 또 튈 수 있어서 알림 켜 둠", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9560: [
     { id: 1, nickname: "고점팔만육", holdingLabel: "관심", content: "4153이랑 은 61.70은 아침 시각이야", createdAt: T06OCT + 600000, likes: 4 },
@@ -1639,10 +1639,10 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
-  { id: 9600, symbol: "한장요약", nickname: "매매팔십육주", holdingLabel: "관심", content: "서울 매매 86주 최장. 전세도 86주 올해 +8.18%. 오늘 국토부 국감 공급 실효성. 전세사기 최소보장 11/13 3분의1 예산840억", createdAt: T07OCT - 0, likes: 40, comments: 2, },
-  { id: 9601, symbol: "서울매매", nickname: "영점공구연속", holdingLabel: "매매 관심", content: "서울 매매 86주 연속 최장. 9월4주 +0.09%. 오름폭 5주 연속 축소. 전세도 86주. 15억이하 거래 약79%", createdAt: T07OCT - 1800000, likes: 39, comments: 2, },
-  { id: 9602, symbol: "정책", nickname: "국감공급", holdingLabel: "정책 관심", content: "오늘 국토부 국감. 9·7 1·29 8·13 공급이 착공으로 내려오나. LH 부채·재원. 8월 서울 전세 6.3663억", createdAt: T07OCT - 3600000, likes: 38, comments: 2, },
-  { id: 9603, symbol: "전세", nickname: "최소보장삼분", holdingLabel: "전세 관심", content: "전세사기 최소보장 11/13. 보증금 3분의1. 선지급후정산. 피해자 40936명. 예산 840억. LH 90일 내 결정", createdAt: T07OCT - 5400000, likes: 37, comments: 2, },
+  { id: 9600, symbol: "한장요약", nickname: "집값한숨", holdingLabel: "관심", content: "서울 매매가 86주째 오름. 전세도 86주고 올해 8.18% 올랐대. 오늘 국감에서 공급 타령할 텐데, 전세사기 최소보장은 11월 13일에 보증금 3분의 1, 예산 840억. 집 있는 사람은 웃고 없는 사람은 한숨 ㅋㅋ.", createdAt: T07OCT - 0, likes: 40, comments: 2, },
+  { id: 9601, symbol: "서울매매", nickname: "매수타이밍", holdingLabel: "매매 관심", content: "86주 올랐다는데 지난주는 0.09%밖에 안 오름. 오름폭이 다섯 주째 줄어든대. 15억 이하 거래가 79%라 대출 되는 집만 움직이는 느낌. 지금 사면 꼭지냐.", createdAt: T07OCT - 1800000, likes: 39, comments: 2, },
+  { id: 9602, symbol: "정책", nickname: "국감구경", holdingLabel: "정책 관심", content: "오늘 국감인데 새 대책 나오는 날 아님. 예전에 말한 공급이 진짜 착공되냐를 따진대. LH 빚도 나오고 서울 전세 평균이 8월에 6억3663만. 말잔치 예상 ㅋㅋ.", createdAt: T07OCT - 3600000, likes: 38, comments: 2, },
+  { id: 9603, symbol: "전세", nickname: "전세피해", holdingLabel: "전세 관심", content: "11월 13일부터 보증금 3분의 1은 먼저 채워 준대. 피해자 4만936명, 예산 840억. 전액은 아니고 최소만. 해당되는 집 있으면 날짜 달력에 적어.", createdAt: T07OCT - 5400000, likes: 37, comments: 2, },
   { id: 9570, symbol: "한장요약", nickname: "전세팔십육", holdingLabel: "관심", content: "서울 전세 86주 연속. 매물 20497 -13.8%. 세제개편 후 15억이하 매매 약 79%, 6억이하 25%. 공적주택 119만호", createdAt: T06OCT - 0, likes: 40, comments: 2, },
   { id: 9571, symbol: "전세", nickname: "매물이만사백", holdingLabel: "전세 관심", content: "서울 전세 86주 연속. 5개구 올해 10% 넘김. 매물 20497, 10·15직전 23779 대비 -13.8%. 하반기 입주 18994", createdAt: T06OCT - 1800000, likes: 39, comments: 2, },
   { id: 9572, symbol: "서울매매", nickname: "십오억칠십구", holdingLabel: "매매 관심", content: "8·3 이후 서울 매매 약 79%가 15억이하. 6억이하 25%. 9~15억 26.3%, 25억초과 5.8%. 대출 한도가 칸을 갈라", createdAt: T06OCT - 3600000, likes: 38, comments: 2, },
@@ -1772,20 +1772,20 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
   9600: [
-    { id: 1, nickname: "최장팔십육", holdingLabel: "관심", content: "86주는 매매 기록이야. 한 주 0.09%와 다른 칸", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "국감오늘", holdingLabel: "관심", content: "최소보장은 11월 13일이야. 오늘 지급 아님", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "사라는건가", holdingLabel: "관심", content: "86주 기록 뉴스 보면 지금 사라는 건지 말라는 건지 더 헷갈림", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "딴세상", holdingLabel: "관심", content: "11월 13일까지 기다리는 사람 오늘 국감은 딴 세상 이야기", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9601: [
-    { id: 1, nickname: "오름폭축소", holdingLabel: "관심", content: "86주는 연속이야. 0.09%는 한 주", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "오억이하", holdingLabel: "관심", content: "최장 기록이야. 이번주 급등 아님", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "끝물관망", holdingLabel: "관심", content: "오름폭 줄었다니까 급등 끝물 아닌가 싶어서 관망", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "전세가아픔", holdingLabel: "관심", content: "기록은 긴데 이번 주는 거의 제자리. 체감 전세가 더 아픔", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9602: [
-    { id: 1, nickname: "대책세개", holdingLabel: "관심", content: "국감이야. 새 대책 발표일이 아니야", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "착공숫자", holdingLabel: "관심", content: "착공 숫자가 다음이야. 계획 호수랑 달라", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "질의였네", holdingLabel: "관심", content: "국감에서 공급 말한다길래 청약 일정 바뀌나 했더니 질의래 ㅋㅋ", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "삽떠야믿음", holdingLabel: "관심", content: "계획 호수보다 삽 뜬 숫자가 나와야 믿음이 감", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9603: [
-    { id: 1, nickname: "십일월십삼", holdingLabel: "관심", content: "3분의1은 최소 보장이야. 전액 환수가 아니야", createdAt: T07OCT + 600000, likes: 4 },
-    { id: 2, nickname: "예산팔백사십", holdingLabel: "관심", content: "11월 13일 시행이야. 오늘 입금 아님", createdAt: T07OCT + 1200000, likes: 3 },
+    { id: 1, nickname: "나머지막막", holdingLabel: "관심", content: "3분의 1만 먼저면 나머지 보증금은 아직도 막막함", createdAt: T07OCT + 600000, likes: 4 },
+    { id: 2, nickname: "서두르셈", holdingLabel: "관심", content: "예산 840억으로 4만 명이 다 커버되나 싶음. 해당되면 서두르셈", createdAt: T07OCT + 1200000, likes: 3 },
   ],
   9570: [
     { id: 1, nickname: "연속팔십육", holdingLabel: "관심", content: "86주는 연속 상승이야. 한 주 숫자가 아니야", createdAt: T06OCT + 600000, likes: 4 },
