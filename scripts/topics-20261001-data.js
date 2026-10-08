@@ -518,50 +518,50 @@ module.exports = function (add) {
   });
 
   pair("fsd-turo", "L4", "TSLA", {
-    badge: "TSLA", badgeLine: "한 사람의 예약", title: "30% 싼 렌트 대신 자율주행 차를 골랐습니다",
-    heroIcon: "🚙", heroBig: "30%", heroSub: "그 예약의 가격 차입니다. 시장 점유율은 아닙니다.",
+    badge: "TSLA", badgeLine: "고른 차는 테슬라", title: "30% 싼 렌트 대신 테슬라를 골랐습니다",
+    heroIcon: "🚙", heroBig: "테슬라", heroSub: "투로에서 테슬라를 빌렸습니다. 허츠가 30% 더 쌌습니다.",
     cards: c3(
-      { icon: "🏨", big: "허츠", mid: "더 싼 쪽", sub: "30% 비교" },
-      { icon: "🚗", big: "투로", mid: "고른 쪽", sub: "자율주행이 되는 차" },
-      { icon: "📣", big: "인용", mid: "공식 계정", sub: "한 건의 후기" },
+      { icon: "🏨", big: "허츠", mid: "더 싼 렌터카", sub: "30% 저렴한 쪽" },
+      { icon: "🚗", big: "테슬라", mid: "고른 차", sub: "투로에서 빌림" },
+      { icon: "📣", big: "공식", mid: "테슬라 계정", sub: "후기를 다시 올림" },
     ),
   }, {
-    badge: "TSLA", badgeLine: "One booking", title: "A renter paid up 30% to get supervised self-driving",
-    heroIcon: "🚙", heroBig: "30%", heroSub: "That reservation's gap, not a market share.",
+    badge: "TSLA", badgeLine: "He picked a Tesla", title: "He chose a Tesla over a rental that was 30% cheaper",
+    heroIcon: "🚙", heroBig: "Tesla", heroSub: "Booked on Turo. Hertz was 30% less.",
     cards: c3(
-      { icon: "🏨", big: "Hertz", mid: "The cheaper one", sub: "30% less" },
-      { icon: "🚗", big: "Turo", mid: "The pick", sub: "A self-driving car" },
-      { icon: "📣", big: "Quoted", mid: "Tesla account", sub: "One review" },
+      { icon: "🏨", big: "Hertz", mid: "The cheaper rental", sub: "30% less" },
+      { icon: "🚗", big: "Tesla", mid: "The car he picked", sub: "Booked on Turo" },
+      { icon: "📣", big: "Official", mid: "Tesla account", sub: "Quoted the review" },
     ),
   });
 
   pair("gemini-4", "L2", "GOOGL", {
-    badge: "GOOGL", title: "제미나이 4 아르곤이라는 출시 줄이 떴습니다",
-    heroIcon: "✨", heroBig: "아르곤", heroSub: "기능과 가격은 이 아침에 확인하지 못했습니다.",
+    badge: "GOOGL", title: "구글이 제미나이 4 아르곤을 내놓았다는 소식입니다",
+    heroIcon: "✨", heroBig: "아르곤", heroSub: "기능과 요금은 공식 안내를 기다립니다.",
     cards: [
-      { label: "이름", big: "4 아르곤", mid: "제미나이", sub: "출시 줄" },
-      { label: "나온 곳", big: "예측시장", mid: "화면의 줄", sub: "블로그 확인 전" },
-      { label: "비움", big: "요금", mid: "지역", sub: "다음 공지" },
+      { label: "이름", big: "4 아르곤", mid: "제미나이", sub: "새로 알려진 이름" },
+      { label: "나온 곳", big: "예측시장", mid: "출시 소식", sub: "공식 안내 전" },
+      { label: "다음", big: "요금", mid: "이용 지역", sub: "다음 공식 안내" },
     ],
-    detailHead: "오늘 적지 않는 것",
+    detailHead: "아직 공식 안내 전",
     detailLines: [
-      "기능 목록은 확인하지 못했습니다.",
-      "가격표는 다음 공지까지 비웁니다.",
-      "가입자 수를 이 줄로 만들지 않습니다.",
+      "기능 목록은 공식 안내를 기다립니다.",
+      "요금은 다음 공지가 나와야 합니다.",
+      "가입자 수는 이 소식으로 셈하지 않습니다.",
     ],
   }, {
-    badge: "GOOGL", title: "A line says Gemini 4 Argon has launched",
-    heroIcon: "✨", heroBig: "Argon", heroSub: "Features and price were not confirmed this morning.",
+    badge: "GOOGL", title: "News says Google released Gemini 4 Argon",
+    heroIcon: "✨", heroBig: "Argon", heroSub: "Features and price wait for an official notice.",
     cards: [
-      { label: "Name", big: "4 Argon", mid: "Gemini", sub: "The flash line" },
-      { label: "Where", big: "Market UI", mid: "A headline", sub: "Not a blog post yet" },
-      { label: "Blank", big: "Price", mid: "Regions", sub: "Next notice" },
+      { label: "Name", big: "4 Argon", mid: "Gemini", sub: "The name that surfaced" },
+      { label: "Where", big: "Market", mid: "The news", sub: "Before a Google post" },
+      { label: "Next", big: "Price", mid: "Regions", sub: "The next notice" },
     ],
-    detailHead: "Left blank today",
+    detailHead: "Not in an official notice yet",
     detailLines: [
-      "The feature list is not confirmed.",
-      "The price stays blank until a notice.",
-      "Do not invent a subscriber count.",
+      "The feature list waits for Google.",
+      "The price waits for the next notice.",
+      "Do not count subscribers from this news.",
     ],
   });
 };
