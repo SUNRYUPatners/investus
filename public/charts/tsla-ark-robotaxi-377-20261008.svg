@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#031209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#10b981"/><stop offset="100%" style="stop-color:#047857"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="120" height="42" rx="21" fill="#10b98122" stroke="#10b981" stroke-width="1.5"/>
+  <text x="100" y="44" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#10b981" text-anchor="middle">TSLA</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#f9fafb" text-anchor="middle">ARK 인베스트 테슬라</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#10b981" text-anchor="middle">로보택시 목표가 $377.47</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#041a0a" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">캐시 우드의 가장 큰 로보택시 베팅</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#10b981" text-anchor="middle">$377.47</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">현재 주가 기준 — ARKQ 내 10.86% 비중 1위 유지</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#041a0a" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#031209" stroke="#10b981" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">테슬라 현재 주가</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#10b981" text-anchor="middle">$377.47</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">2026.10.08 기준</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">ARK 포트폴리오 기준가</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#031209" stroke="#047857" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">ARKQ 비중</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#047857" text-anchor="middle">10.86%</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">ARKQ 내 1위</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">로보틱스 ETF</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#031209" stroke="#10b981" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">핵심 동인</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#10b981" text-anchor="middle">에너지+사이버캡</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">2대 성장 축</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">ARK 상승 시나리오</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">배경 및 맥락</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">ARK 목표가는 로보택시 수익화와 에너지 사업 확장을 동인으로 산정한다.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">웨드부시 600달러, 모건스탠리 기본 400 · 강세 840달러가 같은 날 비교선이다.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">오스틴 사이버캡 800건 목격이 ARK 포지션의 현장 근거 중 하나다.</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">10월 21일 3분기 실적의 로보택시 코멘트가 다음 달력이다.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* 세 집 목표를 평균 내지 않는다 — 각 목표는 다른 전제에서 나온 숫자다</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#031209" stroke="#10b981" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#10b981">핵심 포인트</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">ARK는 테슬라가 로보택시 단계에 가장 빨리 도달할 차량 AI 플랫폼으로 본다.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">$377.47는 현재 주가 — 하우스 목표 400·600·840과의 거리가 각 전제를 반영.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">에너지 사업부와 사이버캡이 로보택시 수익 외 독립 성장 축으로 자리잡는다.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">ARK 포지션은 아크의 전망이지 시장 전체 컨센서스가 아니다.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#047857">로보택시 상용화 일정이 세 집 목표의 공통 시험이다.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · TSLA · ARK Invest</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">10월 21일 3분기 실적이 로보택시 논거의 다음 달력이다</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

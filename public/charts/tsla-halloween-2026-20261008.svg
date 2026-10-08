@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#021a0e"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#2dd4bf"/><stop offset="100%" style="stop-color:#0d9488"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="120" height="42" rx="21" fill="#2dd4bf22" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="100" y="44" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#2dd4bf" text-anchor="middle">TSLA</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#f9fafb" text-anchor="middle">테슬라 Halloween 2026</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#2dd4bf" text-anchor="middle">특별 업데이트 출시</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#021a0e" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">소프트웨어 OTA 배포 완료</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="80" font-weight="900" fill="#2dd4bf" text-anchor="middle">4종 세트</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">음향 · 조명 · 디스플레이 · 사운드트랙 — 하드웨어 교체 없이 적용</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#021a0e" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#021a0e" stroke="#2dd4bf" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">FSD 화면</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#2dd4bf" text-anchor="middle">유령 모드</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">차량 아이콘 변환</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">자율주행 장면 할로윈화</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#021a0e" stroke="#0d9488" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">방문자 반응</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#0d9488" text-anchor="middle">트릭오어트릿</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">소리·조명 반응</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">접근 감지 자동 활성화</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#021a0e" stroke="#2dd4bf" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">추가 기능</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#2dd4bf" text-anchor="middle">포토부스+AI</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">폴라로이드 스타일</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">AI 음성 이웃 놀래키기</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">배경 및 맥락</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">테슬라의 계절 OTA 업데이트는 소프트웨어 플랫폼의 상징이다.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">하드웨어 교체 없이 차량 경험이 매년 달라지는 패턴의 반복이다.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">사이버캡도 유령·소 패턴의 할로윈 랩으로 동시에 공개됐다.</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">소셜 확산이 광고비 없이 브랜드를 퍼뜨리는 플라이휠이 된다.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* 소셜 바이럴과 FSD 구독 매출을 같은 숫자로 묶지 않는다</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#021a0e" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#2dd4bf">핵심 포인트</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">소프트웨어 업데이트는 차량 생애주기 동안 반복되는 매출 기회다.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">할로윈 모드는 고객 충성도와 SNS 홍보를 동시에 만드는 장치다.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">차량 소프트웨어 플랫폼이 하드웨어 마진보다 중장기 밸류를 바꾼다.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">FSD 화면 활용은 매월 구독 갱신 이유를 만드는 경험 설계다.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#0d9488">소셜 반응 추이가 다음 시즌 업데이트의 설계 지표가 된다.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · TSLA · Halloween Update</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">할로윈 기능과 FSD 구독 업그레이드는 다른 릴리스다</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

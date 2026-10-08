@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#120b2a"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="160" height="42" rx="21" fill="#c084fc22" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="120" y="44" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX · TSLA</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#f9fafb" text-anchor="middle">머스크 "ZERO doubt" 선언</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#c084fc" text-anchor="middle">테라팹 파트너십 공식화</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#2d1b3d" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">머스크가 직접 한 말</text>
+  <text x="540" y="328" font-family="Arial Black,Arial" font-size="68" font-weight="900" fill="#c084fc" text-anchor="middle">"ZERO doubt"</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">젠슨 황 · 루퍼 Bio-Tan · 인텔 — 3인 파트너 동시 확인</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#2d1b3d" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#0e0820" stroke="#c084fc" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">파트너 ①</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#c084fc" text-anchor="middle">젠슨 황</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">NVIDIA CEO</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">AI 칩 하드웨어 공급</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#0e0820" stroke="#a78bfa" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">파트너 ②</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#a78bfa" text-anchor="middle">루퍼 Bio-Tan</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">AI 투자자</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">자본 및 연구 참여</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#0e0820" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">파트너 ③</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#8b5cf6" text-anchor="middle">Intel</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">반도체 제조사</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">칩 아키텍처 협력</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">배경 및 맥락</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">테라팹은 스페이스X가 주도하는 차세대 AI 인프라 연구소다.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">초규모 컴퓨팅과 에너지 통합을 목표로 2025년 구상됐다.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">젠슨 황이 AI 칩을, 루퍼 Bio-Tan이 자본과 연구를,</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">인텔이 칩 아키텍처를 담당하는 3축 협력 구조다.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* 스페이스X 연산 인프라 + 테슬라 에너지 시스템이 통합 공급 후보</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#1a0f28" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc">핵심 포인트</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">머스크의 직접 발언은 비공개 협의를 공식 파트너십으로 격상한 신호다.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">SPCX는 테라팹 연산 인프라 독점 공급자 후보로 부상했다.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">테슬라 에너지 시스템도 테라팹 전력 공급 라인에 포함된다.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">NVIDIA · 인텔 · SpaceX 생태계가 테라팹으로 수렴하는 구도다.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#a78bfa">두 종목 모두 테라팹 수혜 가능성이 동시에 열렸다.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · SPCX · TSLA</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">착공 공지 전에 ZERO doubt와 현장 사진을 착공 확정으로 읽지 않는다</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

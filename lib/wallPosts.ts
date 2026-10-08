@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T08OCT = 1791414000000; // 2026-10-08 08:00 KST
 const T07OCT = 1791327600000; // 2026.10.07 08:00 KST
 const T06OCT = 1791241200000; // 2026.10.06 08:00 KST
 const T02OCT = 1790895600000; // 2026.10.02 08:00 KST
@@ -137,7 +138,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T07OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T08OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -156,6 +157,52 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-08 신규 ────────────────
+  { id: 122197, symbol: "SPCX", nickname: "젠슨루퍼팬", holdingLabel: "관심종목",
+    content: "젠슨황·루퍼·인텔이 테라팹 한 지붕에 들어왔대. 머스크가 ZERO doubt 올렸는데 세 회사가 동시에 붙은 거 보면 이게 진짜 플랫폼 게임이네.",
+    createdAt: T08OCT + 8*60_000, likes: 27, comments: 0 },
+  { id: 122198, symbol: "SPCX", nickname: "궤도포화요", holdingLabel: "관심종목",
+    content: "V2 미니 FCC 1만 5천 기 통과 ㅋㅋ. 기존 대비 100배 넘게 쏠 수 있는 거잖아. 작년에 궤도 포화 걱정하던 사람들은 지금 뭐라고 할지.",
+    createdAt: T08OCT + 16*60_000, likes: 25, comments: 0 },
+  { id: 122199, symbol: "SPCX", nickname: "아폴로팬더", holdingLabel: "관심종목",
+    content: "$4,000억 파이낸싱이 그냥 모금이 아니래. 아폴로가 $1,000억 주도하고 나머지 $3,000억은 후속이라던데 이 규모면 IPO 직전 마지막 대형 라운드 아닌가.",
+    createdAt: T08OCT + 24*60_000, likes: 24, comments: 0 },
+  { id: 122200, symbol: "TSLA", nickname: "유럽킹", holdingLabel: "관심종목",
+    content: "슬로바키아에서 FSD 정식 인증 났대. 독일 교통부가 유럽 전체로 밀고 있고 이게 뚫리면 EU 28개국 동시 개방이라 규모가 진짜 달라지지.",
+    createdAt: T08OCT + 32*60_000, likes: 23, comments: 0 },
+  { id: 122201, symbol: "TSLA", nickname: "할로윈주주", holdingLabel: "관심종목",
+    content: "테슬라 할로윈 4종 세트 나왔대 ㅋㅋ. 유령 모드에 트릭오어트릿, AI 포토부스에 펌프킨까지. 차가 이러면 판매는 어떻게 되는 거야.",
+    createdAt: T08OCT + 40*60_000, likes: 22, comments: 0 },
+  { id: 122202, symbol: "TSLA", nickname: "오스틴망원경", holdingLabel: "관심종목",
+    content: "오스틴 사이버캡 목격이 800건 돌파. 일주일 전보다 68% 늘었고 한 달 전보다 50%래. 이 숫자 흐름이면 뭔가 준비되는 건데 출고는 언제냐.",
+    createdAt: T08OCT + 48*60_000, likes: 26, comments: 0 },
+  { id: 122203, symbol: "ARKQ", nickname: "ARK베팅러", holdingLabel: "관심종목",
+    content: "캐시 우드가 ARKQ에 테슬라 10.86%에 스페이스X 9.24% 담은 거야. 합치면 20.1%인데 로보택시 하나에 이렇게 베팅하는 건 ARK 혼자임.",
+    createdAt: T08OCT + 56*60_000, likes: 21, comments: 0 },
+  { id: 122204, symbol: "MACRO", nickname: "집값미스터리", holdingLabel: "관심종목",
+    content: "30년 모기지가 7.63%까지 올라갔대. 2023년 11월 이후 최고고 주택 매수 문의가 5% 이상 빠졌다는데 집값은 왜 아직도 안 떨어지냐.",
+    createdAt: T08OCT + 64*60_000, likes: 20, comments: 0 },
+  { id: 122205, symbol: "NVDA", nickname: "수수료먹자", holdingLabel: "관심종목",
+    content: "인텔 AMD가 NVLink Fusion 채택하면 엔비디아 몫이 $1,200억이래. 경쟁자들이 규격 쓰면 쓸수록 수수료 쌓이는 구조인데 이게 진짜 맞는 건가.",
+    createdAt: T08OCT + 72*60_000, likes: 24, comments: 0 },
+  { id: 122206, symbol: "MACRO", nickname: "훈장구경", holdingLabel: "관심종목",
+    content: "트럼프가 머스크한테 국가 과학기술 훈장 준대. 우주·AI·에너지·로봇·교통 다 합쳐서 수여한다는데, 같은 날 테라팹 ZERO doubt에 FCC 승인에 $4,000억이 겹쳤네.",
+    createdAt: T08OCT + 80*60_000, likes: 23, comments: 0 },
+  { id: 122207, symbol: "TSLA", nickname: "목표가수집", holdingLabel: "관심종목",
+    content: "ARK가 ARKQ 1위로 테슬라를 10.86% 담아두고 현재가 $377.47. 웨드부시 $600, MS 강세 $840이랑 거리가 다 다른 건 전제가 달라서라던데 평균 내면 안 된대.",
+    createdAt: T08OCT + 88*60_000, likes: 22, comments: 0 },
+  { id: 122208, symbol: "TSLA", nickname: "실적카운트", holdingLabel: "관심종목",
+    content: "10월 21일 3분기 실적에서 로보택시 코멘트 나오면 방향이 잡히겠지. 사이버캡 800건에 FSD 유럽까지 다 그날을 향해 가는 느낌이야.",
+    createdAt: T08OCT + 96*60_000, likes: 21, comments: 0 },
+  { id: 122209, symbol: "SPCX", nickname: "오늘뭉쳤다", holdingLabel: "관심종목",
+    content: "오늘 테라팹, FCC 승인, $4,000억, 훈장이 스페이스X 방향으로 다 뭉쳤네. 이런 날 포지션 없으면 다음 신호 때는 더 비싸게 들어가는 거 아닐까.",
+    createdAt: T08OCT + 104*60_000, likes: 20, comments: 0 },
+  { id: 122210, symbol: "NVDA", nickname: "씨티따라가기", holdingLabel: "관심종목",
+    content: "씨티가 엔비디아 Buy에 목표 $315 유지. NVLink 파트너 맞춰두고 인텔 AMD 채택 기다리는 포지션이라는데 $1,200억 흐름 보면 왜 그런지 알 것 같아.",
+    createdAt: T08OCT + 112*60_000, likes: 19, comments: 0 },
+  { id: 122211, symbol: "TSLA", nickname: "인도확인", holdingLabel: "관심종목",
+    content: "48만 6532대 인도하고 21일 실적인데 로보택시 코멘트 없으면 반응이 얼마나 될지. 형들은 21일 전에 더 채우는 쪽이야 아니면 확인하고 들어가?",
+    createdAt: T08OCT + 120*60_000, likes: 18, comments: 0 },
   // ── 2026-10-07 신규 ────────────────
   { id: 122172, symbol: "SPCX", nickname: "주간불장", holdingLabel: "관심종목",
     content: "ㅋㅋ 일주일 만에 17.52%면 이건 뭐야. 172.38달러까지 갔다가 10월 6일 종가는 171.92, 고가는 176.42인데 나는 추격이 무서워서 그냥 보고만 있음.",

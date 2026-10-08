@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0e0820"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#a78bfa"/><stop offset="100%" style="stop-color:#7c3aed"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="120" height="42" rx="21" fill="#a78bfa22" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="100" y="44" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">SPCX</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#f9fafb" text-anchor="middle">FCC, 스타링크 V2 위성 15,000기</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#a78bfa" text-anchor="middle">추가 운용 승인</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#2d1b3d" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">V2 별자리 전체 대역폭</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="80" font-weight="900" fill="#a78bfa" text-anchor="middle">×100</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">V1 전체 대비 — V2 위성 1기는 V1 단일 대비 20배 처리량</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#2d1b3d" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#0e0820" stroke="#a78bfa" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">승인 위성</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#a78bfa" text-anchor="middle">15,000기</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">FCC 신규 승인</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">V2 Mini 추가 운용</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#0e0820" stroke="#7c3aed" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">목표 속도</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#7c3aed" text-anchor="middle">150 Mbps</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">이용자 최대</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">T-모바일 주파수 공유</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#0e0820" stroke="#a78bfa" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">현재 궤도</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#a78bfa" text-anchor="middle">650기</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">이미 배치 완료</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">V2 모바일 전용</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">배경 및 맥락</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">스타링크 V2 Mini는 팰컨9 재사용으로 발사되는 2세대 위성이다.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">기존 V1 대비 용량이 획기적으로 향상됐고, 5G 커버리지까지 목표한다.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">T-모바일 파트너십으로 스마트폰과 직접 연결하는 위성 셀룰러 가능.</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">데드존 해소에서 완전한 5G 통신망 구축으로 목표가 격상됐다.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* 승인 15,000기와 현재 궤도 650기는 다른 칸 — 배치 일정을 따로 확인</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#120b28" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#a78bfa">핵심 포인트</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">V2 전면 배치 시 스타링크 수익성과 기업가치에 직접 영향을 준다.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">150 Mbps 목표는 V2가 V1 대비 100배 대역폭임을 체감 지표로 표현.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">T-모바일 파트너십은 지상 기지국 없이 커버리지 확장의 경로다.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">구독 단가 인상과 가입자 규모 확대가 동시에 가능한 구조다.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#7c3aed">V2 배치 첫 발사 일정이 나오면 투자 논거가 금액으로 내려온다.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · SPCX · Starlink V2</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">100배와 150 Mbps는 다른 개념 — 전자 비율, 후자 이용자 체감 목표</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

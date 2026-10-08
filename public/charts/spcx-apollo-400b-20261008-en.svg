@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0518"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#8b5cf6"/><stop offset="100%" style="stop-color:#6d28d9"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="120" height="42" rx="21" fill="#8b5cf622" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="100" y="44" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#8b5cf6" text-anchor="middle">SPCX</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#f9fafb" text-anchor="middle">SpaceX Pursues $400B</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#8b5cf6" text-anchor="middle">Apollo-Led Financing</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#1e1040" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Purpose: fund Nvidia chip purchases</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#8b5cf6" text-anchor="middle">$400B</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">$100B bank loans + $300B Apollo private credit — target close 2026</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1e1040" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#0a0518" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Bank loans</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#8b5cf6" text-anchor="middle">$100B</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Senior secured</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Multi-bank consortium</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#0a0518" stroke="#6d28d9" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Private credit</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#6d28d9" text-anchor="middle">$300B</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Apollo managed</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Non-dilutive structure</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#0a0518" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Target close</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#8b5cf6" text-anchor="middle">2026</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Within this year</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Nvidia chip procurement</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">Background</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">Apollo Global is one of the world's largest alternative asset managers.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">SpaceX has grown without an IPO, relying on private capital rounds.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">Same day: Jensen Huang visited Terafab and FCC approved V2 satellites.</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">Financing, hardware delivery, and satellite approval landed together.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* Financing in pursuit and financing closed are different dates</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#10082a" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#8b5cf6">Key Points</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">Private financing at $400B buys growth without diluting existing holders.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">Bank loans and Apollo private credit carry different collateral terms.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">Leveraged capex signals confidence in compute revenue to service debt.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">SPCX indirect holders watch this for its effect on private valuation floor.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#6d28d9">First chip order disclosure converts estimate to real line item.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · SPCX · SpaceX Financing</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">Financing target and closing are not the same milestone</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

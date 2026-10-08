@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#021209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#34d399"/><stop offset="100%" style="stop-color:#059669"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="120" height="42" rx="21" fill="#34d39922" stroke="#34d399" stroke-width="1.5"/>
+  <text x="100" y="44" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#34d399" text-anchor="middle">TSLA</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#f9fafb" text-anchor="middle">Slovakia Approves FSD</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#34d399" text-anchor="middle">EU-Wide Clearance in Days</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#02260f" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">First official European FSD launch market</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="80" font-weight="900" fill="#34d399" text-anchor="middle">FSD EU</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Slovakia → EU-wide — Germany's transport minister also pushing approval</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#02260f" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#021209" stroke="#34d399" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">First market</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#34d399" text-anchor="middle">Slovakia</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">EU member state</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">FSD Supervised approved</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#021209" stroke="#059669" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Next step</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#059669" text-anchor="middle">All EU</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Done in days</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Final prep stage done</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#021209" stroke="#34d399" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Political support</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#34d399" text-anchor="middle">Germany</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Transport minister</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Will seek own path if needed</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">Background</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">FSD has operated only in North America and China until now.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">Europe's stricter regulations delayed entry — final stages now wrapping up.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">Slovakia national approval and EU-wide regulatory document differ legally.</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">Germany minister statement is political backing, not a technical clearance.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* EU document publication will lift subscription price assumptions</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#02180a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#34d399">Key Points</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">EU FSD launch opens subscription revenue at continental scale.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">First non-English, non-North-American approval confirms global path.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">European FSD subscription pricing may match or exceed North America.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">Germany minister support accelerates entry into Europe's biggest market.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#059669">EU document narrows the gap between $400 base and $840 bull targets.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · TSLA · FSD Europe</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">Slovakia single-country and EU-wide document are different legal milestones</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

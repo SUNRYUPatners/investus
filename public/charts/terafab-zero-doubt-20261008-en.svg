@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#120b2a"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="160" height="42" rx="21" fill="#c084fc22" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="120" y="44" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX · TSLA</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#f9fafb" text-anchor="middle">Musk's "ZERO doubt" Statement</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#c084fc" text-anchor="middle">Terafab Partnership Confirmed</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#2d1b3d" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Musk's exact words</text>
+  <text x="540" y="328" font-family="Arial Black,Arial" font-size="68" font-weight="900" fill="#c084fc" text-anchor="middle">"ZERO doubt"</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Jensen Huang · Lupe Bio-Tan · Intel — 3 partners confirmed</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#2d1b3d" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#0e0820" stroke="#c084fc" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Partner 1</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">Jensen Huang</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">NVIDIA CEO</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">AI chip hardware supply</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#0e0820" stroke="#a78bfa" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Partner 2</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#a78bfa" text-anchor="middle">Lupe Bio-Tan</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">AI Investor</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Capital and research</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#0e0820" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Partner 3</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#8b5cf6" text-anchor="middle">Intel</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Semiconductor</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Chip architecture partner</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">Background</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">Terafab is a next-gen AI infrastructure lab led by SpaceX.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">Conceived in 2025, targeting hyperscale compute and energy integration.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">Jensen Huang covers chips, Lupe Bio-Tan covers capital,</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">Intel covers chip architecture — a three-pillar structure.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* SpaceX compute infra + Tesla energy system are candidate suppliers</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#1a0f28" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc">Key Points</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">Musk's public statement elevates private talks to official partnership.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">SPCX has emerged as a candidate sole supplier of Terafab compute infra.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">Tesla energy systems are in the Terafab power supply discussion.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">NVIDIA · Intel · SpaceX ecosystems are converging under Terafab.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#a78bfa">Both tickers now have simultaneous Terafab upside potential.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · SPCX · TSLA</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">Do not read ZERO doubt + site photos as a confirmed groundbreaking</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

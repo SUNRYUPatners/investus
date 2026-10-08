@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061520"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#2563eb"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="140" height="42" rx="21" fill="#60a5fa22" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="110" y="44" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="middle">MACRO</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#f9fafb" text-anchor="middle">트럼프, 머스크에게</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#60a5fa" text-anchor="middle">국가 과학기술 훈장 수여 예정</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#0a1e30" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">미국 대통령이 수여하는 최고 과학기술 훈장</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#60a5fa" text-anchor="middle">과학기술 훈장</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">우주·AI·에너지·로봇·교통 전반에 걸친 공로 인정</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#0a1e30" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#061520" stroke="#60a5fa" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">수여자</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#60a5fa" text-anchor="middle">트럼프 대통령</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">미국 대통령</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">최고 권한으로 수여</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#061520" stroke="#2563eb" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">수령자</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#2563eb" text-anchor="middle">일론 머스크</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">SpaceX / Tesla / xAI</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">5개 산업 동시 확장</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#061520" stroke="#60a5fa" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">훈장 위상</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">국가 최고 훈장</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">과학·기술·공학</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">STEM 최고 표창</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">배경 및 맥락</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">국가 최고 과학기술 훈장은 STEM 분야 업적을 표창하는 미국 최고 훈장이다.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">머스크는 같은 날 테라팹 ZERO doubt, V2 FCC 승인, $4,000억 파이낸싱이 겹쳤다.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">스페이스X는 NASA·국방부·상무부 등 정부 계약 잔고가 두껍다.</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">정관계 유착 강화는 규제 환경 완화와 조달 계약 수주에 유리하다.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* 훈장과 주가를 한 트리거로 부르지 않는다 — 사업 뉴스가 트리거다</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#061520" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#60a5fa">핵심 포인트</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">정부 신뢰도 상승은 스페이스X 정부 조달 협상력 향상으로 이어진다.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">테슬라의 자율주행·에너지 규제 환경도 정치적 지지를 등에 업는다.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">에너지·우주·AI가 한 인물 포트폴리오 안에 있는 것이 시너지 논거다.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">정치 이벤트와 기업 실적은 다른 칸 — 조달 계약 날짜가 더 중요하다.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#2563eb">시상 날짜와 계약 수주가 겹치면 정치·사업 시너지가 현실화된다.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · MACRO · SPCX · TSLA</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">조달 계약이 실제 매출로 내려오는 날짜가 훈장보다 중요한 달력이다</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

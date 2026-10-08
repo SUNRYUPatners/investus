@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#031209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#10b981"/><stop offset="100%" style="stop-color:#047857"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="120" height="42" rx="21" fill="#10b98122" stroke="#10b981" stroke-width="1.5"/>
+  <text x="100" y="44" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#10b981" text-anchor="middle">TSLA</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#f9fafb" text-anchor="middle">ARK Invest's Biggest</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#10b981" text-anchor="middle">Robotaxi Bet: Tesla at $377.47</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#041a0a" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Cathie Wood's largest single robotaxi position</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#10b981" text-anchor="middle">$377.47</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Current stock price — ARKQ top holding at 10.86% weight</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#041a0a" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#031209" stroke="#10b981" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Tesla price</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#10b981" text-anchor="middle">$377.47</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">As of 2026.10.08</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">ARK portfolio basis</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#031209" stroke="#047857" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">ARKQ weight</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#047857" text-anchor="middle">10.86%</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">No.1 in ARKQ</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Robotics ETF</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#031209" stroke="#10b981" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Key drivers</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#10b981" text-anchor="middle">Energy+Cybercab</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Two growth pillars</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">ARK upside scenario</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">Background</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">ARK's price target is based on robotaxi monetization and energy expansion.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">Wedbush $600, MS base $400/bull $840, ARK at current $377 are the comps.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">Austin Cybercab 800 sightings are one of the field signals behind ARK's view.</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">Q3 earnings October 21 — robotaxi commentary is the next calendar item.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* Do not average three house targets — each comes from different assumptions</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#031209" stroke="#10b981" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#10b981">Key Points</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">ARK sees Tesla as the vehicle AI platform fastest to reach robotaxi stage.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">$377.47 is current price — distance to $400/$600/$840 reflects each premise.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">Energy division and Cybercab as independent growth pillars beyond robotaxi.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">ARK's position is ARK's conviction, not the broad market's consensus.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#047857">Robotaxi commercialization timeline is the shared test across all three targets.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · TSLA · ARK Invest</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">Q3 earnings October 21 is the next calendar item for the robotaxi thesis</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

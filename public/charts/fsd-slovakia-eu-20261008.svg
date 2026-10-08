@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#021209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#34d399"/><stop offset="100%" style="stop-color:#059669"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="120" height="42" rx="21" fill="#34d39922" stroke="#34d399" stroke-width="1.5"/>
+  <text x="100" y="44" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#34d399" text-anchor="middle">TSLA</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#f9fafb" text-anchor="middle">슬로바키아 FSD 승인</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#34d399" text-anchor="middle">EU 전역 확장 며칠 안에 완료</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#02260f" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">유럽 FSD 진출 첫 공식 거점</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="80" font-weight="900" fill="#34d399" text-anchor="middle">FSD EU</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">슬로바키아 → EU 전역 — 독일 교통장관도 전역 승인 지지</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#02260f" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#021209" stroke="#34d399" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">첫 진출국</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#34d399" text-anchor="middle">슬로바키아</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">EU 회원국</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">FSD 감독 버전 첫 승인</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#021209" stroke="#059669" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">다음 단계</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#059669" text-anchor="middle">EU 전역</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">며칠 안에 완료</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">공식 승인 준비 완료</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#021209" stroke="#34d399" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">지지 세력</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#34d399" text-anchor="middle">독일 교통부</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">장관 직접 지지</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">독자 경로 검토 의사</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">배경 및 맥락</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">FSD는 지금까지 북미와 중국에서만 운용됐다.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">유럽은 규제가 엄격해 진입이 늦어졌으나 이제 마무리 단계다.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">슬로바키아 단독 승인과 EU 전역 공문은 법적 효력이 다르다.</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">독일 교통장관 발언은 정치 지지이지 기술 승인이 아니다.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* EU 공문이 나오면 유럽 구독 단가 가정이 올라간다</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#02180a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#34d399">핵심 포인트</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">EU FSD 확대는 테슬라 구독 매출을 대륙 규모로 여는 전환점이다.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">비영어권·비북미 FSD 첫 공식 승인으로 글로벌 확장 경로 확인.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">유럽 FSD 구독 단가는 북미 대비 동등 혹은 이상일 가능성이 있다.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">독일 장관 지지로 대형 시장 진입 속도가 빨라질 수 있다.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#059669">EU 전역 공문이 나올 때 하우스 목표 400-840달러 폭이 좁아진다.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · TSLA · FSD Europe</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">슬로바키아 1개국과 EU 전역 공문은 법적 효력이 다른 칸이다</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

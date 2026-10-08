@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.10.08 한장 요약 · 11건</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="114" width="960" height="100" rx="14" fill="#130a2a" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="114" width="8" height="100" rx="4" fill="#c084fc"/>
+  <text x="116" y="154" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc">① 머스크 "ZERO doubt" — 테라팹 파트너십 공식화</text>
+  <text x="116" y="186" font-family="Arial" font-size="20" fill="#9ca3af">젠슨 황 · 루퍼 Bio-Tan · 인텔이 테라팹 일원으로 확인됨</text>
+  <text x="985" y="170" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="end">SPCX·TSLA</text>
+  <rect x="60" y="222" width="960" height="100" rx="14" fill="#0e0820" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="222" width="8" height="100" rx="4" fill="#a78bfa"/>
+  <text x="116" y="262" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#a78bfa">② FCC, 스타링크 V2 위성 15,000기 추가 운용 승인</text>
+  <text x="116" y="294" font-family="Arial" font-size="20" fill="#9ca3af">2세대 위성 대역폭은 V1 대비 최대 100배 향상 예정</text>
+  <text x="985" y="278" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="end">×100</text>
+  <rect x="60" y="330" width="960" height="100" rx="14" fill="#0a0518" stroke="#8b5cf6" stroke-width="2"/>
+  <rect x="60" y="330" width="8" height="100" rx="4" fill="#8b5cf6"/>
+  <text x="116" y="370" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#8b5cf6">③ SpaceX, 아폴로 글로벌 $4,000억 투자 유치 확정</text>
+  <text x="116" y="402" font-family="Arial" font-size="20" fill="#9ca3af">민간 우주 역사상 최대 규모의 사모펀드 단일 투자</text>
+  <text x="985" y="386" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#8b5cf6" text-anchor="end">$4,000억</text>
+  <rect x="60" y="438" width="960" height="100" rx="14" fill="#021209" stroke="#34d399" stroke-width="2"/>
+  <rect x="60" y="438" width="8" height="100" rx="4" fill="#34d399"/>
+  <text x="116" y="478" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#34d399">④ 테슬라 FSD, 슬로바키아 출시 후 EU 전역 확장 추진</text>
+  <text x="116" y="510" font-family="Arial" font-size="20" fill="#9ca3af">슬로바키아가 유럽 시장 첫 공식 거점으로 확인됨</text>
+  <text x="985" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#34d399" text-anchor="end">FSD EU</text>
+  <rect x="60" y="546" width="960" height="100" rx="14" fill="#021a0e" stroke="#2dd4bf" stroke-width="2"/>
+  <rect x="60" y="546" width="8" height="100" rx="4" fill="#2dd4bf"/>
+  <text x="116" y="586" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#2dd4bf">⑤ 테슬라 Halloween 2026 특별 업데이트 출시</text>
+  <text x="116" y="618" font-family="Arial" font-size="20" fill="#9ca3af">음향 · 조명 · 디스플레이 · 사운드트랙 4종 세트 적용</text>
+  <text x="985" y="602" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#2dd4bf" text-anchor="end">4종</text>
+  <rect x="60" y="654" width="960" height="100" rx="14" fill="#021209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="654" width="8" height="100" rx="4" fill="#4ade80"/>
+  <text x="116" y="694" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80">⑥ 사이버캡, 오스틴 거리 목격 횟수 800회 기록</text>
+  <text x="116" y="726" font-family="Arial" font-size="20" fill="#9ca3af">단일 도시 기준 로보택시 차량 목격 집계 역대 최다</text>
+  <text x="985" y="710" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">800회</text>
+  <rect x="60" y="762" width="960" height="100" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="762" width="8" height="100" rx="4" fill="#f59e0b"/>
+  <text x="116" y="802" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f59e0b">⑦ ARKQ 내 TSLA·SPCX 합산 비중 20.1% 기록</text>
+  <text x="116" y="834" font-family="Arial" font-size="20" fill="#9ca3af">테슬라 10.86% + 스페이스X 9.24% 합산 집계</text>
+  <text x="985" y="818" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f59e0b" text-anchor="end">20.1%</text>
+  <rect x="60" y="870" width="960" height="100" rx="14" fill="#1a0a10" stroke="#fb7185" stroke-width="2"/>
+  <rect x="60" y="870" width="8" height="100" rx="4" fill="#fb7185"/>
+  <text x="116" y="910" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185">⑧ 미국 30년 고정 모기지 금리, 7.63%로 재반등</text>
+  <text x="116" y="942" font-family="Arial" font-size="20" fill="#9ca3af">고금리 장기화로 주택 구매 수요 위축 재부상</text>
+  <text x="985" y="926" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#fb7185" text-anchor="end">7.63%</text>
+  <rect x="60" y="978" width="960" height="100" rx="14" fill="#0a1505" stroke="#a3e635" stroke-width="2"/>
+  <rect x="60" y="978" width="8" height="100" rx="4" fill="#a3e635"/>
+  <text x="116" y="1018" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#a3e635">⑨ 엔비디아 NVLink Fusion, $1,200억 파트너십 체결</text>
+  <text x="116" y="1050" font-family="Arial" font-size="20" fill="#9ca3af">AI 인프라 상호연결 표준으로 산업 전반 채택 가속</text>
+  <text x="985" y="1034" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a3e635" text-anchor="end">$1,200억</text>
+  <rect x="60" y="1086" width="960" height="100" rx="14" fill="#061520" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="1086" width="8" height="100" rx="4" fill="#60a5fa"/>
+  <text x="116" y="1126" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa">⑩ 트럼프 대통령, 머스크에 국가 과학기술 훈장 수여</text>
+  <text x="116" y="1158" font-family="Arial" font-size="20" fill="#9ca3af">정관계 협력 강화로 TSLA·SPCX 정책 수혜 전망</text>
+  <text x="985" y="1142" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="end">훈장</text>
+  <rect x="60" y="1194" width="960" height="100" rx="14" fill="#031209" stroke="#10b981" stroke-width="2"/>
+  <rect x="60" y="1194" width="8" height="100" rx="4" fill="#10b981"/>
+  <text x="116" y="1234" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#10b981">⑪ ARK 인베스트, 테슬라 로보택시 목표가 $377.47</text>
+  <text x="116" y="1266" font-family="Arial" font-size="20" fill="#9ca3af">핵심 상승 동인은 에너지 사업부 + 사이버캡</text>
+  <text x="985" y="1250" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#10b981" text-anchor="end">$377.47</text>
+  <text x="540" y="1316" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">ZERO doubt · V2 ×100 · $4,000억 · FSD EU · 800회 · 20.1% · 7.63% · $1,200억 · $377.47</text>
+  <rect x="0" y="1328" width="1080" height="22" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1344" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

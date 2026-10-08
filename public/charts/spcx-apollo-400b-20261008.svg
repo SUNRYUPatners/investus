@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0518"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#8b5cf6"/><stop offset="100%" style="stop-color:#6d28d9"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="18" width="120" height="42" rx="21" fill="#8b5cf622" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="100" y="44" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#8b5cf6" text-anchor="middle">SPCX</text>
+  <text x="540" y="45" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="890" y="18" width="154" height="42" rx="21" fill="#1f2937" stroke="#374151"/>
+  <text x="967" y="44" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2026.10.08</text>
+  <text x="540" y="116" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#f9fafb" text-anchor="middle">SpaceX, 아폴로 주도</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#8b5cf6" text-anchor="middle">$4,000억 파이낸싱 추진</text>
+  <line x1="80" y1="184" x2="1000" y2="184" stroke="#1e1040" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">엔비디아 칩 구매 목적 파이낸싱</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#8b5cf6" text-anchor="middle">$4,000억</text>
+  <text x="540" y="376" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">은행 대출 $1,000억 + 아폴로 사모신용 $3,000억 — 2026년 완료 목표</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1e1040" stroke-width="1"/>
+  <rect x="40" y="420" width="310" height="195" rx="14" fill="#0a0518" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="195" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">은행 대출</text>
+  <text x="195" y="516" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#8b5cf6" text-anchor="middle">$1,000억</text>
+  <text x="195" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">선순위 담보</text>
+  <text x="195" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">복수 은행 컨소시엄</text>
+  <rect x="385" y="420" width="310" height="195" rx="14" fill="#0a0518" stroke="#6d28d9" stroke-width="2"/>
+  <text x="540" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">사모신용</text>
+  <text x="540" y="516" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#6d28d9" text-anchor="middle">$3,000억</text>
+  <text x="540" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">아폴로 운용</text>
+  <text x="540" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">비공개 사모신용</text>
+  <rect x="730" y="420" width="310" height="195" rx="14" fill="#0a0518" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="885" y="460" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">완료 목표</text>
+  <text x="885" y="516" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#8b5cf6" text-anchor="middle">2026년</text>
+  <text x="885" y="552" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">연내 완료</text>
+  <text x="885" y="586" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">NVIDIA 칩 조달</text>
+  <rect x="40" y="632" width="1000" height="268" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="70" y="672" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#e2e8f0">배경 및 맥락</text>
+  <text x="70" y="714" font-family="Arial" font-size="22" fill="#d1d5db">아폴로 글로벌은 세계 최대 사모펀드 운용사 중 하나다.</text>
+  <text x="70" y="748" font-family="Arial" font-size="22" fill="#d1d5db">스페이스X는 IPO 없이 민간 자금조달로 성장을 이어 가고 있다.</text>
+  <text x="70" y="782" font-family="Arial" font-size="22" fill="#d1d5db">같은 날 젠슨 황 테라팹 방문, FCC V2 승인도 겹쳤다.</text>
+  <text x="70" y="816" font-family="Arial" font-size="22" fill="#d1d5db">자금 조달 · 하드웨어 납품 · 위성 승인이 하루에 집중됐다.</text>
+  <text x="70" y="862" font-family="Arial" font-size="20" fill="#9ca3af">* 추진 중인 파이낸싱과 완료 자금을 같은 확정으로 읽지 않는다</text>
+  <rect x="40" y="918" width="1000" height="268" rx="16" fill="#10082a" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="70" y="958" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#8b5cf6">핵심 포인트</text>
+  <text x="70" y="1000" font-family="Arial" font-size="22" fill="#e2e8f0">비상장 구조에서 $4,000억 조달은 기업가치 희석 없이 성장을 산다.</text>
+  <text x="70" y="1034" font-family="Arial" font-size="22" fill="#e2e8f0">은행 대출과 아폴로 사모신용은 담보·조건이 달라 별도로 봐야 한다.</text>
+  <text x="70" y="1068" font-family="Arial" font-size="22" fill="#e2e8f0">설비투자 레버리지 구조는 연산 수익 확신에서 나오는 신호다.</text>
+  <text x="70" y="1102" font-family="Arial" font-size="22" fill="#e2e8f0">SPCX 간접 투자자는 이 파이낸싱이 기업가치 고정에 미치는 영향을 본다.</text>
+  <text x="70" y="1154" font-family="Arial" font-size="22" fill="#6d28d9">첫 칩 발주 규모 공시가 나오면 추정이 실제 칸으로 내려온다.</text>
+  <text x="540" y="1218" font-family="Arial" font-size="18" fill="#4b5563" text-anchor="middle">2026.10.08 · SPCX · SpaceX Financing</text>
+  <text x="540" y="1250" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">파이낸싱 목표와 실제 체결 완료는 다른 날짜다</text>
+  <rect x="0" y="1280" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1318" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
