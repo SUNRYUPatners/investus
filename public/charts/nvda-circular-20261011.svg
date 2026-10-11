@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#003300"/><stop offset="33%" stop-color="#00AA44"/><stop offset="67%" stop-color="#69FF97"/><stop offset="100%" stop-color="#00FF88"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#69FF97"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#000" text-anchor="middle">NVDA</text>
+<text x="540" y="130" font-family="Arial Black,Arial,sans-serif" font-size="130" fill="#69FF97" text-anchor="middle" font-weight="900">-6%</text>
+<text x="540" y="210" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">순환 파이낸싱 우려 재점화</text>
+<text x="540" y="258" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">반도체 섹터 $1조 증발 · AMD Micron Qualcomm -9%</text>
+<line x1="54" y1="290" x2="1026" y2="290" stroke="#30363D" stroke-width="2"/>
+
+<rect x="54" y="314" width="972" height="210" rx="16" fill="#161B22" stroke="#69FF97" stroke-width="1.5"/>
+<text x="540" y="360" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#69FF97" text-anchor="middle" font-weight="900">🔄 순환 파이낸싱이란?</text>
+<text x="540" y="402" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">엔비디아 → OpenAI $2,500억 보증 검토</text>
+<text x="540" y="440" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">OpenAI가 그 돈으로 엔비디아 칩 구매</text>
+<text x="540" y="478" font-family="Arial,sans-serif" font-size="22" fill="#FFC107" text-anchor="middle">수요가 유기적인지 구분 불가 → 우려</text>
+<text x="540" y="514" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">젠슨 황: 순환 파이낸싱 표현은 잘못됐다</text>
+
+<rect x="54" y="560" width="300" height="140" rx="16" fill="#161B22" stroke="#69FF97" stroke-width="1.5"/>
+<text x="204" y="598" font-family="Arial,sans-serif" font-size="20" fill="#69FF97" text-anchor="middle" font-weight="700">NVDA 낙폭</text>
+<text x="204" y="640" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">-6%</text>
+<text x="204" y="668" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">하루 급락</text>
+<rect x="390" y="560" width="300" height="140" rx="16" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="540" y="598" font-family="Arial,sans-serif" font-size="20" fill="#FF4D6D" text-anchor="middle" font-weight="700">섹터 손실</text>
+<text x="540" y="640" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">-$1T</text>
+<text x="540" y="668" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">반도체 지수</text>
+<rect x="726" y="560" width="300" height="140" rx="16" fill="#161B22" stroke="#FFC107" stroke-width="1.5"/>
+<text x="876" y="598" font-family="Arial,sans-serif" font-size="20" fill="#FFC107" text-anchor="middle" font-weight="700">OpenAI 보증</text>
+<text x="876" y="640" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$2,500억</text>
+<text x="876" y="668" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">검토 규모</text>
+
+<rect x="54" y="736" width="972" height="180" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="780" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#69FF97" text-anchor="middle" font-weight="900">젠슨 황 입장</text>
+<text x="540" y="820" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">OpenAI가 임대료 직접 부담 구조</text>
+<text x="540" y="858" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">2030년 OpenAI 컴퓨팅 구매: $6,000억</text>
+<text x="540" y="896" font-family="Arial,sans-serif" font-size="22" fill="#8B949E" text-anchor="middle">별도 OpenAI 칩 $3,500억 자금 조달도 검토 중</text>
+
+<rect x="54" y="952" width="972" height="170" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="996" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#69FF97" text-anchor="middle" font-weight="900">하우스 뷰</text>
+<text x="540" y="1036" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">씨티: 매수 $315 유지 — 수요 체력 아닌 구조 불안</text>
+<text x="540" y="1074" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">ARK: 연평균 40%+ 인프라 지출 전망 유지</text>
+<text x="540" y="1110" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">금리 추가 상승 시 같은 우려 재점화 가능</text>
+
+<line x1="54" y1="1152" x2="1026" y2="1152" stroke="#30363D" stroke-width="1"/>
+<text x="54" y="1196" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">주의: 국채 금리+유가 동시 상승 → 반도체 추가 압박 리스크</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

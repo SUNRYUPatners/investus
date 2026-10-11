@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FF4D6D"/><stop offset="50%" stop-color="#FF8C42"/><stop offset="100%" stop-color="#FFC107"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="154" height="36" rx="8" fill="#FF4D6D"/>
+<text x="131" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA · FSD</text>
+<text x="540" y="140" font-family="Arial Black,Arial,sans-serif" font-size="100" fill="#FF4D6D" text-anchor="middle" font-weight="900">v14.3.11</text>
+<text x="540" y="210" font-family="Arial Black,Arial,sans-serif" font-size="36" fill="#fff" text-anchor="middle" font-weight="900">자동 충돌 회피 추가</text>
+<text x="540" y="258" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">업데이트 2026.33.5 · 10월 7일 배포 시작</text>
+<line x1="54" y1="290" x2="1026" y2="290" stroke="#30363D" stroke-width="2"/>
+
+<rect x="54" y="314" width="972" height="200" rx="16" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="540" y="362" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FF4D6D" text-anchor="middle" font-weight="900">⚡ Automatic Collision Evasion</text>
+<text x="540" y="406" font-family="Arial,sans-serif" font-size="25" fill="#E6EDF3" text-anchor="middle">수동 주행 중 충돌 감지 시 FSD 자동 개입</text>
+<text x="540" y="444" font-family="Arial,sans-serif" font-size="25" fill="#E6EDF3" text-anchor="middle">스티어링 또는 제동 자동 조작</text>
+<text x="540" y="482" font-family="Arial,sans-serif" font-size="22" fill="#FFC107" text-anchor="middle">HW4(AI4) 탑재 차량 전용</text>
+<text x="540" y="508" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">HW3 차량은 v14.3 Lite 동시 배포</text>
+
+<rect x="54" y="546" width="460" height="140" rx="16" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="284" y="584" font-family="Arial,sans-serif" font-size="20" fill="#FF4D6D" text-anchor="middle" font-weight="700">HW4 신기능</text>
+<text x="284" y="626" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">자동충돌회피</text>
+<text x="284" y="654" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Collision Evasion</text>
+<rect x="566" y="546" width="460" height="140" rx="16" fill="#161B22" stroke="#FF8C42" stroke-width="1.5"/>
+<text x="796" y="584" font-family="Arial,sans-serif" font-size="20" fill="#FF8C42" text-anchor="middle" font-weight="700">HW3 버전</text>
+<text x="796" y="626" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">v14.3 Lite</text>
+<text x="796" y="654" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">동시 배포</text>
+
+<rect x="54" y="722" width="972" height="160" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="766" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#FFC107" text-anchor="middle" font-weight="900">Vehicle-to-Home 추가</text>
+<text x="540" y="806" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">정전 시 차량 배터리 → 파워월 연동 → 집 전력 공급</text>
+<text x="540" y="842" font-family="Arial,sans-serif" font-size="22" fill="#8B949E" text-anchor="middle">플러그 연결 상태에서 자동 작동</text>
+<text x="540" y="874" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">v14.3.10과 출시 노트 동일 — 버그 수정·안정화 주</text>
+
+<rect x="54" y="918" width="972" height="200" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="962" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#FF4D6D" text-anchor="middle" font-weight="900">하우스 뷰</text>
+<text x="540" y="1002" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">웨드부시: 사고율↓ → 규제 설득 강화 → 구독 갱신↑</text>
+<text x="540" y="1040" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">모건스탠리: 21일 실적서 구독자 수 확인이 관건</text>
+<text x="540" y="1078" font-family="Arial,sans-serif" font-size="22" fill="#8B949E" text-anchor="middle">HW4 비중 증가 속도 = 구독 전환 분모</text>
+<text x="540" y="1110" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">목표: 웨드부시 $600 · 모건스탠리 OW</text>
+
+<line x1="54" y1="1150" x2="1026" y2="1150" stroke="#30363D" stroke-width="1"/>
+<text x="54" y="1194" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">다음 확인: 10.21 실적 FSD 구독자 공개 여부</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

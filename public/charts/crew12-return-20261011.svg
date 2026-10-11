@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#023E8A"/><stop offset="33%" stop-color="#0096C7"/><stop offset="67%" stop-color="#00B4D8"/><stop offset="100%" stop-color="#90E0EF"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#00B4D8"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<text x="540" y="128" font-family="Arial Black,Arial,sans-serif" font-size="86" fill="#00B4D8" text-anchor="middle" font-weight="900">7H 50M</text>
+<text x="540" y="205" font-family="Arial Black,Arial,sans-serif" font-size="36" fill="#fff" text-anchor="middle" font-weight="900">미국 유인 ISS 도킹 최단 기록</text>
+<text x="540" y="252" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">Crew-13 · 2026년 10월 1일 발사</text>
+<line x1="54" y1="284" x2="1026" y2="284" stroke="#30363D" stroke-width="2"/>
+
+<rect x="54" y="308" width="972" height="220" rx="16" fill="#161B22" stroke="#00B4D8" stroke-width="1.5"/>
+<text x="540" y="354" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#00B4D8" text-anchor="middle" font-weight="900">🚀 Crew-13 승무원 구성</text>
+<text x="540" y="396" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">지휘관 Jessica Watkins (NASA 2회 탑승)</text>
+<text x="540" y="434" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">조종사 Luke Delaney (NASA)</text>
+<text x="540" y="472" font-family="Arial,sans-serif" font-size="22" fill="#48CAE4" text-anchor="middle">+ Joshua Kutryk (캐나다) · Sergey Teteryatnikov (러시아)</text>
+<text x="540" y="510" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">ISS 약 6개월 체류 예정</text>
+
+<rect x="54" y="564" width="460" height="140" rx="16" fill="#161B22" stroke="#00B4D8" stroke-width="1.5"/>
+<text x="284" y="602" font-family="Arial,sans-serif" font-size="20" fill="#00B4D8" text-anchor="middle" font-weight="700">Crew-13 도킹</text>
+<text x="284" y="644" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">7H 50M</text>
+<text x="284" y="672" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">미국 최단 기록</text>
+<rect x="566" y="564" width="460" height="140" rx="16" fill="#161B22" stroke="#48CAE4" stroke-width="1.5"/>
+<text x="796" y="602" font-family="Arial,sans-serif" font-size="20" fill="#48CAE4" text-anchor="middle" font-weight="700">Crew-12 귀환</text>
+<text x="796" y="644" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">8개월</text>
+<text x="796" y="672" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">10월 8일 착수</text>
+
+<rect x="54" y="740" width="972" height="180" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="784" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#00B4D8" text-anchor="middle" font-weight="900">10월 발사 스케줄</text>
+<text x="540" y="824" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">10.10: SDA 위성 21기 성공 (4일 취소 후 재시도)</text>
+<text x="540" y="862" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">10.12: 스타링크 · 10.13: CRS-35 화물</text>
+<text x="540" y="900" font-family="Arial,sans-serif" font-size="22" fill="#8B949E" text-anchor="middle">10.15: USSF-481 예정</text>
+
+<rect x="54" y="956" width="972" height="160" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="1000" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#00B4D8" text-anchor="middle" font-weight="900">하우스 뷰</text>
+<text x="540" y="1040" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">모건스탠리: 도킹 효율↑ → NASA 계약 갱신 근거</text>
+<text x="540" y="1078" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">씨티: 발사 빈도·성공 기록 = IPO 멀티플 기반</text>
+<text x="540" y="1110" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">목표: 모건스탠리 $300 · 씨티 $900</text>
+
+<line x1="54" y1="1150" x2="1026" y2="1150" stroke="#30363D" stroke-width="1"/>
+<text x="54" y="1194" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Falcon Heavy NRO-97 10.01 성공 · NRO 첫 Falcon Heavy 임무</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

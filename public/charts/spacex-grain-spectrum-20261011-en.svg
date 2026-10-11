@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#023E8A"/><stop offset="33%" stop-color="#0096C7"/><stop offset="67%" stop-color="#00B4D8"/><stop offset="100%" stop-color="#48CAE4"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#00B4D8"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<text x="540" y="130" font-family="Arial Black,Arial,sans-serif" font-size="96" fill="#00B4D8" text-anchor="middle" font-weight="900">$8B</text>
+<text x="540" y="210" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">800MHz Spectrum Acquisition</text>
+<text x="540" y="258" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">Grain Management · Nationwide · FCC approval pending</text>
+<line x1="54" y1="290" x2="1026" y2="290" stroke="#30363D" stroke-width="2"/>
+<rect x="54" y="314" width="972" height="210" rx="16" fill="#161B22" stroke="#00B4D8" stroke-width="1.5"/>
+<text x="540" y="360" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#00B4D8" text-anchor="middle" font-weight="900">📡 Standalone Mobile Carrier</text>
+<text x="540" y="402" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">Direct competition: AT&amp;T · Verizon · T-Mobile</text>
+<text x="540" y="440" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">800MHz penetrates walls — indoor coverage</text>
+<text x="540" y="478" font-family="Arial,sans-serif" font-size="22" fill="#48CAE4" text-anchor="middle">14MHz paired · Nationwide coverage</text>
+<text x="540" y="514" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">Currently relies on T-Mobile spectrum — this ends that</text>
+<rect x="54" y="560" width="300" height="140" rx="16" fill="#161B22" stroke="#00B4D8" stroke-width="1.5"/>
+<text x="204" y="598" font-family="Arial,sans-serif" font-size="20" fill="#00B4D8" text-anchor="middle" font-weight="700">DEAL VALUE</text>
+<text x="204" y="640" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$8B</text>
+<text x="204" y="668" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">$8 Billion</text>
+<rect x="390" y="560" width="300" height="140" rx="16" fill="#161B22" stroke="#48CAE4" stroke-width="1.5"/>
+<text x="540" y="598" font-family="Arial,sans-serif" font-size="20" fill="#48CAE4" text-anchor="middle" font-weight="700">FREQUENCY</text>
+<text x="540" y="640" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">800MHz</text>
+<text x="540" y="668" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Low-band nationwide</text>
+<rect x="726" y="560" width="300" height="140" rx="16" fill="#161B22" stroke="#0096C7" stroke-width="1.5"/>
+<text x="876" y="598" font-family="Arial,sans-serif" font-size="20" fill="#0096C7" text-anchor="middle" font-weight="700">BANDWIDTH</text>
+<text x="876" y="640" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">14MHz</text>
+<text x="876" y="668" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Paired nationwide</text>
+<rect x="54" y="736" width="972" height="180" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="780" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#00B4D8" text-anchor="middle" font-weight="900">Satellite + Ground Spectrum Together</text>
+<text x="540" y="820" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">FCC-approved Starlink V2: 15,000 satellites</text>
+<text x="540" y="858" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">+ This 800MHz terrestrial spectrum</text>
+<text x="540" y="896" font-family="Arial,sans-serif" font-size="22" fill="#8B949E" text-anchor="middle">First carrier via satellite — no ground towers</text>
+<rect x="54" y="952" width="972" height="170" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="996" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#00B4D8" text-anchor="middle" font-weight="900">HOUSE VIEWS</text>
+<text x="540" y="1036" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">MS: Subscription ceiling re-rating event</text>
+<text x="540" y="1074" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">Citi SPCX $900 · FCC approval + subscribers needed</text>
+<text x="540" y="1110" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">Post-close subscriber metrics are the real thesis</text>
+<line x1="54" y1="1152" x2="1026" y2="1152" stroke="#30363D" stroke-width="1"/>
+<text x="54" y="1196" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Next: FCC approval · Subscriber count · ARPU</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

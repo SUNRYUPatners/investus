@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T11OCT = 1791673200000; // 2026-10-11 08:00 KST
 const T08OCT = 1791414000000; // 2026-10-08 08:00 KST
 const T07OCT = 1791327600000; // 2026.10.07 08:00 KST
 const T06OCT = 1791241200000; // 2026.10.06 08:00 KST
@@ -138,7 +139,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T08OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T11OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -157,6 +158,52 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-11 주말 신규 ────────────────
+  { id: 122212, symbol: "TSLA", nickname: "웨이코직관러", holdingLabel: "관심종목",
+    content: "테슬라 로드스터 공개 10월 15일 웨이코로 미뤄졌대. 악천후 때문에 야외 행사 날짜 바꾼 거라는데 원래 10월 1일이었잖아. 스페이스X 스러스터로 뜨는 거 꼭 보고 싶은데 15일도 비 안 오길 바람.",
+    createdAt: T11OCT + 8*60_000, likes: 28, comments: 0 },
+  { id: 122213, symbol: "TSLA", nickname: "부양청년", holdingLabel: "관심종목",
+    content: "차가 진짜로 공중에 뜬대. 콜드가스 스러스터, 스페이스X 로켓에 쓰던 기술을 차에 박은 거라고. 사람도 안 태우고 원격으로 잠깐 호버링 시연. 이게 되면 테슬라가 스포츠카가 아니라 달리는 로켓이 되는 거 아님?",
+    createdAt: T11OCT + 16*60_000, likes: 35, comments: 0 },
+  { id: 122214, symbol: "TSLA", nickname: "충돌방어대", holdingLabel: "관심종목",
+    content: "FSD v14.3.11 자동 충돌 회피 나왔는데 HW4 전용. 수동 운전 중에도 충돌 직전 FSD가 알아서 핸들이나 브레이크 잡는다는 거. 이거 진짜 사고 통계가 달라질 것 같은데.",
+    createdAt: T11OCT + 24*60_000, likes: 26, comments: 0 },
+  { id: 122215, symbol: "TSLA", nickname: "HW3서러움", holdingLabel: "관심종목",
+    content: "이번에 HW3도 v14.3 Lite 동시 배포됐다는데 반갑긴 한데 자동 충돌 회피는 HW4만. 업그레이드 비용 다시 생각해봐야 하나ㅋㅋ. 어쨌든 Lite라도 같이 받은 게 어디야.",
+    createdAt: T11OCT + 32*60_000, likes: 22, comments: 0 },
+  { id: 122216, symbol: "SPCX", nickname: "통신판뒤집기", holdingLabel: "관심종목",
+    content: "스페이스X가 Grain Management 800MHz 스펙트럼 80억 달러에 사겠다고 했대. 저주파라 벽도 뚫고 실내도 된다는데. 이제 진짜 독립 이통사 되는 거야? 기지국도 없이 위성으로?",
+    createdAt: T11OCT + 40*60_000, likes: 31, comments: 0 },
+  { id: 122217, symbol: "SPCX", nickname: "버라이즌떨어라", holdingLabel: "관심종목",
+    content: "AT&T 버라이즌 T-모바일이 다 긴장하겠지. 스타링크가 자체 스펙트럼 확보하면 T-모바일 빌려 쓰던 거 끝나고 직접 경쟁이라는데. FCC 승인 나면 그때 진짜 판 바뀌는 거 아님?",
+    createdAt: T11OCT + 48*60_000, likes: 29, comments: 0 },
+  { id: 122218, symbol: "NVDA", nickname: "순환공포증", holdingLabel: "관심종목",
+    content: "엔비디아 6% 빠졌대. OpenAI 오하이오 데이터센터에 2,500억 달러 보증 검토한다는 보도 나오자마자. 엔비디아가 자기 최대 고객한테 돈 빌려주는 구조가 순환 파이낸싱 우려래. AMD 마이크론 퀄컴도 9%씩 떨어짐.",
+    createdAt: T11OCT + 56*60_000, likes: 32, comments: 0 },
+  { id: 122219, symbol: "NVDA", nickname: "젠슨믿어요", holdingLabel: "관심종목",
+    content: "젠슨 황은 순환 파이낸싱 아니라고 했잖아. OpenAI가 임대료 직접 내는 거고 엔비디아가 수익 보증하는 게 아니라고. 2030년까지 OpenAI가 엔비디아 칩 6,000억 달러어치 산다는데 이게 수요 아님?",
+    createdAt: T11OCT + 64*60_000, likes: 24, comments: 0 },
+  { id: 122220, symbol: "SPCX", nickname: "GPU임대사장님", holdingLabel: "관심종목",
+    content: "구글이 스페이스X한테 엔비디아 GPU 11만 개 월 9억 2천만 달러에 빌리기 시작했대. 2029년 6월까지 총 304억 달러. 스페이스X가 GPU 사서 구글한테 임대해주는 구조면 스페이스X는 위성·발사·통신·데이터센터까지 다 되는 회사네.",
+    createdAt: T11OCT + 72*60_000, likes: 33, comments: 0 },
+  { id: 122221, symbol: "SPCX", nickname: "우주로복귀", holdingLabel: "관심종목",
+    content: "Crew-12 4명이 드디어 8개월 만에 돌아왔다. ISS에서 8개월이면 진짜 긴 건데. Crew-13은 10월 1일 발사해서 7시간 50분 만에 ISS 도킹했다는데 그게 미국 유인 우주비행 역사상 제일 빠른 기록이라고.",
+    createdAt: T11OCT + 80*60_000, likes: 27, comments: 0 },
+  { id: 122222, symbol: "SPCX", nickname: "7시간반전설", holdingLabel: "관심종목",
+    content: "7시간 50분이 얼마나 빠른 거냐면 원래 러시아 소유즈가 빠른 편이었는데 그것보다도 빠르다는 거지. 궤도 정밀도 올려서 공전 횟수 줄인 거래. 다음 발사는 10.12 스타링크, 10.13 CRS-35, 10.15 USSF-481.",
+    createdAt: T11OCT + 88*60_000, likes: 25, comments: 0 },
+  { id: 122223, symbol: "TSLA", nickname: "21일카운트", holdingLabel: "관심종목",
+    content: "테슬라 3분기 실적이 10월 21일인데 로드스터 15일 공개 직후야. FSD 구독자 수 공개 여부, 로보택시 타임라인 코멘트 나올지. 이번 실적이 방향 잡는 거 아닐까. 형들은 21일 전에 채우는 쪽이야?",
+    createdAt: T11OCT + 96*60_000, likes: 30, comments: 0 },
+  { id: 122224, symbol: "NVDA", nickname: "반도체1조", holdingLabel: "관심종목",
+    content: "하루에 반도체 섹터 1조 달러 날아갔다는 거 봐. 금리 올라가고 유가 올라가고 순환 파이낸싱 우려까지 겹쳤는데 씨티는 그래도 목표 315달러 유지. 수요 체력은 멀쩡하다는 거지.",
+    createdAt: T11OCT + 104*60_000, likes: 23, comments: 0 },
+  { id: 122225, symbol: "SPCX", nickname: "IPO저울질", holdingLabel: "관심종목",
+    content: "구글이 304억 달러짜리 계약 맺어주고 스펙트럼도 사고 Crew-13 최단 기록까지. IPO 전에 이 모든 게 S-1에 박히는 거잖아. 모건스탠리 300달러가 낮은 거 아닐까하는 생각 드는 날임.",
+    createdAt: T11OCT + 112*60_000, likes: 28, comments: 0 },
+  { id: 122226, symbol: "MACRO", nickname: "AI투자흐름", holdingLabel: "관심종목",
+    content: "구글이 304억, OpenAI 오하이오 데이터센터, 마이크로소프트 Surface AI, 다 같은 주에 나왔어. 순환 파이낸싱 걱정이 있어도 AI 인프라 실제 집행이 멈춘 게 아니라 더 빨라지고 있잖아. 방향은 맞다고 봄.",
+    createdAt: T11OCT + 120*60_000, likes: 21, comments: 0 },
   // ── 2026-10-08 신규 ────────────────
   { id: 122197, symbol: "SPCX", nickname: "젠슨루퍼팬", holdingLabel: "관심종목",
     content: "젠슨황·루퍼·인텔이 테라팹 한 지붕에 들어왔대. 머스크가 ZERO doubt 올렸는데 세 회사가 동시에 붙은 거 보면 이게 진짜 플랫폼 게임이네.",

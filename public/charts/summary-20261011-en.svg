@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#A855F7"/><stop offset="20%" stop-color="#EC4899"/><stop offset="40%" stop-color="#F97316"/><stop offset="60%" stop-color="#EAB308"/><stop offset="80%" stop-color="#22C55E"/><stop offset="100%" stop-color="#06B6D4"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="102" height="36" rx="8" fill="#A855F7"/>
+<text x="105" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">WEEKLY</text>
+<text x="54" y="110" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">OCT 11, 2026</text>
+<text x="54" y="168" font-family="Arial,sans-serif" font-size="28" fill="#8B949E">Tesla · SpaceX · Big Tech</text>
+<line x1="54" y1="192" x2="1026" y2="192" stroke="#30363D" stroke-width="2"/>
+<text x="54" y="230" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#FF4D6D" font-weight="900">1</text>
+<line x1="110" y1="198" x2="110" y2="246" stroke="#FF4D6D" stroke-width="3"/>
+<text x="130" y="200" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Roadster Oct 15 reveal — cold-gas thruster hover demo</text>
+<text x="130" y="230" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">teased</text>
+<text x="54" y="390" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#FF4D6D" font-weight="900">2</text>
+<line x1="110" y1="358" x2="110" y2="406" stroke="#FF4D6D" stroke-width="3"/>
+<text x="130" y="360" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">FSD v14.3.11 Auto Collision Evasion — HW4 only, HW3 Lite</text>
+<text x="130" y="390" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">simultaneous</text>
+<text x="54" y="550" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#00B4D8" font-weight="900">3</text>
+<line x1="110" y1="518" x2="110" y2="566" stroke="#00B4D8" stroke-width="3"/>
+<text x="130" y="520" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">SpaceX $8B 800MHz spectrum buy — standalone carrier vs.</text>
+<text x="130" y="550" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">AT&amp;T/Verizon</text>
+<text x="54" y="710" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#69FF97" font-weight="900">4</text>
+<line x1="110" y1="678" x2="110" y2="726" stroke="#69FF97" stroke-width="3"/>
+<text x="130" y="680" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Nvidia -6% — OpenAI $250B backstop sparks circular</text>
+<text x="130" y="710" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">financing fears</text>
+<text x="54" y="870" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#00B4D8" font-weight="900">5</text>
+<line x1="110" y1="838" x2="110" y2="886" stroke="#00B4D8" stroke-width="3"/>
+<text x="130" y="870" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Google-SpaceX $30.4B GPU deal live — $920M/month, 110K GPUs</text>
+<text x="54" y="1030" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#00B4D8" font-weight="900">6</text>
+<line x1="110" y1="998" x2="110" y2="1046" stroke="#00B4D8" stroke-width="3"/>
+<text x="130" y="1000" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Crew-12 back after 8 months / Crew-13 sets US docking</text>
+<text x="130" y="1030" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">record: 7h 50m</text>
+<line x1="54" y1="1196" x2="1026" y2="1196" stroke="#30363D" stroke-width="1"/>
+<text x="54" y="1238" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Watch: Oct 15 Roadster reveal  |  Oct 21 Tesla Q3 earnings</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

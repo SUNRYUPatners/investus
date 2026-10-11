@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#023E8A"/><stop offset="33%" stop-color="#0096C7"/><stop offset="67%" stop-color="#00B4D8"/><stop offset="100%" stop-color="#48CAE4"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#00B4D8"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<text x="540" y="130" font-family="Arial Black,Arial,sans-serif" font-size="96" fill="#00B4D8" text-anchor="middle" font-weight="900">$8B</text>
+<text x="540" y="210" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">800MHz 스펙트럼 인수</text>
+<text x="540" y="258" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">Grain Management · 미국 전역 · FCC 승인 대기</text>
+<line x1="54" y1="290" x2="1026" y2="290" stroke="#30363D" stroke-width="2"/>
+
+<rect x="54" y="314" width="972" height="210" rx="16" fill="#161B22" stroke="#00B4D8" stroke-width="1.5"/>
+<text x="540" y="360" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#00B4D8" text-anchor="middle" font-weight="900">📡 독립 이동통신사 진출</text>
+<text x="540" y="402" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">AT&amp;T · 버라이즌 · T-모바일과 직접 경쟁</text>
+<text x="540" y="440" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">800MHz 저주파 → 실내 벽 투과 강함</text>
+<text x="540" y="478" font-family="Arial,sans-serif" font-size="22" fill="#48CAE4" text-anchor="middle">페어 14MHz · 미국 전역 커버</text>
+<text x="540" y="514" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">현재는 T-모바일 주파수 임대 → 자체 스펙트럼 확보</text>
+
+<rect x="54" y="560" width="300" height="140" rx="16" fill="#161B22" stroke="#00B4D8" stroke-width="1.5"/>
+<text x="204" y="598" font-family="Arial,sans-serif" font-size="20" fill="#00B4D8" text-anchor="middle" font-weight="700">인수금액</text>
+<text x="204" y="640" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$8B</text>
+<text x="204" y="668" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">80억 달러</text>
+<rect x="390" y="560" width="300" height="140" rx="16" fill="#161B22" stroke="#48CAE4" stroke-width="1.5"/>
+<text x="540" y="598" font-family="Arial,sans-serif" font-size="20" fill="#48CAE4" text-anchor="middle" font-weight="700">주파수대</text>
+<text x="540" y="640" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">800MHz</text>
+<text x="540" y="668" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">저주파 전국</text>
+<rect x="726" y="560" width="300" height="140" rx="16" fill="#161B22" stroke="#0096C7" stroke-width="1.5"/>
+<text x="876" y="598" font-family="Arial,sans-serif" font-size="20" fill="#0096C7" text-anchor="middle" font-weight="700">대역폭</text>
+<text x="876" y="640" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">14MHz</text>
+<text x="876" y="668" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">페어 전역</text>
+
+<rect x="54" y="736" width="972" height="180" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="780" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#00B4D8" text-anchor="middle" font-weight="900">위성 + 지상 스펙트럼 동시 확보</text>
+<text x="540" y="820" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">FCC 승인 Starlink V2 15,000기 위성</text>
+<text x="540" y="858" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">+ 이번 800MHz 지상 스펙트럼</text>
+<text x="540" y="896" font-family="Arial,sans-serif" font-size="22" fill="#8B949E" text-anchor="middle">지상 기지국 없이 위성으로 이통사 최초 시도</text>
+
+<rect x="54" y="952" width="972" height="170" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="996" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#00B4D8" text-anchor="middle" font-weight="900">하우스 뷰</text>
+<text x="540" y="1036" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">모건스탠리: 구독 수익 천장 상향 재평가 이벤트</text>
+<text x="540" y="1074" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">씨티: 주당 $900 유지 · FCC 승인 후 가입자 확인</text>
+<text x="540" y="1110" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">거래 종결 이후 가입자 지표가 진짜 논거</text>
+
+<line x1="54" y1="1152" x2="1026" y2="1152" stroke="#30363D" stroke-width="1"/>
+<text x="54" y="1196" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">다음 확인: FCC 승인 · 가입자 수 · 서비스 단가</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

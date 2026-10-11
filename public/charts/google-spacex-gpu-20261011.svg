@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#023E8A"/><stop offset="33%" stop-color="#0096C7"/><stop offset="67%" stop-color="#00B4D8"/><stop offset="100%" stop-color="#48CAE4"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="271" height="36" rx="8" fill="#00B4D8"/>
+<text x="189.5" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX · NVDA · GOOGL</text>
+<text x="540" y="130" font-family="Arial Black,Arial,sans-serif" font-size="88" fill="#00B4D8" text-anchor="middle" font-weight="900">$30.4B</text>
+<text x="540" y="210" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">Google-SpaceX GPU 계약 가동</text>
+<text x="540" y="258" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">월 $9.2억 · 11만 Nvidia GPU · 2029년 6월까지</text>
+<line x1="54" y1="290" x2="1026" y2="290" stroke="#30363D" stroke-width="2"/>
+
+<rect x="54" y="314" width="972" height="200" rx="16" fill="#161B22" stroke="#00B4D8" stroke-width="1.5"/>
+<text x="540" y="360" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#00B4D8" text-anchor="middle" font-weight="900">💡 계약 구조</text>
+<text x="540" y="402" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">스페이스X: Nvidia GPU 구매 → 구글에 임대</text>
+<text x="540" y="440" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">구글: Gemini Enterprise 추론 작업에 활용</text>
+<text x="540" y="478" font-family="Arial,sans-serif" font-size="22" fill="#48CAE4" text-anchor="middle">2026.10 가동 개시 · 12개월 램프업 후 풀 가동</text>
+<text x="540" y="510" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">스페이스X IPO 신청서에 계약 공개</text>
+
+<rect x="54" y="550" width="300" height="140" rx="16" fill="#161B22" stroke="#00B4D8" stroke-width="1.5"/>
+<text x="204" y="588" font-family="Arial,sans-serif" font-size="20" fill="#00B4D8" text-anchor="middle" font-weight="700">월 임차료</text>
+<text x="204" y="630" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$920M</text>
+<text x="204" y="658" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">9억 2천만 달러</text>
+<rect x="390" y="550" width="300" height="140" rx="16" fill="#161B22" stroke="#48CAE4" stroke-width="1.5"/>
+<text x="540" y="588" font-family="Arial,sans-serif" font-size="20" fill="#48CAE4" text-anchor="middle" font-weight="700">GPU 수</text>
+<text x="540" y="630" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">110,000</text>
+<text x="540" y="658" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Nvidia GPU</text>
+<rect x="726" y="550" width="300" height="140" rx="16" fill="#161B22" stroke="#0096C7" stroke-width="1.5"/>
+<text x="876" y="588" font-family="Arial,sans-serif" font-size="20" fill="#0096C7" text-anchor="middle" font-weight="700">총 계약</text>
+<text x="876" y="630" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$30.4B</text>
+<text x="876" y="658" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">~2029.06</text>
+
+<rect x="54" y="726" width="972" height="180" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="770" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#00B4D8" text-anchor="middle" font-weight="900">엔비디아 수혜 구조</text>
+<text x="540" y="810" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">스페이스X가 GPU 매입 → 엔비디아가 판매 수익 선취</text>
+<text x="540" y="848" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" text-anchor="middle">구글은 스페이스X에 임차료 납부</text>
+<text x="540" y="886" font-family="Arial,sans-serif" font-size="22" fill="#8B949E" text-anchor="middle">빅테크·위성사 동시 GPU 구매 → 고객 기반 분산</text>
+
+<rect x="54" y="940" width="972" height="170" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="984" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#00B4D8" text-anchor="middle" font-weight="900">하우스 뷰</text>
+<text x="540" y="1024" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">모건스탠리: 데이터센터 임대 수익 아직 목표가 미반영</text>
+<text x="540" y="1062" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3" text-anchor="middle">씨티 SPCX $900 · 2029 계약 갱신 여부가 핵심</text>
+<text x="540" y="1098" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">구글 자체 용량 확보 전까지 갱신 가능성 높음</text>
+
+<line x1="54" y1="1142" x2="1026" y2="1142" stroke="#30363D" stroke-width="1"/>
+<text x="54" y="1186" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">다음: 2027.09.30 풀가동 후 월 $920M 기준 적용</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>
