@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#031a08"/></linearGradient>
+    <linearGradient id="gg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#4ade80;stop-opacity:0.12"/><stop offset="100%" style="stop-color:#4ade80;stop-opacity:0"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#14532d" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="6" fill="url(#gg)"/>
+  <ellipse cx="540" cy="490" rx="400" ry="340" fill="url(#glow)"/>
+  <!-- Header -->
+  <rect x="40" y="24" width="100" height="44" rx="22" fill="#4ade8022" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="90" y="51" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="51" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS · 2026.10.08</text>
+  <!-- Eyebrow -->
+  <text x="540" y="148" font-family="Arial" font-size="24" fill="#9ca3af" text-anchor="middle" letter-spacing="1">오스틴 사이버캡 자율주행 목격</text>
+  <!-- Hero -->
+  <text x="540" y="340" font-family="Arial Black,Arial" font-size="220" font-weight="900" fill="url(#gg)" text-anchor="middle">800</text>
+  <text x="540" y="430" font-family="Arial Black,Arial" font-size="56" font-weight="900" fill="#f9fafb" text-anchor="middle">건 돌파 — 10월 3일</text>
+  <!-- Divider -->
+  <line x1="120" y1="488" x2="960" y2="488" stroke="#4ade80" stroke-width="1.5" opacity="0.4"/>
+  <!-- Growth bar chart (simple visual) -->
+  <text x="540" y="546" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">9월 평균 대비 증가율</text>
+  <!-- Bar: 9월 평균 (200건 기준) -->
+  <rect x="140" y="580" width="200" height="50" rx="8" fill="#4ade8044"/>
+  <text x="240" y="612" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">9월 평균</text>
+  <text x="380" y="612" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="start">200건</text>
+  <!-- Bar: 전주 대비 -->
+  <rect x="140" y="648" width="336" height="50" rx="8" fill="#4ade8066"/>
+  <text x="240" y="680" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">전주 대비</text>
+  <text x="488" y="680" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="start">+68%</text>
+  <!-- Bar: 10월 3일 -->
+  <rect x="140" y="716" width="536" height="50" rx="8" fill="#4ade80"/>
+  <text x="240" y="748" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#0d1117" text-anchor="middle">10월 3일</text>
+  <text x="688" y="748" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="start">800건+</text>
+  <!-- 3 stat cards -->
+  <rect x="50" y="808" width="300" height="150" rx="16" fill="#031a08" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="200" y="850" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전주 대비</text>
+  <text x="200" y="898" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#4ade80" text-anchor="middle">+68%</text>
+  <text x="200" y="930" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">총 목격 증가</text>
+  <rect x="390" y="808" width="300" height="150" rx="16" fill="#031a08" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="540" y="850" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전월 대비</text>
+  <text x="540" y="898" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#16a34a" text-anchor="middle">+50%</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">무인 목격 증가</text>
+  <rect x="730" y="808" width="300" height="150" rx="16" fill="#031a08" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="880" y="850" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">연속 일수</text>
+  <text x="880" y="898" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#4ade80" text-anchor="middle">5일</text>
+  <text x="880" y="930" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">500건 근접 유지</text>
+  <!-- Message box -->
+  <rect x="50" y="1000" width="980" height="242" rx="18" fill="#031a08" stroke="#4ade8033" stroke-width="1.5"/>
+  <text x="540" y="1050" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">다음 달력</text>
+  <text x="80" y="1096" font-family="Arial" font-size="23" fill="#e2e8f0">10월 21일 Q3 실적 — 로보택시 코멘트 여부</text>
+  <text x="80" y="1136" font-family="Arial" font-size="23" fill="#e2e8f0">공식 상업 운행 발표 · 요금 공시 시점</text>
+  <text x="80" y="1200" font-family="Arial" font-size="19" fill="#9ca3af">목격 800건 ≠ 상업화 확정 — 공시가 기준</text>
+  <!-- Bottom -->
+  <rect x="0" y="1284" width="1080" height="20" fill="url(#gg)" opacity="0.35"/>
+  <text x="540" y="1326" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 · NOT FINANCIAL ADVICE</text>
+</svg>

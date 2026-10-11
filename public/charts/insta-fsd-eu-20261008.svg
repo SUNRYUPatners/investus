@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#022c22"/></linearGradient>
+    <linearGradient id="ge" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#34d399"/><stop offset="100%" style="stop-color:#059669"/></linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#34d399;stop-opacity:0.12"/><stop offset="100%" style="stop-color:#34d399;stop-opacity:0"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#065f46" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="6" fill="url(#ge)"/>
+  <ellipse cx="540" cy="500" rx="420" ry="350" fill="url(#glow)"/>
+  <!-- Header -->
+  <rect x="40" y="24" width="100" height="44" rx="22" fill="#34d39922" stroke="#34d399" stroke-width="1.5"/>
+  <text x="90" y="51" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#34d399" text-anchor="middle">TSLA</text>
+  <text x="540" y="51" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS · 2026.10.08</text>
+  <!-- Eyebrow -->
+  <text x="540" y="148" font-family="Arial" font-size="24" fill="#9ca3af" text-anchor="middle" letter-spacing="1">FSD 슬로바키아 승인 → EU 전역</text>
+  <!-- Main hero -->
+  <text x="540" y="310" font-family="Arial Black,Arial" font-size="100" font-weight="900" fill="url(#ge)" text-anchor="middle">EU 28개국</text>
+  <text x="540" y="420" font-family="Arial Black,Arial" font-size="58" font-weight="900" fill="#f9fafb" text-anchor="middle">자율주행 개방 임박</text>
+  <!-- Divider -->
+  <line x1="120" y1="476" x2="960" y2="476" stroke="#34d399" stroke-width="1.5" opacity="0.4"/>
+  <!-- Progress steps -->
+  <text x="540" y="534" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">규제 도미노 경로</text>
+  <!-- Step 1 done -->
+  <circle cx="160" cy="604" r="28" fill="#34d399"/>
+  <text x="160" y="612" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#0d1117" text-anchor="middle">✓</text>
+  <line x1="188" y1="604" x2="340" y2="604" stroke="#34d399" stroke-width="3"/>
+  <text x="160" y="650" font-family="Arial" font-size="18" fill="#34d399" text-anchor="middle">슬로바키아</text>
+  <text x="160" y="672" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">정식 승인</text>
+  <!-- Step 2 done -->
+  <circle cx="360" cy="604" r="28" fill="#34d399"/>
+  <text x="360" y="612" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#0d1117" text-anchor="middle">✓</text>
+  <line x1="388" y1="604" x2="540" y2="604" stroke="#34d399" stroke-width="3"/>
+  <text x="360" y="650" font-family="Arial" font-size="18" fill="#34d399" text-anchor="middle">독일 장관</text>
+  <text x="360" y="672" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">전역 지지</text>
+  <!-- Step 3 active -->
+  <circle cx="560" cy="604" r="28" fill="#059669" stroke="#34d399" stroke-width="3"/>
+  <text x="560" y="612" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f9fafb" text-anchor="middle">→</text>
+  <line x1="588" y1="604" x2="740" y2="604" stroke="#34d399" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="560" y="650" font-family="Arial" font-size="18" fill="#34d399" text-anchor="middle">EU 준비</text>
+  <text x="560" y="672" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">마무리 단계</text>
+  <!-- Step 4 pending -->
+  <circle cx="760" cy="604" r="28" fill="#065f46" stroke="#34d39944" stroke-width="2"/>
+  <text x="760" y="650" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">EU 공문</text>
+  <text x="760" y="672" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">며칠 이내</text>
+  <circle cx="920" cy="604" r="28" fill="#065f46" stroke="#34d39922" stroke-width="2"/>
+  <text x="920" y="650" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">구독 매출</text>
+  <text x="920" y="672" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">개시</text>
+  <!-- 3 stat cards -->
+  <rect x="50" y="728" width="300" height="150" rx="16" fill="#022c22" stroke="#34d399" stroke-width="1.5"/>
+  <text x="200" y="770" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">법적 근거</text>
+  <text x="200" y="820" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#34d399" text-anchor="middle">EU 형식 승인</text>
+  <text x="200" y="856" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">한 나라 인증 → 전역 적용</text>
+  <rect x="390" y="728" width="300" height="150" rx="16" fill="#022c22" stroke="#059669" stroke-width="1.5"/>
+  <text x="540" y="770" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">하우스 뷰</text>
+  <text x="540" y="820" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#059669" text-anchor="middle">WB $600</text>
+  <text x="540" y="856" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">웨드부시 목표가</text>
+  <rect x="730" y="728" width="300" height="150" rx="16" fill="#022c22" stroke="#34d399" stroke-width="1.5"/>
+  <text x="880" y="770" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Q3 실적</text>
+  <text x="880" y="820" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#34d399" text-anchor="middle">10월 21일</text>
+  <text x="880" y="856" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">유럽 코멘트 주목</text>
+  <!-- Message box -->
+  <rect x="50" y="928" width="980" height="310" rx="18" fill="#022c22" stroke="#34d39933" stroke-width="1.5"/>
+  <text x="540" y="978" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#34d399" text-anchor="middle">투자 포인트</text>
+  <text x="80" y="1024" font-family="Arial" font-size="23" fill="#e2e8f0">슬로바키아 인증 하나가 28개국 문을 연다</text>
+  <text x="80" y="1064" font-family="Arial" font-size="23" fill="#e2e8f0">독일 장관 정치 발언 → EU 공문으로 전환 중</text>
+  <text x="80" y="1104" font-family="Arial" font-size="23" fill="#e2e8f0">유럽 구독 매출 = 하드웨어 없이 반복 수익</text>
+  <text x="80" y="1200" font-family="Arial" font-size="19" fill="#9ca3af">공문 前은 정치 발언 단계 — 공문이 기준</text>
+  <!-- Bottom -->
+  <rect x="0" y="1284" width="1080" height="20" fill="url(#ge)" opacity="0.35"/>
+  <text x="540" y="1326" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 · NOT FINANCIAL ADVICE</text>
+</svg>

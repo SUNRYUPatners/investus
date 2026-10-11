@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1e0a3c"/></linearGradient>
+    <linearGradient id="gdp" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="50%" style="stop-color:#8b5cf6"/><stop offset="100%" style="stop-color:#6d28d9"/></linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.16"/><stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#3b1f70" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="6" fill="url(#gdp)"/>
+  <ellipse cx="540" cy="480" rx="440" ry="360" fill="url(#glow)"/>
+  <!-- Header -->
+  <rect x="40" y="24" width="100" height="44" rx="22" fill="#8b5cf622" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="90" y="51" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#8b5cf6" text-anchor="middle">SPCX</text>
+  <text x="540" y="51" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS · 2026.10.08</text>
+  <!-- Eyebrow -->
+  <text x="540" y="148" font-family="Arial" font-size="24" fill="#9ca3af" text-anchor="middle" letter-spacing="1">스페이스X 역대 최대 파이낸싱</text>
+  <!-- Hero -->
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="160" font-weight="900" fill="url(#gdp)" text-anchor="middle">$4,000억</text>
+  <text x="540" y="388" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">엔비디아 칩 구매 자금</text>
+  <!-- Divider -->
+  <line x1="120" y1="438" x2="960" y2="438" stroke="#8b5cf6" stroke-width="1.5" opacity="0.4"/>
+  <!-- Breakdown visual -->
+  <text x="540" y="496" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">파이낸싱 구조</text>
+  <!-- Bank tranche -->
+  <rect x="50" y="522" width="450" height="100" rx="14" fill="#1e0a3c" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="275" y="562" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">은행 대출</text>
+  <text x="275" y="600" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#c084fc" text-anchor="middle">$1,000억</text>
+  <!-- Arrow -->
+  <text x="508" y="580" font-family="Arial Black,Arial" font-size="28" fill="#8b5cf6" text-anchor="middle">+</text>
+  <!-- Apollo tranche -->
+  <rect x="566" y="522" width="464" height="100" rx="14" fill="#1e0a3c" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="798" y="562" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">아폴로 사모신용</text>
+  <text x="798" y="600" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#8b5cf6" text-anchor="middle">$3,000억</text>
+  <!-- Equal line -->
+  <line x1="200" y1="648" x2="880" y2="648" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="6,3" opacity="0.5"/>
+  <text x="540" y="678" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">= $4,000억 총액 / 2026년 완료 목표</text>
+  <!-- 3 stat cards -->
+  <rect x="50" y="714" width="300" height="156" rx="16" fill="#1e0a3c" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="200" y="756" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">목적</text>
+  <text x="200" y="804" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">엔비디아 칩</text>
+  <text x="200" y="836" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">테라팹 연산 인프라</text>
+  <rect x="390" y="714" width="300" height="156" rx="16" fill="#1e0a3c" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="540" y="756" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">주도사</text>
+  <text x="540" y="804" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#8b5cf6" text-anchor="middle">아폴로 G.M.</text>
+  <text x="540" y="836" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">사모신용 $3,000억</text>
+  <rect x="730" y="714" width="300" height="156" rx="16" fill="#1e0a3c" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="880" y="756" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">특징</text>
+  <text x="880" y="804" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">희석 없음</text>
+  <text x="880" y="836" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">공모 아닌 비공개 구조</text>
+  <!-- Message box -->
+  <rect x="50" y="918" width="980" height="318" rx="18" fill="#0d0520" stroke="#8b5cf633" stroke-width="1.5"/>
+  <text x="540" y="968" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#8b5cf6" text-anchor="middle">투자 포인트</text>
+  <text x="80" y="1014" font-family="Arial" font-size="23" fill="#e2e8f0">① IPO 직전 최대 라운드 — 밸류에이션 기준선 형성</text>
+  <text x="80" y="1054" font-family="Arial" font-size="23" fill="#e2e8f0">② 비공개 조달 = 주식 희석 없이 성장</text>
+  <text x="80" y="1094" font-family="Arial" font-size="23" fill="#e2e8f0">③ 같은 날 젠슨황 방문 + FCC 승인 동시 발생</text>
+  <text x="80" y="1134" font-family="Arial" font-size="23" fill="#e2e8f0">④ MS OW $300 · 씨티 $900 — 파이낸싱 위</text>
+  <text x="80" y="1196" font-family="Arial" font-size="19" fill="#9ca3af">추진 중 ≠ 완료 — 파이낸싱 공시가 확정 날짜</text>
+  <!-- Bottom -->
+  <rect x="0" y="1284" width="1080" height="20" fill="url(#gdp)" opacity="0.35"/>
+  <text x="540" y="1326" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 · NOT FINANCIAL ADVICE</text>
+</svg>

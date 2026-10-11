@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0a2e"/></linearGradient>
+    <linearGradient id="gp" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#7c3aed"/></linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#c084fc;stop-opacity:0.15"/><stop offset="100%" style="stop-color:#c084fc;stop-opacity:0"/></linearGradient>
+  </defs>
+  <!-- BG -->
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="none" stroke="#2d1b4e" stroke-width="2"/>
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1080" height="6" fill="url(#gp)"/>
+  <!-- Glow circle -->
+  <ellipse cx="540" cy="520" rx="380" ry="320" fill="url(#glow)"/>
+  <!-- Header -->
+  <rect x="40" y="24" width="130" height="44" rx="22" fill="#c084fc22" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="105" y="51" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX+TSLA</text>
+  <text x="540" y="51" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS · 2026.10.08</text>
+  <!-- Eyebrow -->
+  <text x="540" y="148" font-family="Arial" font-size="24" fill="#9ca3af" text-anchor="middle" letter-spacing="2">테라팹 — 젠슨황 방문 확인</text>
+  <!-- Main hero -->
+  <text x="540" y="310" font-family="Arial Black,Arial" font-size="130" font-weight="900" fill="url(#gp)" text-anchor="middle">ZERO</text>
+  <text x="540" y="450" font-family="Arial Black,Arial" font-size="130" font-weight="900" fill="#f9fafb" text-anchor="middle">doubt</text>
+  <!-- Divider -->
+  <line x1="120" y1="510" x2="960" y2="510" stroke="#c084fc" stroke-width="1.5" opacity="0.4"/>
+  <!-- Sub headline -->
+  <text x="540" y="574" font-family="Arial" font-size="26" fill="#e2e8f0" text-anchor="middle">"테라팹은 우리가 직접 짓고 운영한다"</text>
+  <text x="540" y="616" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">— 일론 머스크, 2026.10.08</text>
+  <!-- 3 fact cards -->
+  <rect x="50" y="666" width="300" height="166" rx="16" fill="#1a0a2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="200" y="712" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">방문자</text>
+  <text x="200" y="760" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">젠슨 황</text>
+  <text x="200" y="796" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">엔비디아 CEO</text>
+  <text x="200" y="818" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">하드웨어 박스 교환 현장</text>
+  <rect x="390" y="666" width="300" height="166" rx="16" fill="#1a0a2e" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="540" y="712" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">파트너사</text>
+  <text x="540" y="756" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#7c3aed" text-anchor="middle">3사 동시</text>
+  <text x="540" y="792" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">젠슨황 · 루퍼 · 인텔</text>
+  <text x="540" y="818" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">이종 산업 동시 합류</text>
+  <rect x="730" y="666" width="300" height="166" rx="16" fill="#1a0a2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="880" y="712" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">자금</text>
+  <text x="880" y="756" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">$4,000억</text>
+  <text x="880" y="792" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">파이낸싱 동시 추진</text>
+  <text x="880" y="818" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">엔비디아 칩 구매 자금</text>
+  <!-- Message box -->
+  <rect x="50" y="876" width="980" height="290" rx="18" fill="#110820" stroke="#c084fc33" stroke-width="1.5"/>
+  <text x="540" y="930" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="80" y="978" font-family="Arial" font-size="23" fill="#e2e8f0">① 머스크 직접 확언 — 루머가 아니라 당사자 발언</text>
+  <text x="80" y="1018" font-family="Arial" font-size="23" fill="#e2e8f0">② 젠슨 황 방문 = 엔비디아 납품 경로 가시화</text>
+  <text x="80" y="1058" font-family="Arial" font-size="23" fill="#e2e8f0">③ 3사 동시 합류 = 플랫폼 표준 선점 구도</text>
+  <text x="80" y="1110" font-family="Arial" font-size="19" fill="#9ca3af">다음 달력: 착공 공지 · 첫 칩 출하 날짜</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="1284" width="1080" height="20" fill="url(#gp)" opacity="0.35"/>
+  <text x="540" y="1326" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 · NOT FINANCIAL ADVICE</text>
+</svg>
