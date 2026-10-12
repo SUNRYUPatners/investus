@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#34D399"/>
+    <stop offset="100%" stop-color="#10B981"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#10B981"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">안전자산</text>
+<rect x="190" y="30" width="63" height="36" rx="8" fill="#059669"/>
+<text x="221.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">미국채</text>
+<rect x="282" y="30" width="76" height="36" rx="8" fill="#065F46"/>
+<text x="320" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">금리급등</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.12 · 미국채 10년 5.24% — 글로벌 채권 긴장 최고조</text>
+<text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="120" fill="#34D399" font-weight="900">5.24%</text>
+<text x="54" y="298" font-family="Arial Black,Arial,sans-serif" font-size="60" fill="#fff" font-weight="900">미국채 10년</text>
+<text x="54" y="352" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">장중 5.34% — 2002년 이후 24년 만 최고</text>
+<defs><linearGradient id="dg376" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#34D399" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#34D399"/>
+    <stop offset="70%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="376" width="972" height="3" fill="url(#dg376)" rx="2"/>
+<!-- 금리 비교 바 -->
+<text x="54" y="420" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#34D399" font-weight="900">글로벌 주요 금리 비교</text>
+
+<text x="54" y="458" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">미국채 10년</text>
+<rect x="254" y="436" width="550" height="28" rx="5" fill="#21262D"/>
+<rect x="254" y="436" width="412" height="28" rx="5" fill="#34D399"/>
+<text x="676" y="458" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">5.24</text>
+
+<text x="54" y="498" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">영국 30년</text>
+<rect x="254" y="476" width="550" height="28" rx="5" fill="#21262D"/>
+<rect x="254" y="476" width="471" height="28" rx="5" fill="#10B981"/>
+<text x="735" y="498" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">6</text>
+
+<text x="54" y="538" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">달러(DXY)</text>
+<rect x="254" y="516" width="550" height="28" rx="5" fill="#21262D"/>
+<rect x="254" y="516" width="511" height="28" rx="5" fill="#6EE7B7"/>
+<text x="775" y="538" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">102.21</text>
+
+<text x="54" y="578" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">국제 유가</text>
+<rect x="254" y="556" width="550" height="28" rx="5" fill="#21262D"/>
+<rect x="254" y="556" width="490" height="28" rx="5" fill="#059669"/>
+<text x="754" y="578" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">107</text>
+<rect x="54" y="610" width="306" height="130" rx="16" fill="#161B22" stroke="#34D399" stroke-width="1.5"/>
+<text x="207" y="646" font-family="Arial,sans-serif" font-size="19" fill="#34D399" text-anchor="middle" font-weight="700">미국채 10년</text>
+<text x="207" y="694" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">5.24%</text>
+<text x="207" y="724" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">장중 5.34% 터치</text>
+<rect x="384" y="610" width="306" height="130" rx="16" fill="#161B22" stroke="#10B981" stroke-width="1.5"/>
+<text x="537" y="646" font-family="Arial,sans-serif" font-size="19" fill="#10B981" text-anchor="middle" font-weight="700">영국 30년</text>
+<text x="537" y="694" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">6.0%</text>
+<text x="537" y="724" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">주요국 동반 급등</text>
+<rect x="714" y="610" width="312" height="130" rx="16" fill="#161B22" stroke="#6EE7B7" stroke-width="1.5"/>
+<text x="870" y="646" font-family="Arial,sans-serif" font-size="19" fill="#6EE7B7" text-anchor="middle" font-weight="700">달러(DXY)</text>
+<text x="870" y="694" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">102.21</text>
+<text x="870" y="724" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">강세 유지</text>
+<rect x="54" y="770" width="972" height="450" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="814" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#34D399" font-weight="900">오늘 핵심 요약</text>
+<line x1="82" y1="828" x2="998" y2="828" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="858" r="7" fill="#34D399"/>
+<text x="116" y="866" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">5%대 금리 장기화 — 연내 금리인하 기대 2회→1회 이하로</text>
+<circle cx="96" cy="918" r="7" fill="#10B981"/>
+<text x="116" y="926" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">영국 30년 6% 돌파 — 글로벌 채권시장 긴장 고조</text>
+<circle cx="96" cy="978" r="7" fill="#6EE7B7"/>
+<text x="116" y="986" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">달러 강세 102 — 신흥국 부채 부담·원화 약세 압력</text>
+<circle cx="96" cy="1038" r="7" fill="#059669"/>
+<text x="116" y="1046" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">유가 107달러 — 인플레 재점화 우려 + 헤지 수요 길항</text>
+<rect x="82" y="1102" width="916" height="80" rx="12" fill="#061812" stroke="#34D399" stroke-width="1.5"/>
+<text x="110" y="1130" font-family="Arial,sans-serif" font-size="20" fill="#34D399" font-weight="700">모건스탠리: 5.5% 돌파 시 연준 긴급 개입 신호</text>
+<text x="110" y="1162" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">5.5% = 연내 미국 주식 핵심 임계점</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#A855F7"/>
+    <stop offset="100%" stop-color="#7C3AED"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="102" height="36" rx="8" fill="#A855F7"/>
+<text x="105" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Crypto</text>
+<rect x="152" y="30" width="167" height="36" rx="8" fill="#7C3AED"/>
+<text x="235.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">BTC·ETH·SOL</text>
+<rect x="318" y="30" width="102" height="36" rx="8" fill="#5B21B6"/>
+<text x="369" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Bounce</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.12 · Crypto holds ground despite 5.24% Treasury yield</text>
+<text x="54" y="208" font-family="Arial Black,Arial,sans-serif" font-size="108" fill="#F7931A" font-weight="900">$83,280</text>
+<text x="54" y="296" font-family="Arial Black,Arial,sans-serif" font-size="58" fill="#fff" font-weight="900">BTC +0.9%</text>
+<text x="54" y="352" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">ETH $2,543 +1.2% · SOL $112.33 +3.17%</text>
+<defs><linearGradient id="dg376" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#A855F7" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#A855F7"/>
+    <stop offset="70%" stop-color="#7C3AED"/>
+    <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="376" width="972" height="3" fill="url(#dg376)" rx="2"/>
+<text x="54" y="420" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#A855F7" font-weight="900">Major Crypto Prices — 2026.10.12</text>
+<rect x="54" y="436" width="300" height="140" rx="14" fill="#161B22" stroke="#F7931A" stroke-width="1.5"/>
+<text x="204" y="472" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F7931A" text-anchor="middle" font-weight="900">BTC</text>
+<text x="204" y="516" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#fff" text-anchor="middle" font-weight="900">$83,280</text>
+<text x="204" y="550" font-family="Arial,sans-serif" font-size="20" fill="#34D399" text-anchor="middle">+0.9%</text>
+<text x="204" y="572" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Mkt cap $1.65T</text>
+<rect x="390" y="436" width="300" height="140" rx="14" fill="#161B22" stroke="#627EEA" stroke-width="1.5"/>
+<text x="540" y="472" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#627EEA" text-anchor="middle" font-weight="900">ETH</text>
+<text x="540" y="516" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#fff" text-anchor="middle" font-weight="900">$2,543</text>
+<text x="540" y="550" font-family="Arial,sans-serif" font-size="20" fill="#34D399" text-anchor="middle">+1.2%</text>
+<text x="540" y="572" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Mkt cap $306.4B</text>
+<rect x="726" y="436" width="300" height="140" rx="14" fill="#161B22" stroke="#9945FF" stroke-width="1.5"/>
+<text x="876" y="472" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#9945FF" text-anchor="middle" font-weight="900">SOL</text>
+<text x="876" y="516" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#fff" text-anchor="middle" font-weight="900">$112.33</text>
+<text x="876" y="550" font-family="Arial,sans-serif" font-size="20" fill="#34D399" text-anchor="middle">+3.17%</text>
+<text x="876" y="572" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Mkt cap $66.2B</text>
+<rect x="54" y="612" width="306" height="130" rx="16" fill="#161B22" stroke="#A855F7" stroke-width="1.5"/>
+<text x="207" y="648" font-family="Arial,sans-serif" font-size="19" fill="#A855F7" text-anchor="middle" font-weight="700">BTC Spot ETF</text>
+<text x="207" y="696" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">5 days</text>
+<text x="207" y="726" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">consecutive inflows</text>
+<rect x="384" y="612" width="306" height="130" rx="16" fill="#161B22" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="537" y="648" font-family="Arial,sans-serif" font-size="19" fill="#7C3AED" text-anchor="middle" font-weight="700">Daily Inflow</text>
+<text x="537" y="696" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$300M</text>
+<text x="537" y="726" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">institutional demand holds</text>
+<rect x="714" y="612" width="312" height="130" rx="16" fill="#161B22" stroke="#9945FF" stroke-width="1.5"/>
+<text x="870" y="648" font-family="Arial,sans-serif" font-size="19" fill="#9945FF" text-anchor="middle" font-weight="700">SOL Leads</text>
+<text x="870" y="696" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">+3.17%</text>
+<text x="870" y="726" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">outperforms BTC/ETH</text>
+<rect x="54" y="776" width="972" height="444" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="820" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#A855F7" font-weight="900">Key Takeaways</text>
+<line x1="82" y1="834" x2="998" y2="834" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="864" r="7" fill="#A855F7"/>
+<text x="116" y="872" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">All 3 majors bounced despite 5.24% Treasury headwind</text>
+<circle cx="96" cy="924" r="7" fill="#9945FF"/>
+<text x="116" y="932" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">SOL +3.17% — network fees approaching ETH levels</text>
+<circle cx="96" cy="984" r="7" fill="#7C3AED"/>
+<text x="116" y="992" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">BTC ETF 5-day inflow streak — institutional bid limits drops</text>
+<circle cx="96" cy="1044" r="7" fill="#8B5CF6"/>
+<text x="116" y="1052" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Portfolio allocation demand persists above 5% bond yields</text>
+<rect x="82" y="1102" width="916" height="80" rx="12" fill="#13091A" stroke="#A855F7" stroke-width="1.5"/>
+<text x="110" y="1130" font-family="Arial,sans-serif" font-size="20" fill="#A855F7" font-weight="700">Bernstein: low $80Ks is structural support for BTC</text>
+<text x="110" y="1162" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">Bear case unlikely unless 5%+ lasts 6+ months</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>

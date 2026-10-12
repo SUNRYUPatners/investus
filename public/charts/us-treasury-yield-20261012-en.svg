@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#34D399"/>
+    <stop offset="100%" stop-color="#10B981"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="167" height="36" rx="8" fill="#10B981"/>
+<text x="137.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Safe Assets</text>
+<rect x="212" y="30" width="154" height="36" rx="8" fill="#059669"/>
+<text x="289" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Treasuries</text>
+<rect x="342" y="30" width="167" height="36" rx="8" fill="#065F46"/>
+<text x="425.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Yield Surge</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.12 · US 10Y at 5.24% — global bond stress at peak</text>
+<text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="120" fill="#34D399" font-weight="900">5.24%</text>
+<text x="54" y="298" font-family="Arial Black,Arial,sans-serif" font-size="60" fill="#fff" font-weight="900">US 10Y Yield</text>
+<text x="54" y="352" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Intraday high 5.34% — highest since 2002</text>
+<defs><linearGradient id="dg376" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#34D399" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#34D399"/>
+    <stop offset="70%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="376" width="972" height="3" fill="url(#dg376)" rx="2"/>
+<text x="54" y="420" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#34D399" font-weight="900">Global Rate Comparison</text>
+
+<text x="54" y="458" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">US 10Y</text>
+<rect x="254" y="436" width="550" height="28" rx="5" fill="#21262D"/>
+<rect x="254" y="436" width="412" height="28" rx="5" fill="#34D399"/>
+<text x="676" y="458" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">5.24</text>
+
+<text x="54" y="498" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">UK 30Y</text>
+<rect x="254" y="476" width="550" height="28" rx="5" fill="#21262D"/>
+<rect x="254" y="476" width="471" height="28" rx="5" fill="#10B981"/>
+<text x="735" y="498" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">6</text>
+
+<text x="54" y="538" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">DXY</text>
+<rect x="254" y="516" width="550" height="28" rx="5" fill="#21262D"/>
+<rect x="254" y="516" width="511" height="28" rx="5" fill="#6EE7B7"/>
+<text x="775" y="538" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">102.21</text>
+
+<text x="54" y="578" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Crude Oil</text>
+<rect x="254" y="556" width="550" height="28" rx="5" fill="#21262D"/>
+<rect x="254" y="556" width="490" height="28" rx="5" fill="#059669"/>
+<text x="754" y="578" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">107</text>
+<rect x="54" y="610" width="306" height="130" rx="16" fill="#161B22" stroke="#34D399" stroke-width="1.5"/>
+<text x="207" y="646" font-family="Arial,sans-serif" font-size="19" fill="#34D399" text-anchor="middle" font-weight="700">US 10Y Yield</text>
+<text x="207" y="694" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">5.24%</text>
+<text x="207" y="724" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Intraday 5.34%</text>
+<rect x="384" y="610" width="306" height="130" rx="16" fill="#161B22" stroke="#10B981" stroke-width="1.5"/>
+<text x="537" y="646" font-family="Arial,sans-serif" font-size="19" fill="#10B981" text-anchor="middle" font-weight="700">UK 30Y Gilt</text>
+<text x="537" y="694" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">6.0%</text>
+<text x="537" y="724" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Global rates surge</text>
+<rect x="714" y="610" width="312" height="130" rx="16" fill="#161B22" stroke="#6EE7B7" stroke-width="1.5"/>
+<text x="870" y="646" font-family="Arial,sans-serif" font-size="19" fill="#6EE7B7" text-anchor="middle" font-weight="700">Dollar (DXY)</text>
+<text x="870" y="694" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">102.21</text>
+<text x="870" y="724" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Dollar strength</text>
+<rect x="54" y="770" width="972" height="450" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="814" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#34D399" font-weight="900">Key Takeaways</text>
+<line x1="82" y1="828" x2="998" y2="828" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="858" r="7" fill="#34D399"/>
+<text x="116" y="866" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Sustained 5%+ rates — market cuts rate cut expectations to ≤1</text>
+<circle cx="96" cy="918" r="7" fill="#10B981"/>
+<text x="116" y="926" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">UK 30Y broke 6% — bond stress is global, not just US</text>
+<circle cx="96" cy="978" r="7" fill="#6EE7B7"/>
+<text x="116" y="986" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Dollar at 102 — EM debt pressure, Korean won weakens</text>
+<circle cx="96" cy="1038" r="7" fill="#059669"/>
+<text x="116" y="1046" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Oil $107 — inflation re-ignition fears vs hedge demand</text>
+<rect x="82" y="1102" width="916" height="80" rx="12" fill="#061812" stroke="#34D399" stroke-width="1.5"/>
+<text x="110" y="1130" font-family="Arial,sans-serif" font-size="20" fill="#34D399" font-weight="700">Morgan Stanley: 5.5% triggers Fed emergency signal</text>
+<text x="110" y="1162" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">5.5% = key risk threshold for US equities</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>

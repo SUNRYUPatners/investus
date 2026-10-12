@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#A855F7"/>
+    <stop offset="100%" stop-color="#6D28D9"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="102" height="36" rx="8" fill="#A855F7"/>
+<text x="105" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Crypto</text>
+<rect x="152" y="30" width="167" height="36" rx="8" fill="#6D28D9"/>
+<text x="235.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">BTC Outlook</text>
+<rect x="300" y="30" width="206" height="36" rx="8" fill="#4C1D95"/>
+<text x="403" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Year-end $100K</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.12 · Fundstrat $100K year-end target — US liquidity pivot catalyst</text>
+<text x="54" y="208" font-family="Arial Black,Arial,sans-serif" font-size="108" fill="#A855F7" font-weight="900">$100,000</text>
+<text x="54" y="296" font-family="Arial Black,Arial,sans-serif" font-size="54" fill="#fff" font-weight="900">BTC Year-End Target</text>
+<text x="54" y="352" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Fundstrat · US liquidity pivot is the key trigger</text>
+<defs><linearGradient id="dg376" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#A855F7" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#A855F7"/>
+    <stop offset="70%" stop-color="#6D28D9"/>
+    <stop offset="100%" stop-color="#6D28D9" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="376" width="972" height="3" fill="url(#dg376)" rx="2"/>
+<text x="54" y="420" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#A855F7" font-weight="900">BTC Spot ETF Daily Net Inflows — Past 5 Days</text>
+
+<text x="54" y="458" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Oct 06 (Mon)</text>
+<rect x="254" y="436" width="520" height="26" rx="5" fill="#21262D"/>
+<rect x="254" y="436" width="364" height="26" rx="5" fill="#A855F7"/>
+<text x="628" y="458" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">280</text>
+
+<text x="54" y="496" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Oct 07 (Tue)</text>
+<rect x="254" y="474" width="520" height="26" rx="5" fill="#21262D"/>
+<rect x="254" y="474" width="403" height="26" rx="5" fill="#9333EA"/>
+<text x="667" y="496" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">310</text>
+
+<text x="54" y="534" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Oct 08 (Wed)</text>
+<rect x="254" y="512" width="520" height="26" rx="5" fill="#21262D"/>
+<rect x="254" y="512" width="384" height="26" rx="5" fill="#7C3AED"/>
+<text x="648" y="534" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">295</text>
+
+<text x="54" y="572" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Oct 09 (Thu)</text>
+<rect x="254" y="550" width="520" height="26" rx="5" fill="#21262D"/>
+<rect x="254" y="550" width="416" height="26" rx="5" fill="#6D28D9"/>
+<text x="680" y="572" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">320</text>
+
+<text x="54" y="610" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Oct 10 (Fri)</text>
+<rect x="254" y="588" width="520" height="26" rx="5" fill="#21262D"/>
+<rect x="254" y="588" width="397" height="26" rx="5" fill="#5B21B6"/>
+<text x="661" y="610" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">305</text>
+<text x="660" y="516" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#A855F7" font-weight="900">($M)</text>
+<rect x="54" y="642" width="306" height="130" rx="16" fill="#161B22" stroke="#F7931A" stroke-width="1.5"/>
+<text x="207" y="678" font-family="Arial,sans-serif" font-size="19" fill="#F7931A" text-anchor="middle" font-weight="700">BTC Price</text>
+<text x="207" y="726" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$83,280</text>
+<text x="207" y="756" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">+0.9% (2026.10.12)</text>
+<rect x="384" y="642" width="306" height="130" rx="16" fill="#161B22" stroke="#A855F7" stroke-width="1.5"/>
+<text x="537" y="678" font-family="Arial,sans-serif" font-size="19" fill="#A855F7" text-anchor="middle" font-weight="700">ETF Daily Avg</text>
+<text x="537" y="726" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$300M</text>
+<text x="537" y="756" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">5 consecutive inflows</text>
+<rect x="714" y="642" width="312" height="130" rx="16" fill="#161B22" stroke="#6D28D9" stroke-width="1.5"/>
+<text x="870" y="678" font-family="Arial,sans-serif" font-size="19" fill="#6D28D9" text-anchor="middle" font-weight="700">Year-end Target</text>
+<text x="870" y="726" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$100,000</text>
+<text x="870" y="756" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Fundstrat forecast</text>
+<rect x="54" y="800" width="972" height="420" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="844" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#A855F7" font-weight="900">Key Takeaways</text>
+<line x1="82" y1="858" x2="998" y2="858" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="888" r="7" fill="#A855F7"/>
+<text x="116" y="896" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">US Treasury interest costs surge → liquidity expansion → BTC</text>
+<circle cx="96" cy="948" r="7" fill="#9333EA"/>
+<text x="116" y="956" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">BTC ETF 5-day streak $300M/day — institutional stays put at 5%</text>
+<circle cx="96" cy="1008" r="7" fill="#7C3AED"/>
+<text x="116" y="1016" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Solana daily fees approach ETH — DeFi ecosystem growing</text>
+<circle cx="96" cy="1068" r="7" fill="#6D28D9"/>
+<text x="116" y="1076" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">BlackRock: 1-2% portfolio allocation still improves risk-adj returns</text>
+<rect x="82" y="1114" width="916" height="66" rx="12" fill="#13091A" stroke="#A855F7" stroke-width="1.5"/>
+<text x="110" y="1140" font-family="Arial,sans-serif" font-size="19" fill="#A855F7">📅 Key monitor</text>
+<text x="110" y="1168" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">US Treasury interest cost growth + Fed dovish signals</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>
