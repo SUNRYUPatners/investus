@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FF4D6D"/><stop offset="50%" stop-color="#FF6B6B"/><stop offset="100%" stop-color="#FF4D6D"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#FF4D6D"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="146" y="28" width="76" height="36" rx="8" fill="#7C3AED"/>
+<text x="184" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<text x="54" y="120" font-family="Arial Black,Arial,sans-serif" font-size="56" fill="#FF4D6D" font-weight="900">사이버캡</text>
+<text x="54" y="176" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" font-weight="900">파리 모터쇼</text>
+<text x="54" y="222" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" font-weight="900">유럽 첫 공개</text>
+<text x="54" y="268" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026년 10월 12일~18일 · 7.1홀 C25 부스</text>
+<line x1="54" y1="296" x2="1026" y2="296" stroke="#30363D" stroke-width="2"/>
+<rect x="54" y="316" width="972" height="200" rx="20" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="540" y="370" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FF4D6D" text-anchor="middle" font-weight="900">스티어링 휠 없는 완전 자율 로보택시</text>
+<text x="540" y="410" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3" text-anchor="middle">미국 실운행 플릿 차량 직접 전시</text>
+<text x="540" y="450" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3" text-anchor="middle">FSD 탑재 6개 차종 시승 병행</text>
+<text x="540" y="490" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3" text-anchor="middle">프로토타입 아닌 실제 운행 차량</text>
+<rect x="54" y="540" width="300" height="130" rx="16" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="204" y="578" font-family="Arial,sans-serif" font-size="20" fill="#FF4D6D" text-anchor="middle" font-weight="700">전시 기간</text>
+<text x="204" y="620" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">7일</text>
+<text x="204" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Oct 12~18</text>
+<rect x="390" y="540" width="300" height="130" rx="16" fill="#161B22" stroke="#22C55E" stroke-width="1.5"/>
+<text x="540" y="578" font-family="Arial,sans-serif" font-size="20" fill="#22C55E" text-anchor="middle" font-weight="700">주가 반응</text>
+<text x="540" y="620" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">+0.6%</text>
+<text x="540" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">개막일 상승</text>
+<rect x="726" y="540" width="300" height="130" rx="16" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="876" y="578" font-family="Arial,sans-serif" font-size="20" fill="#FF4D6D" text-anchor="middle" font-weight="700">시승 모델</text>
+<text x="876" y="620" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">6종</text>
+<text x="876" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">FSD 탑재</text>
+<rect x="54" y="700" width="972" height="360" rx="20" fill="#161B22"/>
+<text x="82" y="748" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#FF4D6D" font-weight="900">왜 중요한가</text>
+<line x1="82" y1="762" x2="998" y2="762" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="800" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">유럽은 자율주행 규제 심사 최중요 시장</text>
+<text x="82" y="836" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">전시 → 미디어·규제당국 반응 선행 수집</text>
+<text x="82" y="872" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">사이버캡 유럽 형식 인증 협상 포석</text>
+<text x="82" y="908" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">운전석 없는 차량 → 별도 인증 카테고리 필요</text>
+<text x="82" y="960" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">하우스 뷰</text>
+<text x="82" y="998" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">웨드부시 목표가 350달러 — 로보택시 반복수익 모델</text>
+<text x="82" y="1034" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">JP모건 목표가 280달러 — 유럽 인증 지연이 핵심 리스크</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>

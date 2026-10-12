@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FB923C"/><stop offset="50%" stop-color="#F97316"/><stop offset="100%" stop-color="#EA580C"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#FB923C"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">META</text>
+<text x="540" y="120" font-family="Arial Black,Arial,sans-serif" font-size="110" fill="#FB923C" text-anchor="middle" font-weight="900">90%</text>
+<text x="540" y="192" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" text-anchor="middle" font-weight="900">CONTENT REVIEW AI SHIFT</text>
+<text x="540" y="244" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">Personal Agent Protocol launch · Target: end of 2026</text>
+<line x1="54" y1="272" x2="1026" y2="272" stroke="#30363D" stroke-width="2"/>
+
+<rect x="54" y="292" width="972" height="220" rx="16" fill="#161B22" stroke="#FB923C" stroke-width="1.5"/>
+<text x="540" y="338" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FB923C" text-anchor="middle" font-weight="900">WORKFORCE RESTRUCTURING</text>
+<text x="84" y="380" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">⬇ 8,000 employees laid off</text>
+<text x="84" y="420" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">↗ 7,000 reassigned to AI projects</text>
+<text x="84" y="460" font-family="Arial,sans-serif" font-size="26" fill="#FB923C">90% content review → AI automation by year-end</text>
+<text x="84" y="500" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Content review labor cost ~$1.5B–$2B/yr → AI shift</text>
+
+<rect x="54" y="540" width="300" height="140" rx="16" fill="#161B22" stroke="#FB923C" stroke-width="1.5"/>
+<text x="204" y="578" font-family="Arial,sans-serif" font-size="20" fill="#FB923C" text-anchor="middle" font-weight="700">LAID OFF</text>
+<text x="204" y="620" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">8,000</text>
+<text x="204" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Cost reduction</text>
+<rect x="390" y="540" width="300" height="140" rx="16" fill="#161B22" stroke="#F97316" stroke-width="1.5"/>
+<text x="540" y="578" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">AI REORG</text>
+<text x="540" y="620" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">7,000</text>
+<text x="540" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Moved to AI roles</text>
+<rect x="726" y="540" width="300" height="140" rx="16" fill="#161B22" stroke="#EA580C" stroke-width="1.5"/>
+<text x="876" y="578" font-family="Arial,sans-serif" font-size="20" fill="#EA580C" text-anchor="middle" font-weight="700">REVIEW AI</text>
+<text x="876" y="620" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">90%</text>
+<text x="876" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">By end of 2026</text>
+
+<rect x="54" y="712" width="972" height="240" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="758" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FB923C" text-anchor="middle" font-weight="900">PERSONAL AGENT PROTOCOL (PAP)</text>
+<text x="84" y="798" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">Meta + Walmart + Stripe co-authored open standard</text>
+<text x="84" y="838" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">Defines AI agent ↔ business service interaction</text>
+<text x="84" y="878" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">Shopping/payment data → ad targeting expansion</text>
+<text x="84" y="918" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Positions Meta to compete with Google Shopping ads</text>
+<text x="84" y="946" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">📅 Advertiser AI tools with Workspace integration now live</text>
+
+<rect x="54" y="980" width="972" height="170" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="1026" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FB923C" text-anchor="middle" font-weight="900">HOUSE VIEWS</text>
+<text x="84" y="1066" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">Morgan Stanley: 2027 op. margin can exceed 45%</text>
+<text x="84" y="1106" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">Evercore ISI: PAP expands ad data network moat</text>
+<text x="84" y="1144" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Morgan Stanley PT $650  ·  Evercore PT $680</text>
+
+<rect x="54" y="1180" width="972" height="98" rx="16" fill="#1A1F2E" stroke="#FB923C" stroke-width="2"/>
+<text x="540" y="1226" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#fff" text-anchor="middle">Cost cuts + agent ad revenue = margin expansion</text>
+<text x="540" y="1264" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">AI review false-positive rate = key regulatory risk</text>
+
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

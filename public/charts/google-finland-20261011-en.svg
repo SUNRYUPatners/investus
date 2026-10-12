@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FCD34D"/><stop offset="50%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="89" height="36" rx="8" fill="#FCD34D"/>
+<text x="98.5" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#000" text-anchor="middle">GOOGL</text>
+<text x="540" y="120" font-family="Arial Black,Arial,sans-serif" font-size="96" fill="#FCD34D" text-anchor="middle" font-weight="900">€13B</text>
+<text x="540" y="196" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" text-anchor="middle" font-weight="900">FINLAND CONSTRUCTION HALT</text>
+<text x="540" y="248" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">EIA not completed · 300+ ha of forest cleared</text>
+<line x1="54" y1="276" x2="1026" y2="276" stroke="#30363D" stroke-width="2"/>
+
+<rect x="54" y="296" width="972" height="240" rx="16" fill="#161B22" stroke="#FCD34D" stroke-width="1.5"/>
+<text x="540" y="342" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FCD34D" text-anchor="middle" font-weight="900">TIMELINE</text>
+<text x="84" y="382" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">Sept 2026 ─── Google announces €13B Finland investment</text>
+<text x="84" y="426" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">Oct 07 2026 ─── Finnish LVV orders immediate halt</text>
+<text x="84" y="470" font-family="Arial,sans-serif" font-size="24" fill="#FCD34D">Until EIA complete ─── estimated 6–18 months delay</text>
+<text x="84" y="514" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Sites: Muhos + Kajaani in northern Finland</text>
+
+<rect x="54" y="564" width="300" height="140" rx="16" fill="#161B22" stroke="#FCD34D" stroke-width="1.5"/>
+<text x="204" y="602" font-family="Arial,sans-serif" font-size="20" fill="#FCD34D" text-anchor="middle" font-weight="700">INVESTMENT</text>
+<text x="204" y="644" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">€13B</text>
+<text x="204" y="672" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Google's largest EU deal</text>
+<rect x="390" y="564" width="300" height="140" rx="16" fill="#161B22" stroke="#F59E0B" stroke-width="1.5"/>
+<text x="540" y="602" font-family="Arial,sans-serif" font-size="20" fill="#F59E0B" text-anchor="middle" font-weight="700">CLEARED</text>
+<text x="540" y="644" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">300ha+</text>
+<text x="540" y="672" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">741 acres of forest</text>
+<rect x="726" y="564" width="300" height="140" rx="16" fill="#161B22" stroke="#D97706" stroke-width="1.5"/>
+<text x="876" y="602" font-family="Arial,sans-serif" font-size="20" fill="#D97706" text-anchor="middle" font-weight="700">EIA DELAY</text>
+<text x="876" y="644" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">6–18mo</text>
+<text x="876" y="672" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Estimated duration</text>
+
+<rect x="54" y="736" width="972" height="230" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="782" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FCD34D" text-anchor="middle" font-weight="900">EUROPE DATA CENTER PATTERN</text>
+<text x="84" y="822" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">Ireland — grid capacity shortfall → new limits</text>
+<text x="84" y="860" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">Netherlands — power + water usage restrictions</text>
+<text x="84" y="898" font-family="Arial,sans-serif" font-size="23" fill="#FCD34D">Finland — EIA violation → construction halted</text>
+<text x="84" y="938" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Structural ceiling forming on EU AI infra expansion rate</text>
+<text x="84" y="958" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">Finland chosen for cold climate + 85% renewables mix</text>
+
+<rect x="54" y="994" width="972" height="180" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="1040" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FCD34D" text-anchor="middle" font-weight="900">HOUSE VIEWS</text>
+<text x="84" y="1078" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">Alphabet analysts: within $50B CAPEX guide, re-plannable</text>
+<text x="84" y="1116" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">Bernstein: EU supply growth has structural speed cap</text>
+<text x="84" y="1154" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Alphabet PT ~$210 maintained</text>
+
+<rect x="54" y="1202" width="972" height="76" rx="16" fill="#1A1F2E" stroke="#FCD34D" stroke-width="2"/>
+<text x="540" y="1248" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#fff" text-anchor="middle">US cloud regions continue AI leadership; EU lags</text>
+
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#5EEAD4"/><stop offset="50%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#93C5FD"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#5EEAD4"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#000" text-anchor="middle">NVDA</text>
+<text x="540" y="130" font-family="Arial Black,Arial,sans-serif" font-size="90" fill="#5EEAD4" text-anchor="middle" font-weight="900">RTX Spark</text>
+<text x="540" y="200" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" text-anchor="middle" font-weight="900">Microsoft Surface Ultra</text>
+<text x="540" y="250" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">Nvidia AI PC chip — revealed Oct 7, ships Oct 16</text>
+<line x1="54" y1="278" x2="1026" y2="278" stroke="#30363D" stroke-width="2"/>
+
+<text x="54" y="328" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#5EEAD4" font-weight="900">AI Inference Speed vs MacBook Pro M5</text>
+<rect x="54" y="344" width="486" height="80" rx="12" fill="#30363D"/>
+<text x="74" y="392" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">MacBook Pro M5  (baseline 1×)</text>
+<rect x="54" y="444" width="972" height="80" rx="12" fill="#5EEAD4" opacity="0.2"/>
+<rect x="54" y="444" width="972" height="80" rx="12" fill="none" stroke="#5EEAD4" stroke-width="2"/>
+<text x="74" y="492" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#5EEAD4" font-weight="900">Surface Ultra  2× FASTER</text>
+
+<text x="54" y="564" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#5EEAD4" font-weight="900">Video Generation Speed</text>
+<rect x="54" y="580" width="162" height="70" rx="12" fill="#30363D"/>
+<text x="135" y="622" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">M5</text>
+<rect x="54" y="668" width="972" height="70" rx="12" fill="#5EEAD4" opacity="0.2"/>
+<rect x="54" y="668" width="972" height="70" rx="12" fill="none" stroke="#5EEAD4" stroke-width="2"/>
+<text x="540" y="710" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#5EEAD4" text-anchor="middle" font-weight="900">Surface Ultra  6× FASTER</text>
+
+<rect x="54" y="768" width="300" height="140" rx="16" fill="#161B22" stroke="#5EEAD4" stroke-width="1.5"/>
+<text x="204" y="806" font-family="Arial,sans-serif" font-size="20" fill="#5EEAD4" text-anchor="middle" font-weight="700">BASE PRICE</text>
+<text x="204" y="848" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$2,599</text>
+<text x="204" y="876" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">24GB/512GB config</text>
+<rect x="390" y="768" width="300" height="140" rx="16" fill="#161B22" stroke="#93C5FD" stroke-width="1.5"/>
+<text x="540" y="806" font-family="Arial,sans-serif" font-size="20" fill="#93C5FD" text-anchor="middle" font-weight="700">TOP CONFIG</text>
+<text x="540" y="848" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$5,899</text>
+<text x="540" y="876" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">128GB unified RAM</text>
+<rect x="726" y="768" width="300" height="140" rx="16" fill="#161B22" stroke="#22D3EE" stroke-width="1.5"/>
+<text x="876" y="806" font-family="Arial,sans-serif" font-size="20" fill="#22D3EE" text-anchor="middle" font-weight="700">SHIPS</text>
+<text x="876" y="848" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">OCT 16</text>
+<text x="876" y="876" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Pre-orders live</text>
+
+<rect x="54" y="940" width="972" height="220" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="986" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#5EEAD4" text-anchor="middle" font-weight="900">NVIDIA STRATEGIC SIGNIFICANCE</text>
+<text x="84" y="1028" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">• Expands beyond data center into PC revenue stream</text>
+<text x="84" y="1068" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">• RTX Spark: local LLM inference at tens of watts</text>
+<text x="84" y="1108" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">• Meta Muse personal agent ships as Windows app</text>
+<text x="84" y="1142" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">📅 Ships Oct 16 — watch early demand signal</text>
+
+<rect x="54" y="1192" width="972" height="86" rx="16" fill="#1A1F2E" stroke="#5EEAD4" stroke-width="2"/>
+<text x="540" y="1238" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#fff" text-anchor="middle">Citi: revenue diversification positive — PT $315</text>
+<text x="540" y="1268" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">Morgan Stanley holds PC contribution estimate conservative</text>
+
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

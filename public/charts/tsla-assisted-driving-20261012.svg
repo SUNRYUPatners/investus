@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FF4D6D"/><stop offset="50%" stop-color="#F97316"/><stop offset="100%" stop-color="#FF4D6D"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#FF4D6D"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="146" y="28" width="76" height="36" rx="8" fill="#7C3AED"/>
+<text x="184" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<text x="54" y="118" font-family="Arial Black,Arial,sans-serif" font-size="44" fill="#fff" font-weight="900">FSD → TAD</text>
+<text x="54" y="172" font-family="Arial Black,Arial,sans-serif" font-size="36" fill="#FF4D6D" font-weight="900">유럽 9개국 명칭 교체</text>
+<text x="54" y="224" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">독일 교통부 압박 6주 만 · 2026년 10월 9일</text>
+<line x1="54" y1="254" x2="1026" y2="254" stroke="#30363D" stroke-width="2"/>
+<rect x="54" y="274" width="972" height="120" rx="20" fill="#1A1A2E" stroke="#FF4D6D" stroke-width="2"/>
+<text x="540" y="326" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#FF4D6D" text-anchor="middle" font-weight="900">Full Self-Driving</text>
+<text x="540" y="362" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">→  테슬라 어시스티드 드라이빙 (TAD)</text>
+<rect x="54" y="424" width="300" height="130" rx="16" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="204" y="462" font-family="Arial,sans-serif" font-size="20" fill="#FF4D6D" text-anchor="middle" font-weight="700">적용 국가</text>
+<text x="204" y="504" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">9개국</text>
+<text x="204" y="532" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">EU 회원국</text>
+<rect x="390" y="424" width="300" height="130" rx="16" fill="#161B22" stroke="#F97316" stroke-width="1.5"/>
+<text x="540" y="462" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">라이선스 가격</text>
+<text x="540" y="504" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">€6,400</text>
+<text x="540" y="532" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">영구 라이선스</text>
+<rect x="726" y="424" width="300" height="130" rx="16" fill="#161B22" stroke="#FBBF24" stroke-width="1.5"/>
+<text x="876" y="462" font-family="Arial,sans-serif" font-size="20" fill="#FBBF24" text-anchor="middle" font-weight="700">EU 규정 투표</text>
+<text x="876" y="504" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">12월</text>
+<text x="876" y="532" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">예정</text>
+<rect x="54" y="584" width="972" height="460" rx="20" fill="#161B22"/>
+<text x="82" y="632" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#FF4D6D" font-weight="900">리브랜딩 배경과 의미</text>
+<line x1="82" y1="646" x2="998" y2="646" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="686" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">독일 장관: 완전 자율주행 수행 못하면서 명칭 오도</text>
+<text x="82" y="722" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">독일·스페인·네덜란드·슬로바키아 등 웹사이트 반영</text>
+<text x="82" y="758" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">향상형 오토파일럿 → TAD 베이직으로 동시 변경</text>
+<text x="82" y="794" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">미국·한국 FSD 명칭은 유지</text>
+<text x="82" y="844" font-family="Arial Black,arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">전략적 의미</text>
+<text x="82" y="882" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">EU 12월 자율주행 규정 투표 전 마찰 제거</text>
+<text x="82" y="918" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">사이버캡 유럽 형식 인증 협상 환경 조성</text>
+<text x="82" y="954" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">소비자 보호법 손해배상 리스크 구조적 축소</text>
+<text x="82" y="1004" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">하우스 뷰</text>
+<text x="82" y="1042" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">번스타인 360달러 — 사이버캡 인증 속도 가속 포석</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1D4ED8"/><stop offset="50%" stop-color="#2563EB"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#2563EB"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<rect x="146" y="28" width="128" height="36" rx="8" fill="#7C3AED"/>
+<text x="210" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Analysis</text>
+<text x="54" y="124" font-family="Arial Black,Arial,sans-serif" font-size="72" fill="#60A5FA" font-weight="900">$40B</text>
+<text x="54" y="178" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" font-weight="900">Nvidia Chip Financing</text>
+<text x="54" y="228" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Apollo leads · PIMCO in talks · Close target 2027</text>
+<line x1="54" y1="258" x2="1026" y2="258" stroke="#30363D" stroke-width="2"/>
+<rect x="54" y="278" width="462" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="285" y="316" font-family="Arial,sans-serif" font-size="20" fill="#60A5FA" text-anchor="middle" font-weight="700">Bank Loans</text>
+<text x="285" y="358" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$10B</text>
+<text x="285" y="386" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">senior facility</text>
+<rect x="564" y="278" width="462" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="795" y="316" font-family="Arial,sans-serif" font-size="20" fill="#60A5FA" text-anchor="middle" font-weight="700">IG Bonds</text>
+<text x="795" y="358" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$30B</text>
+<text x="795" y="386" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Apollo-led</text>
+<rect x="54" y="440" width="972" height="560" rx="20" fill="#161B22"/>
+<text x="82" y="490" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#60A5FA" font-weight="900">Deal Scale and Purpose</text>
+<line x1="82" y1="504" x2="998" y2="504" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="544" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI infra expansion — Starlink and Starshield compute</text>
+<text x="82" y="580" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Hundreds of thousands of H100-equivalent GPUs</text>
+<text x="82" y="616" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Largest single AI-purpose debt raise by a US company</text>
+<text x="82" y="652" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Exceeds Microsoft OpenAI $13B and Amazon Anthropic $4B</text>
+<text x="82" y="704" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">IPO Signal</text>
+<text x="82" y="742" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Investment-grade bonds = SpaceX testing public debt market</text>
+<text x="82" y="778" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Private credit avoids equity dilution before IPO</text>
+<text x="82" y="814" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI service revenue visibility supports $110–120B valuation</text>
+<text x="82" y="860" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">Market Reaction</text>
+<text x="82" y="898" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Nvidia +0.5%  /  SpaceX -1.0% after-hours</text>
+<text x="82" y="934" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Morgan Stanley: leverage rises but coverable from AI revenue</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>

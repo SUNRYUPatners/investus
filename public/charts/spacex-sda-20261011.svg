@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#60A5FA"/><stop offset="50%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#1D4ED8"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#60A5FA"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<text x="540" y="125" font-family="Arial Black,Arial,sans-serif" font-size="110" fill="#60A5FA" text-anchor="middle" font-weight="900">21기</text>
+<text x="540" y="198" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#fff" text-anchor="middle" font-weight="900">미군 SDA 위성 발사 성공</text>
+<text x="540" y="248" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">밴든버그 · 10월 10일 · PWSA 4번째 궤도면 완성</text>
+<line x1="54" y1="276" x2="1026" y2="276" stroke="#30363D" stroke-width="2"/>
+
+<rect x="54" y="296" width="972" height="260" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="540" y="342" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#60A5FA" text-anchor="middle" font-weight="900">PWSA — 증식전투우주구조</text>
+<text x="84" y="384" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">저궤도 광학링크 메시 위성 네트워크</text>
+<text x="84" y="422" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">전 세계 군사 전술 통신 + 미사일 경보·추적</text>
+<text x="84" y="460" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">노스럽그루먼 제작 데이터 전송 위성 21기</text>
+<text x="84" y="498" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">10월 4일 스크럽(자동 시퀀스 직전 중단) → 5일 후 성공</text>
+<text x="84" y="534" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">팔콘9 1단 해상 드론쉽 착륙·회수 완료</text>
+
+<rect x="54" y="586" width="300" height="140" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="204" y="624" font-family="Arial,sans-serif" font-size="20" fill="#60A5FA" text-anchor="middle" font-weight="700">발사 위성</text>
+<text x="204" y="666" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">21기</text>
+<text x="204" y="694" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">SDA 전송 위성</text>
+<rect x="390" y="586" width="300" height="140" rx="16" fill="#161B22" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="540" y="624" font-family="Arial,sans-serif" font-size="20" fill="#3B82F6" text-anchor="middle" font-weight="700">궤도면</text>
+<text x="540" y="666" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">4/N</text>
+<text x="540" y="694" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">PWSA 4번째 완성</text>
+<rect x="726" y="586" width="300" height="140" rx="16" fill="#161B22" stroke="#1D4ED8" stroke-width="1.5"/>
+<text x="876" y="624" font-family="Arial,sans-serif" font-size="20" fill="#1D4ED8" text-anchor="middle" font-weight="700">2026 발사</text>
+<text x="876" y="666" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">51회</text>
+<text x="876" y="694" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">팔콘9 누적</text>
+
+<rect x="54" y="758" width="972" height="190" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="804" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#60A5FA" text-anchor="middle" font-weight="900">계약 구조</text>
+<text x="84" y="844" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">발사당 추정 단가: $7,000만~$9,000만 달러</text>
+<text x="84" y="884" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">2026~2027년 추가 트란체 발사 예정</text>
+<text x="84" y="924" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">재사용 횟수 증가 → 발사당 원가 지속 하락</text>
+<text x="84" y="942" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">📅 USSF-481 다음 예정 (10월 15일 전후)</text>
+
+<rect x="54" y="978" width="972" height="170" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="1022" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#60A5FA" text-anchor="middle" font-weight="900">IPO 시사점</text>
+<text x="84" y="1062" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">군사 계약 수주 능력 추가 증거</text>
+<text x="84" y="1102" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">발사 횟수 51회 → S-1 운용 실적 섹션 강화</text>
+<text x="84" y="1142" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">발사 수익·위성 수·군용 계약 동시 개선</text>
+
+<rect x="54" y="1178" width="972" height="100" rx="16" fill="#1A1F2E" stroke="#60A5FA" stroke-width="2"/>
+<text x="540" y="1224" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#fff" text-anchor="middle">IPO 전 밸류에이션 $90B~$110B 구간 상단 압력</text>
+<text x="540" y="1262" font-family="Arial,sans-serif" font-size="21" fill="#8B949E" text-anchor="middle">아크: 군용 매출 비중↑ → 상장 후 주가 안정성↑</text>
+
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

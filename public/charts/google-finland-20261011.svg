@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FCD34D"/><stop offset="50%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="89" height="36" rx="8" fill="#FCD34D"/>
+<text x="98.5" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#000" text-anchor="middle">GOOGL</text>
+<text x="540" y="120" font-family="Arial Black,Arial,sans-serif" font-size="96" fill="#FCD34D" text-anchor="middle" font-weight="900">€13B</text>
+<text x="540" y="196" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" text-anchor="middle" font-weight="900">핀란드 공사 즉각 중단</text>
+<text x="540" y="248" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">환경영향평가 미완료 · 300헥타르 산림 벌채 혐의</text>
+<line x1="54" y1="276" x2="1026" y2="276" stroke="#30363D" stroke-width="2"/>
+
+<rect x="54" y="296" width="972" height="240" rx="16" fill="#161B22" stroke="#FCD34D" stroke-width="1.5"/>
+<text x="540" y="342" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FCD34D" text-anchor="middle" font-weight="900">타임라인</text>
+<text x="84" y="382" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026년 9월 ─── 구글, 핀란드 €130억 투자 발표</text>
+<text x="84" y="426" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">2026.10.07 ─── 핀란드 LVV 공사 즉각 중단 명령</text>
+<text x="84" y="470" font-family="Arial,sans-serif" font-size="24" fill="#FCD34D">EIA 완료까지 ─── 추정 6~18개월 소요</text>
+<text x="84" y="514" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">부지: 북핀란드 무오스 + 카야니 2곳</text>
+
+<rect x="54" y="564" width="300" height="140" rx="16" fill="#161B22" stroke="#FCD34D" stroke-width="1.5"/>
+<text x="204" y="602" font-family="Arial,sans-serif" font-size="20" fill="#FCD34D" text-anchor="middle" font-weight="700">투자 계획</text>
+<text x="204" y="644" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">€130억</text>
+<text x="204" y="672" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">유럽 최대 단일</text>
+<rect x="390" y="564" width="300" height="140" rx="16" fill="#161B22" stroke="#F59E0B" stroke-width="1.5"/>
+<text x="540" y="602" font-family="Arial,sans-serif" font-size="20" fill="#F59E0B" text-anchor="middle" font-weight="700">벌채 면적</text>
+<text x="540" y="644" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">300ha+</text>
+<text x="540" y="672" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">741에이커 산림</text>
+<rect x="726" y="564" width="300" height="140" rx="16" fill="#161B22" stroke="#D97706" stroke-width="1.5"/>
+<text x="876" y="602" font-family="Arial,sans-serif" font-size="20" fill="#D97706" text-anchor="middle" font-weight="700">EIA 소요</text>
+<text x="876" y="644" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">6~18개월</text>
+<text x="876" y="672" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">추정 지연 기간</text>
+
+<rect x="54" y="736" width="972" height="230" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="782" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FCD34D" text-anchor="middle" font-weight="900">유럽 데이터센터 규제 패턴</text>
+<text x="84" y="822" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">아일랜드 — 전력망 용량 부족 → 신규 제한</text>
+<text x="84" y="860" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">네덜란드 — 전력 부족 + 물 사용 규제</text>
+<text x="84" y="898" font-family="Arial,sans-serif" font-size="23" fill="#FCD34D">핀란드 — 환경영향평가 절차 위반 → 공사 중단</text>
+<text x="84" y="938" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">유럽 AI 인프라 확장 속도에 구조적 상한선 형성 중</text>
+<text x="84" y="958" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">핀란드: 차가운 기후 + 재생에너지 85% 비중 선택 이유</text>
+
+<rect x="54" y="994" width="972" height="180" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="1040" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FCD34D" text-anchor="middle" font-weight="900">하우스 뷰</text>
+<text x="84" y="1078" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">알파벳 애널: CAPEX $500억 가이던스 내 재조정 가능</text>
+<text x="84" y="1116" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">번스타인: 유럽 내 공급 증가 속도 구조적 제한</text>
+<text x="84" y="1154" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">알파벳 목표주가 $210 수준 유지</text>
+
+<rect x="54" y="1202" width="972" height="76" rx="16" fill="#1A1F2E" stroke="#FCD34D" stroke-width="2"/>
+<text x="540" y="1248" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#fff" text-anchor="middle">미국 클라우드 리전 중심 AI 지속 → 유럽 지연 리스크</text>
+
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

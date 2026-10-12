@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1D4ED8"/><stop offset="50%" stop-color="#2563EB"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#2563EB"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<rect x="146" y="28" width="76" height="36" rx="8" fill="#7C3AED"/>
+<text x="184" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<text x="54" y="124" font-family="Arial Black,Arial,sans-serif" font-size="72" fill="#60A5FA" font-weight="900">$400억</text>
+<text x="54" y="178" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" font-weight="900">엔비디아 칩 차입</text>
+<text x="54" y="228" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">아폴로 선도 · 핌코 참여 · 2027년 완료 목표</text>
+<line x1="54" y1="258" x2="1026" y2="258" stroke="#30363D" stroke-width="2"/>
+<rect x="54" y="278" width="462" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="285" y="316" font-family="Arial,sans-serif" font-size="20" fill="#60A5FA" text-anchor="middle" font-weight="700">은행 대출</text>
+<text x="285" y="358" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$100억</text>
+<text x="285" y="386" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">시니어 론</text>
+<rect x="564" y="278" width="462" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="795" y="316" font-family="Arial,sans-serif" font-size="20" fill="#60A5FA" text-anchor="middle" font-weight="700">투자등급 채권</text>
+<text x="795" y="358" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$300억</text>
+<text x="795" y="386" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">아폴로 주도</text>
+<rect x="54" y="440" width="972" height="560" rx="20" fill="#161B22"/>
+<text x="82" y="490" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#60A5FA" font-weight="900">차입 목적과 규모</text>
+<line x1="82" y1="504" x2="998" y2="504" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="544" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI 인프라 확장 — 스타링크·스타쉴드 연산 수요</text>
+<text x="82" y="580" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">블랙웰 기준 H100 등가 수십만 장 규모</text>
+<text x="82" y="616" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">미국 기업 AI 목적 단일 차입 사상 최대</text>
+<text x="82" y="652" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">MS 오픈AI $130억·아마존 앤트로픽 $40억 상회</text>
+<text x="82" y="704" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">IPO 관점 해석</text>
+<text x="82" y="742" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">투자등급 채권 → 공모 채권시장 진입 준비 신호</text>
+<text x="82" y="778" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">사모 신용 → 자기자본 희석 없이 성장 자금 확보</text>
+<text x="82" y="814" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI 서비스 매출 가시화 시 IPO 밸류 $1,100~$1,200억</text>
+<text x="82" y="860" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">주가 반응</text>
+<text x="82" y="898" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">엔비디아 +0.5%  /  스페이스X 시간 외 -1.0%</text>
+<text x="82" y="934" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">모건스탠리: 부채비율↑ but 이자 충당 범위 내 긍정적</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>

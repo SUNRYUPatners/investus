@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#5EEAD4"/><stop offset="50%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#5EEAD4"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#000" text-anchor="middle">NVDA</text>
+<text x="540" y="120" font-family="Arial Black,Arial,sans-serif" font-size="90" fill="#5EEAD4" text-anchor="middle" font-weight="900">$25B</text>
+<text x="540" y="190" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#fff" text-anchor="middle" font-weight="900">Reflection AI 인수 협상</text>
+<text x="540" y="240" font-family="Arial,sans-serif" font-size="26" fill="#8B949E" text-anchor="middle">기업가치 25조 원 · 딥마인드 출신 창업</text>
+<line x1="54" y1="268" x2="1026" y2="268" stroke="#30363D" stroke-width="2"/>
+
+<rect x="54" y="288" width="972" height="220" rx="16" fill="#161B22" stroke="#5EEAD4" stroke-width="1.5"/>
+<text x="540" y="334" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#5EEAD4" text-anchor="middle" font-weight="900">Reflection AI 프로필</text>
+<text x="84" y="374" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">창업: 2024년 · 전 딥마인드 연구원 미샤 라스킨</text>
+<text x="84" y="414" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">기업가치: 2026년 3월 $250억 (한화 약 34조 원)</text>
+<text x="84" y="454" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">모델: Beam — 오픈웨이트 기업용 LLM 출시</text>
+<text x="84" y="490" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">엔비디아 기투자: $8억 달러 (주요 전략 투자자)</text>
+
+<rect x="54" y="534" width="300" height="140" rx="16" fill="#161B22" stroke="#5EEAD4" stroke-width="1.5"/>
+<text x="204" y="572" font-family="Arial,sans-serif" font-size="20" fill="#5EEAD4" text-anchor="middle" font-weight="700">기투자</text>
+<text x="204" y="614" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$8억</text>
+<text x="204" y="642" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">엔비디아 기존 지분</text>
+<rect x="390" y="534" width="300" height="140" rx="16" fill="#161B22" stroke="#22D3EE" stroke-width="1.5"/>
+<text x="540" y="572" font-family="Arial,sans-serif" font-size="20" fill="#22D3EE" text-anchor="middle" font-weight="700">기업가치</text>
+<text x="540" y="614" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$25B</text>
+<text x="540" y="642" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">2026.03 라운드</text>
+<rect x="726" y="534" width="300" height="140" rx="16" fill="#161B22" stroke="#A855F7" stroke-width="1.5"/>
+<text x="876" y="572" font-family="Arial,sans-serif" font-size="20" fill="#A855F7" text-anchor="middle" font-weight="700">타임라인</text>
+<text x="876" y="614" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">수주 내</text>
+<text x="876" y="642" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">FT 보도 기준</text>
+
+<rect x="54" y="706" width="972" height="200" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="752" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#5EEAD4" text-anchor="middle" font-weight="900">딜 구조 시나리오</text>
+<text x="84" y="792" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">① 완전 인수 — 규제 심사 수개월 소요 예상</text>
+<text x="84" y="832" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">② 인재 확보형(acqui-hire) — 빠른 완료 가능</text>
+<text x="84" y="868" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">미국 법무부 칩 독점 조사 병행 중 — ②가 유력</text>
+<text x="84" y="900" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">📅 수주 내 구조 확정 예상 (FT 인용)</text>
+
+<rect x="54" y="934" width="972" height="190" rx="16" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+<text x="540" y="978" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#5EEAD4" text-anchor="middle" font-weight="900">전략 의미</text>
+<text x="84" y="1016" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">오픈웨이트 모델 → 온프레미스 GPU 수요 증가</text>
+<text x="84" y="1056" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">칩 벤더에서 AI 플랫폼 기업으로 포지션 전환</text>
+<text x="84" y="1094" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Beam 채택 기업들의 GPU 수요도 엔비디아에 귀속</text>
+<text x="84" y="1120" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">골드만 EU 독점 우려 경고 · 목표주가 $290</text>
+
+<rect x="54" y="1154" width="972" height="122" rx="16" fill="#1A1F2E" stroke="#5EEAD4" stroke-width="2"/>
+<text x="540" y="1196" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#fff" text-anchor="middle">시티 $315 목표  ·  딜 확정 시 재평가 가능</text>
+<text x="540" y="1236" font-family="Arial,sans-serif" font-size="22" fill="#8B949E" text-anchor="middle">칩 공급 + 모델 개발 동시 장악 → EU 심사 리스크</text>
+<text x="540" y="1268" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">거래 구조 확정 전까지 골드만 보수적 시각 유지</text>
+
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
+</svg>

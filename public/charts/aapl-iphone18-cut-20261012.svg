@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="50%" stop-color="#A855F7"/><stop offset="100%" stop-color="#C084FC"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#7C3AED"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">AAPL</text>
+<rect x="146" y="28" width="76" height="36" rx="8" fill="#1D4ED8"/>
+<text x="184" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<text x="54" y="120" font-family="Arial Black,Arial,sans-serif" font-size="72" fill="#C084FC" font-weight="900">-15~20%</text>
+<text x="54" y="176" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" font-weight="900">아이폰18 프로 부품 삭감</text>
+<text x="54" y="226" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">AI 메모리 원가↑ → 가격 인상 → 수요 둔화</text>
+<line x1="54" y1="256" x2="1026" y2="256" stroke="#30363D" stroke-width="2"/>
+<rect x="54" y="276" width="300" height="130" rx="16" fill="#161B22" stroke="#C084FC" stroke-width="1.5"/>
+<text x="204" y="314" font-family="Arial,sans-serif" font-size="20" fill="#C084FC" text-anchor="middle" font-weight="700">시작가</text>
+<text x="204" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$1,199</text>
+<text x="204" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">+$100 인상</text>
+<rect x="390" y="276" width="300" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="1.5"/>
+<text x="540" y="314" font-family="Arial,sans-serif" font-size="20" fill="#EF4444" text-anchor="middle" font-weight="700">주가 반응</text>
+<text x="540" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">-2.5%</text>
+<text x="540" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">보도 직후</text>
+<rect x="726" y="276" width="300" height="130" rx="16" fill="#161B22" stroke="#F97316" stroke-width="1.5"/>
+<text x="876" y="314" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">교체 주기</text>
+<text x="876" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">3.8년</text>
+<text x="876" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">미국 평균</text>
+<rect x="54" y="438" width="972" height="580" rx="20" fill="#161B22"/>
+<text x="82" y="488" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#C084FC" font-weight="900">원인 분석</text>
+<line x1="82" y1="502" x2="998" y2="502" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="542" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI 인프라 메모리 수요↑ → 낸드·D램 단가 상승</text>
+<text x="82" y="578" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">부품 원가 → 아이폰18 프로 $100 소비자 전가</text>
+<text x="82" y="614" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">마이크론: 타이트함 2027년 상반기까지 지속 예고</text>
+<text x="82" y="650" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">최근 3년 평균보다 삭감 폭 큼 → 구조적 수요 부진</text>
+<text x="82" y="700" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">연쇄 영향</text>
+<text x="82" y="738" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">디스플레이 공급사 · TSMC 3nm 일정 조정 가능</text>
+<text x="82" y="774" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">프리미엄 스마트폰 전반 구조적 원가 부담 공유</text>
+<text x="82" y="810" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">아이폰19 가격 전략 수정 논의 불가피</text>
+<text x="82" y="860" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">하우스 뷰</text>
+<text x="82" y="898" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">JP모건 목표가 210달러 ↓ (230달러에서) — 출하 5~7% 하향</text>
+<text x="82" y="934" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">바클레이 목표가 225달러 유지 — 2027H2 회복 전망</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>
