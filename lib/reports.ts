@@ -1,4 +1,4 @@
-export type ReportCategory = "시장분석" | "종목분석" | "매크로" | "섹터" | "특집" | "BREAKING" | "어닝";
+export type ReportCategory = "시장분석" | "종목분석" | "매크로" | "섹터" | "특집" | "BREAKING" | "어닝" | "한국시장" | "안전자산" | "가상자산";
 export type ReportColor    = "mint" | "blue" | "purple" | "orange" | "red";
 
 export type Report = {
@@ -36,6 +36,9 @@ export const CATEGORY_EMOJI: Record<ReportCategory, string> = {
   "특집":     "⭐",
   "BREAKING": "🚨",
   "어닝":     "💰",
+  "한국시장": "🇰🇷",
+  "안전자산": "🥇",
+  "가상자산": "₿",
 };
 
 export const SEED_REPORTS: Report[] = [
