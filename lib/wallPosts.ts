@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T12OCT = 1791759600000; // 2026-10-12 08:00 KST
 const T11OCT = 1791673200000; // 2026-10-11 08:00 KST
 const T08OCT = 1791414000000; // 2026-10-08 08:00 KST
 const T07OCT = 1791327600000; // 2026.10.07 08:00 KST
@@ -139,7 +140,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T11OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T12OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -158,6 +159,98 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-12 신규 ────────────────────
+  { id: 122242, symbol: "TSLA", nickname: "파리첫눈목격자", holdingLabel: "장투중",
+    content: "사이버캡이 진짜 파리 모터쇼 무대에 서있어 ㄷㄷ 스티어링 휠 없는 차를 유럽 사람들이 실제로 보는 첫날인 거잖아 테슬라 스탠드 C25에 가면 탈 수도 있나",
+    createdAt: T12OCT + 8*60_000, likes: 47, comments: 0 },
+  { id: 122243, symbol: "TSLA", nickname: "로보택시투자자", holdingLabel: "장기보유중",
+    content: "사이버캡 미국 실운행 차 그대로 들고 간 거 포인트임. 프로토타입 아님. 유럽 규제당국한테 '이미 굴리고 있다' 보여주는 전략인 거지. 형식인증 협상 테이블에서 꺼낼 패",
+    createdAt: T12OCT + 16*60_000, likes: 39, comments: 0 },
+  { id: 122244, symbol: "TSLA", nickname: "옵티머스보러간다", holdingLabel: "매수고민",
+    content: "파리모터쇼 7.1홀 C25 부스에 사이버캡 + 옵티머스 젠2 + 슈퍼차저까지 다 있다고 테슬라가 이번 행사 진짜 올인한 거 아님? FSD 시승까지 6종. 유럽 미디어 커버리지 엄청나겠다",
+    createdAt: T12OCT + 24*60_000, likes: 28, comments: 0 },
+  { id: 122245, symbol: "TSLA", nickname: "FSD유럽투자자", holdingLabel: "분할매수중",
+    content: "FSD가 TAD로 바뀐 게 그냥 이름만 바뀐 게 아님. 독일 교통부 장관이 '소비자 오도' 콕 집어 지적했고 6주 만에 9개국에서 바꾼 거거든. 유럽 규제 협상 속도 높이려는 포석인 거지",
+    createdAt: T12OCT + 32*60_000, likes: 52, comments: 0 },
+  { id: 122246, symbol: "TSLA", nickname: "EU규제모니터", holdingLabel: "장투중",
+    content: "TAD 리브랜딩 타이밍이 묘함. EU 의회 자율주행 규정 투표가 12월인데 그 전에 마찰 요인을 싹 제거한 거야. 6,400유로짜리 FSD 가격도 그대로니까 기능 차이는 없고 법적 리스크만 줄인 것",
+    createdAt: T12OCT + 40*60_000, likes: 36, comments: 0 },
+  { id: 122247, symbol: "TSLA", nickname: "사이버캡유럽론칭", holdingLabel: "단기트레이딩",
+    content: "번스타인이 TAD 리브랜딩이 사이버캡 유럽 형식인증 속도 높이는 포석이라고 했는데 나도 그렇게 봄. 운전석 없는 차는 별도 인증 카테고리 필요하거든. 규제당국이랑 싸울 게 하나라도 줄어야",
+    createdAt: T12OCT + 48*60_000, likes: 31, comments: 0 },
+  { id: 122248, symbol: "SPCX", nickname: "400억달러규모", holdingLabel: "장투중",
+    content: "스페이스X가 엔비디아 칩 사려고 400억 달러 빌린다는 거 진짜 스케일이 남다름 MS가 오픈AI에 130억, 아마존이 앤트로픽에 40억인데 스페이스X는 400억이야? 이게 맞아?",
+    createdAt: T12OCT + 56*60_000, likes: 63, comments: 0 },
+  { id: 122249, symbol: "SPCX", nickname: "아폴로주도거래", holdingLabel: "분할매수중",
+    content: "구조가 흥미로움. 은행 대출 100억 + 투자등급 채권 300억. 투자등급 채권 발행한다는 거 IPO 전에 공모 채권 시장 진입 준비한다는 신호 아닌가. 아폴로가 주도하고 핌코가 참여 논의 중",
+    createdAt: T12OCT + 64*60_000, likes: 44, comments: 0 },
+  { id: 122250, symbol: "SPCX", nickname: "스타링크AI확장", holdingLabel: "장기보유중",
+    content: "스타링크 AI 기반 네트워크 최적화 + 스타쉴드 군사 데이터 처리에 GPU가 얼마나 필요할지 생각해봐. 수십만 장 블랙웰이 필요한 거잖아. 자체 데이터센터 구축이랑 세트로 봐야 함",
+    createdAt: T12OCT + 72*60_000, likes: 38, comments: 0 },
+  { id: 122251, symbol: "SPCX", nickname: "IPO벨류업사이드", holdingLabel: "매수고민",
+    content: "모건스탠리가 부채비율 올라가도 AI 서비스 매출로 이자 충당 범위 내라고 했는데 진짜 관건은 그 AI 서비스 매출이 얼마나 빨리 나오냐겠지. 400억 차입이 현실화되면 IPO 밸류 상단 1,200억 달러 얘기도 나올 듯",
+    createdAt: T12OCT + 80*60_000, likes: 29, comments: 0 },
+  { id: 122252, symbol: "AAPL", nickname: "아이폰가격충격", holdingLabel: "관망중",
+    content: "아이폰18 프로 1,199달러ㄷㄷ 전작보다 100달러 올랐다는데 이게 AI 메모리 원가 때문이라니. 소비자한테 전가된 거잖아. 부품 주문 15~20% 삭감이면 수요 안 좋은 거 애플도 알고 있다는 거지",
+    createdAt: T12OCT + 88*60_000, likes: 55, comments: 0 },
+  { id: 122253, symbol: "AAPL", nickname: "마이크론발AI원가", holdingLabel: "분할매수중",
+    content: "마이크론이 AI 인프라 메모리 수요 때문에 소비자용 메모리 타이트함이 2027년까지 간다고 했는데 이게 애플만의 문제가 아니라는 거잖아. 삼성 소니 다 똑같이 원가 부담 받는 구조",
+    createdAt: T12OCT + 96*60_000, likes: 41, comments: 0 },
+  { id: 122254, symbol: "AAPL", nickname: "JP모건목표가하향", holdingLabel: "단기트레이딩",
+    content: "JP모건이 아이폰 출하 5~7% 하향에 목표주가 230→210달러로 낮췄어. 주가가 -2.5% 빠진 게 그냥 노이즈가 아닌 거임. 아이폰19 가격 전략 수정 얘기도 나온다는데 내년이 변곡점",
+    createdAt: T12OCT + 104*60_000, likes: 47, comments: 0 },
+  { id: 122255, symbol: "AAPL", nickname: "TSMC3나노일정", holdingLabel: "장기보유중",
+    content: "바클레이가 짚은 포인트가 맞음. AAPL 부품 삭감이면 TSMC 3나노 생산 일정이랑 디스플레이 공급사 타격이 연쇄적으로 옴. 그냥 애플 얘기가 아니라 부품 공급망 전체 얘기인 거야",
+    createdAt: T12OCT + 112*60_000, likes: 33, comments: 0 },
+  { id: 122256, symbol: "TSLA", nickname: "오늘하루정리", holdingLabel: "장투중",
+    content: "오늘 요약: 사이버캡 파리 데뷔 + FSD→TAD 유럽 리브랜딩으로 TSLA 유럽 공략 구체화. 스페이스X 400억 달러 칩 차입으로 AI 사업 스케일업. 애플은 아이폰 원가 구조 문제 가시화. 각 종목 리포트 확인하세요",
+    createdAt: T12OCT + 120*60_000, likes: 28, comments: 0 },
+  // ── 2026-10-11 2차 신규 ────────────────
+  { id: 122227, symbol: "TSLA", nickname: "486천대지기", holdingLabel: "장투중",
+    content: "테슬라 3Q 인도 486,532대 나왔는데 시장 예상이 461,974였거든. 25,000대 넘게 더 팔았어. 근데 YoY로 보면 25년 3Q 497,099보다 낮긴 한데 QoQ는 480K에서 486K로 올라온 거잖아. 21일 마진이 진짜 관건.",
+    createdAt: T11OCT + 130*60_000, likes: 34, comments: 0 },
+  { id: 122228, symbol: "TSLA", nickname: "에너지13.7", holdingLabel: "장투중",
+    content: "에너지 저장 13.7GWh가 진짜 크다. 메가팩 3,513기 분량이야 한 분기에. 차 팔기만 하는 회사가 아니라는 거 이제 숫자로 나오잖아. 솔직히 에너지 부문 성장 속도가 더 빨라지고 있는 것 같은데.",
+    createdAt: T11OCT + 138*60_000, likes: 27, comments: 0 },
+  { id: 122229, symbol: "TSLA", nickname: "마진사냥꾼", holdingLabel: "관심종목",
+    content: "21일 실적 포인트 정리: 1) 차량 총이익률 18% 회복했냐 2) FSD 구독자 수 공개하냐 3) 로보택시 타임라인 업데이트 있냐. 인도 숫자는 이미 좋게 나왔으니 이제 마진만 보면 됨. 인센티브 얼마나 썼는지가 핵심.",
+    createdAt: T11OCT + 146*60_000, likes: 29, comments: 0 },
+  { id: 122230, symbol: "NVDA", nickname: "RTX피씨러버", holdingLabel: "관심종목",
+    content: "마이크로소프트 서피스 울트라 엔비디아 RTX Spark 넣었대. 2,599달러부터 시작인데 맥북 M5보다 AI 추론 2배 빠르다고. 엔비디아가 이제 데이터센터만 아니라 일반 노트북에도 들어가기 시작하네.",
+    createdAt: T11OCT + 154*60_000, likes: 31, comments: 0 },
+  { id: 122231, symbol: "NVDA", nickname: "애플천하끝나나", holdingLabel: "관심종목",
+    content: "AI 추론 2배, 영상 생성 6배라는데 진짜임? 애플 M5가 원래 효율 좋기로 유명한데. 가격은 2,599달러부터 5,899달러까지. 성능이 맞으면 엔비디아 PC 시장 진입이 게임 체인저 될 수도 있겠다.",
+    createdAt: T11OCT + 162*60_000, likes: 25, comments: 0 },
+  { id: 122232, symbol: "NVDA", nickname: "리플렉션쇼크", holdingLabel: "관심종목",
+    content: "엔비디아가 Reflection AI 인수 검토한다는 거 봤어? 이미 8억 달러 투자했는데 완전 인수나 인재 확보형 딜이래. 기업가치 250억 달러짜리를. 딥마인드 출신들이 만든 오픈웨이트 모델 Beam 회사임.",
+    createdAt: T11OCT + 170*60_000, likes: 36, comments: 0 },
+  { id: 122233, symbol: "NVDA", nickname: "독점우려자", holdingLabel: "관심종목",
+    content: "엔비디아가 Reflection AI 사면 칩 팔고 모델도 만드는 거잖아. 법무부가 칩 독점 조사 중인데 여기에 모델까지? EU는 더 강하게 나올 텐데. 인재 확보형으로 가는 이유가 이거 때문 아닐까.",
+    createdAt: T11OCT + 178*60_000, likes: 22, comments: 0 },
+  { id: 122234, symbol: "SPCX", nickname: "팔콘51회", holdingLabel: "장투중",
+    content: "팔콘9 올해만 51번 발사했어. 이번에 SDA 군사위성 21기 또 올렸고. 10월 4일에 마지막 순간에 스크럽됐다가 5일 후 성공. PWSA 4번째 궤도면 완성이래. 군사 계약이 IPO 수익 기반 얼마나 탄탄한지 보여주는 거지.",
+    createdAt: T11OCT + 186*60_000, likes: 28, comments: 0 },
+  { id: 122235, symbol: "SPCX", nickname: "노스럽협력사", holdingLabel: "관심종목",
+    content: "이번 SDA 위성 노스럽그루먼이 만들었는데 스페이스X가 발사. 발사당 7~9천만 달러 추정이고 2026~2027년 추가 트란체 예정이래. 군사 계약이 꾸준히 쌓이는 구조 확인됨.",
+    createdAt: T11OCT + 194*60_000, likes: 21, comments: 0 },
+  { id: 122236, symbol: "META", nickname: "에이전트표준러", holdingLabel: "관심종목",
+    content: "메타가 월마트 스트라이프랑 AI 에이전트 표준 만들었대. 개인 에이전트 프로토콜이라는 거. 에이전트가 쇼핑 결제 예약 다 할 수 있는 통일된 표준. 데이터가 메타 광고로 연결되면 구글 쇼핑이랑 진짜 경쟁 시작이네.",
+    createdAt: T11OCT + 202*60_000, likes: 24, comments: 0 },
+  { id: 122237, symbol: "META", nickname: "심사AI화", holdingLabel: "관심종목",
+    content: "메타 콘텐츠 심사 인력 90% AI로 바꾼다는데 올해 안에. 8천 명 자르고 7천 명 AI 프로젝트 배치. 연간 15~20억 달러 인건비가 AI 비용으로 전환되는 거잖아. 마진에 얼마나 반영될지가 27년 실적 핵심.",
+    createdAt: T11OCT + 210*60_000, likes: 26, comments: 0 },
+  { id: 122238, symbol: "GOOGL", nickname: "핀란드산림이", holdingLabel: "관심종목",
+    content: "구글이 핀란드에 130억 유로 투자하겠다고 9월에 발표했는데 한 달도 안 돼서 공사 중단 명령 받았대. 환경영향평가 안 하고 300헥타르 산림 벌채했다는 거. 유럽 규제 진짜 빠르네.",
+    createdAt: T11OCT + 218*60_000, likes: 23, comments: 0 },
+  { id: 122239, symbol: "GOOGL", nickname: "유럽규제패턴", holdingLabel: "관심종목",
+    content: "아일랜드 전력 부족, 네덜란드 전력+물 제한, 핀란드 환경 규제. 유럽에서 데이터센터 짓기가 점점 힘들어지고 있어. 결국 AI 서비스 인프라는 미국 위주로 가고 유럽은 지연될 수밖에 없는 구조.",
+    createdAt: T11OCT + 226*60_000, likes: 19, comments: 0 },
+  { id: 122240, symbol: "NVDA", nickname: "AI수요다각화", holdingLabel: "장투중",
+    content: "오늘 엔비디아 관련 뉴스 3개 나왔어. RTX Spark 노트북, Reflection AI 인수 검토, 구글이 스페이스X서 GPU 빌리는 구조. 수요처가 클라우드→위성→노트북으로 퍼져나가고 있어. 순환파이낸싱 우려가 사라지면 이게 진짜 카탈리스트.",
+    createdAt: T11OCT + 234*60_000, likes: 33, comments: 0 },
+  { id: 122241, symbol: "SPCX", nickname: "IPO준비완료", holdingLabel: "장투중",
+    content: "스페이스X S-1에 들어갈 내용 이번 주에만 GPU 계약 304억, 800MHz 스펙트럼 인수, SDA 21기 발사, Crew-13 최단 도킹. 사업 다각화 증거가 한꺼번에 몰렸네. IPO 직전 스토리 완성 중인 것 같은 느낌.",
+    createdAt: T11OCT + 242*60_000, likes: 30, comments: 0 },
   // ── 2026-10-11 주말 신규 ────────────────
   { id: 122212, symbol: "TSLA", nickname: "웨이코직관러", holdingLabel: "관심종목",
     content: "테슬라 로드스터 공개 10월 15일 웨이코로 미뤄졌대. 악천후 때문에 야외 행사 날짜 바꾼 거라는데 원래 10월 1일이었잖아. 스페이스X 스러스터로 뜨는 거 꼭 보고 싶은데 15일도 비 안 오길 바람.",

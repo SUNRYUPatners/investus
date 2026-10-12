@@ -1,38 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
 <rect width="1080" height="1350" fill="#0D1117"/>
 
-<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#A855F7"/><stop offset="20%" stop-color="#EC4899"/><stop offset="40%" stop-color="#F97316"/><stop offset="60%" stop-color="#EAB308"/><stop offset="80%" stop-color="#22C55E"/><stop offset="100%" stop-color="#06B6D4"/></linearGradient></defs>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#A855F7"/><stop offset="20%" stop-color="#EC4899"/><stop offset="40%" stop-color="#FF4D6D"/><stop offset="60%" stop-color="#FB923C"/><stop offset="80%" stop-color="#5EEAD4"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient></defs>
 <rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
 <rect x="54" y="28" width="102" height="36" rx="8" fill="#A855F7"/>
 <text x="105" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">WEEKLY</text>
-<text x="54" y="110" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">OCT 11, 2026</text>
-<text x="54" y="168" font-family="Arial,sans-serif" font-size="28" fill="#8B949E">Tesla · SpaceX · Big Tech</text>
-<line x1="54" y1="192" x2="1026" y2="192" stroke="#30363D" stroke-width="2"/>
-<text x="54" y="230" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#FF4D6D" font-weight="900">1</text>
-<line x1="110" y1="198" x2="110" y2="246" stroke="#FF4D6D" stroke-width="3"/>
-<text x="130" y="200" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Roadster Oct 15 reveal — cold-gas thruster hover demo</text>
-<text x="130" y="230" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">teased</text>
-<text x="54" y="390" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#FF4D6D" font-weight="900">2</text>
-<line x1="110" y1="358" x2="110" y2="406" stroke="#FF4D6D" stroke-width="3"/>
-<text x="130" y="360" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">FSD v14.3.11 Auto Collision Evasion — HW4 only, HW3 Lite</text>
-<text x="130" y="390" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">simultaneous</text>
-<text x="54" y="550" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#00B4D8" font-weight="900">3</text>
-<line x1="110" y1="518" x2="110" y2="566" stroke="#00B4D8" stroke-width="3"/>
-<text x="130" y="520" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">SpaceX $8B 800MHz spectrum buy — standalone carrier vs.</text>
-<text x="130" y="550" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">AT&amp;T/Verizon</text>
-<text x="54" y="710" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#69FF97" font-weight="900">4</text>
-<line x1="110" y1="678" x2="110" y2="726" stroke="#69FF97" stroke-width="3"/>
-<text x="130" y="680" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Nvidia -6% — OpenAI $250B backstop sparks circular</text>
-<text x="130" y="710" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">financing fears</text>
-<text x="54" y="870" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#00B4D8" font-weight="900">5</text>
-<line x1="110" y1="838" x2="110" y2="886" stroke="#00B4D8" stroke-width="3"/>
-<text x="130" y="870" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Google-SpaceX $30.4B GPU deal live — $920M/month, 110K GPUs</text>
-<text x="54" y="1030" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#00B4D8" font-weight="900">6</text>
-<line x1="110" y1="998" x2="110" y2="1046" stroke="#00B4D8" stroke-width="3"/>
-<text x="130" y="1000" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Crew-12 back after 8 months / Crew-13 sets US docking</text>
-<text x="130" y="1030" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">record: 7h 50m</text>
-<line x1="54" y1="1196" x2="1026" y2="1196" stroke="#30363D" stroke-width="1"/>
-<text x="54" y="1238" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Watch: Oct 15 Roadster reveal  |  Oct 21 Tesla Q3 earnings</text>
+<text x="54" y="110" font-family="Arial Black,Arial,sans-serif" font-size="48" fill="#fff" font-weight="900">OCT 11, 2026  12 TOPICS</text>
+<text x="54" y="158" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Tesla · SpaceX · Nvidia · Meta · Google</text>
+<line x1="54" y1="182" x2="1026" y2="182" stroke="#30363D" stroke-width="2"/>
+<text x="54" y="214" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#FF4D6D" font-weight="900">1</text>
+<line x1="102" y1="194" x2="102" y2="226" stroke="#FF4D6D" stroke-width="3"/>
+<text x="118" y="214" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Roadster Oct 15 reveal — cold-gas thruster hover demo teased</text>
+<text x="54" y="302" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#FF4D6D" font-weight="900">2</text>
+<line x1="102" y1="282" x2="102" y2="314" stroke="#FF4D6D" stroke-width="3"/>
+<text x="118" y="302" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">FSD v14.3.11 Auto Collision Evasion — HW4 only, HW3 Lite simultaneous</text>
+<text x="54" y="390" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#60A5FA" font-weight="900">3</text>
+<line x1="102" y1="370" x2="102" y2="402" stroke="#60A5FA" stroke-width="3"/>
+<text x="118" y="366" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">SpaceX $8B 800MHz spectrum buy — standalone carrier vs.</text>
+<text x="118" y="390" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AT&amp;T/Verizon</text>
+<text x="54" y="478" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#5EEAD4" font-weight="900">4</text>
+<line x1="102" y1="458" x2="102" y2="490" stroke="#5EEAD4" stroke-width="3"/>
+<text x="118" y="478" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Nvidia -6% — OpenAI $250B backstop, circular financing fears</text>
+<text x="54" y="566" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#60A5FA" font-weight="900">5</text>
+<line x1="102" y1="546" x2="102" y2="578" stroke="#60A5FA" stroke-width="3"/>
+<text x="118" y="566" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Google-SpaceX $30.4B GPU deal live — $920M/month, 110K GPUs</text>
+<text x="54" y="654" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#60A5FA" font-weight="900">6</text>
+<line x1="102" y1="634" x2="102" y2="666" stroke="#60A5FA" stroke-width="3"/>
+<text x="118" y="654" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Crew-12 back after 8 months / Crew-13 US record: 7h 50m to ISS</text>
+<text x="54" y="742" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#FF4D6D" font-weight="900">7</text>
+<line x1="102" y1="722" x2="102" y2="754" stroke="#FF4D6D" stroke-width="3"/>
+<text x="118" y="742" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Tesla Q3 deliveries 486,532 — beats estimate by 25K, energy 13.7 GWh</text>
+<text x="54" y="830" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#5EEAD4" font-weight="900">8</text>
+<line x1="102" y1="810" x2="102" y2="842" stroke="#5EEAD4" stroke-width="3"/>
+<text x="118" y="830" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Microsoft Surface Ultra — Nvidia RTX Spark, 2x AI vs MacBook Pro M5</text>
+<text x="54" y="918" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#5EEAD4" font-weight="900">9</text>
+<line x1="102" y1="898" x2="102" y2="930" stroke="#5EEAD4" stroke-width="3"/>
+<text x="118" y="918" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Nvidia eyes Reflection AI — $25B valuation, $800M already invested</text>
+<text x="54" y="1006" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#60A5FA" font-weight="900">10</text>
+<line x1="102" y1="986" x2="102" y2="1018" stroke="#60A5FA" stroke-width="3"/>
+<text x="118" y="1006" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">SpaceX Falcon 9 launches 21 SDA satellites — PWSA 4th orbital plane</text>
+<text x="54" y="1094" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#FB923C" font-weight="900">11</text>
+<line x1="102" y1="1074" x2="102" y2="1106" stroke="#FB923C" stroke-width="3"/>
+<text x="118" y="1094" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Meta personal agent protocol — AI to replace 90% of content reviewers</text>
+<text x="54" y="1182" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#FCD34D" font-weight="900">12</text>
+<line x1="102" y1="1162" x2="102" y2="1194" stroke="#FCD34D" stroke-width="3"/>
+<text x="118" y="1182" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Google Finland data center halted — €13B plan hits environmental wall</text>
+<line x1="54" y1="1280" x2="1026" y2="1280" stroke="#30363D" stroke-width="1"/>
+<text x="54" y="1310" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">Watch: Oct 15 Roadster reveal  |  Oct 21 Tesla Q3 earnings</text>
 <rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
 <text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
 <text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.11</text>
