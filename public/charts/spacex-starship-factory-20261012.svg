@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#60A5FA"/><stop offset="50%" stop-color="#34D399"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#60A5FA"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<rect x="146" y="28" width="76" height="36" rx="8" fill="#7C3AED"/>
+<text x="184" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<text x="54" y="120" font-family="Arial Black,Arial,sans-serif" font-size="56" fill="#60A5FA" font-weight="900">스타팩토리</text>
+<text x="54" y="176" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" font-weight="900">스타쉽 1,000기/년</text>
+<text x="54" y="228" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">테오스 프로젝트 · 2028년 완전 가동 목표</text>
+<line x1="54" y1="256" x2="1026" y2="256" stroke="#30363D" stroke-width="2"/>
+<rect x="54" y="276" width="310" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="209" y="314" font-family="Arial,sans-serif" font-size="20" fill="#60A5FA" text-anchor="middle" font-weight="700">목표 생산량</text>
+<text x="209" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">1,000기</text>
+<text x="209" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">연간</text>
+<rect x="384" y="276" width="310" height="130" rx="16" fill="#161B22" stroke="#34D399" stroke-width="1.5"/>
+<text x="539" y="314" font-family="Arial,sans-serif" font-size="20" fill="#34D399" text-anchor="middle" font-weight="700">현재 생산량</text>
+<text x="539" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">~12기</text>
+<text x="539" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">연간</text>
+<rect x="714" y="276" width="312" height="130" rx="16" fill="#161B22" stroke="#FBBF24" stroke-width="1.5"/>
+<text x="870" y="314" font-family="Arial,sans-serif" font-size="20" fill="#FBBF24" text-anchor="middle" font-weight="700">완전 가동</text>
+<text x="870" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">2028년</text>
+<text x="870" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">목표</text>
+<rect x="54" y="436" width="972" height="240" rx="20" fill="#161B22" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="82" y="482" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#60A5FA" font-weight="900">스타팩토리 핵심 스펙</text>
+<line x1="82" y1="496" x2="998" y2="496" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="532" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">플로리다 케이프 커내버럴 인근 부지 착공</text>
+<text x="82" y="568" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">스타쉽 1기당 제조 비용 현재 $9,500만 → $2천만 목표</text>
+<text x="82" y="604" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">로켓당 재사용 횟수 현재 3회 → 100회+ 목표</text>
+<text x="82" y="640" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">2030년 화성 화물 임무 일정 뒷받침하는 생산 목표</text>
+<rect x="54" y="704" width="972" height="350" rx="20" fill="#161B22"/>
+<text x="82" y="752" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#60A5FA" font-weight="900">왜 중요한가</text>
+<line x1="82" y1="766" x2="998" y2="766" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="804" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">연간 12기→1,000기 = 80배 생산량 목표</text>
+<text x="82" y="840" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">스타링크 V3 위성 대규모 교체 수요 자체 충당 가능</text>
+<text x="82" y="876" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">스타쉴드 군용 임무 + 상업 발사 시장 지배력 강화</text>
+<text x="82" y="924" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">하우스 뷰</text>
+<text x="82" y="962" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">모건스탠리 — 생산 원가 $2천만 달성 시 발사 단가 혁명 전망</text>
+<text x="82" y="998" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">ARK — 대량 생산 체계 확립이 2037년 $1조 밸류에이션 필요 조건</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>

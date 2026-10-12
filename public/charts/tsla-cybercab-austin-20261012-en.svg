@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FF4D6D"/><stop offset="50%" stop-color="#FF6B6B"/><stop offset="100%" stop-color="#FF4D6D"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#FF4D6D"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="146" y="28" width="128" height="36" rx="8" fill="#7C3AED"/>
+<text x="210" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Analysis</text>
+<text x="54" y="120" font-family="Arial Black,Arial,sans-serif" font-size="56" fill="#FF4D6D" font-weight="900">Cybercab Austin</text>
+<text x="54" y="176" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" font-weight="900">8× Growth in 30 Days</text>
+<text x="54" y="228" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">Fleet surpassed 300 · Dallas service confirmed</text>
+<line x1="54" y1="256" x2="1026" y2="256" stroke="#30363D" stroke-width="2"/>
+<rect x="54" y="276" width="310" height="130" rx="16" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="209" y="314" font-family="Arial,sans-serif" font-size="20" fill="#FF4D6D" text-anchor="middle" font-weight="700">Fleet Growth</text>
+<text x="209" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">8×</text>
+<text x="209" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">30 days</text>
+<rect x="384" y="276" width="310" height="130" rx="16" fill="#161B22" stroke="#F97316" stroke-width="1.5"/>
+<text x="539" y="314" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">App ETA</text>
+<text x="539" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">6 min</text>
+<text x="539" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">guaranteed</text>
+<rect x="714" y="276" width="312" height="130" rx="16" fill="#161B22" stroke="#FBBF24" stroke-width="1.5"/>
+<text x="870" y="314" font-family="Arial,sans-serif" font-size="20" fill="#FBBF24" text-anchor="middle" font-weight="700">App Fare</text>
+<text x="870" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$16.59</text>
+<text x="870" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">per ride</text>
+<rect x="54" y="430" width="972" height="240" rx="20" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="82" y="478" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#FF4D6D" font-weight="900">Musk: Safety-First Expansion</text>
+<line x1="82" y1="492" x2="998" y2="492" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="530" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">"One accident becomes worldwide headline news"</text>
+<text x="82" y="566" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Grey cat on grey asphalt at night — actually solved</text>
+<text x="82" y="602" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Dallas: 9th largest US city, weak transit = high demand</text>
+<text x="82" y="638" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">France Uber: Model Y #1, Model 3 #2 — robotaxi foundation</text>
+<rect x="54" y="696" width="972" height="360" rx="20" fill="#161B22"/>
+<text x="82" y="744" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#FF4D6D" font-weight="900">Why it matters</text>
+<line x1="82" y1="758" x2="998" y2="758" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="796" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">8× growth = software approvals outpacing hardware</text>
+<text x="82" y="832" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Each new city requires separate regulator negotiations</text>
+<text x="82" y="868" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Dallas data likely previewed at Oct 21 Q3 earnings call</text>
+<text x="82" y="920" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">House Views</text>
+<text x="82" y="958" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">ARK PT $750+ — exponential robotaxi adoption thesis</text>
+<text x="82" y="994" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Wedbush — Austin data at Q3 call = next PT catalyst above $350</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>

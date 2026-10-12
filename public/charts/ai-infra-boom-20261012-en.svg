@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#34D399"/><stop offset="50%" stop-color="#10B981"/><stop offset="100%" stop-color="#34D399"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="128" height="36" rx="8" fill="#10B981"/>
+<text x="118" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">AI Infra</text>
+<rect x="185" y="28" width="89" height="36" rx="8" fill="#6366F1"/>
+<text x="229.5" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Macro</text>
+<text x="54" y="120" font-family="Arial Black,Arial,sans-serif" font-size="50" fill="#34D399" font-weight="900">AI Infrastructure</text>
+<text x="54" y="176" font-family="Arial Black,Arial,sans-serif" font-size="44" fill="#fff" font-weight="900">$10.3T Over 10 Years</text>
+<text x="54" y="228" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">Brookings Institution · Power demand forecast 2×</text>
+<line x1="54" y1="256" x2="1026" y2="256" stroke="#30363D" stroke-width="2"/>
+<rect x="54" y="276" width="310" height="130" rx="16" fill="#161B22" stroke="#34D399" stroke-width="1.5"/>
+<text x="209" y="314" font-family="Arial,sans-serif" font-size="20" fill="#34D399" text-anchor="middle" font-weight="700">10-Year Capex</text>
+<text x="209" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$10.3T</text>
+<text x="209" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">2024–2034</text>
+<rect x="384" y="276" width="310" height="130" rx="16" fill="#161B22" stroke="#FBBF24" stroke-width="1.5"/>
+<text x="539" y="314" font-family="Arial,sans-serif" font-size="20" fill="#FBBF24" text-anchor="middle" font-weight="700">Power Growth</text>
+<text x="539" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">2×</text>
+<text x="539" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">by 2030</text>
+<rect x="714" y="276" width="312" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="870" y="314" font-family="Arial,sans-serif" font-size="20" fill="#60A5FA" text-anchor="middle" font-weight="700">DC Power Share</text>
+<text x="870" y="356" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">3→10%</text>
+<text x="870" y="384" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">US electricity</text>
+<rect x="54" y="436" width="972" height="280" rx="20" fill="#161B22" stroke="#34D399" stroke-width="1.5"/>
+<text x="82" y="482" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#34D399" font-weight="900">Key Investors</text>
+<line x1="82" y1="496" x2="998" y2="496" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="532" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Microsoft $80B · Google $75B · Amazon $105B</text>
+<text x="82" y="568" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Meta $65B · SpaceX Starcloud $41.2B (annualized)</text>
+<text x="82" y="604" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Nvidia Blackwell GPU demand: 60K → 300K units/quarter</text>
+<text x="82" y="640" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Nuclear &amp; LNG back in focus — AI needs reliable baseload power</text>
+<text x="82" y="680" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Chip, cooling, and grid infrastructure sectors benefit broadly</text>
+<rect x="54" y="744" width="972" height="310" rx="20" fill="#161B22"/>
+<text x="82" y="792" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#34D399" font-weight="900">Why it matters</text>
+<line x1="82" y1="806" x2="998" y2="806" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="844" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">$10.3T = 4× the entire 10-year build-out of the internet</text>
+<text x="82" y="880" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">2× power grid = nuclear restarts and utility policy fast-tracked</text>
+<text x="82" y="916" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">SpaceX satellite backhaul enables distributed data center geography</text>
+<text x="82" y="964" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">House Views</text>
+<text x="82" y="1002" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Goldman Sachs — overweight power infrastructure beneficiaries</text>
+<text x="82" y="1038" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Morgan Stanley — demand shortage risk greater than overinvestment risk</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>

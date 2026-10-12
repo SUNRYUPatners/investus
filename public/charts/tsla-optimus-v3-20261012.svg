@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FF4D6D"/><stop offset="50%" stop-color="#F97316"/><stop offset="100%" stop-color="#FF4D6D"/></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="28" width="76" height="36" rx="8" fill="#FF4D6D"/>
+<text x="92" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="146" y="28" width="76" height="36" rx="8" fill="#7C3AED"/>
+<text x="184" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<text x="54" y="120" font-family="Arial Black,Arial,sans-serif" font-size="56" fill="#FF4D6D" font-weight="900">옵티머스 V3</text>
+<text x="54" y="176" font-family="Arial Black,Arial,sans-serif" font-size="36" fill="#fff" font-weight="900">초정밀 나사 조립 공개</text>
+<text x="54" y="228" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">X 테이크오버 · 2026년 10월 9일</text>
+<line x1="54" y1="256" x2="1026" y2="256" stroke="#30363D" stroke-width="2"/>
+<rect x="54" y="276" width="972" height="180" rx="20" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="540" y="330" font-family="Arial Black,Arial,sans-serif" font-size="28" fill="#FF4D6D" text-anchor="middle" font-weight="900">수mm 나사 → 구멍 삽입 정밀 조작 성공</text>
+<text x="540" y="370" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3" text-anchor="middle">수십 개 부품 협응 + 손가락 압력·각도 동시 제어</text>
+<text x="540" y="406" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3" text-anchor="middle">이전 버전 대비 정밀도 눈에 띄게 향상</text>
+<text x="540" y="442" font-family="Arial,sans-serif" font-size="22" fill="#FBBF24" text-anchor="middle">병목: 전기 모터용 자석 수출 규제 — 2~3개월 내 해결 목표</text>
+<rect x="54" y="488" width="460" height="130" rx="16" fill="#161B22" stroke="#FF4D6D" stroke-width="1.5"/>
+<text x="284" y="526" font-family="Arial,sans-serif" font-size="20" fill="#FF4D6D" text-anchor="middle" font-weight="700">외부 판매 예상가</text>
+<text x="284" y="568" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$10만+</text>
+<text x="284" y="596" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">정밀 조립 공장용</text>
+<rect x="546" y="488" width="480" height="130" rx="16" fill="#161B22" stroke="#F97316" stroke-width="1.5"/>
+<text x="786" y="526" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">칩 설계 주기 목표</text>
+<text x="786" y="568" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">2년→1년</text>
+<text x="786" y="596" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">도조 경쟁력 핵심</text>
+<rect x="54" y="646" width="972" height="390" rx="20" fill="#161B22"/>
+<text x="82" y="694" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#FF4D6D" font-weight="900">왜 중요한가</text>
+<line x1="82" y1="708" x2="998" y2="708" stroke="#30363D" stroke-width="1"/>
+<text x="82" y="746" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">자동차 조립 라인 나사 조임 → 테슬라 공장 인건비 대체 속도↑</text>
+<text x="82" y="782" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">전자제품·반도체 조립 공장 판매 시 $10만 이상 시장가 형성</text>
+<text x="82" y="818" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">칩 설계 주기 단축 → AI 학습 비용 절감이 연간 누적 효과</text>
+<text x="82" y="854" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">자석 수출 규제 해소 시 2025년 말 생산 가속 가시화</text>
+<text x="82" y="904" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">하우스 뷰</text>
+<text x="82" y="942" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">모건스탠리 — 외부 판매 타임라인 앞당기는 신호, 목표주가 $400</text>
+<text x="82" y="978" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">웨드부시 — 칩 자체 설계 가속화가 도조 2세대 경쟁력 전환 핵심</text>
+<text x="82" y="1014" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">로봇 모멘텀 반영 350달러 시나리오 유지</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.12</text>
+</svg>
