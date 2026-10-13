@@ -12,8 +12,8 @@ const YEARLY_DISCOUNT_PCT = 10;
 const YEARLY_KRW = Math.round(YEARLY_LIST_KRW * (1 - YEARLY_DISCOUNT_PCT / 100));
 
 export const SUBSCRIPTION = {
-  /** 결제 연동 전에도 게이팅 활성화 — PortOne 결제 후 investus_pro 메타데이터로 해제 */
-  enabled: true,
+  /** 구독 게이팅 비활성화 — 광고 게이트로 전환 (2026-10-13) */
+  enabled: false,
   /** 월간 */
   priceKrw: MONTHLY_KRW,
   /** 연간 정가 (할인 전) */

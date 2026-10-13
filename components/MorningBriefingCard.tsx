@@ -218,7 +218,7 @@ export function MorningBriefingCard({
           </div>
           <LangToggle value={viewLang} onChange={setViewLang} />
         </div>
-        <PreviewFade label={isKo ? "구독하고 이어서 보기" : "Subscribe to continue"} maxHeight={156}>
+        <PreviewFade label={isKo ? "광고 보고 무료로 읽기" : "Watch a short ad · Free"} maxHeight={156}>
           <p className="text-sm font-bold leading-snug mb-2" style={{ color: "var(--text)" }}>
             {headline || teaserTitle}
           </p>

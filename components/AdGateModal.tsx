@@ -72,7 +72,7 @@ export function AdGateModal({ title, headerText = "전자책 무료 열람", con
           className="mx-4 rounded-xl overflow-hidden flex flex-col items-center justify-center gap-2 py-4"
           style={{ minHeight: 160, background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)" }}
         >
-          <p className="text-[10px]" style={{ color: "var(--muted)" }}>광고 시청 후 무료 열람</p>
+          <p className="text-[10px]" style={{ color: "var(--muted)" }}>Free access after this short ad</p>
           <AdFitBanner unit={UNIT_ID} width={300} height={250} />
         </div>
 
@@ -83,7 +83,7 @@ export function AdGateModal({ title, headerText = "전자책 무료 열람", con
             className="flex-1 py-3 rounded-2xl text-sm font-semibold transition-opacity hover:opacity-70"
             style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}
           >
-            취소
+            Cancel
           </button>
           <button
             onClick={handleConfirm}
@@ -95,7 +95,7 @@ export function AdGateModal({ title, headerText = "전자책 무료 열람", con
               border:     ready ? "1px solid rgba(192,132,252,0.3)" : "1px solid rgba(255,255,255,0.06)",
             }}
           >
-            {ready ? confirmText : `${remaining}초 후 열기`}
+            {ready ? confirmText : `Open in ${remaining}s`}
           </button>
         </div>
       </div>

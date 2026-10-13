@@ -336,7 +336,7 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
             className="rounded-2xl border overflow-hidden"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}
           >
-            <PreviewFade label="구독하고 이어서 보기" maxHeight={112}>
+            <PreviewFade label="Watch a short ad · Free" maxHeight={112}>
               <div className="flex gap-3 px-3 pt-3">
                 {loading
                   ? Array.from({ length: 3 }).map((_, i) => <CardSkeleton key={i} />)
