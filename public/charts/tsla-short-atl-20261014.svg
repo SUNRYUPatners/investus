@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#DC2626"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="110" height="36" rx="8" fill="#EF4444"/>
+<text x="109" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="178" y="30" width="76" height="36" rx="8" fill="#B91C1C"/>
+<text x="216" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="268" y="30" width="96" height="36" rx="8" fill="#7F1D1D"/>
+<text x="316" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">숏포지션</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · 일론 머스크 발언 · TSLA 숏 역대 최대</text>
+<text x="54" y="220" font-family="Arial Black,Arial,sans-serif" font-size="50" fill="#8B949E" font-weight="900">숏 포지션</text>
+<text x="54" y="320" font-family="Arial Black,Arial,sans-serif" font-size="80" fill="#EF4444" font-weight="900">역대 최대</text>
+<text x="54" y="382" font-family="Arial Black,Arial,sans-serif" font-size="36" fill="#fff" font-weight="900">ALL-TIME HIGH</text>
+<text x="54" y="434" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">머스크: "불가능하던 생산 문제 해결 → 숏 논거 붕괴"</text>
+<defs><linearGradient id="dg458" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#DC2626"/>
+    <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="458" width="972" height="3" fill="url(#dg458)" rx="2"/>
+<text x="54" y="502" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">숏 vs 롱 논거 대결</text>
+<rect x="54" y="520" width="452" height="160" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="280" y="558" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" text-anchor="middle" font-weight="900">숏 논거 (틀린 것)</text>
+<text x="280" y="594" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">신제품 생산 불가 베팅</text>
+<text x="280" y="628" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">존재하지 않는 제품 판매 불가</text>
+<text x="280" y="662" font-family="Arial,sans-serif" font-size="18" fill="#6B7280" text-anchor="middle">→ 생산 문제 해결로 논거 붕괴</text>
+<rect x="526" y="520" width="500" height="160" rx="14" fill="#041A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="776" y="558" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#10B981" text-anchor="middle" font-weight="900">롱 논거 (현실화)</text>
+<text x="776" y="594" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">사이버캡 오스틴 유료 운행</text>
+<text x="776" y="628" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">생산 문제 해결 완료</text>
+<text x="776" y="662" font-family="Arial,sans-serif" font-size="18" fill="#10B981" text-anchor="middle">→ 숏 스퀴즈 가능성 확대</text>
+<rect x="54" y="710" width="972" height="430" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="754" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">숏 스퀴즈 시나리오</text>
+<line x1="82" y1="768" x2="998" y2="768" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="808" r="7" fill="#EF4444"/>
+<text x="116" y="816" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">역대 최대 숏 → 청산 시 매수 물량 폭발적 증가</text>
+<circle cx="96" cy="868" r="7" fill="#F97316"/>
+<text x="116" y="876" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">10/21 실적 어닝 서프라이즈 시 스퀴즈 방아쇠 가능</text>
+<circle cx="96" cy="928" r="7" fill="#DC2626"/>
+<text x="116" y="936" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">생산 문제 공개 해결 = 숏 논거 무력화 공식 선언</text>
+<circle cx="96" cy="988" r="7" fill="#B91C1C"/>
+<text x="116" y="996" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">3분기 마진 회복 확인 시 기관 포지션 재조정 연쇄</text>
+<rect x="82" y="1046" width="916" height="66" rx="12" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="110" y="1072" font-family="Arial,sans-serif" font-size="19" fill="#EF4444">머스크 어록</text>
+<text x="110" y="1100" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">"THERE WAS LIKE A CRAZY SHORT" — Elon Musk</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

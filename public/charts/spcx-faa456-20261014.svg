@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#F97316"/>
+    <stop offset="100%" stop-color="#EF4444"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="110" height="36" rx="8" fill="#EF4444"/>
+<text x="109" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">BREAKING</text>
+<rect x="178" y="30" width="76" height="36" rx="8" fill="#1E3A5F"/>
+<text x="216" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<rect x="268" y="30" width="76" height="36" rx="8" fill="#1D4ED8"/>
+<text x="306" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">FAA</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · FAA-2026-12808 · 텍사스 보카치카 스타베이스</text>
+<text x="54" y="230" font-family="Arial Black,Arial,sans-serif" font-size="140" fill="#F97316" font-weight="900">456</text>
+<text x="54" y="310" font-family="Arial Black,Arial,sans-serif" font-size="44" fill="#fff" font-weight="900">연간 발사 허가 신청</text>
+<text x="54" y="362" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">하루 평균 1.25회 · 912회 착륙 · 연방관보 게재</text>
+<defs><linearGradient id="dg386" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#F97316" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#F97316"/>
+    <stop offset="70%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="386" width="972" height="3" fill="url(#dg386)" rx="2"/>
+<text x="54" y="430" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#F97316" font-weight="900">Phase 별 발사 계획</text>
+<rect x="54" y="448" width="452" height="120" rx="14" fill="#1A0D00" stroke="#F97316" stroke-width="1.5"/>
+<text x="280" y="490" font-family="Arial,sans-serif" font-size="22" fill="#F97316" text-anchor="middle" font-weight="700">Phase 1</text>
+<text x="280" y="532" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#fff" text-anchor="middle" font-weight="900">100회</text>
+<text x="280" y="558" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">연간 발사 + 200회 착륙</text>
+<rect x="526" y="448" width="500" height="120" rx="14" fill="#1A0500" stroke="#EF4444" stroke-width="1.5"/>
+<text x="776" y="490" font-family="Arial,sans-serif" font-size="22" fill="#EF4444" text-anchor="middle" font-weight="700">Phase 2 (목표)</text>
+<text x="776" y="532" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#fff" text-anchor="middle" font-weight="900">456회</text>
+<text x="776" y="558" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">연간 발사 + 912회 착륙</text>
+<rect x="54" y="596" width="972" height="430" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="640" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F97316" font-weight="900">이 숫자가 의미하는 것</text>
+<line x1="82" y1="654" x2="998" y2="654" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="688" r="7" fill="#F97316"/>
+<text x="116" y="696" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">2026년 전 세계 연간 발사 횟수 약 200~250회 대비 약 2배</text>
+<circle cx="96" cy="752" r="7" fill="#EF4444"/>
+<text x="116" y="760" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">스타링크 위성 보충·확장 비용 획기적 절감 가능</text>
+<circle cx="96" cy="816" r="7" fill="#FB923C"/>
+<text x="116" y="824" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">SpaceX 단독이 전 세계 발사 시장을 초과하는 구조</text>
+<circle cx="96" cy="880" r="7" fill="#F59E0B"/>
+<text x="116" y="888" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">화성 탐사 정기 노선 확립의 전제 조건</text>
+<rect x="82" y="938" width="916" height="66" rx="12" fill="#1A0D00" stroke="#F97316" stroke-width="1.5"/>
+<text x="110" y="964" font-family="Arial,sans-serif" font-size="19" fill="#F97316">📅 퍼블릭 코멘트 마감</text>
+<text x="110" y="992" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">2026년 11월 30일 — FAA 의견 제출 마감</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

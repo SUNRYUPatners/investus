@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#1D4ED8"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="110" height="36" rx="8" fill="#3B82F6"/>
+<text x="109" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">ANALYSIS</text>
+<rect x="178" y="30" width="76" height="36" rx="8" fill="#1E3A5F"/>
+<text x="216" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<rect x="268" y="30" width="100" height="36" rx="8" fill="#1D4ED8"/>
+<text x="318" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">PRICE TGT</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · Kalshi Research · Starlink threatens US telecoms</text>
+<text x="54" y="220" font-family="Arial Black,Arial,sans-serif" font-size="140" fill="#3B82F6" font-weight="900">$230</text>
+<text x="54" y="308" font-family="Arial Black,Arial,sans-serif" font-size="48" fill="#fff" font-weight="900">SpaceX Price Target</text>
+<text x="54" y="366" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Kalshi Research initiates · Starlink takes aim at AT&amp;T, Verizon</text>
+<defs><linearGradient id="dg390" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#3B82F6"/>
+    <stop offset="70%" stop-color="#1D4ED8"/>
+    <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="390" width="972" height="3" fill="url(#dg390)" rx="2"/>
+<text x="54" y="434" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#3B82F6" font-weight="900">Bull Case Drivers</text>
+<rect x="54" y="452" width="296" height="130" rx="14" fill="#050E1A" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="202" y="494" font-family="Arial,sans-serif" font-size="20" fill="#3B82F6" text-anchor="middle" font-weight="700">Starlink Scale</text>
+<text x="202" y="538" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Telecom rival</text>
+<text x="202" y="572" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">AT&amp;T/Verizon in crosshairs</text>
+<rect x="370" y="452" width="296" height="130" rx="14" fill="#050E1A" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="518" y="494" font-family="Arial,sans-serif" font-size="20" fill="#60A5FA" text-anchor="middle" font-weight="700">Launch Rate</text>
+<text x="518" y="538" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">456/year</text>
+<text x="518" y="572" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Slashes replenishment cost</text>
+<rect x="686" y="452" width="340" height="130" rx="14" fill="#050E1A" stroke="#1D4ED8" stroke-width="1.5"/>
+<text x="856" y="494" font-family="Arial,sans-serif" font-size="20" fill="#1D4ED8" text-anchor="middle" font-weight="700">B2B Expansion</text>
+<text x="856" y="538" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Mil/Air/Maritime</text>
+<text x="856" y="572" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">High-ARPU enterprise</text>
+<rect x="54" y="610" width="972" height="450" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="654" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#3B82F6" font-weight="900">Starlink's Telecom Market Threat</text>
+<line x1="82" y1="668" x2="998" y2="668" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="708" r="7" fill="#3B82F6"/>
+<text x="116" y="716" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Rural internet — Starlink is already primary option</text>
+<circle cx="96" cy="768" r="7" fill="#60A5FA"/>
+<text x="116" y="776" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Urban price and speed now competitive with cable</text>
+<circle cx="96" cy="828" r="7" fill="#1D4ED8"/>
+<text x="116" y="836" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">US military, airlines, shipping companies signed B2B deals</text>
+<circle cx="96" cy="888" r="7" fill="#2563EB"/>
+<text x="116" y="896" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Lower launch cost → Starlink margin improves simultaneously</text>
+<rect x="82" y="938" width="916" height="80" rx="12" fill="#050E1A" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="110" y="966" font-family="Arial,sans-serif" font-size="19" fill="#3B82F6">Morgan Stanley view</text>
+<text x="110" y="1000" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">B2B mix improvement → ARPU acceleration starts 2027</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Sparkles, ChevronDown, ChevronUp, RefreshCw } from "lucide-react";
+import { AdGateModal } from "@/components/AdGateModal";
 import { useMarketPortfolio } from "@/hooks/useMarketPortfolio";
 import { NYSE_HOLIDAYS, isMarketOpen } from "@/lib/marketHours";
 import { isMarketSessionOpen } from "@/lib/markets/hours";
@@ -15,7 +16,8 @@ type LiveQ = { symbol: string; price: number; change: number; changePercent: num
 type MacroIndex = { symbol: string; value: number; changePercent?: number };
 type MacroFuture = { symbol: string; name: string; price?: number; changePercent: number; group?: string };
 
-const INTRADAY_LIMIT = 3;
+/** 광고 없이 쓸 수 있는 첫 장중 재분석 횟수 */
+const FREE_INTRADAY = 1;
 
 /** YYYY-MM-DD of the most recent NYSE trading day that has already closed (≥ 16:00 ET) */
 function lastMarketCloseDate(market: MarketId): string {
@@ -100,6 +102,7 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
   const [intradayUsed,    setIntradayUsed]    = useState(0);
   const [marketOpen,      setMarketOpen]      = useState(false);
   const [closeRetryUsed,  setCloseRetryUsed]  = useState(false);
+  const [showAdGate,      setShowAdGate]      = useState(false);
   // true once LiveMarket writes fresh data (StorageEvent) OR cache is < 10 min old on mount
   const [pricesFresh,     setPricesFresh]     = useState(false);
   // tracks the trading day we last auto-fetched for
@@ -256,7 +259,11 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
   }
 
   function handleRefresh() {
-    if (intradayUsed >= INTRADAY_LIMIT) return;
+    // 첫 1회 무료, 이후 광고 게이트
+    if (intradayUsed >= FREE_INTRADAY) {
+      setShowAdGate(true);
+      return;
+    }
     runAnalysis(true);
   }
 
@@ -266,8 +273,7 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
     return <ExampleAnalysisCard market={market} />;
   }
 
-  const remaining = INTRADAY_LIMIT - intradayUsed;
-  const limitReached = marketOpen && intradayUsed >= INTRADAY_LIMIT;
+  const needsAdGate = intradayUsed >= FREE_INTRADAY;
 
   return (
     <div className="px-4 lg:px-0 mt-3">
@@ -384,42 +390,24 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
             {/* 장중 재분석 버튼 — only during market hours */}
             {marketOpen && (
               <div className="px-4 pb-4 border-t pt-3" style={{ borderColor: "rgba(var(--mint-rgb),0.06)" }}>
-                {limitReached ? (
-                  <div className="rounded-xl p-3 flex flex-col items-center gap-2 text-center"
-                    style={{ background: "rgba(var(--mint-rgb),0.04)", border: "1px solid rgba(var(--mint-rgb),0.12)" }}>
-                    <p className="text-[11px] font-bold" style={{ color: "var(--text)" }}>
-                      {isKo ? `오늘 무료 장중 분석 ${INTRADAY_LIMIT}회 소진` : `Today's ${INTRADAY_LIMIT} free intraday analyses used`}
-                    </p>
-                    <p className="text-[10px]" style={{ color: "var(--muted)" }}>
-                      {isKo
-                        ? "장마감 후 자동 분석은 무제한 무료예요 · 지금 더 분석하려면 구독을 업그레이드해요"
-                        : "Post-close auto analysis is unlimited · Upgrade to analyze more now"}
-                    </p>
-                    <button
-                      onClick={() => router.push("/more")}
-                      className="px-4 py-1.5 rounded-xl text-[11px] font-bold text-black mt-0.5"
-                      style={{ background: "var(--mint)" }}>
-                      {isKo ? "구독 알아보기" : "Learn more"}
-                    </button>
-                  </div>
-                ) : (
-                  <button
-                    onClick={handleRefresh}
-                    disabled={loading}
-                    className="w-full flex items-center justify-between rounded-xl px-3.5 py-2.5 transition-opacity active:opacity-60 disabled:opacity-40"
-                    style={{ background: "rgba(var(--mint-rgb),0.08)", border: "1px solid rgba(var(--mint-rgb),0.18)" }}>
-                    <div className="flex items-center gap-2">
-                      <RefreshCw className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} />
-                      <span className="text-[12px] font-bold" style={{ color: "var(--mint)" }}>
-                        {isKo ? "지금 다시 분석" : "Re-analyze now"}
-                      </span>
-                    </div>
-                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                      style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>
-                      {isKo ? `오늘 ${remaining}/${INTRADAY_LIMIT}회 남음` : `${remaining}/${INTRADAY_LIMIT} left today`}
+                <button
+                  onClick={handleRefresh}
+                  disabled={loading}
+                  className="w-full flex items-center justify-between rounded-xl px-3.5 py-2.5 transition-opacity active:opacity-60 disabled:opacity-40"
+                  style={{ background: "rgba(var(--mint-rgb),0.08)", border: "1px solid rgba(var(--mint-rgb),0.18)" }}>
+                  <div className="flex items-center gap-2">
+                    <RefreshCw className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} />
+                    <span className="text-[12px] font-bold" style={{ color: "var(--mint)" }}>
+                      {isKo ? "지금 다시 분석" : "Re-analyze now"}
                     </span>
-                  </button>
-                )}
+                  </div>
+                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                    style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>
+                    {needsAdGate
+                      ? (isKo ? "광고 5초" : "5s ad")
+                      : (isKo ? "무료" : "Free")}
+                  </span>
+                </button>
               </div>
             )}
 
@@ -429,6 +417,18 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
           </div>
         )}
       </div>
+      {showAdGate && (
+        <AdGateModal
+          title={isKo ? "장중 AI 분석" : "Intraday AI Analysis"}
+          headerText={isKo ? "짧은 광고 후 무제한 이용" : "Watch a short ad · Unlimited use"}
+          confirmText={isKo ? "분석하기" : "Analyze"}
+          onConfirm={() => {
+            setShowAdGate(false);
+            runAnalysis(true);
+          }}
+          onClose={() => setShowAdGate(false)}
+        />
+      )}
     </div>
   );
 }

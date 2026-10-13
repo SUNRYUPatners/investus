@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7C3AED"/>
+    <stop offset="100%" stop-color="#3B82F6"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="88" height="36" rx="8" fill="#7C3AED"/>
+<text x="98" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SUMMARY</text>
+<rect x="184" y="30" width="154" height="36" rx="8" fill="#4C1D95"/>
+<text x="261" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">2026.10.14</text>
+<rect x="342" y="30" width="128" height="36" rx="8" fill="#1D4ED8"/>
+<text x="406" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TODAY 15</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">Tuesday Oct 14, 2026 · investus.kr daily snapshot</text>
+<text x="54" y="188" font-family="Arial Black,Arial,sans-serif" font-size="60" fill="#fff" font-weight="900">Top 5 Stories Today</text>
+<defs><linearGradient id="dg208" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#7C3AED"/>
+    <stop offset="70%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="208" width="972" height="3" fill="url(#dg208)" rx="2"/>
+<rect x="54" y="222" width="972" height="100" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="82" y="258" font-family="Arial Black,Arial,sans-serif" font-size="23" fill="#EF4444" font-weight="900">① TSLA — Cybercab rave reviews + Roadster countdown</text>
+<text x="82" y="300" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">30+ rides, zero awkward moves · 8am–11pm · ~2 days to reveal</text>
+<rect x="54" y="336" width="972" height="100" rx="14" fill="#0A1525" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="82" y="372" font-family="Arial Black,Arial,sans-serif" font-size="23" fill="#3B82F6" font-weight="900">② SpaceX — FAA filing: 456 launches/yr (1.25/day)</text>
+<text x="82" y="414" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Phase 1: 100 · Phase 2: 456 · Kalshi PT $230</text>
+<rect x="54" y="450" width="972" height="100" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="82" y="486" font-family="Arial Black,Arial,sans-serif" font-size="23" fill="#EF4444" font-weight="900">③ TSLA shorts at all-time high vs production solved</text>
+<text x="82" y="528" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Musk: "impossible problem solved" · Short squeeze risk</text>
+<rect x="54" y="564" width="972" height="100" rx="14" fill="#041A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="82" y="600" font-family="Arial Black,Arial,sans-serif" font-size="23" fill="#10B981" font-weight="900">④ BlackRock cuts US stocks, upgrades Treasuries</text>
+<text x="82" y="642" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Risk-off rotation · Long-term bonds upgraded to neutral</text>
+<rect x="54" y="678" width="972" height="100" rx="14" fill="#050E1A" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="82" y="714" font-family="Arial Black,Arial,sans-serif" font-size="23" fill="#60A5FA" font-weight="900">⑤ AI $6T problem · S&amp;P500 neg-beta at dot-com high</text>
+<text x="82" y="756" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Need $6T by 2031, only $1.8T in sight · ~40% neg-beta stocks</text>
+<defs><linearGradient id="dg792" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#7C3AED"/>
+    <stop offset="70%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="792" width="972" height="3" fill="url(#dg792)" rx="2"/>
+<text x="54" y="836" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#fff" font-weight="900">Key Dates</text>
+<rect x="54" y="850" width="462" height="110" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="82" y="886" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#EF4444" font-weight="900">Oct 21 (in 7 days)</text>
+<text x="82" y="920" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Tesla Q3 Earnings Call</text>
+<text x="82" y="950" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">Margin · FSD · Robotaxi update</text>
+<rect x="564" y="850" width="462" height="110" rx="14" fill="#0A1525" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="592" y="886" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#3B82F6" font-weight="900">Nov 30</text>
+<text x="592" y="920" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">SpaceX FAA Comments Deadline</text>
+<text x="592" y="950" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">Public comments on 456 launches/yr</text>
+<rect x="54" y="980" width="972" height="90" rx="14" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="1016" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">15 reports today — read all at investus.kr</text>
+<text x="82" y="1052" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">TSLA 6 · SPCX 3 · NVDA 1 · GOOG 1 · AI 1 · Market 1 · Safe Assets 1</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

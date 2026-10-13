@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#1D4ED8"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="96" height="36" rx="8" fill="#3B82F6"/>
+<text x="102" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">매크로</text>
+<rect x="164" y="30" width="96" height="36" rx="8" fill="#1E3A5F"/>
+<text x="212" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">AI인프라</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · AI 산업 수익화 문제 · 2031년 시한</text>
+<text x="54" y="218" font-family="Arial Black,Arial,sans-serif" font-size="44" fill="#8B949E" font-weight="900">AI 산업의 문제</text>
+<text x="54" y="320" font-family="Arial Black,Arial,sans-serif" font-size="100" fill="#3B82F6" font-weight="900">$6조</text>
+<text x="54" y="386" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#fff" font-weight="900">연간 수익 필요 (2031년까지)</text>
+<text x="54" y="444" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">데이터센터 투자 정당화 · 현재 전망 최대 $1.8조</text>
+<defs><linearGradient id="dg468" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#3B82F6"/>
+    <stop offset="70%" stop-color="#1D4ED8"/>
+    <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="468" width="972" height="3" fill="url(#dg468)" rx="2"/>
+<text x="54" y="512" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#3B82F6" font-weight="900">수익 격차 분석</text>
+<rect x="54" y="530" width="296" height="140" rx="14" fill="#050E1A" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="202" y="572" font-family="Arial,sans-serif" font-size="20" fill="#3B82F6" text-anchor="middle" font-weight="700">필요 수익</text>
+<text x="202" y="624" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#fff" text-anchor="middle" font-weight="900">$6조/년</text>
+<text x="202" y="658" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">2031년 목표</text>
+<rect x="370" y="530" width="296" height="140" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="518" y="572" font-family="Arial,sans-serif" font-size="20" fill="#EF4444" text-anchor="middle" font-weight="700">현재 전망</text>
+<text x="518" y="624" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#fff" text-anchor="middle" font-weight="900">$1.8조/년</text>
+<text x="518" y="658" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">챗봇·코딩 도구 합산</text>
+<rect x="686" y="530" width="340" height="140" rx="14" fill="#1A0808" stroke="#F97316" stroke-width="1.5"/>
+<text x="856" y="572" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">격차</text>
+<text x="856" y="624" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#fff" text-anchor="middle" font-weight="900">$4.2조</text>
+<text x="856" y="658" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">새 AI 응용이 메워야</text>
+<rect x="54" y="700" width="972" height="460" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="744" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#3B82F6" font-weight="900">격차를 메울 후보 분야</text>
+<line x1="82" y1="758" x2="998" y2="758" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="798" r="7" fill="#3B82F6"/>
+<text x="116" y="806" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">자율주행 로보택시 — 테슬라, 웨이모 대규모 상용화</text>
+<circle cx="96" cy="858" r="7" fill="#60A5FA"/>
+<text x="116" y="866" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">범용 로봇 — 테슬라 옵티머스, Figure AI 대량 생산</text>
+<circle cx="96" cy="918" r="7" fill="#1D4ED8"/>
+<text x="116" y="926" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">신약 개발 AI, 반도체 설계 AI, 국방·보안 AI</text>
+<circle cx="96" cy="978" r="7" fill="#2563EB"/>
+<text x="116" y="986" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">이 분야 수익화 실패 시 AI 인프라 거품 논란 본격화</text>
+<rect x="82" y="1032" width="916" height="80" rx="12" fill="#050E1A" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="110" y="1062" font-family="Arial,sans-serif" font-size="19" fill="#3B82F6">유럽도 경쟁 참여 필요</text>
+<text x="110" y="1096" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">NVDA 유럽 $2B 투자 발표 — AI 경쟁 지역 확대 신호</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

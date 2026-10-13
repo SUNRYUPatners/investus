@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#DC2626"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="110" height="36" rx="8" fill="#EF4444"/>
+<text x="109" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="178" y="30" width="76" height="36" rx="8" fill="#B91C1C"/>
+<text x="216" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="268" y="30" width="110" height="36" rx="8" fill="#7F1D1D"/>
+<text x="323" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">OPTIMUS</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.10 · 머스크 인터뷰 · 옵티머스 개발 최대 난제</text>
+<text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#8B949E" font-weight="900">개발 최대 난제</text>
+<text x="54" y="320" font-family="Arial Black,Arial,sans-serif" font-size="100" fill="#EF4444" font-weight="900">로봇 손</text>
+<text x="54" y="390" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" font-weight="900">Robot Hand</text>
+<text x="54" y="446" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">나사 조이기 = 정밀도 + 힘 제어 동시 필요 · 인간 수준 구현 목표</text>
+<defs><linearGradient id="dg470" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#DC2626"/>
+    <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="470" width="972" height="3" fill="url(#dg470)" rx="2"/>
+<text x="54" y="514" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">인간 손의 복잡성</text>
+<rect x="54" y="532" width="296" height="120" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="202" y="572" font-family="Arial,sans-serif" font-size="20" fill="#EF4444" text-anchor="middle" font-weight="700">뼈</text>
+<text x="202" y="614" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">27개</text>
+<rect x="370" y="532" width="296" height="120" rx="14" fill="#1A0808" stroke="#F97316" stroke-width="1.5"/>
+<text x="518" y="572" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">관절</text>
+<text x="518" y="614" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">29개</text>
+<rect x="686" y="532" width="340" height="120" rx="14" fill="#1A0808" stroke="#DC2626" stroke-width="1.5"/>
+<text x="856" y="572" font-family="Arial,sans-serif" font-size="20" fill="#DC2626" text-anchor="middle" font-weight="700">인대</text>
+<text x="856" y="614" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">123개</text>
+<rect x="54" y="680" width="972" height="470" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="724" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">머스크의 말</text>
+<line x1="82" y1="738" x2="998" y2="738" stroke="#30363D" stroke-width="1"/>
+<rect x="82" y="752" width="916" height="80" rx="12" fill="#120606" stroke="#EF4444" stroke-width="1"/>
+<text x="540" y="788" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3" text-anchor="middle">"손과 팔, 미세 운동 능력을 제대로</text>
+<text x="540" y="820" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3" text-anchor="middle">구현하는 것이 믿을 수 없을 만큼 어렵다"</text>
+<circle cx="96" cy="878" r="7" fill="#EF4444"/>
+<text x="116" y="886" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">나사 조이기 = 정밀도 + 힘 조절 동시 요구하는 대표 작업</text>
+<circle cx="96" cy="938" r="7" fill="#F97316"/>
+<text x="116" y="946" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">손 기능 완성 시 공장·물류·가정·의료 전 분야 활용 가능</text>
+<circle cx="96" cy="998" r="7" fill="#DC2626"/>
+<text x="116" y="1006" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">아크 인베스트: 옵티머스 핸드 완성 시 TAM 1조 달러 이상</text>
+<rect x="82" y="1052" width="916" height="66" rx="12" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="110" y="1078" font-family="Arial,sans-serif" font-size="19" fill="#EF4444">인터뷰 날짜</text>
+<text x="110" y="1106" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">2026년 10월 10일 · Tesla Optimus 개발 현황 공개</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

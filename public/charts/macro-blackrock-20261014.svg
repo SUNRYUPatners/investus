@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#06B6D4"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="110" height="36" rx="8" fill="#10B981"/>
+<text x="109" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">안전자산</text>
+<rect x="178" y="30" width="96" height="36" rx="8" fill="#065F46"/>
+<text x="226" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">매크로</text>
+<rect x="288" y="30" width="120" height="36" rx="8" fill="#1E3A5F"/>
+<text x="348" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">BlackRock</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · 세계 최대 자산운용사 · 자산배분 전략 변경</text>
+<text x="54" y="230" font-family="Arial Black,Arial,sans-serif" font-size="50" fill="#8B949E" font-weight="900">BlackRock</text>
+<text x="54" y="318" font-family="Arial Black,Arial,sans-serif" font-size="74" fill="#10B981" font-weight="900">국채 선호</text>
+<text x="54" y="388" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#fff" font-weight="900">미국 주식 중립 하향</text>
+<text x="54" y="444" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">운용자산 10조 달러+ · BREAKING 발표 · 리스크 로테이션</text>
+<defs><linearGradient id="dg468" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#10B981"/>
+    <stop offset="70%" stop-color="#06B6D4"/>
+    <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="468" width="972" height="3" fill="url(#dg468)" rx="2"/>
+<text x="54" y="512" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#10B981" font-weight="900">포지션 변화 요약</text>
+<rect x="54" y="530" width="452" height="160" rx="14" fill="#041A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="280" y="572" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#10B981" text-anchor="middle" font-weight="900">장기 국채</text>
+<text x="280" y="610" font-family="Arial,sans-serif" font-size="22" fill="#8B949E" text-anchor="middle">언더웨이트 → 중립</text>
+<text x="280" y="646" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#10B981" text-anchor="middle" font-weight="900">상향</text>
+<text x="280" y="680" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">매력도 증가</text>
+<rect x="526" y="530" width="500" height="160" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="776" y="572" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" text-anchor="middle" font-weight="900">미국 주식</text>
+<text x="776" y="610" font-family="Arial,sans-serif" font-size="22" fill="#8B949E" text-anchor="middle">오버웨이트 → 중립</text>
+<text x="776" y="646" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#EF4444" text-anchor="middle" font-weight="900">하향</text>
+<text x="776" y="680" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">상승 여력 제한</text>
+<rect x="54" y="720" width="972" height="440" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="764" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#10B981" font-weight="900">이 결정의 의미</text>
+<line x1="82" y1="778" x2="998" y2="778" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="818" r="7" fill="#10B981"/>
+<text x="116" y="826" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">10조 달러 운용사의 로테이션 → 시장 심리 연쇄 영향</text>
+<circle cx="96" cy="878" r="7" fill="#06B6D4"/>
+<text x="116" y="886" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">10년물 5% 수준에서 국채 이자 수익 매력도 회복</text>
+<circle cx="96" cy="938" r="7" fill="#059669"/>
+<text x="116" y="946" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI 대형주 고평가 우려 현실화 시점과 일치</text>
+<circle cx="96" cy="998" r="7" fill="#0284C7"/>
+<text x="116" y="1006" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">S&amp;P500 마이너스 베타 역대 최다와 맞물린 구조 전환 신호</text>
+<rect x="82" y="1048" width="916" height="66" rx="12" fill="#041A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="110" y="1074" font-family="Arial,sans-serif" font-size="19" fill="#10B981">JP모건 분석</text>
+<text x="110" y="1102" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">밸류에이션 부담 + 거시 불확실성 인정한 합리적 판단</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

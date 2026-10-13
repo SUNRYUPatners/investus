@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#DC2626"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="110" height="36" rx="8" fill="#EF4444"/>
+<text x="109" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">ANALYSIS</text>
+<rect x="178" y="30" width="76" height="36" rx="8" fill="#B91C1C"/>
+<text x="216" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="268" y="30" width="120" height="36" rx="8" fill="#7F1D1D"/>
+<text x="328" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">CYBERCAB</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · Austin Cybercab operations update</text>
+<text x="54" y="230" font-family="Arial Black,Arial,sans-serif" font-size="80" fill="#EF4444" font-weight="900">ZERO</text>
+<text x="54" y="300" font-family="Arial Black,Arial,sans-serif" font-size="46" fill="#fff" font-weight="900">awkward maneuvers</text>
+<text x="54" y="358" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">30+ rides reviewed · Zero issues · A completely new business</text>
+<defs><linearGradient id="dg382" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#DC2626"/>
+    <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="382" width="972" height="3" fill="url(#dg382)" rx="2"/>
+<text x="54" y="426" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">Operations Update</text>
+<rect x="54" y="444" width="296" height="140" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="202" y="484" font-family="Arial,sans-serif" font-size="20" fill="#EF4444" text-anchor="middle" font-weight="700">Hours</text>
+<text x="202" y="530" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">8am–11pm</text>
+<text x="202" y="568" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">expanded hours</text>
+<rect x="370" y="444" width="296" height="140" rx="14" fill="#1A0808" stroke="#F97316" stroke-width="1.5"/>
+<text x="518" y="484" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">Trunk</text>
+<text x="518" y="530" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Auto-opens</text>
+<text x="518" y="568" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">at ride end</text>
+<rect x="686" y="444" width="340" height="140" rx="14" fill="#1A0808" stroke="#DC2626" stroke-width="1.5"/>
+<text x="856" y="484" font-family="Arial,sans-serif" font-size="20" fill="#DC2626" text-anchor="middle" font-weight="700">AI Assistant</text>
+<text x="856" y="530" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Grok 4</text>
+<text x="856" y="568" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">now in Cybercab app</text>
+<rect x="54" y="614" width="972" height="450" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="658" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">Why This Matters</text>
+<line x1="82" y1="672" x2="998" y2="672" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="712" r="7" fill="#EF4444"/>
+<text x="116" y="720" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">30 days ago couldn't handle intersections — now paid service</text>
+<circle cx="96" cy="772" r="7" fill="#F97316"/>
+<text x="116" y="780" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">No steering wheel, no driver seat — live in Austin right now</text>
+<circle cx="96" cy="832" r="7" fill="#DC2626"/>
+<text x="116" y="840" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">"This is a COMPLETELY different business Tesla just opened"</text>
+<circle cx="96" cy="892" r="7" fill="#B91C1C"/>
+<text x="116" y="900" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">First robotaxi revenue metrics expected in Q3 earnings Oct 21</text>
+<rect x="82" y="952" width="916" height="66" rx="12" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="110" y="978" font-family="Arial,sans-serif" font-size="19" fill="#EF4444">Ride fare</text>
+<text x="110" y="1006" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">~$12.28/ride · No steering wheel · No safety driver</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

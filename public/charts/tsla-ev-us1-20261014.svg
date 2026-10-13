@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#DC2626"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="110" height="36" rx="8" fill="#EF4444"/>
+<text x="109" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="178" y="30" width="76" height="36" rx="8" fill="#B91C1C"/>
+<text x="216" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="268" y="30" width="96" height="36" rx="8" fill="#7F1D1D"/>
+<text x="316" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">미국 EV</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · 미국 전기차 판매 1위 · 전 브랜드 합산 초과</text>
+<text x="54" y="220" font-family="Arial Black,Arial,sans-serif" font-size="48" fill="#8B949E" font-weight="900">테슬라 단독 판매량</text>
+<text x="54" y="312" font-family="Arial Black,Arial,sans-serif" font-size="78" fill="#EF4444" font-weight="900">전 브랜드 합산</text>
+<text x="54" y="392" font-family="Arial Black,Arial,sans-serif" font-size="78" fill="#EF4444" font-weight="900">초과</text>
+<text x="54" y="452" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">현대·기아·GM·포드·BMW·리비안 전부 더해도 못 따라옴</text>
+<defs><linearGradient id="dg476" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#DC2626"/>
+    <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="476" width="972" height="3" fill="url(#dg476)" rx="2"/>
+<text x="54" y="520" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">테슬라 vs 나머지 모두</text>
+<rect x="54" y="538" width="452" height="150" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="280" y="580" font-family="Arial,sans-serif" font-size="22" fill="#EF4444" text-anchor="middle" font-weight="700">테슬라 단독</text>
+<text x="280" y="660" font-family="Arial Black,Arial,sans-serif" font-size="54" fill="#EF4444" text-anchor="middle" font-weight="900">1위</text>
+<text x="280" y="680" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">단독 1위</text>
+<rect x="526" y="538" width="500" height="150" rx="14" fill="#161B22" stroke="#6B7280" stroke-width="1.5"/>
+<text x="776" y="580" font-family="Arial,sans-serif" font-size="22" fill="#6B7280" text-anchor="middle" font-weight="700">나머지 전 브랜드 합산</text>
+<text x="776" y="644" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#6B7280" text-anchor="middle" font-weight="900">테슬라 미만</text>
+<text x="776" y="680" font-family="Arial,sans-serif" font-size="19" fill="#6B7280" text-anchor="middle">합쳐도 못 따라옴</text>
+<rect x="54" y="716" width="972" height="450" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="760" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">테슬라 시장 지배력 원천</text>
+<line x1="82" y1="774" x2="998" y2="774" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="814" r="7" fill="#EF4444"/>
+<text x="116" y="822" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">슈퍼차저 네트워크 — 경쟁사가 단기 복제 불가한 인프라</text>
+<circle cx="96" cy="874" r="7" fill="#F97316"/>
+<text x="116" y="882" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">FSD 기술 누적 — 주행 데이터 격차 매년 확대 중</text>
+<circle cx="96" cy="934" r="7" fill="#DC2626"/>
+<text x="116" y="942" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">브랜드 충성도 — EV = 테슬라 등식이 소비자 인식에 고착</text>
+<circle cx="96" cy="994" r="7" fill="#B91C1C"/>
+<text x="116" y="1002" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">소프트웨어 업데이트 — 차를 사고도 계속 좋아지는 경험</text>
+<rect x="82" y="1044" width="916" height="66" rx="12" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="110" y="1070" font-family="Arial,sans-serif" font-size="19" fill="#EF4444">3분기 실적 기대 포인트</text>
+<text x="110" y="1098" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">10월 21일 — 물량 우위 확인 후 마진 회복 여부 체크</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#DC2626"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="110" height="36" rx="8" fill="#EF4444"/>
+<text x="109" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="178" y="30" width="76" height="36" rx="8" fill="#B91C1C"/>
+<text x="216" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="268" y="30" width="110" height="36" rx="8" fill="#7F1D1D"/>
+<text x="323" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">사이버캡</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · 오스틴 사이버캡 운영 업데이트</text>
+<text x="54" y="230" font-family="Arial Black,Arial,sans-serif" font-size="80" fill="#EF4444" font-weight="900">ZERO</text>
+<text x="54" y="300" font-family="Arial Black,Arial,sans-serif" font-size="46" fill="#fff" font-weight="900">어색한 조작</text>
+<text x="54" y="358" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">30회 이상 탑승 · 어색한 조작 제로 · 완전히 새로운 사업</text>
+<defs><linearGradient id="dg382" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#DC2626"/>
+    <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="382" width="972" height="3" fill="url(#dg382)" rx="2"/>
+<text x="54" y="426" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">운영 업데이트 요약</text>
+<rect x="54" y="444" width="296" height="140" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="202" y="484" font-family="Arial,sans-serif" font-size="20" fill="#EF4444" text-anchor="middle" font-weight="700">운영 시간</text>
+<text x="202" y="530" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">8am–11pm</text>
+<text x="202" y="568" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">확장 업데이트</text>
+<rect x="370" y="444" width="296" height="140" rx="14" fill="#1A0808" stroke="#F97316" stroke-width="1.5"/>
+<text x="518" y="484" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">트렁크</text>
+<text x="518" y="530" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">자동 개방</text>
+<text x="518" y="568" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">탑승 종료 시</text>
+<rect x="686" y="444" width="340" height="140" rx="14" fill="#1A0808" stroke="#DC2626" stroke-width="1.5"/>
+<text x="856" y="484" font-family="Arial,sans-serif" font-size="20" fill="#DC2626" text-anchor="middle" font-weight="700">AI 어시스턴트</text>
+<text x="856" y="530" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Grok 4</text>
+<text x="856" y="568" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">앱 통합 완료</text>
+<rect x="54" y="614" width="972" height="450" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="658" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">왜 이게 대단한가</text>
+<line x1="82" y1="672" x2="998" y2="672" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="712" r="7" fill="#EF4444"/>
+<text x="116" y="720" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">30일 전 교차로 처리 불가 → 지금 유료 서비스 운영 중</text>
+<circle cx="96" cy="772" r="7" fill="#F97316"/>
+<text x="116" y="780" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">핸들 없는 차 · 운전석 없는 차 · 오스틴에서 지금 탈 수 있음</text>
+<circle cx="96" cy="832" r="7" fill="#DC2626"/>
+<text x="116" y="840" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">테슬라가 완전히 새로운 사업을 열었다 — Teslasonomics</text>
+<circle cx="96" cy="892" r="7" fill="#B91C1C"/>
+<text x="116" y="900" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">10/21 실적에서 로보택시 첫 수익 수치 공개 예상</text>
+<rect x="82" y="952" width="916" height="66" rx="12" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="110" y="978" font-family="Arial,sans-serif" font-size="19" fill="#EF4444">요금 기준</text>
+<text x="110" y="1006" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">약 $12.28/회 · 스티어링 휠 없음 · 안전 운전자 없음</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

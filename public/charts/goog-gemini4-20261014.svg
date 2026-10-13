@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7C3AED"/>
+    <stop offset="100%" stop-color="#5B21B6"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#7C3AED"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">섹터</text>
+<rect x="144" y="30" width="76" height="36" rx="8" fill="#4C1D95"/>
+<text x="182" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">GOOG</text>
+<rect x="234" y="30" width="110" height="36" rx="8" fill="#3B0764"/>
+<text x="289" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Gemini 4</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · Google AI Studio · 유료 티어 개발자·기업 공개</text>
+<text x="54" y="220" font-family="Arial Black,Arial,sans-serif" font-size="50" fill="#8B949E" font-weight="900">Google 출시</text>
+<text x="54" y="330" font-family="Arial Black,Arial,sans-serif" font-size="90" fill="#7C3AED" font-weight="900">Gemini 4</text>
+<text x="54" y="410" font-family="Arial Black,Arial,sans-serif" font-size="90" fill="#A855F7" font-weight="900">Argon</text>
+<text x="54" y="466" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Google AI Studio 유료 티어 · 개발자·기업 대상 출시</text>
+<defs><linearGradient id="dg490" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#7C3AED"/>
+    <stop offset="70%" stop-color="#5B21B6"/>
+    <stop offset="100%" stop-color="#5B21B6" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="490" width="972" height="3" fill="url(#dg490)" rx="2"/>
+<text x="54" y="534" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#7C3AED" font-weight="900">출시 포지셔닝</text>
+<rect x="54" y="552" width="452" height="140" rx="14" fill="#140A2A" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="280" y="594" font-family="Arial,sans-serif" font-size="20" fill="#7C3AED" text-anchor="middle" font-weight="700">출시 대상</text>
+<text x="280" y="642" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#fff" text-anchor="middle" font-weight="900">개발자·기업</text>
+<text x="280" y="680" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">유료 티어 우선 공개</text>
+<rect x="526" y="552" width="500" height="140" rx="14" fill="#140A2A" stroke="#A855F7" stroke-width="1.5"/>
+<text x="776" y="594" font-family="Arial,sans-serif" font-size="20" fill="#A855F7" text-anchor="middle" font-weight="700">Argon 이름 유래</text>
+<text x="776" y="642" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#fff" text-anchor="middle" font-weight="900">원소기호 Ar</text>
+<text x="776" y="680" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">주기율표 18번</text>
+<rect x="54" y="720" width="972" height="450" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="764" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#7C3AED" font-weight="900">Gemini 4 Argon 출시 의미</text>
+<line x1="82" y1="778" x2="998" y2="778" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="818" r="7" fill="#7C3AED"/>
+<text x="116" y="826" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">구글의 AI 모델 업데이트 사이클이 수개월 단위로 단축</text>
+<circle cx="96" cy="878" r="7" fill="#A855F7"/>
+<text x="116" y="886" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">유료 프리미엄 모델 — AI 수익화 전략의 핵심 수단</text>
+<circle cx="96" cy="938" r="7" fill="#5B21B6"/>
+<text x="116" y="946" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Google Cloud 기업 고객 마이그레이션 가속화 기대</text>
+<circle cx="96" cy="998" r="7" fill="#8B5CF6"/>
+<text x="116" y="1006" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">처음부터 멀티모달 설계 — OpenAI GPT와의 구조적 차별화</text>
+<rect x="82" y="1048" width="916" height="66" rx="12" fill="#140A2A" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="110" y="1074" font-family="Arial,sans-serif" font-size="19" fill="#7C3AED">번스타인 분석</text>
+<text x="110" y="1102" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">단순 추격자 아닌 독자 라인업 구축 — 시장 분할 전략</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

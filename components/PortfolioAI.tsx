@@ -38,12 +38,9 @@ const DAILY_KEY = () => {
   const d = new Date();
   return `pf_ai_count_${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 };
-const AD_BONUS_KEY = () => {
-  const d = new Date();
-  return `pf_ai_ad_bonus_${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
-};
-const FREE_LIMIT = 3;
-/** Pro 일일 한도 — 사실상 무제한에 가깝게 */
+/** 광고 없이 무료로 쓸 수 있는 1일 첫 사용 횟수 */
+const FREE_USES = 1;
+/** Pro 일일 한도 */
 const PRO_LIMIT = 30;
 
 export function PortfolioAI({
@@ -61,22 +58,20 @@ export function PortfolioAI({
   const isKo = localeCode === "ko";
   const CHIPS = isKo ? CHIPS_KO : CHIPS_EN;
 
-  const [messages,   setMessages]   = useState<Message[]>([]);
-  const [input,      setInput]      = useState("");
-  const [loading,    setLoading]    = useState(false);
-  const [count,      setCount]      = useState(0);
-  const [adBonus,    setAdBonus]    = useState(0);
-  const [showAdGate, setShowAdGate] = useState(false);
-  const [collapsed,  setCollapsed]  = useState(false);
-  const inputRef   = useRef<HTMLInputElement>(null);
-  const chatRef    = useRef<HTMLDivElement>(null);
+  const [messages,        setMessages]        = useState<Message[]>([]);
+  const [input,           setInput]           = useState("");
+  const [loading,         setLoading]         = useState(false);
+  const [count,           setCount]           = useState(0);
+  const [showAdGate,      setShowAdGate]      = useState(false);
+  const [pendingQuestion, setPendingQuestion] = useState<string | null>(null);
+  const [collapsed,       setCollapsed]       = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const chatRef  = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     try {
       const v = localStorage.getItem(DAILY_KEY());
       setCount(v ? parseInt(v, 10) : 0);
-      const b = localStorage.getItem(AD_BONUS_KEY());
-      setAdBonus(b ? parseInt(b, 10) : 0);
     } catch {}
   }, []);
 
@@ -87,10 +82,11 @@ export function PortfolioAI({
     }
   }, [messages, loading]);
 
-  const baseLimit = isPro ? PRO_LIMIT : FREE_LIMIT;
-  const effectiveLimit = isPro ? PRO_LIMIT : FREE_LIMIT + adBonus;
-  const limitReached   = count >= effectiveLimit;
-  const remaining      = Math.max(0, effectiveLimit - count);
+  // Pro: 하루 PRO_LIMIT 하드캡. 비Pro: 첫 1회 무료, 이후 매번 광고 필요 (무제한)
+  const limitReached = isPro && count >= PRO_LIMIT;
+  const remaining    = isPro ? Math.max(0, PRO_LIMIT - count) : 0;
+  // 비Pro에서 첫 1회 이후는 광고 게이트 필요
+  const needsAdGate  = !isPro && count >= FREE_USES;
 
   function buildCtx() {
     const totalValue  = holdings.reduce((s, h) => s + h.shares * (liveMap[h.symbol]?.price ?? h.avgCost), 0);
@@ -110,9 +106,16 @@ export function PortfolioAI({
     return { holdings: enriched, totalValue, totalCost, totalPnlPct, usdkrw, isPro };
   }
 
-  const ask = async (q: string, opts?: { fetchNews?: boolean }) => {
+  const ask = async (q: string, opts?: { fetchNews?: boolean; skipAdGate?: boolean }) => {
     const trimmed = q.trim();
     if (!trimmed || loading || limitReached || holdings.length === 0) return;
+
+    // 비Pro 두 번째 사용부터 광고 게이트
+    if (needsAdGate && !opts?.skipAdGate) {
+      setPendingQuestion(trimmed);
+      setShowAdGate(true);
+      return;
+    }
 
     const userMsg: Message = { role: "user", content: trimmed };
     const next = [...messages, userMsg];
@@ -167,8 +170,8 @@ export function PortfolioAI({
           {!collapsed && !limitReached && (
             <span className="text-[10px]" style={{ color: "var(--muted)" }}>
               {isKo
-              ? (isPro ? `오늘 ${remaining}/${PRO_LIMIT}회` : `오늘 ${remaining}회 남음`)
-              : (isPro ? `${remaining}/${PRO_LIMIT} today` : `${remaining} left today`)}
+                ? (isPro ? `오늘 ${remaining}/${PRO_LIMIT}회` : needsAdGate ? "광고 후 무제한" : "첫 1회 무료")
+                : (isPro ? `${remaining}/${PRO_LIMIT} today` : needsAdGate ? "Ad · unlimited" : "1st free")}
             </span>
           )}
           <button onClick={() => setCollapsed((v) => !v)}
@@ -189,10 +192,10 @@ export function PortfolioAI({
                 {isKo
                   ? (isPro
                     ? `내 종목·수익률·비중을 알고 있어요. Pro는 하루 ${PRO_LIMIT}회까지 이용할 수 있어요.`
-                    : `내 종목·수익률·비중을 모두 알고 있어요. 무료 ${FREE_LIMIT}회 · Pro는 하루 ${PRO_LIMIT}회.`)
+                    : "내 종목·수익률·비중을 모두 알고 있어요. 첫 1회 무료 · 이후 짧은 광고 시청 후 무제한.")
                   : (isPro
                     ? `I know your holdings, returns, and weights. Pro members get up to ${PRO_LIMIT} analyses per day.`
-                    : `I know your holdings, returns, and weights. Free: ${FREE_LIMIT}/day · Pro: ${PRO_LIMIT}/day.`)}
+                    : "I know your holdings, returns, and weights. First ask is free · Unlimited after a short ad.")}
               </p>
             </div>
           )}
@@ -244,42 +247,20 @@ export function PortfolioAI({
               )}
             </div>
 
-          {/* 한도 도달 */}
+          {/* Pro 하드캡 도달 */}
           {limitReached ? (
             <div className="px-4 py-5 flex flex-col items-center gap-3 text-center flex-shrink-0 border-t"
               style={{ borderColor: "rgba(var(--mint-rgb),0.1)" }}>
               <div className="w-10 h-10 rounded-full flex items-center justify-center text-xl"
-                style={{ background: "rgba(var(--mint-rgb),0.08)" }}>
-                {isPro ? "✦" : "🎬"}
-              </div>
+                style={{ background: "rgba(var(--mint-rgb),0.08)" }}>✦</div>
               <div>
                 <p className="text-sm font-bold mb-0.5" style={{ color: "var(--text)" }}>
-                  {isKo
-                    ? (isPro ? `오늘 Pro 분석 ${PRO_LIMIT}회 소진` : `오늘 무료 분석 ${baseLimit}회 소진`)
-                    : (isPro ? `Pro limit reached (${PRO_LIMIT}/day)` : `Free limit reached (${baseLimit}/day)`)}
+                  {isKo ? `오늘 Pro 분석 ${PRO_LIMIT}회 소진` : `Pro limit reached (${PRO_LIMIT}/day)`}
                 </p>
                 <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-                  {isKo
-                    ? (isPro ? "내일 다시 이용할 수 있어요" : "광고 시청으로 1회 추가 · 또는 Pro로 하루 30회")
-                    : (isPro ? "Come back tomorrow" : "Watch an ad for +1 · or upgrade to Pro for 30/day")}
+                  {isKo ? "내일 다시 이용할 수 있어요" : "Come back tomorrow"}
                 </p>
               </div>
-              {!isPro && (
-                <>
-                  <button
-                    onClick={() => setShowAdGate(true)}
-                    className="w-full py-2.5 rounded-xl text-sm font-bold transition-opacity active:opacity-80"
-                    style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)", border: "1px solid rgba(var(--mint-rgb),0.3)" }}>
-                    {isKo ? "광고 시청하고 1회 추가 →" : "Watch ad for +1 →"}
-                  </button>
-                  <Link
-                    href="/subscribe"
-                    className="w-full py-2.5 rounded-xl text-sm font-bold text-center transition-opacity active:opacity-80"
-                    style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}>
-                    {isKo ? `Pro로 계속하기 (하루 ${PRO_LIMIT}회)` : `Continue with Pro (${PRO_LIMIT}/day)`}
-                  </Link>
-                </>
-              )}
               <p className="text-[9px]" style={{ color: "var(--muted)" }}>{isKo ? "투자 참고용 · 투자 권유 아님" : "For reference only · Not investment advice"}</p>
             </div>
           ) : (
@@ -312,16 +293,21 @@ export function PortfolioAI({
 
       {showAdGate && (
         <AdGateModal
-          title={isKo ? "AI 투자비서 추가 이용" : "Unlock AI Analysis"}
-          headerText={isKo ? "무료 이용권 추가" : "Add Free Session"}
-          confirmText={isKo ? "분석하기" : "Analyze"}
+          title={isKo ? "AI 투자비서 이용" : "AI Portfolio Advisor"}
+          headerText={isKo ? "짧은 광고 후 무제한 이용" : "Watch a short ad · Unlimited use"}
+          confirmText={isKo ? "질문하기" : "Ask"}
           onConfirm={() => {
-            const newBonus = adBonus + 1;
-            setAdBonus(newBonus);
-            try { localStorage.setItem(AD_BONUS_KEY(), String(newBonus)); } catch {}
             setShowAdGate(false);
+            if (pendingQuestion) {
+              const q = pendingQuestion;
+              setPendingQuestion(null);
+              ask(q, { skipAdGate: true });
+            }
           }}
-          onClose={() => setShowAdGate(false)}
+          onClose={() => {
+            setShowAdGate(false);
+            setPendingQuestion(null);
+          }}
         />
       )}
     </div>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#DC2626"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="110" height="36" rx="8" fill="#EF4444"/>
+<text x="109" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="178" y="30" width="76" height="36" rx="8" fill="#B91C1C"/>
+<text x="216" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="268" y="30" width="110" height="36" rx="8" fill="#7F1D1D"/>
+<text x="323" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">메가팩</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · 대만 메가팩 2XL 주문 260대</text>
+<text x="54" y="220" font-family="Arial Black,Arial,sans-serif" font-size="80" fill="#EF4444" font-weight="900">$265M</text>
+<text x="54" y="300" font-family="Arial Black,Arial,sans-serif" font-size="46" fill="#fff" font-weight="900">대만 메가팩 주문</text>
+<text x="54" y="358" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">메가팩 2XL 260대 · 호주 $840M 이어 연속 대형 계약</text>
+<defs><linearGradient id="dg382" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#DC2626"/>
+    <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="382" width="972" height="3" fill="url(#dg382)" rx="2"/>
+<text x="54" y="426" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">최근 대형 에너지 계약 연속</text>
+<rect x="54" y="444" width="452" height="120" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="280" y="482" font-family="Arial,sans-serif" font-size="20" fill="#EF4444" text-anchor="middle" font-weight="700">호주 Apollo Power</text>
+<text x="280" y="524" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">$840M</text>
+<text x="280" y="552" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">1GW · 2029년까지 납품</text>
+<rect x="526" y="444" width="500" height="120" rx="14" fill="#1A0808" stroke="#F97316" stroke-width="1.5"/>
+<text x="776" y="482" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">대만 (금번)</text>
+<text x="776" y="524" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">$265M</text>
+<text x="776" y="552" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">260대 2XL</text>
+<rect x="54" y="592" width="972" height="470" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="636" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">대만 에너지 시장과 투자 의미</text>
+<line x1="82" y1="650" x2="998" y2="650" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="690" r="7" fill="#EF4444"/>
+<text x="116" y="698" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">TSMC 반도체 공장 전력 안정성 = 수억 달러짜리 수요</text>
+<circle cx="96" cy="750" r="7" fill="#F97316"/>
+<text x="116" y="758" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">태양광·풍력 확장으로 에너지저장장치 수요 폭증</text>
+<circle cx="96" cy="810" r="7" fill="#DC2626"/>
+<text x="116" y="818" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">메가팩 2XL — 단위 당 최대 용량 · 설치 비용 효율 최고</text>
+<circle cx="96" cy="870" r="7" fill="#B91C1C"/>
+<text x="116" y="878" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">미국·유럽·호주·대만 지리적 다각화 완성 신호</text>
+<circle cx="96" cy="930" r="7" fill="#9B1C1C"/>
+<text x="116" y="938" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">에너지 부문 마진이 차량 이익률 방어하는 구조 강화</text>
+<rect x="82" y="978" width="916" height="66" rx="12" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="110" y="1004" font-family="Arial,sans-serif" font-size="19" fill="#EF4444">누적 해외 에너지 계약</text>
+<text x="110" y="1032" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">호주 $840M + 대만 $265M = 누적 $1.1B+ 이상</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

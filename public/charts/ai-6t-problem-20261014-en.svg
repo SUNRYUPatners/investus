@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#1D4ED8"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="96" height="36" rx="8" fill="#3B82F6"/>
+<text x="102" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">MACRO</text>
+<rect x="164" y="30" width="110" height="36" rx="8" fill="#1E3A5F"/>
+<text x="219" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">AI INFRA</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · AI industry monetization gap · 2031 deadline</text>
+<text x="54" y="218" font-family="Arial Black,Arial,sans-serif" font-size="44" fill="#8B949E" font-weight="900">AI HAS A PROBLEM</text>
+<text x="54" y="320" font-family="Arial Black,Arial,sans-serif" font-size="100" fill="#3B82F6" font-weight="900">$6T</text>
+<text x="54" y="386" font-family="Arial Black,Arial,sans-serif" font-size="42" fill="#fff" font-weight="900">needed per year by 2031</text>
+<text x="54" y="444" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">To justify data centers being built · Current outlook: max $1.8T</text>
+<defs><linearGradient id="dg468" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#3B82F6"/>
+    <stop offset="70%" stop-color="#1D4ED8"/>
+    <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="468" width="972" height="3" fill="url(#dg468)" rx="2"/>
+<text x="54" y="512" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#3B82F6" font-weight="900">The Revenue Gap</text>
+<rect x="54" y="530" width="296" height="140" rx="14" fill="#050E1A" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="202" y="572" font-family="Arial,sans-serif" font-size="20" fill="#3B82F6" text-anchor="middle" font-weight="700">Required</text>
+<text x="202" y="624" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#fff" text-anchor="middle" font-weight="900">$6T/yr</text>
+<text x="202" y="658" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">by 2031</text>
+<rect x="370" y="530" width="296" height="140" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="518" y="572" font-family="Arial,sans-serif" font-size="20" fill="#EF4444" text-anchor="middle" font-weight="700">Current Outlook</text>
+<text x="518" y="624" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#fff" text-anchor="middle" font-weight="900">$1.8T/yr</text>
+<text x="518" y="658" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">chatbots + coding tools</text>
+<rect x="686" y="530" width="340" height="140" rx="14" fill="#1A0808" stroke="#F97316" stroke-width="1.5"/>
+<text x="856" y="572" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">The Gap</text>
+<text x="856" y="624" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#fff" text-anchor="middle" font-weight="900">$4.2T</text>
+<text x="856" y="658" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">new apps must fill this</text>
+<rect x="54" y="700" width="972" height="460" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="744" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#3B82F6" font-weight="900">Gap Fillers — Who Can Do It?</text>
+<line x1="82" y1="758" x2="998" y2="758" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="798" r="7" fill="#3B82F6"/>
+<text x="116" y="806" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Autonomous robotaxi — Tesla, Waymo at commercial scale</text>
+<circle cx="96" cy="858" r="7" fill="#60A5FA"/>
+<text x="116" y="866" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">General-purpose robots — Tesla Optimus, Figure AI mass production</text>
+<circle cx="96" cy="918" r="7" fill="#1D4ED8"/>
+<text x="116" y="926" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Drug discovery AI, chip design AI, defense/security AI</text>
+<circle cx="96" cy="978" r="7" fill="#2563EB"/>
+<text x="116" y="986" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Failure = AI infrastructure bubble debate goes mainstream</text>
+<rect x="82" y="1032" width="916" height="80" rx="12" fill="#050E1A" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="110" y="1062" font-family="Arial,sans-serif" font-size="19" fill="#3B82F6">Europe needs to compete</text>
+<text x="110" y="1096" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">NVIDIA announces $2B European investment — widening the race</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

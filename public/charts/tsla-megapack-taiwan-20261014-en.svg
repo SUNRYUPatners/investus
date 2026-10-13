@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#DC2626"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="110" height="36" rx="8" fill="#EF4444"/>
+<text x="109" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">ANALYSIS</text>
+<rect x="178" y="30" width="76" height="36" rx="8" fill="#B91C1C"/>
+<text x="216" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="268" y="30" width="120" height="36" rx="8" fill="#7F1D1D"/>
+<text x="328" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">MEGAPACK</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · Taiwan Megapack 2XL order 260 units</text>
+<text x="54" y="220" font-family="Arial Black,Arial,sans-serif" font-size="80" fill="#EF4444" font-weight="900">$265M</text>
+<text x="54" y="300" font-family="Arial Black,Arial,sans-serif" font-size="46" fill="#fff" font-weight="900">Taiwan Megapack order</text>
+<text x="54" y="358" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">260 Megapack 2XL units · Follows Australia $840M deal</text>
+<defs><linearGradient id="dg382" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#DC2626"/>
+    <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="382" width="972" height="3" fill="url(#dg382)" rx="2"/>
+<text x="54" y="426" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">Recent Major Energy Contracts</text>
+<rect x="54" y="444" width="452" height="120" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="280" y="482" font-family="Arial,sans-serif" font-size="20" fill="#EF4444" text-anchor="middle" font-weight="700">Australia — Apollo Power</text>
+<text x="280" y="524" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">$840M</text>
+<text x="280" y="552" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">1 GW · delivery through 2029</text>
+<rect x="526" y="444" width="500" height="120" rx="14" fill="#1A0808" stroke="#F97316" stroke-width="1.5"/>
+<text x="776" y="482" font-family="Arial,sans-serif" font-size="20" fill="#F97316" text-anchor="middle" font-weight="700">Taiwan (this deal)</text>
+<text x="776" y="524" font-family="Arial Black,Arial,sans-serif" font-size="38" fill="#fff" text-anchor="middle" font-weight="900">$265M</text>
+<text x="776" y="552" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="middle">260 Megapack 2XL units</text>
+<rect x="54" y="592" width="972" height="470" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="636" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">Taiwan Energy Market Context</text>
+<line x1="82" y1="650" x2="998" y2="650" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="690" r="7" fill="#EF4444"/>
+<text x="116" y="698" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">TSMC fabs need grid stability — power outage = $100M+ loss</text>
+<circle cx="96" cy="750" r="7" fill="#F97316"/>
+<text x="116" y="758" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Taiwan scaling solar/wind → storage demand surging</text>
+<circle cx="96" cy="810" r="7" fill="#DC2626"/>
+<text x="116" y="818" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Megapack 2XL — highest capacity per unit, best install cost</text>
+<circle cx="96" cy="870" r="7" fill="#B91C1C"/>
+<text x="116" y="878" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">US + Europe + Australia + Taiwan = geographic diversification</text>
+<circle cx="96" cy="930" r="7" fill="#9B1C1C"/>
+<text x="116" y="938" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Energy margin continues to backstop vehicle margin pressure</text>
+<rect x="82" y="978" width="916" height="66" rx="12" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="110" y="1004" font-family="Arial,sans-serif" font-size="19" fill="#EF4444">Cumulative international energy contracts</text>
+<text x="110" y="1032" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">Australia $840M + Taiwan $265M = $1.1B+ and counting</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>

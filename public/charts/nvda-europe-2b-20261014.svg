@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#059669"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#10B981"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">섹터</text>
+<rect x="144" y="30" width="76" height="36" rx="8" fill="#065F46"/>
+<text x="182" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">NVDA</text>
+<rect x="234" y="30" width="96" height="36" rx="8" fill="#064E3B"/>
+<text x="282" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">유럽투자</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.14 · NVIDIA 유럽 20억 달러 신규 투자 발표</text>
+<text x="54" y="220" font-family="Arial Black,Arial,sans-serif" font-size="80" fill="#10B981" font-weight="900">$2B</text>
+<text x="54" y="302" font-family="Arial Black,Arial,sans-serif" font-size="50" fill="#fff" font-weight="900">유럽 투자 계획</text>
+<text x="54" y="360" font-family="Arial Black,Arial,sans-serif" font-size="36" fill="#8B949E" font-weight="900">향후 1년간</text>
+<text x="54" y="418" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Jensen Huang: "유럽이 이 경쟁에 뛰어들어야 합니다"</text>
+<defs><linearGradient id="dg442" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#10B981"/>
+    <stop offset="70%" stop-color="#059669"/>
+    <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="442" width="972" height="3" fill="url(#dg442)" rx="2"/>
+<text x="54" y="486" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#10B981" font-weight="900">투자 구성 예상</text>
+<rect x="54" y="504" width="296" height="130" rx="14" fill="#041A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="202" y="544" font-family="Arial,sans-serif" font-size="20" fill="#10B981" text-anchor="middle" font-weight="700">데이터센터</text>
+<text x="202" y="592" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">GPU 클러스터</text>
+<text x="202" y="624" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">유럽 AI 인프라</text>
+<rect x="370" y="504" width="296" height="130" rx="14" fill="#041A10" stroke="#059669" stroke-width="1.5"/>
+<text x="518" y="544" font-family="Arial,sans-serif" font-size="20" fill="#059669" text-anchor="middle" font-weight="700">연구개발</text>
+<text x="518" y="592" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">AI 연구소</text>
+<text x="518" y="624" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">유럽 파트너십</text>
+<rect x="686" y="504" width="340" height="130" rx="14" fill="#041A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="856" y="544" font-family="Arial,sans-serif" font-size="20" fill="#10B981" text-anchor="middle" font-weight="700">생태계</text>
+<text x="856" y="592" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">스타트업 지원</text>
+<text x="856" y="624" font-family="Arial,sans-serif" font-size="19" fill="#8B949E" text-anchor="middle">개발자 커뮤니티</text>
+<rect x="54" y="662" width="972" height="498" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="706" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#10B981" font-weight="900">유럽 AI 투자 의미</text>
+<line x1="82" y1="720" x2="998" y2="720" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="760" r="7" fill="#10B981"/>
+<text x="116" y="768" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI $6조 문제 해결에 유럽 수요 필수 — 이를 선점하는 전략</text>
+<circle cx="96" cy="820" r="7" fill="#059669"/>
+<text x="116" y="828" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">EU AI Act 규제 환경에서 NVIDIA GPU 중심 생태계 구축</text>
+<circle cx="96" cy="880" r="7" fill="#10B981"/>
+<text x="116" y="888" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">자동차·제조·금융·의료 AI 수요 집중된 지역 선점</text>
+<circle cx="96" cy="940" r="7" fill="#34D399"/>
+<text x="116" y="948" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">ASML·SAP 등 유럽 기술 생태계와의 시너지 기대</text>
+<rect x="82" y="990" width="916" height="80" rx="12" fill="#041A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="110" y="1018" font-family="Arial,sans-serif" font-size="19" fill="#10B981">Jensen Huang 발언</text>
+<text x="110" y="1054" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">"Europe needs to get in the race" — Jensen Huang, NVIDIA CEO</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.14</text>
+</svg>
