@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#0D9488"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="63" height="36" rx="8" fill="#10B981"/>
+<text x="85.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">매크로</text>
+<rect x="154" y="30" width="89" height="36" rx="8" fill="#0D9488"/>
+<text x="198.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">AI인프라</text>
+<rect x="272" y="30" width="128" height="36" rx="8" fill="#065F46"/>
+<text x="336" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Jevons역설</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.13 · a16z 차트 — AI 컴퓨트 가격 역설</text>
+<text x="54" y="200" font-family="Arial Black,Arial,sans-serif" font-size="80" fill="#10B981" font-weight="900">Jevons</text>
+<text x="54" y="290" font-family="Arial Black,Arial,sans-serif" font-size="60" fill="#fff" font-weight="900">역설 실증됐다</text>
+<text x="54" y="348" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">수요↑ → 가격↑ — H100 $2.50/hr 강보합 · 토큰 가격 하락</text>
+<defs><linearGradient id="dg372" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#10B981"/>
+    <stop offset="70%" stop-color="#0D9488"/>
+    <stop offset="100%" stop-color="#0D9488" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="372" width="972" height="3" fill="url(#dg372)" rx="2"/>
+<text x="54" y="416" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#10B981" font-weight="900">AI 컴퓨트 vs 토큰 가격 방향</text>
+<text x="54" y="458" font-family="Arial,sans-serif" font-size="22" fill="#10B981">H100 임대가 (시간당)</text>
+<rect x="330" y="436" width="600" height="32" rx="5" fill="#21262D"/>
+<rect x="330" y="436" width="486" height="32" rx="5" fill="#10B981"/>
+<text x="824" y="458" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">$2.50 강보합</text>
+<text x="54" y="510" font-family="Arial,sans-serif" font-size="22" fill="#EF4444">AI 토큰 가격</text>
+<rect x="330" y="488" width="600" height="32" rx="5" fill="#21262D"/>
+<rect x="330" y="488" width="240" height="32" rx="5" fill="#EF4444"/>
+<text x="578" y="510" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">여름 이후 하락</text>
+<rect x="54" y="542" width="306" height="130" rx="16" fill="#161B22" stroke="#10B981" stroke-width="1.5"/>
+<text x="207" y="578" font-family="Arial,sans-serif" font-size="19" fill="#10B981" text-anchor="middle" font-weight="700">H100 임대가</text>
+<text x="207" y="626" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$2.50/hr</text>
+<text x="207" y="656" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">수요 강세 유지</text>
+<rect x="384" y="542" width="306" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="1.5"/>
+<text x="537" y="578" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" text-anchor="middle" font-weight="700">토큰 가격</text>
+<text x="537" y="626" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">하락세</text>
+<text x="537" y="656" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">2026년 여름↓</text>
+<rect x="714" y="542" width="312" height="130" rx="16" fill="#161B22" stroke="#0D9488" stroke-width="1.5"/>
+<text x="870" y="578" font-family="Arial,sans-serif" font-size="19" fill="#0D9488" text-anchor="middle" font-weight="700">역설 핵심</text>
+<text x="870" y="626" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">수요↑→가격↑</text>
+<text x="870" y="656" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Jevons 실증</text>
+<rect x="54" y="702" width="972" height="516" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="746" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#10B981" font-weight="900">Jevons 역설이란?</text>
+<line x1="82" y1="760" x2="998" y2="760" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="790" r="7" fill="#10B981"/>
+<text x="116" y="798" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">효율↑ → 사용량 폭발적 증가 → 총 자원 소비 오히려↑</text>
+<circle cx="96" cy="850" r="7" fill="#0D9488"/>
+<text x="116" y="858" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI 토큰 가격 내려가도 컴퓨트 수요 더 빨리 늘어남</text>
+<circle cx="96" cy="910" r="7" fill="#34D399"/>
+<text x="116" y="918" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">H100 수요 감소 없음 — AI 모델 복잡도·크기 계속 증가</text>
+<circle cx="96" cy="970" r="7" fill="#065F46"/>
+<text x="116" y="978" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">엔비디아·TSMC·전력 인프라 구조적 수혜 지속 근거</text>
+<circle cx="96" cy="1030" r="7" fill="#10B981"/>
+<text x="116" y="1038" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI 유틸리티화 = 컴퓨트 단가 하방 저항 — 투자 논리 유지</text>
+<rect x="82" y="1104" width="916" height="66" rx="12" fill="#041A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="110" y="1130" font-family="Arial,sans-serif" font-size="19" fill="#10B981">결론: 컴퓨트는 줄어들지 않는다</text>
+<text x="110" y="1158" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">AI 인프라 투자 테마 — 역설이 지지하는 근거</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.13</text>
+</svg>

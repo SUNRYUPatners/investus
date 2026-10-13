@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#FB923C"/>
+    <stop offset="100%" stop-color="#F97316"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="180" height="36" rx="8" fill="#FB923C"/>
+<text x="144" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Korea Market</text>
+<rect x="242" y="30" width="89" height="36" rx="8" fill="#EA580C"/>
+<text x="286.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">KOSPI</text>
+<rect x="328" y="30" width="180" height="36" rx="8" fill="#C2410C"/>
+<text x="418" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Foreign Sell</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.13 · Foreigners net sell 14 straight sessions — ₩20.93T</text>
+<text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="100" fill="#EF4444" font-weight="900">14 days</text>
+<text x="54" y="300" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">Consecutive Net Selling</text>
+<text x="54" y="356" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Cumulative ₩20.93T · Strong dollar + high rates</text>
+<defs><linearGradient id="dg380" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#FB923C" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#FB923C"/>
+    <stop offset="70%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="380" width="972" height="3" fill="url(#dg380)" rx="2"/>
+<text x="54" y="424" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#FB923C" font-weight="900">Cumulative Selling by Period</text>
+<text x="54" y="464" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Days 1–5</text>
+<rect x="200" y="442" width="730" height="28" rx="5" fill="#21262D"/>
+<rect x="200" y="442" width="258" height="28" rx="5" fill="#F97316"/>
+<text x="466" y="464" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">₩7.40T</text>
+<text x="54" y="506" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Days 6–10</text>
+<rect x="200" y="484" width="730" height="28" rx="5" fill="#21262D"/>
+<rect x="200" y="484" width="460" height="28" rx="5" fill="#EA580C"/>
+<text x="668" y="506" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">₩13.22T</text>
+<text x="54" y="548" font-family="Arial,sans-serif" font-size="22" fill="#EF4444">Days 11–14</text>
+<rect x="200" y="526" width="730" height="28" rx="5" fill="#21262D"/>
+<rect x="200" y="526" width="730" height="28" rx="5" fill="#EF4444"/>
+<text x="938" y="548" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" font-weight="900">₩20.93T</text>
+<rect x="54" y="576" width="306" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="1.5"/>
+<text x="207" y="612" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" text-anchor="middle" font-weight="700">Streak</text>
+<text x="207" y="660" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">14 sessions</text>
+<text x="207" y="690" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">recent record</text>
+<rect x="384" y="576" width="306" height="130" rx="16" fill="#161B22" stroke="#F97316" stroke-width="1.5"/>
+<text x="537" y="612" font-family="Arial,sans-serif" font-size="19" fill="#F97316" text-anchor="middle" font-weight="700">Cumulative</text>
+<text x="537" y="660" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">₩20.93T</text>
+<text x="537" y="690" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">net sold</text>
+<rect x="714" y="576" width="312" height="130" rx="16" fill="#161B22" stroke="#FB923C" stroke-width="1.5"/>
+<text x="870" y="612" font-family="Arial,sans-serif" font-size="19" fill="#FB923C" text-anchor="middle" font-weight="700">DXY</text>
+<text x="870" y="660" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">102.21</text>
+<text x="870" y="690" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">dollar strength</text>
+<rect x="54" y="736" width="972" height="482" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="780" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FB923C" font-weight="900">Backdrop and Outlook</text>
+<line x1="82" y1="794" x2="998" y2="794" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="824" r="7" fill="#EF4444"/>
+<text x="116" y="832" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Strong dollar + high rates = EM capital outflow structure ongoing</text>
+<circle cx="96" cy="884" r="7" fill="#F97316"/>
+<text x="116" y="892" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">US 10Y at 5.24% — Korean won assets relatively less attractive</text>
+<circle cx="96" cy="944" r="7" fill="#FB923C"/>
+<text x="116" y="952" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Oct 14 CPI = key catalyst for dollar/rate direction reversal</text>
+<circle cx="96" cy="1004" r="7" fill="#EA580C"/>
+<text x="116" y="1012" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Flow reversal condition: dollar weakness or rate cut signal needed</text>
+<rect x="82" y="1104" width="916" height="66" rx="12" fill="#1A0808" stroke="#FB923C" stroke-width="1.5"/>
+<text x="110" y="1130" font-family="Arial,sans-serif" font-size="19" fill="#FB923C">📅 Next checkpoint</text>
+<text x="110" y="1158" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">Oct 14 CPI — catalyst for foreign flow reversal</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.13</text>
+</svg>

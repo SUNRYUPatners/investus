@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7C3AED"/>
+    <stop offset="100%" stop-color="#3B82F6"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="193" height="36" rx="8" fill="#7C3AED"/>
+<text x="150.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Daily Summary</text>
+<rect x="242" y="30" width="154" height="36" rx="8" fill="#4C1D95"/>
+<text x="319" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">2026.10.13</text>
+<rect x="400" y="30" width="128" height="36" rx="8" fill="#1D4ED8"/>
+<text x="464" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TODAY 16</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">Monday, Oct 13 2026 · investus.kr Today's Big Picture</text>
+<text x="54" y="188" font-family="Arial Black,Arial,sans-serif" font-size="64" fill="#fff" font-weight="900">Today's Top 5 Stories</text>
+<defs><linearGradient id="dg208" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#7C3AED"/>
+    <stop offset="70%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="208" width="972" height="3" fill="url(#dg208)" rx="2"/>
+<rect x="54" y="222" width="972" height="100" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="82" y="258" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">① TSLA — Jefferies $420 raise + Cybercab 500 fleet</text>
+<text x="82" y="300" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Q3 earnings in 8 days · China Sep record 64,837 · Austin 1-min wait</text>
+<rect x="54" y="336" width="972" height="100" rx="14" fill="#0A1525" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="82" y="372" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#3B82F6" font-weight="900">② Starlink — satellite mass exceeds rest of world at 6,197t</text>
+<text x="82" y="414" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">15× ISS · surpassed all other satellites · space infra dominance</text>
+<rect x="54" y="450" width="972" height="100" rx="14" fill="#050E1A" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="82" y="486" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#60A5FA" font-weight="900">③ MSFT Maia 300 — +40% efficiency · multi-GW in 2027</text>
+<text x="82" y="528" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Nvidia GPU dependency accelerating down · Azure AI cost revolution</text>
+<rect x="54" y="564" width="972" height="100" rx="14" fill="#041A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="82" y="600" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#10B981" font-weight="900">④ Safe Assets — Gold $4,168 · Aramco inventory warning</text>
+<text x="82" y="642" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">US10Y 5.24% · DXY 102.21 · crude inventory at last buffer</text>
+<rect x="54" y="678" width="972" height="100" rx="14" fill="#1A080A" stroke="#FB923C" stroke-width="1.5"/>
+<text x="82" y="714" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FB923C" font-weight="900">⑤ Korea + Crypto — 14-day foreign sell ₩20.93T</text>
+<text x="82" y="756" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">BTC $82,929 · SOL $110.80 · Oct 14 CPI decides direction</text>
+<defs><linearGradient id="dg792" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#7C3AED"/>
+    <stop offset="70%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="792" width="972" height="3" fill="url(#dg792)" rx="2"/>
+<text x="54" y="836" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#fff" font-weight="900">Key Dates</text>
+<rect x="54" y="850" width="462" height="110" rx="14" fill="#140A2A" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="82" y="886" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#7C3AED" font-weight="900">Oct 14 (Tomorrow)</text>
+<text x="82" y="920" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">US September CPI</text>
+<text x="82" y="950" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">Sets direction for rates, dollar, crypto</text>
+<rect x="564" y="850" width="462" height="110" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="592" y="886" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#EF4444" font-weight="900">Oct 21 (8 days)</text>
+<text x="592" y="920" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Tesla Q3 Earnings</text>
+<text x="592" y="950" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">Vehicle margins · FSD · Robotaxi update</text>
+<rect x="54" y="980" width="972" height="90" rx="14" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="1016" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">Today 16 reports — read all at investus.kr</text>
+<text x="82" y="1052" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">TSLA 5 · SPCX 2 · MSFT 1 · AI 1 · Energy 1 · Korea/Safe Assets/Crypto 5</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.13</text>
+</svg>

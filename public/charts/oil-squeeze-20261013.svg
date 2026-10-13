@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#F59E0B"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#10B981"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">안전자산</text>
+<rect x="162" y="30" width="50" height="36" rx="8" fill="#B45309"/>
+<text x="187" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">유가</text>
+<rect x="228" y="30" width="76" height="36" rx="8" fill="#92400E"/>
+<text x="266" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">공급위기</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.13 · 아람코 CEO "재고 60억 배럴 이하 — 마지막 완충재"</text>
+<text x="54" y="200" font-family="Arial Black,Arial,sans-serif" font-size="100" fill="#F59E0B" font-weight="900">6B bbl</text>
+<text x="54" y="290" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">글로벌 재고 마지막 완충재</text>
+<text x="54" y="348" font-family="Arial,sans-serif" font-size="26" fill="#EF4444">상업 재고 60억 배럴 이하 — 공급 충격 시 즉각 가격 급등</text>
+<defs><linearGradient id="dg372" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#10B981"/>
+    <stop offset="70%" stop-color="#F59E0B"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="372" width="972" height="3" fill="url(#dg372)" rx="2"/>
+<text x="54" y="418" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#F59E0B" font-weight="900">공급 경고 핵심 수치</text>
+<rect x="54" y="432" width="306" height="130" rx="16" fill="#161B22" stroke="#F59E0B" stroke-width="1.5"/>
+<text x="207" y="468" font-family="Arial,sans-serif" font-size="19" fill="#F59E0B" text-anchor="middle" font-weight="700">현재 유가</text>
+<text x="207" y="516" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$107/bbl</text>
+<text x="207" y="546" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">브렌트 기준</text>
+<rect x="384" y="432" width="306" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="1.5"/>
+<text x="537" y="468" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" text-anchor="middle" font-weight="700">상업 재고</text>
+<text x="537" y="516" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">6B bbl↓</text>
+<text x="537" y="546" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">마지막 완충재</text>
+<rect x="714" y="432" width="312" height="130" rx="16" fill="#161B22" stroke="#DC2626" stroke-width="1.5"/>
+<text x="870" y="468" font-family="Arial,sans-serif" font-size="19" fill="#DC2626" text-anchor="middle" font-weight="700">리스크 시나리오</text>
+<text x="870" y="516" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$115↑</text>
+<text x="870" y="546" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">골드만 전망</text>
+<rect x="54" y="592" width="972" height="120" rx="14" fill="#1A100A" stroke="#F59E0B" stroke-width="1.5"/>
+<text x="82" y="632" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">사우디 아람코 CEO 공개 경고 — 이례적 강도</text>
+<text x="82" y="672" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">재고 완충 부족 → 지정학 충격 시 가격 급등 구조적 취약점</text>
+<rect x="54" y="726" width="972" height="120" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="82" y="766" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">인플레이션 재점화 리스크 — 금리 인하 지연 연계</text>
+<text x="82" y="806" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">유가 $115 돌파 시 연방준비제도 금리 인하 2027년으로 이연</text>
+<rect x="54" y="876" width="972" height="344" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="920" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F59E0B" font-weight="900">투자 시사점</text>
+<line x1="82" y1="934" x2="998" y2="934" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="964" r="7" fill="#EF4444"/>
+<text x="116" y="972" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">유가 급등 = 인플레 재점화 → 금리 인하 후퇴 → 전반 하방</text>
+<circle cx="96" cy="1024" r="7" fill="#F59E0B"/>
+<text x="116" y="1032" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">에너지 섹터 — 유가 강세 수혜 / 나머지 섹터 역풍</text>
+<circle cx="96" cy="1084" r="7" fill="#10B981"/>
+<text x="116" y="1092" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">한국 — 달러 강세·수입 에너지 비용↑ 이중 압박</text>
+<rect x="82" y="1104" width="916" height="80" rx="12" fill="#1A100A" stroke="#F59E0B" stroke-width="1.5"/>
+<text x="110" y="1132" font-family="Arial,sans-serif" font-size="20" fill="#F59E0B" font-weight="700">골드만삭스 연내 유가 $115 시나리오</text>
+<text x="110" y="1164" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">JP모건: 추가 충격 없으면 $102~104 박스권 전망</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.13</text>
+</svg>

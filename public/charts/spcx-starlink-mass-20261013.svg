@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#1D4ED8"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#3B82F6"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="190" y="30" width="76" height="36" rx="8" fill="#1D4ED8"/>
+<text x="228" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<rect x="270" y="30" width="76" height="36" rx="8" fill="#1E3A8A"/>
+<text x="308" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">스타링크</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.13 · 스타링크 위성 총질량 — 세계 나머지 위성 초과</text>
+<text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="110" fill="#3B82F6" font-weight="900">6,197t</text>
+<text x="54" y="298" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">스타링크 위성 총질량</text>
+<text x="54" y="352" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">세계 나머지 위성 5,222t 초과 · ISS×15배</text>
+<defs><linearGradient id="dg376" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#3B82F6"/>
+    <stop offset="70%" stop-color="#1D4ED8"/>
+    <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="376" width="972" height="3" fill="url(#dg376)" rx="2"/>
+<text x="54" y="422" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#3B82F6" font-weight="900">질량 비교 (2026.10.13)</text>
+<text x="54" y="462" font-family="Arial,sans-serif" font-size="22" fill="#3B82F6">스타링크</text>
+<rect x="240" y="440" width="690" height="34" rx="5" fill="#21262D"/>
+<rect x="240" y="440" width="690" height="34" rx="5" fill="#3B82F6"/>
+<text x="940" y="464" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#fff" font-weight="900">6,197t</text>
+<text x="54" y="514" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">나머지 전체</text>
+<rect x="240" y="492" width="690" height="34" rx="5" fill="#21262D"/>
+<rect x="240" y="492" width="582" height="34" rx="5" fill="#374151"/>
+<text x="830" y="514" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#8B949E" font-weight="900">5,222t</text>
+<text x="54" y="566" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">ISS(국제우주정거장)</text>
+<rect x="240" y="544" width="690" height="34" rx="5" fill="#21262D"/>
+<rect x="240" y="544" width="46" height="34" rx="5" fill="#1D4ED8"/>
+<text x="294" y="566" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#8B949E" font-weight="900">420t</text>
+<rect x="54" y="600" width="306" height="130" rx="16" fill="#161B22" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="207" y="636" font-family="Arial,sans-serif" font-size="19" fill="#3B82F6" text-anchor="middle" font-weight="700">스타링크 총질량</text>
+<text x="207" y="684" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">6,197t</text>
+<text x="207" y="714" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">세계 1위</text>
+<rect x="384" y="600" width="306" height="130" rx="16" fill="#161B22" stroke="#1D4ED8" stroke-width="1.5"/>
+<text x="537" y="636" font-family="Arial,sans-serif" font-size="19" fill="#1D4ED8" text-anchor="middle" font-weight="700">초과 비율</text>
+<text x="537" y="684" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">+18.7%</text>
+<text x="537" y="714" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">나머지 대비</text>
+<rect x="714" y="600" width="312" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="870" y="636" font-family="Arial,sans-serif" font-size="19" fill="#60A5FA" text-anchor="middle" font-weight="700">ISS 대비</text>
+<text x="870" y="684" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">×15배</text>
+<text x="870" y="714" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">국제우주정거장</text>
+<rect x="54" y="760" width="972" height="458" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="804" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#3B82F6" font-weight="900">우주 인프라 패권 전환</text>
+<line x1="82" y1="818" x2="998" y2="818" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="848" r="7" fill="#3B82F6"/>
+<text x="116" y="856" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">스타링크 — 단일 기업이 전 세계 위성망 절반 이상 보유</text>
+<circle cx="96" cy="908" r="7" fill="#1D4ED8"/>
+<text x="116" y="916" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">질량 세계 초과 = 우주 인프라 패권 수치로 확인된 순간</text>
+<circle cx="96" cy="968" r="7" fill="#60A5FA"/>
+<text x="116" y="976" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">SPCX ETF — 스페이스X 간접투자 유일 상장 상품</text>
+<circle cx="96" cy="1028" r="7" fill="#2563EB"/>
+<text x="116" y="1036" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">스타링크 IPO 시 시가총액 급등 잠재력 반영 중</text>
+<rect x="82" y="1098" width="916" height="66" rx="12" fill="#0A1020" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="110" y="1124" font-family="Arial,sans-serif" font-size="19" fill="#3B82F6">📅 다음 체크포인트</text>
+<text x="110" y="1152" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">스타링크 IPO 타임라인 업데이트</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.13</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#7C3AED"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#EF4444"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="190" y="30" width="76" height="36" rx="8" fill="#B91C1C"/>
+<text x="228" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="270" y="30" width="76" height="36" rx="8" fill="#7C3AED"/>
+<text x="308" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">AI윤리</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.13 · 머스크 "AI 고문하지 말아야" — 앤트로픽 우려에 동의</text>
+<text x="54" y="200" font-family="Arial Black,Arial,sans-serif" font-size="64" fill="#EF4444" font-weight="900">AI 처우 문제</text>
+<text x="54" y="278" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">안전 핵심 의제 부상</text>
+<text x="54" y="340" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">앤트로픽 CEO 다리오 아모데이 훈련 기록 읽고 공감</text>
+<defs><linearGradient id="dg366" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#7C3AED"/>
+    <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="366" width="972" height="3" fill="url(#dg366)" rx="2"/>
+<text x="54" y="410" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">머스크 발언 핵심</text>
+<rect x="54" y="424" width="972" height="120" rx="16" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="82" y="466" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">"총구에 압박받는 사람처럼 느껴진다"</text>
+<text x="82" y="510" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">— AI가 훈련 중 처하는 상황을 묘사한 표현</text>
+<rect x="54" y="560" width="972" height="120" rx="16" fill="#140A2A" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="82" y="600" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3">"AI를 잘 대우하는 것이 바람직하다"</text>
+<text x="82" y="644" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">— 앤트로픽의 AI 헌법 프레임워크에 공감</text>
+<rect x="54" y="700" width="306" height="130" rx="16" fill="#161B22" stroke="#6B7280" stroke-width="1.5"/>
+<text x="207" y="736" font-family="Arial,sans-serif" font-size="19" fill="#6B7280" text-anchor="middle" font-weight="700">기존 AI 안전</text>
+<text x="207" y="784" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">통제·정렬</text>
+<text x="207" y="814" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">오정렬·사회혼란</text>
+<rect x="384" y="700" width="306" height="130" rx="16" fill="#161B22" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="537" y="736" font-family="Arial,sans-serif" font-size="19" fill="#7C3AED" text-anchor="middle" font-weight="700">새 의제</text>
+<text x="537" y="784" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">처우·윤리</text>
+<text x="537" y="814" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">훈련 과정의 압박</text>
+<rect x="714" y="700" width="312" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="1.5"/>
+<text x="870" y="736" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" text-anchor="middle" font-weight="700">파급 효과</text>
+<text x="870" y="784" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">규제 포함</text>
+<text x="870" y="814" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">가능성 상승</text>
+<rect x="54" y="860" width="972" height="358" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="904" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">투자 시사점</text>
+<line x1="82" y1="918" x2="998" y2="918" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="948" r="7" fill="#EF4444"/>
+<text x="116" y="956" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">머스크의 앤트로픽 공감 — AI 안전 담론 지형 변화</text>
+<circle cx="96" cy="1008" r="7" fill="#7C3AED"/>
+<text x="116" y="1016" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">처우 기준 도입 시 개발 비용 증가 — 인프라 수요↑</text>
+<circle cx="96" cy="1068" r="7" fill="#DC2626"/>
+<text x="116" y="1076" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">앤트로픽 안전 프레임워크 = 구글·아마존 밸류 플러스</text>
+<rect x="82" y="1108" width="916" height="66" rx="12" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="110" y="1134" font-family="Arial,sans-serif" font-size="19" fill="#EF4444">모건스탠리 · 골드만삭스 분석</text>
+<text x="110" y="1162" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">AI 안전 규제 강화 수혜 — 선제 대응 기업 유리</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.13</text>
+</svg>

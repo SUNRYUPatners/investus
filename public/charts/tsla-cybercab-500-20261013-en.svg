@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#DC2626"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="206" height="36" rx="8" fill="#EF4444"/>
+<text x="157" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Stock Analysis</text>
+<rect x="254" y="30" width="76" height="36" rx="8" fill="#B91C1C"/>
+<text x="292" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="334" y="30" width="128" height="36" rx="8" fill="#991B1B"/>
+<text x="398" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Cybercab</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.13 · Austin Cybercab fleet tops 500 in 30 days</text>
+<text x="54" y="220" font-family="Arial Black,Arial,sans-serif" font-size="140" fill="#EF4444" font-weight="900">500+</text>
+<text x="54" y="310" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">Cybercab fleet — 30 days</text>
+<text x="54" y="362" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">1-min wait · $12.28 fare · Live in 6 cities</text>
+<defs><linearGradient id="dg386" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#DC2626"/>
+    <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="386" width="972" height="3" fill="url(#dg386)" rx="2"/>
+<text x="54" y="430" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">Fleet by City (2026.10.13)</text>
+<text x="54" y="468" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Austin</text>
+<rect x="200" y="446" width="730" height="28" rx="5" fill="#21262D"/>
+<rect x="200" y="446" width="587" height="28" rx="5" fill="#EF4444"/>
+<text x="796" y="468" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">334</text>
+<text x="54" y="510" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Dallas</text>
+<rect x="200" y="488" width="730" height="28" rx="5" fill="#21262D"/>
+<rect x="200" y="488" width="149" height="28" rx="5" fill="#DC2626"/>
+<text x="358" y="510" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">67</text>
+<text x="54" y="552" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Houston</text>
+<rect x="200" y="530" width="730" height="28" rx="5" fill="#21262D"/>
+<rect x="200" y="530" width="72" height="28" rx="5" fill="#B91C1C"/>
+<text x="281" y="552" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">32</text>
+<text x="54" y="594" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">3 other cities</text>
+<rect x="200" y="572" width="730" height="28" rx="5" fill="#21262D"/>
+<rect x="200" y="572" width="29" height="28" rx="5" fill="#991B1B"/>
+<text x="238" y="594" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">29</text>
+<rect x="54" y="620" width="306" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="1.5"/>
+<text x="207" y="656" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" text-anchor="middle" font-weight="700">Unsupervised</text>
+<text x="207" y="704" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">469 cars</text>
+<text x="207" y="734" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">94% of fleet</text>
+<rect x="384" y="620" width="306" height="130" rx="16" fill="#161B22" stroke="#DC2626" stroke-width="1.5"/>
+<text x="537" y="656" font-family="Arial,sans-serif" font-size="19" fill="#DC2626" text-anchor="middle" font-weight="700">Total Trips</text>
+<text x="537" y="704" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">8,516</text>
+<text x="537" y="734" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Cybercab + Model Y</text>
+<rect x="714" y="620" width="312" height="130" rx="16" fill="#161B22" stroke="#F97316" stroke-width="1.5"/>
+<text x="870" y="656" font-family="Arial,sans-serif" font-size="19" fill="#F97316" text-anchor="middle" font-weight="700">Wait Time</text>
+<text x="870" y="704" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">1 min</text>
+<text x="870" y="734" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">via app request</text>
+<rect x="54" y="780" width="972" height="440" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="824" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">Why It Matters</text>
+<line x1="82" y1="838" x2="998" y2="838" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="868" r="7" fill="#EF4444"/>
+<text x="116" y="876" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">500 in 30 days — regulatory approval bottleneck clearing</text>
+<circle cx="96" cy="928" r="7" fill="#DC2626"/>
+<text x="116" y="936" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">1-min vs Uber 5-10 min wait — practical competitiveness proven</text>
+<circle cx="96" cy="988" r="7" fill="#F97316"/>
+<text x="116" y="996" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">$12.28 fare — price competitive against rideshare</text>
+<circle cx="96" cy="1048" r="7" fill="#B91C1C"/>
+<text x="116" y="1056" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">6 cities — Texas major-city coverage nearly complete</text>
+<rect x="82" y="1108" width="916" height="66" rx="12" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="110" y="1134" font-family="Arial,sans-serif" font-size="19" fill="#EF4444">📅 Next checkpoint</text>
+<text x="110" y="1162" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">Oct 21 — Robotaxi margin + expansion update</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.13</text>
+</svg>

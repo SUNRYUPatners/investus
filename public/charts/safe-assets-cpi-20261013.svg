@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#0D9488"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#10B981"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">안전자산</text>
+<rect x="162" y="30" width="115" height="36" rx="8" fill="#0D9488"/>
+<text x="219.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">금·채권·달러</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.13 · CPI 앞두고 금 $4,168 · 10Y 5.24% · DXY 102.21</text>
+<text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="120" fill="#F59E0B" font-weight="900">$4,168</text>
+<text x="54" y="298" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">금 온스당 현재가</text>
+<text x="54" y="354" font-family="Arial,sans-serif" font-size="26" fill="#EF4444">-0.60% · 10월 14일 CPI 관망 · 역대 최고권 근접</text>
+<defs><linearGradient id="dg378" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#10B981"/>
+    <stop offset="70%" stop-color="#F59E0B"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="378" width="972" height="3" fill="url(#dg378)" rx="2"/>
+<text x="54" y="424" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#10B981" font-weight="900">주요 안전자산 현황 (2026.10.13)</text>
+<rect x="54" y="438" width="306" height="130" rx="16" fill="#161B22" stroke="#F59E0B" stroke-width="1.5"/>
+<text x="207" y="474" font-family="Arial,sans-serif" font-size="19" fill="#F59E0B" text-anchor="middle" font-weight="700">금 (XAU)</text>
+<text x="207" y="522" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$4,168</text>
+<text x="207" y="552" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">-0.60% 소폭 조정</text>
+<rect x="384" y="438" width="306" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="1.5"/>
+<text x="537" y="474" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" text-anchor="middle" font-weight="700">미 10Y 국채</text>
+<text x="537" y="522" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">5.24%</text>
+<text x="537" y="552" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">고금리 지속</text>
+<rect x="714" y="438" width="312" height="130" rx="16" fill="#161B22" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="870" y="474" font-family="Arial,sans-serif" font-size="19" fill="#3B82F6" text-anchor="middle" font-weight="700">달러 인덱스</text>
+<text x="870" y="522" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">102.21</text>
+<text x="870" y="552" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">DXY 강세 유지</text>
+<rect x="54" y="598" width="972" height="120" rx="14" fill="#0A1A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="82" y="638" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">금 — 10월 14일 CPI 앞두고 소폭 조정</text>
+<text x="82" y="678" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">물가 높으면 금리 추가 인상 압박 → 금 단기 하방 / 물가 둔화 → 반등</text>
+<rect x="54" y="732" width="972" height="120" rx="14" fill="#0A0A1A" stroke="#EF4444" stroke-width="1.5"/>
+<text x="82" y="772" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">미 10Y 5.24% — 달러 강세·신흥국 자본 유출 구조</text>
+<text x="82" y="812" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">CPI 결과에 따라 5.4%~4.9% 범위로 급변동 가능</text>
+<rect x="54" y="882" width="972" height="336" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="926" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#10B981" font-weight="900">CPI 시나리오별 안전자산 방향</text>
+<line x1="82" y1="940" x2="998" y2="940" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="970" r="7" fill="#EF4444"/>
+<text x="116" y="978" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">CPI 높음 → 달러↑ 금리↑ → 금 단기 조정·채권 추가 하락</text>
+<circle cx="96" cy="1030" r="7" fill="#10B981"/>
+<text x="116" y="1038" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">CPI 둔화 → 달러↓ 금리↓ → 금 반등·채권 회복</text>
+<circle cx="96" cy="1090" r="7" fill="#3B82F6"/>
+<text x="116" y="1098" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">엔화 — 달러 강세 시 152엔 돌파 여부 주목</text>
+<rect x="82" y="1156" width="916" height="50" rx="10" fill="#0A1A10" stroke="#10B981" stroke-width="1.5"/>
+<text x="110" y="1188" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">골드만·JP모건: 연내 금 $4,200 돌파 전망 유지</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.13</text>
+</svg>

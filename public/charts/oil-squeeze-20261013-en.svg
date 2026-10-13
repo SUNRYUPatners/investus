@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#F59E0B"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb)"/>
+<rect x="54" y="30" width="167" height="36" rx="8" fill="#10B981"/>
+<text x="137.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Safe Assets</text>
+<rect x="196" y="30" width="63" height="36" rx="8" fill="#B45309"/>
+<text x="227.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Oil</text>
+<rect x="264" y="30" width="193" height="36" rx="8" fill="#92400E"/>
+<text x="360.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Supply Crisis</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.13 · Aramco CEO: inventories below 6B barrels — last buffer</text>
+<text x="54" y="200" font-family="Arial Black,Arial,sans-serif" font-size="100" fill="#F59E0B" font-weight="900">6B bbl</text>
+<text x="54" y="290" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">Global Inventory Last Buffer</text>
+<text x="54" y="348" font-family="Arial,sans-serif" font-size="26" fill="#EF4444">Below 6B barrels — any supply shock = immediate price spike</text>
+<defs><linearGradient id="dg372" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#10B981"/>
+    <stop offset="70%" stop-color="#F59E0B"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="372" width="972" height="3" fill="url(#dg372)" rx="2"/>
+<text x="54" y="418" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#F59E0B" font-weight="900">Supply Warning Key Figures</text>
+<rect x="54" y="432" width="306" height="130" rx="16" fill="#161B22" stroke="#F59E0B" stroke-width="1.5"/>
+<text x="207" y="468" font-family="Arial,sans-serif" font-size="19" fill="#F59E0B" text-anchor="middle" font-weight="700">Oil Price</text>
+<text x="207" y="516" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$107/bbl</text>
+<text x="207" y="546" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Brent crude</text>
+<rect x="384" y="432" width="306" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="1.5"/>
+<text x="537" y="468" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" text-anchor="middle" font-weight="700">Inventories</text>
+<text x="537" y="516" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">&lt;6B bbl</text>
+<text x="537" y="546" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">last buffer level</text>
+<rect x="714" y="432" width="312" height="130" rx="16" fill="#161B22" stroke="#DC2626" stroke-width="1.5"/>
+<text x="870" y="468" font-family="Arial,sans-serif" font-size="19" fill="#DC2626" text-anchor="middle" font-weight="700">Risk Scenario</text>
+<text x="870" y="516" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$115+</text>
+<text x="870" y="546" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Goldman forecast</text>
+<rect x="54" y="592" width="972" height="120" rx="14" fill="#1A100A" stroke="#F59E0B" stroke-width="1.5"/>
+<text x="82" y="632" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">Saudi Aramco CEO public warning — unusually strong tone</text>
+<text x="82" y="672" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Thin buffer = structurally vulnerable to geopolitical supply shock</text>
+<rect x="54" y="726" width="972" height="120" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="82" y="766" font-family="Arial,sans-serif" font-size="23" fill="#E6EDF3">Re-inflation risk — rate cut delay linkage</text>
+<text x="82" y="806" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Oil above $115 = Fed rate cuts pushed to 2027</text>
+<rect x="54" y="876" width="972" height="344" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="920" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F59E0B" font-weight="900">Investment Takeaways</text>
+<line x1="82" y1="934" x2="998" y2="934" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="964" r="7" fill="#EF4444"/>
+<text x="116" y="972" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Oil spike = re-inflation → rate cut retreat → broad market headwind</text>
+<circle cx="96" cy="1024" r="7" fill="#F59E0B"/>
+<text x="116" y="1032" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Energy sector benefits / rest of market faces headwinds</text>
+<circle cx="96" cy="1084" r="7" fill="#10B981"/>
+<text x="116" y="1092" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Korea: double hit — dollar strength + import energy cost up</text>
+<rect x="82" y="1104" width="916" height="80" rx="12" fill="#1A100A" stroke="#F59E0B" stroke-width="1.5"/>
+<text x="110" y="1132" font-family="Arial,sans-serif" font-size="20" fill="#F59E0B" font-weight="700">Goldman Sachs: $115/bbl risk scenario this year</text>
+<text x="110" y="1164" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">JPMorgan: $102–104 range if no further shock</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.13</text>
+</svg>
