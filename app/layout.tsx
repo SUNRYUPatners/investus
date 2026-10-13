@@ -42,54 +42,79 @@ const notoSansKR = Noto_Sans_KR({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "인베스트어스 | AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 — 글로벌 자산 · 투자 리포트",
-  description:
-    "한국주식을 넘어 미국 주식, 비트코인·금, 한국 부동산까지 — 파편화된 투자 데이터를 AI가 하나로 연결합니다. 실시간 시세, 일일 투자 리포트, AI 포트폴리오 인사이트를 무료로 제공합니다.",
-  metadataBase: new URL("https://www.investus.kr"),
-  keywords: [
-    "인베스트어스", "investus", "investus.kr", "인베스트어스케이알",
-    "선류파트너스", "선류 파트너스", "SUNRYU Partners",
-    "한국주식", "안전자산", "비트코인", "금", "한국부동산", "자산관리", "WM", "핀테크",
-    "주식", "S&P500", "나스닥", "NASDAQ", "다우존스", "DOW",
-    "투자", "주가", "실시간 주가", "선물", "비트코인",
-    "투자정보", "주식정보", "시세", "실시간시세",
-    "NVIDIA", "엔비디아", "테슬라", "Tesla", "애플", "Apple",
-    "AI주식", "성장주", "포트폴리오", "주식분석", "시장분석", "투자리포트",
-    "공포탐욕지수", "버핏지수", "섹터분석", "미국주식투자정보",
-  ],
-  openGraph: {
-    title: "인베스트어스(Investus) — AI 기반 차세대 자산관리(WM) 핀테크 플랫폼",
-    description:
-      "한국주식을 넘어 미국 주식, 비트코인·금, 한국 부동산까지 — AI가 연결하는 글로벌 자산 인사이트. 실시간 시세와 일일 리포트.",
-    url: "https://www.investus.kr",
-    siteName: "인베스트어스 — Investus",
-    locale: "ko_KR",
-    type: "website",
-    images: [{ url: "/icons/icon-512.png", width: 512, height: 512, alt: "인베스트어스 Investus" }],
-  },
-  twitter: {
-    card: "summary",
-    title: "인베스트어스(Investus) — AI 기반 차세대 자산관리(WM) 핀테크 플랫폼",
-    description: "글로벌 자산(주식·암호화폐·금·부동산)을 AI가 하나로 연결하는 투자 플랫폼.",
-  },
-  alternates: {
-    canonical: "https://www.investus.kr",
-  },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "Investus",
-  },
-  formatDetection: { telephone: false },
-  verification: {
-    google: "gWru1tXVNVr--phsNN1YCa53uJoAgx53ut5k2kfDCXo",
-    other: {
-      "naver-site-verification": "cf0399adf4ed75c57528ec884d2924f6c41d9a03",
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const isKo = locale === "ko";
+
+  return {
+    title: isKo
+      ? "인베스트어스 | AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 — 글로벌 자산 · 투자 리포트"
+      : "Investus | AI-Powered Global Asset Intelligence — Stocks · Crypto · Gold · Daily Reports",
+    description: isKo
+      ? "한국주식을 넘어 미국 주식, 비트코인·금, 한국 부동산까지 — 파편화된 투자 데이터를 AI가 하나로 연결합니다. 실시간 시세, 일일 투자 리포트, AI 포트폴리오 인사이트를 무료로 제공합니다."
+      : "US stocks, Bitcoin, gold, Korean equities and real estate — AI connects fragmented global investment data into one platform. Real-time prices, daily investment reports, and AI portfolio insights. Free.",
+    metadataBase: new URL("https://www.investus.kr"),
+    keywords: isKo
+      ? [
+          "인베스트어스", "investus", "investus.kr", "인베스트어스케이알",
+          "선류파트너스", "선류 파트너스", "SUNRYU Partners",
+          "한국주식", "안전자산", "비트코인", "금", "한국부동산", "자산관리", "WM", "핀테크",
+          "주식", "S&P500", "나스닥", "NASDAQ", "다우존스", "DOW",
+          "투자", "주가", "실시간 주가", "선물", "비트코인",
+          "투자정보", "주식정보", "시세", "실시간시세",
+          "NVIDIA", "엔비디아", "테슬라", "Tesla", "애플", "Apple",
+          "AI주식", "성장주", "포트폴리오", "주식분석", "시장분석", "투자리포트",
+          "공포탐욕지수", "버핏지수", "섹터분석", "미국주식투자정보",
+        ]
+      : [
+          "investus", "investus.kr", "SUNRYU Partners",
+          "US stocks", "S&P500", "NASDAQ", "Dow Jones", "global stocks",
+          "Bitcoin", "crypto", "gold", "safe assets", "Korean stocks",
+          "investment reports", "AI portfolio", "real-time stock prices",
+          "NVIDIA", "Tesla", "Apple", "AI stocks", "growth stocks",
+          "fear greed index", "Buffett indicator", "sector analysis",
+          "stock analysis", "market analysis", "fintech", "wealth management",
+        ],
+    openGraph: {
+      title: isKo
+        ? "인베스트어스(Investus) — AI 기반 차세대 자산관리(WM) 핀테크 플랫폼"
+        : "Investus — AI-Powered Global Asset Intelligence Platform",
+      description: isKo
+        ? "한국주식을 넘어 미국 주식, 비트코인·금, 한국 부동산까지 — AI가 연결하는 글로벌 자산 인사이트. 실시간 시세와 일일 리포트."
+        : "US stocks, Bitcoin, gold, and Korean assets — AI connects global investment data into one platform. Real-time prices and daily reports.",
+      url: "https://www.investus.kr",
+      siteName: isKo ? "인베스트어스 — Investus" : "Investus",
+      locale: isKo ? "ko_KR" : "en_US",
+      type: "website",
+      images: [{ url: "/icons/icon-512.png", width: 512, height: 512, alt: "Investus" }],
     },
-  },
-};
+    twitter: {
+      card: "summary",
+      title: isKo
+        ? "인베스트어스(Investus) — AI 기반 차세대 자산관리(WM) 핀테크 플랫폼"
+        : "Investus — AI-Powered Global Asset Intelligence Platform",
+      description: isKo
+        ? "글로벌 자산(주식·암호화폐·금·부동산)을 AI가 하나로 연결하는 투자 플랫폼."
+        : "Stocks, crypto, gold, and real estate — connected by AI into one investment platform.",
+    },
+    alternates: {
+      canonical: "https://www.investus.kr",
+    },
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "default",
+      title: "Investus",
+    },
+    formatDetection: { telephone: false },
+    verification: {
+      google: "gWru1tXVNVr--phsNN1YCa53uJoAgx53ut5k2kfDCXo",
+      other: {
+        "naver-site-verification": "cf0399adf4ed75c57528ec884d2924f6c41d9a03",
+      },
+    },
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: [
@@ -101,64 +126,74 @@ export const viewport: Viewport = {
   viewportFit: "cover", // env(safe-area-inset-bottom) requires this on iOS
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://www.investus.kr/#website",
-      "url": "https://www.investus.kr",
-      "name": "Investus — 인베스트어스",
-      "alternateName": ["인베스트어스", "investus.kr", "인베스트어스케이알", "Investus Korea"],
-      "description": "AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 — 글로벌 자산 시세·리포트·AI 인사이트",
-      "inLanguage": "ko-KR",
-      "publisher": { "@id": "https://www.investus.kr/#organization" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://www.investus.kr/search?q={search_term_string}",
+function buildJsonLd(isKo: boolean) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.investus.kr/#website",
+        "url": "https://www.investus.kr",
+        "name": isKo ? "Investus — 인베스트어스" : "Investus",
+        "alternateName": ["인베스트어스", "investus.kr", "Investus Korea", "SUNRYU Partners"],
+        "description": isKo
+          ? "AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 — 글로벌 자산 시세·리포트·AI 인사이트"
+          : "AI-powered next-gen wealth management fintech platform — global asset prices, reports, and AI insights",
+        "inLanguage": isKo ? "ko-KR" : "en",
+        "publisher": { "@id": "https://www.investus.kr/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.investus.kr/search?q={search_term_string}",
+          },
+          "query-input": "required name=search_term_string",
         },
-        "query-input": "required name=search_term_string",
       },
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://www.investus.kr/#organization",
-      "name": "Investus",
-      "alternateName": ["인베스트어스", "SUNRYU Partners", "선류파트너스"],
-      "url": "https://www.investus.kr",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.investus.kr/icons/icon-512.png",
-        "width": 512,
-        "height": 512,
+      {
+        "@type": "Organization",
+        "@id": "https://www.investus.kr/#organization",
+        "name": "Investus",
+        "alternateName": ["인베스트어스", "SUNRYU Partners", "선류파트너스"],
+        "url": "https://www.investus.kr",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.investus.kr/icons/icon-512.png",
+          "width": 512,
+          "height": 512,
+        },
+        "description": isKo
+          ? "AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 — 실시간 시세, 시장 분석 리포트, 투자 기초 교육"
+          : "AI-powered wealth management fintech platform — real-time prices, market analysis reports, investment education",
+        "foundingDate": "2024",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "마곡중앙6로 42, 7층 708호(마곡동, 사이언스타)",
+          "addressLocality": "강서구",
+          "addressRegion": "서울특별시",
+          "addressCountry": "KR",
+        },
+        "telephone": "010-3461-2916",
+        "email": "sunryupatners@gmail.com",
+        "sameAs": ["https://www.investus.kr"],
       },
-      "description": "AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 — 실시간 시세, 시장 분석 리포트, 투자 기초 교육",
-      "foundingDate": "2024",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "마곡중앙6로 42, 7층 708호(마곡동, 사이언스타)",
-        "addressLocality": "강서구",
-        "addressRegion": "서울특별시",
-        "addressCountry": "KR",
+      {
+        "@type": "WebPage",
+        "@id": "https://www.investus.kr/#webpage",
+        "url": "https://www.investus.kr",
+        "name": isKo
+          ? "Investus — 인베스트어스 | AI 기반 차세대 자산관리(WM) 핀테크 플랫폼"
+          : "Investus | AI-Powered Global Asset Intelligence Platform",
+        "isPartOf": { "@id": "https://www.investus.kr/#website" },
+        "about": { "@id": "https://www.investus.kr/#organization" },
+        "description": isKo
+          ? "한국주식·미국주식·비트코인·금·한국 부동산 — AI가 연결하는 글로벌 자산 인사이트"
+          : "US stocks, Bitcoin, gold, Korean equities and real estate — global asset intelligence connected by AI",
+        "inLanguage": isKo ? "ko-KR" : "en",
       },
-      "telephone": "010-3461-2916",
-      "email": "sunryupatners@gmail.com",
-      "sameAs": ["https://www.investus.kr", "https://www.investus.kr"],
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.investus.kr/#webpage",
-      "url": "https://www.investus.kr",
-      "name": "Investus — 인베스트어스 | AI 기반 차세대 자산관리(WM) 핀테크 플랫폼",
-      "isPartOf": { "@id": "https://www.investus.kr/#website" },
-      "about": { "@id": "https://www.investus.kr/#organization" },
-      "description": "한국주식·미국주식·비트코인·금·한국 부동산 — AI가 연결하는 글로벌 자산 인사이트",
-      "inLanguage": "ko-KR",
-    },
-  ],
-};
+    ],
+  };
+}
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
@@ -173,7 +208,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJsonLd(locale === "ko")) }}
         />
         {/* Google AdSense site ownership / publisher verification */}
         <meta name="google-adsense-account" content="ca-pub-1075509322890486" />
