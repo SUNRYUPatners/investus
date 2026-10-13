@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { X, ChevronRight, HelpCircle } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 /** Permanently dismissed — true first-time guests only */
 const SEEN_KEY = "investus-guide-seen";
@@ -14,6 +15,8 @@ function markSeen() {
 
 export function FirstVisitBanner() {
   const { user, loaded } = useAuth();
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -44,9 +47,11 @@ export function FirstVisitBanner() {
       <div className="px-4 pt-3 pb-3 flex items-start gap-3">
         <span className="text-2xl flex-shrink-0 mt-0.5">👋</span>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-bold" style={{ color: "var(--text)" }}>처음 오셨나요?</p>
+          <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "처음 오셨나요?" : "New here?"}</p>
           <p className="text-[12px] mt-0.5 leading-relaxed" style={{ color: "var(--muted)" }}>
-            각 기능이 뭔지 모르겠다면 <b style={{ color: "var(--mint)" }}>Investus 사용법</b>를 먼저 읽어보세요.
+            {isKo
+              ? (<>각 기능이 뭔지 모르겠다면 <b style={{ color: "var(--mint)" }}>Investus 사용법</b>를 먼저 읽어보세요.</>)
+              : (<>Not sure where to start? Read the <b style={{ color: "var(--mint)" }}>Investus guide</b> first.</>)}
           </p>
           <p className="text-[12px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>
             실시간으로 궁금하다면 제목 옆{" "}
@@ -60,21 +65,21 @@ export function FirstVisitBanner() {
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-[12px] font-semibold"
               style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}
             >
-              가이드 보기 <ChevronRight className="w-3.5 h-3.5" />
+              {isKo ? "가이드 보기" : "View Guide"} <ChevronRight className="w-3.5 h-3.5" />
             </Link>
             <button
               onClick={dismiss}
               className="text-[11px] px-2.5 py-1.5 rounded-xl border"
               style={{ color: "var(--muted)", borderColor: "var(--border)" }}
             >
-              다시 안 보기
+              {isKo ? "다시 안 보기" : "Don't show again"}
             </button>
           </div>
         </div>
         <button
           onClick={dismiss}
           className="flex-shrink-0 opacity-40 hover:opacity-70 transition-opacity mt-0.5"
-          aria-label="닫기"
+          aria-label={isKo ? "닫기" : "Close"}
         >
           <X className="w-4 h-4" style={{ color: "var(--text)" }} />
         </button>

@@ -8,6 +8,7 @@ import { MOCK_POSTS, type Post, toDisplayWallId } from "@/lib/wallPosts";
 import { useAuth } from "@/hooks/useAuth";
 import { usePortfolio } from "@/hooks/usePortfolio";
 import { getSupabase } from "@/lib/supabase";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type RealWallPost = {
   id: number;
@@ -43,18 +44,18 @@ async function authHeaders(): Promise<HeadersInit> {
 }
 
 /** 실제 created_at 기준 경과 시간 (분/시간/일 전) */
-function relativeTime(ts: number): string {
+function relativeTime(ts: number, isKo: boolean): string {
   if (!Number.isFinite(ts)) return "—";
   const diff = Date.now() - ts;
-  if (diff < 0) return "방금";
+  if (diff < 0) return isKo ? "방금" : "just now";
   const secs = Math.floor(diff / 1000);
-  if (secs < 60) return "방금";
+  if (secs < 60) return isKo ? "방금" : "just now";
   const mins = Math.floor(secs / 60);
-  if (mins < 60) return `${mins}분 전`;
+  if (mins < 60) return isKo ? `${mins}분 전` : `${mins}m`;
   const hours = Math.floor(mins / 60);
-  if (hours < 24) return `${hours}시간 전`;
+  if (hours < 24) return isKo ? `${hours}시간 전` : `${hours}h`;
   const days = Math.floor(hours / 24);
-  return `${days}일 전`;
+  return isKo ? `${days}일 전` : `${days}d`;
 }
 
 function SectionHeader({
@@ -89,6 +90,8 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
   const upper = symbol.toUpperCase();
   const { user } = useAuth();
   const { holdings } = usePortfolio();
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
 
   const [realPosts, setRealPosts] = useState<RealWallPost[]>([]);
   const [draft, setDraft] = useState("");
@@ -155,7 +158,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
     setSubmitting(true);
     setSubmitErr("");
     const holding = holdings.find((h) => h.symbol === upper);
-    const holdingLabel = holding ? `${holding.shares}주 보유` : "회원";
+    const holdingLabel = holding ? `${holding.shares}주 보유` : (isKo ? "회원" : "Member");
     try {
       const res = await fetch("/api/wall-posts", {
         method: "POST",
@@ -199,10 +202,10 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
     <div className={`flex flex-col gap-5 ${className}`}>
       {/* 애널리스트 */}
       <section>
-        <SectionHeader title={`${upper} 애널리스트`} href={analystHref} linkLabel="전체 보기" />
+        <SectionHeader title={isKo ? `${upper} 애널리스트` : `${upper} Analysts`} href={analystHref} linkLabel={isKo ? "전체 보기" : "View all"} />
         {analystPosts.length === 0 ? (
           <p className="text-xs py-4 text-center" style={{ color: "var(--muted)" }}>
-            아직 이 종목 애널 글이 없습니다.
+            {isKo ? "아직 이 종목 애널 글이 없습니다." : "No analyst posts for this stock yet."}
           </p>
         ) : (
           <div className="flex flex-col gap-2.5">
@@ -223,7 +226,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
                     {upper}
                   </span>
                   <span className="text-[10px] ml-auto" style={{ color: "var(--muted)" }}>
-                    {relativeTime(new Date(p.created_at).getTime())}
+                    {relativeTime(new Date(p.created_at).getTime(), isKo)}
                   </span>
                 </div>
                 <p
@@ -246,7 +249,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
 
       {/* 종목토론 */}
       <section>
-        <SectionHeader title={`${upper} 종목토론`} href={wallHref} linkLabel="전체 보기" />
+        <SectionHeader title={isKo ? `${upper} 종목토론` : `${upper} Discussion`} href={wallHref} linkLabel={isKo ? "전체 보기" : "View all"} />
 
         {!showComposer ? (
           <button
@@ -266,7 +269,9 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
             }}
           >
             <PenLine className="w-3.5 h-3.5" />
-            {user ? `${upper}에 의견 쓰기` : "로그인하고 의견 쓰기"}
+            {user
+              ? (isKo ? `${upper}에 의견 쓰기` : `Share your view on ${upper}`)
+              : (isKo ? "로그인하고 의견 쓰기" : "Log in to post")}
           </button>
         ) : (
           <div
@@ -278,7 +283,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
               onChange={(e) => setDraft(e.target.value)}
               rows={3}
               maxLength={300}
-              placeholder={`${upper} 종목에 대한 의견을 자유롭게 나눠보세요. (5~300자)`}
+              placeholder={isKo ? `${upper} 종목에 대한 의견을 자유롭게 나눠보세요. (5~300자)` : `Share your thoughts on ${upper}. (5–300 chars)`}
               className="w-full bg-transparent text-sm outline-none resize-none"
               style={{ color: "var(--text)" }}
             />
@@ -302,7 +307,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
                   className="text-xs px-3 py-1.5 rounded-lg"
                   style={{ color: "var(--muted)" }}
                 >
-                  취소
+                  {isKo ? "취소" : "Cancel"}
                 </button>
                 <button
                   type="button"
@@ -311,7 +316,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
                   className="text-xs font-bold px-3 py-1.5 rounded-lg"
                   style={{ background: "var(--mint)", color: "var(--on-accent)", opacity: submitting ? 0.6 : 1 }}
                 >
-                  {submitting ? "게시 중…" : "게시"}
+                  {submitting ? (isKo ? "게시 중…" : "Posting…") : (isKo ? "게시" : "Post")}
                 </button>
               </div>
             </div>
@@ -320,7 +325,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
 
         {wallPosts.length === 0 ? (
           <p className="text-xs py-4 text-center" style={{ color: "var(--muted)" }}>
-            아직 토론글이 없습니다. 첫 의견을 남겨보세요.
+            {isKo ? "아직 토론글이 없습니다. 첫 의견을 남겨보세요." : "No posts yet. Be the first."}
           </p>
         ) : (
           <div className="flex flex-col gap-2.5">
@@ -347,7 +352,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
                     ✓ {p.holdingLabel}
                   </span>
                   <span className="text-[10px] ml-auto" style={{ color: "var(--muted)" }}>
-                    {relativeTime(p.createdAt)}
+                    {relativeTime(p.createdAt, isKo)}
                   </span>
                 </div>
                 <p

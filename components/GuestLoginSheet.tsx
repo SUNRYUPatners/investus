@@ -6,9 +6,12 @@ import { useAuth } from "@/hooks/useAuth";
 import { SocialLoginButtons } from "@/components/SocialLoginButtons";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { OPEN_LOGIN_EVENT } from "@/lib/guestLogin";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 export function GuestLoginSheet() {
   const { user, loaded } = useAuth();
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -40,17 +43,19 @@ export function GuestLoginSheet() {
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
             <p className="text-base font-bold" style={{ color: "var(--text)" }}>
-              30초면 시작됩니다
+              {isKo ? "30초면 시작됩니다" : "Get started in 30 seconds"}
             </p>
             <p className="text-[12px] leading-relaxed mt-1" style={{ color: "var(--muted)" }}>
-              자산을 넣으면 매일 아침 AI가 흐름을 정리합니다. 구글·카카오·네이버로 바로 이어서 쓸 수 있습니다.
+              {isKo
+                ? "자산을 넣으면 매일 아침 AI가 흐름을 정리합니다. 구글·카카오·네이버로 바로 이어서 쓸 수 있습니다."
+                : "Add your holdings and AI summarizes the market every morning. Sign in with Google, Kakao, or Naver."}
             </p>
           </div>
           <button
             type="button"
             onClick={() => setOpen(false)}
             className="flex-shrink-0 opacity-50 hover:opacity-80"
-            aria-label="닫기"
+            aria-label={isKo ? "닫기" : "Close"}
           >
             <X className="w-4 h-4" style={{ color: "var(--text)" }} />
           </button>
@@ -58,7 +63,9 @@ export function GuestLoginSheet() {
         <SocialLoginButtons />
         <NewsletterSignup compact />
         <p className="text-[10px] mt-3 leading-relaxed" style={{ color: "var(--muted)" }}>
-          가입은 무료입니다. 리포트·시세·포트폴리오 분석은 참고용이며 투자 권유가 아닙니다.
+          {isKo
+            ? "가입은 무료입니다. 리포트·시세·포트폴리오 분석은 참고용이며 투자 권유가 아닙니다."
+            : "Free to join. Reports, prices, and portfolio analysis are for reference only, not investment advice."}
         </p>
       </div>
     </div>

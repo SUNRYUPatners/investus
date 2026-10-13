@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs>
+  <linearGradient id="gbtop" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="50%" stop-color="#7C3AED"/>
+    <stop offset="100%" stop-color="#3B82F6"/>
+  </linearGradient>
+  <linearGradient id="div1" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+
+<rect x="0" y="0" width="1080" height="12" fill="url(#gbtop)"/>
+
+<!-- Header badges -->
+<rect x="54" y="26" width="90" height="38" rx="9" fill="#EF4444"/>
+<text x="99" y="51" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="22" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="158" y="26" width="90" height="38" rx="9" fill="#3B82F6"/>
+<text x="203" y="51" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="22" fill="#fff" text-anchor="middle">SPCX</text>
+<rect x="262" y="26" width="162" height="38" rx="9" fill="#1F2937"/>
+<text x="343" y="51" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="21" fill="#E6EDF3" text-anchor="middle">2026.10.13</text>
+<rect x="438" y="26" width="114" height="38" rx="9" fill="#374151"/>
+<text x="495" y="51" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="21" fill="#E6EDF3" text-anchor="middle">TODAY 7</text>
+
+<!-- Eyebrow -->
+<text x="54" y="106" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.13 월요일 · 테슬라 &amp; 스페이스엑스 핵심 7가지</text>
+
+<!-- Hero -->
+<text x="54" y="186" font-family="Arial Black,Arial,sans-serif" font-size="76" fill="#fff" font-weight="900">TSLA × SPCX</text>
+<text x="54" y="236" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">오늘의 주요 뉴스 · investus.kr</text>
+
+<!-- Divider 1 -->
+<rect x="54" y="256" width="972" height="3" fill="url(#div1)" rx="2"/>
+
+<!-- TESLA section header -->
+<circle cx="74" cy="282" r="12" fill="#EF4444"/>
+<text x="97" y="294" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#EF4444" font-weight="900">TESLA</text>
+
+<!-- TSLA item 1: 제프리스 -->
+<rect x="54" y="308" width="972" height="96" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="82" y="345" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">제프리스 목표주가 $350 → $420 (+20%) 상향</text>
+<text x="82" y="385" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">현재가 $382.70 · HOLD 유지 · D-8 3분기 실적</text>
+
+<!-- TSLA item 2: 사이버캡 -->
+<rect x="54" y="418" width="972" height="96" rx="14" fill="#1A0808" stroke="#DC2626" stroke-width="1.5"/>
+<text x="82" y="455" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#DC2626" font-weight="900">사이버캡 오스틴 500대 돌파 — 30일 달성</text>
+<text x="82" y="495" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">대기 1분 · $12.28 · 6개 도시 서비스 중</text>
+
+<!-- TSLA items 3+4 side by side -->
+<rect x="54" y="528" width="468" height="96" rx="14" fill="#1A0808" stroke="#F97316" stroke-width="1.5"/>
+<text x="82" y="565" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#F97316" font-weight="900">중국 9월 소매 64,837대</text>
+<text x="82" y="605" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">올해 최고 · 도매 95,366대</text>
+
+<rect x="558" y="528" width="468" height="96" rx="14" fill="#1A0808" stroke="#F59E0B" stroke-width="1.5"/>
+<text x="586" y="565" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#F59E0B" font-weight="900">Apollo 메가팩 $840M</text>
+<text x="586" y="605" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">1GW · 호주 · 2029 납품</text>
+
+<!-- Divider 2 -->
+<rect x="54" y="642" width="972" height="3" fill="url(#div1)" rx="2"/>
+
+<!-- SPACEX section header -->
+<circle cx="74" cy="670" r="12" fill="#3B82F6"/>
+<text x="97" y="682" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#3B82F6" font-weight="900">SPACEX</text>
+
+<!-- SPCX item 1: 위성 질량 -->
+<rect x="54" y="698" width="972" height="96" rx="14" fill="#0A1525" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="82" y="735" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#3B82F6" font-weight="900">스타링크 위성 총질량 6,197t — 세계 나머지 초과</text>
+<text x="82" y="775" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">나머지 전체 5,222t · ISS의 15배 · 우주 인프라 패권</text>
+
+<!-- SPCX item 2: 구조 -->
+<rect x="54" y="808" width="972" height="96" rx="14" fill="#0A1525" stroke="#1D4ED8" stroke-width="1.5"/>
+<text x="82" y="845" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#60A5FA" font-weight="900">시에라네바다 조난자 구조 — 스타링크 실전 입증</text>
+<text x="82" y="885" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">구조대 배터리 단말기 · 11마일 접근 · 생존 도구</text>
+
+<!-- Bar chart: 질량 비교 -->
+<text x="54" y="940" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#3B82F6" font-weight="900">스타링크 vs 세계 위성 총질량</text>
+
+<text x="54" y="976" font-family="Arial,sans-serif" font-size="20" fill="#3B82F6">스타링크</text>
+<rect x="240" y="956" width="688" height="28" rx="5" fill="#21262D"/>
+<rect x="240" y="956" width="688" height="28" rx="5" fill="#3B82F6"/>
+<text x="938" y="976" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900" text-anchor="end">6,197t</text>
+
+<text x="54" y="1018" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">나머지 전체</text>
+<rect x="240" y="998" width="688" height="28" rx="5" fill="#21262D"/>
+<rect x="240" y="998" width="580" height="28" rx="5" fill="#374151"/>
+<text x="828" y="1018" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#8B949E" font-weight="900" text-anchor="end">5,222t</text>
+
+<!-- Calendar -->
+<rect x="54" y="1046" width="466" height="110" rx="14" fill="#140A2A" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="82" y="1084" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#7C3AED" font-weight="900">10월 14일 (내일)</text>
+<text x="82" y="1120" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">미국 9월 CPI 발표</text>
+<text x="82" y="1148" font-family="Arial,sans-serif" font-size="19" fill="#8B949E">BTC · 달러 · 금리 방향 결정</text>
+
+<rect x="560" y="1046" width="466" height="110" rx="14" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="588" y="1084" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#EF4444" font-weight="900">10월 21일 (D-8)</text>
+<text x="588" y="1120" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">TSLA 3분기 실적</text>
+<text x="588" y="1148" font-family="Arial,sans-serif" font-size="19" fill="#8B949E">차량 마진 · 사이버캡 · 옵티머스</text>
+
+<!-- Message box -->
+<rect x="54" y="1176" width="972" height="86" rx="14" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="1212" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">오늘 TSLA·SPCX 리포트 7건 — investus.kr</text>
+<text x="82" y="1250" font-family="Arial,sans-serif" font-size="20" fill="#8B949E">제프리스↑ · 사이버캡 500대 · 중국 최고 · 스타링크 세계 초과</text>
+
+<!-- Footer -->
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.13</text>
+</svg>

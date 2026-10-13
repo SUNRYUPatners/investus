@@ -1,12 +1,16 @@
 import Link from "next/link";
 import { BUSINESS_INFO, ftcBusinessCheckUrl } from "@/lib/businessInfo";
-import { PLATFORM_INTRO_KO } from "@/components/PlatformIntro";
+import { PLATFORM_INTRO_KO, PLATFORM_INTRO_EN } from "@/components/PlatformIntro";
+import { getLocale } from "@/lib/getLocale";
 
 /**
  * 전역 푸터 — PG 사전점검·전자상거래법 고시용.
  * 홈(/) HTML에 사업자 정보·약관 링크가 포함되어야 크롤러가 통과합니다.
  */
-export function SiteLegalFooter() {
+export async function SiteLegalFooter() {
+  const locale = await getLocale();
+  const isKo = locale === "ko";
+  const platformIntro = isKo ? PLATFORM_INTRO_KO : PLATFORM_INTRO_EN;
   const {
     companyName,
     serviceName,
@@ -34,47 +38,47 @@ export function SiteLegalFooter() {
           aria-label="약관 및 정책"
         >
           <Link href="/shop" className="hover:underline" style={{ color: "var(--text)" }}>
-            유료상품
+            {isKo ? "유료상품" : "Shop"}
           </Link>
           <span style={{ color: "var(--border)" }} aria-hidden>|</span>
           <Link href="/more/terms" className="hover:underline" style={{ color: "var(--text)" }}>
-            이용약관
+            {isKo ? "이용약관" : "Terms"}
           </Link>
           <span style={{ color: "var(--border)" }} aria-hidden>|</span>
           <Link href="/more/privacy" className="hover:underline" style={{ color: "var(--text)" }}>
-            개인정보처리방침
+            {isKo ? "개인정보처리방침" : "Privacy"}
           </Link>
           <span style={{ color: "var(--border)" }} aria-hidden>|</span>
           <Link href="/more/contact" className="hover:underline" style={{ color: "var(--text)" }}>
-            문의
+            {isKo ? "문의" : "Contact"}
           </Link>
           <span style={{ color: "var(--border)" }} aria-hidden>|</span>
           <Link href="/more/refund" className="hover:underline" style={{ color: "var(--text)" }}>
-            환불정책
+            {isKo ? "환불정책" : "Refund Policy"}
           </Link>
           <span style={{ color: "var(--border)" }} aria-hidden>|</span>
           <Link href="/more/disclaimer" className="hover:underline" style={{ color: "var(--muted)" }}>
-            법적고지
+            {isKo ? "법적고지" : "Legal"}
           </Link>
         </nav>
 
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 mb-5">
           <div className="mb-5 lg:mb-0">
             <p className="text-[11px] font-semibold mb-1.5" style={{ color: "var(--text)" }}>
-              {PLATFORM_INTRO_KO.title}
+              {platformIntro.title}
             </p>
             <p className="text-[11px] leading-relaxed mb-2" style={{ color: "var(--muted)" }}>
-              {PLATFORM_INTRO_KO.lead.join(" ")}
+              {platformIntro.lead.join(" ")}
             </p>
             <p className="text-[11px] leading-relaxed mb-2" style={{ color: "var(--mint)" }}>
-              {PLATFORM_INTRO_KO.footnote}
+              {platformIntro.footnote}
             </p>
             <Link
               href="/more/about"
               className="text-[11px] font-semibold hover:underline"
               style={{ color: "var(--text)" }}
             >
-              Investus 소개 보기 →
+              {isKo ? "Investus 소개 보기 →" : "About Investus →"}
             </Link>
           </div>
 
@@ -86,10 +90,10 @@ export function SiteLegalFooter() {
               {" · "}
               {serviceName}
             </p>
-            <p>대표자: {ceoName}</p>
+            <p>{isKo ? "대표자:" : "CEO:"} {ceoName}</p>
             {registrationNumber ? (
               <p>
-                사업자등록번호: {registrationNumber}{" "}
+                {isKo ? "사업자등록번호:" : "Business Reg:"} {registrationNumber}{" "}
                 <a
                   href={ftcUrl}
                   target="_blank"
@@ -97,24 +101,24 @@ export function SiteLegalFooter() {
                   className="hover:underline"
                   style={{ color: "var(--mint)" }}
                 >
-                  [사업자정보확인]
+                  {isKo ? "[사업자정보확인]" : "[Verify]"}
                 </a>
               </p>
             ) : null}
-            {address ? <p>사업장 주소: {address}</p> : null}
-            {phone ? <p>전화번호: {phone}</p> : null}
+            {address ? <p>{isKo ? "사업장 주소:" : "Address:"} {address}</p> : null}
+            {phone ? <p>{isKo ? "전화번호:" : "Phone:"} {phone}</p> : null}
             <p>
-              이메일:{" "}
+              {isKo ? "이메일:" : "Email:"}{" "}
               <a href={`mailto:${email}`} className="hover:underline" style={{ color: "var(--mint)" }}>
                 {email}
               </a>
             </p>
             <p>
-              통신판매업 신고번호:{" "}
-              {mailOrderNumber || "신고 준비중"}
+              {isKo ? "통신판매업 신고번호:" : "Mail Order Reg:"}{" "}
+              {mailOrderNumber || (isKo ? "신고 준비중" : "Pending")}
             </p>
-            <p>호스팅 서비스 제공자: {hostingProvider}</p>
-            <p>개인정보보호책임자: {privacyOfficer}</p>
+            <p>{isKo ? "호스팅 서비스 제공자:" : "Hosting Provider:"} {hostingProvider}</p>
+            <p>{isKo ? "개인정보보호책임자:" : "Privacy Officer:"} {privacyOfficer}</p>
           </div>
         </div>
 

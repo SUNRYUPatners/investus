@@ -10,8 +10,12 @@ import { isMarketSessionOpen, isStockMarketOpen } from "@/lib/markets/hours";
 import { isMarketHomePath, parseMarketPath } from "@/lib/markets/marketPath";
 import { GuestStartButton } from "@/components/GuestStartButton";
 import { useAuth } from "@/hooks/useAuth";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 
 export function Header() {
+  const t = useLocale();
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const pathname = usePathname() ?? "";
   const { market } = parseMarketPath(pathname);
   const cfg = getMarketConfig(market);
@@ -86,7 +90,7 @@ export function Header() {
                         : { background: "rgba(107,114,128,0.12)", color: "var(--muted)" }
                     }
                   >
-                    {open ? "● 장중" : "● CLOSED"}
+                    {open ? (isKo ? "● 장중" : t.header.marketOpen) : (isKo ? "● CLOSED" : t.header.marketClosed)}
                   </span>
                 )}
                 {open && market === "us" && (

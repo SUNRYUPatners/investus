@@ -11,12 +11,15 @@ import { getOrCreateGuestId } from "@/lib/sessionChat/guestId";
 import { humanizeChatStockText } from "@/lib/sessionChat/labels";
 import { SESSION_CHAT_OPEN_EVENT, type SessionChatOpenDetail } from "@/lib/sessionChat/openPanel";
 import { useAuth } from "@/hooks/useAuth";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 const MAX_MESSAGES = 80;
 const READ_KEY = (market: MarketId) => `investus-session-chat-read-${market}`;
 
 export function SessionChatWidget({ market }: { market: MarketId }) {
   const { user, loaded, loginWithOAuth } = useAuth();
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const [panelOpen, setPanelOpen] = useState(false);
   const [sessionOpen, setSessionOpen] = useState(false);
   const [messages, setMessages] = useState<SessionChatMessage[]>([]);
@@ -263,7 +266,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
   const submitMessage = async () => {
     const content = draft.trim();
     if (content.length < 2) {
-      setSubmitErr("2자 이상 작성해주세요.");
+      setSubmitErr(isKo ? "2자 이상 작성해주세요." : "At least 2 characters required.");
       return;
     }
     setSubmitting(true);
@@ -280,7 +283,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
         error?: string;
       };
       if (!res.ok || data.error) {
-        setSubmitErr(data.error ?? "전송 실패");
+        setSubmitErr(data.error ?? (isKo ? "전송 실패" : "Send failed"));
         return;
       }
       if (data.message) {
@@ -292,7 +295,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
         if (data.botReplies?.length) scheduleBotReplies(data.botReplies);
       }
     } catch {
-      setSubmitErr("네트워크 오류");
+      setSubmitErr(isKo ? "네트워크 오류" : "Network error");
     } finally {
       setSubmitting(false);
     }
@@ -301,8 +304,8 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
   if (!supported) return null;
 
   const closedHint = market === "us"
-    ? "미국 장 마감 — 채팅은 장중에만 가능합니다"
-    : "한국 장 마감 — 채팅은 장중에만 가능합니다";
+    ? (isKo ? "미국 장 마감 — 채팅은 장중에만 가능합니다" : "US market is closed")
+    : (isKo ? "한국 장 마감 — 채팅은 장중에만 가능합니다" : "Korean market is closed");
 
   const showPulse = sessionOpen && (unread > 0 || hasNewPulse);
 
@@ -321,10 +324,10 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                 {sessionOpen ? (
                   <>
                     <span className="session-chat-fab-live-dot" aria-hidden />
-                    실시간 시황 토크중
+                    {isKo ? "실시간 시황 토크중" : "Live Market Talk"}
                   </>
                 ) : (
-                  "지난 시황 보기"
+                  isKo ? "지난 시황 보기" : "View Past Sessions"
                 )}
               </span>
               <div
@@ -345,7 +348,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                     setPanelOpen(true);
                     markRead();
                   }}
-                  aria-label={sessionOpen ? "실시간 시황 토크 열기" : "지난 시황 보기"}
+                  aria-label={sessionOpen ? (isKo ? "실시간 시황 토크 열기" : "Open live market chat") : (isKo ? "지난 시황 보기" : "View Past Sessions")}
                   className="relative flex items-center justify-center rounded-full shadow-lg border transition-transform active:scale-95 w-[52px] h-[52px]"
                   style={{
                     background: sessionOpen ? "var(--accent)" : "var(--card)",
@@ -387,7 +390,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
             style={{ background: "var(--card)", borderColor: "var(--border)" }}
             role="dialog"
             aria-modal="true"
-            aria-label="장중 실시간 시황방"
+            aria-label={isKo ? "장중 실시간 시황방" : "Live Market Chat"}
             onClick={(e) => e.stopPropagation()}
           >
             <div
@@ -396,14 +399,16 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
             >
               <div>
                 <p className="text-sm font-bold" style={{ color: "var(--text)" }}>
-                  {sessionOpen ? `${cfg.labelKo} 실시간 시황방` : `${cfg.labelKo} 시황방 (마감)`}
+                  {sessionOpen
+                    ? (isKo ? `${cfg.labelKo} 실시간 시황방` : `${cfg.labelEn} Live Chat`)
+                    : (isKo ? `${cfg.labelKo} 시황방 (마감)` : `${cfg.labelEn} Chat (Closed)`)}
                 </p>
                 <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
-                  {market === "us" ? "미국주식 전용 · NYSE · NASDAQ" : "한국주식 전용 · 코스피 · 코스닥"}
+                  {market === "us" ? "US Stocks · NYSE · NASDAQ" : (isKo ? "한국주식 전용 · 코스피 · 코스닥" : "Korean Stocks · KOSPI · KOSDAQ")}
                   {sessionOpen && online > 0 && (
                     <span className="inline-flex items-center gap-1 ml-2">
                       <Users size={11} />
-                      {online}명 접속 중
+                      {isKo ? `${online}명 접속 중` : `${online} online`}
                     </span>
                   )}
                 </p>
@@ -413,7 +418,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                 onClick={() => setPanelOpen(false)}
                 className="p-2 rounded-lg"
                 style={{ color: "var(--muted)" }}
-                aria-label="닫기"
+                aria-label={isKo ? "닫기" : "Close"}
               >
                 <X size={20} />
               </button>
@@ -433,19 +438,21 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                     border: "1px solid var(--border)",
                   }}
                 >
-                  {closedHint} · 아래는 최근 24시간 대화입니다
+                  {closedHint}{isKo ? " · 아래는 최근 24시간 대화입니다" : " · Last 24 hours"}
                 </div>
               )}
 
               {loading && messages.length === 0 && (
                 <p className="text-center text-xs py-8" style={{ color: "var(--muted)" }}>
-                  대화 불러오는 중…
+                  {isKo ? "대화 불러오는 중…" : "Loading..."}
                 </p>
               )}
 
               {!loading && messages.length === 0 && (
                 <p className="text-center text-xs py-8" style={{ color: "var(--muted)" }}>
-                  {sessionOpen ? "아직 대화가 없습니다. 첫 시황을 남겨보세요." : "최근 대화 기록이 없습니다."}
+                  {sessionOpen
+                    ? (isKo ? "아직 대화가 없습니다. 첫 시황을 남겨보세요." : "No messages yet. Be the first.")
+                    : (isKo ? "최근 대화 기록이 없습니다." : "No recent messages.")}
                 </p>
               )}
 
@@ -489,7 +496,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
 
               {someoneTyping && sessionOpen && (
                 <p className="text-[11px] pl-10 py-1" style={{ color: "var(--muted)" }}>
-                  누군가 입력 중…
+                  {isKo ? "누군가 입력 중…" : "Someone is typing…"}
                 </p>
               )}
             </div>
@@ -504,7 +511,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                 </p>
               ) : !loaded ? (
                 <p className="text-center text-[11px] py-2" style={{ color: "var(--muted)" }}>
-                  확인 중…
+                  {isKo ? "확인 중…" : "Verifying…"}
                 </p>
               ) : (
                 <>
@@ -520,7 +527,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                       }}
                       rows={2}
                       maxLength={200}
-                      placeholder="장중 시황을 남겨보세요 (2~200자)"
+                      placeholder={isKo ? "장중 시황을 남겨보세요 (2~200자)" : "Share your market view (2–200 chars)"}
                       className="flex-1 resize-none rounded-xl px-3 py-2 text-[13px] outline-none border"
                       style={{
                         background: "var(--bg)",
@@ -546,23 +553,29 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                   )}
                   <p className="text-[10px] mt-1" style={{ color: "var(--muted)" }}>
                     {user
-                      ? `${user.nickname}(으)로 표시됩니다`
-                      : "익명 번호로 표시됩니다"}
+                      ? (isKo ? `${user.nickname}(으)로 표시됩니다` : `Posting as ${user.nickname}`)
+                      : (isKo ? "익명 번호로 표시됩니다" : "Posted anonymously")}
                     {" · "}
                     {draft.trim().length}/200
                   </p>
                   {!user && (
                     <p className="text-[10px] mt-1.5 text-center" style={{ color: "var(--muted)" }}>
-                      로그인하면{" "}
-                      <button
-                        type="button"
-                        onClick={() => loginWithOAuth("google")}
-                        className="underline font-semibold"
-                        style={{ color: "var(--mint)" }}
-                      >
-                        프로필 닉네임
-                      </button>
-                      으로 표시돼요
+                      {isKo ? (
+                        <>
+                          로그인하면{" "}
+                          <button
+                            type="button"
+                            onClick={() => loginWithOAuth("google")}
+                            className="underline font-semibold"
+                            style={{ color: "var(--mint)" }}
+                          >
+                            프로필 닉네임
+                          </button>
+                          으로 표시돼요
+                        </>
+                      ) : (
+                        "Log in to post with your profile nickname."
+                      )}
                     </p>
                   )}
                 </>

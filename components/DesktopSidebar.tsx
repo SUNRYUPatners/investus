@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LogoMark } from "@/components/LogoMark";
-import { useLocale } from "@/contexts/LocaleContext";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isMarketSessionOpen } from "@/lib/markets/hours";
 import { marketHref, parseMarketPath, type MarketTab } from "@/lib/markets/marketPath";
@@ -39,6 +39,8 @@ function useClock(timezone: string, market: ReturnType<typeof parseMarketPath>["
 
 export function DesktopSidebar() {
   const t = useLocale();
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const pathname = usePathname() ?? "";
   const router = useRouter();
   const { market, tab } = parseMarketPath(pathname);
@@ -73,13 +75,17 @@ export function DesktopSidebar() {
             </div>
             <div className="text-[11px] font-medium leading-snug mt-0.5" style={{ color: "var(--muted)" }}>
               {isUsBrand ? (
-                <>
-                  AI기반 차세대 자산관리(WM)
-                  <br />
-                  핀테크 플랫폼
-                </>
+                isKo ? (
+                  <>
+                    AI기반 차세대 자산관리(WM)
+                    <br />
+                    핀테크 플랫폼
+                  </>
+                ) : (
+                  "AI-Powered Global Asset Intelligence"
+                )
               ) : (
-                `${cfg.emoji} ${cfg.labelKo}`
+                `${cfg.emoji} ${isKo ? cfg.labelKo : cfg.labelEn}`
               )}
             </div>
           </div>

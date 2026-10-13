@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 
 export default async function InsightPage() {
   const locale = await getLocale();
+  const isKo = locale === "ko";
   const t = getT(locale).insight;
 
   /* ── 투자 지식 허브 배너 ── */
@@ -52,15 +53,15 @@ export default async function InsightPage() {
           <div className="flex gap-1.5 mb-1.5">
             <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(var(--mint-rgb),0.12)", color: "rgba(var(--mint-rgb),0.9)" }}>
-              심화 가이드
+              {isKo ? "심화 가이드" : "In-Depth Guides"}
             </span>
             <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(96,165,250,0.12)", color: "#60a5fa" }}>
-              {LEARN_ARTICLES.length}편
+              {isKo ? `${LEARN_ARTICLES.length}편` : `${LEARN_ARTICLES.length} articles`}
             </span>
           </div>
-          <p className="text-sm font-bold leading-snug" style={{ color: "#f5f6f8" }}>투자 지식 허브</p>
-          <p className="text-[11px] mt-0.5" style={{ color: "rgba(255,255,255,0.72)" }}>ETF·밸류에이션·매크로·세금 가이드 한곳에서</p>
+          <p className="text-sm font-bold leading-snug" style={{ color: "#f5f6f8" }}>{isKo ? "투자 지식 허브" : "Investment Knowledge Hub"}</p>
+          <p className="text-[11px] mt-0.5" style={{ color: "rgba(255,255,255,0.72)" }}>{isKo ? "ETF·밸류에이션·매크로·세금 가이드 한곳에서" : "ETF · Valuation · Macro · Tax guides in one place"}</p>
         </div>
         <span className="text-lg flex-shrink-0" style={{ color: "rgba(255,255,255,0.55)" }}>›</span>
       </div>
@@ -136,9 +137,9 @@ export default async function InsightPage() {
           <p className="text-xs mt-0.5 mb-3" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
           {/* 에디토리얼 소개 — Google 인덱싱 콘텐츠 */}
           <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-            SUNRYU Partners CIO가 매일 직접 분석한 미국주식 투자 리포트를 무료로 제공합니다.
-            단순 뉴스 요약이 아닌, S&P500·NASDAQ 시장 흐름·섹터 분석·개별 종목 밸류에이션까지
-            투자 판단에 직결되는 핵심 분석을 담습니다.
+            {isKo
+              ? "SUNRYU Partners CIO가 매일 직접 분석한 미국주식 투자 리포트를 무료로 제공합니다. 단순 뉴스 요약이 아닌, S&P500·NASDAQ 시장 흐름·섹터 분석·개별 종목 밸류에이션까지 투자 판단에 직결되는 핵심 분석을 담습니다."
+              : "Free daily US stock investment reports written by the SUNRYU Partners CIO. Not just news summaries — deep analysis of S&P500 and NASDAQ trends, sector rotation, and individual stock valuations."}
           </p>
         </div>
         <section className="px-4 mb-4"><AdFitBanner /></section>
@@ -176,7 +177,9 @@ export default async function InsightPage() {
             <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{t.title}</h1>
             <p className="text-xs mt-0.5 mb-2" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
             <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-              SUNRYU Partners CIO가 매일 직접 분석한 미국주식 투자 리포트. S&P500·NASDAQ 시장 흐름·섹터 분석·개별 종목 밸류에이션까지 투자 판단에 직결되는 핵심 분석을 무료로 제공합니다.
+              {isKo
+                ? "SUNRYU Partners CIO가 매일 직접 분석한 미국주식 투자 리포트. S&P500·NASDAQ 시장 흐름·섹터 분석·개별 종목 밸류에이션까지 투자 판단에 직결되는 핵심 분석을 무료로 제공합니다."
+                : "Daily US stock reports by the SUNRYU Partners CIO — free. S&P500 · NASDAQ trends, sector analysis, and stock valuations."}
             </p>
           </div>
           {/* 데스크탑: 리포트 위·눈에 보이게 광고 배치 */}

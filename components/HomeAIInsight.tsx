@@ -9,6 +9,7 @@ import { getMarketConfig } from "@/lib/markets/config";
 import type { MarketId } from "@/lib/markets/types";
 import { useRouter } from "next/navigation";
 import { ExampleAnalysisCard } from "@/components/ExampleAnalysisCard";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type LiveQ = { symbol: string; price: number; change: number; changePercent: number };
 type MacroIndex = { symbol: string; value: number; changePercent?: number };
@@ -85,6 +86,8 @@ function readMacroSnapshot(cacheKey: string): { indices: MacroIndex[]; futures: 
 
 export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
   const router = useRouter();
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const cfg = getMarketConfig(market);
   const cacheKey = cfg.marketCacheKey;
   const { holdings, loaded } = useMarketPortfolio(market);
@@ -275,11 +278,15 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
           <Sparkles className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
           <div className="flex-1 text-left min-w-0">
             <span className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
-              {marketOpen ? `${cfg.labelKo} 장중 분석` : `${cfg.labelKo} 등락 분석`}
+              {marketOpen
+                ? (isKo ? `${cfg.labelKo} 장중 분석` : `${cfg.labelEn} Intraday Analysis`)
+                : (isKo ? `${cfg.labelKo} 등락 분석` : `${cfg.labelEn} Market Analysis`)}
             </span>
             {!marketOpen && analysisDate && (
               <span className="block text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
-                {analysisDate.slice(5, 7)}/{analysisDate.slice(8, 10)} 장마감 기준
+                {isKo
+                  ? `${analysisDate.slice(5, 7)}/${analysisDate.slice(8, 10)} 장마감 기준`
+                  : `As of ${analysisDate.slice(5, 7)}/${analysisDate.slice(8, 10)} close`}
               </span>
             )}
           </div>
@@ -321,11 +328,11 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
                 </div>
               ) : displayAnswer === "__error__" ? (
                 <div className="flex items-center justify-between py-1">
-                  <p className="text-[12px]" style={{ color: "var(--muted)" }}>분석 중 오류가 발생했어요.</p>
+                  <p className="text-[12px]" style={{ color: "var(--muted)" }}>{isKo ? "분석 중 오류가 발생했어요." : "Analysis failed."}</p>
                   <button onClick={() => runAnalysis(false, lastMarketCloseDate(market))}
                     className="text-[11px] font-bold px-3 py-1 rounded-lg"
                     style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
-                    다시 시도
+                    {isKo ? "다시 시도" : "Retry"}
                   </button>
                 </div>
               ) : displayAnswer ? (
@@ -334,7 +341,9 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
                 </p>
               ) : (
                 <p className="text-[12px]" style={{ color: "var(--muted)" }}>
-                  {marketOpen ? "아래 버튼으로 지금 분석해보세요." : "잠시 후 분석 결과가 나타납니다."}
+                  {marketOpen
+                    ? (isKo ? "아래 버튼으로 지금 분석해보세요." : "Tap the button below to analyze now.")
+                    : (isKo ? "잠시 후 분석 결과가 나타납니다." : "Results will appear shortly.")}
                 </p>
               )}
             </div>
@@ -356,12 +365,12 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
                   <div className="flex items-center gap-2">
                     <RefreshCw className="w-3 h-3" style={{ color: "var(--muted)" }} />
                     <span className="text-[11px]" style={{ color: "var(--muted)" }}>
-                      가격이 달랐나요? 다시 분석
+                      {isKo ? "가격이 달랐나요? 다시 분석" : "Different price? Re-analyze"}
                     </span>
                   </div>
                   <span className="text-[9px] px-1.5 py-0.5 rounded-full"
                     style={{ background: "rgba(255,255,255,0.05)", color: "var(--muted)" }}>
-                    1회 제공
+                    {isKo ? "1회 제공" : "1 free"}
                   </span>
                 </button>
               </div>
@@ -374,16 +383,18 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
                   <div className="rounded-xl p-3 flex flex-col items-center gap-2 text-center"
                     style={{ background: "rgba(var(--mint-rgb),0.04)", border: "1px solid rgba(var(--mint-rgb),0.12)" }}>
                     <p className="text-[11px] font-bold" style={{ color: "var(--text)" }}>
-                      오늘 무료 장중 분석 {INTRADAY_LIMIT}회 소진
+                      {isKo ? `오늘 무료 장중 분석 ${INTRADAY_LIMIT}회 소진` : `Today's ${INTRADAY_LIMIT} free intraday analyses used`}
                     </p>
                     <p className="text-[10px]" style={{ color: "var(--muted)" }}>
-                      장마감 후 자동 분석은 무제한 무료예요 · 지금 더 분석하려면 구독을 업그레이드해요
+                      {isKo
+                        ? "장마감 후 자동 분석은 무제한 무료예요 · 지금 더 분석하려면 구독을 업그레이드해요"
+                        : "Post-close auto analysis is unlimited · Upgrade to analyze more now"}
                     </p>
                     <button
                       onClick={() => router.push("/more")}
                       className="px-4 py-1.5 rounded-xl text-[11px] font-bold text-black mt-0.5"
                       style={{ background: "var(--mint)" }}>
-                      구독 알아보기
+                      {isKo ? "구독 알아보기" : "Learn more"}
                     </button>
                   </div>
                 ) : (
@@ -395,12 +406,12 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
                     <div className="flex items-center gap-2">
                       <RefreshCw className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} />
                       <span className="text-[12px] font-bold" style={{ color: "var(--mint)" }}>
-                        지금 다시 분석
+                        {isKo ? "지금 다시 분석" : "Re-analyze now"}
                       </span>
                     </div>
                     <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
                       style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>
-                      오늘 {remaining}/{INTRADAY_LIMIT}회 남음
+                      {isKo ? `오늘 ${remaining}/${INTRADAY_LIMIT}회 남음` : `${remaining}/${INTRADAY_LIMIT} left today`}
                     </span>
                   </button>
                 )}
@@ -408,7 +419,7 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
             )}
 
             <p className="text-[9px] text-center pb-3" style={{ color: "var(--muted)" }}>
-              투자 참고용 · 투자 권유 아님
+              {isKo ? "투자 참고용 · 투자 권유 아님" : "For reference only · Not investment advice"}
             </p>
           </div>
         )}

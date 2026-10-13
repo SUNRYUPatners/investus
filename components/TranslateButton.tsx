@@ -3,11 +3,14 @@
 import { useState } from "react";
 import { Languages } from "lucide-react";
 import { useTranslate, LANG_LABELS } from "@/contexts/TranslateContext";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type TargetLang = keyof typeof LANG_LABELS;
 
 export function TranslateButton() {
   const { enabled, targetLang, setTargetLang, toggle } = useTranslate();
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const [showPicker, setShowPicker] = useState(false);
 
   const handleLangSelect = (lang: TargetLang) => {
@@ -71,12 +74,12 @@ export function TranslateButton() {
           borderColor: enabled ? "rgba(var(--mint-rgb),0.35)" : "var(--border)",
           color: enabled ? "var(--mint)" : "var(--muted)",
         }}
-        title={enabled ? "번역 끄기" : "번역하기"}
-        aria-label="번역"
+        title={enabled ? (isKo ? "번역 끄기" : "Turn off translation") : (isKo ? "번역하기" : "Translate")}
+        aria-label={isKo ? "번역" : "Translate"}
         aria-pressed={enabled}
       >
         <Languages className="w-3.5 h-3.5" />
-        {!enabled && <span>번역</span>}
+        {!enabled && <span>{isKo ? "번역" : "Translate"}</span>}
         {enabled && (
           <button
             className="ml-0.5 text-[10px] opacity-60 hover:opacity-100"

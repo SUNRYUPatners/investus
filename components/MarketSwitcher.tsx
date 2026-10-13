@@ -6,9 +6,11 @@ import { MarketOpenChip } from "@/components/MarketOpenChip";
 import { MARKET_CONFIG } from "@/lib/markets/config";
 import { MARKET_IDS, type MarketId } from "@/lib/markets/types";
 import { marketHref, parseMarketPath } from "@/lib/markets/marketPath";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 /** 모바일 — 헤더 아래 가로 이모지 시장 선택 */
 export function MarketSwitcher({ current }: { current: MarketId }) {
+  const locale = useLocaleCode();
   const pathname = usePathname();
   const { tab } = parseMarketPath(pathname ?? "");
 
@@ -41,7 +43,7 @@ export function MarketSwitcher({ current }: { current: MarketId }) {
               className="text-[9px] font-semibold tracking-tight text-center leading-tight"
               style={{ color: active ? "var(--mint)" : "var(--muted)" }}
             >
-              {m.labelKo}
+              {locale === "ko" ? m.labelKo : m.labelEn}
             </span>
             {(id === "us" || id === "kr") && <MarketOpenChip market={id} />}
           </Link>

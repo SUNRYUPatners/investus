@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 const STORAGE_KEY = "investus_install_dismissed";
 // 3번 방문 후 표시
@@ -13,6 +14,8 @@ interface BeforeInstallPromptEvent extends Event {
 }
 
 export function InstallBanner() {
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const [show,    setShow]    = useState(false);
   const [prompt,  setPrompt]  = useState<BeforeInstallPromptEvent | null>(null);
   const [isIOS,   setIsIOS]   = useState(false);
@@ -79,15 +82,15 @@ export function InstallBanner() {
       >
         <span className="text-2xl flex-shrink-0">📲</span>
         <div className="flex-1 min-w-0">
-          <p className="text-xs font-bold mb-0.5" style={{ color: "var(--text)" }}>홈화면에 추가하기</p>
-          <p className="text-[10px]" style={{ color: "var(--muted)" }}>앱처럼 빠르게 실행하고 오프라인에서도 확인</p>
+          <p className="text-xs font-bold mb-0.5" style={{ color: "var(--text)" }}>{isKo ? "홈화면에 추가하기" : "Add to Home Screen"}</p>
+          <p className="text-[10px]" style={{ color: "var(--muted)" }}>{isKo ? "앱처럼 빠르게 실행하고 오프라인에서도 확인" : "Launch instantly like an app, works offline too"}</p>
         </div>
         <button
           onClick={install}
           className="flex-shrink-0 text-xs font-bold px-3 py-1.5 rounded-xl"
           style={{ background: "var(--mint)", color: "var(--on-accent)" }}
         >
-          설치
+          {isKo ? "설치" : "Install"}
         </button>
         <button onClick={dismiss} className="flex-shrink-0 p-1">
           <X className="w-4 h-4" style={{ color: "var(--muted)" }} />
@@ -106,14 +109,18 @@ export function InstallBanner() {
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-2">
             <span className="text-xl">📲</span>
-            <p className="text-xs font-bold" style={{ color: "var(--text)" }}>홈화면에 추가하기 (iOS)</p>
+            <p className="text-xs font-bold" style={{ color: "var(--text)" }}>{isKo ? "홈화면에 추가하기 (iOS)" : "Add to Home Screen (iOS)"}</p>
           </div>
           <button onClick={dismiss} className="p-1">
             <X className="w-4 h-4" style={{ color: "var(--muted)" }} />
           </button>
         </div>
         <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-          Safari 하단 <span style={{ color: "var(--text)", fontWeight: 600 }}>공유 버튼</span> → <span style={{ color: "var(--text)", fontWeight: 600 }}>홈 화면에 추가</span>를 탭하면 앱처럼 사용할 수 있어요.
+          {isKo ? (
+            <>Safari 하단 <span style={{ color: "var(--text)", fontWeight: 600 }}>공유 버튼</span> → <span style={{ color: "var(--text)", fontWeight: 600 }}>홈 화면에 추가</span>를 탭하면 앱처럼 사용할 수 있어요.</>
+          ) : (
+            <>Tap the <span style={{ color: "var(--text)", fontWeight: 600 }}>Share button</span> in Safari, then tap <span style={{ color: "var(--text)", fontWeight: 600 }}>&lsquo;Add to Home Screen&rsquo;</span>.</>
+          )}
         </p>
       </div>
     );

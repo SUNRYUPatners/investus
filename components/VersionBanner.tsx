@@ -2,10 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import { RefreshCw, X } from "lucide-react";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 const POLL_INTERVAL = 5 * 60_000; // 5분마다 체크
 
 export function VersionBanner() {
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const [show, setShow]  = useState(false);
   const baselineId       = useRef<string | null>(null);
 
@@ -36,7 +39,7 @@ export function VersionBanner() {
       style={{ background: "var(--mint)", color: "var(--on-accent)" }}
     >
       <p className="text-xs font-semibold flex-1">
-        새 버전이 출시됐어요 — 최신 앱으로 업데이트하세요
+        {isKo ? "새 버전이 출시됐어요 — 최신 앱으로 업데이트하세요" : "A new version is available — update to the latest"}
       </p>
       <button
         onClick={() => window.location.reload()}
@@ -44,7 +47,7 @@ export function VersionBanner() {
         style={{ background: "rgba(0,0,0,0.15)" }}
       >
         <RefreshCw className="w-3.5 h-3.5" />
-        새로고침
+        {isKo ? "새로고침" : "Refresh"}
       </button>
       <button onClick={() => setShow(false)} className="flex-shrink-0 p-0.5">
         <X className="w-4 h-4" />

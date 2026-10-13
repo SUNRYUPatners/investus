@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Share2, Link, Check } from "lucide-react";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 interface ShareButtonProps {
   title: string;
@@ -11,6 +12,8 @@ interface ShareButtonProps {
 }
 
 export function ShareButton({ title, text, url, size = "md" }: ShareButtonProps) {
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const [copied,    setCopied]    = useState(false);
   const [showMenu,  setShowMenu]  = useState(false);
 
@@ -58,7 +61,7 @@ export function ShareButton({ title, text, url, size = "md" }: ShareButtonProps)
           : <Share2 className={`${iconSize} flex-shrink-0`} style={{ color: "var(--muted)" }} />
         }
         <span className={`${textSize} font-medium`} style={{ color: copied ? "var(--mint)" : "var(--muted)" }}>
-          {copied ? "복사됨" : "공유"}
+          {copied ? (isKo ? "복사됨" : "Copied") : (isKo ? "공유" : "Share")}
         </span>
       </button>
 
@@ -71,13 +74,13 @@ export function ShareButton({ title, text, url, size = "md" }: ShareButtonProps)
             <button onClick={shareToX}
               className="flex items-center gap-2.5 w-full px-4 py-3 text-xs font-medium hover:bg-white/5 transition-colors text-left">
               <span className="w-3.5 h-3.5 flex items-center justify-center font-bold text-xs" style={{ color: "#fff" }}>𝕏</span>
-              <span style={{ color: "var(--text)" }}>X (트위터)</span>
+              <span style={{ color: "var(--text)" }}>X (Twitter)</span>
             </button>
             <div style={{ height: 1, background: "var(--border)" }} />
             <button onClick={copyLink}
               className="flex items-center gap-2.5 w-full px-4 py-3 text-xs font-medium hover:bg-white/5 transition-colors text-left">
               <Link className="w-3.5 h-3.5" style={{ color: "var(--muted)" }} />
-              <span style={{ color: "var(--text)" }}>링크 복사</span>
+              <span style={{ color: "var(--text)" }}>{isKo ? "링크 복사" : "Copy link"}</span>
             </button>
           </div>
         </>

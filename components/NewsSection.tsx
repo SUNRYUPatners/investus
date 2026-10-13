@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronRight, ChevronUp } from "lucide-react";
 import { NewsCard } from "./NewsCard";
 import type { NewsItem } from "@/lib/api";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 const INITIAL_COUNT = 4;
 
@@ -28,6 +29,8 @@ export function NewsSection({
   news?: NewsItem[];
   market?: string;
 }) {
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const [news, setNews]         = useState<NewsItem[]>(initialNews ?? []);
   const [expanded, setExpanded] = useState(false);
   const [loaded, setLoaded]     = useState(!!initialNews?.length);
@@ -48,7 +51,7 @@ export function NewsSection({
     <div>
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-          시장 뉴스
+          {isKo ? "시장 뉴스" : "Market News"}
         </h2>
         {loaded && news.length > INITIAL_COUNT && (
           <button
@@ -57,9 +60,9 @@ export function NewsSection({
             style={{ color: "var(--mint)" }}
           >
             {expanded ? (
-              <><ChevronUp className="w-3.5 h-3.5" /> 접기</>
+              <><ChevronUp className="w-3.5 h-3.5" /> {isKo ? "접기" : "Collapse"}</>
             ) : (
-              <>더보기 <ChevronRight className="w-3.5 h-3.5" /></>
+              <>{isKo ? "더보기" : "More"} <ChevronRight className="w-3.5 h-3.5" /></>
             )}
           </button>
         )}
@@ -81,7 +84,7 @@ export function NewsSection({
               className="w-full mt-3 py-2.5 rounded-2xl text-xs font-semibold transition-opacity hover:opacity-80"
               style={{ background: "rgba(255,255,255,0.04)", color: "var(--muted)", border: "1px solid var(--border)" }}
             >
-              뉴스 {news.length - INITIAL_COUNT}개 더보기
+              {isKo ? `뉴스 ${news.length - INITIAL_COUNT}개 더보기` : `Load ${news.length - INITIAL_COUNT} more`}
             </button>
           )}
         </>
