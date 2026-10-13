@@ -100,7 +100,7 @@ function BriefingValueCard({ isKo }: { isKo: boolean }) {
 }
 
 export function MorningBriefingCard({
-  locale: _locale = "ko",
+  locale: _locale = "en",
   market = "us",
 }: {
   locale?: string;
@@ -111,7 +111,7 @@ export function MorningBriefingCard({
   const [briefing, setBriefing] = useState<SessionBriefing | null>(null);
   const [loading, setLoading] = useState(true);
   const [openId, setOpenId] = useState<string | null>(null);
-  const [viewLang, setViewLang] = useState<ViewLang>("ko");
+  const [viewLang, setViewLang] = useState<ViewLang>(_locale === "ko" ? "ko" : "en");
   const viewEn = viewLang === "en";
   const isKo = !viewEn;
   const isKr = market === "kr";

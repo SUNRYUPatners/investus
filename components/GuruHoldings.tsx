@@ -4,33 +4,33 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronDown, HelpCircle, X } from "lucide-react";
 import { GURUS, isGuruFilingOverdue, type Guru } from "@/lib/holdings13f";
-import { useLocale } from "@/contexts/LocaleContext";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { SectionInfo } from "./SectionInfo";
 
-const GURU_INFO: Record<string, { title: string; body: string }> = {
+const GURU_INFO: Record<string, { ko: { title: string; body: string }; en: { title: string; body: string } }> = {
   berkshire: {
-    title: "워렌 버핏",
-    body: "버크셔 해서웨이 회장. \"가치투자의 아버지\". 60년간 연평균 ~20% 수익률. \"좋은 기업을 적당한 가격에, 오래 보유\"가 핵심 철학. 13F 공시로 포트폴리오 공개.",
+    ko: { title: "워렌 버핏", body: "버크셔 해서웨이 회장. \"가치투자의 아버지\". 60년간 연평균 ~20% 수익률. \"좋은 기업을 적당한 가격에, 오래 보유\"가 핵심 철학. 13F 공시로 포트폴리오 공개." },
+    en: { title: "Warren Buffett", body: "Chairman of Berkshire Hathaway. The \"Father of Value Investing.\" ~20% average annual return over 60 years. Core philosophy: \"buy great businesses at fair prices and hold long-term.\" Portfolio disclosed via 13F filings." },
   },
   ark: {
-    title: "캐시 우드",
-    body: "ARK Invest 창업자. AI·바이오·핀테크·자율주행 등 혁신 테마 전문. 테슬라 최고 강세론자 중 한 명. 고위험 고성장주 집중 투자 전략.",
+    ko: { title: "캐시 우드", body: "ARK Invest 창업자. AI·바이오·핀테크·자율주행 등 혁신 테마 전문. 테슬라 최고 강세론자 중 한 명. 고위험 고성장주 집중 투자 전략." },
+    en: { title: "Cathie Wood", body: "Founder of ARK Invest. Focuses on disruptive innovation: AI, biotech, fintech, and autonomous vehicles. Among Tesla's most prominent bulls. High-risk, high-growth concentrated strategy." },
   },
   baron: {
-    title: "론 베론",
-    body: "바론 캐피털 창업자. \"10년 이상 보유\"가 철학인 장기 성장주 투자자. 테슬라 초기 투자자로 유명. $331억 운용.",
+    ko: { title: "론 베론", body: "바론 캐피털 창업자. \"10년 이상 보유\"가 철학인 장기 성장주 투자자. 테슬라 초기 투자자로 유명. $331억 운용." },
+    en: { title: "Ron Baron", body: "Founder of Baron Capital. Long-term growth investor whose philosophy centers on holding positions for 10+ years. Known as an early Tesla investor. Manages ~$33B." },
   },
   pelosi: {
-    title: "낸시 펠로시",
-    body: "미국 전 하원의장. 현직 의원으로 STOCK Act 공시 의무 대상. 빅테크 집중 투자로 유명. 공개 공시 기준 수익률이 S&P 500을 지속 상회해 주목받음.",
+    ko: { title: "낸시 펠로시", body: "미국 전 하원의장. 현직 의원으로 STOCK Act 공시 의무 대상. 빅테크 집중 투자로 유명. 공개 공시 기준 수익률이 S&P 500을 지속 상회해 주목받음." },
+    en: { title: "Nancy Pelosi", body: "Former Speaker of the U.S. House. Subject to STOCK Act disclosure requirements as a sitting member of Congress. Known for concentrated big-tech exposure. Publicly disclosed returns have consistently beaten the S&P 500." },
   },
   ackman: {
-    title: "빌 애크먼",
-    body: "퍼싱 스퀘어 캐피털 창업자. 집중 포트폴리오(10종목 내외)로 운용. 행동주의 투자자로 기업 경영에 직접 개입하는 전략으로 유명.",
+    ko: { title: "빌 애크먼", body: "퍼싱 스퀘어 캐피털 창업자. 집중 포트폴리오(10종목 내외)로 운용. 행동주의 투자자로 기업 경영에 직접 개입하는 전략으로 유명." },
+    en: { title: "Bill Ackman", body: "Founder of Pershing Square Capital. Runs a highly concentrated portfolio (~10 positions). Renowned activist investor known for directly engaging with company management." },
   },
   druckenmiller: {
-    title: "스탠리 드러켄밀러",
-    body: "듀케인 패밀리 오피스 운용. 조지 소로스와 함께 영란은행을 무너뜨린 전설적 매크로 투자자. 트렌드 추종 + 집중 투자 전략.",
+    ko: { title: "스탠리 드러켄밀러", body: "듀케인 패밀리 오피스 운용. 조지 소로스와 함께 영란은행을 무너뜨린 전설적 매크로 투자자. 트렌드 추종 + 집중 투자 전략." },
+    en: { title: "Stanley Druckenmiller", body: "Runs Duquesne Family Office. Legendary macro investor who, alongside George Soros, broke the Bank of England. Known for trend-following combined with concentrated high-conviction bets." },
   },
 };
 
@@ -77,11 +77,14 @@ function readLocalCache(symbols: string[]): PriceMap {
 
 function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggle: () => void }) {
   const t = useLocale();
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
   const [prices,  setPrices]  = useState<PriceMap>({});
   const [loading, setLoading] = useState(false);
   const [fetched, setFetched] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
-  const info = GURU_INFO[guru.id];
+  const infoRaw = GURU_INFO[guru.id];
+  const info = infoRaw ? (isKo ? infoRaw.ko : infoRaw.en) : null;
 
   const fetchPrices = (syms: string[]) => {
     // Show cached values instantly for fast initial render
@@ -136,7 +139,7 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
               <button
                 onClick={(e) => { e.stopPropagation(); setInfoOpen((v) => !v); }}
                 className="flex-shrink-0 opacity-50 hover:opacity-80 active:opacity-60 transition-opacity"
-                aria-label="설명 보기"
+                aria-label={isKo ? "설명 보기" : "View info"}
               >
                 <HelpCircle className="w-3.5 h-3.5" style={{ color: "var(--muted)" }} />
               </button>
@@ -155,10 +158,10 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
             <span className="text-[10px]" style={{ color: "var(--muted)" }}>{guru.quarter}</span>
           </div>
           <p className="text-[9px] mt-0.5 font-mono-num" style={{ color: "var(--muted)" }}>
-            공시 {guru.filingDate}
+            {isKo ? "공시 " : "Filed "}{guru.filingDate}
           </p>
           <p className="text-[9px] font-mono-num" style={{ color: isGuruFilingOverdue(guru) ? "#f59e0b" : "var(--muted)" }}>
-            {isGuruFilingOverdue(guru) ? "공시 대기 · " : "다음 "}{guru.nextFilingDate}
+            {isGuruFilingOverdue(guru) ? (isKo ? "공시 대기 · " : "Pending · ") : (isKo ? "다음 " : "Next ")}{guru.nextFilingDate}
           </p>
         </div>
 
@@ -303,6 +306,8 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
 
 export function GuruHoldings() {
   const t = useLocale();
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
   const [gurus, setGurus] = useState<Guru[]>(GURUS);
   const [live, setLive] = useState(false);
 
@@ -343,14 +348,29 @@ export function GuruHoldings() {
       <div className="flex items-center justify-between mb-3">
         <div>
           <SectionInfo title={t.guru.sectionTitle} side="right">
-            <p className="font-bold mb-1" style={{ color: "#60a5fa" }}>13F 공시란?</p>
-            <p style={{ color: "var(--muted)" }}>미국에서 자산 <b>$1억 이상</b> 기관투자자는 매 분기마다 보유 주식을 SEC(미국 증권거래위원회)에 의무 보고해야 해요. 이게 바로 <b>13F 공시</b>예요.</p>
-            <div className="mt-2 space-y-1">
-              <p>📋 분기 종료 후 <b>45일 이내</b> 공시 의무</p>
-              <p>⏱️ 실제 매수 시점보다 최대 <b>3개월 늦게</b> 공개됨</p>
-              <p>❓ 각 투자대가 이름 옆 <b>?</b>를 눌러 개인 설명 확인</p>
-              <p>🔄 SEC EDGAR 공시 시 <b>자동 갱신</b>{live ? " · 라이브" : ""}</p>
-            </div>
+            {isKo ? (
+              <>
+                <p className="font-bold mb-1" style={{ color: "#60a5fa" }}>13F 공시란?</p>
+                <p style={{ color: "var(--muted)" }}>미국에서 자산 <b>$1억 이상</b> 기관투자자는 매 분기마다 보유 주식을 SEC(미국 증권거래위원회)에 의무 보고해야 해요. 이게 바로 <b>13F 공시</b>예요.</p>
+                <div className="mt-2 space-y-1">
+                  <p>📋 분기 종료 후 <b>45일 이내</b> 공시 의무</p>
+                  <p>⏱️ 실제 매수 시점보다 최대 <b>3개월 늦게</b> 공개됨</p>
+                  <p>❓ 각 투자대가 이름 옆 <b>?</b>를 눌러 개인 설명 확인</p>
+                  <p>🔄 SEC EDGAR 공시 시 <b>자동 갱신</b>{live ? " · 라이브" : ""}</p>
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="font-bold mb-1" style={{ color: "#60a5fa" }}>What is a 13F filing?</p>
+                <p style={{ color: "var(--muted)" }}>U.S. institutional investors managing <b>$100M+</b> must report their equity holdings to the SEC each quarter. This is the <b>13F filing</b>.</p>
+                <div className="mt-2 space-y-1">
+                  <p>📋 Must file within <b>45 days</b> after each quarter-end</p>
+                  <p>⏱️ Disclosed up to <b>3 months after</b> actual purchases</p>
+                  <p>❓ Tap <b>?</b> next to each name for a brief profile</p>
+                  <p>🔄 <b>Auto-updated</b> from SEC EDGAR{live ? " · live" : ""}</p>
+                </div>
+              </>
+            )}
           </SectionInfo>
           <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
             {t.guru.subtitle}

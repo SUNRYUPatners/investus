@@ -51,7 +51,7 @@ export function MarketHomeShell({
   const isUs = market === "us";
   const showFear = market === "us" || market === "kr" || market === "kr-re";
   const showBuffett = market === "us";
-  const uiLocale: Locale = market === "kr" || market === "kr-re" || market === "safe" ? "ko" : locale;
+  const uiLocale: Locale = locale; // always follow user locale, not market
 
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>

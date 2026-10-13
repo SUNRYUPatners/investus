@@ -5,19 +5,19 @@ import type { MarketId } from "./types";
 
 function detectCategory(headline: string): { category: string; categoryColor: NewsItem["categoryColor"] } {
   const h = headline.toLowerCase();
-  if (/부동산|전세|매매|아파트|주택|국토|재건축/.test(h)) return { category: "부동산", categoryColor: "orange" };
-  if (/bitcoin|btc|ethereum|eth|crypto|비트코인|이더|코인/.test(h)) return { category: "암호화폐", categoryColor: "purple" };
-  if (/gold|silver|금 |은 |현물/.test(h)) return { category: "현물", categoryColor: "yellow" };
-  if (/삼성|하이닉스|현대|코스피|코스닥|반도체/.test(h)) return { category: "한국증시", categoryColor: "blue" };
-  if (/정책|규제|금리|은행|dsr/.test(h)) return { category: "정책", categoryColor: "mint" };
-  return { category: "시장", categoryColor: "blue" };
+  if (/부동산|전세|매매|아파트|주택|국토|재건축/.test(h)) return { category: "Real Estate", categoryColor: "orange" };
+  if (/bitcoin|btc|ethereum|eth|crypto|비트코인|이더|코인/.test(h)) return { category: "Crypto",      categoryColor: "purple" };
+  if (/gold|silver|금 |은 |현물/.test(h))                          return { category: "Commodities", categoryColor: "yellow" };
+  if (/삼성|하이닉스|현대|코스피|코스닥|반도체/.test(h))           return { category: "KR Stocks",   categoryColor: "blue" };
+  if (/정책|규제|금리|은행|dsr/.test(h))                           return { category: "Policy",       categoryColor: "mint" };
+  return { category: "Market", categoryColor: "blue" };
 }
 
-function relTimeKo(date: Date): string {
+function relTimeEn(date: Date): string {
   const s = Math.floor((Date.now() - date.getTime()) / 1000);
-  if (s < 3600) return `${Math.max(1, Math.floor(s / 60))}분 전`;
-  if (s < 86400) return `${Math.floor(s / 3600)}시간 전`;
-  return `${Math.floor(s / 86400)}일 전`;
+  if (s < 3600) return `${Math.max(1, Math.floor(s / 60))}m ago`;
+  if (s < 86400) return `${Math.floor(s / 3600)}h ago`;
+  return `${Math.floor(s / 86400)}d ago`;
 }
 
 function stripHtml(s: string): string {
@@ -104,7 +104,7 @@ export async function getNewsForMarket(market: MarketId): Promise<NewsItem[]> {
         title: titles[i] ?? r.title,
         summary: r.title,
         source: r.source,
-        time: relTimeKo(Number.isNaN(pub.getTime()) ? new Date() : pub),
+        time: relTimeEn(Number.isNaN(pub.getTime()) ? new Date() : pub),
         category,
         categoryColor,
         url: r.link || undefined,

@@ -45,6 +45,8 @@ const CATEGORY_EMOJIS = ["🐛", "💡", "🌟", "💬"];
 function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: string; nickname: string } | null }) {
   const t = useLocale();
   const fb = t.more.feedback;
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
   const [category, setCategory] = useState("feature");
   const [message,  setMessage]  = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -110,17 +112,17 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
                     body: JSON.stringify({
                       category: categoryLabel,
                       message: message.trim(),
-                      sender: user ? `${user.nickname} (${user.email})` : "익명",
+                      sender: user ? `${user.nickname} (${user.email})` : "Anonymous",
                     }),
                   });
                   if (!res.ok) {
                     const j = await res.json().catch(() => ({}));
-                    setError(typeof j.error === "string" ? j.error : "전송에 실패했습니다.");
+                    setError(typeof j.error === "string" ? j.error : (isKo ? "전송에 실패했습니다." : "Failed to send. Please try again."));
                     return;
                   }
                   setSucceeded(true);
                 } catch {
-                  setError("네트워크 오류입니다.");
+                  setError(isKo ? "네트워크 오류입니다." : "Network error. Please try again.");
                 } finally {
                   setSubmitting(false);
                 }
@@ -192,6 +194,8 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
 
 function CreatorSection() {
   const { user } = useAuth();
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
   const [profile, setProfile] = useState<{ nickname: string; avatar: string; bio: string; status: string } | null>(null);
   const [loaded, setLoaded] = useState(false);
 
@@ -208,7 +212,9 @@ function CreatorSection() {
   if (profile) {
     const isPhoto = (profile.avatar ?? "").startsWith("data:");
     const statusColor = profile.status === "approved" ? "var(--mint)" : profile.status === "pending" ? "#f59e0b" : "var(--muted)";
-    const statusLabel = profile.status === "approved" ? "승인됨" : profile.status === "pending" ? "심사 중" : "미승인";
+    const statusLabel = isKo
+      ? (profile.status === "approved" ? "승인됨" : profile.status === "pending" ? "심사 중" : "미승인")
+      : (profile.status === "approved" ? "Approved" : profile.status === "pending" ? "Pending" : "Not verified");
 
     return (
       <Link href="/creator/dashboard" style={{ textDecoration: "none" }}>
@@ -239,11 +245,11 @@ function CreatorSection() {
                 {statusLabel}
               </span>
             </div>
-            <p className="text-[11px] truncate" style={{ color: "var(--muted)" }}>{profile.bio || "내 채널을 관리하세요"}</p>
+            <p className="text-[11px] truncate" style={{ color: "var(--muted)" }}>{profile.bio || (isKo ? "내 채널을 관리하세요" : "Manage your channel")}</p>
           </div>
 
           <div className="flex-shrink-0 flex flex-col items-center gap-1">
-            <span className="text-[10px] font-semibold" style={{ color: "var(--mint)" }}>채널 관리</span>
+            <span className="text-[10px] font-semibold" style={{ color: "var(--mint)" }}>{isKo ? "채널 관리" : "Manage"}</span>
             <ChevronRight className="w-4 h-4" style={{ color: "var(--mint)" }} />
           </div>
         </div>
@@ -265,8 +271,8 @@ function CreatorSection() {
           <Sparkles className="w-5 h-5" style={{ color: "var(--mint)" }} />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-bold" style={{ color: "var(--navy)" }}>크리에이터 되기</p>
-          <p className="text-[11px]" style={{ color: "var(--muted)" }}>전자책, 강의, 리포트를 판매하세요</p>
+          <p className="text-sm font-bold" style={{ color: "var(--navy)" }}>{isKo ? "크리에이터 되기" : "Become a Creator"}</p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "전자책, 강의, 리포트를 판매하세요" : "Sell e-books, courses, and reports"}</p>
         </div>
         <ChevronRight className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
       </div>
@@ -417,15 +423,15 @@ function InstallSection() {
                   <span className="text-2xl">📲</span>
                 </div>
                 <div>
-                  <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>홈 화면에 추가</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>앱처럼 전체화면 · 광고 없음</p>
+                  <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{isKo2 ? "홈 화면에 추가" : "Add to Home Screen"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo2 ? "앱처럼 전체화면 · 광고 없음" : "Full-screen like an app · Ad-free"}</p>
                 </div>
               </div>
 
               {/* Address bar visual */}
               <div className="rounded-2xl p-3 mb-4" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid var(--border)" }}>
                 <p className="text-[10px] text-center mb-2 font-semibold" style={{ color: "var(--muted)" }}>
-                  Safari 주소창 옆 ··· 버튼을 탭하세요
+                  {isKo2 ? "Safari 주소창 옆 ··· 버튼을 탭하세요" : "Tap the ··· button next to the Safari address bar"}
                 </p>
                 <div className="flex items-center gap-2 px-2 py-1.5 rounded-xl" style={{ background: "#1c1c1e" }}>
                   <div className="flex-1 flex items-center gap-1.5 px-2.5 py-1 rounded-lg" style={{ background: "#2c2c2e" }}>
@@ -441,17 +447,22 @@ function InstallSection() {
                 </div>
                 <div className="flex items-center justify-center gap-1.5 mt-2">
                   <div className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--mint)" }} />
-                  <span className="text-[10px] font-semibold" style={{ color: "var(--mint)" }}>초록 표시 ··· 버튼 탭!</span>
+                  <span className="text-[10px] font-semibold" style={{ color: "var(--mint)" }}>{isKo2 ? "초록 표시 ··· 버튼 탭!" : "Tap the green ··· button!"}</span>
                 </div>
               </div>
 
               {/* 4 Steps */}
               <div className="flex flex-col gap-2.5 mb-4">
-                {([
+                {(isKo2 ? [
                   ["1", "···", "주소창 옆 ··· 탭"],
                   ["2", "⬆️", "공유 탭"],
                   ["3", "⋯",  "더보기(···) 탭"],
                   ["4", "➕", "홈 화면에 추가 탭 → 완료!"],
+                ] : [
+                  ["1", "···", "Tap ··· next to the address bar"],
+                  ["2", "⬆️", "Tap Share"],
+                  ["3", "⋯",  "Tap More (···)"],
+                  ["4", "➕", "Tap Add to Home Screen → Done!"],
                 ] as [string, string, string][]).map(([step, icon, text]) => (
                   <div key={step} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[11px] font-bold"
@@ -471,7 +482,7 @@ function InstallSection() {
                 onClick={() => setShowConfirm(false)}
                 className="w-full py-3 rounded-xl text-sm font-bold text-black"
                 style={{ background: "var(--mint)" }}>
-                확인
+                {isKo2 ? "확인" : "Got it"}
               </button>
             </div>
           </div>
@@ -513,16 +524,21 @@ function InstallSection() {
                 <span className="text-2xl">🔖</span>
               </div>
               <div>
-                <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>즐겨찾기 저장</p>
-                <p className="text-[11px]" style={{ color: "var(--muted)" }}>빠르게 Investus로 돌아오세요</p>
+                <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{isKo2 ? "즐겨찾기 저장" : "Save Bookmark"}</p>
+                <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo2 ? "빠르게 Investus로 돌아오세요" : "Quick access to Investus"}</p>
               </div>
             </div>
             <div className="flex flex-col gap-2.5 mb-5">
-              {([
+              {(isKo2 ? [
                 ["🍎", "Mac / Safari", "⌘ + D"],
                 ["🪟", "Windows / Chrome", "Ctrl + D"],
                 ["⭐", "주소창 별표", "주소창 오른쪽 ★ 클릭"],
                 ["📌", "Arc / Edge / Firefox", "동일하게 ⌘D / Ctrl+D"],
+              ] : [
+                ["🍎", "Mac / Safari", "⌘ + D"],
+                ["🪟", "Windows / Chrome", "Ctrl + D"],
+                ["⭐", "Address bar star", "Click the ★ on the right side"],
+                ["📌", "Arc / Edge / Firefox", "Same — ⌘D / Ctrl+D"],
               ] as [string, string, string][]).map(([icon, label, tip]) => (
                 <div key={label} className="flex items-center gap-3 px-3 py-2.5 rounded-xl"
                   style={{ background: "rgba(255,255,255,0.04)", border: "1px solid var(--border)" }}>
@@ -537,7 +553,7 @@ function InstallSection() {
             <button onClick={() => setShowConfirm(false)}
               className="w-full py-3 rounded-xl text-sm font-bold text-black"
               style={{ background: "var(--mint)" }}>
-              확인
+              {isKo2 ? "확인" : "Got it"}
             </button>
           </div>
         </div>
@@ -588,6 +604,8 @@ type AuthMode = "idle" | "login" | "signup" | "reset";
 function AuthSection() {
   const t = useLocale();
   const au = t.more.auth;
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
   const { user, login, signup, logout, resetPassword, loginWithOAuth, loginWithNaver } = useAuth();
   const [mode,         setMode]         = useState<AuthMode>("idle");
   const [email,        setEmail]        = useState("");
@@ -631,7 +649,7 @@ function AuthSection() {
   const handleSignup = async () => {
     if (!email.includes("@")) { setError(au.errEmail); return; }
     if (pw.length < 6) { setError(au.errPw); return; }
-    if (!termsAgreed) { setError("이용약관 및 개인정보처리방침에 동의해주세요."); return; }
+    if (!termsAgreed) { setError(isKo ? "이용약관 및 개인정보처리방침에 동의해주세요." : "Please agree to the Terms of Service and Privacy Policy."); return; }
     setLoading(true);
     setError("");
     const result = await signup(email, pw);
@@ -739,7 +757,7 @@ function AuthSection() {
       >
         <div className="flex items-center justify-between mb-5">
           <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
-            {mode === "login" ? au.formLogin : mode === "signup" ? au.formSignup : "비밀번호 찾기"}
+            {mode === "login" ? au.formLogin : mode === "signup" ? au.formSignup : (isKo ? "비밀번호 찾기" : "Reset Password")}
           </h2>
           <button onClick={closeForm}>
             <X className="w-5 h-5" style={{ color: "var(--muted)" }} />
@@ -750,25 +768,25 @@ function AuthSection() {
         {confirmEmail ? (
           <div className="flex flex-col items-center gap-4 py-4 mb-3">
             <span className="text-3xl">📬</span>
-            <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>이메일을 확인해주세요</p>
+            <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>{isKo ? "이메일을 확인해주세요" : "Check your email"}</p>
             <p className="text-xs text-center" style={{ color: "var(--muted)" }}>
-              {email}로 인증 링크를 보냈습니다.<br />링크를 클릭하면 자동으로 로그인됩니다.
+              {isKo ? <>{email}로 인증 링크를 보냈습니다.<br />링크를 클릭하면 자동으로 로그인됩니다.</> : <>We sent a confirmation link to {email}.<br />Click the link to log in automatically.</>}
             </p>
             <button onClick={() => { setConfirmEmail(false); setMode("login"); }}
               className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
-              로그인으로 이동
+              {isKo ? "로그인으로 이동" : "Go to Login"}
             </button>
           </div>
         ) : resetSent ? (
           <div className="flex flex-col items-center gap-4 py-4 mb-3">
             <span className="text-3xl">✉️</span>
-            <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>재설정 메일을 보냈습니다</p>
+            <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>{isKo ? "재설정 메일을 보냈습니다" : "Reset email sent"}</p>
             <p className="text-xs text-center" style={{ color: "var(--muted)" }}>
-              {email}로 비밀번호 재설정 링크를 보냈습니다.<br />메일함을 확인해주세요.
+              {isKo ? <>{email}로 비밀번호 재설정 링크를 보냈습니다.<br />메일함을 확인해주세요.</> : <>We sent a password reset link to {email}.<br />Please check your inbox.</>}
             </p>
             <button onClick={() => { setResetSent(false); setMode("login"); }}
               className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
-              로그인으로 이동
+              {isKo ? "로그인으로 이동" : "Go to Login"}
             </button>
           </div>
         ) : (
@@ -796,7 +814,7 @@ function AuthSection() {
                 onChange={(e) => setRememberEmail(e.target.checked)}
                 className="flex-shrink-0"
               />
-              <span className="text-[12px]" style={{ color: "var(--muted)" }}>이메일 저장</span>
+              <span className="text-[12px]" style={{ color: "var(--muted)" }}>{isKo ? "이메일 저장" : "Remember email"}</span>
             </label>
           )}
 
@@ -832,10 +850,11 @@ function AuthSection() {
                 className="mt-0.5 flex-shrink-0"
               />
               <span className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                <Link href="/more/terms" onClick={closeForm} style={{ color: "var(--mint)" }}>이용약관</Link>
-                {" 및 "}
-                <Link href="/more/privacy" onClick={closeForm} style={{ color: "var(--mint)" }}>개인정보처리방침</Link>
-                에 동의합니다. (만 14세 이상)
+                {isKo ? (
+                  <><Link href="/more/terms" onClick={closeForm} style={{ color: "var(--mint)" }}>이용약관</Link>{" 및 "}<Link href="/more/privacy" onClick={closeForm} style={{ color: "var(--mint)" }}>개인정보처리방침</Link>에 동의합니다. (만 14세 이상)</>
+                ) : (
+                  <>I agree to the <Link href="/more/terms" onClick={closeForm} style={{ color: "var(--mint)" }}>Terms of Service</Link>{" and "}<Link href="/more/privacy" onClick={closeForm} style={{ color: "var(--mint)" }}>Privacy Policy</Link>. (Age 14+)</>
+                )}
               </span>
             </label>
           )}
@@ -847,7 +866,7 @@ function AuthSection() {
               className="text-[11px] mb-3 text-left w-full"
               style={{ color: "var(--muted)" }}
             >
-              비밀번호를 잊으셨나요? <span style={{ color: "var(--mint)" }}>비밀번호 찾기</span>
+              {isKo ? "비밀번호를 잊으셨나요?" : "Forgot your password?"} <span style={{ color: "var(--mint)" }}>{isKo ? "비밀번호 찾기" : "Reset"}</span>
             </button>
           )}
 
@@ -859,7 +878,7 @@ function AuthSection() {
             className="w-full py-3 rounded-xl text-sm font-bold text-black mb-3 active:opacity-80 transition-opacity disabled:opacity-50"
             style={{ background: "var(--mint)" }}
           >
-            {loading ? "처리 중..." : mode === "login" ? au.formLogin : mode === "signup" ? au.formSignup : "재설정 메일 보내기"}
+            {loading ? (isKo ? "처리 중..." : "Processing...") : mode === "login" ? au.formLogin : mode === "signup" ? au.formSignup : (isKo ? "재설정 메일 보내기" : "Send Reset Email")}
           </button>
 
           {/* 소셜 로그인 (login / signup 모드에서만) */}
@@ -867,7 +886,7 @@ function AuthSection() {
             <div className="mb-3">
               <div className="flex items-center gap-2 mb-3">
                 <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
-                <span className="text-[11px]" style={{ color: "var(--muted)" }}>또는</span>
+                <span className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "또는" : "or"}</span>
                 <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
               </div>
               <button
@@ -881,7 +900,7 @@ function AuthSection() {
                   <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                   <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                 </svg>
-                Google로 계속하기
+                {isKo ? "Google로 계속하기" : "Continue with Google"}
               </button>
               <button
                 onClick={() => loginWithOAuth("kakao")}
@@ -891,7 +910,7 @@ function AuthSection() {
                 <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="#3C1E1E" d="M12 3C6.48 3 2 6.72 2 11.28c0 2.9 1.74 5.45 4.36 6.97l-.9 3.35 3.94-2.6c.83.15 1.68.23 2.6.23 5.52 0 10-3.72 10-8.28C22 6.72 17.52 3 12 3z"/>
                 </svg>
-                카카오로 계속하기
+                {isKo ? "카카오로 계속하기" : "Continue with Kakao"}
               </button>
               <button
                 onClick={loginWithNaver}
@@ -901,7 +920,7 @@ function AuthSection() {
                 <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="#fff" d="M16.27 4H7.73C5.22 4 3.2 6.02 3.2 8.53v6.94C3.2 17.98 5.22 20 7.73 20h8.54c2.51 0 4.53-2.02 4.53-4.53V8.53C20.8 6.02 18.78 4 16.27 4zm-1.1 11.38h-1.9l-2.2-3.42v3.42H9.17V8.62h1.9l2.2 3.42V8.62h1.9v6.76z"/>
                 </svg>
-                네이버로 계속하기
+                {isKo ? "네이버로 계속하기" : "Continue with Naver"}
               </button>
             </div>
           )}
@@ -909,7 +928,7 @@ function AuthSection() {
           {/* mode 전환 */}
           {mode === "reset" ? (
             <button onClick={() => { setMode("login"); setError(""); }} className="w-full py-2 text-xs" style={{ color: "var(--muted)" }}>
-              로그인으로 돌아가기
+              {isKo ? "로그인으로 돌아가기" : "Back to Login"}
             </button>
           ) : (
             <button onClick={closeForm} className="w-full py-2 text-xs" style={{ color: "var(--muted)" }}>
@@ -957,7 +976,7 @@ function AuthSection() {
         </div>
         <div className="flex items-center gap-2 mb-3">
           <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
-          <span className="text-[11px]" style={{ color: "var(--muted)" }}>소셜 로그인</span>
+          <span className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "소셜 로그인" : "Social login"}</span>
           <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
         </div>
         <div className="flex gap-2">
@@ -982,7 +1001,7 @@ function AuthSection() {
             <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
               <path fill="#3C1E1E" d="M12 3C6.48 3 2 6.72 2 11.28c0 2.9 1.74 5.45 4.36 6.97l-.9 3.35 3.94-2.6c.83.15 1.68.23 2.6.23 5.52 0 10-3.72 10-8.28C22 6.72 17.52 3 12 3z"/>
             </svg>
-            카카오
+            Kakao
           </button>
           <button
             onClick={loginWithNaver}
@@ -992,7 +1011,7 @@ function AuthSection() {
             <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
               <path fill="#fff" d="M16.27 4H7.73C5.22 4 3.2 6.02 3.2 8.53v6.94C3.2 17.98 5.22 20 7.73 20h8.54c2.51 0 4.53-2.02 4.53-4.53V8.53C20.8 6.02 18.78 4 16.27 4zm-1.1 11.38h-1.9l-2.2-3.42v3.42H9.17V8.62h1.9l2.2 3.42V8.62h1.9v6.76z"/>
             </svg>
-            네이버
+            Naver
           </button>
         </div>
       </div>
@@ -1070,23 +1089,25 @@ export default function MorePage() {
             {/* 화면 테마 — 라이트 기본 / 다크 선택 */}
             <ThemeSettingsCard locale={isKo ? "ko" : "en"} />
 
-            {/* Investus Pro — 가격 상세 */}
-            <ProPricingSection />
-            <EbookProductSection />
+            {/* Investus Pro — 가격 상세 (한국어 사용자에게만 표시) */}
+            {isKo && <ProPricingSection />}
+            {isKo && <EbookProductSection />}
 
-            <div className="mb-4">
-              <Link
-                href="/shop"
-                className="flex items-center justify-between rounded-2xl border px-4 py-3.5 active:opacity-80"
-                style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.35)" }}
-              >
-                <div>
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>🛒 유료 상품 스토어</p>
-                  <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>Pro 구독 · 전자책 · 결제 경로 안내</p>
-                </div>
-                <ChevronRight className="w-4 h-4 opacity-40" style={{ color: "var(--muted)" }} />
-              </Link>
-            </div>
+            {isKo && (
+              <div className="mb-4">
+                <Link
+                  href="/shop"
+                  className="flex items-center justify-between rounded-2xl border px-4 py-3.5 active:opacity-80"
+                  style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.35)" }}
+                >
+                  <div>
+                    <p className="text-sm font-bold" style={{ color: "var(--text)" }}>🛒 유료 상품 스토어</p>
+                    <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>Pro 구독 · 전자책 · 결제 경로 안내</p>
+                  </div>
+                  <ChevronRight className="w-4 h-4 opacity-40" style={{ color: "var(--muted)" }} />
+                </Link>
+              </div>
+            )}
 
             {/* Mobile: creator + brand card here */}
             <div className="lg:hidden">

@@ -425,60 +425,12 @@ const mockFutures: FutureItem[] = [
 ];
 
 const mockNews: NewsItem[] = [
-  {
-    id: 1,
-    title: "Fed, 인플레이션 우려 속 금리 인하 신중론 재확인",
-    summary: "6월 금리 인하 가능성 낮아져, 2% 목표 달성까지 인내 필요 시사.",
-    source: "Reuters",
-    time: "2시간 전",
-    category: "거시경제",
-    categoryColor: "blue",
-  },
-  {
-    id: 2,
-    title: "엔비디아, AI 칩 수요 급증으로 1분기 실적 대폭 상회",
-    summary: "데이터센터 매출 최고치 경신, 블랙웰 GPU 수요 폭발적 증가.",
-    source: "Bloomberg",
-    time: "3시간 전",
-    category: "실적",
-    categoryColor: "mint",
-  },
-  {
-    id: 3,
-    title: "애플, 아이폰 17에 대규모 온디바이스 AI 기능 탑재 예정",
-    summary: "온디바이스 AI 기능 탑재로 아이폰 17 슈퍼사이클 기대감 고조.",
-    source: "WSJ",
-    time: "5시간 전",
-    category: "기술",
-    categoryColor: "purple",
-  },
-  {
-    id: 4,
-    title: "테슬라, EV 경쟁 심화로 1분기 인도량 예상치 하회",
-    summary: "가격 경쟁 심화 및 중국 내 판매 둔화가 주요 원인으로 지목.",
-    source: "CNBC",
-    time: "6시간 전",
-    category: "자동차",
-    categoryColor: "red",
-  },
-  {
-    id: 5,
-    title: "S&P 500, 빅테크 랠리에 힘입어 사상 최고가 경신",
-    summary: "AI 투자 확대 기대감과 실적 호조가 지수를 새 고점으로 이끌어.",
-    source: "MarketWatch",
-    time: "8시간 전",
-    category: "시장",
-    categoryColor: "yellow",
-  },
-  {
-    id: 6,
-    title: "버크셔 해서웨이, 현금 보유액 사상 최대 $1,890억 기록",
-    summary: "밸류에이션 부담 고조로 마땅한 인수 대상 없다며 현금 유지.",
-    source: "Fortune",
-    time: "10시간 전",
-    category: "투자",
-    categoryColor: "orange",
-  },
+  { id: 1, title: "Fed reaffirms caution on rate cuts amid persistent inflation concerns", summary: "June rate cut odds fade as officials signal patience until 2% target is reached.", source: "Reuters", time: "2h ago", category: "Macro", categoryColor: "blue" },
+  { id: 2, title: "Nvidia blows past Q1 estimates on surging AI chip demand", summary: "Data center revenue hits record high; Blackwell GPU demand described as exceptional.", source: "Bloomberg", time: "3h ago", category: "Earnings", categoryColor: "mint" },
+  { id: 3, title: "Apple to pack major on-device AI features into iPhone 17", summary: "On-device AI integration fuels supercycle expectations heading into fall launch.", source: "WSJ", time: "5h ago", category: "Tech", categoryColor: "purple" },
+  { id: 4, title: "Tesla Q1 deliveries miss estimates as EV competition intensifies", summary: "Price wars and China sales slowdown cited as key headwinds.", source: "CNBC", time: "6h ago", category: "Auto", categoryColor: "red" },
+  { id: 5, title: "S&P 500 hits all-time high on big tech rally", summary: "AI spending optimism and strong earnings push the index to a fresh record.", source: "MarketWatch", time: "8h ago", category: "Market", categoryColor: "yellow" },
+  { id: 6, title: "Berkshire Hathaway cash pile reaches record $189B", summary: "Buffett says stretched valuations leave few attractive acquisition targets.", source: "Fortune", time: "10h ago", category: "Investing", categoryColor: "orange" },
 ];
 
 // ── API Functions ──────────────────────────────────────────────────────────
@@ -595,21 +547,21 @@ export async function searchQuotes(query: string): Promise<Quote[]> {
 // ── Category detection from Finnhub news headline ─────────────────────────
 function detectCategory(headline: string): { category: string; categoryColor: NewsItem["categoryColor"] } {
   const h = headline.toLowerCase();
-  if (/\bfed\b|fomc|\brate\b|gdp|economy|inflation|cpi|macro|fiscal/.test(h)) return { category: "거시경제", categoryColor: "mint" };
-  if (/earning|revenue|profit|\beps\b|quarter|guidance|forecast/.test(h))      return { category: "실적",     categoryColor: "red" };
-  if (/\bai\b|artificial intelligence|\btech\b|software|\bchip\b|nvidia|semiconductor/.test(h)) return { category: "기술", categoryColor: "blue" };
-  if (/\bev\b|electric vehicle|automaker|automotive|\btesla\b|\bford\b|\bgm\b|\bcar\b/.test(h)) return { category: "자동차", categoryColor: "yellow" };
-  if (/\boil\b|energy|\bgas\b|crude|\bopec\b|exxon|chevron/.test(h))           return { category: "에너지",   categoryColor: "orange" };
-  if (/\bbank\b|finance|crypto|bitcoin|ether|currency|forex/.test(h))          return { category: "금융",     categoryColor: "purple" };
-  if (/invest|\bfund\b|portfolio|warren|buffett|\betf\b/.test(h))              return { category: "투자",     categoryColor: "orange" };
-  return { category: "시장", categoryColor: "blue" };
+  if (/\bfed\b|fomc|\brate\b|gdp|economy|inflation|cpi|macro|fiscal/.test(h)) return { category: "Macro",    categoryColor: "mint" };
+  if (/earning|revenue|profit|\beps\b|quarter|guidance|forecast/.test(h))      return { category: "Earnings", categoryColor: "red" };
+  if (/\bai\b|artificial intelligence|\btech\b|software|\bchip\b|nvidia|semiconductor/.test(h)) return { category: "Tech",   categoryColor: "blue" };
+  if (/\bev\b|electric vehicle|automaker|automotive|\btesla\b|\bford\b|\bgm\b|\bcar\b/.test(h)) return { category: "Auto",   categoryColor: "yellow" };
+  if (/\boil\b|energy|\bgas\b|crude|\bopec\b|exxon|chevron/.test(h))           return { category: "Energy",   categoryColor: "orange" };
+  if (/\bbank\b|finance|crypto|bitcoin|ether|currency|forex/.test(h))          return { category: "Finance",  categoryColor: "purple" };
+  if (/invest|\bfund\b|portfolio|warren|buffett|\betf\b/.test(h))              return { category: "Investing", categoryColor: "orange" };
+  return { category: "Market", categoryColor: "blue" };
 }
 
-function relTimeKo(unix: number): string {
+function relTimeEn(unix: number): string {
   const s = Math.floor(Date.now() / 1000 - unix);
-  if (s < 3600)  return `${Math.floor(s / 60)}분 전`;
-  if (s < 86400) return `${Math.floor(s / 3600)}시간 전`;
-  return `${Math.floor(s / 86400)}일 전`;
+  if (s < 3600)  return `${Math.max(1, Math.floor(s / 60))}m ago`;
+  if (s < 86400) return `${Math.floor(s / 3600)}h ago`;
+  return `${Math.floor(s / 86400)}d ago`;
 }
 
 export async function getNews(): Promise<NewsItem[]> {
@@ -618,16 +570,14 @@ export async function getNews(): Promise<NewsItem[]> {
     const items = await fetchFinnhubMarketNews();
     if (items.length > 0) {
       const raw = items.slice(0, 12);
-      const { translateHeadlines } = await import("./translate");
-      const titles = await translateHeadlines(raw.map((n) => n.headline));
       return raw.map((n, i) => {
         const { category, categoryColor } = detectCategory(n.headline);
         return {
           id:            n.id || i,
-          title:         titles[i] ?? n.headline,
+          title:         n.headline,
           summary:       n.summary || "",
           source:        n.source,
-          time:          relTimeKo(n.datetime),
+          time:          relTimeEn(n.datetime),
           category,
           categoryColor,
           url:           n.url   || undefined,
