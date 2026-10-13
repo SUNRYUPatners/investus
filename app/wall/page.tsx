@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useRouter } from "next/navigation";
-import { useLocale } from "@/contexts/LocaleContext";
-import { getT } from "@/lib/i18n";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
+import { getT, type Locale } from "@/lib/i18n";
 import Link from "next/link";
 import { ThumbsUp, MessageCircle, Lock, ShieldCheck, Upload, User, Sparkles, Users, TrendingUp, Send, X, EyeOff, FileCheck, Heart, Pencil, Check } from "lucide-react";
 import { Header } from "@/components/Header";
@@ -30,6 +30,39 @@ async function authHeaders(extra: Record<string, string> = {}): Promise<HeadersI
 }
 
 type WallT = ReturnType<typeof useLocale>["wall"];
+
+function LangToggle({ value, onChange }: { value: Locale; onChange: (v: Locale) => void }) {
+  return (
+    <div
+      className="flex rounded-full border overflow-hidden flex-shrink-0"
+      style={{ borderColor: "var(--border)" }}
+      role="group"
+      aria-label="언어 선택"
+    >
+      {([
+        { id: "en" as const, label: "EN" },
+        { id: "ko" as const, label: "한글" },
+      ]).map((opt) => {
+        const active = value === opt.id;
+        return (
+          <button
+            key={opt.id}
+            type="button"
+            onClick={() => onChange(opt.id)}
+            className="text-[10px] font-bold px-2.5 py-0.5"
+            style={{
+              background: active ? "var(--mint)" : "transparent",
+              color: active ? "var(--on-accent)" : "var(--muted)",
+            }}
+            aria-pressed={active}
+          >
+            {opt.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
 
 // Same formula as server — deterministic anonymous nickname from email
 function makeAnonNick(email: string): string {
@@ -523,19 +556,30 @@ function computeDefaultTab(): MainTab {
 export default function WallPage() {
   const { user, verify, loginWithOAuth, loginWithNaver } = useAuth();
   const t  = useLocale();
+  const localeCode = useLocaleCode();
   const market = useMarket();
-  // 한국·안전자산·부동산 미리보기는 피드 UI 한글 고정 (쿠키 en이어도)
-  const wBase = market === "us" ? t.wall : getT("ko").wall;
-  const w = market === "us" ? wBase : {
+  const [viewLang, setViewLang] = useState<Locale>(localeCode);
+  const wBase = getT(viewLang).wall;
+  const w: WallT = {
     ...wBase,
-    analystDesc: market === "kr"
-      ? "공개석상에서 못하는 말, 여기선 할 수 있어요.\n코스피·코스닥 종목을 중심으로 애널리스트 의견을 나눕니다."
-      : market === "safe"
-        ? "공개석상에서 못하는 말, 여기선 할 수 있어요.\n비트코인·이더·금·은 등 안전자산을 중심으로 나눕니다."
-        : "공개석상에서 못하는 말, 여기선 할 수 있어요.\n매매·전세·정책 이슈를 중심으로 나눕니다.",
-    notice: market === "kr"
-      ? "종목토론은 보유·관심 인증 후 참여할 수 있어요. 티커 대신 종목명으로 표시됩니다."
-      : wBase.notice,
+    ...(market !== "us" && {
+      analystDesc: market === "kr"
+        ? (viewLang === "en"
+            ? "Say what you can't say in public.\nFocused on KOSPI & KOSDAQ stocks — Analyst tab only."
+            : "공개석상에서 못하는 말, 여기선 할 수 있어요.\n코스피·코스닥 종목을 중심으로 애널리스트 의견을 나눕니다.")
+        : market === "safe"
+          ? (viewLang === "en"
+              ? "Say what you can't say in public.\nFocused on Bitcoin, Ether, Gold, Silver and other safe assets."
+              : "공개석상에서 못하는 말, 여기선 할 수 있어요.\n비트코인·이더·금·은 등 안전자산을 중심으로 나눕니다.")
+          : (viewLang === "en"
+              ? "Say what you can't say in public.\nFocused on real estate: trading, leasing, and policy issues."
+              : "공개석상에서 못하는 말, 여기선 할 수 있어요.\n매매·전세·정책 이슈를 중심으로 나눕니다."),
+      notice: market === "kr"
+        ? (viewLang === "en"
+            ? "Stock discussion requires holdings verification. Stocks are shown by name instead of ticker."
+            : "종목토론은 보유·관심 인증 후 참여할 수 있어요. 티커 대신 종목명으로 표시됩니다.")
+        : wBase.notice,
+    }),
   };
   const seeds = useMemo(() => getWallSeeds(market), [market]);
   const MOCK_POSTS = seeds.posts;
@@ -1200,6 +1244,8 @@ export default function WallPage() {
             <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{w.pageTitle}</h1>
             <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{w.pageSubtitle}</p>
           </div>
+          <div className="flex items-center gap-2">
+            <LangToggle value={viewLang} onChange={setViewLang} />
           {mainTab === "creator" && (
             hasCreatorProfile ? (
               <Link href="/creator/dashboard"
@@ -1222,6 +1268,7 @@ export default function WallPage() {
               {w.anonBadge}
             </div>
           )}
+          </div>
         </div>
 
         {/* Main tab switcher */}
