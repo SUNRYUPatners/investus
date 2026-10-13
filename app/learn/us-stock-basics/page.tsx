@@ -1,23 +1,17 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "미국주식 투자 완전 입문 가이드 — 처음 시작하는 투자자를 위한 A to Z | 인베스트어스",
-  description: "미국주식 투자를 처음 시작하는 분을 위한 완전 입문 가이드. 왜 미국주식인지, 어떻게 계좌를 개설하는지, 어떤 종목부터 시작해야 하는지, 투자 시 주의해야 할 점까지 단계별로 설명합니다.",
-  keywords: ["미국주식 입문", "미국주식 시작", "미국주식 투자 방법", "해외주식 계좌", "미국주식 초보"],
-  alternates: { canonical: "https://www.investus.kr/learn/us-stock-basics" },
-  openGraph: {
-    title: "미국주식 투자 완전 입문 가이드 | 인베스트어스",
-    description: "미국주식 첫 투자를 위한 단계별 가이드 — 계좌 개설부터 종목 선택까지",
-    url: "https://www.investus.kr/learn/us-stock-basics",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function UsStockBasicsPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/us-stock-basics")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
@@ -26,7 +20,7 @@ export default function UsStockBasicsPage() {
         {/* Back */}
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
 
@@ -34,21 +28,27 @@ export default function UsStockBasicsPage() {
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(16,185,129,0.15)", color: "#10b981" }}>입문</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 18분</span>
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            미국주식 투자 완전 입문 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            처음 미국주식을 시작하는 투자자를 위한 A to Z 가이드입니다.
-            왜 미국주식인지, 무엇부터 시작해야 하는지, 어떤 실수를 피해야 하는지까지 단계별로 정리했습니다.
+            {isKo
+              ? "처음 미국주식을 시작하는 투자자를 위한 A to Z 가이드입니다. 왜 미국주식인지, 무엇부터 시작해야 하는지, 어떤 실수를 피해야 하는지까지 단계별로 정리했습니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
-
+          {isKo ? (
+            <>
           {/* Section 1 */}
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
@@ -230,10 +230,6 @@ export default function UsStockBasicsPage() {
               수수료는 증권사마다 다릅니다. 매매 수수료(보통 0.07%~0.25%대), 환전 스프레드, 최소 환전 단위를
               비교하세요. &ldquo;수수료 0원&rdquo; 이벤트는 기간·한도가 있는 경우가 많아 이벤트 종료 후 조건을 다시 확인해야 합니다.
             </p>
-            <p className="text-sm leading-relaxed mb-3">
-              소수점 거래(1주 미만)를 지원하는 증권사도 있습니다. 고가 종목(예: 메가캡)을 소액으로 시작할 때 유용하지만,
-              의결권·배당 처리 방식이 1주 단위와 다를 수 있으니 약관을 읽으세요.
-            </p>
             <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
               <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>계좌 개설 체크리스트</p>
               <ul className="text-sm leading-relaxed list-disc pl-5 space-y-1">
@@ -273,11 +269,6 @@ export default function UsStockBasicsPage() {
               달러코스트애버리징(DCA)이 입문에 잘 맞습니다. 고점에 전액을 넣는 실수를 줄이고,
               환율·시세 변동을 시간에 분산합니다.
             </p>
-            <p className="text-sm leading-relaxed mb-3">
-              예시: 매달 30만 원을 VOO 또는 SPY에 12개월 적립. 어떤 달은 주가가 높아 수량이 적고,
-              어떤 달은 낮아 수량이 많아집니다. 평균 단가는 한 번에 산 경우보다 완만해지는 경우가 많습니다.
-              (항상 더 높은 수익을 보장하지는 않습니다. 강한 일방 상승장에서는 일시 목돈 투자가 유리할 수도 있습니다.)
-            </p>
             <p className="text-sm leading-relaxed">
               자세한 원리와 주의점은 <Link href="/learn/dca" style={{ color: "var(--mint)" }}>적립식 투자 가이드</Link>에서 다룹니다.
             </p>
@@ -309,13 +300,134 @@ export default function UsStockBasicsPage() {
             ⚠️ 이 글은 교육 목적의 투자 정보로, 특정 종목의 매수·매도 권유가 아닙니다.
             투자 결과에 대한 책임은 투자자 본인에게 있으며, 모든 투자는 원금 손실의 위험이 있습니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why US Stocks?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The US equity market accounts for roughly 42% of global market capitalization, making it the world&apos;s largest and most liquid capital market. Companies like Apple, NVIDIA, Microsoft, Amazon, Alphabet, and Meta — global leaders across every major industry — are all listed on US exchanges.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              The combined market cap of the S&P 500&apos;s 500 companies is roughly $45 trillion, dwarfing most other markets. For investors looking for long-term growth, global diversification, and access to innovative companies, US stocks offer a compelling opportunity.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>3 Core Advantages of US Stocks</p>
+              <div className="flex flex-col gap-2">
+                {[
+                  ["🌐 Market Scale", "World-class liquidity — buy and sell any time during market hours"],
+                  ["🏆 Company Quality", "Apple, NVIDIA, Microsoft — the world&apos;s top businesses"],
+                  ["📊 Transparent Disclosure", "SEC regulations ensure full public access to financial data"],
+                ].map(([t, d]) => (
+                  <div key={t} className="flex gap-2 text-sm">
+                    <span className="font-bold flex-shrink-0" style={{ color: "var(--text)", minWidth: 110 }}>{t}</span>
+                    <span>{d}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Trading Hours</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The NYSE and NASDAQ are open Monday–Friday, 9:30 AM to 4:00 PM Eastern Time (ET). Pre-market trading runs from 4:00 AM ET, and after-hours extends to 8:00 PM ET — but liquidity is much thinner outside regular hours.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              Most beginners should stick to regular session trading. Wide bid-ask spreads and lower volume during extended hours can lead to unfavorable fills, especially for less liquid stocks.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
+              <p className="text-xs font-semibold mb-1" style={{ color: "var(--mint)" }}>💡 Investus Tip</p>
+              <p className="text-sm">Check the Futures Map on the <Link href="/" style={{ color: "var(--mint)" }}>Home tab</Link> each morning to see how US futures traded overnight — a quick market temperature check before the open.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What to Buy First</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The most common beginner mistake is hunting for the single best stock. Before picking individual names, it helps to understand the market broadly. The most recommended first investment for new investors is an S&P 500 index ETF — SPY, VOO, or IVV — which gives you instant diversification across 500 large US companies.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>Recommended Progression</p>
+              <div className="flex flex-col gap-2">
+                {[
+                  ["Step 1", "S&P 500 ETF (SPY/VOO) — broad market exposure"],
+                  ["Step 2", "Mega-cap individual stocks — Apple, Microsoft, NVIDIA"],
+                  ["Step 3", "Growth leaders in sectors you understand"],
+                  ["Step 4", "Small/mid-cap stocks — after building experience"],
+                ].map(([step, desc]) => (
+                  <div key={step} className="flex gap-3 text-sm items-start">
+                    <span className="font-bold flex-shrink-0 px-2 py-0.5 rounded text-[10px]"
+                      style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>
+                      {step}
+                    </span>
+                    <span className="leading-snug">{desc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Currency Risk</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              US stocks are priced in dollars. If you invest from a non-USD currency, exchange rate moves affect your returns in two directions — a strengthening dollar boosts your local-currency gains, while a weakening dollar reduces them. Over the long run, the US dollar has historically maintained its role as the world&apos;s reserve currency.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Rather than trying to time currency moves, most long-term investors accept currency exposure as part of owning global assets. Short-term fluctuations matter less than the underlying performance of your investments over years or decades.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>5 Mistakes to Avoid</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["① Chasing hot themes", "Stocks trending on social media or news are usually already priced in. Buying after a big move is often buying the top."],
+                ["② Concentrating in one stock", "Even the best-looking stock carries company-specific risk. Keep any single position to a reasonable portion of your portfolio."],
+                ["③ Holding without a stop rule", "Stocks can fall 50%+ and never recover. Decide your pain threshold before you buy, not after."],
+                ["④ Starting with leveraged ETFs", "3× ETFs like TQQQ amplify gains AND losses, and volatility decay erodes long-term value even when the index is flat."],
+                ["⑤ Reacting to news headlines", "By the time a story hits the news, the market has already moved. Buying on good headlines and selling on bad ones typically means buying high and selling low."],
+              ].map(([title, desc]) => (
+                <div key={title} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1.5" style={{ color: "var(--text)" }}>{title}</p>
+                  <p className="text-[12px] leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Dollar-Cost Averaging (DCA)</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              If investing a lump sum feels daunting, dollar-cost averaging — investing a fixed amount on a regular schedule — is a proven way to start. By buying consistently each month regardless of price, you naturally buy more shares when prices are low and fewer when they are high, smoothing your average cost over time.
+            </p>
+            <p className="text-sm leading-relaxed">
+              DCA is especially powerful when paired with a low-cost S&P 500 ETF and automatic reinvestment of dividends. It removes the guesswork of timing the market and helps you stay invested through volatility. See the <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA Guide</Link> for more detail.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Your Daily 5-Minute Routine with Investus</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Check the <Link href="/" style={{ color: "var(--mint)" }}>Home</Link> tab for futures, index levels, fear/greed, and the Buffett Indicator — get market temperature, not a buy signal.</li>
+              <li>Skim the daily report in <Link href="/insight" style={{ color: "var(--mint)" }}>Insight</Link> for context. Don&apos;t trade on one-line summaries.</li>
+              <li>If you have a stock on your watchlist, check its chart and news in <Link href="/search" style={{ color: "var(--mint)" }}>Search</Link>, then log your position in the <Link href="/portfolio" style={{ color: "var(--mint)" }}>Portfolio</Link> tab.</li>
+            </ol>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not a recommendation to buy or sell any security. All investments carry risk of loss.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         {/* Next articles */}
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/sp500" style={{ textDecoration: "none" }}>
@@ -323,8 +435,8 @@ export default function UsStockBasicsPage() {
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">📈</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>S&P500 완전 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>미국 경제의 온도계를 읽는 법</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "S&P500 완전 가이드" : "Complete S&P 500 Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "미국 경제의 온도계를 읽는 법" : "The US market benchmark explained"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -334,8 +446,8 @@ export default function UsStockBasicsPage() {
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">📦</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>미국 ETF 완전 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>SPY·VOO·QQQ 고르는 법</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "미국 ETF 완전 가이드" : "Complete US ETF Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "SPY·VOO·QQQ 고르는 법" : "SPY, VOO, QQQ explained"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

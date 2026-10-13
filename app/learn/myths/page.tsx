@@ -1,42 +1,48 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "초보 투자 오해 TOP10 | 인베스트어스",
-  description:
-    "미국주식 완전 초보가 자주 믿는 오해 10가지 — 바닥·천장 맞추기, 레버리지 ETF, 버핏 따라 사기, 본전 심리, 고배당, 세금·환율 무시, 차트·옵션 환상, 과매매. 왜 틀렸는지와 대신 할 일.",
-  alternates: { canonical: "https://www.investus.kr/learn/myths" },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function MythsPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/myths")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(248,113,113,0.15)", color: "#f87171" }}>입문</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 26분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            초보 투자 오해 TOP10
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            &ldquo;다들 아는 상식&rdquo;이 계좌를 깎는 경우가 많습니다.
-            주식·ETF가 처음이어도 이해할 수 있게, 각 오해를 <em>왜 믿는지 → 왜 틀렸는지 → 대신 무엇을 할지</em>로 풀었습니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>이 글을 읽는 이유</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -288,8 +294,194 @@ export default function MythsPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 투자 권유가 아닙니다. 예시 숫자는 단순화·세전이며 미래 수익을 보장하지 않습니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why These Myths Persist</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Most beginner investing mistakes come not from a lack of knowledge but from <strong style={{ color: "var(--text)" }}>false conviction</strong>. A single phrase from a social media post or group chat can become an unexamined rule. When losses follow, it is easy to rationalize &ldquo;just a little longer&rdquo; rather than questioning the premise.
+            </p>
+            <p className="text-sm leading-relaxed">
+              The ten patterns below repeat across beginner communities. Use them as a <em>self-skepticism checklist</em>, not as absolute rules.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>1. &ldquo;I Can Call the Top or Bottom&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it feels true:</strong> Looking at a past chart, bottoms are obvious in hindsight. The occasional lucky call gets remembered as skill.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it fails:</strong> A bottom only looks like a bottom after it has passed. Professional fund managers with teams of analysts do not consistently time daily highs and lows. Waiting in cash for a cheaper entry means missing compounding. The cost of being wrong is asymmetric — getting it right once does not offset the months of gains missed.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Instead:</strong> Use <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link> — fixed dates, fixed amounts. &ldquo;Consistently buying&rdquo; beats &ldquo;perfectly timing&rdquo; for most investors.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>2. &ldquo;Leveraged ETFs Compound Like the Index × N&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it feels true:</strong> TQQQ claims 3× Nasdaq 100 exposure. Screens showing huge short-term gains circulate on social media.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it fails:</strong> Leveraged ETFs target 3× the <em>daily</em> return. In volatile markets, the compounding of daily resets produces volatility decay: a +10% day followed by a −9% day leaves a 1× holder near flat but costs a 3× holder roughly 5%. This effect accumulates over years and causes long-term performance to significantly underperform the index multiple.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Instead:</strong> Keep your long-term core in <Link href="/learn/etf" style={{ color: "var(--mint)" }}>low-cost index ETFs</Link> (VOO, SPY, QQQ). If you use leveraged ETFs at all, limit them to a small allocation with a clear exit plan.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>3. &ldquo;Buffett Bought It, So I Should Too&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it feels true:</strong> Attaching a famous name to a stock feels like validation. News headlines amplify this.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it fails:</strong> <Link href="/learn/13f-guide" style={{ color: "var(--mint)" }}>13F filings</Link> are quarter-end snapshots — published 45 days after the period closes. By the time you see the disclosure, the position may already be sold, added to, or hedged. Institutional scale, tax structure, and time horizon are nothing like an individual retail investor&apos;s. Buying one position from a 50-stock portfolio misses the entire thesis.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Instead:</strong> Use institutional filings as idea sources only. Validate independently with <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>financials</Link>, <Link href="/learn/valuation" style={{ color: "var(--mint)" }}>valuation</Link>, and your own <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>buy checklist</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>4. &ldquo;I&apos;ll Sell When I Break Even&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it feels true:</strong> Selling at a loss feels like confirming failure. Waiting for breakeven feels like preserving optionality.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it fails:</strong> Your purchase price is a sunk cost — it cannot be recovered. Forward-looking decisions should be based on expected future return and risk, not the entry price. Anchoring to breakeven keeps capital tied up in a deteriorating thesis and misses better opportunities. Doubling down without a plan is the same cognitive bias.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Instead:</strong> If the reason you bought has disappeared, reduce or exit. Averaging down is only valid when it is part of a predetermined plan, not an emotional response to a loss.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>5. &ldquo;High Dividend Yield = Good Stock&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it feels true:</strong> A 7–8% yield looks like a bank deposit paying monthly. The number is simple.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it fails:</strong> Dividend yield = annual dividend ÷ stock price. When the stock price collapses, the yield number rises — which can indicate a <em>value trap</em> rather than a buying opportunity. Companies can cut or eliminate dividends at any time. A stock yielding 8% may be signaling distress, not generosity.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Instead:</strong> Evaluate dividend sustainability, cash flow coverage, and after-tax yield together. See the <Link href="/learn/dividend" style={{ color: "var(--mint)" }}>Dividend Guide</Link>. Diversified dividend ETFs like SCHD are safer than chasing single high-yielders.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>6. &ldquo;US Stocks Are Tax-Free&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it feels true:</strong> Old phrases like &ldquo;overseas stocks are exempt&rdquo; persist. Brokerage app screens often hide the tax line.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it fails:</strong> Korean residents face capital gains and dividend tax obligations on overseas stocks. The US withholds tax on dividends at source, and Korea has its own capital gains reporting rules once gains exceed the basic deduction. The stated dividend rate and the after-tax amount in your account are different numbers.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Instead:</strong> Always compare on an after-tax basis. See the <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>US Stock Tax Guide</Link> and <Link href="/learn/korea-accounts" style={{ color: "var(--mint)" }}>ISA &amp; Pension Guide</Link>. For large amounts, consult a tax professional.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>7. &ldquo;Exchange Rates Don&apos;t Matter&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it feels true:</strong> Brokerage apps show USD returns prominently. &ldquo;The stock is up 5%, so I&apos;m up 5%.&rdquo;
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it fails:</strong> Salary, spending, and financial goals are in KRW. If the USD/KRW rate falls 7% while your stock is flat, your KRW-denominated portfolio is down 7%. The 2022 period was unusual in that the dollar&apos;s strength partially cushioned Korean investors even as equities fell — but the reverse also happens.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Instead:</strong> Check your KRW return periodically. Use <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link> to also spread your FX entry points. See the <Link href="/learn/usd-krw" style={{ color: "var(--mint)" }}>FX Guide</Link> for hedged vs. unhedged trade-offs.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>8. &ldquo;Chart Signals = Guaranteed Profit&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it feels true:</strong> RSI, golden crosses, and support levels sound scientific. Backtested charts show the signals &ldquo;working.&rdquo;
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it fails:</strong> Technical indicators are derived from past prices — they do not predict the future. Backtests suffer from overfitting (the parameters were selected to work on historical data) and ignore transaction costs, slippage, and taxes. A strategy with 55% win rate can still lose money if the losing trades are larger than the winners.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Instead:</strong> Use <Link href="/learn/technical-analysis" style={{ color: "var(--mint)" }}>technical analysis</Link> as a secondary timing tool for entries and exits. The primary question — what to buy — should be answered by business quality, valuation, and index allocation.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>9. &ldquo;Options Are a Fast Path to Wealth&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it feels true:</strong> Small premiums, large notional exposure, and viral &ldquo;10×&rdquo; screenshots make options appear like easy leverage.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it fails:</strong> Buying options requires you to be right on direction, magnitude, and timing simultaneously. Time decay (theta) erodes value every day you hold. A long call option can expire worthless — 100% loss — even if the stock rises but not enough, or not fast enough. Selling options carries unlimited downside risk without proper hedging.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Instead:</strong> Read the <Link href="/learn/options" style={{ color: "var(--mint)" }}>Options Basics</Link> guide for vocabulary only. Real options trading requires paper trading, rules, and risk management — not FOMO from a screenshot.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>10. &ldquo;Watching Every Day Produces Returns&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it feels true:</strong> Daily monitoring feels professional. App notifications, pre-market moves, and social feeds reinforce &ldquo;diligence = profit.&rdquo;
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why it fails:</strong> Higher monitoring frequency leads to more emotional reactions, more trades, and more costs. Transaction fees, bid-ask spreads, and tax drag compound against you. For a long-term index investor, <em>years of time</em> create returns — not daily information advantages. Even 2% of annual return lost to over-trading creates a massive gap over 30 years.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Instead:</strong> Use Investus for a quick daily temperature check on the home screen and reports. Let <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link> rules handle buy decisions. If you must watch daily, commit to the checklist only — not the order button.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Summary</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Beginners win by <strong style={{ color: "var(--text)" }}>avoiding big mistakes</strong>, not by outpredicting markets. Timing, leverage, guru-copying, breakeven anchoring, yield traps, taxes, FX, chart signals, options, and over-trading are the ten recurring culprits.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Follow-up reading: <Link href="/learn/us-stock-basics" style={{ color: "var(--mint)" }}>US Stocks Intro</Link> → <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>Buy Checklist</Link> → <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA Guide</Link>.
+            </p>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not investment advice. Numeric examples are simplified and pre-tax; they do not guarantee future returns.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/us-stock-basics" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🇺🇸</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "미국주식 투자 완전 입문" : "Complete Beginner's Guide to US Stocks"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "계좌·수수료·세금·DCA" : "Account, fees, tax, DCA"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/buy-checklist" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">✅</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "매수 전 체크리스트 10가지" : "10-Point Checklist Before You Buy"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "비중·밸류·세금·심리" : "Position size, valuation, tax, psychology"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

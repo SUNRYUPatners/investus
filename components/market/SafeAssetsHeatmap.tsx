@@ -12,6 +12,7 @@ import {
   type MarketSymbol,
 } from "@/lib/markets/config";
 import { SAFE_HEATMAP_MIN_WIDTH, safeHeatmapWeight } from "@/lib/markets/safeHeatmapWeights";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type StockTile = { symbol: string; name: string; price: number | null; changePercent: number | null; weight: number };
 type Sector = { key: string; name: string; stocks: StockTile[] };
@@ -25,10 +26,10 @@ type PopupState = {
   anchorY: number;
 };
 
-const ROWS: { key: string; name: string; rowH: number }[] = [
-  { key: "CRYPTO", name: "가상화폐 탑10", rowH: 100 },
-  { key: "PHYS", name: "현물자산 탑10", rowH: 96 },
-  { key: "HAVEN", name: "안전자산 탑10", rowH: 96 },
+const ROWS: { key: string; nameKo: string; nameEn: string; rowH: number }[] = [
+  { key: "CRYPTO", nameKo: "가상화폐 탑10", nameEn: "Crypto Top 10", rowH: 100 },
+  { key: "PHYS", nameKo: "현물자산 탑10", nameEn: "Physical Assets Top 10", rowH: 96 },
+  { key: "HAVEN", nameKo: "안전자산 탑10", nameEn: "Safe Havens Top 10", rowH: 96 },
 ];
 
 function useIsDesktop() {
@@ -52,10 +53,12 @@ function displaySymbol(symbol: string): string {
 function SectorRow({
   sector,
   rowH,
+  locale,
   onTileClick,
 }: {
   sector: Sector;
   rowH: number;
+  locale: string;
   onTileClick: (symbol: string, name: string, changePercent: number, x: number, y: number, price?: number) => void;
 }) {
   const stocks = [...sector.stocks].sort((a, b) => b.weight - a.weight);
@@ -73,7 +76,7 @@ function SectorRow({
           {sector.name}
         </span>
         <span className="text-[8px] ml-2 whitespace-nowrap" style={{ color: "var(--muted)" }}>
-          타일 크기 = 시총·규모 비례
+          {locale === "ko" ? "타일 크기 = 시총·규모 비례" : "Tile size = market cap / scale"}
         </span>
       </div>
       <div className="flex" style={{ height: tileH, gap: "1px" }}>
@@ -159,9 +162,9 @@ function buildSectors(quotes: Quote[]): Sector[] {
       .filter((t) => t.price != null || t.changePercent != null);
 
   return [
-    { key: "CRYPTO", name: "가상화폐 탑10", stocks: toTiles(SAFE_CRYPTO_TOP10) },
-    { key: "PHYS", name: "현물자산 탑10", stocks: toTiles(SAFE_PHYSICAL_TOP10) },
-    { key: "HAVEN", name: "안전자산 탑10", stocks: toTiles(SAFE_HAVEN_TOP10) },
+    { key: "CRYPTO", name: "", stocks: toTiles(SAFE_CRYPTO_TOP10) },
+    { key: "PHYS", name: "", stocks: toTiles(SAFE_PHYSICAL_TOP10) },
+    { key: "HAVEN", name: "", stocks: toTiles(SAFE_HAVEN_TOP10) },
   ].filter((sec) => sec.stocks.length > 0);
 }
 
@@ -172,6 +175,7 @@ export function SafeAssetsHeatmap({ quotes }: { quotes: Quote[] }) {
   const [thumbL, setThumbL] = useState(0);
   const [thumbW, setThumbW] = useState(100);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const locale = useLocaleCode();
 
   const sectorMap = Object.fromEntries(sectors.map((s) => [s.key, s]));
 
@@ -210,22 +214,37 @@ export function SafeAssetsHeatmap({ quotes }: { quotes: Quote[] }) {
         className="flex items-center justify-between px-4 py-3 border-b"
         style={{ borderColor: "var(--border)" }}
       >
-        <SectionInfo title="안전자산 히트맵">
-          <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>안전자산 히트맵이란?</p>
-          <p style={{ color: "var(--muted)" }}>
-            가상화폐·현물·달러·국채를 <b>한 화면</b>에서 보는 지도예요. 미국 S&amp;P500 히트맵과 같은 형식입니다.
-          </p>
-          <div className="mt-2 space-y-1">
-            <p>🟩 <b>초록색</b> = 오늘 오른 자산</p>
-            <p>🟥 <b>빨간색</b> = 오늘 내린 자산</p>
-            <p>📐 <b>타일 크기</b> = 시가총액·ETF 규모·시장 중요도 비례 (비트코인·금·BND 등이 큼)</p>
-          </div>
-          <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>
-            화면이 좁으면 <b>옆으로 스와이프</b>하세요. 타일 클릭 → 차트 확인
-          </p>
+        <SectionInfo title={locale === "ko" ? "안전자산 히트맵" : "Safe Assets Heatmap"}>
+          {locale === "ko" ? (<>
+            <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>안전자산 히트맵이란?</p>
+            <p style={{ color: "var(--muted)" }}>
+              가상화폐·현물·달러·국채를 <b>한 화면</b>에서 보는 지도예요. 미국 S&amp;P500 히트맵과 같은 형식입니다.
+            </p>
+            <div className="mt-2 space-y-1">
+              <p>🟩 <b>초록색</b> = 오늘 오른 자산</p>
+              <p>🟥 <b>빨간색</b> = 오늘 내린 자산</p>
+              <p>📐 <b>타일 크기</b> = 시가총액·ETF 규모·시장 중요도 비례 (비트코인·금·BND 등이 큼)</p>
+            </div>
+            <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>
+              화면이 좁으면 <b>옆으로 스와이프</b>하세요. 타일 클릭 → 차트 확인
+            </p>
+          </>) : (<>
+            <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>What is the Safe Assets Heatmap?</p>
+            <p style={{ color: "var(--muted)" }}>
+              Crypto, commodities, USD, and bonds all <b>at a glance</b> — same format as the S&amp;P 500 heatmap.
+            </p>
+            <div className="mt-2 space-y-1">
+              <p>🟩 <b>Green</b> = assets up today</p>
+              <p>🟥 <b>Red</b> = assets down today</p>
+              <p>📐 <b>Tile size</b> = market cap / ETF size / market importance (BTC, Gold, BND are larger)</p>
+            </div>
+            <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>
+              Swipe sideways on narrow screens. Click any tile → view chart
+            </p>
+          </>)}
         </SectionInfo>
         <span className="text-[10px] flex-shrink-0 ml-2" style={{ color: "var(--muted)" }}>
-          시총·규모 비례
+          {locale === "ko" ? "시총·규모 비례" : "Market-cap weighted"}
         </span>
       </div>
 
@@ -242,11 +261,13 @@ export function SafeAssetsHeatmap({ quotes }: { quotes: Quote[] }) {
             const sector = sectorMap[row.key];
             if (!sector) return null;
             const rH = isDesktop ? row.rowH + 36 : row.rowH;
+            const sectorWithName = { ...sector, name: locale === "ko" ? row.nameKo : row.nameEn };
             return (
               <SectorRow
                 key={row.key}
-                sector={sector}
+                sector={sectorWithName}
                 rowH={rH}
+                locale={locale}
                 onTileClick={(symbol, name, changePercent, x, y, price) =>
                   setPopup({ symbol, name, price, changePercent, anchorX: x, anchorY: y })
                 }
@@ -267,14 +288,16 @@ export function SafeAssetsHeatmap({ quotes }: { quotes: Quote[] }) {
 
       <div className="px-4 py-2 border-t flex items-center justify-between gap-2" style={{ borderColor: "var(--border)" }}>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-          안전자산 · 시총·규모 비례 · 좁은 화면은 옆으로 스와이프
+          {locale === "ko"
+            ? "안전자산 · 시총·규모 비례 · 좁은 화면은 옆으로 스와이프"
+            : "Safe assets · market-cap weighted · swipe sideways on narrow screens"}
         </span>
         <a
           href="/learn/safe-haven-etfs"
           className="text-[9px] px-1.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0"
           style={{ background: "rgba(167,139,250,0.12)", color: "#a78bfa", textDecoration: "none" }}
         >
-          티커 해설
+          {locale === "ko" ? "티커 해설" : "Ticker guide"}
         </a>
       </div>
 

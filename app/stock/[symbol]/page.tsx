@@ -94,12 +94,12 @@ const DOWN = "var(--down)";
 const isMarketOpen = checkMarketOpen;
 
 // ── Investus 리포트 카드 — ReportFeed 스타일 그대로 ──────────────────────────
-function ReportCard({ r }: { r: Report }) {
+function ReportCard({ r, isKo }: { r: Report; isKo: boolean }) {
   const [open, setOpen] = useState(false);
   const style = CATEGORY_STYLE[r.categoryColor];
   const emoji = CATEGORY_EMOJI[r.category];
   const hasImages = (r.images?.length ?? 0) > 0;
-  const badgeSubject = reportBadgeSubject(r, "ko");
+  const badgeSubject = reportBadgeSubject(r, isKo ? "ko" : "en");
 
   return (
     <div
@@ -157,7 +157,7 @@ function ReportCard({ r }: { r: Report }) {
           style={{ color: style.color, background: "none", border: "none", cursor: "pointer", padding: 0 }}
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? "접기" : "더 보기"}
+          {open ? (isKo ? "접기" : "Collapse") : (isKo ? "더 보기" : "Expand")}
           <ChevronDown
             className="w-3.5 h-3.5 transition-transform"
             style={{ transform: open ? "rotate(180deg)" : "none" }}
@@ -204,7 +204,7 @@ function getDateKey(r: Report): string {
   return s.split(" ")[0].replace(/\./g, "-");
 }
 
-function StockReports({ symbol, className = "" }: { symbol: string; className?: string }) {
+function StockReports({ symbol, className = "", isKo }: { symbol: string; className?: string; isKo: boolean }) {
   const [showOlder, setShowOlder] = useState(false);
   const [query, setQuery]         = useState("");
   const [searching, setSearching] = useState(false);
@@ -259,7 +259,7 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
           className="text-xs font-semibold tracking-widest uppercase font-syne"
           style={{ color: "var(--muted)" }}
         >
-          Investus 리포트
+          Investus {isKo ? "리포트" : "Reports"}
         </h2>
         <button
           onClick={() => {
@@ -274,7 +274,7 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
             color: searching ? "var(--accent)" : "var(--muted)",
             background: searching ? "color-mix(in srgb, var(--accent) 12%, transparent)" : "transparent",
           }}
-          aria-label="리포트 검색"
+          aria-label={isKo ? "리포트 검색" : "Search reports"}
         >
           <Search className="w-3.5 h-3.5" />
         </button>
@@ -291,7 +291,7 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
             ref={inputRef}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="키워드 검색 (예: FSD, 목표주가, Optimus)"
+            placeholder={isKo ? "키워드 검색 (예: FSD, 목표주가, Optimus)" : "Search keywords (e.g. FSD, target price, Optimus)"}
             className="flex-1 bg-transparent text-sm outline-none placeholder:text-xs"
             style={{ color: "var(--text)", caretColor: "var(--accent)" }}
           />
@@ -308,41 +308,41 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
         filtered.length > 0 ? (
           <>
             <p className="text-xs mb-2" style={{ color: "var(--muted)" }}>
-              &ldquo;{query}&rdquo; — {filtered.length}건
+              &ldquo;{query}&rdquo; — {filtered.length}{isKo ? "건" : " result(s)"}
             </p>
             <div className="flex flex-col gap-3">
               {(gateOn ? filtered.filter((r) => isFreeReport(r)) : filtered).map((r) => (
-                <ReportCard key={r.id} r={r} />
+                <ReportCard key={r.id} r={r} isKo={isKo} />
               ))}
             </div>
             {gateOn && filtered.some((r) => !isFreeReport(r)) && (
               <div className="mt-3">
                 <SubscribeGate
                   compact
-                  title={`이전 리포트 ${filtered.filter((r) => !isFreeReport(r)).length}건 잠김`}
-                  description="오늘자만 무료 · 과거 리포트는 Pro 구독 후 열람"
+                  title={isKo ? `이전 리포트 ${filtered.filter((r) => !isFreeReport(r)).length}건 잠김` : `${filtered.filter((r) => !isFreeReport(r)).length} older report(s) locked`}
+                  description={isKo ? "오늘자만 무료 · 과거 리포트는 Pro 구독 후 열람" : "Today's reports are free · Past reports require Pro"}
                 />
               </div>
             )}
           </>
         ) : (
           <p className="text-sm text-center py-6" style={{ color: "var(--muted)" }}>
-            검색 결과 없음
+            {isKo ? "검색 결과 없음" : "No results found"}
           </p>
         )
       ) : (
         /* 기본 뷰 (최신 + 이전) */
         <>
           <div className="flex flex-col gap-3">
-            {freeLatest.map((r) => <ReportCard key={r.id} r={r} />)}
+            {freeLatest.map((r) => <ReportCard key={r.id} r={r} isKo={isKo} />)}
           </div>
 
           {lockedLatest.length > 0 && (
             <div className="mt-3">
               <SubscribeGate
                 compact
-                title={`리포트 ${lockedLatest.length}건 · Pro 전용`}
-                description="오늘자가 아닌 리포트는 구독 후 열람할 수 있습니다"
+                title={isKo ? `리포트 ${lockedLatest.length}건 · Pro 전용` : `${lockedLatest.length} report(s) · Pro only`}
+                description={isKo ? "오늘자가 아닌 리포트는 구독 후 열람할 수 있습니다" : "Non-today reports require a Pro subscription"}
               />
             </div>
           )}
@@ -353,8 +353,8 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
                 <div className="mt-3">
                   <SubscribeGate
                     compact
-                    title={`이전 리포트 ${olderForGate.length}건`}
-                    description={`오늘자 리포트는 무료 · 과거 열람은 월 ${formatSubPrice()}`}
+                    title={isKo ? `이전 리포트 ${olderForGate.length}건` : `${olderForGate.length} older report(s)`}
+                    description={isKo ? `오늘자 리포트는 무료 · 과거 열람은 월 ${formatSubPrice()}` : `Today's reports are free · Past reports from ${formatSubPrice()}/mo`}
                   />
                 </div>
               ) : (
@@ -369,7 +369,7 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
                       cursor: "pointer",
                     }}
                   >
-                    {showOlder ? "접기" : `이전 리포트 ${olderForGate.length}개 더 보기`}
+                    {showOlder ? (isKo ? "접기" : "Collapse") : (isKo ? `이전 리포트 ${olderForGate.length}개 더 보기` : `Show ${olderForGate.length} older report(s)`)}
                     <ChevronDown
                       className="w-3.5 h-3.5 transition-transform"
                       style={{ transform: showOlder ? "rotate(180deg)" : "none" }}
@@ -378,7 +378,7 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
 
                   {showOlder && (
                     <div className="flex flex-col gap-3 mt-3">
-                      {olderForGate.map((r) => <ReportCard key={r.id} r={r} />)}
+                      {olderForGate.map((r) => <ReportCard key={r.id} r={r} isKo={isKo} />)}
                     </div>
                   )}
                 </>
@@ -566,8 +566,8 @@ export default function StockPage({
             <ChevronLeft className="w-3.5 h-3.5" /> {t.stock.back}
           </button>
           <ShareButton
-            title={`${upper} ${detail?.name ?? ""} 주가 | Investus`}
-            text={`${upper} 실시간 주가 · 차트 · 분석 — Investus 인베스트어스`}
+            title={locale === "ko" ? `${upper} ${detail?.name ?? ""} 주가 | Investus` : `${upper} ${detail?.name ?? ""} Stock Price | Investus`}
+            text={locale === "ko" ? `${upper} 실시간 주가 · 차트 · 분석 — Investus 인베스트어스` : `${upper} live price · chart · analysis — Investus`}
             url={`https://www.investus.kr/stock/${upper}`}
             size="sm"
           />
@@ -726,7 +726,7 @@ export default function StockPage({
             </div>
 
             {/* 리포트 — 지표 바로 아래 (모바일 + 데스크탑 공통) */}
-            <StockReports symbol={upper} className="mx-4 lg:mx-0 mb-4" />
+            <StockReports symbol={upper} className="mx-4 lg:mx-0 mb-4" isKo={locale === "en" ? false : true} />
 
             {/* 애널리스트 의견 — 모바일 전용 (리포트 아래) */}
             <div className="lg:hidden mx-4 mb-4">

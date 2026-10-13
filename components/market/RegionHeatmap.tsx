@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { X, ExternalLink } from "lucide-react";
 import { KR_RE_POLICIES, type KrRePolicy } from "@/lib/markets/krReMock";
 import type { RegionCell, TxnCell } from "@/lib/markets/krReRegions";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 function cellBg(pct: number): string {
   if (pct > 0.5) return "rgba(220,38,38,0.55)";
@@ -19,6 +20,8 @@ function txnBarBg(ratio: number): string {
 }
 
 function PolicyModal({ policy, onClose }: { policy: KrRePolicy; onClose: () => void }) {
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   return (
     <div
       className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-4"
@@ -34,7 +37,7 @@ function PolicyModal({ policy, onClose }: { policy: KrRePolicy; onClose: () => v
           <h3 className="text-base font-bold font-syne leading-snug" style={{ color: "var(--text)" }}>
             {policy.title}
           </h3>
-          <button type="button" onClick={onClose} className="p-1 rounded-lg" aria-label="닫기">
+          <button type="button" onClick={onClose} className="p-1 rounded-lg" aria-label={isKo ? "닫기" : "Close"}>
             <X className="w-5 h-5" style={{ color: "var(--muted)" }} />
           </button>
         </div>
@@ -42,7 +45,7 @@ function PolicyModal({ policy, onClose }: { policy: KrRePolicy; onClose: () => v
           {policy.body}
         </p>
         <p className="text-[11px] font-semibold mb-2" style={{ color: "var(--muted)" }}>
-          관련 법령 · 공식 링크
+          {isKo ? "관련 법령 · 공식 링크" : "Related legislation · official links"}
         </p>
         <div className="space-y-2">
           {policy.links.map((l) => (
@@ -66,12 +69,14 @@ function PolicyModal({ policy, onClose }: { policy: KrRePolicy; onClose: () => v
 
 export function PolicyHighlightCards() {
   const [selected, setSelected] = useState<KrRePolicy | null>(null);
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
 
   return (
     <>
       <div className="space-y-2">
         <h3 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
-          정부정책 하이라이트
+          {isKo ? "정부정책 하이라이트" : "Government Policy Highlights"}
         </h3>
         {KR_RE_POLICIES.map((p) => (
           <button
@@ -86,7 +91,7 @@ export function PolicyHighlightCards() {
               {p.summary}
             </p>
             <p className="text-[10px] font-semibold mt-2" style={{ color: "var(--mint)" }}>
-              자세히 보기 →
+              {isKo ? "자세히 보기 →" : "View details →"}
             </p>
           </button>
         ))}
@@ -105,7 +110,7 @@ type TxnPayload = {
   source: string;
 };
 
-function SaleSummary({ regions }: { regions: RegionCell[] }) {
+function SaleSummary({ regions, isKo }: { regions: RegionCell[]; isKo: boolean }) {
   const sido = useMemo(() => {
     const skip = new Set(["수도권", "지방", "5대광역시", "8개도"]);
     return regions.filter((r) => !skip.has(r.name) && r.name.length <= 4);
@@ -121,13 +126,13 @@ function SaleSummary({ regions }: { regions: RegionCell[] }) {
   return (
     <div className="grid grid-cols-3 gap-2 mb-3">
       <div className="rounded-xl border p-2.5" style={{ borderColor: "var(--border)", background: "var(--card)" }}>
-        <p className="text-[10px] mb-1" style={{ color: "var(--muted)" }}>전국</p>
+        <p className="text-[10px] mb-1" style={{ color: "var(--muted)" }}>{isKo ? "전국" : "National"}</p>
         <p className="text-sm font-bold font-mono" style={{ color: "var(--text)" }}>
           {national ? `${national.changePercent >= 0 ? "+" : ""}${national.changePercent.toFixed(2)}%` : "—"}
         </p>
       </div>
       <div className="rounded-xl border p-2.5" style={{ borderColor: "var(--border)", background: "var(--card)" }}>
-        <p className="text-[10px] mb-1" style={{ color: "var(--muted)" }}>상위</p>
+        <p className="text-[10px] mb-1" style={{ color: "var(--muted)" }}>{isKo ? "상위" : "Top"}</p>
         {top.map((r) => (
           <p key={r.id} className="text-[11px] font-semibold truncate" style={{ color: "var(--text)" }}>
             {r.name} <span className="font-mono" style={{ color: "var(--up)" }}>+{r.changePercent.toFixed(2)}</span>
@@ -135,7 +140,7 @@ function SaleSummary({ regions }: { regions: RegionCell[] }) {
         ))}
       </div>
       <div className="rounded-xl border p-2.5" style={{ borderColor: "var(--border)", background: "var(--card)" }}>
-        <p className="text-[10px] mb-1" style={{ color: "var(--muted)" }}>하위</p>
+        <p className="text-[10px] mb-1" style={{ color: "var(--muted)" }}>{isKo ? "하위" : "Bottom"}</p>
         {bottom.map((r) => (
           <p key={r.id} className="text-[11px] font-semibold truncate" style={{ color: "var(--text)" }}>
             {r.name}{" "}
@@ -149,7 +154,7 @@ function SaleSummary({ regions }: { regions: RegionCell[] }) {
   );
 }
 
-function TxnPanel({ txn }: { txn: TxnPayload }) {
+function TxnPanel({ txn, isKo }: { txn: TxnPayload; isKo: boolean }) {
   const list = txn.regions.filter((r) => r.name !== "전국");
   const maxVol = Math.max(...list.map((r) => r.volume), 1);
 
@@ -162,11 +167,11 @@ function TxnPanel({ txn }: { txn: TxnPayload }) {
         >
           <div>
             <p className="text-[10px] font-semibold tracking-wide" style={{ color: "var(--muted)" }}>
-              전국 아파트 매매
+              {isKo ? "전국 아파트 매매" : "National apartment transactions"}
             </p>
             <p className="text-xl font-bold font-mono tabular-nums mt-0.5" style={{ color: "var(--text)" }}>
               {txn.national.toLocaleString("ko-KR")}
-              <span className="text-xs font-semibold ml-1" style={{ color: "var(--muted)" }}>호</span>
+              <span className="text-xs font-semibold ml-1" style={{ color: "var(--muted)" }}>{isKo ? "호" : " units"}</span>
             </p>
           </div>
           {(() => {
@@ -175,7 +180,7 @@ function TxnPanel({ txn }: { txn: TxnPayload }) {
             const pos = nat.changePercent >= 0;
             return (
               <p className="text-[12px] font-bold font-mono" style={{ color: pos ? "var(--up)" : "var(--down)" }}>
-                전월 {pos ? "+" : ""}{nat.changePercent.toFixed(1)}%
+                {isKo ? "전월 " : "MoM "}{pos ? "+" : ""}{nat.changePercent.toFixed(1)}%
               </p>
             );
           })()}
@@ -202,7 +207,7 @@ function TxnPanel({ txn }: { txn: TxnPayload }) {
               />
             </div>
             <span className="w-[72px] text-right text-[11px] font-mono font-semibold tabular-nums" style={{ color: "var(--text)" }}>
-              {r.volume.toLocaleString("ko-KR")}호
+              {r.volume.toLocaleString("ko-KR")}{isKo ? "호" : ""}
             </span>
             <span
               className="w-12 text-right text-[10px] font-mono tabular-nums"
@@ -235,6 +240,8 @@ export function RegionHeatmap() {
   const [txn, setTxn] = useState<TxnPayload | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
 
   useEffect(() => {
     fetch("/api/kr-re-regions")
@@ -266,12 +273,12 @@ export function RegionHeatmap() {
     <div>
       <div className="flex items-center justify-between gap-2 mb-2">
         <h3 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
-          아파트 시장 지표
+          {isKo ? "아파트 시장 지표" : "Apartment Market Indicators"}
         </h3>
         <div className="flex rounded-full p-0.5 gap-0.5" style={{ background: "var(--border)" }}>
           {([
-            { id: "txn" as const, label: "거래호수" },
-            { id: "price" as const, label: "매매등락" },
+            { id: "txn" as const, label: isKo ? "거래호수" : "Transactions" },
+            { id: "price" as const, label: isKo ? "매매등락" : "Price change" },
           ]).map((t) => (
             <button
               key={t.id}
@@ -302,22 +309,24 @@ export function RegionHeatmap() {
         </div>
       ) : error ? (
         <p className="text-[12px] py-4 text-center rounded-xl border" style={{ color: "var(--muted)", borderColor: "var(--border)" }}>
-          한국부동산원 데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.
+          {isKo
+            ? "한국부동산원 데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요."
+            : "Failed to load data. Please try again later."}
         </p>
       ) : tab === "txn" ? (
         txn && txn.regions.length > 0 ? (
-          <TxnPanel txn={txn} />
+          <TxnPanel txn={txn} isKo={isKo} />
         ) : (
           <p className="text-[12px] py-4 text-center rounded-xl border" style={{ color: "var(--muted)", borderColor: "var(--border)" }}>
-            거래호수 데이터가 없습니다.
+            {isKo ? "거래호수 데이터가 없습니다." : "No transaction data available."}
           </p>
         )
       ) : (
         <>
-          <SaleSummary regions={regions} />
+          <SaleSummary regions={regions} isKo={isKo} />
           {regions.length === 0 ? (
             <p className="text-[12px] py-4 text-center rounded-xl border" style={{ color: "var(--muted)", borderColor: "var(--border)" }}>
-              매매등락 데이터가 없습니다.
+              {isKo ? "매매등락 데이터가 없습니다." : "No price change data available."}
             </p>
           ) : (
             <div className="grid grid-cols-4 gap-1.5">
@@ -341,7 +350,7 @@ export function RegionHeatmap() {
       {activeSource && (
         <p className="text-[10px] mt-2 leading-relaxed" style={{ color: "var(--muted)" }}>
           ※ {activeSource}
-          {limited && " · 인증키 미설정 시 표본만 표시될 수 있습니다"}
+          {limited && (isKo ? " · 인증키 미설정 시 표본만 표시될 수 있습니다" : " · Sample only if API key is not set")}
         </p>
       )}
     </div>

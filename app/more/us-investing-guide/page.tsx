@@ -1,22 +1,12 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
-import { getLocale } from "@/lib/getLocale";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
-export const metadata: Metadata = {
-  title: "미국주식 초보 가이드 — 계좌·ETF·리포트 읽는 법 | Investus",
-  description:
-    "미국주식 투자를 시작하는 한국 투자자를 위한 실전 가이드. 계좌 개설, S&P500·나스닥 ETF, 공포탐욕지수·버핏지수, Investus 리포트 활용법까지 정리합니다.",
-  openGraph: {
-    title: "미국주식 초보 가이드 | Investus",
-    description: "계좌·ETF·지표·리포트까지 — 미국주식 입문자를 위한 오리지널 가이드",
-    type: "article",
-  },
-};
-
-export default async function UsInvestingGuidePage() {
-  const locale = await getLocale();
+export default function UsInvestingGuidePage() {
+  const locale = useLocaleCode();
   const isKo = locale === "ko";
 
   return (

@@ -1,50 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "옵션 기초 — 콜·풋·행사가·IV를 초보도 이해하게 | 인베스트어스",
-  description:
-    "옵션이 무엇인지, 콜·풋·행사가·만기·프리미엄·내재변동성을 숫자 예시로. 고위험·교육용 안내. 매매 권유 아님.",
-  keywords: ["옵션", "콜옵션", "풋옵션", "IV", "내재변동성", "행사가", "프리미엄"],
-  alternates: { canonical: "https://www.investus.kr/learn/options" },
-  openGraph: {
-    title: "옵션 기초 가이드 | 인베스트어스",
-    description: "콜·풋·IV — 용어 이해용, 고위험",
-    url: "https://www.investus.kr/learn/options",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function OptionsPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/options")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(168,85,247,0.15)", color: "#a855f7" }}>파생</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            옵션 기초 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            옵션은 &ldquo;나중에 어떤 가격에 사거나 팔 수 있는 <em>권리</em>&rdquo;를 사고파는 계약입니다.
-            뉴스·실적 시즌에 자주 나오지만, 시간 가치 소멸·레버리지로 <strong style={{ color: "var(--text)" }}>원금 전액 손실</strong>이 가능합니다.
-            아래는 <em>용어를 이해하기 위한</em> 교육용 글입니다. 매매를 권하지 않습니다.
+            {isKo
+              ? "옵션은 \"나중에 어떤 가격에 사거나 팔 수 있는 권리\"를 사고파는 계약입니다. 뉴스·실적 시즌에 자주 나오지만, 시간 가치 소멸·레버리지로 원금 전액 손실이 가능합니다. 아래는 용어를 이해하기 위한 교육용 글입니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>주식과 무엇이 다른가</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -183,21 +183,144 @@ export default function OptionsPage() {
             </ol>
           </section>
 
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ 교육 목적입니다. 옵션은 고위험이며 원금 전액 손실이 가능합니다. 투자·세무 자문이 아닙니다.
+          </div>
+            </>
+          ) : (
+            <>
           <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 읽을 글</h2>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>How Options Differ from Stocks</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              When you buy a stock, you own a piece of the company indefinitely. Even if the price falls, you can hold and wait for a recovery (no guarantee, but the option remains). Options are fundamentally different — they are contracts with an expiration date.
+            </p>
             <p className="text-sm leading-relaxed">
-              <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF</Link> ·
-              <Link href="/learn/technical-analysis" style={{ color: "var(--mint)" }}>기술적 분석</Link> ·
-              <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>공포탐욕</Link> ·
-              <Link href="/learn/us-stock-basics" style={{ color: "var(--mint)" }}>미국주식 입문</Link>.
+              The <em>buyer</em> of an option pays a <strong style={{ color: "var(--text)" }}>premium</strong> (upfront cost, like an insurance policy). If the underlying asset doesn&apos;t move favorably before expiration, that premium decays toward zero. &ldquo;Hold and recover&rdquo; is not the default outcome.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Calls and Puts</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Call option</strong> — the right to <em>buy</em> an asset at a fixed strike price before expiration. Profitable when the stock rises significantly above the strike.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Put option</strong> — the right to <em>sell</em> an asset at a fixed strike price before expiration. Profitable when the stock falls. Often used as portfolio insurance (hedging existing positions).
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Simple numeric example</strong></p>
+              <p>A stock is at $100. You buy a call with a $105 strike for a $3 premium.</p>
+              <p>At expiration, stock is $120: the right to buy at $105 is worth roughly $15. You paid $3, so profit is approximately $12.</p>
+              <p>At expiration, stock is still $100: no reason to buy at $105 when market is $100. Your call expires worthless — the full $3 premium is lost.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Key Terms: Strike, Expiry, Premium</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Strike Price</strong> — the agreed price at which you can buy (call) or sell (put) the underlying asset</li>
+              <li><strong style={{ color: "var(--text)" }}>Expiration Date</strong> — the date the contract ends. After this, the option is worthless if unexercised.</li>
+              <li><strong style={{ color: "var(--text)" }}>Premium</strong> — the upfront price you pay to buy the option contract</li>
+              <li><strong style={{ color: "var(--text)" }}>In-the-Money / Out-of-the-Money</strong> — ITM means exercising now would be profitable; OTM means it would not</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              As expiration approaches, <strong style={{ color: "var(--text)" }}>time value (theta)</strong> decays faster. Waiting &ldquo;a little longer&rdquo; can erode value quickly, especially in the final weeks.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Implied Volatility (IV)</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Implied Volatility (IV)</strong> is the market&apos;s expectation of future price swings, embedded in the option&apos;s price. Before major events — earnings, Fed decisions — IV rises and premiums become expensive.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Even if a stock moves in the right direction after an earnings release, if IV collapses immediately after (<strong style={{ color: "var(--text)" }}>IV Crush</strong>), the option buyer can still lose money. &ldquo;Get the direction right&rdquo; is necessary but not sufficient. See the <Link href="/learn/earnings-season" style={{ color: "var(--mint)" }}>Earnings Season Guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Buying vs. Selling Options</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <em>Buying</em> options: your maximum loss is limited to the premium paid. Defined risk, but theta works against you continuously.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <em>Selling (writing)</em> options: you collect the premium upfront, but your potential loss can theoretically be very large (or unlimited for naked calls). Many &ldquo;sell options for income&rdquo; strategies look great in back-tests and blow up during volatility spikes. Beginners should not sell options without deep understanding, margin availability, and brokerage approval.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Beginners Should Avoid</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["0DTE (same-day expiry) all-in", "Time value evaporates instantly. This is closer to gambling than investing."],
+                ["Selling options without understanding", "Unlimited theoretical loss. Margin calls can exceed your account balance."],
+                ["Confusing leveraged ETFs with options", "TQQQ and a call option are completely different instruments."],
+                ["Trading with rent money or emergency funds", "Options losses can exceed 100% of the premium, and psychology collapses under financial pressure."],
+                ["Copying \"guaranteed income\" strategies", "Historical back-tests do not capture tail risk. Past premium collection ≠ future safety."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Options in the Context of Long-Term Investing</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The foundation most beginners need is <Link href="/learn/etf" style={{ color: "var(--mint)" }}>low-cost index ETFs</Link> + <Link href="/learn/dca" style={{ color: "var(--mint)" }}>dollar-cost averaging</Link> + <Link href="/learn/compound" style={{ color: "var(--mint)" }}>time</Link>. Options are an advanced, high-risk layer on top of that foundation — completely optional and skippable.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Options are especially susceptible to behavioral mistakes. Read the <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>Psychology Guide</Link> and <Link href="/learn/myths" style={{ color: "var(--mint)" }}>Common Myths</Link> before going further.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Reading Options News Without Trading Them</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              &ldquo;Call buying surge&rdquo; means some traders are betting on upside — it does not mean the stock will rise. &ldquo;Hedging with puts&rdquo; means someone is buying insurance against a drop — not that a crash is confirmed.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Treat options news as one more signal to contextualize, not a trading trigger. Maintain your portfolio with <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>diversification and rebalancing</Link> rules rather than reacting to unusual options activity.
             </p>
           </section>
 
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
-            ⚠️ 교육 목적입니다. 옵션은 고위험이며 원금 전액 손실이 가능합니다. 투자·세무 자문이 아닙니다.
+            ⚠️ Educational content only. Options are high-risk derivatives. Total loss of premium is common. Not investment or tax advice.
           </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/etf" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">📦</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "미국 ETF 완전 가이드" : "Complete US ETF Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "코어 ETF가 먼저입니다" : "Build your core before adding derivatives"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/investing-psychology" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🧠</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "투자 심리·행동재무" : "Investor Psychology & Behavioral Finance"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "옵션은 심리 함정이 큽니다" : "Options amplify every behavioral bias"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

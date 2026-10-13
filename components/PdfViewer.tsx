@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, Minus, Plus } from "lucide-react";
 import { getSupabase } from "@/lib/supabase";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 export function PdfViewer({
   pdfPath,
@@ -22,6 +23,8 @@ export function PdfViewer({
   const [loading,    setLoading]    = useState(true);
   const [error,      setError]      = useState<string | null>(null);
   const [imgSrc,     setImgSrc]     = useState<string | null>(null);
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   // Flash indicator when navigating by click/tap/scroll
   const [navFlash,   setNavFlash]   = useState<"prev" | "next" | null>(null);
 
@@ -90,7 +93,7 @@ export function PdfViewer({
     fetchPage(accessToken).catch((err) => {
       if (err.name === "AbortError") return;
       console.error("[PdfViewer] fetch page:", err);
-      setError("페이지를 불러올 수 없습니다.");
+      setError(isKo ? "페이지를 불러올 수 없습니다." : "Failed to load page.");
       setLoading(false);
     });
 
@@ -264,7 +267,7 @@ export function PdfViewer({
               style={{ borderColor: "rgba(255,255,255,0.07)", borderTopColor: "rgba(255,255,255,0.55)" }}
             />
             <p className="text-xs tracking-wide" style={{ color: "rgba(255,255,255,0.25)" }}>
-              페이지 불러오는 중…
+              {isKo ? "페이지 불러오는 중…" : "Loading page…"}
             </p>
           </div>
         )}
@@ -280,7 +283,7 @@ export function PdfViewer({
             </div>
             <div>
               <p className="text-sm font-semibold mb-1" style={{ color: "rgba(255,255,255,0.7)" }}>{error}</p>
-              <p className="text-xs" style={{ color: "rgba(255,255,255,0.25)" }}>다시 시도하거나 닫아 주세요</p>
+              <p className="text-xs" style={{ color: "rgba(255,255,255,0.25)" }}>{isKo ? "다시 시도하거나 닫아 주세요" : "Try again or close"}</p>
             </div>
             <div className="flex gap-3">
               <button
@@ -288,14 +291,14 @@ export function PdfViewer({
                 className="text-sm font-semibold px-6 py-2.5 rounded-2xl"
                 style={{ background: "rgba(192,132,252,0.15)", color: "rgba(192,132,252,0.9)", border: "1px solid rgba(192,132,252,0.25)" }}
               >
-                다시 시도
+                {isKo ? "다시 시도" : "Retry"}
               </button>
               <button
                 onClick={(e) => { e.stopPropagation(); onClose(); }}
                 className="text-sm font-semibold px-6 py-2.5 rounded-2xl"
                 style={{ background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.75)", border: "1px solid rgba(255,255,255,0.1)" }}
               >
-                닫기
+                {isKo ? "닫기" : "Close"}
               </button>
             </div>
           </div>
@@ -307,7 +310,7 @@ export function PdfViewer({
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={imgSrc}
-              alt={`페이지 ${page}`}
+              alt={isKo ? `페이지 ${page}` : `Page ${page}`}
               draggable={false}
               onContextMenu={(e) => e.preventDefault()}
               style={imgStyle}
@@ -374,7 +377,7 @@ export function PdfViewer({
             className="flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-2xl active:scale-95 disabled:opacity-20 transition-all"
             style={{ background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.75)", border: "1px solid rgba(255,255,255,0.05)" }}
           >
-            <ChevronLeft className="w-3.5 h-3.5" />이전
+            <ChevronLeft className="w-3.5 h-3.5" />{isKo ? "이전" : "Prev"}
           </button>
 
           <div className="flex items-center gap-1.5">
@@ -393,7 +396,7 @@ export function PdfViewer({
               : (
                 <span className="text-xs tabular-nums px-3 py-1 rounded-full"
                   style={{ background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.4)" }}>
-                  {numPages > 0 ? `${page} / ${numPages}` : `${page}페이지`}
+                  {numPages > 0 ? `${page} / ${numPages}` : (isKo ? `${page}페이지` : `Page ${page}`)}
                 </span>
               )}
           </div>
@@ -404,7 +407,7 @@ export function PdfViewer({
             className="flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-2xl active:scale-95 disabled:opacity-20 transition-all"
             style={{ background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.75)", border: "1px solid rgba(255,255,255,0.05)" }}
           >
-            다음<ChevronRight className="w-3.5 h-3.5" />
+            {isKo ? "다음" : "Next"}<ChevronRight className="w-3.5 h-3.5" />
           </button>
         </div>
       </div>

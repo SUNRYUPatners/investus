@@ -11,6 +11,7 @@ import { useMarketPortfolio } from "@/hooks/useMarketPortfolio";
 import { formatMarketPrice } from "@/lib/markets/formatPrice";
 import { GuestPortfolioPreview } from "@/components/GuestPortfolioPreview";
 import { useAuth } from "@/hooks/useAuth";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 export function MarketPortfolioStub({ market }: { market: MarketId }) {
   const router = useRouter();
@@ -18,6 +19,8 @@ export function MarketPortfolioStub({ market }: { market: MarketId }) {
   const { holdings, loaded } = useMarketPortfolio(market);
   const { user, loaded: authLoaded } = useAuth();
   const [quotes, setQuotes] = useState<Quote[]>([]);
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
 
   useEffect(() => {
     const url = `/api/market-data?market=${market}`;
@@ -65,10 +68,14 @@ export function MarketPortfolioStub({ market }: { market: MarketId }) {
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>
-                {cfg.labelKo} 포트폴리오를 등록해 주세요
+                {isKo
+                  ? `${cfg.labelKo} 포트폴리오를 등록해 주세요`
+                  : `Add your ${cfg.labelEn ?? cfg.labelKo} portfolio`}
               </p>
               <p className="text-[11px] mt-0.5 leading-relaxed" style={{ color: "var(--muted)" }}>
-                보유 종목을 등록하면 홈에서 시세·AI 분석을 볼 수 있습니다.
+                {isKo
+                  ? "보유 종목을 등록하면 홈에서 시세·AI 분석을 볼 수 있습니다."
+                  : "Add your holdings to see live prices and AI analysis on the home screen."}
               </p>
             </div>
             <ChevronRight className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
@@ -86,7 +93,7 @@ export function MarketPortfolioStub({ market }: { market: MarketId }) {
       >
         <div className="flex items-center justify-between mb-2">
           <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: "var(--muted)" }}>
-            내 포트폴리오 ({cfg.labelKo})
+            {isKo ? `내 포트폴리오 (${cfg.labelKo})` : `My Portfolio (${cfg.labelEn ?? cfg.labelKo})`}
           </p>
           <button
             type="button"
@@ -94,7 +101,7 @@ export function MarketPortfolioStub({ market }: { market: MarketId }) {
             className="text-[10px] font-semibold"
             style={{ color: "var(--mint)" }}
           >
-            편집
+            {isKo ? "편집" : "Edit"}
           </button>
         </div>
         <div className="space-y-2">
@@ -112,7 +119,7 @@ export function MarketPortfolioStub({ market }: { market: MarketId }) {
                   className="text-[11px] font-mono font-semibold"
                   style={{ color: r.changePercent >= 0 ? "var(--up)" : "var(--down)" }}
                 >
-                  오늘 {r.changePercent >= 0 ? "+" : ""}{r.changePercent.toFixed(2)}%
+                  {isKo ? "오늘 " : ""}{r.changePercent >= 0 ? "+" : ""}{r.changePercent.toFixed(2)}%
                 </p>
               </div>
             </div>

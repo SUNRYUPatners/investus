@@ -6,6 +6,7 @@ import { getMarketConfig } from "@/lib/markets/config";
 import type { MarketId } from "@/lib/markets/types";
 import { isStockMarketOpen } from "@/lib/markets/hours";
 import { openSessionChatPanel } from "@/lib/sessionChat/openPanel";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type StockMarket = "us" | "kr";
 
@@ -19,25 +20,45 @@ function sessionHoursLabel(market: StockMarket): string {
   return `${fmt(cfg.openHours.startMin)} – ${fmt(cfg.openHours.endMin)} ${cfg.clockLabel}`;
 }
 
-const COPY: Record<
-  StockMarket,
-  { badge: string; title: string; sub: string; status: string; cta: string; icon: string }
-> = {
+type CopyEntry = { badge: string; title: string; sub: string; status: string; cta: string; icon: string };
+type CopyRecord = Record<StockMarket, { ko: CopyEntry; en: CopyEntry }>;
+
+const COPY: CopyRecord = {
   us: {
-    badge: "● 장중 LIVE",
-    title: "미국주식 장중",
-    sub: "NYSE · NASDAQ 정규장 · 실시간 시세",
-    status: "실시간 업데이트 중",
-    cta: "실시간 시황 토크 확인",
-    icon: "📈",
+    ko: {
+      badge: "● 장중 LIVE",
+      title: "미국주식 장중",
+      sub: "NYSE · NASDAQ 정규장 · 실시간 시세",
+      status: "실시간 업데이트 중",
+      cta: "실시간 시황 토크 확인",
+      icon: "📈",
+    },
+    en: {
+      badge: "● LIVE",
+      title: "US Market Open",
+      sub: "NYSE · NASDAQ regular session · live prices",
+      status: "Updating live",
+      cta: "Join live market chat",
+      icon: "📈",
+    },
   },
   kr: {
-    badge: "● 장중 LIVE",
-    title: "한국주식 장중",
-    sub: "코스피 · 코스닥 정규장 · 실시간 시세",
-    status: "실시간 업데이트 중",
-    cta: "실시간 시황 토크 확인",
-    icon: "📊",
+    ko: {
+      badge: "● 장중 LIVE",
+      title: "한국주식 장중",
+      sub: "코스피 · 코스닥 정규장 · 실시간 시세",
+      status: "실시간 업데이트 중",
+      cta: "실시간 시황 토크 확인",
+      icon: "📊",
+    },
+    en: {
+      badge: "● LIVE",
+      title: "KR Market Open",
+      sub: "KOSPI · KOSDAQ regular session · live prices",
+      status: "Updating live",
+      cta: "Join live market chat",
+      icon: "📊",
+    },
   },
 };
 
@@ -71,6 +92,7 @@ const BANNER_STYLES = (
 export function MarketOpenBanner({ market }: { market: MarketId }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const locale = useLocaleCode();
 
   const stockMarket = market === "us" || market === "kr" ? market : null;
 
@@ -85,7 +107,7 @@ export function MarketOpenBanner({ market }: { market: MarketId }) {
 
   if (!stockMarket || !mounted || !open) return null;
 
-  const copy = COPY[stockMarket];
+  const copy = COPY[stockMarket][locale === "ko" ? "ko" : "en"];
   const hours = sessionHoursLabel(stockMarket);
 
   return (
@@ -139,7 +161,7 @@ export function MarketOpenBanner({ market }: { market: MarketId }) {
           <div className="relative flex items-center justify-between gap-2 mt-3 pt-3 border-t border-white/10">
             <p className="text-[11px] flex items-center gap-1.5 min-w-0" style={{ color: "var(--up)" }}>
               <MessageCircle className="w-3.5 h-3.5 flex-shrink-0" aria-hidden />
-              <span className="truncate">{copy.status} · 장중 토크 ON</span>
+              <span className="truncate">{copy.status}{locale === "ko" ? " · 장중 토크 ON" : ""}</span>
             </p>
             <button
               type="button"

@@ -541,7 +541,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                       onClick={() => void submitMessage()}
                       className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center disabled:opacity-40"
                       style={{ background: "var(--mint)", color: "var(--on-accent)" }}
-                      aria-label="보내기"
+                      aria-label={isKo ? "보내기" : "Send"}
                     >
                       <Send size={18} />
                     </button>

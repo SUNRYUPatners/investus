@@ -1,49 +1,48 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "CPI·연준(FOMC)·금리 — 완전 초보 가이드 | 인베스트어스",
-  description:
-    "인플레이션(CPI·PCE), 연준과 FOMC, 기준금리가 주식·채권·환율에 미치는 영향을 완전 초보도 이해할 수 있게 정의·숫자 예시·실수·다음 단계로 정리합니다.",
-  keywords: ["CPI", "연준", "FOMC", "기준금리", "인플레이션", "PCE", "매크로"],
-  alternates: { canonical: "https://www.investus.kr/learn/macro-rates" },
-  openGraph: {
-    title: "CPI·연준·금리 초보 가이드 | 인베스트어스",
-    description: "물가·금리 발표가 미국주식에 왜 중요한지, 초보 눈높이로",
-    url: "https://www.investus.kr/learn/macro-rates",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function MacroRatesPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/macro-rates")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(245,158,11,0.15)", color: "#f59e0b" }}>매크로</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            CPI·연준(FOMC)·금리 — 완전 초보 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            &ldquo;왜 갑자기 나스닥이 빠졌지?&rdquo; — 답이 개별 회사 뉴스가 아니라 CPI 발표 30분 전에 있을 때가 많습니다.
-            매크로는 점쟁이 게임이 아니라, <em>언제 변동성이 커지는지</em>를 아는 리스크 관리입니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>매크로가 뭔가요?</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -138,10 +137,10 @@ export default function MacroRatesPage() {
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>흔한 실수</h2>
             <div className="flex flex-col gap-3">
               {[
-                ["매크로로 ‘내일 방향’을 맞히려고 함", "전문가도 자주 틀립니다. 목적은 예측이 아니라 변동성·일정 인지입니다."],
+                ["매크로로 '내일 방향'을 맞히려고 함", "전문가도 자주 틀립니다. 목적은 예측이 아니라 변동성·일정 인지입니다."],
                 ["한 번 발표로 포트폴리오 전면 교체", "코어/위성 규칙을 먼저 정하세요. 하루 뉴스에 전략이 바뀌면 전략이 아닙니다."],
                 ["CPI 숫자만 보고 Core·PCE 무시", "흐름을 보려면 여러 지표를 같이 봅니다. 한 달 노이즈에 올인하지 마세요."],
-                ["금리와 채권·주식 연결을 모름", "금리↑ → 기존 채권 가격↓ 관계를 모르면 ‘안전 자산’ 착각이 납니다."],
+                ["금리와 채권·주식 연결을 모름", "금리↑ → 기존 채권 가격↓ 관계를 모르면 '안전 자산' 착각이 납니다."],
               ].map(([t, d]) => (
                 <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                   <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
@@ -149,25 +148,6 @@ export default function MacroRatesPage() {
                 </div>
               ))}
             </div>
-          </section>
-
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Investus에서 보는 법</h2>
-            <p className="text-sm leading-relaxed">
-              홈의 매크로·인사이트 리포트로 &ldquo;이번 주 무엇이 큰지&rdquo; 맥락만 잡으세요.
-              공포탐욕은 보조 지표입니다 — <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>공포탐욕 가이드</Link>.
-              버핏지수는 고평가 맥락용 — <Link href="/learn/buffett-indicator" style={{ color: "var(--mint)" }}>버핏지수</Link>.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 할 일</h2>
-            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
-              <li><Link href="/learn/bonds" style={{ color: "var(--mint)" }}>채권과 금리</Link>를 읽고 가격·금리 역관계를 숫자로 한 번 더 확인.</li>
-              <li>이번 달 경제 일정 2~3개를 캘린더에 표시.</li>
-              <li>본인 규칙은 &ldquo;발표일에는 신규 레버리지 금지&rdquo;처럼 한 줄로 적기.</li>
-              <li>장기 코어는 <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF</Link> + <Link href="/learn/compound" style={{ color: "var(--mint)" }}>복리</Link> 관점으로 유지.</li>
-            </ol>
           </section>
 
           <section>
@@ -185,20 +165,135 @@ export default function MacroRatesPage() {
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 매크로 예측·단기 매매·투자 권유가 아니며 원금 손실이 가능합니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is Macro?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Macroeconomics</strong> is the study of the big picture — inflation, interest rates, employment, and GDP — rather than any individual company&apos;s earnings. If individual stocks are the daily weather, macroeconomics is the season.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Why does it matter to a beginner? Even if you only hold S&P 500 and Nasdaq ETFs, your portfolio will bounce on every CPI and FOMC day. Understanding the mechanism helps you stay calm instead of panic-selling. For index basics, see the <Link href="/learn/sp500" style={{ color: "var(--mint)" }}>S&P 500</Link> and <Link href="/learn/nasdaq" style={{ color: "var(--mint)" }}>Nasdaq</Link> guides.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is Inflation?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Inflation</strong> is the general rise in prices for goods and services over time. The same dollar buys less. When savings account rates are below inflation, your balance grows in nominal terms but shrinks in real purchasing power — which is the core argument for long-term equity and real-asset ownership.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>Intuition Check</p>
+              <p>At 3% annual inflation, $10,000 today has roughly the purchasing power of $9,700 next year. Over 10 years, the same $10,000 buys what $7,400 buys today. Compounding works against you here just as it works for you in investing.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>CPI vs. Core CPI vs. PCE</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>CPI (Consumer Price Index)</strong> — Tracks the cost of a basket of everyday goods: food, shelter, transportation, etc. The headline number you see on financial news most often.</li>
+              <li><strong style={{ color: "var(--text)" }}>Core CPI</strong> — CPI excluding food and energy, which are volatile month-to-month. Core CPI is meant to show the underlying trend.</li>
+              <li><strong style={{ color: "var(--text)" }}>PCE (Personal Consumption Expenditures)</strong> — The Fed&apos;s preferred inflation measure. Its basket adjusts to reflect actual spending patterns. Can diverge slightly from CPI.</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Futures and individual stocks can move sharply in the minutes after a print. Avoid leveraged positions on release days. Track upcoming dates with the <Link href="/learn/economic-calendar" style={{ color: "var(--mint)" }}>Economic Calendar</Link> and check pre-open sentiment via <Link href="/learn/futures" style={{ color: "var(--mint)" }}>Futures &amp; Pre-Market</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>The Fed, FOMC, and the Fed Funds Rate</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The <strong style={{ color: "var(--text)" }}>Federal Reserve (the Fed)</strong> is the US central bank. Its dual mandate is price stability (containing inflation) and maximum employment. The <strong style={{ color: "var(--text)" }}>FOMC</strong> (Federal Open Market Committee) is the body that sets the Fed Funds Rate — the overnight borrowing rate for banks — at roughly 8 meetings per year.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              When the Fed <strong style={{ color: "var(--text)" }}>raises rates</strong>, borrowing costs throughout the economy rise, cooling spending and investment. When it <strong style={{ color: "var(--text)" }}>cuts rates</strong>, the opposite dynamic takes hold. The relationship with equities is not mechanical — stocks can rise during hike cycles if earnings growth is strong enough.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Rates rising — common narratives</strong>: growth/high-P/E stocks pressured, REITs and real estate burdened, <Link href="/learn/bonds" style={{ color: "var(--mint)" }}>existing bond prices</Link> fall.</p>
+              <p><strong style={{ color: "var(--text)" }}>Rates falling — common narratives</strong>: tech and growth more attractive, possible dollar weakness (Korean investors: watch <Link href="/learn/usd-krw" style={{ color: "var(--mint)" }}>USD/KRW</Link> too).</p>
+              <p><strong style={{ color: "var(--text)" }}>Financials</strong>: sensitive to net interest margin and economic recovery expectations. See the <Link href="/learn/sectors" style={{ color: "var(--mint)" }}>Sectors Guide</Link>.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Markets React to &ldquo;Better/Worse Than Expected&rdquo;</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Markets price in expectations. If investors expected CPI to print 2.8% and it comes in at 3.0%, the reaction is &ldquo;hotter than expected&rdquo; — even though 3% sounds moderate in isolation. The surprise relative to consensus, not the absolute number, drives the immediate move.
+            </p>
+            <p className="text-sm leading-relaxed">
+              For beginners: do not try to predict the number. Instead, mark release days on your calendar and accept that volatility will be elevated. Keep your core ETF <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA schedule</Link> running and rule out leveraged trades on announcement days.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Macro vs. Earnings Season</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              CPI and FOMC are <em>economy-wide</em> events. Earnings season is when individual companies report quarterly results. When both coincide in the same week, index volatility can spike further than either alone would cause.
+            </p>
+            <p className="text-sm leading-relaxed">
+              For reading earnings: <Link href="/learn/earnings-season" style={{ color: "var(--mint)" }}>Earnings Season Guide</Link> · For understanding financial numbers: <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>Financial Statements</Link> · For valuation context: <Link href="/learn/valuation" style={{ color: "var(--mint)" }}>P/E Guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>A Beginner&apos;s Release-Day Checklist</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Check whether CPI, jobs, or FOMC is scheduled this week using the <Link href="/learn/economic-calendar" style={{ color: "var(--mint)" }}>Economic Calendar</Link>.</li>
+              <li>Verify that any planned trade does not involve emergency funds or living expenses (<Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>Buy Checklist</Link>).</li>
+              <li>Do not sell all positions or chase entries based on the first 30-minute reaction to a headline.</li>
+              <li>Limit portfolio check-ins to once per week — daily refreshing is a <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>psychological trap</Link>.</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Trying to predict tomorrow's direction from macro data", "Even professional economists are frequently wrong. The goal is awareness of volatility timing, not forecasting."],
+                ["Overhauling the portfolio after one release", "If your strategy changes based on a single day's news, it was never a strategy. Set core/satellite rules first."],
+                ["Looking only at headline CPI, ignoring Core and PCE", "Use multiple indicators to read the trend. One month's noise can mislead."],
+                ["Not understanding rates-bonds-stocks linkage", "Rates rising → existing bond prices fall. Missing this causes 'safe asset' confusion. See the Bonds guide."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Related Articles</h2>
+            <p className="text-sm leading-relaxed">
+              <Link href="/learn/bonds" style={{ color: "var(--mint)" }}>Bonds &amp; Interest Rates</Link>,
+              <Link href="/learn/economic-calendar" style={{ color: "var(--mint)" }}> Economic Calendar</Link>,
+              <Link href="/learn/futures" style={{ color: "var(--mint)" }}> Futures &amp; Pre-Market</Link>,
+              <Link href="/learn/earnings-season" style={{ color: "var(--mint)" }}> Earnings Season</Link>,
+              <Link href="/learn/usd-krw" style={{ color: "var(--mint)" }}> USD/KRW &amp; Currency</Link>.
+            </p>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not macro prediction, trading advice, or investment recommendation. Principal loss is possible.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/bonds" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">📜</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>채권과 금리</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>금리↑ → 채권 가격↓</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "채권과 금리" : "Bonds & Interest Rates"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "금리↑ → 채권 가격↓" : "The inverse price-rate relationship"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -207,8 +302,8 @@ export default function MacroRatesPage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🗓️</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>경제 캘린더 활용법</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>발표 전후 변동성 관리</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "경제 캘린더 활용법" : "How to Use the Economic Calendar"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "발표 전후 변동성 관리" : "Managing volatility around key releases"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

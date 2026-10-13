@@ -1,51 +1,49 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "한국주식 투자 입문 가이드 — 코스피·시총상위·수급·세금 | 인베스트어스",
-  description:
-    "한국주식(코스피·코스닥)을 처음 보는 분을 위한 입문 가이드. 거래시간, 시총 상위 종목, 외국인·기관 수급, 장전·장중·장후 보는 법, 미국주식과의 차이까지.",
-  keywords: ["한국주식", "코스피", "코스닥", "삼성전자", "SK하이닉스", "한국주식 입문", "시총 상위"],
-  alternates: { canonical: "https://www.investus.kr/learn/korea-stocks" },
-  openGraph: {
-    title: "한국주식 투자 입문 가이드 | 인베스트어스",
-    description: "코스피·시총상위·수급·미국주식과의 차이를 초보 눈높이로",
-    url: "https://www.investus.kr/learn/korea-stocks",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function KoreaStocksPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/korea-stocks")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
 
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(16,185,129,0.15)", color: "#10b981" }}>한국</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            한국주식 투자 입문 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            코스피·코스닥, 시총 상위 종목, 외국인·기관 수급, 장전·장중·장후 보는 법을
-            처음 시작하는 분 눈높이로 정리했습니다. 미국주식과 무엇이 다른지도 함께 봅니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
               한국주식이란 — 코스피와 코스닥
@@ -95,9 +93,6 @@ export default function KoreaStocksPage() {
               코스피는 시가총액이 큰 종목의 비중이 높습니다.
               그래서 <strong style={{ color: "var(--text)" }}>삼성전자·SK하이닉스</strong> 같은 종목이 움직이면
               지수 전체가 같이 움직이는 날이 많습니다.
-            </p>
-            <p className="text-sm leading-relaxed mb-3">
-              초보 체크리스트로 자주 보는 축은 다음과 같습니다.
             </p>
             <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
               <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>자주 보는 시총 축</p>
@@ -181,20 +176,124 @@ export default function KoreaStocksPage() {
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 특정 종목 매수·매도 권유가 아니며, 투자·세무 자문이 아닙니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>KOSPI &amp; KOSDAQ — The Two Korean Exchanges</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The Korean stock market is divided into two main boards: <strong style={{ color: "var(--text)" }}>KOSPI</strong> and <strong style={{ color: "var(--text)" }}>KOSDAQ</strong>. KOSPI lists large- and mid-cap companies, including conglomerates and exporters. KOSDAQ skews toward growth, small-cap, and tech-related names, and tends to be more volatile.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>KOSPI</strong> — Dominated by heavyweight stocks like Samsung Electronics, SK Hynix, and Hyundai Motor. Their moves often drive the overall index direction.</p>
+              <p><strong style={{ color: "var(--text)" }}>KOSDAQ</strong> — More sensitive to momentum, themes, and order flow. Greater intraday swings are common.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              For beginners, the most useful daily check is not the index name but whether large-caps are rising and whether foreign investors are net buyers.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Trading Hours — The Daytime Market</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The regular session runs <strong style={{ color: "var(--text)" }}>weekdays 9:00 AM – 3:30 PM KST</strong>. Unlike US markets (which open at night in Korea time), the Korean market operates during daylight hours. This is one of the biggest structural differences for Korean investors who hold both markets.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Pre-market</strong> — Review overnight US close, currency rate, and morning news before 9 AM.</li>
+              <li><strong style={{ color: "var(--text)" }}>During session</strong> — Watch live order flow and large-cap price action.</li>
+              <li><strong style={{ color: "var(--text)" }}>Post-market</strong> — Wrap up positions, prepare for next-day briefing.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Market-Cap Leaders Matter So Much</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              KOSPI is a market-cap-weighted index, so a handful of mega-cap names have an outsized influence on the overall direction. When Samsung Electronics or SK Hynix moves meaningfully, the entire index often follows.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>Key Sectors to Watch</p>
+              <div className="flex flex-col gap-2 text-sm">
+                {[
+                  ["Semis", "Samsung Electronics, SK Hynix — AI, memory, exports"],
+                  ["Autos", "Hyundai, Kia — overseas sales, margins"],
+                  ["Battery/Bio", "LG Energy Solution, Samsung Biologics, Celltrion"],
+                  ["Finance/Platform", "KB, Shinhan, NAVER"],
+                ].map(([t, d]) => (
+                  <div key={t} className="flex gap-2">
+                    <span className="font-bold flex-shrink-0" style={{ color: "var(--text)", minWidth: 80 }}>{t}</span>
+                    <span>{d}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Order Flow — Why &ldquo;Foreign Buying&rdquo; Matters</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Korean market coverage frequently highlights whether foreign investors or domestic institutions are net buyers or sellers on a given day. In the short term, large-scale institutional flows can push prices. Foreign selling often coincides with a weaker won, amplifying moves.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              However, order flow alone should not be the sole reason to buy or sell. Currency (USD/KRW), US interest rates, and semiconductor cycle conditions often move together with Korean equities. See the <Link href="/learn/usd-krw" style={{ color: "var(--mint)" }}>FX Guide</Link> and <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>Rates Guide</Link> for context.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>How Korean Stocks Differ from US Stocks</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Hours</strong> — Korea trades during daylight (KST); the US opens at night for Korean investors.</li>
+              <li><strong style={{ color: "var(--text)" }}>Currency</strong> — Korean stocks are priced in KRW; US stocks add a USD/KRW layer to every return calculation.</li>
+              <li><strong style={{ color: "var(--text)" }}>Tax &amp; accounts</strong> — Domestic and foreign stock taxation structures differ. See the <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>US Tax Guide</Link> and <Link href="/learn/korea-accounts" style={{ color: "var(--mint)" }}>ISA/Pension Guide</Link>.</li>
+              <li><strong style={{ color: "var(--text)" }}>Sector composition</strong> — Korea is heavily concentrated in semiconductors and autos; sector diversification looks different from a US S&amp;P 500 portfolio.</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Neither market is the &ldquo;right&rdquo; answer exclusively. Allocating across both based on your goals and risk tolerance is closer to a real <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>portfolio strategy</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Beginner Mistakes</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Concentrating in a single theme or momentum stock without position sizing</li>
+              <li>Using leveraged or inverse ETFs as a short-term trading vehicle</li>
+              <li>Buying on news headlines without checking order flow, earnings, or currency</li>
+              <li>Trading without predefined stop-loss or position rules — reacting emotionally instead</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Before buying, run through the <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>Buy Checklist</Link> and review the <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>Investor Psychology</Link> guide.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Related Articles</h2>
+            <p className="text-sm leading-relaxed">
+              <Link href="/learn/us-stock-basics" style={{ color: "var(--mint)" }}>US Stocks Intro</Link>,{" "}
+              <Link href="/learn/kr-us-etf" style={{ color: "var(--mint)" }}>Korean vs US ETFs</Link>,{" "}
+              <Link href="/learn/safe-assets" style={{ color: "var(--mint)" }}>Safe Assets</Link>,{" "}
+              <Link href="/learn/korea-real-estate" style={{ color: "var(--mint)" }}>Korean Real Estate</Link>.
+            </p>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not a recommendation to buy or sell any specific stock. Not investment or tax advice.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/safe-assets" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🛡️</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>안전자산 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>비트코인·이더·금·은</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "안전자산 가이드" : "Safe Assets Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "비트코인·이더·금·은" : "Bitcoin, Ether, Gold & Silver"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -203,8 +302,8 @@ export default function KoreaStocksPage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🏠</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>한국 부동산 입문</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>매매·전세·정책</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "한국 부동산 입문" : "Korean Real Estate Intro"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "매매·전세·정책" : "Buying, Jeonse & Policy"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

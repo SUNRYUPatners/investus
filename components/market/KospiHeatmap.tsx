@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { MiniChartPopup } from "@/components/MiniChartPopup";
 import { SectionInfo } from "@/components/SectionInfo";
 import { heatmapTile } from "@/lib/heatmapColors";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 function useIsDesktop() {
   const [lg, setLg] = useState(false);
@@ -144,6 +145,7 @@ export function KospiHeatmap() {
   const [thumbL, setThumbL] = useState(0);
   const [thumbW, setThumbW] = useState(100);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const locale = useLocaleCode();
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -210,18 +212,31 @@ export function KospiHeatmap() {
         className="flex items-center justify-between px-4 py-3 border-b"
         style={{ borderColor: "var(--border)" }}
       >
-        <SectionInfo title="코스피 히트맵">
-          <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>코스피 히트맵이란?</p>
-          <p style={{ color: "var(--muted)" }}>한국 대형주를 <b>한 화면</b>에서 보는 지도예요. 미국 S&amp;P500 히트맵과 같은 형식입니다.</p>
-          <div className="mt-2 space-y-1">
-            <p>🟩 <b>초록색</b> = 오늘 오른 종목</p>
-            <p>🟥 <b>빨간색</b> = 오늘 내린 종목</p>
-            <p>📐 <b>타일 크기</b> = 시가총액 비중</p>
-            <p>🏢 <b>섹터 구분</b> = 반도체·자동차·금융 등</p>
-          </div>
+        <SectionInfo title={locale === "ko" ? "코스피 히트맵" : "KOSPI Heatmap"}>
+          {locale === "ko" ? (<>
+            <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>코스피 히트맵이란?</p>
+            <p style={{ color: "var(--muted)" }}>한국 대형주를 <b>한 화면</b>에서 보는 지도예요. 미국 S&amp;P500 히트맵과 같은 형식입니다.</p>
+            <div className="mt-2 space-y-1">
+              <p>🟩 <b>초록색</b> = 오늘 오른 종목</p>
+              <p>🟥 <b>빨간색</b> = 오늘 내린 종목</p>
+              <p>📐 <b>타일 크기</b> = 시가총액 비중</p>
+              <p>🏢 <b>섹터 구분</b> = 반도체·자동차·금융 등</p>
+            </div>
+          </>) : (<>
+            <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>What is the KOSPI Heatmap?</p>
+            <p style={{ color: "var(--muted)" }}>A map of Korean large-cap stocks <b>at a glance</b>, in the same format as the S&amp;P 500 heatmap.</p>
+            <div className="mt-2 space-y-1">
+              <p>🟩 <b>Green</b> = stocks up today</p>
+              <p>🟥 <b>Red</b> = stocks down today</p>
+              <p>📐 <b>Tile size</b> = market-cap weight</p>
+              <p>🏢 <b>Sectors</b> = Semiconductors, Auto, Financials, etc.</p>
+            </div>
+          </>)}
         </SectionInfo>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-          {isPreopen ? "전일 종가 등락률" : "섹터별 등락률"}
+          {isPreopen
+            ? (locale === "ko" ? "전일 종가 등락률" : "Prev. close change")
+            : (locale === "ko" ? "섹터별 등락률" : "Sector changes")}
         </span>
       </div>
 
@@ -275,11 +290,11 @@ export function KospiHeatmap() {
 
       <div className="px-4 py-2 border-t flex items-center justify-between" style={{ borderColor: "var(--border)" }}>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-          코스피 · 섹터 구성 · 시가총액 비례
+          {locale === "ko" ? "코스피 · 섹터 구성 · 시가총액 비례" : "KOSPI · sector composition · market-cap weighted"}
         </span>
         {!isLive && sectors !== null && (
           <span className="text-[9px] px-1.5 py-0.5 rounded-full" style={{ background: "rgba(245,158,11,0.12)", color: "#f59e0b" }}>
-            참고용
+            {locale === "ko" ? "참고용" : "Reference"}
           </span>
         )}
       </div>

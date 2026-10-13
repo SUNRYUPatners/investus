@@ -102,10 +102,11 @@ type ImportRow = ParsedHolding & { checked: boolean; editShares: string; editAvg
 
 type ImportState = "upload" | "analyzing" | "results" | "error";
 
-function ScreenshotImportSheet({ onClose, onImport, existing }: {
+function ScreenshotImportSheet({ onClose, onImport, existing, isKo }: {
   onClose:  () => void;
   onImport: (rows: { symbol: string; shares: number; avgCost: number }[]) => void;
   existing: string[];
+  isKo: boolean;
 }) {
   const [state,     setState]     = useState<ImportState>("upload");
   const [rows,      setRows]      = useState<ImportRow[]>([]);
@@ -115,8 +116,8 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
   const fileRef = useRef<HTMLInputElement>(null);
 
   const processFile = async (file: File) => {
-    if (!file.type.startsWith("image/")) { setErrMsg("이미지 파일만 가능합니다."); return; }
-    if (file.size > 5 * 1024 * 1024) { setErrMsg("5MB 이하 파일만 가능합니다."); return; }
+    if (!file.type.startsWith("image/")) { setErrMsg(isKo ? "이미지 파일만 가능합니다." : "Image files only."); return; }
+    if (file.size > 5 * 1024 * 1024) { setErrMsg(isKo ? "5MB 이하 파일만 가능합니다." : "File must be under 5MB."); return; }
 
     // Preview
     const reader = new FileReader();
@@ -141,8 +142,8 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
       });
       const data = await res.json() as { holdings?: ParsedHolding[]; error?: string };
 
-      if (!res.ok || data.error) { setState("error"); setErrMsg(data.error ?? "인식 실패"); return; }
-      if (!data.holdings || data.holdings.length === 0) { setState("error"); setErrMsg("보유종목을 찾지 못했어요."); return; }
+      if (!res.ok || data.error) { setState("error"); setErrMsg(data.error ?? (isKo ? "인식 실패" : "Recognition failed")); return; }
+      if (!data.holdings || data.holdings.length === 0) { setState("error"); setErrMsg(isKo ? "보유종목을 찾지 못했어요." : "No holdings found in the screenshot."); return; }
 
       setRows(
         data.holdings.map((h) => ({
@@ -155,7 +156,7 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
       setState("results");
     } catch {
       setState("error");
-      setErrMsg("네트워크 오류. 다시 시도해주세요.");
+      setErrMsg(isKo ? "네트워크 오류. 다시 시도해주세요." : "Network error. Please try again.");
     }
   };
 
@@ -203,13 +204,15 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
             </div>
             <div>
               <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
-                {state === "results" ? `${rows.length}개 종목 인식 완료` : "계좌 스크린샷으로 불러오기"}
+                {state === "results"
+                  ? (isKo ? `${rows.length}개 종목 인식 완료` : `${rows.length} holdings recognized`)
+                  : (isKo ? "계좌 스크린샷으로 불러오기" : "Import from account screenshot")}
               </p>
               <p className="text-[10px]" style={{ color: "var(--muted)" }}>
-                {state === "upload"    && "AI가 보유종목을 자동으로 읽어드려요"}
-                {state === "analyzing" && "AI가 종목을 분석 중입니다…"}
-                {state === "results"   && "확인 후 추가할 종목을 선택하세요"}
-                {state === "error"     && "인식에 실패했습니다"}
+                {state === "upload"    && (isKo ? "AI가 보유종목을 자동으로 읽어드려요" : "AI reads your holdings automatically")}
+                {state === "analyzing" && (isKo ? "AI가 종목을 분석 중입니다…" : "AI is analyzing your holdings…")}
+                {state === "results"   && (isKo ? "확인 후 추가할 종목을 선택하세요" : "Review and select holdings to add")}
+                {state === "error"     && (isKo ? "인식에 실패했습니다" : "Recognition failed")}
               </p>
             </div>
           </div>
@@ -238,16 +241,16 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                   <Camera className="w-8 h-8" style={{ color: "var(--mint)" }} />
                 </div>
                 <div className="text-center">
-                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>스크린샷 업로드</p>
-                  <p className="text-[12px]" style={{ color: "var(--muted)" }}>클릭하거나 파일을 끌어다 놓으세요</p>
-                  <p className="text-[10px] mt-1" style={{ color: "var(--muted)", opacity: 0.6 }}>JPG · PNG · 최대 5MB</p>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{isKo ? "스크린샷 업로드" : "Upload Screenshot"}</p>
+                  <p className="text-[12px]" style={{ color: "var(--muted)" }}>{isKo ? "클릭하거나 파일을 끌어다 놓으세요" : "Click or drag and drop a file"}</p>
+                  <p className="text-[10px] mt-1" style={{ color: "var(--muted)", opacity: 0.6 }}>JPG · PNG · {isKo ? "최대 5MB" : "max 5MB"}</p>
                 </div>
                 <button
                   className="px-5 py-2 rounded-full text-sm font-bold transition-opacity"
                   style={{ background: "var(--mint)", color: "var(--on-accent)" }}
                   onClick={(e) => { e.stopPropagation(); fileRef.current?.click(); }}
                 >
-                  파일 선택
+                  {isKo ? "파일 선택" : "Choose file"}
                 </button>
                 <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={handleFile} />
               </div>
@@ -261,16 +264,19 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                 <div className="flex items-start gap-2 mb-3">
                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "#fbbf24" }} />
                   <p className="text-[12px] font-bold" style={{ color: "#fbbf24" }}>
-                    스크린샷 찍기 전에 먼저 USD 설정!
+                    {isKo ? "스크린샷 찍기 전에 먼저 USD 설정!" : "Set USD display before taking a screenshot!"}
                   </p>
                 </div>
                 <div className="space-y-1.5 text-[11px]" style={{ color: "var(--muted)" }}>
-                  <p>평단가가 <b style={{ color: "var(--text)" }}>달러($)로 표시된 화면</b>을 캡처해야 자동 입력됩니다.</p>
+                  <p>{isKo
+                    ? <>평단가가 <b style={{ color: "var(--text)" }}>달러($)로 표시된 화면</b>을 캡처해야 자동 입력됩니다.</>
+                    : <>Capture the screen where the average cost is shown in <b style={{ color: "var(--text)" }}>USD ($)</b> for auto-fill to work.</>}
+                  </p>
                   <div className="mt-2 pt-2 border-t space-y-1" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-                    <p>🟠 <b>키움</b> — 해외주식 보유 → 외화 탭 선택</p>
-                    <p>🌐 <b>미래에셋</b> — 해외주식 → USD 표시로 전환</p>
-                    <p>🟡 <b>KB증권</b> — 해외주식 잔고 → 통화 USD</p>
-                    <p>🦅 <b>Fidelity / Schwab</b> — 기본 USD 표시</p>
+                    <p>🟠 <b>Kiwoom</b> — {isKo ? "해외주식 보유 → 외화 탭 선택" : "Foreign stocks → Foreign currency tab"}</p>
+                    <p>🌐 <b>Mirae Asset</b> — {isKo ? "해외주식 → USD 표시로 전환" : "Foreign stocks → Switch to USD display"}</p>
+                    <p>🟡 <b>KB Securities</b> — {isKo ? "해외주식 잔고 → 통화 USD" : "Foreign stock balance → Currency USD"}</p>
+                    <p>🦅 <b>Fidelity / Schwab</b> — {isKo ? "기본 USD 표시" : "USD by default"}</p>
                   </div>
                 </div>
               </div>
@@ -279,7 +285,9 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                 <div className="flex items-start gap-2">
                   <Sparkles className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: "var(--mint)" }} />
                   <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                    <b style={{ color: "var(--text)" }}>보유종목 화면을 캡처</b>해 주세요. 종목명·수량·평단가(USD)가 보이면 AI가 자동 인식합니다.
+                    {isKo
+                      ? <><b style={{ color: "var(--text)" }}>보유종목 화면을 캡처</b>해 주세요. 종목명·수량·평단가(USD)가 보이면 AI가 자동 인식합니다.</>
+                      : <><b style={{ color: "var(--text)" }}>Capture your holdings screen.</b> If the ticker, quantity, and average cost (USD) are visible, AI will recognize them automatically.</>}
                   </p>
                 </div>
               </div>
@@ -301,8 +309,8 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                     style={{ borderColor: "var(--border)", borderTopColor: "var(--mint)" }} />
                   <Sparkles className="w-5 h-5 absolute inset-0 m-auto" style={{ color: "var(--mint)" }} />
                 </div>
-                <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>AI가 종목 분석 중…</p>
-                <p className="text-[11px]" style={{ color: "var(--muted)" }}>보통 3~5초 소요됩니다</p>
+                <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{isKo ? "AI가 종목 분석 중…" : "AI is analyzing holdings…"}</p>
+                <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "보통 3~5초 소요됩니다" : "Usually takes 3–5 seconds"}</p>
               </div>
             </div>
           )}
@@ -314,9 +322,9 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                 <AlertTriangle className="w-7 h-7" style={{ color: "#ef4444" }} />
               </div>
               <div>
-                <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>종목을 인식하지 못했어요</p>
+                <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{isKo ? "종목을 인식하지 못했어요" : "Could not recognize holdings"}</p>
                 <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                  {errMsg || "보유종목이 잘 보이는 화면을 캡처해서 다시 시도해주세요."}
+                  {errMsg || (isKo ? "보유종목이 잘 보이는 화면을 캡처해서 다시 시도해주세요." : "Try capturing a clearer view of your holdings.")}
                 </p>
               </div>
               <button
@@ -324,7 +332,7 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                 className="px-6 py-2.5 rounded-full text-sm font-bold"
                 style={{ background: "var(--mint)", color: "var(--on-accent)" }}
               >
-                다시 시도
+                {isKo ? "다시 시도" : "Try again"}
               </button>
             </div>
           )}
@@ -335,14 +343,14 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
               {/* Toggle all */}
               <div className="flex items-center justify-between">
                 <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-                  인식된 종목을 확인하고 수정해 주세요
+                  {isKo ? "인식된 종목을 확인하고 수정해 주세요" : "Review and edit the recognized holdings"}
                 </p>
                 <button
                   onClick={() => setRows((r) => r.map((x) => ({ ...x, checked: !r.every((y) => y.checked) })))}
                   className="text-[11px] font-semibold"
                   style={{ color: "var(--mint)" }}
                 >
-                  {rows.every((r) => r.checked) ? "전체 해제" : "전체 선택"}
+                  {rows.every((r) => r.checked) ? (isKo ? "전체 해제" : "Deselect all") : (isKo ? "전체 선택" : "Select all")}
                 </button>
               </div>
 
@@ -367,7 +375,7 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                         <div className="flex items-center gap-1.5">
                           <span className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{row.symbol}</span>
                           {existing.includes(row.symbol) && (
-                            <span className="text-[9px] px-1.5 py-0.5 rounded-full font-semibold" style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>보유중</span>
+                            <span className="text-[9px] px-1.5 py-0.5 rounded-full font-semibold" style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>{isKo ? "보유중" : "Held"}</span>
                           )}
                         </div>
                         {row.name && <p className="text-[10px] truncate" style={{ color: "var(--muted)" }}>{row.name}</p>}
@@ -375,7 +383,7 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
 
                       {/* Shares input */}
                       <div className="flex flex-col items-end gap-1">
-                        <p className="text-[9px]" style={{ color: "var(--muted)" }}>수량</p>
+                        <p className="text-[9px]" style={{ color: "var(--muted)" }}>{isKo ? "수량" : "Qty"}</p>
                         <input
                           type="number"
                           value={row.editShares}
@@ -387,14 +395,14 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
 
                       {/* AvgCost input */}
                       <div className="flex flex-col items-end gap-1">
-                        <p className="text-[9px]" style={{ color: "var(--muted)" }}>평단가 (USD)</p>
+                        <p className="text-[9px]" style={{ color: "var(--muted)" }}>{isKo ? "평단가 (USD)" : "Avg cost (USD)"}</p>
                         <div className="relative">
                           <span className="absolute left-2 top-1/2 -translate-y-1/2 text-[11px]" style={{ color: "var(--muted)" }}>$</span>
                           <input
                             type="number"
                             value={row.editAvgCost}
                             onChange={(e) => setRows((r) => r.map((x, j) => j === i ? { ...x, editAvgCost: e.target.value } : x))}
-                            placeholder="직접 입력"
+                            placeholder={isKo ? "직접 입력" : "Enter manually"}
                             className="w-24 text-right text-xs font-mono-num rounded-lg px-2 py-1 pl-5 outline-none border"
                             style={{
                               background:   "var(--card)",
@@ -416,9 +424,9 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                   <div className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "#fbbf24" }} />
                     <div>
-                      <p className="text-[12px] font-bold mb-0.5" style={{ color: "#fbbf24" }}>평단가가 원화(₩)로 표시된 것 같아요</p>
+                      <p className="text-[12px] font-bold mb-0.5" style={{ color: "#fbbf24" }}>{isKo ? "평단가가 원화(₩)로 표시된 것 같아요" : "The average cost appears to be in KRW (₩)"}</p>
                       <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                        아래 두 가지 방법 중 하나를 선택해주세요.
+                        {isKo ? "아래 두 가지 방법 중 하나를 선택해주세요." : "Please choose one of the options below."}
                       </p>
                     </div>
                   </div>
@@ -430,17 +438,17 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                     >
                       <span className="text-base">📷</span>
                       <div>
-                        <p className="text-[12px] font-semibold" style={{ color: "var(--text)" }}>앱에서 USD 설정 후 다시 찍기</p>
-                        <p className="text-[10px]" style={{ color: "var(--muted)" }}>평단가가 $ 달러로 보이는 화면을 캡처하세요</p>
+                        <p className="text-[12px] font-semibold" style={{ color: "var(--text)" }}>{isKo ? "앱에서 USD 설정 후 다시 찍기" : "Set USD in your app and retake"}</p>
+                        <p className="text-[10px]" style={{ color: "var(--muted)" }}>{isKo ? "평단가가 $ 달러로 보이는 화면을 캡처하세요" : "Capture the screen showing costs in $"}</p>
                       </div>
                     </button>
                     <div className="flex items-center gap-2 px-1">
                       <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
-                      <p className="text-[10px]" style={{ color: "var(--muted)" }}>또는</p>
+                      <p className="text-[10px]" style={{ color: "var(--muted)" }}>{isKo ? "또는" : "or"}</p>
                       <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
                     </div>
                     <p className="text-[11px] text-center" style={{ color: "var(--muted)" }}>
-                      빨간 칸에 USD 평단가를 직접 입력한 뒤 추가
+                      {isKo ? "빨간 칸에 USD 평단가를 직접 입력한 뒤 추가" : "Enter the USD avg cost manually in the red fields, then add"}
                     </p>
                   </div>
                 </div>
@@ -454,7 +462,7 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                 style={{ background: "var(--mint)", color: "var(--on-accent)" }}
               >
                 <CheckCircle2 className="w-4 h-4" />
-                선택한 종목 추가 ({checkedCount}개)
+                {isKo ? `선택한 종목 추가 (${checkedCount}개)` : `Add selected (${checkedCount})`}
               </button>
 
               <button
@@ -462,7 +470,7 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                 className="w-full text-[12px] py-2 text-center transition-opacity active:opacity-60"
                 style={{ color: "var(--muted)" }}
               >
-                다른 스크린샷 다시 올리기
+                {isKo ? "다른 스크린샷 다시 올리기" : "Upload a different screenshot"}
               </button>
             </>
           )}
@@ -474,11 +482,12 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
 
 // ── Add stock sheet ───────────────────────────────────────────────────────────
 
-function AddSheet({ onClose, onAdd, existing, market }: {
+function AddSheet({ onClose, onAdd, existing, market, isKo }: {
   onClose: () => void;
   onAdd: (h: Holding) => void;
   existing: string[];
   market: MarketId;
+  isKo: boolean;
 }) {
   const cfg = getMarketConfig(market);
   const symbolRegistry = [...cfg.recommended, ...cfg.popular, ...cfg.indices].filter(
@@ -529,7 +538,7 @@ function AddSheet({ onClose, onAdd, existing, market }: {
       return;
     }
     if (market !== "us") {
-      setErr("종목을 찾을 수 없습니다. 목록에서 선택해 주세요.");
+      setErr(isKo ? "종목을 찾을 수 없습니다. 목록에서 선택해 주세요." : "Stock not found. Please select from the list.");
       return;
     }
     setLooking(true); setErr("");
@@ -541,9 +550,9 @@ function AddSheet({ onClose, onAdd, existing, market }: {
         setSelected({ symbol: upper, name: upper, price: entry.price });
         setAvgCost(entry.price.toFixed(2));
       } else {
-        setErr("종목을 찾을 수 없습니다.");
+        setErr(isKo ? "종목을 찾을 수 없습니다." : "Stock not found.");
       }
-    } catch { setErr("조회 실패. 티커를 확인해주세요."); }
+    } catch { setErr(isKo ? "조회 실패. 티커를 확인해주세요." : "Lookup failed. Check the ticker."); }
     finally  { setLooking(false); }
   }
 
@@ -563,7 +572,7 @@ function AddSheet({ onClose, onAdd, existing, market }: {
         style={{ background: "var(--card)", borderColor: "var(--border)" }}>
         <div className="px-5 pt-5 pb-6">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>종목 추가</h2>
+            <h2 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{isKo ? "종목 추가" : "Add stock"}</h2>
             <button onClick={onClose} className="p-1.5 rounded-full" style={{ background: "var(--bg)" }}>
               <X className="w-4 h-4" style={{ color: "var(--muted)" }} />
             </button>
@@ -577,7 +586,13 @@ function AddSheet({ onClose, onAdd, existing, market }: {
                 <input
                   ref={inputRef}
                   type="text"
-                  placeholder={market === "kr" ? "종목명 또는 코드 (예: 삼성전자, 005930)" : market === "safe" ? "자산명 (예: 비트코인, BTC-USD)" : "티커 입력 (예: AAPL, NVDA, TSLA)"}
+                  placeholder={
+                    market === "kr"
+                      ? (isKo ? "종목명 또는 코드 (예: 삼성전자, 005930)" : "Stock name or code (e.g. Samsung, 005930)")
+                      : market === "safe"
+                        ? (isKo ? "자산명 (예: 비트코인, BTC-USD)" : "Asset name (e.g. Bitcoin, BTC-USD)")
+                        : (isKo ? "티커 입력 (예: AAPL, NVDA, TSLA)" : "Enter ticker (e.g. AAPL, NVDA, TSLA)")
+                  }
                   value={query}
                   onChange={(e) => { setQuery(e.target.value); setErr(""); }}
                   onKeyDown={(e) => e.key === "Enter" && lookupTicker(query)}
@@ -608,7 +623,7 @@ function AddSheet({ onClose, onAdd, existing, market }: {
               <button onClick={() => lookupTicker(query)} disabled={!query.trim() || looking}
                 className="w-full py-3 rounded-2xl text-sm font-bold transition-opacity disabled:opacity-40"
                 style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
-                {looking ? "조회 중…" : "종목 조회"}
+                {looking ? (isKo ? "조회 중…" : "Looking up…") : (isKo ? "종목 조회" : "Search stock")}
               </button>
             </>
           ) : (
@@ -621,10 +636,10 @@ function AddSheet({ onClose, onAdd, existing, market }: {
                     <p className="text-[11px] max-w-[160px] truncate" style={{ color: "var(--muted)" }}>{selected.name}</p>
                   </div>
                 </div>
-                <button onClick={() => setSelected(null)} className="text-xs font-semibold" style={{ color: "var(--mint)" }}>변경</button>
+                <button onClick={() => setSelected(null)} className="text-xs font-semibold" style={{ color: "var(--mint)" }}>{isKo ? "변경" : "Change"}</button>
               </div>
               <div>
-                <label className="text-xs font-medium mb-2 block" style={{ color: "var(--muted)" }}>보유 수량</label>
+                <label className="text-xs font-medium mb-2 block" style={{ color: "var(--muted)" }}>{isKo ? "보유 수량" : "Quantity"}</label>
                 <input type="number" min="0.001" step="0.001" placeholder="0" value={shares}
                   onChange={(e) => setShares(e.target.value)}
                   className="w-full rounded-2xl px-4 py-3 font-mono-num outline-none border"
@@ -632,8 +647,8 @@ function AddSheet({ onClose, onAdd, existing, market }: {
               </div>
               <div>
                 <label className="text-xs font-medium mb-2 block" style={{ color: "var(--muted)" }}>
-                  평균 매수가 (USD)
-                  <span className="ml-2 font-normal opacity-60">현재가: ${selected.price.toFixed(2)}</span>
+                  {isKo ? "평균 매수가 (USD)" : "Avg buy price (USD)"}
+                  <span className="ml-2 font-normal opacity-60">{isKo ? "현재가" : "Current"}: ${selected.price.toFixed(2)}</span>
                 </label>
                 <input type="number" min="0.01" step="0.01" placeholder="0.00" value={avgCost}
                   onChange={(e) => setAvgCost(e.target.value)}
@@ -648,7 +663,7 @@ function AddSheet({ onClose, onAdd, existing, market }: {
                 return (
                   <div className="rounded-xl px-4 py-3" style={{ background: "rgba(255,255,255,0.03)" }}>
                     <div className="flex items-center justify-between text-xs">
-                      <span style={{ color: "var(--muted)" }}>예상 평가금액</span>
+                      <span style={{ color: "var(--muted)" }}>{isKo ? "예상 평가금액" : "Est. market value"}</span>
                       <div className="text-right">
                         <span className="font-mono-num font-semibold" style={{ color: "var(--text)" }}>${val.toFixed(2)}</span>
                         <span className="ml-2 font-mono-num" style={{ color: clr(pnl) }}>
@@ -662,7 +677,7 @@ function AddSheet({ onClose, onAdd, existing, market }: {
               <button onClick={submit} disabled={!shares || !avgCost || parseFloat(shares) <= 0}
                 className="w-full py-3.5 rounded-2xl text-sm font-bold transition-opacity disabled:opacity-40"
                 style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
-                추가하기
+                {isKo ? "추가하기" : "Add"}
               </button>
             </div>
           )}
@@ -683,6 +698,7 @@ function HoldingCard({ holding, live, weight, cur, rate, onDelete }: {
   onDelete: () => void;
 }) {
   const router   = useRouter();
+  const locale   = useLocaleCode();
   const price    = live?.price ?? holding.avgCost;
   const todayPct = live?.changePercent ?? 0;
   const name     = live?.shortName ?? mockQuotes.find((q) => q.symbol === holding.symbol)?.name ?? holding.symbol;
@@ -725,19 +741,19 @@ function HoldingCard({ holding, live, weight, cur, rate, onDelete }: {
 
       {/* Stats row */}
       <div className="flex gap-4 text-[11px] mb-3 flex-wrap">
-        <span style={{ color: "var(--muted)" }}>{holding.shares}주</span>
+        <span style={{ color: "var(--muted)" }}>{holding.shares}{locale === "ko" ? "주" : " sh"}</span>
         <span style={{ color: "var(--muted)" }}>
-          평단 <span className="font-mono-num" style={{ color: "var(--text)" }}>{fmtVal(holding.avgCost, cur, rate)}</span>
+          {locale === "ko" ? "평단" : "Avg"} <span className="font-mono-num" style={{ color: "var(--text)" }}>{fmtVal(holding.avgCost, cur, rate)}</span>
         </span>
         <span style={{ color: "var(--muted)" }}>
-          현재 <span className="font-mono-num" style={{ color: "var(--text)" }}>{fmtVal(price, cur, rate)}</span>
+          {locale === "ko" ? "현재" : "Now"} <span className="font-mono-num" style={{ color: "var(--text)" }}>{fmtVal(price, cur, rate)}</span>
         </span>
       </div>
 
       {/* Value + P&L */}
       <div className="flex items-end justify-between">
         <div>
-          <p className="text-[10px] mb-0.5" style={{ color: "var(--muted)" }}>평가금액</p>
+          <p className="text-[10px] mb-0.5" style={{ color: "var(--muted)" }}>{locale === "ko" ? "평가금액" : "Value"}</p>
           <p className="text-base font-bold font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
             {fmtVal(val, cur, rate)}
           </p>
@@ -747,7 +763,7 @@ function HoldingCard({ holding, live, weight, cur, rate, onDelete }: {
         </div>
         <div className="text-right">
           <p className="text-[10px] mb-0.5" style={{ color: "var(--muted)" }}>
-            손익 / 오늘 {sgn(todayAmt)}{fmtVal(Math.abs(todayAmt), cur, rate, 0)}
+            {locale === "ko" ? "손익" : "P&L"} / {locale === "ko" ? "오늘" : "Today"} {sgn(todayAmt)}{fmtVal(Math.abs(todayAmt), cur, rate, 0)}
           </p>
           <div className="flex items-center justify-end gap-1.5">
             {pnl >= 0 ? <TrendingUp className="w-3.5 h-3.5" style={{ color: "var(--up)" }} /> : <TrendingDown className="w-3.5 h-3.5" style={{ color: "var(--down)" }} />}
@@ -768,9 +784,9 @@ function HoldingCard({ holding, live, weight, cur, rate, onDelete }: {
             style={{ width: `${Math.min(weight, 100)}%`, background: clr(pnl) }} />
         </div>
         <p className="text-[9px] mt-1 flex items-center justify-between" style={{ color: "var(--muted)" }}>
-          <span>비중 {weight.toFixed(1)}%</span>
+          <span>{locale === "ko" ? "비중" : "Weight"} {weight.toFixed(1)}%</span>
           <span className="flex items-center gap-1">
-            차트·뉴스 보기 <ChevronRight className="w-3 h-3" />
+            {locale === "ko" ? "차트·뉴스 보기" : "Chart & news"} <ChevronRight className="w-3 h-3" />
           </span>
         </p>
       </div>
@@ -1239,8 +1255,8 @@ export default function PortfolioPage() {
         </div>
       </main>
 
-      {showAdd    && <AddSheet             onClose={() => setShowAdd(false)}    onAdd={addHolding}         existing={holdings.map((h) => h.symbol)} market={market} />}
-      {showImport && isUs && <ScreenshotImportSheet onClose={() => setShowImport(false)} onImport={importHoldings} existing={holdings.map((h) => h.symbol)} />}
+      {showAdd    && <AddSheet             onClose={() => setShowAdd(false)}    onAdd={addHolding}         existing={holdings.map((h) => h.symbol)} market={market} isKo={locale === "ko"} />}
+      {showImport && isUs && <ScreenshotImportSheet onClose={() => setShowImport(false)} onImport={importHoldings} existing={holdings.map((h) => h.symbol)} isKo={locale === "ko"} />}
     </div>
   );
 }

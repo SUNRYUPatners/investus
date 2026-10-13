@@ -17,11 +17,11 @@ function ratingStyle(entry: AnalystEntry): { bg: string; color: string } {
   return { bg: "rgba(245,158,11,0.12)", color: HOLD_COLOR };
 }
 
-function actionBadge(action?: string): { label: string; color: string } | null {
+function actionBadge(action?: string, isKo = true): { label: string; color: string } | null {
   if (!action || action === "Reiterate") return null;
   if (action === "Upgrade")  return { label: "▲", color: BUY_COLOR };
   if (action === "Downgrade") return { label: "▼", color: SELL_COLOR };
-  if (action === "Initiate") return { label: "신규", color: "#a78bfa" };
+  if (action === "Initiate") return { label: isKo ? "신규" : "New", color: "#a78bfa" };
   return null;
 }
 
@@ -96,7 +96,7 @@ export function AnalystTargets({
       <div className="flex flex-col">
         {visible.map((e, i) => {
           const badge  = ratingStyle(e);
-          const action = actionBadge(e.action);
+          const action = actionBadge(e.action, isKo);
           return (
             <div
               key={`${e.firm}-${e.date}`}

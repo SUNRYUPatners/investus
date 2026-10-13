@@ -1,50 +1,48 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "PER·PBR·기업 가치 평가 — 초보도 이해하는 밸류에이션 | 인베스트어스",
-  description:
-    "PER, PBR, EV/EBITDA가 무엇인지 숫자 예시로 설명합니다. 비싸거나 싼지 판단하는 비교 도구와 흔한 함정까지.",
-  keywords: ["PER", "PBR", "밸류에이션", "EV/EBITDA", "PEG", "주가수익비율"],
-  alternates: { canonical: "https://www.investus.kr/learn/valuation" },
-  openGraph: {
-    title: "PER·PBR·기업 가치 평가 | 인베스트어스",
-    description: "주식이 비싼지 싼지 — 비교 도구로 읽는 법",
-    url: "https://www.investus.kr/learn/valuation",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function ValuationPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/valuation")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(192,132,252,0.15)", color: "#c084fc" }}>분석</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            PER·PBR·기업 가치 평가
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            &ldquo;이 주식이 비싼가, 싼가?&rdquo;를 숫자로 비교하려는 도구가 밸류에이션입니다.
-            PER 10이면 무조건 싸다는 말은 없습니다. 업종·성장률·금리·부채를 같이 봐야 합니다.
-            지표는 <strong style={{ color: "var(--text)" }}>비교용 자</strong>이지, 매수 버튼이 아닙니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>밸류에이션이란</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -187,21 +185,154 @@ export default function ValuationPage() {
             </ol>
           </section>
 
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ 교육 목적입니다. 저PER·저PBR이 매수 신호가 아니며, 특정 종목 권유가 아닙니다.
+          </div>
+            </>
+          ) : (
+            <>
           <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 읽을 글</h2>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is Valuation?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Valuation is the process of estimating and comparing a company&apos;s worth. Just as you would compare apartment prices in similar neighborhoods, investors compare a stock&apos;s price relative to its earnings, assets, or cash flow to judge whether it is cheap or expensive. The key insight is that valuation metrics are <strong style={{ color: "var(--text)" }}>comparison tools</strong>, not buy signals.
+            </p>
             <p className="text-sm leading-relaxed">
-              <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>재무제표</Link> →
-              <Link href="/learn/earnings-season" style={{ color: "var(--mint)" }}>실적 시즌</Link> →
-              <Link href="/learn/buffett-indicator" style={{ color: "var(--mint)" }}>버핏지수</Link> →
-              <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF</Link>.
+              The denominators (earnings, book value) come from <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>financial statements</Link>. For market-wide overvaluation debates, also see the <Link href="/learn/buffett-indicator" style={{ color: "var(--mint)" }}>Buffett Indicator</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>P/E Ratio — How Many Times Earnings?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>P/E (Price-to-Earnings)</strong> = Stock Price ÷ <strong style={{ color: "var(--text)" }}>EPS</strong> (Earnings Per Share — how much the company earned per share over the past year).
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Numeric example</strong></p>
+              <p>Stock price $100, trailing EPS $5 → P/E = 100 ÷ 5 = <strong style={{ color: "var(--text)" }}>20x</strong>.</p>
+              <p>Rough interpretation: if earnings stayed flat forever, it would take 20 years to recoup your investment. In practice, earnings grow or shrink, and dividends and buybacks change the picture.</p>
+              <p>If Company A trades at P/E 15 and Company B at P/E 30 in the same industry, B is &ldquo;more expensive per dollar of earnings&rdquo; — but B may justify the premium with faster growth.</p>
+            </div>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed mt-3">
+              <li>Growth stocks (tech, biotech): P/E 30–50 can reflect genuine growth expectations</li>
+              <li>Mature / slow-growth companies: P/E 10–15 is common</li>
+              <li>Loss-making companies: EPS is negative, so P/E is meaningless — use Price/Sales (P/S) instead</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>P/B Ratio — How Many Times Book Value?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>P/B (Price-to-Book)</strong> = Stock Price ÷ <strong style={{ color: "var(--text)" }}>Book Value Per Share</strong> (total assets minus liabilities, divided by shares outstanding).
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Example:</strong> Stock price $50, book value per share $25 → P/B = 2. The stock trades at twice its accounting net worth. A P/B below 1 means the market values the company below its book value — but this is often a warning sign of declining business quality, not a free lunch.
+            </p>
+            <p className="text-sm leading-relaxed">
+              P/B is most useful for asset-heavy sectors like banks and manufacturing. For software or brand-driven companies, enormous intangible assets don&apos;t appear on the balance sheet, making P/B misleading on its own.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>EV/EBITDA — Including Debt</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Enterprise Value (EV)</strong> ≈ Market cap + net debt. It represents the total price to acquire the entire business, debt included. <strong style={{ color: "var(--text)" }}>EBITDA</strong> is operating profit before interest, taxes, depreciation, and amortization — a rough proxy for cash generation.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Why it matters:</strong> If Company A has no debt and Company B carries heavy debt, their P/E ratios may look similar while B is actually far more expensive on an enterprise basis. EV/EBITDA is widely used in M&amp;A and private equity, and is useful for individual investors comparing leveraged companies.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>PEG — Adjusting for Growth</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>PEG</strong> ≈ P/E ÷ Expected Earnings Growth Rate (%). Example: P/E 30, expected growth 15% → PEG = 2. A PEG near 1 is often cited as &ldquo;fairly valued for its growth.&rdquo; The caveat: growth estimates are frequently wrong, so PEG inherits those errors.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Reading P/E and P/B Together</h2>
+            <div className="rounded-xl p-3 border space-y-2 text-[12px]" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>High P/E + High P/B</strong> — growth and optimism are heavily priced in; overvaluation risk</p>
+              <p><strong style={{ color: "var(--text)" }}>Low P/E + Low P/B</strong> — looks cheap, but may be a &ldquo;value trap&rdquo; (declining business)</p>
+              <p><strong style={{ color: "var(--text)" }}>High P/E + Normal P/B</strong> — strong profitability but trading at a premium to assets</p>
+              <p><strong style={{ color: "var(--text)" }}>Rising rates</strong> — higher discount rates compress growth-stock P/E ratios (see <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>rates guide</Link>)</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Beginner Checklist</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li>List P/E and P/B for 3–5 peers in the same <Link href="/learn/sectors" style={{ color: "var(--mint)" }}>sector</Link></li>
+              <li>Check whether the last 4 quarters of EPS include one-time gains (asset sales, etc.)</li>
+              <li>Look at debt — is the company expensive on an EV basis?</li>
+              <li>Sanity-check PEG: is the P/E absurdly high relative to realistic growth?</li>
+              <li>Never bet everything on &ldquo;cheap&rdquo; — size positions with a <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>portfolio plan</Link> and <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>checklist</Link></li>
+            </ol>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Buying only low-P/E stocks", "The business may be structurally declining. Low P/E can be a value trap."],
+                ["Comparing across industries", "A bank&apos;s P/E and a software company&apos;s P/E are not comparable. Always compare within the same sector."],
+                ["Using P/E for loss-making companies", "A negative denominator breaks the ratio entirely."],
+                ["Acting on a single moment&apos;s numbers", "Combine with earnings season, rates, and industry context."],
+                ["Timing index ETF purchases with P/E", "For core DCA positions, execution consistency matters more than valuation timing."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Connection to Value Investing</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Graham and Buffett&apos;s framework is &ldquo;buy below intrinsic value.&rdquo; P/E and P/B are only a slice of that picture. For the full philosophy, read the <Link href="/learn/value-investing" style={{ color: "var(--mint)" }}>Value Investing Guide</Link>; for chart-based supplementation, see <Link href="/learn/technical-analysis" style={{ color: "var(--mint)" }}>Technical Analysis</Link>.
+            </p>
+            <p className="text-sm leading-relaxed">
+              For a market-wide valuation gauge, the <Link href="/learn/buffett-indicator" style={{ color: "var(--mint)" }}>Buffett Indicator</Link> (total market cap / GDP) gives a broad picture. Do not confuse it with individual-stock P/E.
             </p>
           </section>
 
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
-            ⚠️ 교육 목적입니다. 저PER·저PBR이 매수 신호가 아니며, 특정 종목 권유가 아닙니다.
+            ⚠️ Educational content only. Low P/E or P/B is not a buy signal, and this is not a recommendation for any specific stock.
           </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/financial-statements" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">📋</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "재무제표 읽기" : "Reading Financial Statements"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "손익·재무·현금흐름" : "Income, balance sheet & cash flow"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/buffett-indicator" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🏦</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "버핏지수 완전 가이드" : "Complete Buffett Indicator Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "시가총액/GDP로 시장 온도 읽기" : "Market cap/GDP for overvaluation context"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

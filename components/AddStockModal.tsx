@@ -4,6 +4,7 @@ import { useState } from "react";
 import { X, Search } from "lucide-react";
 import { mockQuotes } from "@/lib/api";
 import type { Holding } from "@/lib/api";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type Props = {
   onClose: () => void;
@@ -12,6 +13,8 @@ type Props = {
 };
 
 export function AddStockModal({ onClose, onAdd, existing }: Props) {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<string | null>(null);
   const [shares, setShares] = useState("");
@@ -51,7 +54,7 @@ export function AddStockModal({ onClose, onAdd, existing }: Props) {
         {/* Title */}
         <div className="flex items-center justify-between mb-5">
           <h2 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
-            종목 추가
+            {isKo ? "종목 추가" : "Add Stock"}
           </h2>
           <button
             onClick={onClose}
@@ -73,7 +76,7 @@ export function AddStockModal({ onClose, onAdd, existing }: Props) {
               <input
                 autoFocus
                 type="text"
-                placeholder="종목 검색 (예: AAPL, Apple)"
+                placeholder={isKo ? "종목 검색 (예: AAPL, Apple)" : "Search stocks (e.g. AAPL, Apple)"}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 className="flex-1 bg-transparent text-sm outline-none"
@@ -125,14 +128,14 @@ export function AddStockModal({ onClose, onAdd, existing }: Props) {
                 className="text-xs"
                 style={{ color: "var(--mint)" }}
               >
-                변경
+                {isKo ? "변경" : "Change"}
               </button>
             </div>
 
             {/* Shares */}
             <div>
               <label className="text-xs font-medium mb-1.5 block" style={{ color: "var(--muted)" }}>
-                보유 수량
+                {isKo ? "보유 수량" : "Shares"}
               </label>
               <input
                 type="number"
@@ -153,7 +156,7 @@ export function AddStockModal({ onClose, onAdd, existing }: Props) {
             {/* Avg cost */}
             <div>
               <label className="text-xs font-medium mb-1.5 block" style={{ color: "var(--muted)" }}>
-                평균 매수가 (USD)
+                {isKo ? "평균 매수가 (USD)" : "Avg. cost (USD)"}
               </label>
               <input
                 type="number"
@@ -177,7 +180,7 @@ export function AddStockModal({ onClose, onAdd, existing }: Props) {
               className="w-full py-3 rounded-xl text-sm font-bold transition-opacity disabled:opacity-40"
               style={{ background: "var(--mint)", color: "var(--on-accent)" }}
             >
-              추가하기
+              {isKo ? "추가하기" : "Add"}
             </button>
           </div>
         )}

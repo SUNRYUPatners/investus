@@ -1,23 +1,17 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "버핏지수 완전 가이드 — 시장 고평가 여부 판단하는 법 | 인베스트어스",
-  description: "워런 버핏이 즐겨 쓰는 버핏지수(총 시가총액/GDP)의 의미, 계산 방법, 역사적 해석, 현재 시장에 적용하는 방법을 완전히 설명합니다.",
-  keywords: ["버핏지수", "Buffett Indicator", "시장 고평가", "주식 밸류에이션", "시가총액 GDP 비율"],
-  alternates: { canonical: "https://www.investus.kr/learn/buffett-indicator" },
-  openGraph: {
-    title: "버핏지수 완전 가이드 | 인베스트어스",
-    description: "버핏지수로 시장 고평가 여부 판단하기 — 워런 버핏이 시장을 보는 방법",
-    url: "https://www.investus.kr/learn/buffett-indicator",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function BuffettIndicatorPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/buffett-indicator")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
@@ -25,28 +19,34 @@ export default function BuffettIndicatorPage() {
 
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
 
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(192,132,252,0.15)", color: "#c084fc" }}>밸류</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 14분</span>
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            버핏지수 완전 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            워런 버핏이 2001년 Fortune 인터뷰에서 &ldquo;현재 시장 가치 평가를 위한 최고의 단일 지표&rdquo;라고
-            소개한 버핏지수. 이 지수 하나만 제대로 이해해도 시장이 싼지 비싼지를 직관적으로 파악할 수 있습니다.
+            {isKo
+              ? "워런 버핏이 2001년 Fortune 인터뷰에서 \"현재 시장 가치 평가를 위한 최고의 단일 지표\"라고 소개한 버핏지수. 이 지수 하나만 제대로 이해해도 시장이 싼지 비싼지를 직관적으로 파악할 수 있습니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
-
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
               버핏지수란 무엇인가
@@ -195,14 +195,10 @@ export default function BuffettIndicatorPage() {
               시장은 그 밸류에이션을 더 오래 유지하기도 합니다. 반대로 이익 전망이 꺾이는데
               지수가 고공행진이면 조정의 폭이 커질 수 있습니다.
             </p>
-            <p className="text-sm leading-relaxed mb-3">
+            <p className="text-sm leading-relaxed">
               실전에서는 버핏지수 하나만 보지 말고, (1) 장기 금리, (2) 기업 이익 전망,
               (3) 공포탐욕지수(단기 심리)를 같이 봅니다. Investus 홈에서 버핏지수와 공포탐욕을
               나란히 확인할 수 있게 한 이유입니다.
-            </p>
-            <p className="text-sm leading-relaxed">
-              &ldquo;지수가 높으니 미국주식은 하지 않는다&rdquo;는 극단도,
-              &ldquo;지수는 무시한다&rdquo;는 극단도 피하세요. 현금 비중·적립 금액을 조절하는 온도계로 쓰는 편이 낫습니다.
             </p>
           </section>
 
@@ -222,12 +218,163 @@ export default function BuffettIndicatorPage() {
             ⚠️ 이 글은 교육 목적의 투자 정보로, 특정 매매 시점을 추천하지 않습니다.
             버핏지수는 참고 지표일 뿐이며, 모든 투자 결정의 책임은 투자자 본인에게 있습니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is the Buffett Indicator?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The Buffett Indicator is the ratio of total US stock market capitalization to US GDP, expressed as a percentage. Buffett described it in a 2001 Fortune interview as &ldquo;probably the best single measure of where valuations stand at any given moment.&rdquo;
+            </p>
+            <div className="rounded-2xl p-4 border text-center" style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
+              <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--mint)" }}>
+                Buffett Indicator = Total Market Cap ÷ GDP × 100
+              </p>
+              <p className="text-[11px]" style={{ color: "var(--muted)" }}>
+                Example: $45T market cap ÷ $28T GDP × 100 ≈ 160%
+              </p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3 mb-3">
+              A high ratio means the stock market is pricing itself at a significant premium to the underlying economy&apos;s output. A low ratio suggests equities are historically cheap relative to economic activity.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Its appeal is its simplicity: no complex financial model, just a direct comparison between what the economy produces (GDP) and what the market charges for ownership of it (total market cap).
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Historical Benchmarks</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              These are rough historical reference zones — they are not fixed rules and shift over time as the structure of the economy changes.
+            </p>
+            <div className="flex flex-col gap-2">
+              {[
+                { range: "Below 70%", label: "Significantly undervalued", action: "Strong long-term buying opportunity — historically rare", color: "#10b981" },
+                { range: "70–100%", label: "Fair value", action: "Balanced market — normal investing conditions", color: "#7ed957" },
+                { range: "100–140%", label: "Somewhat overvalued", action: "Caution warranted — diversify carefully on new entries", color: "#ffd166" },
+                { range: "140–180%", label: "Overvalued", action: "Caution zone — Buffett historically built cash reserves here", color: "#ff8c55" },
+                { range: "Above 180%", label: "Extremely overvalued", action: "Historically followed by significant corrections", color: "#ef4444" },
+              ].map((z) => (
+                <div key={z.range} className="rounded-xl p-3 border flex gap-3 items-start"
+                  style={{ background: "var(--card)", borderColor: "var(--border)", borderLeft: `3px solid ${z.color}` }}>
+                  <div className="flex-shrink-0">
+                    <p className="text-sm font-bold font-mono-num" style={{ color: z.color }}>{z.range}</p>
+                    <p className="text-[10px] font-bold mt-0.5" style={{ color: z.color }}>{z.label}</p>
+                  </div>
+                  <p className="text-[11px] leading-relaxed">{z.action}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Historical Cases — When It Warned</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                {
+                  period: "Dot-com bubble peak (2000)",
+                  level: "~148%",
+                  result: "S&P 500 fell 49%, Nasdaq fell 78% (2000–2002)",
+                  color: "#ef4444",
+                },
+                {
+                  period: "Pre-financial crisis (2007)",
+                  level: "~110%",
+                  result: "S&P 500 fell 57% (2007–2009)",
+                  color: "#f59e0b",
+                },
+                {
+                  period: "Financial crisis trough (2009)",
+                  level: "~65%",
+                  result: "Followed by the longest US bull market in history",
+                  color: "#10b981",
+                },
+                {
+                  period: "Post-Covid euphoria (2021)",
+                  level: "~195%",
+                  result: "S&P 500 fell 25%, Nasdaq fell 33% in 2022",
+                  color: "#ef4444",
+                },
+              ].map((s) => (
+                <div key={s.period} className="rounded-xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <div className="flex items-start gap-2 mb-1.5">
+                    <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{s.period}</p>
+                    <span className="text-[10px] px-2 py-0.5 rounded-full flex-shrink-0 font-bold"
+                      style={{ background: `${s.color}20`, color: s.color }}>
+                      {s.level}
+                    </span>
+                  </div>
+                  <p className="text-[12px] leading-relaxed" style={{ color: s.color }}>{s.result}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Key Limitations</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The indicator is useful but not infallible. Several structural changes may justify higher sustained readings than historical norms:
+            </p>
+            <div className="flex flex-col gap-3">
+              {[
+                {
+                  title: "Low interest rates raise fair value",
+                  desc: "When rates are low, future cash flows are discounted at a lower rate — increasing the present value of equities. The prolonged low-rate era of the 2010s mechanically pushed the Buffett Indicator higher without necessarily signaling the same level of danger as 148% in 2000.",
+                },
+                {
+                  title: "US companies earn profits globally",
+                  desc: "Apple, Google, and Microsoft generate revenue worldwide, but the denominator (US GDP) only counts US economic output. As the global revenue share of US multinationals has grown, the indicator naturally trends higher — even if valuations haven't moved proportionally.",
+                },
+                {
+                  title: "Big-tech concentration",
+                  desc: "The top 10 companies represent 30%+ of S&P 500 market cap. A handful of extraordinarily valuable businesses inflate the numerator in ways that have no direct historical precedent.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{item.title}</p>
+                  <p className="text-[12px] leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-xl px-4 py-3 mt-3" style={{ background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.2)" }}>
+              <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>
+                The indicator is not a short-term timing tool
+              </p>
+              <p className="text-[12px] leading-relaxed mt-1.5">
+                A high reading is not a signal to sell everything. It is a long-term risk management input — use it to consider position sizing and cash allocation, not to time exits. Buffett himself held high-quality businesses through periods of elevated readings.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Using It Alongside Rates and Earnings</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Even at elevated levels, the indicator is more dangerous when earnings growth is decelerating and interest rates are rising simultaneously. Conversely, strong EPS growth and stable rates have historically supported high readings for extended periods.
+            </p>
+            <p className="text-sm leading-relaxed">
+              In practice, combine the Buffett Indicator with: (1) the 10-year Treasury yield (see <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>rates guide</Link>), (2) forward earnings growth estimates, and (3) the <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>Fear &amp; Greed Index</Link> for near-term sentiment. The Investus home screen shows all three side by side for this reason.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Check It Live on Investus</h2>
+            <p className="text-sm leading-relaxed">
+              The current Buffett Indicator reading is displayed in real time on the Investus <Link href="/" style={{ color: "var(--mint)" }}>home screen</Link>. Pair it with the Fear &amp; Greed Index for a fuller picture of market temperature.
+            </p>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. The Buffett Indicator is a reference gauge, not a buy or sell signal. All investment decisions and their consequences are the investor&apos;s own responsibility.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/portfolio-strategy" style={{ textDecoration: "none" }}>
@@ -235,19 +382,19 @@ export default function BuffettIndicatorPage() {
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">💼</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>포트폴리오 분산 투자 전략</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>흔들리지 않는 포트폴리오 구성법</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "포트폴리오 분산 투자 전략" : "Portfolio Diversification & Rebalancing"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "흔들리지 않는 포트폴리오 구성법" : "Building a resilient portfolio"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
             </Link>
-            <Link href="/learn/us-stock-basics" style={{ textDecoration: "none" }}>
+            <Link href="/learn/valuation" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70"
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-                <span className="text-xl">🇺🇸</span>
+                <span className="text-xl">🔢</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>미국주식 투자 완전 입문 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>처음 시작하는 투자자를 위한 A to Z</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "PER·PBR 밸류에이션 가이드" : "P/E, P/B & Valuation Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "개별 종목 비싸거나 싼지 보는 법" : "Individual stock valuation vs. market-wide gauge"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

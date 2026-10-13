@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import type { MarketId } from "@/lib/markets/types";
 import { isStockMarketOpen } from "@/lib/markets/hours";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 /** 시장 탭 위 장중 뱃지 (미국·한국만) */
 export function MarketOpenChip({ market }: { market: MarketId }) {
+  const locale = useLocaleCode();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -25,7 +27,7 @@ export function MarketOpenChip({ market }: { market: MarketId }) {
       style={{ background: "rgba(var(--up-rgb),0.16)", color: "var(--up)" }}
     >
       <span className="inline-block w-1 h-1 rounded-full animate-pulse" style={{ background: "var(--up)" }} />
-      장중
+      {locale === "ko" ? "장중" : "Live"}
     </span>
   );
 }

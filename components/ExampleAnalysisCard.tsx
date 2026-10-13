@@ -7,6 +7,7 @@ import { getMarketConfig } from "@/lib/markets/config";
 import type { MarketId } from "@/lib/markets/types";
 import { EXAMPLE_MARKET_ROWS, EXAMPLE_US_HOLDINGS } from "@/lib/samplePortfolio";
 import { PreviewFade } from "@/components/SubscribeGate";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 function topic(name: string) {
   const c = name.charCodeAt(name.length - 1);
@@ -19,6 +20,8 @@ function fmtPct(n: number) {
 }
 
 export function ExampleAnalysisCard({ market }: { market: MarketId }) {
+  const localeCode = useLocaleCode();
+  if (localeCode !== "ko") return null;
   const cfg = getMarketConfig(market);
   const rows = market === "us"
     ? EXAMPLE_US_HOLDINGS.map((h) => ({ symbol: h.symbol, name: h.name }))

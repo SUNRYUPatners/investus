@@ -1,43 +1,48 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "선물·프리마켓 읽는 법 | 인베스트어스",
-  description:
-    "지수 선물이 무엇인지, ES·NQ와 S&P500·나스닥 차이, 프리·애프터마켓, 한국 아침 '선물 +1%' 해석법, 흔한 실수, 레버리지 ETF와의 차이, Investus 활용. 완전 초보용.",
-  alternates: { canonical: "https://www.investus.kr/learn/futures" },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function FuturesPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/futures")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(56,189,248,0.15)", color: "#38bdf8" }}>시장</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            선물·프리마켓 읽는 법
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            한국 시간 아침 뉴스의 &ldquo;나스닥 선물 +1%&rdquo;는
-            <strong style={{ color: "var(--text)" }}>오늘 장 분위기의 힌트</strong>일 뿐, 종가 예언이 아닙니다.
-            주식을 사기 전에 &ldquo;온도계&rdquo;로 읽는 법을 처음부터 배웁니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>선물(Futures)이란? (초보 정의)</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -152,38 +157,6 @@ export default function FuturesPage() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>한국 투자자 루틴 예시</h2>
-            <ol className="list-decimal pl-5 text-sm leading-relaxed space-y-2 mb-3">
-              <li>아침: Investus 홈에서 선물·전일 종가·환율만 30초</li>
-              <li>오늘이{" "}
-                <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>금리·물가</Link> 큰날인지 확인</li>
-              <li>
-                <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link> 날이면 규칙대로 매수 — 선물 등락으로 일정 연기하지 않기
-              </li>
-              <li>장중에 계속 보지 않기 —{" "}
-                <Link href="/learn/compound" style={{ color: "var(--mint)" }}>복리</Link>는 과매매와 반대</li>
-            </ol>
-            <p className="text-sm leading-relaxed">
-              환율까지 보려면{" "}
-              <Link href="/learn/usd-krw" style={{ color: "var(--mint)" }}>원/달러 가이드</Link>를 함께.
-              선물 +1%여도 원화 기준으로는 다르게 느껴질 수 있습니다.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>언제 &ldquo;조심&rdquo; 모드인가</h2>
-            <p className="text-sm leading-relaxed mb-3">
-              선물이 평소보다 크게(예: ±1.5% 이상) 움직이거나, 갭(전일 종가와 괴리)이 클 때,
-              그리고 FOMC·CPI·대형 실적 시즌이 겹칠 때입니다.
-              이때 새 레버리지·옵션은 특히 위험합니다.
-            </p>
-            <p className="text-sm leading-relaxed">
-              <strong style={{ color: "var(--text)" }}>기억:</strong> 온도계가 &ldquo;덥다&rdquo;고 해서
-              에어컨을 부술 필요는 없습니다. 옷차림(비중·레버리지)만 조절하면 됩니다.
-            </p>
-          </section>
-
-          <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>선물 vs 내가 산 ETF — 한 장 정리</h2>
             <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed mb-3" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
               <p><strong style={{ color: "var(--text)" }}>지수 선물:</strong> 계약, 거의 24시간, 뉴스의 &ldquo;온도&rdquo;.</p>
@@ -203,8 +176,140 @@ export default function FuturesPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 선물·프리마켓 타이밍 매매를 권유하지 않습니다. 파생상품은 원금 초과 손실 위험이 있을 수 있습니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Are Futures? (Beginner Definition)</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              A futures contract is an agreement to buy or sell an asset at a predetermined price on a future date. You are not owning the underlying asset today — you are agreeing to a transaction that settles later. Futures exist for equity indices, commodities, currencies, and interest rates.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              Because US equity index futures trade nearly 24 hours a day (including when the US stock market is closed), overnight news and global market shocks are reflected in <strong style={{ color: "var(--text)" }}>futures prices first</strong>. That is why Korean morning news says &ldquo;Nasdaq futures up 1%&rdquo; before the US market opens.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Beginners do not need a futures account. The goal of this article is to read the news correctly — not to trade futures.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>ES &amp; NQ — The Names You&apos;ll See in Headlines</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>ES</strong> is the S&amp;P 500 E-mini futures contract. <strong style={{ color: "var(--text)" }}>NQ</strong> is the Nasdaq 100 E-mini futures contract. Financial media simply calls them &ldquo;S&amp;P futures&rdquo; and &ldquo;Nasdaq futures.&rdquo;
+            </p>
+            <p className="text-sm leading-relaxed">
+              Futures and the underlying index (<Link href="/learn/sp500" style={{ color: "var(--mint)" }}>S&amp;P 500</Link>, <Link href="/learn/nasdaq" style={{ color: "var(--mint)" }}>Nasdaq</Link>) track each other closely but are not identical — they differ in contract structure, expiry dates, and trading hours. &ldquo;Futures up&rdquo; does not mean your ETF is already up; the cash index and ETF will converge at open, but the gap can reverse intraday.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why This Matters for Korean Investors</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The US regular session typically runs from 10:30 PM to 5:00 AM KST (shifting by one hour during daylight saving changes). Most Korean investors cannot watch the full session. Checking futures in the morning before the next session is a natural instinct — but acting on a single +1% futures reading often leads to the <Link href="/learn/myths" style={{ color: "var(--mint)" }}>market timing mistake</Link>.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Correct use: gauge whether today is likely to be volatile, check whether a major <Link href="/learn/economic-calendar" style={{ color: "var(--mint)" }}>economic data release</Link> is scheduled, and leave your long-term DCA plan unchanged.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Numeric Example: What Does +1% Mean?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Assume the prior S&amp;P 500 close was 5,000. If ES futures are up about +1% at the Korean morning check, that implies a rough expected open near 5,050. But an earnings release, Fed speaker comment, or economic data during the session could push the final close to +0.2% — or −0.5%.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Chasing futures +1% with leverage at open, only to see a reversal after the first 30 minutes, is one of the most common beginner losses. <strong style={{ color: "var(--text)" }}>+1% in futures is an expectation, not a guaranteed outcome.</strong>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Pre-Market &amp; After-Hours Trading</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Some US stocks and ETFs also trade in the pre-market (4:00 AM–9:30 AM ET) and after-hours (4:00 PM–8:00 PM ET) sessions. Volume is lower, bid-ask spreads are wider, and the same &ldquo;+5%&rdquo; move seen in pre-market can reverse at the regular open.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              When a company announces <Link href="/learn/earnings-season" style={{ color: "var(--mint)" }}>earnings</Link> after the close, pre-market can show sharp moves the next morning. Beginners should resist the &ldquo;I&apos;m missing out&rdquo; impulse to market-buy at open — using the regular session with limit orders is safer.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Beginner rule:</strong> Default to the regular session. Extended-hours trading is a tool for experienced traders, not a beginner necessity.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes Reading Futures</h2>
+            <ul className="list-disc pl-5 text-sm leading-relaxed space-y-2 mb-3">
+              <li>Assuming futures +1% = today&apos;s closing gain of +1%. It does not.</li>
+              <li>Rushing to buy or sell based on a single pre-market futures reading.</li>
+              <li>Ignoring the volatility amplification that happens on <Link href="/learn/economic-calendar" style={{ color: "var(--mint)" }}>CPI/FOMC days</Link>.</li>
+              <li>Equating a single stock&apos;s pre-market surge with the overall index futures.</li>
+              <li>Treating futures trading as a required skill for long-term index investing — it is not.</li>
+            </ul>
+            <p className="text-sm leading-relaxed">
+              Futures and index prices on the Investus home screen are a morning temperature check. They are not a trigger for portfolio decisions.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Do Not Confuse Futures with Leveraged ETFs</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Trading index futures directly with margin is completely different from holding a leveraged ETF like TQQQ. The latter aims to deliver 3× the <em>daily</em> return of the Nasdaq 100, not a long-term 3× multiple. Due to volatility decay, long-term holding of leveraged ETFs typically underperforms the index multiple significantly. See the <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF Guide</Link>.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Do not let &ldquo;3× futures exposure&rdquo; marketing language convince you to put leveraged products in your long-term core. The core belongs in <Link href="/learn/sp500" style={{ color: "var(--mint)" }}>S&amp;P 500</Link> and <Link href="/learn/nasdaq" style={{ color: "var(--mint)" }}>Nasdaq 100</Link> ETFs.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Futures vs Your ETF — Quick Reference</h2>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed mb-3" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Index futures (ES/NQ):</strong> Contract, nearly 24h, the &ldquo;temperature gauge&rdquo; in morning news.</p>
+              <p><strong style={{ color: "var(--text)" }}>Cash index:</strong> The S&amp;P 500 or Nasdaq 100 number itself — computed during the regular session.</p>
+              <p><strong style={{ color: "var(--text)" }}>ETF (VOO/QQQ):</strong> A product tracking the index — the beginner&apos;s core holding.</p>
+              <p><strong style={{ color: "var(--text)" }}>Leveraged ETF (TQQQ etc.):</strong> Daily multiple — NOT a long-term compounding vehicle. (<Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF Guide</Link>)</p>
+            </div>
+            <p className="text-sm leading-relaxed">
+              Related:{" "}
+              <Link href="/learn/economic-calendar" style={{ color: "var(--mint)" }}>Economic Calendar</Link> ·{" "}
+              <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>Fear &amp; Greed</Link> ·{" "}
+              <Link href="/learn/myths" style={{ color: "var(--mint)" }}>Investing Myths</Link>.
+            </p>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not a recommendation to trade futures or pre-market. Derivatives can result in losses exceeding the initial investment.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/economic-calendar" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🗓️</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "경제 캘린더 활용법" : "How to Use the Economic Calendar"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "CPI·FOMC·고용 발표 전후" : "CPI, FOMC, and jobs report days"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/myths" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🚫</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "초보 투자 오해 TOP10" : "Top 10 Investing Myths Debunked"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "레버리지·타이밍·대가 복제" : "Leverage, timing, copying gurus"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

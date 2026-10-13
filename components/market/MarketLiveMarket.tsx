@@ -13,6 +13,7 @@ import type { IndexQuote, Quote, FutureItem } from "@/lib/api";
 import { getMarketConfig } from "@/lib/markets/config";
 import type { MarketId } from "@/lib/markets/types";
 import { isMarketSessionOpen } from "@/lib/markets/hours";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[]; liveAt?: number };
 
@@ -24,19 +25,25 @@ function hasNonZeroChanges(d: MarketData): boolean {
 }
 
 function KrReMarketBlocks() {
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   return (
     <section className="px-4 lg:px-0 pt-3 space-y-4">
       <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "var(--border)" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/kr-re-apartment-hero.svg"
-          alt="아파트 단지"
+          alt={isKo ? "아파트 단지" : "Apartment complex"}
           className="w-full h-[120px] object-cover object-center"
         />
         <div className="px-4 py-3" style={{ background: "var(--card)" }}>
-          <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>한국 아파트 · 매매 시장</p>
+          <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>
+            {isKo ? "한국 아파트 · 매매 시장" : "Korea Apartment · Real Estate Market"}
+          </p>
           <p className="text-[11px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>
-            시도별 거래호수·매매등락과 정부정책을 한곳에서 확인하세요.
+            {isKo
+              ? "시도별 거래호수·매매등락과 정부정책을 한곳에서 확인하세요."
+              : "Regional transaction volume, price changes, and government policies in one place."}
           </p>
         </div>
       </div>
@@ -48,6 +55,8 @@ function KrReMarketBlocks() {
 
 export function MarketLiveMarket({ market }: { market: MarketId }) {
   const cfg = getMarketConfig(market);
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const [data, setData] = useState<MarketData | null>(null);
   const [loading, setLoading] = useState(true);
   const doLoadRef = useRef<(retryDelay?: number) => void>(() => {});
@@ -145,7 +154,7 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
           <div className="flex items-center gap-1.5 mb-3">
             <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
             <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
-              추천 종목
+              {isKo ? "추천 종목" : "Top Picks"}
             </h2>
           </div>
           <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-1">
@@ -161,7 +170,9 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
       {(market === "us" || market === "kr" || market === "safe") && (
         <section className="px-4 lg:px-0 pt-5">
           <h2 className="text-xs font-semibold tracking-widest uppercase font-syne mb-3" style={{ color: "var(--text)" }}>
-            {market === "safe" ? "주요 지표" : "주요 지수"}
+            {market === "safe"
+              ? (isKo ? "주요 지표" : "Key Indicators")
+              : (isKo ? "주요 지수" : "Major Indices")}
           </h2>
           <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-1">
             {indices.map((idx) => <IndexCard key={idx.symbol} index={idx} />)}
@@ -171,7 +182,9 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
 
       <section className="px-4 lg:px-0 pt-5">
         <h2 className="text-xs font-semibold tracking-widest uppercase font-syne mb-3" style={{ color: "var(--text)" }}>
-          {market === "safe" ? "인기 자산" : "인기 종목"}
+          {market === "safe"
+            ? (isKo ? "인기 자산" : "Popular Assets")
+            : (isKo ? "인기 종목" : "Popular Stocks")}
         </h2>
         <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-1">
           {popular.map((q) => <StockCard key={q.symbol} stock={q} market={market} />)}

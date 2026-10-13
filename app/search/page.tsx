@@ -13,7 +13,7 @@ import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { NewsSection } from "@/components/NewsSection";
 import { EconomicCalendar } from "@/components/EconomicCalendar";
 import { Star } from "lucide-react";
-import { useLocale } from "@/contexts/LocaleContext";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { useMarket } from "@/contexts/MarketContext";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION } from "@/lib/subscription";
@@ -111,6 +111,8 @@ function StockRow({
 
 export default function SearchPage() {
   const t = useLocale();
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
   const market = useMarket();
   const cfg = getMarketConfig(market);
   const isUs = market === "us";
@@ -464,7 +466,7 @@ export default function SearchPage() {
                         className="ml-auto text-[9px] font-bold px-1.5 py-0.5 rounded-full"
                         style={{ background: "rgba(var(--mint-rgb),0.14)", color: "var(--mint)" }}
                       >
-                        예시
+                        {isKo ? "예시" : "Sample"}
                       </span>
                     ) : (
                       <span className="ml-auto text-[10px]" style={{ color: "var(--muted)" }}>{t.search.cioPicks}</span>
@@ -475,7 +477,7 @@ export default function SearchPage() {
                       className="rounded-2xl border overflow-hidden"
                       style={{ background: "var(--card)", borderColor: "var(--border)" }}
                     >
-                      <PreviewFade label="구독하고 이어서 보기" maxHeight={132}>
+                      <PreviewFade label={isKo ? "구독하고 이어서 보기" : "Subscribe to see more"} maxHeight={132}>
                         <div className="flex flex-col gap-2 px-3 pt-3">
                           {recommendedStocks.map(({ stock, hasLivePrice }) => (
                             <StockRow

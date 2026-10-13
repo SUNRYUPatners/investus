@@ -1,43 +1,48 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "경제 캘린더 활용법 — CPI·FOMC·고용 | 인베스트어스",
-  description:
-    "경제 캘린더가 무엇인지, CPI·PCE·FOMC·비농업고용·GDP를 초보가 보는 법, 발표 전후 변동성 관리, 한국 시간대, Investus 활용. 예측기가 아닌 일정표로 쓰기.",
-  alternates: { canonical: "https://www.investus.kr/learn/economic-calendar" },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function EconomicCalendarPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/economic-calendar")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(245,158,11,0.15)", color: "#f59e0b" }}>매크로</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 24분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            경제 캘린더 활용법
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            경제 캘린더는 &ldquo;내일 주가가 오를지&rdquo;를 알려 주는 예언서가 아닙니다.
-            <strong style={{ color: "var(--text)" }}>변동성이 커질 수 있는 날짜</strong>를 미리 적어 둔 일정표입니다.
-            초보는 예측보다 <em>리스크 관리</em>에 쓰는 편이 맞습니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>경제 캘린더란?</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -193,8 +198,162 @@ export default function EconomicCalendarPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 경제지표 트레이딩·방향 베팅을 권유하지 않습니다. 예시 숫자는 가상의 단순화입니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is an Economic Calendar?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              An economic calendar lists scheduled government data releases — inflation figures, employment reports, GDP, central bank meetings — by date and time, alongside the previous reading, market consensus forecast, and actual result once released. These are the events that reliably cause broad market moves.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Markets do not simply react to whether a number is high or low. They react to the <strong style={{ color: "var(--text)" }}>surprise vs. consensus</strong>. Inflation at 3.5% YoY can be bullish if the consensus was 3.8%, and bearish if the consensus was 3.2%. Understanding this distinction prevents misreading the market&apos;s reaction.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Beginners Should Pay Attention</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              In the minutes to hours after a major release, bid-ask spreads widen and <Link href="/learn/futures" style={{ color: "var(--mint)" }}>futures and pre-market</Link> become volatile. Holding leveraged ETFs, short-dated options, or intraday positions during these periods greatly increases the chance of unintentional stop-outs or forced liquidation.
+            </p>
+            <p className="text-sm leading-relaxed">
+              For long-term <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link> index investors, simply knowing an event is coming is enough. Understanding why the market is moving today prevents the panic-sell mistake — which is typically far more costly than the event itself.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>The Events That Matter Most (Beginner Priority)</h2>
+            <div className="rounded-2xl p-4 border space-y-3 text-sm leading-relaxed mb-3" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p>
+                <strong style={{ color: "var(--text)" }}>CPI / PCE</strong> — Consumer and Personal Consumption Expenditures price indices. The primary inflation gauges that drive Federal Reserve rate expectations. For deeper context see the <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>CPI &amp; Fed Guide</Link>.
+              </p>
+              <p>
+                <strong style={{ color: "var(--text)" }}>FOMC Meeting</strong> — The Fed&apos;s interest rate decision, dot plot (members&apos; rate forecasts), and Chair press conference. The most market-moving scheduled event of any month it occurs.
+              </p>
+              <p>
+                <strong style={{ color: "var(--text)" }}>Non-Farm Payrolls / Unemployment Rate</strong> — How many jobs were added (or lost) and the unemployment rate. A &ldquo;too hot&rdquo; labor market can push the Fed toward rate hikes; a &ldquo;cooling&rdquo; one signals potential cuts.
+              </p>
+              <p>
+                <strong style={{ color: "var(--text)" }}>GDP, PMI, Retail Sales</strong> — Growth, business confidence, and consumer spending. Less explosive than CPI/FOMC but useful for tracking the economic trend over time.
+              </p>
+            </div>
+            <p className="text-sm leading-relaxed">
+              Start by flagging only the red (high-impact) items each week. You do not need to memorize every indicator.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Numeric Example: The &ldquo;vs. Consensus&rdquo; Effect</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Hypothetical CPI release: consensus forecast +3.0% YoY, actual result +3.3%. The headline &ldquo;inflation rose&rdquo; is less important than &ldquo;inflation came in 0.3 percentage points above expectations.&rdquo; That gap drives the intraday repricing.
+            </p>
+            <p className="text-sm leading-relaxed">
+              On such a day, if the <Link href="/learn/bonds" style={{ color: "var(--mint)" }}>10-year Treasury yield</Link> spikes and Nasdaq underperforms, the market is repricing future rate expectations upward — reducing the present value of growth stocks. If the actual number and the market reaction diverge from your initial interpretation, slow down rather than chasing.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What to Do Before a Release</h2>
+            <ul className="list-disc pl-5 text-sm leading-relaxed space-y-2 mb-3">
+              <li>Review (and consider reducing) any leveraged ETF or near-expiry option positions.</li>
+              <li>Avoid &ldquo;direction-betting&rdquo; day trades timed to the release itself.</li>
+              <li>Core long-term holdings like <Link href="/learn/etf" style={{ color: "var(--mint)" }}>VOO or QQQ</Link> do not need to be sold just because a big data day is coming — if your plan did not include that as a sell trigger.</li>
+              <li>Check <Link href="/learn/futures" style={{ color: "var(--mint)" }}>futures</Link> for the pre-market temperature before the US open.</li>
+            </ul>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Mental preparation:</strong> A 1–2% swing right after the release is a scheduled event, not a crisis. Pre-accepting this prevents the <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>emotional overreaction</Link> that turns a normal drawdown into a permanent loss.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What to Do in the First 30 Minutes After</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The first 15–30 minutes after a major release are dominated by algorithmic rebalancing and hedging flows. The initial direction often partially reverses. Market-ordering into a spike or gap is one of the worst-timed trades a beginner can make.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              Check all three simultaneously: (1) Actual vs. consensus for the data; (2) bond yield and dollar reaction; (3) equity index and sector reaction. Reading equities alone misses the &ldquo;why.&rdquo;
+            </p>
+            <p className="text-sm leading-relaxed">
+              If bonds and stocks are moving in the same direction sharply, the simple &ldquo;risk-on / risk-off&rdquo; framework may not apply. When the interpretation is unclear, reducing position size rather than adding is the safer default.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Korean Time Zone Reference</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Most major US data releases occur at 8:30 AM ET, which is 9:30 PM KST (standard) or 10:30 PM KST (during US daylight saving time, March–November). FOMC decisions come at 2:00 PM ET. Set your calendar app to display KST times to avoid confusion.
+            </p>
+            <p className="text-sm leading-relaxed">
+              For long-term investors, waking up to trade the 30-minute post-release window is rarely worth the sleep loss and emotional cost. Reading the Investus daily report the next morning for context is more effective — and less likely to lead to a reactive trade you will regret.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <ul className="list-disc pl-5 text-sm leading-relaxed space-y-2">
+              <li>Applying a one-line formula: &ldquo;rate hike = stocks fall&rdquo; — the actual relationship is always more complex.</li>
+              <li>Using leverage to bet on the direction of a data release.</li>
+              <li>Market-ordering immediately after a surprise in either direction.</li>
+              <li>Pausing a long-term DCA plan because of one data day.</li>
+              <li>Tracking every calendar item obsessively while having no clear portfolio rules at all.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Using Investus</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The Investus home screen and macro section surface the day&apos;s CPI, FOMC, and jobs report context. The recommended workflow: check the calendar for whether today is a high-impact day → read the daily report after the event to understand what moved and why.
+            </p>
+            <p className="text-sm leading-relaxed">
+              On days when the <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>Fear &amp; Greed Index</Link> is at an extreme and a major release coincides, volatility can stack. That is a day for observation, not new entries.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Mini Checklist for Beginners</h2>
+            <ol className="list-decimal pl-5 text-sm leading-relaxed space-y-2">
+              <li>Have I flagged the top 3 high-impact events this week?</li>
+              <li>Do any of my leveraged positions or option expiries coincide with those dates?</li>
+              <li>Have I committed to observation-only for the first hour after each release?</li>
+              <li>Is &ldquo;news fear&rdquo; the only reason I am considering selling my long-term core? (If yes, pause.)</li>
+            </ol>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not a recommendation to trade economic data releases or make directional bets. Example numbers are hypothetical and simplified.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/macro-rates" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🏛️</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "CPI·연준·금리 가이드" : "CPI, Fed & Interest Rates Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "금리가 주식·채권에 미치는 영향" : "How Fed decisions move stocks and bonds"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/futures" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">📆</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "선물·프리마켓 읽는 법" : "How to Read Futures & Pre-Market"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "아침 선물 뉴스 오해 없이 읽기" : "Read overnight futures without misinterpreting"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

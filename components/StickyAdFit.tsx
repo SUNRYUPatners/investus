@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { AdFitStrip } from "@/components/AdFitBanner";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 const STORAGE_KEY = "investus-sticky-ad-dismissed";
 
@@ -11,6 +12,7 @@ const STORAGE_KEY = "investus-sticky-ad-dismissed";
  * Mobile: above BottomNav (60px + safe-area). Desktop: main content only (right of sidebar).
  */
 export function StickyAdFit() {
+  const locale = useLocaleCode();
   const [mounted, setMounted] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
@@ -49,6 +51,7 @@ export function StickyAdFit() {
   };
 
   if (!mounted || dismissed || !unlocked) return null;
+  if (locale !== "ko") return null;
 
   return (
     <div
@@ -59,7 +62,7 @@ export function StickyAdFit() {
         paddingTop: 4,
         paddingBottom: 4,
       }}
-      aria-label="광고"
+      aria-label="Ad"
     >
       <div className="relative w-full max-w-[480px] lg:max-w-none px-10 lg:px-12">
         <AdFitStrip className="!my-0" />
@@ -72,8 +75,8 @@ export function StickyAdFit() {
             border: "1px solid var(--border)",
             color: "var(--muted)",
           }}
-          aria-label="광고 닫기"
-          title="광고 닫기"
+          aria-label="Close ad"
+          title="Close ad"
         >
           <X className="w-3.5 h-3.5" strokeWidth={2.5} />
         </button>

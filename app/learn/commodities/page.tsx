@@ -1,50 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "원자재 투자 입문 — 금·유가·농산물·ETF를 초보도 이해하게 | 인베스트어스",
-  description:
-    "원자재가 무엇인지, 금·원유·농산물·산업금속이 왜 움직이는지, GLD·DBC 등 ETF와 인플레·포트폴리오 역할까지.",
-  keywords: ["원자재", "금 ETF", "GLD", "유가", "USO", "DBC", "인플레이션 헤지"],
-  alternates: { canonical: "https://www.investus.kr/learn/commodities" },
-  openGraph: {
-    title: "원자재 투자 가이드 | 인베스트어스",
-    description: "금·유가·농산물 — 주식과 다른 사이클",
-    url: "https://www.investus.kr/learn/commodities",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function CommoditiesPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/commodities")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(251,191,36,0.15)", color: "#fbbf24" }}>자산</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            원자재 투자 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            금·원유·구리·밀처럼 &ldquo;실물&rdquo;의 가격에 투자하는 영역입니다.
-            주식(회사 이익)과 다른 이유로 오르내리며, 인플레이션·지정학 뉴스에 자주 등장합니다.
-            초보는 선물 계좌보다 <em>ETF로 소액 위성</em>부터 이해하는 편이 안전합니다.
+            {isKo
+              ? "금·원유·구리·밀처럼 \"실물\"의 가격에 투자하는 영역입니다. 주식(회사 이익)과 다른 이유로 오르내리며, 인플레이션·지정학 뉴스에 자주 등장합니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>원자재란</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -180,22 +180,137 @@ export default function CommoditiesPage() {
             </ol>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 읽을 글</h2>
-            <p className="text-sm leading-relaxed">
-              <Link href="/learn/bonds" style={{ color: "var(--mint)" }}>채권·금리</Link> ·
-              <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>CPI·연준</Link> ·
-              <Link href="/learn/reits" style={{ color: "var(--mint)" }}>리츠</Link> ·
-              <Link href="/learn/crypto" style={{ color: "var(--mint)" }}>암호화폐</Link> ·
-              <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>포트폴리오</Link>.
-            </p>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 원자재·선물 ETF는 변동성이 크며 특정 상품 권유가 아닙니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Are Commodities?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Commodities</strong> are raw materials and primary goods — the physical inputs of the global economy. They fall into four broad groups:
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Precious Metals</strong> — gold, silver</li>
+              <li><strong style={{ color: "var(--text)" }}>Energy</strong> — crude oil, natural gas</li>
+              <li><strong style={{ color: "var(--text)" }}>Industrial Metals</strong> — copper, aluminum</li>
+              <li><strong style={{ color: "var(--text)" }}>Agriculture</strong> — wheat, corn, soybeans</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Prices are driven primarily by supply/demand fundamentals, weather, geopolitics, the US dollar, and interest rates — not by corporate earnings. This is why commodities tend to behave differently from stocks in a portfolio (<Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>Portfolio Strategy</Link>).
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Commodities Move Differently from Stocks</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Stocks reflect a market&apos;s judgment of future corporate earnings. Commodities reflect the physical balance of supply and demand for a specific material right now and in the near future. That disconnect is what gives commodities their diversification potential.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Inflation hedge</strong> is the other key idea: when the purchasing power of money falls, the dollar price of real goods tends to rise. Holding some commodities can offset some of that purchasing-power erosion. But &ldquo;hedge&rdquo; does not mean &ldquo;always profitable.&rdquo; Timing matters, and commodities can lose value for extended periods.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Gold</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Gold pays no interest or dividends. Its opportunity cost is determined by <em>real interest rates</em> (nominal rates minus inflation). When real rates are low or negative, gold becomes relatively attractive. When real rates rise sharply, gold typically underperforms.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Portfolio sizing intuition</strong></p>
+              <p>If you hold 5% of a $100,000 portfolio in gold and equities fall 20% while gold rises 10%, gold contributes roughly +0.5% to offset the −19% from equities. A small cushion — not a rescue. Holding 50% in gold means you&apos;re making a gold bet, not diversifying.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              Key ETFs: <strong style={{ color: "var(--text)" }}>GLD</strong> and <strong style={{ color: "var(--text)" }}>IAU</strong> (both backed by physical gold). Gold mining stocks like GDX add operational and management risk on top of gold-price exposure.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Oil &amp; Energy</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>WTI and Brent crude</strong> are the two main benchmark oil prices. Rising oil prices feed directly into transportation, aviation, and chemical costs — making them a significant input for <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>CPI and inflation expectations</Link>. Key supply variables include OPEC+ production decisions, Middle East geopolitics, and US shale output.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              ETF examples: <strong style={{ color: "var(--text)" }}>USO</strong> (futures-based crude oil — watch roll costs for long-term holders); <strong style={{ color: "var(--text)" }}>XLE</strong> (energy sector equities — different from oil itself).
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Roll cost explained:</strong> Futures contracts expire, so ETFs must continuously sell near-term contracts and buy further-dated ones. If near-term prices are below future prices (contango), this rolling process creates a hidden drag. Long-term holders of USO have historically underperformed the spot oil price for this reason.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Agriculture &amp; Industrial Metals</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Agricultural commodities are highly sensitive to weather patterns, crop yields, and export restrictions. Copper is often called the &ldquo;economic thermometer&rdquo; because construction, electrical infrastructure, and EV manufacturing all demand it heavily — when copper rises, it often signals broad economic expansion.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Diversified commodity baskets: <strong style={{ color: "var(--text)" }}>DBC</strong> or <strong style={{ color: "var(--text)" }}>PDBC</strong> (lower tax drag version of DBC). For most beginners, the core remains <Link href="/learn/etf" style={{ color: "var(--mint)" }}>broad equity ETFs</Link>; commodities work best as a small satellite of roughly 5% or less.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Stocks, Bonds &amp; Commodities — One-Frame Summary</h2>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Stocks</strong> — corporate earnings and growth expectations. Long-term core for most investors.</p>
+              <p><strong style={{ color: "var(--text)" }}>Bonds</strong> — contractual interest and principal repayment. Cushion and income layer (<Link href="/learn/bonds" style={{ color: "var(--mint)" }}>Bonds Guide</Link>).</p>
+              <p><strong style={{ color: "var(--text)" }}>Commodities</strong> — real-world supply/demand. Inflation and geopolitical satellite.</p>
+              <p>A beginner portfolio of &ldquo;mostly equity ETFs + some cash/bonds + optional small gold/commodity sleeve&rdquo; covers the essentials. Crypto is a separate category (<Link href="/learn/crypto" style={{ color: "var(--mint)" }}>Crypto Guide</Link>).</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Panic-buying gold or oil on headlines", "Geopolitical news is often already priced in by the time retail investors react."],
+                ["Long-term DCA into USO", "Roll costs mean USO's long-term return can diverge significantly from spot crude prices."],
+                ["Assuming commodities are 'safe'", "Natural gas and agricultural futures can be more volatile than equities."],
+                ["Replacing your equity core with commodities", "Commodities are a satellite — their role is diversification, not replacement."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Commodity and futures-based ETFs carry high volatility. Not a recommendation of any specific product.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/bonds" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">📜</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "채권과 금리 가이드" : "Bonds & Interest Rates Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "금리·10년물·역수익률" : "Real rates, 10-year yield, and inversions"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/macro-rates" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🏛️</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "CPI·연준·금리 가이드" : "CPI, Fed & Interest Rates Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "유가가 CPI에 미치는 영향" : "How oil prices feed into inflation data"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

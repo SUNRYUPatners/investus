@@ -1,49 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "미국 ETF 완전 가이드 — SPY·VOO·QQQ 차이부터 고르는 법 | 인베스트어스",
-  description:
-    "미국주식 ETF가 무엇인지, SPY·VOO·IVV·QQQ 차이, 운용보수·추적오차·배당·세금·레버리지 함정까지 한국 투자자 기준으로 정리한 오리지널 가이드입니다.",
-  keywords: ["미국 ETF", "SPY", "VOO", "QQQ", "IVV", "ETF 투자", "상장지수펀드", "운용보수"],
-  alternates: { canonical: "https://www.investus.kr/learn/etf" },
-  openGraph: {
-    title: "미국 ETF 완전 가이드 | 인베스트어스",
-    description: "SPY·VOO·QQQ 차이, 보수, 추적오차, 배당·세금 — ETF 입문",
-    url: "https://www.investus.kr/learn/etf",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function EtfGuidePage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/etf")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(96,165,250,0.15)", color: "#60a5fa" }}>ETF</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 18분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            미국 ETF 완전 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            ETF는 미국주식 입문자가 가장 많이 고르는 상품입니다. 한 종목으로 수백 개 기업에 나눠 담고,
-            주식처럼 장중에 사고팔 수 있습니다. 이 글은 Investus 편집팀이 한국 투자자 기준으로 정리한 오리지널 설명입니다.
+            {isKo
+              ? "ETF는 미국주식 입문자가 가장 많이 고르는 상품입니다. 한 종목으로 수백 개 기업에 나눠 담고, 주식처럼 장중에 사고팔 수 있습니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>ETF란 무엇인가</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -78,33 +79,15 @@ export default function EtfGuidePage() {
                 </div>
               ))}
             </div>
-            <p className="text-sm leading-relaxed mt-3">
-              나스닥 쪽을 더 깊게 보려면 <Link href="/learn/nasdaq" style={{ color: "var(--mint)" }}>나스닥 가이드</Link>,
-              지수 자체는 <Link href="/learn/sp500" style={{ color: "var(--mint)" }}>S&amp;P500 가이드</Link>를 참고하세요.
-            </p>
           </section>
 
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>고를 때 볼 숫자 4가지</h2>
             <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
-              <li>
-                <strong style={{ color: "var(--text)" }}>운용보수(ER, Expense Ratio)</strong> —
-                연간 자산에서 떼는 비용. 0.03%와 0.09%는 하루로는 작아 보여도 20년 적립이면 눈에 띕니다.
-                같은 지수를 추종한다면 보수가 낮은 쪽이 장기적으로 유리한 경우가 많습니다.
-              </li>
-              <li>
-                <strong style={{ color: "var(--text)" }}>추적오차</strong> —
-                지수 대비 성과가 얼마나 빗나가는지. 보수·증권 대여·현금 유보가 원인일 수 있습니다.
-              </li>
-              <li>
-                <strong style={{ color: "var(--text)" }}>거래량·스프레드</strong> —
-                호가 간격이 좁을수록 매매 비용이 작습니다. 국내 증권사 해외주식 호가는 미국 정규장 기준으로 보세요.
-              </li>
-              <li>
-                <strong style={{ color: "var(--text)" }}>구성 종목·섹터</strong> —
-                이름만 보고 사지 말고, 상위 10개 종목 비중과 섹터 비중을 확인하세요.
-                &ldquo;테마 ETF&rdquo;는 종목 수가 적어도 한 이슈에 몰릴 수 있습니다.
-              </li>
+              <li><strong style={{ color: "var(--text)" }}>운용보수(ER, Expense Ratio)</strong> — 연간 자산에서 떼는 비용. 같은 지수를 추종한다면 보수가 낮은 쪽이 장기적으로 유리한 경우가 많습니다.</li>
+              <li><strong style={{ color: "var(--text)" }}>추적오차</strong> — 지수 대비 성과가 얼마나 빗나가는지.</li>
+              <li><strong style={{ color: "var(--text)" }}>거래량·스프레드</strong> — 호가 간격이 좁을수록 매매 비용이 작습니다.</li>
+              <li><strong style={{ color: "var(--text)" }}>구성 종목·섹터</strong> — 이름만 보고 사지 말고, 상위 10개 종목 비중과 섹터 비중을 확인하세요.</li>
             </ol>
           </section>
 
@@ -118,11 +101,6 @@ export default function EtfGuidePage() {
               <li>코어: S&amp;P500 또는 전세계 주식 ETF. 적립의 대부분. 자주 바꾸지 않습니다.</li>
               <li>위성: 나스닥100, 반도체, 배당, 금 등. 전체의 10~30% 안에서만.</li>
             </ul>
-            <p className="text-sm leading-relaxed mt-3">
-              위성을 매달 바꾸면 적립이 아니라 테마 단타가 됩니다.
-              섹터 배분은 <Link href="/learn/sectors" style={{ color: "var(--mint)" }}>미국 주식 섹터 가이드</Link>,
-              전체 비중은 <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>포트폴리오 전략</Link>을 보세요.
-            </p>
           </section>
 
           <section>
@@ -132,14 +110,8 @@ export default function EtfGuidePage() {
               매일 리밸런싱하기 때문에 횡보장에서는 <strong style={{ color: "var(--text)" }}>변동성 감쇠</strong>로
               지수가 제자리여도 ETF 가격이 깎일 수 있습니다.
             </p>
-            <p className="text-sm leading-relaxed mb-3">
-              예: 어느 지수가 +10%, −10%를 반복하면 지수는 거의 제자리여도,
-              3배 레버리지 상품은 손실이 누적되는 경로가 나옵니다. &ldquo;장기적으로 나스닥이 오를 테니 TQQQ를 적립&rdquo;은
-              지수 방향과 상품 수학이 다른 이야기입니다.
-            </p>
             <p className="text-sm leading-relaxed">
               초보 투자자의 첫 상품으로 레버리지·인버스 ETF는 권하지 않습니다.
-              코어는 1배 지수 ETF, 위성은 개별 우량주로 나누는 편이 관리가 쉽습니다.
             </p>
           </section>
 
@@ -150,19 +122,15 @@ export default function EtfGuidePage() {
               매매 차익은 국내 양도소득 과세 대상일 수 있습니다. 자세한 골격은{" "}
               <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>미국주식 세금 가이드</Link>를 보세요.
             </p>
-            <p className="text-sm leading-relaxed">
-              원화로 사서 달러 자산을 보유하면, ETF 가격뿐 아니라 원/달러도 수익률에 들어갑니다.
-              <Link href="/learn/usd-krw" style={{ color: "var(--mint)" }}>환율과 미국주식</Link>에서 원화 환산 손익을 정리했습니다.
-            </p>
           </section>
 
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>자주 하는 실수</h2>
             <div className="flex flex-col gap-3">
               {[
-                ["같은 지수를 여러 ETF로 중복 매수", "SPY+VOO+IVV를 동시에 사면 분산이 아니라 중복입니다. 보수·유동성만 보고 하나를 고르세요."],
+                ["같은 지수를 여러 ETF로 중복 매수", "SPY+VOO+IVV를 동시에 사면 분산이 아니라 중복입니다."],
                 ["테마 ETF만 모으기", "AI·양자·우주를 한꺼번에 담으면 상관관계가 높아 조정이 한 번에 옵니다."],
-                ["국내 상장 미국 ETF와 혼동", "한국 거래소에 상장된 미국지수 ETF는 과세·환헤지·거래시간이 다릅니다. 티커만 같다고 같은 상품이 아닙니다."],
+                ["국내 상장 미국 ETF와 혼동", "한국 거래소에 상장된 미국지수 ETF는 과세·환헤지·거래시간이 다릅니다."],
                 ["NAV와 시장가 차이를 무시", "거래량이 적은 테마 ETF는 호가가 벌어질 수 있습니다. 지정가로 넣으세요."],
               ].map(([t, d]) => (
                 <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
@@ -173,33 +141,121 @@ export default function EtfGuidePage() {
             </div>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Investus에서 활용하기</h2>
-            <p className="text-sm leading-relaxed">
-              홈에서 S&amp;P500·나스닥 지수와 선물을 보고, 검색에서 SPY·QQQ 등 티커를 찾아 차트를 확인한 뒤,
-              자산 탭에 보유 수량·평단을 기록하면 비중을 관리하기 쉽습니다.
-              적립 계획이 있다면 <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA 가이드</Link>와 함께 읽으세요.
-            </p>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px] leading-relaxed"
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적 정보이며 특정 ETF 매수·매도 권유가 아닙니다. 과거 성과는 미래를 보장하지 않으며 원금 손실이 가능합니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is an ETF?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              An Exchange-Traded Fund (ETF) is a basket of securities — stocks, bonds, or other assets — that trades on an exchange like a single stock. Unlike mutual funds, ETFs trade continuously throughout the day at market prices, making them highly accessible for individual investors.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              A single S&P 500 ETF like VOO or SPY gives you exposure to 500 large US companies in one purchase. This instant diversification eliminates the need to pick individual stocks and dramatically reduces company-specific risk.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>ETF vs. Mutual Fund vs. Stock</p>
+              <div className="flex flex-col gap-2 text-sm">
+                <div><strong style={{ color: "var(--text)" }}>ETF</strong> — trades like a stock, diversified like a fund, usually low-cost</div>
+                <div><strong style={{ color: "var(--text)" }}>Mutual Fund</strong> — priced once daily at NAV, often higher minimums</div>
+                <div><strong style={{ color: "var(--text)" }}>Stock</strong> — single company, higher potential return AND higher risk</div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Key ETFs to Know</h2>
+            <div className="rounded-2xl p-4 border space-y-3" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              {[
+                ["SPY", "S&P 500 tracker. Most liquid ETF in the world, very active options market. Expense ratio slightly higher than VOO/IVV."],
+                ["VOO / IVV", "Same S&P 500 index, lower expense ratio. Popular choice for long-term core holdings."],
+                ["QQQ", "Nasdaq 100. Heavy tech/growth weighting — outperforms in bull markets, falls harder in corrections."],
+                ["SCHD / VYM", "Dividend-focused ETFs. Good for income investors; typically grow more slowly than pure index ETFs."],
+                ["IWM", "Russell 2000 small-cap index. More economically sensitive and volatile. Use as a small satellite position."],
+                ["GLD / SLV", "Physical gold and silver trackers. Low correlation to equities at times — often used as a hedge."],
+              ].map(([t, d]) => (
+                <div key={t}>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed mt-0.5">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>4 Numbers to Check Before Buying</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Expense Ratio (ER)</strong> — the annual fee deducted from assets. 0.03% vs. 0.50% may look small but compounds significantly over decades.</li>
+              <li><strong style={{ color: "var(--text)" }}>Tracking Error</strong> — how closely the ETF follows its benchmark index. Lower is better.</li>
+              <li><strong style={{ color: "var(--text)" }}>Volume &amp; Bid-Ask Spread</strong> — tighter spreads mean lower trading costs. Always use limit orders for thinly traded ETFs.</li>
+              <li><strong style={{ color: "var(--text)" }}>Top Holdings &amp; Sector Weights</strong> — look past the name. Some &ldquo;diversified&rdquo; ETFs concentrate heavily in 5–10 stocks.</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Core vs. Satellite Strategy</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              A practical ETF portfolio splits holdings into a <strong style={{ color: "var(--text)" }}>Core</strong> — the stable, low-cost index exposure you hold long-term — and a <strong style={{ color: "var(--text)" }}>Satellite</strong> — smaller tactical positions in sectors, themes, or factors.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Core (70–90%):</strong> S&P 500 or total market ETF. Dollar-cost average, rarely change.</li>
+              <li><strong style={{ color: "var(--text)" }}>Satellite (10–30%):</strong> Nasdaq 100, semiconductors, dividends, gold, etc. Express your views here but keep it bounded.</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Swapping satellite positions every month turns disciplined investing into theme chasing. See <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>Portfolio Strategy</Link> for the full framework.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Avoid Leveraged ETFs</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Products like TQQQ (3× Nasdaq 100) amplify daily returns in both directions. Due to daily rebalancing, <strong style={{ color: "var(--text)" }}>volatility decay</strong> means the ETF can lose value even when the underlying index is flat or slightly positive over the same period.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Leveraged and inverse ETFs are designed as short-term trading tools, not long-term investments. Beginners should build their core with 1× index ETFs and individual quality stocks before touching leveraged products.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Holding duplicate ETFs", "Owning SPY + VOO + IVV is not diversification — they all track the same index. Pick one."],
+                ["Stacking thematic ETFs", "AI + quantum + space ETFs are highly correlated. A single sector correction hits all of them at once."],
+                ["Ignoring NAV vs. market price", "Thinly traded ETFs can trade at wide premiums or discounts. Always use limit orders."],
+                ["Overlooking dividends and taxes", "ETF distributions are taxable events. Know your tax situation before choosing between accumulating and distributing ETFs."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not a recommendation to buy or sell any ETF. Past performance does not guarantee future results.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/dca" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">📅</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>적립식 투자(DCA) 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>매달 같은 금액으로 모으는 법</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "적립식 투자(DCA) 가이드" : "Dollar-Cost Averaging (DCA) Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "매달 같은 금액으로 모으는 법" : "Fixed monthly investing explained"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -208,8 +264,8 @@ export default function EtfGuidePage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">💻</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>나스닥 완전 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>나스닥100과 QQQ를 구분하는 법</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "나스닥 완전 가이드" : "Complete Nasdaq Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "나스닥100과 QQQ를 구분하는 법" : "Nasdaq 100 and QQQ explained"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

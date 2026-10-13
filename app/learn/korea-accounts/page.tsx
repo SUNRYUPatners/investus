@@ -1,49 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "ISA·연금저축·IRP 가이드 — 한국 계좌와 미국주식 | 인베스트어스",
-  description:
-    "개인종합자산관리계좌(ISA), 연금저축, IRP가 무엇인지, 일반 해외주식 계좌와 어떻게 다른지, 숫자 예시와 흔한 실수까지 완전 초보 눈높이로 설명합니다.",
-  keywords: ["ISA", "연금저축", "IRP", "세제혜택 계좌", "미국주식 계좌", "세액공제"],
-  alternates: { canonical: "https://www.investus.kr/learn/korea-accounts" },
-  openGraph: {
-    title: "ISA·연금저축·IRP 가이드 | 인베스트어스",
-    description: "한국 세제혜택 계좌와 미국 ETF·주식 — 개념·숫자·실수 정리",
-    url: "https://www.investus.kr/learn/korea-accounts",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function KoreaAccountsPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/korea-accounts")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(248,113,113,0.15)", color: "#f87171" }}>세금</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 24분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            ISA·연금저축·IRP 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            미국주식을 살 때 &ldquo;어떤 계좌로?&rdquo;가 세후 수익률을 바꿉니다.
-            같은 돈을 넣어도 일반 계좌·ISA·연금은 세금 규칙이 다릅니다. 용어부터 숫자 예시까지 잡습니다.
+            {isKo
+              ? "미국주식을 살 때 \"어떤 계좌로?\"가 세후 수익률을 바꿉니다. 같은 돈을 넣어도 일반 계좌·ISA·연금은 세금 규칙이 다릅니다. 용어부터 숫자 예시까지 잡습니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>왜 계좌를 먼저 배우나요?</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -185,7 +186,7 @@ export default function KoreaAccountsPage() {
               {[
                 ["한도 모르고 중복 납입", "연금저축과 IRP 합산 한도를 넘기면 공제가 안 되거나 돌려받게 됩니다. 올해 이미 넣은 금액을 먼저 적으세요."],
                 ["만기 전 ISA 해지", "급전이 필요해 해지하면 비과세 혜택이 날아갈 수 있습니다. 단기 자금은 일반 예금·비상금으로."],
-                ["‘미국주식 = ISA’로 단정", "증권사·상품마다 편입 가능 여부가 다릅니다. 개설 전 검색·상담이 필수입니다."],
+                ["'미국주식 = ISA'로 단정", "증권사·상품마다 편입 가능 여부가 다릅니다. 개설 전 검색·상담이 필수입니다."],
                 ["세액공제만 보고 단기 인출", "공제 받았다가 중도 인출하면 추징·가산이 붙을 수 있습니다. 장기 돈이 아니면 넣지 마세요."],
                 ["계좌를 너무 많이 쪼개기", "ISA·연금·해외주식·은행이 흩어지면 리밸런싱·신고가 어렵습니다. 2~3개로 역할을 나누세요."],
               ].map(([t, d]) => (
@@ -226,20 +227,166 @@ export default function KoreaAccountsPage() {
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적이며 세무·법률 자문이 아닙니다. 한도·세율·상품은 정책·증권사별로 다르니 개설 전 반드시 확인하세요.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Account Choice Matters</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              In Korea, <strong style={{ color: "var(--text)" }}>where you put your money</strong> is as important as what you buy. The same S&amp;P 500 ETF held in a standard brokerage account is subject to capital gains and dividend tax rules, while the same ETF inside an ISA or pension account operates under a completely different tax framework — tax exemption, deductions, or pension taxation.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Contribution limits, tax rates, and eligible products <em>change year to year and vary by broker</em>. This article covers the concepts; always verify current rules with your broker or the National Tax Service before opening an account.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>The Four Main Account Types</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Standard Brokerage (Overseas)", "Buy US individual stocks and US-listed ETFs directly in USD. Requires currency exchange. Standard foreign-stock capital gains and dividend tax rules apply."],
+                ["ISA (Individual Savings Account)", "Holds deposits, funds, and ETFs in one account. Depending on the type and holding period, some or all gains may be tax-exempt."],
+                ["Pension Savings (연금저축)", "Retirement-focused account. Contributions receive a tax credit; withdrawals after age 55 as pension income are typically taxed at a lower rate."],
+                ["IRP (Individual Retirement Pension)", "Accepts severance pay and voluntary contributions. Same tax credit and pension-taxation framework as Pension Savings, with combined annual limits."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is an ISA?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              An ISA (Individual Savings Account) bundles multiple financial products — deposits, funds, ETFs — into a single account. Within contribution limits and after a minimum holding period (typically 3 years), gains may be fully or partially tax-exempt. Some ISA types also offer an additional tax deduction if the balance is moved to a pension account.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              Advantages: tax exemption on gains within the limit; simplicity of holding multiple products together. Disadvantages: contribution caps, loss of benefits if you close early, and not every broker supports every product type (especially direct US stock buying).
+            </p>
+            <p className="text-sm leading-relaxed">
+              Whether you can hold a Korea-listed <Link href="/learn/etf" style={{ color: "var(--mint)" }}>S&amp;P 500 ETF</Link> inside your ISA depends on the specific broker and product. Check eligibility before opening.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Pension Savings &amp; IRP Explained</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Pension Savings</strong> accounts accept annual contributions up to a statutory limit and give a tax credit (roughly 12–15% of contributions, depending on income and age). Funds, ETFs, and deposits are eligible. Withdrawing as pension income after age 55 is typically taxed at a lower pension income rate (often 3.3–5.5% in a separate taxation bracket). Early lump-sum withdrawal triggers a larger tax bill.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>IRP</strong> works similarly but also accepts severance pay rolled over from employment. The combined annual contribution limit for Pension Savings + IRP must be tracked carefully — exceeding it means the deduction does not apply.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Both accounts suit long-term <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link> investors building retirement assets. They are poorly suited for active trading or short-term withdrawal plans.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Numeric Example (Conceptual)</h2>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>Example A — Pension Tax Credit</p>
+              <p>Annual deductible contribution ₩4,000,000 at a 15% credit rate → tax bill reduced by approximately ₩600,000 that year.</p>
+              <p className="font-bold pt-2" style={{ color: "var(--text)" }}>Example B — Same Return, Different Account</p>
+              <p>A ₩5,000,000 net capital gain in a standard overseas brokerage account may be subject to capital gains tax above the basic deduction threshold (e.g., ₩2,500,000).</p>
+              <p>The same gain inside an ISA within the tax-exempt limit could result in near-zero tax — assuming you meet the holding period and type conditions.</p>
+              <p className="text-[11px] pt-1">* Rates and limits vary by year and personal income. Confirm with the National Tax Service or a tax professional.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              For general overseas stock capital gains and dividend withholding rules, see the <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>US Stock Tax Guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Direct US Stocks vs ISA &amp; Pension — Side by Side</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-[11px] border-collapse">
+                <thead>
+                  <tr style={{ borderBottom: "1px solid var(--border)" }}>
+                    <th className="text-left py-2 pr-2" style={{ color: "var(--text)" }}>Feature</th>
+                    <th className="text-left py-2 pr-2" style={{ color: "var(--text)" }}>Standard Overseas</th>
+                    <th className="text-left py-2" style={{ color: "var(--text)" }}>ISA / Pension</th>
+                  </tr>
+                </thead>
+                <tbody className="leading-relaxed">
+                  <tr style={{ borderBottom: "1px solid var(--border)" }}>
+                    <td className="py-2 pr-2">Products</td>
+                    <td className="py-2 pr-2">US stocks &amp; ETFs directly</td>
+                    <td className="py-2">Limited eligible products</td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid var(--border)" }}>
+                    <td className="py-2 pr-2">Tax</td>
+                    <td className="py-2 pr-2">Capital gains + dividend tax</td>
+                    <td className="py-2">Exempt / credit / pension rate</td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid var(--border)" }}>
+                    <td className="py-2 pr-2">Flexibility</td>
+                    <td className="py-2 pr-2">Free to trade any stock</td>
+                    <td className="py-2">Limits, lock-up, product caps</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 pr-2">Currency</td>
+                    <td className="py-2 pr-2">USD conversion required</td>
+                    <td className="py-2">Mostly KRW products</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              A common practical combination: <strong style={{ color: "var(--text)" }}>fill pension/ISA limits first for the tax benefit, then use a standard account for a US-stock core</strong>. The right split depends on your income, limits, and time horizon. For Korea-listed vs US-listed ETF differences, see the <Link href="/learn/kr-us-etf" style={{ color: "var(--mint)" }}>KR vs US ETF Comparison</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Over-contributing without knowing the limit", "Pension Savings + IRP combined limits apply. Contributions beyond the cap won't receive the deduction and may need to be returned."],
+                ["Closing ISA early for cash", "Early closure forfeits the tax-exemption benefit. Keep short-term cash in a regular savings account instead."],
+                ["Assuming US stocks always work inside ISA", "Each broker and ISA type has different eligible product lists. Check before opening."],
+                ["Taking the tax credit and then withdrawing early", "Early lump-sum withdrawal triggers a penalty surcharge. Only put long-term money in."],
+                ["Spreading across too many accounts", "ISA + Pension + IRP + overseas brokerage + bank gets hard to rebalance and report. Aim for 2–3 accounts with defined roles."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Pre-Opening Checklist</h2>
+            <ol className="list-decimal pl-5 text-sm leading-relaxed space-y-2">
+              <li>Check this year&apos;s ISA, pension, and IRP contribution limits and your current balances.</li>
+              <li>Confirm whether US ETFs or stocks are eligible in the specific product you want to open.</li>
+              <li>Assess lock-up periods — will you need this money within 3 years?</li>
+              <li>Determine your income bracket and whether the tax credit or tax exemption gives you more benefit.</li>
+              <li>Understand how the overseas capital gains basic deduction interacts with your plan (<Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>Tax Guide</Link>).</li>
+            </ol>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not tax or legal advice. Limits, rates, and eligible products change annually and vary by broker — always verify before opening an account.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/us-stock-tax" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🧾</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>미국주식 세금·계좌</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>양도세·배당 원천징수 개념</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "미국주식 세금·계좌" : "US Stock Taxes for Korean Residents"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "양도세·배당 원천징수 개념" : "Capital gains, withholding tax basics"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -248,8 +395,8 @@ export default function KoreaAccountsPage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">📦</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>국내 vs 미국 ETF</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>세금·환헤지·거래시간</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "국내 vs 미국 ETF" : "Korean vs US ETFs"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "세금·환헤지·거래시간" : "Tax, currency hedging, trading hours"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

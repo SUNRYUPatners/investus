@@ -1,50 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "가치투자·대가 전략 입문 — 버핏·그레이엄·보글을 초보도 | 인베스트어스",
-  description:
-    "가치투자가 무엇인지, 안전마진·해자·인덱스·올웨더를 완전 초보 눈높이로. 버핏·그레이엄·린치·보글·달리오·막스 핵심과 한국 투자자 적용.",
-  keywords: ["가치투자", "워런 버핏", "벤저민 그레이엄", "존 보글", "안전마진", "경제적 해자"],
-  alternates: { canonical: "https://www.investus.kr/learn/value-investing" },
-  openGraph: {
-    title: "가치투자·대가 전략 가이드 | 인베스트어스",
-    description: "원칙을 배우는 일 — 종목 복제가 아님",
-    url: "https://www.investus.kr/learn/value-investing",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function ValueInvestingPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/value-investing")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(212,175,55,0.15)", color: "#d4af37" }}>철학</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 24분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            가치투자·대가 전략 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            &ldquo;버핏이 산 종목을 따라 사자&rdquo;가 가치투자가 아닙니다.
-            시장이 흔들릴 때 버티는 <em>원칙</em>을 배우는 일입니다.
-            아래는 완전 초보도 따라올 수 있게, 각 대가의 핵심만 풀어 쓴 교육용 정리입니다.
+            {isKo
+              ? "\"버핏이 산 종목을 따라 사자\"가 가치투자가 아닙니다. 시장이 흔들릴 때 버티는 원칙을 배우는 일입니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>가치투자란 — 한 줄 + 비유</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -152,9 +152,6 @@ export default function ValueInvestingPage() {
                 저비용 <Link href="/learn/sp500" style={{ color: "var(--mint)" }}>S&amp;P500</Link> ETF +
                 <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link>가 그의 유산에 가깝습니다.</p>
             </div>
-            <p className="text-sm leading-relaxed mt-3">
-              한국에서 살지 미국에서 살지는 <Link href="/learn/kr-us-etf" style={{ color: "var(--mint)" }}>한국 vs 미국 ETF</Link>를 참고하세요.
-            </p>
           </section>
 
           <section>
@@ -164,31 +161,6 @@ export default function ValueInvestingPage() {
               주식만 들고 있으면 특정 구간에서 크게 아픕니다.
               채권·금·원자재처럼 상관이 다른 자산을 섞는
               <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>분산</Link> 사고입니다.
-            </p>
-            <p className="text-sm leading-relaxed">
-              관련: <Link href="/learn/bonds" style={{ color: "var(--mint)" }}>채권</Link>·
-              <Link href="/learn/commodities" style={{ color: "var(--mint)" }}>원자재</Link>·
-              <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>금리·CPI</Link>.
-              초보는 완벽한 올웨더 복제보다 &ldquo;주식 100%만은 피하자&rdquo; 수준부터.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>하워드 막스 — 리스크와 사이클</h2>
-            <p className="text-sm leading-relaxed">
-              &ldquo;수익률 극대화&rdquo;보다 &ldquo;나쁜 날 버티기&rdquo;를 강조합니다.
-              2차적 사고 — 남들이 믿는 것에 대해 <em>어떻게 생각할지</em>.
-              사이클이 뜨거울 때 위험을 사고, 차가울 때 기회를 산다는 태도.
-              개인에게는 &ldquo;레버리지로 수익률을 억지로 키우지 않기&rdquo;로 번역해도 됩니다.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>필립 피셔·짐 로저스 — 성장과 매크로</h2>
-            <p className="text-sm leading-relaxed">
-              피셔는 경영진·R&amp;D·성장성을 깊게 조사해 우량 성장주를 오래 보유했습니다.
-              로저스는 원자재·신흥국 등 장기 사이클에 베팅하는 매크로 투자자로 알려져 있습니다.
-              개인에게는 &ldquo;한 사이클에 올인&rdquo;보다 코어 지수 + 소액 위성이 현실적입니다.
             </p>
           </section>
 
@@ -220,22 +192,149 @@ export default function ValueInvestingPage() {
             </div>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 읽을 글</h2>
-            <p className="text-sm leading-relaxed">
-              <Link href="/learn/valuation" style={{ color: "var(--mint)" }}>밸류에이션</Link> ·
-              <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>재무제표</Link> ·
-              <Link href="/learn/compound" style={{ color: "var(--mint)" }}>복리</Link> ·
-              <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>포트폴리오</Link> ·
-              <Link href="/learn/buffett-indicator" style={{ color: "var(--mint)" }}>버핏지수</Link>.
-            </p>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 과거 대가의 성과는 미래를 보장하지 않으며, 특정 종목·전략 권유가 아닙니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is Value Investing?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Value investing is the discipline of buying a business at a price below its estimated intrinsic worth and waiting for the market to recognize that value. Think of it as buying a $100 laptop second-hand for $60 — but in stocks, the &ldquo;true price&rdquo; is never perfectly known, which is why a generous <strong style={{ color: "var(--text)" }}>margin of safety</strong> matters so much.
+            </p>
+            <p className="text-sm leading-relaxed">
+              The quantitative tools are <Link href="/learn/valuation" style={{ color: "var(--mint)" }}>P/E, P/B, and EV/EBITDA</Link>; the financial health check lives in <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>financial statements</Link>. Charts are supplementary at most — see the <Link href="/learn/technical-analysis" style={{ color: "var(--mint)" }}>technical analysis guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Philosophy Matters for Beginners</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              In a bull market, almost any strategy looks brilliant. The test comes during a drawdown. Without a clear investment thesis — &ldquo;why I own this and at what price I would sell&rdquo; — the natural response is to panic-sell at the bottom and buy back at the top. That pattern destroys wealth faster than underperforming the index.
+            </p>
+            <p className="text-sm leading-relaxed">
+              What legendary investors share: they all lead with rules, patience, cost discipline, and risk management — not with &ldquo;get rich quickly.&rdquo; For behavioral pitfalls, read <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>investor psychology</Link> and <Link href="/learn/myths" style={{ color: "var(--mint)" }}>top 10 investing myths</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Benjamin Graham — Margin of Safety</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Graham is considered the father of value investing. His central idea: the <strong style={{ color: "var(--text)" }}>margin of safety</strong> — only buy when the price is significantly below your conservative estimate of intrinsic value, so that even if your estimate is wrong, you still have a buffer.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Numeric example (conceptual)</strong></p>
+              <p>Suppose you conservatively estimate a company is worth $100 per share. With a 30% margin of safety, you only buy below $70. If your valuation was wrong and the business is worth $85, you still bought cheaply enough to come out ahead.</p>
+              <p>This is not the same as simply buying low P/E stocks. It requires actually reading the assets, earnings power, and debt — conservatively — and refusing to buy when conviction is absent.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Warren Buffett — Great Business at a Fair Price</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Early in his career Buffett followed Graham closely, hunting for deeply undervalued &ldquo;cigar butt&rdquo; stocks. He later evolved toward buying businesses with durable <strong style={{ color: "var(--text)" }}>competitive moats</strong> at fair prices and holding them for decades.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Economic moat</strong> — brands, networks, scale, or switching costs that make it hard for competitors to erode profits</li>
+              <li>Earnings power over 5–10 years, not the next quarter</li>
+              <li>&ldquo;Only invest in what you understand&rdquo; — avoiding unfamiliar themes and excessive leverage</li>
+              <li>&ldquo;Mr. Market is a voting machine short-term, a weighing machine long-term&rdquo;</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              On copying Buffett&apos;s portfolio from 13F filings: see the <Link href="/learn/13f-guide" style={{ color: "var(--mint)" }}>13F guide</Link>. Filings are a past snapshot, not current conviction.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Charlie Munger — Multiple Mental Models</h2>
+            <p className="text-sm leading-relaxed">
+              Munger advocated thinking across disciplines — psychology, economics, history, and competitive dynamics — rather than obsessing over one metric. His contrarian instinct: be cautious when everyone is greedy, look for opportunity when everyone is fearful. The <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>Fear &amp; Greed Index</Link> is a rough proxy for this sentiment check — a thermometer, not a buy button.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Peter Lynch — Invest in What You Know</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Lynch is famous for discovering great businesses in everyday life — products and services you use and love. His &ldquo;ten-bagger&rdquo; framework captures the idea of holding truly exceptional growth businesses through volatility.
+            </p>
+            <p className="text-sm leading-relaxed">
+              For beginners: stories are seductive but must be validated by numbers. Individual stocks should sit as a small satellite weighting on top of an <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF core</Link>. Write your thesis in the <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>buy checklist</Link> before buying.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>John Bogle — Costs and Index Funds</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Vanguard&apos;s founder had a simple message: &ldquo;Don&apos;t try to beat the market — own the market.&rdquo; Expense ratios, trading costs, and taxes silently erode long-term returns.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Cost math:</strong> The difference between a 0.03% expense ratio and a 1.00% ratio compounds significantly over 20–30 years of consistent contributions. A low-cost <Link href="/learn/sp500" style={{ color: "var(--mint)" }}>S&amp;P 500</Link> ETF combined with <Link href="/learn/dca" style={{ color: "var(--mint)" }}>dollar-cost averaging</Link> is the closest practical expression of Bogle&apos;s legacy.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Ray Dalio — All-Weather and Diversification</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Dalio&apos;s famous framework divides the economic environment into four quadrants: growth rising/falling × inflation rising/falling. A pure equity portfolio suffers badly in specific quadrants. Mixing assets with different sensitivities — bonds, gold, commodities — smooths the ride.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Related reads: <Link href="/learn/bonds" style={{ color: "var(--mint)" }}>bonds &amp; rates</Link>, <Link href="/learn/commodities" style={{ color: "var(--mint)" }}>commodities</Link>, <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>CPI &amp; the Fed</Link>. For beginners, &ldquo;not 100% equities&rdquo; is a realistic first step.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Copying the positions, not the principles", "Your cost basis, tax situation, and position sizing are all different. Copy the thinking, not the trades."],
+                ["Low P/E = value investing", "A cheap-looking stock can be a value trap — a declining business that stays cheap forever."],
+                ["Reading the philosophy but trading like a day trader", "The philosophy only works if the execution matches it."],
+                ["Viewing index funds as \"giving up\"", "For Bogle, owning the index at low cost is the winning move — not a consolation prize."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Past performance of legendary investors does not guarantee future results. This is not a recommendation for any specific strategy or stock.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/valuation" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🔢</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "PER·PBR 밸류에이션 가이드" : "P/E, P/B & Valuation Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "비싸거나 싼지 보는 법" : "The numbers behind intrinsic value"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/buffett-indicator" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🏦</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "버핏지수 완전 가이드" : "Complete Buffett Indicator Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "시장 전체 고평가 여부 읽기" : "Market cap/GDP overvaluation context"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

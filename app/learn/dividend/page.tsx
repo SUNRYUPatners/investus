@@ -1,43 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "배당 투자 가이드 — 배당수익률·배당귀족·DRIP | 인베스트어스",
-  description:
-    "배당이 무엇인지, 배당수익률·함정 수익률, 배당귀족, DRIP 복리, SCHD 등 ETF, 한국 거주자 세금 개념, 성장 vs 배당, Investus 활용. 완전 초보용.",
-  alternates: { canonical: "https://www.investus.kr/learn/dividend" },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function DividendPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/dividend")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(16,185,129,0.15)", color: "#10b981" }}>수익</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 24분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            배당 투자 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            배당은 회사가 이익의 일부를 주주에게 현금(또는 주식)으로 나눠 주는 것입니다.
-            &ldquo;월급처럼&rdquo; 느껴지지만, <strong style={{ color: "var(--text)" }}>세후 현금흐름</strong>과
-            <strong style={{ color: "var(--text)" }}> 지속 가능성</strong>을 같이 봐야 합니다.
+            {isKo
+              ? "배당은 회사가 이익의 일부를 주주에게 현금(또는 주식)으로 나눠 주는 것입니다. \"월급처럼\" 느껴지지만, 세후 현금흐름과 지속 가능성을 같이 봐야 합니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>배당이 뭐예요?</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -193,8 +200,145 @@ export default function DividendPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 배당 정책은 기업 재량이며 삭감·중단 가능. 세금은 개인 상황에 따라 다르며 세무 자문이 아닙니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is a Dividend?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              When you own a stock, you can make money two ways: (1) price appreciation and (2) dividends — cash the company distributes from its profits directly to shareholders. Not every company pays dividends. High-growth companies often reinvest all earnings and pay nothing.
+            </p>
+            <p className="text-sm leading-relaxed">
+              US stocks typically pay dividends quarterly. &ldquo;Monthly dividend&rdquo; ETFs exist but are not inherently superior — what matters is total return, expense ratio, and portfolio composition.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Dividends Matter — and Why They Don&apos;t</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Why they matter:</strong> Regular cash income provides psychological stability and can compound powerfully through reinvestment (<Link href="/learn/compound" style={{ color: "var(--mint)" }}>compounding guide</Link>). For retirees or those needing ongoing income, a dividend strategy can function like a systematic withdrawal plan.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Why not to over-rely on them:</strong> Dividends are paid out of equity — the stock price typically drops by roughly the dividend amount on ex-dividend day. &ldquo;Dividend = free bonus&rdquo; is a myth. Chasing high yields leads directly to the <Link href="/learn/myths" style={{ color: "var(--mint)" }}>yield trap</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Dividend Yield — Understanding the Number</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Dividend Yield</strong> = (Annual Dividend per Share ÷ Current Stock Price) × 100%. If a stock trades at $100 and pays $4/year, yield is 4%.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed mb-3" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Example A:</strong> Stock at $50, pays $2/year → 4%. Earnings stable.</p>
+              <p><strong style={{ color: "var(--text)" }}>Example B:</strong> Same company disappoints; stock falls to $25. Same $2 payout now looks like 8% — &ldquo;attractive!&rdquo;</p>
+              <p><strong style={{ color: "var(--text)" }}>The trap:</strong> Dividend gets cut to $1 → yield back to 4%, but you already lost 50% of principal.</p>
+            </div>
+            <p className="text-sm leading-relaxed">
+              Abnormally high yields (8–10%+) are warning signs first, windfalls second. Always check free cash flow, debt levels, and payout ratio before buying a high-yielder.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Key Dates to Know</h2>
+            <ul className="list-disc pl-5 text-sm leading-relaxed space-y-2 mb-3">
+              <li><strong style={{ color: "var(--text)" }}>Declaration Date</strong> — company announces the next dividend amount and payment date</li>
+              <li><strong style={{ color: "var(--text)" }}>Ex-Dividend Date</strong> — you must own the stock before this date to receive the upcoming dividend</li>
+              <li><strong style={{ color: "var(--text)" }}>Payment Date</strong> — cash actually lands in your account</li>
+            </ul>
+            <p className="text-sm leading-relaxed">
+              &ldquo;Buy just before ex-date, collect dividend, sell immediately&rdquo; rarely works for beginners. The stock price adjusts down on ex-date, and you still owe brokerage fees and taxes on the dividend received.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Dividend Aristocrats</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Dividend Aristocrats</strong> is the popular term for S&P 500 companies that have raised their dividend every year for at least 25 consecutive years. Well-known examples include Johnson &amp; Johnson (JNJ), Coca-Cola (KO), and Procter &amp; Gamble (PG).
+            </p>
+            <p className="text-sm leading-relaxed">
+              A long dividend streak is a useful filter — it signals durable earnings and disciplined management — but it is a historical record, not a guarantee. Rather than picking individual Aristocrats, many investors prefer a <Link href="/learn/etf" style={{ color: "var(--mint)" }}>dividend ETF</Link> like SCHD for instant diversification.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>DRIP — Dividend Reinvestment Plans</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              A DRIP automatically uses incoming dividends to buy more shares of the same stock or ETF. Your share count grows without you adding new cash, which turbocharges the <Link href="/learn/compound" style={{ color: "var(--mint)" }}>compounding</Link> effect over decades.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Rough intuition:</strong> If you earn 3% annually in dividends and reinvest all of it, the reinvested shares also generate dividends — the snowball grows. Over 30 years, the accumulated difference between DRIP and cash-out strategies can be substantial (before taxes, illustrative only).
+            </p>
+            <p className="text-sm leading-relaxed">
+              Turn DRIP off when you need the income for living expenses. It is not &ldquo;always reinvest&rdquo; — it is &ldquo;reinvest when you don&apos;t need the cash.&rdquo;
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>US Dividend Withholding Tax</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The US withholds 15% of dividends paid to most foreign investors (under tax treaties). That means if a company declares a $1.00/share dividend, you receive $0.85. This withholding is applied before you ever see the cash — the number shown in many apps is already reduced.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Your home country may also impose additional taxes. Always compare strategies on an <em>after-tax</em> basis. For a fuller breakdown, see the <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>US Stock Tax Guide</Link>. Not tax advice — consult a professional for large amounts.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Growth vs. Dividend — How to Balance</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Younger investors accumulating wealth usually favor a growth-and-index-ETF core (<Link href="/learn/sp500" style={{ color: "var(--mint)" }}>S&P 500</Link>, <Link href="/learn/nasdaq" style={{ color: "var(--mint)" }}>Nasdaq</Link>). Even dividend-light, total return (price + reinvested dividends) is what matters long term.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Investors needing ongoing income — retirees or those in drawdown mode — can gradually shift toward dividend-focused ETFs or stocks. The practical answer is a blended <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>portfolio</Link>. Currency moves also affect real returns if you hold USD assets, so check the <Link href="/learn/usd-krw" style={{ color: "var(--mint)" }}>FX guide</Link> periodically.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <ul className="list-disc pl-5 text-sm leading-relaxed space-y-2">
+              <li>Buying based on yield % alone — often a falling-stock yield trap</li>
+              <li>Trying to &ldquo;capture&rdquo; dividends by buying before ex-date and immediately selling</li>
+              <li>Ignoring withholding taxes and reporting gross yield as actual income</li>
+              <li>Holding a dividend-cutter waiting for recovery while the business deteriorates</li>
+              <li>Using high-dividend leveraged products as a core long-term holding</li>
+            </ul>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Dividend policy is at company discretion and can be cut or eliminated. Tax treatment varies by individual. Not tax advice.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/reits" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🏢</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "REITs 부동산 ETF 가이드" : "REITs & Real Estate ETFs Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "부동산 임대수익에 간접 노출" : "Indirect real estate income exposure"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/compound" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">📈</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "복리와 장기 투자" : "Compound Interest & Long-Term Investing"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "DRIP이 복리를 만드는 원리" : "How DRIP turns dividends into compounding"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

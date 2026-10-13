@@ -378,11 +378,11 @@ export function SP500Heatmap() {
 
       <div className="px-4 py-2 border-t flex items-center justify-between" style={{ borderColor: "var(--border)" }}>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-          S&P 500 · 섹터 구성 · 시가총액 비례
+          {locale === "ko" ? "S&P 500 · 섹터 구성 · 시가총액 비례" : "S&P 500 · sector composition · market-cap weighted"}
         </span>
         {!isLive && sectors !== null && (
           <span className="text-[9px] px-1.5 py-0.5 rounded-full" style={{ background: "rgba(245,158,11,0.12)", color: "#f59e0b" }}>
-            참고용
+            {locale === "ko" ? "참고용" : "Reference"}
           </span>
         )}
       </div>

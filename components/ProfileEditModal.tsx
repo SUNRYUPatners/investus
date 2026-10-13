@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { X, Camera, Check, AlertTriangle } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { getSupabase } from "@/lib/supabase";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 const EMOJI_PRESETS = [
   "🦁","🐯","🦊","🐻","🐼","🐨",
@@ -36,6 +37,8 @@ function resizeImageToBase64(file: File): Promise<string> {
 
 export function ProfileEditModal({ onClose }: { onClose: () => void }) {
   const { user, updateProfile, logout } = useAuth();
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
   const fileRef  = useRef<HTMLInputElement>(null);
 
   const [avatar,        setAvatar]        = useState(user?.avatar ?? "");
@@ -56,7 +59,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
       const r = await fetch("/api/auth/delete-account", { method: "DELETE", headers });
       if (!r.ok) {
         const d = await r.json().catch(() => ({}));
-        setDeleteError((d as { error?: string }).error ?? "오류가 발생했습니다.");
+        setDeleteError((d as { error?: string }).error ?? (isKo ? "오류가 발생했습니다." : "An error occurred."));
         setDeleting(false);
         return;
       }
@@ -67,7 +70,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
       await logout();
       onClose();
     } catch {
-      setDeleteError("네트워크 오류가 발생했습니다.");
+      setDeleteError(isKo ? "네트워크 오류가 발생했습니다." : "A network error occurred.");
       setDeleting(false);
     }
   };
@@ -105,7 +108,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
           <X className="w-5 h-5" style={{ color: "var(--muted)" }} />
         </button>
         <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
-          프로필 수정
+          {isKo ? "프로필 수정" : "Edit Profile"}
         </h2>
         <button
           onClick={handleSave}
@@ -113,7 +116,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
           className="text-xs font-bold px-3 py-1.5 rounded-lg disabled:opacity-40 active:opacity-70 transition-opacity"
           style={{ background: "var(--mint)", color: "var(--on-accent)" }}
         >
-          {saving ? "저장 중..." : "저장"}
+          {saving ? (isKo ? "저장 중..." : "Saving…") : (isKo ? "저장" : "Save")}
         </button>
       </div>
 
@@ -164,20 +167,20 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
             className="mt-3 text-xs active:opacity-70"
             style={{ color: "var(--mint)" }}
           >
-            사진 업로드
+            {isKo ? "사진 업로드" : "Upload photo"}
           </button>
         </div>
 
         {/* Nickname */}
         <div className="px-4 mb-6">
           <label className="text-[10px] font-semibold mb-1.5 block" style={{ color: "var(--muted)" }}>
-            이름 (닉네임)
+            {isKo ? "이름 (닉네임)" : "Name (nickname)"}
           </label>
           <input
             value={nickname}
             onChange={(e) => setNickname(e.target.value)}
             maxLength={20}
-            placeholder="이름을 입력하세요"
+            placeholder={isKo ? "이름을 입력하세요" : "Enter your name"}
             className="w-full rounded-xl px-3 py-2.5 text-sm outline-none border"
             style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }}
           />
@@ -189,7 +192,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
         {/* Email (read-only) */}
         <div className="px-4 mb-6">
           <label className="text-[10px] font-semibold mb-1.5 block" style={{ color: "var(--muted)" }}>
-            이메일 <span className="font-normal">(본인만 볼 수 있음)</span>
+            {isKo ? <>이메일 <span className="font-normal">(본인만 볼 수 있음)</span></> : <>Email <span className="font-normal">(only visible to you)</span></>}
           </label>
           <div
             className="w-full rounded-xl px-3 py-2.5 text-sm border flex items-center gap-2"
@@ -202,7 +205,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
               className="ml-auto flex-shrink-0 text-[9px] px-1.5 py-0.5 rounded"
               style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}
             >
-              🔒 비공개
+              {isKo ? "🔒 비공개" : "🔒 Private"}
             </span>
           </div>
         </div>
@@ -210,7 +213,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
         {/* Emoji picker */}
         <div className="px-4 mb-6">
           <label className="text-[10px] font-semibold mb-2 block" style={{ color: "var(--muted)" }}>
-            아바타 이모지 선택
+            {isKo ? "아바타 이모지 선택" : "Choose avatar emoji"}
           </label>
           <div className="grid grid-cols-6 gap-2">
             {/* Clear option */}
@@ -222,7 +225,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
                 borderColor: avatar === "" && !isPhoto ? "var(--mint)" : "var(--border)",
               }}
             >
-              <span className="text-[10px]" style={{ color: "var(--muted)" }}>없음</span>
+              <span className="text-[10px]" style={{ color: "var(--muted)" }}>{isKo ? "없음" : "None"}</span>
             </button>
             {EMOJI_PRESETS.map((em) => {
               const active = avatar === em;
@@ -250,14 +253,14 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
 
         {/* 회원 탈퇴 */}
         <div className="px-4 pb-10 border-t pt-5" style={{ borderColor: "var(--border)" }}>
-          <p className="text-[10px] mb-2" style={{ color: "var(--muted)" }}>계정 관리</p>
+          <p className="text-[10px] mb-2" style={{ color: "var(--muted)" }}>{isKo ? "계정 관리" : "Account"}</p>
           <button
             onClick={() => setShowDeleteConfirm(true)}
             className="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-xs font-semibold border active:opacity-70 transition-opacity"
             style={{ borderColor: "rgba(239,68,68,0.25)", color: "#ef4444", background: "rgba(239,68,68,0.05)" }}
           >
             <AlertTriangle className="w-3.5 h-3.5" />
-            회원 탈퇴
+            {isKo ? "회원 탈퇴" : "Delete account"}
           </button>
         </div>
 
@@ -276,10 +279,12 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
               <AlertTriangle className="w-6 h-6" style={{ color: "#ef4444" }} />
             </div>
             <h3 className="text-sm font-bold text-center mb-2" style={{ color: "var(--text)" }}>
-              정말 탈퇴하시겠어요?
+              {isKo ? "정말 탈퇴하시겠어요?" : "Delete your account?"}
             </h3>
             <p className="text-[11px] text-center leading-relaxed mb-4" style={{ color: "var(--muted)" }}>
-              탈퇴하면 계정, 포트폴리오, 게시글 등 모든 데이터가 영구 삭제되며 복구할 수 없습니다.
+              {isKo
+                ? "탈퇴하면 계정, 포트폴리오, 게시글 등 모든 데이터가 영구 삭제되며 복구할 수 없습니다."
+                : "All data including your account, portfolio, and posts will be permanently deleted and cannot be recovered."}
             </p>
             {deleteError && (
               <p className="text-[11px] text-center mb-3" style={{ color: "#ef4444" }}>{deleteError}</p>
@@ -290,7 +295,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
               className="w-full py-3 rounded-2xl text-sm font-bold mb-2 active:opacity-80 transition-opacity disabled:opacity-50"
               style={{ background: "#ef4444", color: "#fff" }}
             >
-              {deleting ? "탈퇴 처리 중..." : "탈퇴하기"}
+              {deleting ? (isKo ? "탈퇴 처리 중..." : "Deleting…") : (isKo ? "탈퇴하기" : "Delete account")}
             </button>
             <button
               onClick={() => setShowDeleteConfirm(false)}
@@ -298,7 +303,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
               className="w-full py-2.5 text-xs rounded-2xl"
               style={{ color: "var(--muted)" }}
             >
-              취소
+              {isKo ? "취소" : "Cancel"}
             </button>
           </div>
         </div>

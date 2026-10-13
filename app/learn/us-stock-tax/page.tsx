@@ -1,50 +1,48 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "한국 거주자 미국주식 세금·계좌 가이드 — 양도세·배당원천징수 | 인베스트어스",
-  description:
-    "국내 증권사로 미국주식을 할 때 알아둘 양도소득세, 배당 원천징수, 금융소득종합과세, 환율 손익을 숫자 예시와 함께 교육 목적으로 정리합니다. 세무 자문이 아닙니다.",
-  keywords: ["미국주식 세금", "양도소득세", "배당세", "해외주식 세금", "금융소득종합과세", "기본공제"],
-  alternates: { canonical: "https://www.investus.kr/learn/us-stock-tax" },
-  openGraph: {
-    title: "미국주식 세금·계좌 가이드 | 인베스트어스",
-    description: "양도세·배당·종합과세 개념 정리 (교육용, 세무 자문 아님)",
-    url: "https://www.investus.kr/learn/us-stock-tax",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function UsStockTaxPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/us-stock-tax")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(239,68,68,0.15)", color: "#f87171" }}>세금</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 24분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            한국 거주자 미국주식 세금·계좌 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            수익률만 보고 시작했다가 신고·과세에서 놀라는 경우가 많습니다.
-            아래는 <strong style={{ color: "var(--text)" }}>개념 안내</strong>입니다. 세율·공제·신고기한은 개정될 수 있으니
-            실제 신고는 국세청 자료 또는 세무사 확인이 필요합니다. Investus는 세무 대리인이 아닙니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>왜 세금을 먼저 배우나요?</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -146,19 +144,6 @@ export default function UsStockTaxPage() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>ISA·연금과의 관계</h2>
-            <p className="text-sm leading-relaxed mb-3">
-              국내 절세 계좌(ISA, 연금저축, IRP 등)의 투자 가능 상품은 제도·운용사마다 다릅니다.
-              &ldquo;미국 개별 주식을 ISA에 그대로 담는다&rdquo;고 단정하면 안 됩니다.
-              해외주식형 펀드/ETF만 가능한 경우, 한도가 있는 경우, 중도 인출 페널티가 있는 경우를 각각 확인하세요.
-            </p>
-            <p className="text-sm leading-relaxed">
-              절세 계좌와 일반 해외주식 계좌를 섞어 쓸 때는, 어디에 어떤 자산이 있는지를 메모해 두지 않으면
-              리밸런싱과 신고 때 헷갈립니다. Investus 자산 탭은 투자 추적용이며 공식 세무 장부가 아닙니다.
-            </p>
-          </section>
-
-          <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>초보가 자주 하는 실수</h2>
             <div className="flex flex-col gap-3">
               {[
@@ -186,49 +171,139 @@ export default function UsStockTaxPage() {
             </ul>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>기록으로 남길 것</h2>
-            <ul className="list-disc pl-5 space-y-1.5 text-sm leading-relaxed">
-              <li>매수·매도 일자, 수량, 체결가(달러), 적용 환율</li>
-              <li>배당 입금일과 원천징수 금액</li>
-              <li>증권사 연말 세금 관련 안내 메일·PDF</li>
-              <li>환전 내역(원화→달러, 달러→원화) — 수수료 포함</li>
-            </ul>
-            <p className="text-sm leading-relaxed mt-3">
-              신고 근거는 증권사 거래내역이 우선입니다. 스크린샷만 모아 두면 누락되기 쉬우니
-              연 1회 ZIP으로 백업해 두는 습관을 권합니다.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 할 일</h2>
-            <ol className="list-decimal pl-5 text-sm leading-relaxed space-y-2">
-              <li>증권사 앱에서 해외주식 양도소득 미리보기 메뉴 위치를 찾아 두세요.</li>
-              <li>올해 실현 손익이 기본공제에 가까운지 대략만 적어 보세요.</li>
-              <li>ISA·연금 한도와 일반 계좌 역할을 나눕니다 (<Link href="/learn/korea-accounts" style={{ color: "var(--mint)" }}>계좌 가이드</Link>).</li>
-              <li>입문 전체는 <Link href="/learn/us-stock-basics" style={{ color: "var(--mint)" }}>미국주식 입문</Link>,
-                문의는 <Link href="/more/contact" style={{ color: "var(--mint)" }}>연락처</Link>. 세금 계산 요청은 받지 않습니다.</li>
-            </ol>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px] leading-relaxed"
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 본 페이지는 세무·법률 자문이 아닙니다. 세법 개정으로 내용이 달라질 수 있으며, 개별 상황에 대한 책임은 이용자에게 있습니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Learn About Tax Before You Invest?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              With US stocks, the tax events happen <strong style={{ color: "var(--text)" }}>when you sell</strong> or <strong style={{ color: "var(--text)" }}>when you receive dividends</strong> — not when you buy. Your after-tax return can differ significantly from the pre-tax chart. Frequent trading compounds this through transaction taxes and fees.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Tax-advantaged accounts (ISA, pension savings, IRP) follow different rules from a regular overseas brokerage account. See the <Link href="/learn/korea-accounts" style={{ color: "var(--mint)" }}>ISA &amp; Pension Guide</Link> for that comparison.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Where to Open an Account</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Most Korean individual investors buy US stocks through the overseas trading service of a Korean domestic broker. Opening a US brokerage account directly (e.g., Interactive Brokers, Charles Schwab) is possible but adds complexity around international wire transfers, FATCA reporting, Korean tax treatment, and inheritance rules. For beginners, a domestic Korean broker is the standard starting point.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              Spreading assets across too many brokerage accounts increases administrative burden. Consolidating transaction records in one place makes capital gains calculations significantly easier at year-end.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Brokers vary on commission rates, FX conversion spreads, fractional share support, and pre-market access. Zero-commission promotions often revert after an initial period. See the <Link href="/learn/us-stock-basics" style={{ color: "var(--mint)" }}>US Stock Basics Guide</Link> for an account-opening checklist.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Capital Gains Tax on US Stock Sales</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              For Korean residents, profits from selling overseas stocks are generally treated as <strong style={{ color: "var(--text)" }}>capital gains (양도소득)</strong>. The annual basic deduction threshold reduces the taxable amount. Only the net profit above that threshold is taxed. The combined rate (including local surtax) has historically been around 22%, though exact figures depend on the applicable tax year and individual circumstances.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>Illustrative Example (assumed rates — verify with current law)</p>
+              <p>Net profit for the year: ₩5,000,000. Basic deduction: ₩2,500,000. Taxable base: ₩2,500,000.</p>
+              <p>At ~22% combined rate → estimated tax: ~₩550,000. Actual result depends on your year, transactions, and account type.</p>
+              <p>If net profit is ₩2,000,000 (below the deduction threshold), capital gains tax may be near zero.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              &ldquo;No tax until you sell&rdquo; is roughly true for capital gains. But dividends create a taxable event the moment they are paid — regardless of whether you reinvest them.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>How Exchange Rates Affect Your Taxable Gain</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Your taxable gain is calculated in <strong style={{ color: "var(--text)" }}>Korean won</strong>, not dollars. If the USD/KRW rate rises while you hold a stock (weaker won), your won-denominated gain increases — even if the dollar price is unchanged. If the won strengthens, your reported gain shrinks.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p>Buy: $100 × ₩1,200/$ = ₩120,000 cost basis.</p>
+              <p>Sell: $100 × ₩1,400/$ = ₩140,000 → ₩20,000 gain even though the dollar price was unchanged.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              See the <Link href="/learn/usd-krw" style={{ color: "var(--mint)" }}>USD/KRW Guide</Link> for more on currency effects. The exact exchange rate methodology used in tax calculations follows your brokerage and current tax law.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Dividend Withholding Tax</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              US companies and ETFs typically withhold a portion of dividends at source before crediting your account. Under the Korea-US tax treaty, the standard rate for Korean residents is commonly cited at 15%. Your brokerage statement will show &ldquo;gross dividend / withholding tax / net credited.&rdquo; Keep these records.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>Example</p>
+              <p>Gross dividend: $100. Withholding at 15%: $15. Credited to account: $85.</p>
+              <p>In Korea, dividend income is also included in financial income (금융소득). If your total interest + dividend income exceeds a certain threshold, comprehensive income taxation (종합과세) may apply.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              REITs and some fund distributions may be taxed differently from ordinary dividends. Cross-reference your ETF prospectus with your brokerage&apos;s withholding statements. See the <Link href="/learn/dividend" style={{ color: "var(--mint)" }}>Dividend Guide</Link> for context.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Tax-Loss Harvesting — Use with Caution</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Realizing a loss in the same calendar year can offset taxable gains in many cases. However, breaking up a solid long-term core position purely for a tax benefit may cost you more in missed compounding than you save. Tax strategy belongs with a tax professional; investment strategy belongs with your own plan.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Frequent realization of gains and losses also conflicts with the spirit of <Link href="/learn/dca" style={{ color: "var(--mint)" }}>systematic investing</Link> — each round-trip adds transaction costs and potential tax friction.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Reporting from only one brokerage", "If you use multiple brokers, you must aggregate. Omissions can trigger penalties."],
+                ["Ignoring the KRW/USD conversion on gains", "Your gain is taxed in won, not dollars. Currency moves affect your taxable amount."],
+                ["Treating dividends as free money", "Withholding tax plus potential domestic aggregation means net dividend is less than the headline yield."],
+                ["Confusing ISA/pension and regular account rules", "Tax exemptions, deductions, and capital gains treatment differ by account type."],
+                ["Keeping only screenshots", "Export year-end trade history and dividend PDFs from your broker for proper documentation."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Staying Ready for Tax Season</h2>
+            <ul className="list-disc pl-5 space-y-1.5 text-sm leading-relaxed">
+              <li>Locate your broker&apos;s &ldquo;overseas stock capital gains preview&rdquo; menu at the start of each year.</li>
+              <li>If you use multiple brokers, aggregate all records before filing — a single-broker view will be incomplete.</li>
+              <li>Accounts under family members&apos; names or minor children involve separate gift and name-lending considerations beyond this article&apos;s scope.</li>
+              <li>Direct foreign brokerage accounts (US-based) may require additional FATCA and CRS disclosures.</li>
+            </ul>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ This page is for educational purposes only and does not constitute tax or legal advice. Tax laws change; individual situations vary. Consult a qualified tax professional for your specific circumstances.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/usd-krw" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">💱</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>환율과 미국주식</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>원/달러가 수익률을 어떻게 바꾸나</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "환율과 미국주식" : "USD/KRW & US Stocks"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "원/달러가 수익률을 어떻게 바꾸나" : "How currency moves affect your returns"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -237,8 +312,8 @@ export default function UsStockTaxPage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🏦</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>ISA·연금저축·IRP</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>세제혜택 계좌와 미국 ETF</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "ISA·연금저축·IRP" : "ISA, Pension Savings & IRP Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "세제혜택 계좌와 미국 ETF" : "Tax-advantaged accounts and US ETFs"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

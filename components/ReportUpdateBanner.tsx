@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { X, ChevronRight, FileText } from "lucide-react";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 const KEY = "investus-report-banner-dismissed";
 const REPORT_DATE = "2026-05-22";
@@ -12,6 +13,8 @@ function todayStr() {
 }
 
 export function ReportUpdateBanner() {
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -63,17 +66,22 @@ export function ReportUpdateBanner() {
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>
-                📋 오늘의 리포트가 발행됐습니다
+                {isKo ? "📋 오늘의 리포트가 발행됐습니다" : "📋 Today's report is now available"}
               </p>
               <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                SpaceX IPO · NVDA $270B FCF · Tesla 유럽 +30%<br />
-                이란 핵합의 등 <b style={{ color: "#60a5fa" }}>7개 핵심 리포트</b>를 확인하세요.
+                {isKo ? (
+                  <>SpaceX IPO · NVDA $270B FCF · Tesla 유럽 +30%<br />
+                  이란 핵합의 등 <b style={{ color: "#60a5fa" }}>7개 핵심 리포트</b>를 확인하세요.</>
+                ) : (
+                  <>SpaceX IPO · NVDA $270B FCF · Tesla Europe +30%<br />
+                  Iran nuclear deal and <b style={{ color: "#60a5fa" }}>7 key reports</b> to check.</>
+                )}
               </p>
             </div>
             <button
               onClick={dismiss}
               className="flex-shrink-0 opacity-40 hover:opacity-80 transition-opacity"
-              aria-label="닫기"
+              aria-label="Close"
             >
               <X className="w-4 h-4" style={{ color: "var(--text)" }} />
             </button>
@@ -87,14 +95,14 @@ export function ReportUpdateBanner() {
               className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-[13px] font-semibold"
               style={{ background: "#60a5fa", color: "#000", textDecoration: "none" }}
             >
-              바로 확인하기 <ChevronRight className="w-4 h-4" />
+              {isKo ? "바로 확인하기" : "View now"} <ChevronRight className="w-4 h-4" />
             </Link>
             <button
               onClick={dismiss}
               className="px-4 py-2.5 rounded-xl border text-[12px] transition-opacity hover:opacity-70"
               style={{ color: "var(--muted)", borderColor: "var(--border)" }}
             >
-              오늘 그만보기
+              {isKo ? "오늘 그만보기" : "Don't show today"}
             </button>
           </div>
         </div>

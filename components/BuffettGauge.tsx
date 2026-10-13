@@ -64,17 +64,28 @@ export function BuffettGauge({ data, locale }: { data: BuffettData; locale?: Loc
         style={{ borderColor: "var(--border)" }}
       >
         <SectionInfo title={t.buffett.sectionTitle} side="right">
-          <p className="font-bold mb-1" style={{ color: "#fbbf24" }}>버핏 지수란?</p>
-          <p style={{ color: "var(--muted)" }}><b>미국 주식 시장 전체 시가총액 ÷ GDP</b>로 계산해요. 워런 버핏이 즐겨 쓰는 밸류에이션 지표예요.</p>
-          <div className="mt-2 space-y-1">
-            <p>✅ <b>~100%</b> — 적정 수준. 매수 고려 가능</p>
-            <p>⚠️ <b>100~150%</b> — 다소 고평가. 신중하게 접근</p>
-            <p>🚨 <b>150%+</b> — 극단적 고평가. 버핏은 이 구간에서 현금 비중을 늘림</p>
-          </div>
-          <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>현재 지수가 높을수록 시장이 과열됐다는 신호예요. 단기 예측보단 장기 관점에서 참고하세요.</p>
+          {locale === "ko" ? (<>
+            <p className="font-bold mb-1" style={{ color: "#fbbf24" }}>버핏 지수란?</p>
+            <p style={{ color: "var(--muted)" }}><b>미국 주식 시장 전체 시가총액 ÷ GDP</b>로 계산해요. 워런 버핏이 즐겨 쓰는 밸류에이션 지표예요.</p>
+            <div className="mt-2 space-y-1">
+              <p>✅ <b>~100%</b> — 적정 수준. 매수 고려 가능</p>
+              <p>⚠️ <b>100~150%</b> — 다소 고평가. 신중하게 접근</p>
+              <p>🚨 <b>150%+</b> — 극단적 고평가. 버핏은 이 구간에서 현금 비중을 늘림</p>
+            </div>
+            <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>현재 지수가 높을수록 시장이 과열됐다는 신호예요. 단기 예측보단 장기 관점에서 참고하세요.</p>
+          </>) : (<>
+            <p className="font-bold mb-1" style={{ color: "#fbbf24" }}>What is the Buffett Indicator?</p>
+            <p style={{ color: "var(--muted)" }}>Calculated as <b>Total US stock market cap ÷ GDP</b>. A valuation metric favored by Warren Buffett.</p>
+            <div className="mt-2 space-y-1">
+              <p>✅ <b>~100%</b> — Fair value. Buying can be considered</p>
+              <p>⚠️ <b>100–150%</b> — Somewhat overvalued. Approach with caution</p>
+              <p>🚨 <b>150%+</b> — Extremely overvalued. Buffett increases cash at this level</p>
+            </div>
+            <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>A higher reading signals an overheated market. Use as a long-term reference, not a short-term predictor.</p>
+          </>)}
         </SectionInfo>
         <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>
-          {data.updatedAt} 기준 · S&P500 추정
+          {locale === "en" ? `as of ${data.updatedAt} · S&P500 est.` : `${data.updatedAt} 기준 · S&P500 추정`}
         </span>
       </div>
 

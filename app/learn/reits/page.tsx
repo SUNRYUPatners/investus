@@ -1,49 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "REITs 부동산 ETF 입문 — 금리·배당·VNQ를 초보도 | 인베스트어스",
-  description:
-    "리츠(REIT)가 무엇인지, 건물 직접 구매와 어떻게 다른지, 금리·공실·섹터 차이, VNQ·IYR과 세금까지 완전 초보용으로.",
-  keywords: ["리츠", "REIT", "VNQ", "부동산 ETF", "IYR", "배당"],
-  alternates: { canonical: "https://www.investus.kr/learn/reits" },
-  openGraph: {
-    title: "REITs 부동산 ETF 가이드 | 인베스트어스",
-    description: "부동산에 간접 투자 — 구조·금리·비중",
-    url: "https://www.investus.kr/learn/reits",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function ReitsPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/reits")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(96,165,250,0.15)", color: "#60a5fa" }}>자산</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            REITs 부동산 ETF 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            건물을 사지 않고도, 주식처럼 거래하면서 부동산 임대 수익에 간접으로 노출되는 방법이 리츠입니다.
-            &ldquo;부동산 = 안전&rdquo;만 믿으면 금리 인상기에 크게 놀랄 수 있습니다. 구조부터 차근히 봅시다.
+            {isKo
+              ? "건물을 사지 않고도, 주식처럼 거래하면서 부동산 임대 수익에 간접으로 노출되는 방법이 리츠입니다. \"부동산 = 안전\"만 믿으면 금리 인상기에 크게 놀랄 수 있습니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>REIT란 한 줄로</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -182,21 +183,136 @@ export default function ReitsPage() {
             </ol>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 읽을 글</h2>
-            <p className="text-sm leading-relaxed">
-              <Link href="/learn/dividend" style={{ color: "var(--mint)" }}>배당</Link> ·
-              <Link href="/learn/bonds" style={{ color: "var(--mint)" }}>채권</Link> ·
-              <Link href="/learn/commodities" style={{ color: "var(--mint)" }}>원자재</Link> ·
-              <Link href="/learn/kr-us-etf" style={{ color: "var(--mint)" }}>한국 vs 미국 ETF</Link>.
-            </p>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 리츠·부동산 ETF 특정 종목 권유가 아니며, 원금 손실이 가능합니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is a REIT?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              A <strong style={{ color: "var(--text)" }}>Real Estate Investment Trust (REIT)</strong> is a company that owns and operates income-producing real estate — offices, apartments, warehouses, data centers, shopping malls, and more. By law, REITs must distribute at least 90% of taxable income as dividends to shareholders, which gives them a favorable tax structure.
+            </p>
+            <p className="text-sm leading-relaxed">
+              You can buy REIT shares or REIT ETFs in a standard brokerage account for small amounts, without buying actual property. The key distinction: REIT prices move every trading day like a stock — not slowly like direct real estate.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Direct Property vs. REITs</h2>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Direct Real Estate</strong> — large capital outlay, mortgage, vacancy risk, property management, illiquid (selling takes months). Leverage amplifies both gains and losses.</p>
+              <p><strong style={{ color: "var(--text)" }}>REITs</strong> — small minimum investment, instant diversification, daily liquidity. Trade-offs: price volatility, interest rate sensitivity, dividend taxation.</p>
+              <p><strong style={{ color: "var(--text)" }}>In practice</strong> — $5,000 is not enough to buy a property in most cities, but it can buy shares in VNQ, which owns hundreds of properties across the US. You get real estate exposure, but you own a security — not bricks.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>How REITs Generate Returns</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Tenants pay rent → the REIT collects it, deducts operating costs and debt service, and distributes the remainder as dividends. Price appreciation happens when asset values, occupancy rates, or growth expectations improve. This dual return — <Link href="/learn/dividend" style={{ color: "var(--mint)" }}>income (dividends)</Link> plus potential price appreciation — is what makes REITs attractive. But a high yield alone is not a sufficient reason to buy.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why REITs Are Sensitive to Interest Rates</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              REITs rely heavily on debt to buy and refinance properties. When rates rise, their borrowing costs increase and their dividends look less attractive compared to bonds. This typically compresses REIT valuations. When rates fall, the opposite dynamic tends to apply.
+            </p>
+            <p className="text-sm leading-relaxed">
+              In 2022, aggressive Fed rate hikes caused broad REIT ETFs to fall 25–30%. &ldquo;Real estate is always safe&rdquo; is a myth. Read the <Link href="/learn/bonds" style={{ color: "var(--mint)" }}>bonds guide</Link> and <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>Fed rate guide</Link> together with this one.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>REIT Sectors Have Different Profiles</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Industrial / Logistics</strong> — driven by e-commerce and supply chain demand for warehousing</li>
+              <li><strong style={{ color: "var(--text)" }}>Residential / Apartments</strong> — tied to housing demand, population growth, and rent increases</li>
+              <li><strong style={{ color: "var(--text)" }}>Data Centers</strong> — benefits from cloud and AI growth; exposed to high power and cooling costs</li>
+              <li><strong style={{ color: "var(--text)" }}>Office</strong> — structurally pressured by remote work trends; higher vacancy risk</li>
+              <li><strong style={{ color: "var(--text)" }}>Retail / Healthcare</strong> — retail REITs follow consumer spending; healthcare REITs tied to hospital and senior-living lease cycles</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              A broad REIT ETF diversifies across sectors, but if one sector like office is under stress, the whole ETF still feels the drag.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Key REIT ETFs</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>VNQ</strong> — Vanguard Real Estate ETF. Broad US REIT exposure. One of the most widely referenced REIT ETFs.</li>
+              <li><strong style={{ color: "var(--text)" }}>IYR</strong> — iShares US Real Estate ETF. Slightly different composition from VNQ; includes some real estate services companies.</li>
+              <li><strong style={{ color: "var(--text)" }}>SCHH</strong> — Schwab US REIT ETF. Low-cost alternative with similar broad exposure.</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Compare ETFs the same way described in the <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF Guide</Link>: expense ratio, dividend yield, and benchmark index. For non-US investors, review withholding tax and capital gains treatment in your jurisdiction (<Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>Tax Guide</Link>).
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Role in a Portfolio</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Most portfolio frameworks use REITs as a satellite allocation for income and real estate exposure — not as the core. The core typically remains <Link href="/learn/sp500" style={{ color: "var(--mint)" }}>broad equity ETFs</Link>.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Example (illustrative)</strong> — 5–10% of portfolio in REIT ETFs; remainder in equities, bonds, and cash. As the REIT allocation grows, you are making a directional real estate and rate-sensitivity bet rather than diversifying. See <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>Portfolio Strategy</Link> for rebalancing rules.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Buying for yield alone", "A 20% drop in NAV offsets years of dividend income. Total return is what matters."],
+                ["Treating REITs like physical real estate prices", "REITs are securities that trade every millisecond — not your local housing market."],
+                ["Ignoring rate news", "REIT prices and interest rates are tightly linked. Monitor the Fed."],
+                ["Not checking tax-advantaged account eligibility", "Rules vary by account type and country — verify before placing REITs in a pension or ISA wrapper."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. REITs and real estate ETFs carry interest rate, credit, and market risk. Principal loss is possible. Not a recommendation of any specific security.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/dividend" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">💰</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "배당 투자 가이드" : "Dividend Investing Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "배당수익률·배당귀족·DRIP" : "Yield, Aristocrats & DRIP reinvestment"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/bonds" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">📜</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "채권과 금리 가이드" : "Bonds & Interest Rates Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "금리가 리츠에 영향을 주는 이유" : "Why rate moves hit REITs hard"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

@@ -53,11 +53,13 @@ export function FirstVisitBanner() {
               ? (<>각 기능이 뭔지 모르겠다면 <b style={{ color: "var(--mint)" }}>Investus 사용법</b>를 먼저 읽어보세요.</>)
               : (<>Not sure where to start? Read the <b style={{ color: "var(--mint)" }}>Investus guide</b> first.</>)}
           </p>
-          <p className="text-[12px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>
-            실시간으로 궁금하다면 제목 옆{" "}
-            <HelpCircle className="inline w-3 h-3 mx-0.5" style={{ color: "var(--muted)", opacity: 0.7 }} />
-            <b style={{ color: "var(--text)" }}>를 클릭해보세요!</b>
-          </p>
+          {isKo && (
+            <p className="text-[12px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>
+              실시간으로 궁금하다면 제목 옆{" "}
+              <HelpCircle className="inline w-3 h-3 mx-0.5" style={{ color: "var(--muted)", opacity: 0.7 }} />
+              <b style={{ color: "var(--text)" }}>를 클릭해보세요!</b>
+            </p>
+          )}
           <div className="flex items-center gap-2 mt-2 flex-wrap">
             <Link
               href="/more/guide"

@@ -1,50 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "재무제표 읽기 입문 — 손익·재무상태·현금흐름을 초보도 | 인베스트어스",
-  description:
-    "10-K·10-Q가 무엇인지, 손익계산서·재무상태표·현금흐름표를 숫자 예시로 읽는 법. 완전 초보용 재무제표 가이드.",
-  keywords: ["재무제표", "손익계산서", "현금흐름표", "10-K", "EPS", "FCF", "잉여현금흐름"],
-  alternates: { canonical: "https://www.investus.kr/learn/financial-statements" },
-  openGraph: {
-    title: "재무제표 읽기 | 인베스트어스",
-    description: "매출·이익·부채·현금이 어디서 오는지",
-    url: "https://www.investus.kr/learn/financial-statements",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function FinancialStatementsPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/financial-statements")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(167,139,250,0.15)", color: "#a78bfa" }}>분석</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 23분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            재무제표 읽기
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            앱의 예쁜 차트만 보면 &ldquo;이 회사가 실제로 돈을 버는지&rdquo;를 놓치기 쉽습니다.
-            재무제표는 회사의 <em>성적표·통장·가계부</em>를 세 장으로 나눈 것입니다.
-            회계사가 되지 않아도, 몇 줄만 꾸준히 보면 이야기가 달라집니다.
+            {isKo
+              ? "앱의 예쁜 차트만 보면 \"이 회사가 실제로 돈을 버는지\"를 놓치기 쉽습니다. 재무제표는 회사의 성적표·통장·가계부를 세 장으로 나눈 것입니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>10-K·10-Q가 뭐예요?</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -178,21 +178,163 @@ export default function FinancialStatementsPage() {
             </ol>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 읽을 글</h2>
-            <p className="text-sm leading-relaxed">
-              <Link href="/learn/valuation" style={{ color: "var(--mint)" }}>밸류에이션</Link> ·
-              <Link href="/learn/earnings-season" style={{ color: "var(--mint)" }}>실적 시즌</Link> ·
-              <Link href="/learn/value-investing" style={{ color: "var(--mint)" }}>가치투자</Link> ·
-              <Link href="/learn/13f-guide" style={{ color: "var(--mint)" }}>13F</Link>.
-            </p>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 회계 해석·투자 판단은 본인 책임이며, 세무·투자 자문이 아닙니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Are 10-K and 10-Q?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              US-listed companies file regular reports with the Securities and Exchange Commission (SEC). These are public documents, free to read on the SEC&apos;s EDGAR database or summarized on sites like Yahoo Finance.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>10-K</strong> — Annual report. Detailed financials and business description for the full year.</li>
+              <li><strong style={{ color: "var(--text)" }}>10-Q</strong> — Quarterly report. Updated every three months with interim financials.</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Most investing apps show you summary numbers. Reading the actual filings at least once helps you spot accounting tricks and understand what &ldquo;adjusted earnings&rdquo; means — because the adjustments often tell a different story.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Three Statements — One Analogy Each</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Income Statement", "Report card for a period. Revenue minus costs equals how much profit is left."],
+                ["Balance Sheet", "Snapshot of strength on a single date. Assets = Liabilities + Equity (always)."],
+                ["Cash Flow Statement", "Bank account record. Even a profitable company can run out of cash."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Income Statement — How Much Did They Earn?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Reading from top to bottom: <strong style={{ color: "var(--text)" }}>Revenue</strong> → Cost of Goods Sold → Gross Profit → Operating Expenses → <strong style={{ color: "var(--text)" }}>Operating Income</strong> → Interest &amp; Taxes → <strong style={{ color: "var(--text)" }}>Net Income</strong> → <strong style={{ color: "var(--text)" }}>EPS</strong> (Earnings Per Share).
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Numeric example (hypothetical small company)</strong></p>
+              <p>Revenue $100M − COGS $60M = Gross Profit $40M</p>
+              <p>− SG&amp;A $25M = Operating Income $15M</p>
+              <p>− Interest &amp; Tax $5M = Net Income $10M</p>
+              <p>With 100M shares outstanding: EPS = $10M ÷ 100M = <strong style={{ color: "var(--text)" }}>$0.10</strong>. This EPS is the denominator in the <Link href="/learn/valuation" style={{ color: "var(--mint)" }}>P/E ratio</Link>.</p>
+            </div>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed mt-3">
+              <li>Revenue YoY growth — is the business expanding?</li>
+              <li>Operating margin — what percentage of revenue becomes operating profit? Shrinking margins signal pricing pressure or rising costs.</li>
+              <li>One-time items — strip them out to see the underlying trend. A building sale inflates one quarter&apos;s profit but means nothing for the next.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Balance Sheet — Financial Strength and Debt</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The accounting identity <strong style={{ color: "var(--text)" }}>Assets = Liabilities + Equity</strong> must always hold. Assets include cash, receivables, inventory, property, and intangibles. Liabilities include short-term debt, long-term bonds, and accounts payable. Equity is what remains for shareholders.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              What beginners should check: Is there enough <em>cash and short-term investments</em> to cover near-term obligations? Has total debt grown suddenly? Is the debt-to-equity ratio reasonable compared to industry peers?
+            </p>
+            <p className="text-sm leading-relaxed">
+              Banks and insurance companies carry structurally high leverage — that is their business model. Applying manufacturing benchmarks to them leads to wrong conclusions. Always contextualize with <Link href="/learn/sectors" style={{ color: "var(--mint)" }}>sector</Link> norms.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Cash Flow Statement — The Most Important Number</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Accounting profit and actual cash are not the same. If a company sells on credit, revenue and profit are recognized immediately, but cash only arrives later. The cash flow statement reveals this gap.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed mb-3">
+              <li><strong style={{ color: "var(--text)" }}>Operating Cash Flow (OCF)</strong> — Cash generated from core business operations.</li>
+              <li><strong style={{ color: "var(--text)" }}>Investing Activities</strong> — Capital expenditures (CapEx) for equipment/facilities, or proceeds from asset sales.</li>
+              <li><strong style={{ color: "var(--text)" }}>Financing Activities</strong> — Debt repayment, dividends, share buybacks, or new equity issuance.</li>
+            </ul>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Free Cash Flow (FCF)</strong> ≈ OCF − CapEx. This is the &ldquo;leftover cash after maintaining and growing the business&rdquo; — the fuel for dividends, buybacks, and debt repayment. See the <Link href="/learn/dividend" style={{ color: "var(--mint)" }}>dividend guide</Link>.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Red flag example</strong></p>
+              <p>If net income is consistently positive but OCF is consistently negative, receivables or inventory may be ballooning — or accounting and cash reality are diverging. Buying on reported profit alone is one of the oldest investing traps.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Connection to Earnings Season</h2>
+            <p className="text-sm leading-relaxed">
+              The numbers released each quarter are the core of <Link href="/learn/earnings-season" style={{ color: "var(--mint)" }}>earnings season</Link>. When actual results diverge from analyst consensus or when management&apos;s guidance surprises, stocks can move 10–20% in a day. Understanding which line in the financials drove the surprise is what separates informed investors from headline-chasers.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Getting excited by revenue alone", "Large revenue growth with widening losses and negative OCF is a danger sign. Always check margins and cash flow."],
+                ["Judging from a single quarter", "Seasonality and one-time items distort single quarters. Look at 4–8 quarter trends."],
+                ["Comparing margins across industries", "Software companies naturally have 70%+ gross margins; grocery retailers operate on 3–5%. Cross-sector comparisons are misleading."],
+                ["Ignoring the financials and watching only charts", "Charts are a secondary tool. The fundamentals determine the long-term direction."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Beginner Practice Steps</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Pick one stock you own or follow and pull up its most recent 10-K or 10-Q.</li>
+              <li>Write down annual revenue, operating income, net income, and EPS for the last two years.</li>
+              <li>Check cash, total debt, OCF, and FCF — just one line each.</li>
+              <li>Verify whether the EPS used in <Link href="/learn/valuation" style={{ color: "var(--mint)" }}>P/E ratio</Link> calculations includes one-time items.</li>
+              <li>Write one sentence answering &ldquo;why am I considering buying this?&rdquo; in the <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>buy checklist</Link>.</li>
+            </ol>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Accounting interpretation and investment decisions are your own responsibility. This is not tax or investment advice.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/valuation" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🔢</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "PER·PBR 밸류에이션 가이드" : "P/E, P/B & Valuation Metrics"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "비싸거나 싼지 판단하는 법" : "Judging if a stock is cheap or expensive"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/earnings-season" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">📢</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "실적 시즌 읽는 법" : "How to Read Earnings Season"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "EPS·컨센서스·가이던스" : "EPS, consensus & guidance"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

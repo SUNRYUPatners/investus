@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ExternalLink, RefreshCw } from "lucide-react";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 const PROFILE_URL = "https://x.com/hnryu_cio";
 const SYNDICATION_URL =
@@ -46,6 +47,8 @@ const MOCK_TWEETS = [
 ];
 
 function MockFeed() {
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   return (
     <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "var(--border)" }}>
       {/* Header */}
@@ -67,7 +70,7 @@ function MockFeed() {
             className="text-[9px] px-1.5 py-0.5 rounded-full font-medium"
             style={{ background: "rgba(29,155,240,0.15)", color: "#1d9bf0" }}
           >
-            큐레이션
+            {isKo ? "큐레이션" : "Curated"}
           </span>
         </div>
         <a
@@ -77,7 +80,7 @@ function MockFeed() {
           className="flex items-center gap-1 text-[10px]"
           style={{ color: "var(--mint)" }}
         >
-          X에서 보기 <ExternalLink className="w-3 h-3" />
+          {isKo ? "X에서 보기" : "View on X"} <ExternalLink className="w-3 h-3" />
         </a>
       </div>
 
@@ -118,7 +121,7 @@ function MockFeed() {
         className="flex items-center justify-center gap-2 py-3.5 text-xs font-semibold border-t active:opacity-70 transition-opacity"
         style={{ background: "var(--card)", borderColor: "var(--border)", color: "#1d9bf0" }}
       >
-        X에서 전체 피드 보기 <ExternalLink className="w-3.5 h-3.5" />
+        {isKo ? "X에서 전체 피드 보기" : "View full feed on X"} <ExternalLink className="w-3.5 h-3.5" />
       </a>
     </div>
   );
@@ -126,6 +129,8 @@ function MockFeed() {
 
 export function XTimeline() {
   const [mode, setMode] = useState<"embed" | "fallback">("embed");
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
 
   if (mode === "fallback") return <MockFeed />;
 
@@ -136,7 +141,7 @@ export function XTimeline() {
         src={SYNDICATION_URL}
         className="w-full"
         style={{ height: 560, border: "none", background: "transparent", colorScheme: "dark" }}
-        title="X 피드 @hnryu_cio"
+        title="X feed @hnryu_cio"
         sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
         onError={() => setMode("fallback")}
       />
@@ -146,7 +151,7 @@ export function XTimeline() {
         style={{ background: "var(--card)", borderColor: "var(--border)" }}
       >
         <p className="text-[10px]" style={{ color: "var(--muted)" }}>
-          피드가 보이지 않으면 X 로그인 후 새로고침
+          {isKo ? "피드가 보이지 않으면 X 로그인 후 새로고침" : "If feed doesn't load, log in to X then refresh"}
         </p>
         <div className="flex items-center gap-3">
           <button
@@ -154,7 +159,7 @@ export function XTimeline() {
             className="flex items-center gap-1 text-[10px]"
             style={{ color: "var(--muted)" }}
           >
-            <RefreshCw className="w-3 h-3" /> 큐레이션
+            <RefreshCw className="w-3 h-3" /> {isKo ? "큐레이션" : "Curated"}
           </button>
           <a
             href={PROFILE_URL}

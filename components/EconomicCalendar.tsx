@@ -197,10 +197,10 @@ function DetailPanel({ dateStr, data, locale }: { dateStr: string; data: Calenda
         <span className="text-xs font-bold" style={{ color: "var(--text)" }}>{dateLabel}</span>
         <div className="ml-auto flex gap-2">
           {allEco.length > 0 && (
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>지표 {allEco.length}</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>{locale === "ko" ? `지표 ${allEco.length}` : `${allEco.length} events`}</span>
           )}
           {earnings.length > 0 && (
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>실적 {earnings.length}</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>{locale === "ko" ? `실적 ${earnings.length}` : `${earnings.length} earnings`}</span>
           )}
         </div>
       </div>
@@ -369,7 +369,7 @@ export function EconomicCalendar() {
           <BarChart3 className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} />
           <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
             {calMarket === "kr"
-              ? "한국 경제 캘린더"
+              ? (locale === "ko" ? "한국 경제 캘린더" : "Korea Economic Calendar")
               : locale === "ko" ? "경제 캘린더" : "Economic Calendar"}
           </h2>
         </div>

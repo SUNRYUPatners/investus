@@ -1,49 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "비트코인·암호화폐 — 완전 초보 가이드 (ETF·리스크·비중) | 인베스트어스",
-  description:
-    "암호화폐가 무엇인지, 비트코인·이더리움, 미국 현물 BTC ETF(IBIT·FBTC), 관련 주식, 변동성·규제·포트폴리오 비중을 주식 초보도 이해할 수 있게 설명합니다.",
-  keywords: ["비트코인", "암호화폐", "IBIT", "FBTC", "비트코인 ETF", "이더리움", "크립토"],
-  alternates: { canonical: "https://www.investus.kr/learn/crypto" },
-  openGraph: {
-    title: "비트코인·암호화폐 초보 가이드 | 인베스트어스",
-    description: "BTC·ETH, 현물 ETF, 변동성·비중을 완전 초보 눈높이로",
-    url: "https://www.investus.kr/learn/crypto",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function CryptoPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/crypto")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(249,115,22,0.15)", color: "#f97316" }}>자산</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            비트코인·암호화폐 — 완전 초보 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            암호화폐는 주식과 다른 리스크 프로필입니다. 현물 ETF로 접근은 쉬워졌지만,
-            하루에도 크게 출렁일 수 있고, &ldquo;반드시 오른다&rdquo;는 보장이 없습니다. 용어부터 비중까지 차근차근 갑니다.
+            {isKo
+              ? "암호화폐는 주식과 다른 리스크 프로필입니다. 현물 ETF로 접근은 쉬워졌지만, 하루에도 크게 출렁일 수 있고, \"반드시 오른다\"는 보장이 없습니다. 용어부터 비중까지 차근차근 갑니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>암호화폐란? (주식과 한 줄 비교)</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -159,7 +160,7 @@ export default function CryptoPage() {
               {[
                 ["생활비·대출로 매수", "변동성이 일상을 무너뜨립니다. 먼저 비상금."],
                 ["단톡·유튜브 FOMO 추격", "이미 급등한 뒤일 수 있습니다. 24시간 보류 + 체크리스트."],
-                ["레버리지·선물로 ‘단타 만회’", "손실을 키우는 전형적 패턴입니다."],
+                ["레버리지·선물로 '단타 만회'", "손실을 키우는 전형적 패턴입니다."],
                 ["BTC ETF와 채굴주·COIN을 동일시", "추가 사업·재무 리스크가 있습니다."],
                 ["세금·신고를 무시", "국가·상품별로 다릅니다. 확실치 않으면 전문가·공식 안내를 확인하세요."],
               ].map(([t, d]) => (
@@ -197,20 +198,140 @@ export default function CryptoPage() {
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 암호화폐는 고위험 자산이며 투자·세무·법률 자문이 아닙니다. 원금 전액 손실 가능성을 전제로 하세요.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is Cryptocurrency?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Cryptocurrency is a digital asset that lives on a blockchain — a decentralized ledger verified by thousands of computers worldwide. Unlike the dollar or won, no central bank issues or controls it. Each coin operates by its own consensus rules, which vary widely.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Stock</strong> — ownership in a company. Revenue, earnings, and balance sheets give you something to analyze.</p>
+              <p><strong style={{ color: "var(--text)" }}>Crypto</strong> — no standard earnings metric. Price is driven heavily by supply/demand dynamics, regulatory news, macro liquidity, and market sentiment.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              This makes crypto especially vulnerable to <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>FOMO and fear</Link>. Always run through a <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>pre-buy checklist</Link> before entering a position.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Bitcoin (BTC) vs. Ethereum (ETH)</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Bitcoin (BTC)</strong> — the original, most recognized cryptocurrency. Often described as &ldquo;digital gold&rdquo; due to its fixed supply cap of 21 million coins. Its scarcity and store-of-value narrative drive much of the long-term thesis.</li>
+              <li><strong style={{ color: "var(--text)" }}>Ethereum (ETH)</strong> — a programmable blockchain platform. Smart contracts, DeFi apps, and NFTs run on Ethereum. It is fundamentally different from Bitcoin — ETH is more like an infrastructure bet than a store of value.</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Other altcoins and memecoins carry greater liquidity, information, and fraud risks. For beginners, understanding BTC and deciding on your total crypto allocation is more than enough to start.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Moves the Price?</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Spot ETF flows — large institutional money entering or exiting (e.g., BlackRock&apos;s IBIT)</li>
+              <li>Regulatory developments in the US, EU, and Asia</li>
+              <li>Macro conditions: dollar strength, interest rates (<Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>Rate Guide</Link>)</li>
+              <li>Bitcoin halvings — mining reward cuts every ~4 years. Past cycles do not guarantee future ones.</li>
+              <li>Market sentiment, leverage cascades, and exchange-level events</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>US Spot Bitcoin ETFs</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Since early 2024, US-listed <strong style={{ color: "var(--text)" }}>spot Bitcoin ETFs</strong> allow investors to gain BTC exposure through a standard brokerage account — no wallets or private keys required. The ETF holds actual Bitcoin in custody.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Key tickers:</strong> IBIT (BlackRock), FBTC (Fidelity), GBTC (Grayscale, converted from trust).</p>
+              <p><strong style={{ color: "var(--text)" }}>Advantage:</strong> familiar brokerage UI, no self-custody risk.</p>
+              <p><strong style={{ color: "var(--text)" }}>Disadvantage:</strong> expense ratios apply; if BTC falls, so does the ETF. &ldquo;ETF&rdquo; does not mean &ldquo;safe.&rdquo;</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              For ETF fundamentals see the <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF Guide</Link>. Tax treatment varies by jurisdiction — consult your <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>tax guide</Link> or a professional.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Crypto-Adjacent Stocks — Not the Same as BTC</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>COIN (Coinbase)</strong> — exchange business. Revenue tied to trading volumes; sensitive to regulation and market activity.</li>
+              <li><strong style={{ color: "var(--text)" }}>MSTR (MicroStrategy)</strong> — holds large BTC reserves on its balance sheet. Moves closely with BTC but adds leverage, debt, and equity structure risks on top.</li>
+              <li><strong style={{ color: "var(--text)" }}>MARA / RIOT</strong> — Bitcoin miners. Exposed to power costs, hardware cycles, and hashrate competition in addition to BTC price.</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Treating these as equivalent to buying BTC directly is a common mistake. They can move further than BTC in either direction.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Volatility in Real Numbers</h2>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p>If you invest $10,000 and put $5,000 (50%) in crypto, a −40% drop in crypto means −$2,000 — or −20% of your total portfolio.</p>
+              <p>If you allocate only $500 (5%), the same −40% crypto drop costs you −$200, or just −2% of your portfolio. <strong style={{ color: "var(--text)" }}>Position size is survival.</strong></p>
+              <p>Compare to an all-index-ETF portfolio: <Link href="/learn/sp500" style={{ color: "var(--mint)" }}>S&P 500</Link> · <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>Diversification</Link>.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Key Risks for Beginners</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Daily swings of −10% to −20% are not unusual — never invest living expenses or emergency funds</li>
+              <li>Regulatory crackdowns, exchange hacks or failures, stablecoin de-pegs</li>
+              <li>Leveraged crypto ETFs and futures — amplified losses and volatility decay make them unsuitable for long-term holding</li>
+              <li>Scams, phishing, fake wallet addresses — the irreversibility of on-chain transactions means losses are often permanent</li>
+              <li>Varying tax treatment depending on asset type and country — verify with official sources</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>If You Want to Include Crypto in Your Portfolio</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Most asset allocation frameworks treat crypto as a small satellite position — typically 1–5% of the total portfolio for those who choose to include it. The core remains <Link href="/learn/etf" style={{ color: "var(--mint)" }}>low-cost equity ETFs</Link>, with <Link href="/learn/bonds" style={{ color: "var(--mint)" }}>bonds</Link> or cash as needed.
+            </p>
+            <p className="text-sm leading-relaxed">
+              &ldquo;Go all-in for massive upside&rdquo; is one of the <Link href="/learn/myths" style={{ color: "var(--mint)" }}>classic investing myths</Link> — one that <Link href="/learn/compound" style={{ color: "var(--mint)" }}>destroys compounding</Link>. If you confuse crypto with physical commodities like gold, see the <Link href="/learn/commodities" style={{ color: "var(--mint)" }}>Commodities Guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Investing money you need", "Crypto volatility can wipe out living expenses or emergency funds fast. Secure your financial floor first."],
+                ["Chasing pumps from social media", "By the time it trends, the move is often already over. Apply the 24-hour rule and your checklist."],
+                ["Using leverage to recover losses", "Doubling down with futures or leveraged ETFs is the most common way to turn a bad loss into a catastrophic one."],
+                ["Equating BTC ETFs with miners/COIN", "COIN, MSTR, and miners carry their own business and balance sheet risks beyond BTC price."],
+                ["Ignoring taxes", "Crypto tax rules differ by country, asset type, and holding period. Verify with official guidance."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Cryptocurrency is a high-risk asset class. Total principal loss is possible. Not investment, tax, or legal advice.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/portfolio-strategy" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">💼</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>포트폴리오 분산·리밸런싱</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>위성 비중 잡기</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "포트폴리오 분산·리밸런싱" : "Portfolio Diversification & Rebalancing"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "위성 비중 잡기" : "How to size satellite allocations"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -219,8 +340,8 @@ export default function CryptoPage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">✅</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>매수 전 체크리스트</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>사기 전에 10가지</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "매수 전 체크리스트" : "10-Point Pre-Buy Checklist"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "사기 전에 10가지" : "10 questions before pressing buy"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

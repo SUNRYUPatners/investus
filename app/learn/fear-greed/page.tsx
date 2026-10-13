@@ -1,23 +1,17 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "공포탐욕지수 완전 가이드 — 시장 심리로 투자 타이밍 잡기 | 인베스트어스",
-  description: "CNN의 공포&탐욕 지수(Fear & Greed Index)가 무엇인지, 7가지 세부 지표가 어떻게 계산되는지, 실전 투자에서 어떻게 활용하는지 완전히 설명합니다.",
-  keywords: ["공포탐욕지수", "Fear Greed Index", "CNN 공포탐욕", "투자 타이밍", "시장 심리", "공포지수"],
-  alternates: { canonical: "https://www.investus.kr/learn/fear-greed" },
-  openGraph: {
-    title: "공포탐욕지수 완전 가이드 | 인베스트어스",
-    description: "공포&탐욕 지수 계산 방법, 실전 투자 활용법 — 시장 심리로 매수·매도 타이밍 잡기",
-    url: "https://www.investus.kr/learn/fear-greed",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function FearGreedPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/fear-greed")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
@@ -25,29 +19,32 @@ export default function FearGreedPage() {
 
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
 
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(245,158,11,0.15)", color: "#f59e0b" }}>심리</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 14분</span>
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            공포탐욕지수 완전 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            &ldquo;남들이 공포에 떨 때 사고, 남들이 탐욕을 부릴 때 팔아라.&rdquo;
-            워런 버핏의 이 말을 실천하려면 지금 시장이 공포인지 탐욕인지 알아야 합니다.
-            공포&탐욕 지수는 바로 그 답을 숫자로 보여줍니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
-
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
               공포&탐욕 지수란 무엇인가
@@ -261,7 +258,7 @@ export default function FearGreedPage() {
             </h2>
             <div className="flex flex-col gap-3">
               {[
-                ["지수가 낮으면 내일 오른다", "극단적 공포는 ‘바닥 후보’이지 익일 반등 신호가 아닙니다. 공포가 더 깊어질 수 있습니다."],
+                ["지수가 낮으면 내일 오른다", "극단적 공포는 '바닥 후보'이지 익일 반등 신호가 아닙니다. 공포가 더 깊어질 수 있습니다."],
                 ["지수가 높으면 당장 팔아야 한다", "탐욕 구간에서도 강세가 수개월 이어질 수 있습니다. 전량 매도보다 비중·레버리지 점검이 먼저입니다."],
                 ["이 지수만 보면 된다", "실적, 금리, 환율, 개별 기업 펀더멘털을 대체하지 않습니다. 보조 온도계입니다."],
                 ["한국 증시에도 그대로 적용된다", "CNN 지수는 미국 주식·옵션·채권 시장 데이터 기반입니다. 코스피 심리와 1:1로 같지 않습니다."],
@@ -290,12 +287,198 @@ export default function FearGreedPage() {
             ⚠️ 공포&탐욕 지수는 참고 지표일 뿐, 특정 매수·매도 시점을 보장하지 않습니다.
             모든 투자는 원금 손실의 위험이 있으며, 투자 결정의 최종 책임은 투자자 본인에게 있습니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is the Fear &amp; Greed Index?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              CNN Business&apos;s Fear &amp; Greed Index measures the emotional state of US equity market participants on a scale of 0 to 100. A reading near 0 reflects <strong style={{ color: "var(--text)" }}>Extreme Fear</strong>; a reading near 100 reflects <strong style={{ color: "var(--text)" }}>Extreme Greed</strong>. It is updated daily and is one of the most widely referenced sentiment gauges in retail investing.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              The index does not track a single data point. It aggregates 7 market indicators, each normalized to a 0–100 scale based on their deviation from a 52-week average, and averages them with equal weight.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>Reading the Scale</p>
+              <div className="flex flex-col gap-2">
+                {[
+                  { range: "0 – 24", label: "Extreme Fear", color: "#10b981", desc: "Panic — historically a buying opportunity zone" },
+                  { range: "25 – 44", label: "Fear", color: "#7ed957", desc: "Anxiety dominant — potential oversold conditions" },
+                  { range: "45 – 55", label: "Neutral", color: "#ffd166", desc: "Balanced sentiment" },
+                  { range: "56 – 74", label: "Greed", color: "#ff8c55", desc: "Optimism — watch for overheating" },
+                  { range: "75 – 100", label: "Extreme Greed", color: "#ef4444", desc: "Bubble risk — consider raising cash buffer" },
+                ].map((z) => (
+                  <div key={z.range} className="flex gap-3 items-start">
+                    <span className="text-[10px] font-mono font-bold flex-shrink-0 mt-0.5" style={{ color: z.color, minWidth: 52 }}>
+                      {z.range}
+                    </span>
+                    <div>
+                      <p className="text-[12px] font-bold" style={{ color: z.color }}>{z.label}</p>
+                      <p className="text-[11px]">{z.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>The 7 Component Indicators</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Each of these indicators is scaled 0–100 relative to its 52-week range, then averaged equally into the final score.
+            </p>
+            <div className="flex flex-col gap-3">
+              {[
+                {
+                  num: "1",
+                  title: "Stock Price Momentum",
+                  desc: "How far the S&P 500 is above or below its 125-day moving average. Trading above = greed signal; below = fear.",
+                  color: "#10b981",
+                },
+                {
+                  num: "2",
+                  title: "Stock Price Strength",
+                  desc: "Ratio of NYSE 52-week highs to 52-week lows. More new highs = greed; more new lows = fear.",
+                  color: "#60a5fa",
+                },
+                {
+                  num: "3",
+                  title: "Stock Price Breadth",
+                  desc: "Volume in advancing stocks vs. declining stocks (McClellan Volume Summation Index). Broad participation = greed.",
+                  color: "#c084fc",
+                },
+                {
+                  num: "4",
+                  title: "Put/Call Options Ratio",
+                  desc: "Heavy put buying vs. call buying signals fear; more calls than puts signals greed.",
+                  color: "#f59e0b",
+                },
+                {
+                  num: "5",
+                  title: "Junk Bond Demand",
+                  desc: "The yield spread between junk bonds and investment-grade bonds. Narrow spread = risk appetite (greed); wide spread = risk aversion (fear).",
+                  color: "#fb923c",
+                },
+                {
+                  num: "6",
+                  title: "Market Volatility (VIX)",
+                  desc: "The CBOE Volatility Index. High VIX = fear; low VIX = complacency / greed.",
+                  color: "#ef4444",
+                },
+                {
+                  num: "7",
+                  title: "Safe Haven Demand",
+                  desc: "Capital flows into Treasuries relative to equities. Heavy bond buying signals fear; equity preference signals greed.",
+                  color: "#a3a3a3",
+                },
+              ].map((item) => (
+                <div key={item.num} className="rounded-xl p-3 border"
+                  style={{ background: "var(--card)", borderColor: "var(--border)", borderLeft: `3px solid ${item.color}` }}>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded"
+                      style={{ background: `${item.color}20`, color: item.color }}>
+                      {item.num}
+                    </span>
+                    <p className="text-[12px] font-bold" style={{ color: "var(--text)" }}>{item.title}</p>
+                  </div>
+                  <p className="text-[11px] leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>How to Use It in Practice</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The Fear &amp; Greed Index is <strong style={{ color: "var(--text)" }}>not a short-term timing tool</strong>. An Extreme Fear reading does not guarantee a next-day bounce — markets can keep falling for weeks. The index&apos;s real value is as a sentiment backdrop, not a buy/sell trigger.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              Think of it as a context overlay: when the index recovers from below 30, the probability of being near a bottom is historically elevated. When it has been above 80 for an extended period, a correction is statistically more likely — though &ldquo;more likely&rdquo; can still mean months away.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-3" style={{ color: "var(--text)" }}>Strategy Guide by Zone</p>
+              <div className="flex flex-col gap-3">
+                {[
+                  { situation: "0–24 (Extreme Fear)", action: "Consider staged buying — a potential chance to buy quality assets cheaply. Split into 2–4 tranches rather than investing everything at once.", color: "#10b981" },
+                  { situation: "25–44 (Fear)", action: "Build watchlists and prepare — but don&apos;t rush. The market can fall further.", color: "#7ed957" },
+                  { situation: "45–55 (Neutral)", action: "Portfolio review — no major directional shift; maintain existing plan.", color: "#ffd166" },
+                  { situation: "56–74 (Greed)", action: "Pause new entries — markets have already run. Consider trimming some gains.", color: "#ff8c55" },
+                  { situation: "75–100 (Extreme Greed)", action: "Raise cash buffer, reduce leverage. This is where Buffett historically accumulated cash.", color: "#ef4444" },
+                ].map((s) => (
+                  <div key={s.situation} className="rounded-xl p-3 border"
+                    style={{ background: "rgba(0,0,0,0.2)", borderColor: "rgba(255,255,255,0.06)", borderLeft: `2px solid ${s.color}` }}>
+                    <p className="text-[11px] font-bold mb-1" style={{ color: s.color }}>{s.situation}</p>
+                    <p className="text-[12px] leading-relaxed">{s.action}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Historical Episodes of Extreme Fear</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Looking back at periods when the index dropped below 10, each turned out to be a significant buying opportunity in hindsight. The challenge — as always — is acting when the fear feels most justified.
+            </p>
+            <div className="flex flex-col gap-3">
+              {[
+                { date: "March 2020 (COVID shock)", fg: "Score 2–5", result: "S&P 500 fell −34%, then rallied +75% within 12 months", color: "#10b981" },
+                { date: "October 2022 (rate hike shock)", fg: "Score 5–10", result: "S&P 500 gained +30%+ over the following 14 months", color: "#60a5fa" },
+                { date: "December 2018 (trade war fears)", fg: "Score 8–12", result: "S&P 500 gained +30%+ over the following 12 months", color: "#c084fc" },
+              ].map((s) => (
+                <div key={s.date} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <div className="flex items-center gap-2 mb-1">
+                    <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{s.date}</p>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded font-bold"
+                      style={{ background: "rgba(239,68,68,0.15)", color: "#ef4444" }}>
+                      {s.fg}
+                    </span>
+                  </div>
+                  <p className="text-[12px] leading-relaxed" style={{ color: s.color }}>{s.result}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              These outcomes are only clear in hindsight. At the time, each felt like the market might fall further. That is why staged buying — rather than all-in or all-out — is the practical approach.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>4 Common Misunderstandings</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Low score = market bounces tomorrow", "Extreme Fear marks a candidate bottom, not a guaranteed next-day reversal. Fear can deepen further."],
+                ["High score = sell everything immediately", "Greed can persist for months. Check position sizing and leverage first; wholesale selling is rarely the right answer."],
+                ["This index replaces other analysis", "It does not substitute for earnings data, interest rates, currency, or individual fundamentals. It is a supplementary thermometer."],
+                ["It applies equally to KOSPI", "The CNN index is built on US equity, options, and bond market data. It does not map 1:1 to Korean market sentiment."],
+              ].map(([q, a]) => (
+                <div key={q} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{q}</p>
+                  <p className="text-[12px] leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Track It on Investus</h2>
+            <p className="text-sm leading-relaxed">
+              The Fear &amp; Greed Index is displayed in real time on the Investus <Link href="/" style={{ color: "var(--mint)" }}>home screen</Link>. Check the current reading alongside yesterday&apos;s, last week&apos;s, and last month&apos;s values to identify whether sentiment is improving or deteriorating — the direction of change often matters more than the absolute level.
+            </p>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ The Fear &amp; Greed Index is a reference indicator only. It does not guarantee any specific buy or sell timing. All investments carry risk of principal loss; investment decisions are the investor&apos;s sole responsibility.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/buffett-indicator" style={{ textDecoration: "none" }}>
@@ -303,8 +486,8 @@ export default function FearGreedPage() {
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🏦</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>버핏지수 완전 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>시장 고평가 여부 판단하기</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "버핏지수 완전 가이드" : "Complete Buffett Indicator Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "시장 고평가 여부 판단하기" : "Reading market over/undervaluation"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -314,8 +497,8 @@ export default function FearGreedPage() {
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">💼</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>포트폴리오 분산 투자 전략</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>흔들리지 않는 포트폴리오 구성법</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "포트폴리오 분산 투자 전략" : "Portfolio Diversification & Rebalancing"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "흔들리지 않는 포트폴리오 구성법" : "Building a portfolio that holds under pressure"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

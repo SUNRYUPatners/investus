@@ -1,26 +1,15 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
-export const metadata: Metadata = {
-  title: "미국 주식 11개 섹터 가이드 — 경기 국면별 읽는 법 | 인베스트어스",
-  description:
-    "GICS 11개 섹터(기술·헬스케어·금융·에너지 등)가 무엇인지, 금리·경기와 어떻게 연결되는지, 숫자로 보는 쏠림 예시와 초보 실수를 정리합니다.",
-  keywords: ["미국 주식 섹터", "GICS", "섹터 로테이션", "기술주", "헬스케어", "금융주", "분산투자"],
-  alternates: { canonical: "https://www.investus.kr/learn/sectors" },
-  openGraph: {
-    title: "미국 주식 섹터 가이드 | 인베스트어스",
-    description: "GICS 11섹터와 포트폴리오 쏠림을 피하는 법 — 완전 초보용",
-    url: "https://www.investus.kr/learn/sectors",
-    type: "article",
-  },
-};
-
-const SECTORS = [
+const SECTORS_KO = [
   { name: "정보기술 (IT)", when: "금리 하락·성장 기대. AI·클라우드 사이클에 민감.", ex: "NVDA, AAPL, MSFT", note: "나스닥100·QQQ 비중이 여기로 몰립니다." },
-  { name: "커뮤니케이션", when: "광고·구독 경기. 빅테크 플랫폼과 겹칩니다.", ex: "GOOGL, META, NFLX", note: "IT와 함께 움직이면 ‘기술 집중’이 더 커집니다." },
+  { name: "커뮤니케이션", when: "광고·구독 경기. 빅테크 플랫폼과 겹칩니다.", ex: "GOOGL, META, NFLX", note: "IT와 함께 움직이면 '기술 집중'이 더 커집니다." },
   { name: "임의소비재", when: "고용·소비 심리. 고금리에 부담.", ex: "AMZN, TSLA, NKE", note: "성장주와 소비가 한 포트폴리오에 겹치기 쉽습니다." },
   { name: "필수소비재", when: "불황에도 수요가 상대적으로 안정.", ex: "WMT, COST, PG", note: "배당·방어 성향. 성장 속도는 느린 편." },
   { name: "헬스케어", when: "실적 방어 + 신약·보험 이슈.", ex: "LLY, UNH, JNJ", note: "개별 파이프라인 리스크는 큽니다." },
@@ -32,33 +21,57 @@ const SECTORS = [
   { name: "부동산", when: "금리·공실·리츠 분배.", ex: "AMT, PLD", note: "세금·분배 성격이 일반 배당과 다를 수 있습니다." },
 ];
 
+const SECTORS_EN = [
+  { name: "Information Technology", when: "Rate cuts and high growth expectations. Highly sensitive to AI/cloud cycles.", ex: "NVDA, AAPL, MSFT", note: "Where most of the Nasdaq 100 / QQQ weighting lives." },
+  { name: "Communication Services", when: "Ad market and subscription economy. Overlaps with big-tech platforms.", ex: "GOOGL, META, NFLX", note: "Combined with IT, can create heavy 'tech concentration.'" },
+  { name: "Consumer Discretionary", when: "Employment and consumer confidence. Pressured by high rates.", ex: "AMZN, TSLA, NKE", note: "Growth stocks and consumer names often land here together." },
+  { name: "Consumer Staples", when: "Relatively stable demand even in recessions.", ex: "WMT, COST, PG", note: "Dividend and defensive character. Slower growth." },
+  { name: "Health Care", when: "Defensive earnings plus drug-pipeline and insurance catalysts.", ex: "LLY, UNH, JNJ", note: "Individual pipeline risk can be large despite sector stability." },
+  { name: "Financials", when: "Interest rates, net interest margins, and economic recovery.", ex: "JPM, BAC, GS", note: "Barely represented in the Nasdaq 100; well-represented in the S&P 500." },
+  { name: "Energy", when: "Oil prices and geopolitical risk. Natural inflation hedge.", ex: "XOM, CVX", note: "The opposite end of the risk spectrum from tech." },
+  { name: "Industrials", when: "Capital expenditure, infrastructure, aerospace & defense.", ex: "CAT, GE, RTX", note: "Often gains attention in late-cycle expansions." },
+  { name: "Materials", when: "Raw materials and construction demand.", ex: "LIN, SHW", note: "ETF exposure is often cleaner for beginners than individual names." },
+  { name: "Utilities", when: "Defensive + dividend-focused, but rate-sensitive.", ex: "NEE", note: "High-rate environments create pressure on utility valuations." },
+  { name: "Real Estate (REITs)", when: "Rate sensitivity, vacancy, and REIT distributions.", ex: "AMT, PLD", note: "Distribution tax treatment differs from ordinary dividends." },
+];
+
 export default function SectorsPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/sectors")!;
+  const sectors = isKo ? SECTORS_KO : SECTORS_EN;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(251,146,60,0.15)", color: "#fb923c" }}>섹터</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 24분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            미국 주식 11개 섹터 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            종목 이름만 보고 &ldquo;분산됐다&rdquo;고 느끼기 쉽습니다.
-            Apple·Microsoft·NVIDIA·Amazon·Google을 동시에 들고 있으면 기업 수는 다섯이지만,
-            실질적으로는 성장·기술 한 바구니에 가깝습니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>섹터·GICS란?</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -76,7 +89,7 @@ export default function SectorsPage() {
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>11개 섹터 한눈에</h2>
             <div className="flex flex-col gap-2">
-              {SECTORS.map((s) => (
+              {sectors.map((s) => (
                 <div key={s.name} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                   <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{s.name}</p>
                   <p className="text-[12px] leading-relaxed mb-1">{s.when}</p>
@@ -132,17 +145,11 @@ export default function SectorsPage() {
 
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>금리 한 줄로 다시 보기</h2>
-            <p className="text-sm leading-relaxed mb-3">
-              금리가 오르면 성장주(먼 미래 이익) 배수가 압박받고, 은행 순이자마진·달러 강세 이야기가 붙습니다.
-              금리가 내리면 그 반대 서사가 나옵니다. 다만 실제 장에서는 실적·지정학이 서사를 덮습니다.
-            </p>
             <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
               <p><strong style={{ color: "var(--text)" }}>금리 ↑ 때 자주 거론</strong> — 금융(순이자), 에너지(인플레·유가), 가치 성향. 성장 IT는 압박 서사.</p>
               <p><strong style={{ color: "var(--text)" }}>금리 ↓ 때 자주 거론</strong> — IT·커뮤니케이션·장기 성장. 다만 경기 침체면 실적이 먼저 무너질 수도 있습니다.</p>
             </div>
             <p className="text-sm leading-relaxed mt-3">
-              Investus 홈의 금리·지수·섹터와 인사이트 리포트를 같이 보면,
-              &ldquo;오늘 기술만 빠졌다&rdquo;가 금리 이슈인지 개별 실적인지 구분하기 쉽습니다.
               배경은 <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>금리·연준 가이드</Link>를 보세요.
             </p>
           </section>
@@ -178,34 +185,131 @@ export default function SectorsPage() {
             </div>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 할 일</h2>
-            <ol className="list-decimal pl-5 text-sm leading-relaxed space-y-2">
-              <li>보유 종목을 IT / 그 외로만 나눠 비중(%)을 적어 보세요.</li>
-              <li>IT+커뮤니케이션이 70%를 넘으면 코어 지수 비중을 늘릴지 검토하세요.</li>
-              <li>위성은 전체의 10~20% 이내로 규칙을 정하세요.</li>
-              <li><Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>매수 체크리스트</Link>에 &ldquo;섹터 합계&rdquo; 한 줄을 추가하세요.</li>
-            </ol>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px] leading-relaxed"
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 특정 섹터·종목 투자 권유가 아니며 원금 손실이 가능합니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Are Sectors and GICS?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              A <strong style={{ color: "var(--text)" }}>sector</strong> is a grouping of companies with similar business models. S&P Global and MSCI jointly maintain the <strong style={{ color: "var(--text)" }}>GICS</strong> (Global Industry Classification Standard), which divides all publicly traded companies into 11 sectors and dozens of sub-industries.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Why learn this? Indices, ETFs, analyst reports, and the Investus home screen all use the same GICS language. Understanding sectors turns the sector heatmap from a color display into actionable context. Use sectors as a <strong style={{ color: "var(--text)" }}>concentration checklist</strong> — not as a market-timing tool.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>All 11 Sectors at a Glance</h2>
+            <div className="flex flex-col gap-2">
+              {sectors.map((s) => (
+                <div key={s.name} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{s.name}</p>
+                  <p className="text-[12px] leading-relaxed mb-1">{s.when}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>Examples: {s.ex} · {s.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-[11px] mt-2 leading-relaxed">
+              Ticker examples are for education only and are not recommendations. Index compositions change over time.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Concentration by the Numbers</h2>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>Example (conceptual)</p>
+              <p>Portfolio of $10,000: AAPL $3,000 · MSFT $2,000 · NVDA $2,000 · QQQ $2,000 · cash $1,000.</p>
+              <p>Five &ldquo;different&rdquo; positions, but IT + Communication + Consumer Discretionary easily exceeds 70–80% of total.</p>
+              <p>That same $10,000 in VOO (S&P 500 ETF) gives you all 11 sectors weighted by market cap — automatic diversification with one trade.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              This is why the advice &ldquo;start with a broad index core&rdquo; exists before you design your own allocation. See <Link href="/learn/sp500" style={{ color: "var(--mint)" }}>S&P 500</Link>, <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF Guide</Link>, and <Link href="/learn/nasdaq" style={{ color: "var(--mint)" }}>Nasdaq Guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>The Most Common Beginner Concentration</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Retail investors worldwide tend to overweight mega-cap technology and semiconductors because those are the companies with the most media coverage. Adding QQQ on top of existing Apple, Microsoft, and Nvidia positions pushes IT + Communication + Consumer Discretionary well above 80% of total portfolio value.
+            </p>
+            <p className="text-sm leading-relaxed">
+              If you already own individual tech names, buying another tech-heavy ETF is not diversification — it is amplification. Run the math: add up every position&apos;s sector label and calculate the percentage, not just the count.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why You Don&apos;t Need to Chase Sector Rotation</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Institutional research regularly publishes &ldquo;now is the time for financials&rdquo; or &ldquo;rotate into energy.&rdquo; For individual investors, timing sector rotations correctly while accounting for trading costs, taxes, and execution lag is extremely difficult — most academic evidence suggests it erodes returns rather than adding them.
+            </p>
+            <p className="text-sm leading-relaxed">
+              A better approach for beginners: hold a broad-market core index, then add one or two sectors you have genuine conviction in — capping them at a small percentage of total portfolio. See <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>Portfolio Strategy</Link> for rebalancing schedules.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Interest Rates and Sector Behavior</h2>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Rates rising — common narratives:</strong> Financials (net interest margin), Energy (inflation/oil), value-oriented sectors. Growth IT faces multiple compression.</p>
+              <p><strong style={{ color: "var(--text)" }}>Rates falling — common narratives:</strong> IT, Communication, long-duration growth. But if rates are falling because of recession risk, earnings may deteriorate faster than valuations re-rate.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              For the macro context behind these rate moves, see the <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>CPI, Fed &amp; Interest Rates Guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Core Index ETF vs. Sector ETF</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              A <strong style={{ color: "var(--text)" }}>core index ETF</strong> like VOO (S&P 500) blends all 11 sectors in market-cap proportion. A <strong style={{ color: "var(--text)" }}>sector ETF</strong> (e.g., XLK for tech, XLE for energy, XLF for financials) is a directional bet on one slice of the economy.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Beginners should start 80–100% in the core and add sector ETFs only when there is a specific, well-reasoned conviction. Holding five sector ETFs may feel diversified but can still be tightly correlated to the same macro backdrop. See the <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF Guide</Link> for product structure details.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Number of stocks = diversification", "Ten stocks in the same sector is still concentration. Check sector totals, not position counts."],
+                ["QQQ + individual big-tech overlap", "The top holdings of QQQ and your individual tech names are likely the same companies. Calculate combined exposure."],
+                ["Cycling through sector ETFs on news themes", "Transaction costs and taxes accumulate. Keep the core stable."],
+                ["Defensive sectors = zero risk", "Utilities and Consumer Staples are still affected by rates, earnings, and credit conditions."],
+                ["Trading on the heatmap color alone", "A single day's sector movement is mostly noise. Stick to your rules."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not a recommendation for any specific sector or stock. Principal loss is possible.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/portfolio-strategy" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">💼</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>포트폴리오 분산 전략</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>비중·리밸런싱</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "포트폴리오 분산 전략" : "Portfolio Diversification & Rebalancing"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "비중·리밸런싱" : "Position sizing and rebalancing schedules"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -214,8 +318,8 @@ export default function SectorsPage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">📦</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>미국 ETF 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>섹터 ETF vs 지수 ETF</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "미국 ETF 가이드" : "Complete US ETF Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "섹터 ETF vs 지수 ETF" : "Sector ETFs vs. broad-market index ETFs"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

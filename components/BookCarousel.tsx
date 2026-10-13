@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type Book = {
   title: string;
@@ -162,6 +163,8 @@ function BookCard({ book }: { book: Book }) {
 }
 
 export function BookCarousel() {
+  const locale = useLocaleCode();
+  if (locale !== "ko") return null;
   return (
     <div
       className="flex gap-4 overflow-x-auto pb-3 no-scrollbar"

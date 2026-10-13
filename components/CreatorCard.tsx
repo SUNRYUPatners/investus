@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ShieldCheck, Users, TrendingUp } from "lucide-react";
 import type { Creator } from "@/lib/creators";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 const RANK_MEDAL = ["🥇", "🥈", "🥉"];
 const RANK_COLORS = ["#FFD700", "#C0C0C0", "#CD7F32"];
@@ -12,6 +13,8 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
   const topHoldings = portfolio.slice(0, 3);
   const medal = rank != null && rank <= 3 ? RANK_MEDAL[rank - 1] : null;
   const medalColor = rank != null && rank <= 3 ? RANK_COLORS[rank - 1] : null;
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
 
   return (
     <Link href={`/creator/${encodeURIComponent(id)}`} className="block">
@@ -37,14 +40,14 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
                 {rank != null && rank <= 3 && (
                   <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0"
                     style={{ background: `${medalColor}22`, color: medalColor! }}>
-                    {rank}위
+                    {isKo ? `${rank}위` : `#${rank}`}
                   </span>
                 )}
                 <span className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{nickname}</span>
                 {isVerified && (
                   <span className="flex items-center gap-0.5 text-[10px] px-1.5 py-0.5 rounded-full"
                     style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
-                    <ShieldCheck className="w-3 h-3" />계좌인증
+                    <ShieldCheck className="w-3 h-3" />{isKo ? "계좌인증" : "Verified"}
                   </span>
                 )}
               </div>
@@ -69,12 +72,12 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
               <span className="text-xs font-bold font-mono-num" style={{ color: "var(--up)" }}>
                 +{annualReturn}%
               </span>
-              <span className="text-[10px]" style={{ color: "var(--muted)" }}>연수익률</span>
+              <span className="text-[10px]" style={{ color: "var(--muted)" }}>{isKo ? "연수익률" : "Ann. return"}</span>
             </div>
             <div className="flex items-center gap-1">
               <Users className="w-3 h-3" style={{ color: "var(--muted)" }} />
               <span className="text-xs font-mono-num" style={{ color: "var(--text)" }}>
-                {followerCount.toLocaleString()}명
+                {followerCount.toLocaleString()}{isKo ? "명" : ""}
               </span>
             </div>
           </div>
@@ -94,10 +97,12 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
 
           {/* Bottom: CTA */}
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold" style={{ color: "var(--mint)" }}>무료 · 광고 지원형</span>
+            <span className="text-[11px] font-bold" style={{ color: "var(--mint)" }}>
+              {isKo ? "무료 · 광고 지원형" : "Free · ad-supported"}
+            </span>
             <span className="text-xs font-bold px-4 py-2 rounded-xl"
               style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
-              프로필 보기
+              {isKo ? "프로필 보기" : "View profile"}
             </span>
           </div>
         </div>

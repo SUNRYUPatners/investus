@@ -1,51 +1,51 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "안전자산 가이드 — 비트코인·이더리움·금·은을 초보도 이해하게 | 인베스트어스",
-  description:
-    "안전자산이란 무엇인지, 비트코인·이더리움과 금·은이 왜 다르게 움직이는지, 금리·달러·ETF 수급, 포트폴리오 비중까지 초보 눈높이로 설명합니다.",
-  keywords: ["안전자산", "비트코인", "이더리움", "금", "은", "금 투자", "BTC", "ETH", "실질금리"],
-  alternates: { canonical: "https://www.investus.kr/learn/safe-assets" },
-  openGraph: {
-    title: "안전자산 가이드 — BTC·ETH·금·은 | 인베스트어스",
-    description: "가상화폐와 현물을 나눠 보는 초보용 한 장 정리",
-    url: "https://www.investus.kr/learn/safe-assets",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function SafeAssetsPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/safe-assets")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
 
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(167,139,250,0.15)", color: "#a78bfa" }}>안전자산</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 24분</span>
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            안전자산 가이드 — 비트코인·이더리움·금·은
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            &ldquo;안전자산&rdquo;이라는 말은 자주 쓰이지만, 비트코인과 금은 같은 날이어도 방향이 갈라질 수 있습니다.
-            두 그룹을 나눠 보고, 금리·달러·수급을 공통 체크리스트로 잡는 법을 정리합니다.
+            {isKo
+              ? "\"안전자산\"이라는 말은 자주 쓰이지만, 비트코인과 금은 같은 날이어도 방향이 갈라질 수 있습니다. 두 그룹을 나눠 보고, 금리·달러·수급을 공통 체크리스트로 잡는 법을 정리합니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
               안전자산이란? (오해부터)
@@ -181,20 +181,126 @@ export default function SafeAssetsPage() {
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 암호화폐·원자재는 고변동 자산일 수 있으며 투자·세무 자문이 아닙니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Does &quot;Safe Haven&quot; Actually Mean?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              &ldquo;Safe haven&rdquo; does not mean &ldquo;guaranteed not to fall.&rdquo; It means assets that tend to move for <strong style={{ color: "var(--text)" }}>different reasons than stocks</strong> — and sometimes in the opposite direction during equity stress. They reduce correlation, not risk-to-zero.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Crypto (BTC, ETH)</strong> — sensitive to risk appetite, spot ETF flows, and regulation. Can move with stocks during liquidity crunches.</p>
+              <p><strong style={{ color: "var(--text)" }}>Physical / Precious Metals (Gold, Silver)</strong> — more often driven by real interest rates, dollar strength, and geopolitical risk. Different mechanism from crypto.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              The Investus Safe Assets tab shows the top 5 crypto and top 5 physical/macro assets side by side for context.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Bitcoin (BTC) — Digital Gold or Risk Asset?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Bitcoin is simultaneously described as &ldquo;digital gold&rdquo; and as a risk asset — and both labels have been accurate at different times. During risk-on rallies (rate-cut anticipation, liquidity expansion), BTC tends to rise alongside equities. During genuine flights to safety, it sometimes tracks gold instead.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Spot ETF flows</strong> — institutional capital entering or leaving via BlackRock IBIT, Fidelity FBTC, etc.</li>
+              <li><strong style={{ color: "var(--text)" }}>Macro backdrop</strong> — dollar strength and interest rate direction (<Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>Rate Guide</Link>)</li>
+              <li><strong style={{ color: "var(--text)" }}>Volatility</strong> — daily double-digit moves remain common; position sizing is critical</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              For detailed ETF options, sizing, and risk factors, see the <Link href="/learn/crypto" style={{ color: "var(--mint)" }}>Bitcoin &amp; Crypto Guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Ethereum (ETH) — How It Differs from BTC</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Ethereum is a programmable blockchain platform — smart contracts, DeFi applications, and NFTs all run on it. It is not the same as Bitcoin. ETH tends to have higher beta (more amplified moves) than BTC during risk-on periods, and a distinct set of catalysts around network upgrades and DeFi activity.
+            </p>
+            <p className="text-sm leading-relaxed">
+              For beginners, understanding the BTC vs. ETH distinction and deciding your total crypto allocation is sufficient. Altcoins and memecoins carry additional information and liquidity risks.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Gold — Real Rates and the Dollar</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Gold pays no yield. Its attractiveness is inversely related to <strong style={{ color: "var(--text)" }}>real interest rates</strong> (nominal rate minus inflation). When real rates fall — either because nominal rates drop or inflation rises — gold&apos;s opportunity cost shrinks and demand tends to rise. A weakening dollar also typically supports gold prices.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Frequently cited as an inflation and geopolitical hedge</li>
+              <li>Central bank buying (especially from emerging markets) adds structural demand narrative</li>
+              <li>When real rates rise sharply (as in 2022), gold can still correct significantly — &ldquo;always goes up&rdquo; is false</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              For ETFs like GLD, IAU, and gold miners, see the full <Link href="/learn/commodities" style={{ color: "var(--mint)" }}>Commodities Guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Silver — Follows Gold, but Adds Industry</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Silver often tracks gold closely, but its significant industrial demand — electronics, solar panels, EV components — means it can diverge. Industrial slowdowns weigh on silver even when gold holds firm. Silver is also more volatile than gold over most timeframes.
+            </p>
+            <p className="text-sm leading-relaxed">
+              For beginners, it is enough to remember that silver is not simply &ldquo;cheaper gold.&rdquo; Its industrial cycle adds a layer of complexity.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Shared Variables Across All Safe Havens</h2>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <div className="flex flex-col gap-2 text-sm">
+                {[
+                  ["Rates / Real rates", "Especially important for gold and silver"],
+                  ["Dollar (DXY)", "Dollar strength often pressures commodity prices"],
+                  ["Risk appetite", "Days when BTC and ETH move with equities"],
+                  ["ETF flows", "Institutional money entering/exiting crypto and gold ETFs"],
+                  ["Geopolitics", "Sudden demand spikes for traditional safe havens"],
+                ].map(([t, d]) => (
+                  <div key={t} className="flex gap-2">
+                    <span className="font-bold flex-shrink-0" style={{ color: "var(--text)", minWidth: 120 }}>{t}</span>
+                    <span>{d}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Portfolio Sizing</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Treat as <strong style={{ color: "var(--text)" }}>satellite positions</strong> separate from your equity core</li>
+              <li>Do not pool crypto and gold into one &ldquo;safe assets 100%&rdquo; bucket — they behave very differently</li>
+              <li>Only allocate what you could tolerate losing entirely (<Link href="/learn/crypto" style={{ color: "var(--mint)" }}>Crypto Guide</Link>)</li>
+              <li>Run through your <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>pre-buy checklist</Link> before entering</li>
+            </ol>
+            <p className="text-sm leading-relaxed mt-3">
+              For rebalancing rules and overall allocation design, see <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>Portfolio Strategy</Link>.
+            </p>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Crypto and commodities can be highly volatile. Not investment or tax advice.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/crypto" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">₿</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>비트코인·암호화폐 상세</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>ETF·비중·리스크</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "비트코인·암호화폐 상세" : "Bitcoin & Crypto Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "ETF·비중·리스크" : "Spot ETFs, sizing, and key risks"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -203,8 +309,8 @@ export default function SafeAssetsPage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🛢️</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>원자재 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>금·유가·ETF</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "원자재 가이드" : "Commodities Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "금·유가·ETF" : "Gold, oil, and commodity ETFs explained"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

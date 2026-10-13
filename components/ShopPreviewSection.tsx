@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { SHOP_PRODUCTS, SHOP_INDEX_PATH } from "@/lib/shopProducts";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 /** 홈·더보기 — PG 심사용 유료 상품 미리보기 */
 export function ShopPreviewSection() {
+  const locale = useLocaleCode();
+  if (locale !== "ko") return null;
   return (
     <section className="px-4 lg:px-0 pt-4" aria-label="유료 상품">
       <div className="flex items-center justify-between mb-2">

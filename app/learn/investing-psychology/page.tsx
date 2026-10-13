@@ -1,49 +1,48 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "투자 심리·행동재무 — 완전 초보 가이드 (FOMO·손실 회피) | 인베스트어스",
-  description:
-    "FOMO, 손실 회피, 확증 편향, 공포·탐욕 등 초보가 빠지기 쉬운 심리를 쉬운 말로 설명하고, 숫자 예시와 규칙으로 막는 방법을 정리합니다.",
-  keywords: ["투자 심리", "행동재무", "FOMO", "손실 회피", "공포탐욕", "확증 편향"],
-  alternates: { canonical: "https://www.investus.kr/learn/investing-psychology" },
-  openGraph: {
-    title: "투자 심리 초보 가이드 | 인베스트어스",
-    description: "FOMO·손실 회피·규칙을 완전 초보 눈높이로",
-    url: "https://www.investus.kr/learn/investing-psychology",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function InvestingPsychologyPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/investing-psychology")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(245,158,11,0.15)", color: "#f59e0b" }}>심리</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            투자 심리·행동재무 — 완전 초보 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            차트와 PER을 외우는 것보다, &ldquo;내가 왜 지금 사고 싶은지&rdquo;를 아는 편이 수익률에 더 큰 영향을 줄 때가 많습니다.
-            아래는 흔한 함정과, 감정 대신 <em>규칙</em>으로 막는 방법입니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>행동재무가 뭔가요?</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -98,7 +97,6 @@ export default function InvestingPsychologyPage() {
             <p className="text-sm leading-relaxed">
               실전 팁: 매수 전에 &ldquo;이 투자가 틀릴 수 있는 이유 3가지&rdquo;를 의무적으로 적습니다.
               <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>재무 숫자</Link>가 스토리와 다르면 스토리를 의심하세요.
-              기관이 샀다고 무조건 따라가지 않기 — <Link href="/learn/13f-guide" style={{ color: "var(--mint)" }}>13F 가이드</Link>.
             </p>
           </section>
 
@@ -139,7 +137,7 @@ export default function InvestingPsychologyPage() {
             <div className="flex flex-col gap-3">
               {[
                 ["하락장에 적립 중단", "수량이 많아지는 구간에서 멈추면 DCA가 무력화됩니다."],
-                ["본전 올 때까지 존버만", "위성 종목의 ‘본전 집착’은 기회비용과 추가 하락을 키울 수 있습니다. 규칙을 따르세요."],
+                ["본전 올 때까지 존버만", "위성 종목의 '본전 집착'은 기회비용과 추가 하락을 키울 수 있습니다. 규칙을 따르세요."],
                 ["수익 나면 과신 → 레버리지", "짧은 행운을 실력으로 착각하기 쉽습니다."],
                 ["철학을 장이 좋을 때만 읽음", "나쁜 날에 쓸 매뉴얼을 평온할 때 적어 두세요."],
               ].map(([t, d]) => (
@@ -151,54 +149,128 @@ export default function InvestingPsychologyPage() {
             </div>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>대가들도 심리와 싸웠다</h2>
-            <p className="text-sm leading-relaxed">
-              <Link href="/learn/value-investing" style={{ color: "var(--mint)" }}>버핏·그레이엄·막스</Link> 같은 이름들이 반복하는 말은
-              &ldquo;시장과 싸우지 말라&rdquo;, &ldquo;나쁜 날은 온다&rdquo;입니다.
-              철학 문장은 자랑이 아니라, 공포가 올 때 꺼내는 비상 매뉴얼입니다.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 할 일</h2>
-            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
-              <li>노트에 &ldquo;나의 3가지 금지 행동&rdquo;을 적기 (예: 레버리지, 단톡 추격, 생활비 투입).</li>
-              <li><Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>매수 체크리스트</Link>를 휴대폰에 북마크.</li>
-              <li>코어 ETF 적립일을 달력에 고정 (<Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link>).</li>
-              <li><Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>공포탐욕</Link>은 참고만, 버튼으로 쓰지 않기.</li>
-            </ol>
-          </section>
-
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>관련 글</h2>
-            <p className="text-sm leading-relaxed">
-              <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>매수 체크리스트</Link>,
-              <Link href="/learn/myths" style={{ color: "var(--mint)" }}> 초보 오해</Link>,
-              <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}> 공포탐욕</Link>,
-              <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}> 포트폴리오</Link>,
-              <Link href="/learn/value-investing" style={{ color: "var(--mint)" }}> 가치투자</Link>.
-            </p>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px] leading-relaxed"
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 심리 상담·치료가 아니며 투자 권유가 아닙니다. 원금 손실이 가능합니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is Behavioral Finance?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Behavioral finance</strong> studies why people make systematically irrational financial decisions. Selling during a panic, chasing a stock after a 100% run — these are not character flaws, they are predictable responses from a human brain that evolved to avoid immediate danger, not to hold assets through multi-year drawdowns.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Why does it matter? You can own an excellent ETF and still underperform it by selling at the bottom and buying back at the top. Understanding your own biases is more valuable than memorizing another valuation ratio. Good strategy requires protective rules. See <Link href="/learn/compound" style={{ color: "var(--mint)" }}>Compound Interest</Link> for why continuous holding matters.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>FOMO — Fear of Missing Out</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>FOMO</strong> is the anxiety that others are profiting while you sit out. It drives investors to buy assets that have already risen sharply, often near the peak of a momentum cycle. The mental calculation is distorted: the upside feels vivid because others are talking about it; the downside risk is invisible because no one posts about losses.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>Example</p>
+              <p>A group chat shows "+80% in six months." You move living-expense money into the same position. The price already reflects enormous optimism. A 30% pullback alone is enough to break your resolve and cause a panic sale at a loss.</p>
+              <p><strong style={{ color: "var(--text)" }}>Rule to prevent it:</strong> Wait 24 hours on every impulse trade. Run through the <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>Buy Checklist</Link> — if fewer than 7 boxes are checked, do not buy. Keep your core in <Link href="/learn/dca" style={{ color: "var(--mint)" }}>scheduled DCA</Link> only.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Loss Aversion — Losses Hurt More Than Gains Feel Good</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Behavioral research consistently finds that the pain of a loss is roughly twice as powerful psychologically as the pleasure of an equivalent gain. This leads investors to hold losing positions far too long (&ldquo;I&apos;ll sell when I get back to even&rdquo;) while cutting winners too early.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>Recovery Math</p>
+              <p>$1,000 → $800 (−20%): requires +25% to recover.</p>
+              <p>$1,000 → $500 (−50%): requires <strong style={{ color: "var(--text)" }}>+100%</strong> to recover. The deeper the hole, the steeper the climb. Waiting for &ldquo;break-even&rdquo; is a psychologically normal but mathematically costly strategy.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              For your core index ETF, stay long-term and use <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link>. For satellite individual stocks, write your exit rule <em>before</em> you buy — e.g., &ldquo;If this drops 25%, I will reassess the thesis.&rdquo; Do not create new rules when emotions are running hot.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Confirmation Bias — Only Hearing What You Want</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Confirmation bias</strong> leads investors to seek out information that supports their existing positions while dismissing contradicting evidence. YouTube rabbit holes and group chats are engineered to feed this bias.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Practical counter: before buying any position, write down three reasons it could be wrong. If the <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>financial statements</Link> tell a different story than the narrative, trust the numbers. See also the <Link href="/learn/13f-guide" style={{ color: "var(--mint)" }}>13F Guide</Link> — institutional ownership alone is not a buy signal.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>The Fear-Greed Cycle</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Markets oscillate between &ldquo;everything is over&rdquo; and &ldquo;this time it&apos;s different.&rdquo; The <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>Fear &amp; Greed Index</Link> quantifies market sentiment at a point in time. It is a reference indicator — not a buy or sell trigger.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Extreme Fear:</strong> Continue DCA. If you have a pre-written rule to buy slightly more at extreme fear (e.g., up to 1.2× normal amount), follow that rule. Do not improvise.</li>
+              <li><strong style={{ color: "var(--text)" }}>Extreme Greed:</strong> Resist new theme bets and leveraged positions. Use rebalancing to trim oversized positions back to target (<Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>Portfolio Strategy</Link>).</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Mental Accounting, Overconfidence, and Herd Behavior</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Mental Accounting:</strong> &ldquo;It&apos;s my bonus, so it&apos;s okay to gamble with it.&rdquo; Money is money regardless of source. Apply the same risk rules to all capital.</li>
+              <li><strong style={{ color: "var(--text)" }}>Overconfidence:</strong> A few winning trades create the illusion of skill. The instinct to add leverage after a good run is one of the most reliably dangerous patterns in investing. See <Link href="/learn/myths" style={{ color: "var(--mint)" }}>Top 10 Investing Myths</Link>.</li>
+              <li><strong style={{ color: "var(--text)" }}>Herding:</strong> When everyone is saying the same thing, the information is likely already priced in. Crowded trades have the most severe crashes when they unwind.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Practical Rules to Protect Yourself</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Write your maximum acceptable loss in dollar terms before investing (e.g., &ldquo;If my portfolio drops 30%, I will review my entire strategy.&rdquo;).</li>
+              <li>Set a hard cap on individual stock exposure — e.g., all individual stocks combined under 20% of total portfolio.</li>
+              <li>Limit portfolio check-ins to once per week. Turn off real-time price alerts.</li>
+              <li>No same-day trades triggered by news headlines or group chat messages.</li>
+              <li>All buys require passing the <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>Buy Checklist</Link> first.</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Pausing DCA in a downturn", "The dip is exactly when DCA accumulates the most shares. Stopping breaks the entire mechanism."],
+                ["Holding only for break-even on satellite positions", "The opportunity cost and further downside risk can exceed the tax saved by not selling."],
+                ["Turning early profits into overconfidence", "A short winning streak is not evidence of superior skill. Leveraging up is when the most damage happens."],
+                ["Reading investment philosophy only in good markets", "Write your bad-day manual when you are calm. You will not have the capacity to think clearly during a drawdown."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not psychological counseling or investment advice. Principal loss is possible.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/buy-checklist" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">✅</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>매수 전 체크리스트</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>FOMO로 사기 전에</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "매수 전 체크리스트" : "10-Point Checklist Before You Buy"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "FOMO로 사기 전에" : "Rules to run before pressing buy"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -207,8 +279,8 @@ export default function InvestingPsychologyPage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">📅</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>적립식 투자(DCA)</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>감정을 줄이는 실행법</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "적립식 투자(DCA)" : "Dollar-Cost Averaging (DCA) Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "감정을 줄이는 실행법" : "The systematic approach that removes emotion"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

@@ -17,7 +17,7 @@ export function MarketSwitcherDesktop({ current }: { current: MarketId }) {
   return (
     <nav
       className="hidden lg:flex items-center gap-1"
-      aria-label="시장 선택"
+      aria-label={locale === "ko" ? "시장 선택" : "Select market"}
     >
       {MARKET_IDS.map((id) => {
         const m = MARKET_CONFIG[id];

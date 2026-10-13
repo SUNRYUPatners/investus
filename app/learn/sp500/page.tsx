@@ -1,23 +1,17 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "S&P500 완전 가이드 — 미국 경제의 온도계를 읽는 법 | 인베스트어스",
-  description: "S&P500 지수의 의미, 구성 방식, 역사적 성과, 투자 방법까지 완전 가이드. 미국주식 투자자가 가장 먼저 이해해야 할 지수를 쉽게 설명합니다.",
-  keywords: ["S&P500", "S&P500 지수", "S&P500 ETF", "미국 지수", "SPY", "VOO", "미국주식 지수"],
-  alternates: { canonical: "https://www.investus.kr/learn/sp500" },
-  openGraph: {
-    title: "S&P500 완전 가이드 | 인베스트어스",
-    description: "S&P500의 구성, 역사적 성과, 투자 방법까지 — 미국 경제의 온도계 완벽 이해",
-    url: "https://www.investus.kr/learn/sp500",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function SP500Page() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/sp500")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
@@ -26,29 +20,32 @@ export default function SP500Page() {
         {/* Back */}
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
 
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(96,165,250,0.15)", color: "#60a5fa" }}>지수</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 16분</span>
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            S&P500 완전 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            미국주식 투자자라면 반드시 이해해야 할 S&P500 지수.
-            무엇으로 구성되고, 어떻게 움직이며, 어떻게 투자하는지 완전히 이해하면
-            미국 경제의 흐름을 읽는 눈이 생깁니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
-
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
               S&P500이란 무엇인가
@@ -248,32 +245,189 @@ export default function SP500Page() {
             </p>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
-              Investus에서 S&P500 모니터링하기
-            </h2>
-            <p className="text-sm leading-relaxed mb-3">
-              Investus <Link href="/" style={{ color: "var(--mint)" }}>홈 화면</Link>에서
-              S&P500 지수를 실시간으로 확인할 수 있습니다.
-              섹터별 히트맵을 통해 어떤 섹터가 오르고 내리는지 한눈에 파악할 수 있습니다.
-            </p>
-            <p className="text-sm leading-relaxed">
-              S&P500 지수 선물(Futures)도 확인할 수 있어, 미국 장이 열리기 전
-              오늘 시장이 어떻게 시작할지 미리 예측할 수 있습니다.
-            </p>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px] leading-relaxed"
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 이 글은 교육 목적의 투자 정보로, 특정 투자 상품의 매수·매도 권유가 아닙니다.
             과거 수익률은 미래 성과를 보장하지 않으며, 모든 투자는 원금 손실의 위험이 있습니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is the S&P 500?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The S&P 500 (Standard &amp; Poor&apos;s 500) is a market-cap-weighted index of 500 large US companies traded on NYSE or Nasdaq. S&P Global reviews the composition quarterly. Because it is cap-weighted, mega-cap names like Apple, Microsoft, and Nvidia have an outsized effect on the index&apos;s daily movement.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              It is more than a &ldquo;stock index.&rdquo; Institutional investors, central banks, and pension funds worldwide use the S&P 500 as their primary benchmark. When analysts say the market is up or down, they almost always mean the S&P 500.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>Inclusion Criteria</p>
+              <div className="flex flex-col gap-1.5 text-sm">
+                {[
+                  "Market cap of at least ~$14.5 billion",
+                  "Positive earnings in the most recent quarter and over the prior four quarters",
+                  "Listed on NYSE or Nasdaq",
+                  "At least 50% of shares publicly available (float)",
+                  "At least one year of trading history",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <span style={{ color: "var(--mint)" }}>✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Sector Breakdown</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The S&P 500 is divided into 11 GICS sectors. As of 2024, Information Technology accounts for roughly 30% of the index — meaning Apple, Microsoft, Nvidia, and Alphabet alone can move the index meaningfully on any given day.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>Major Sector Weights (approx. 2024)</p>
+              <div className="flex flex-col gap-2">
+                {[
+                  ["Information Technology", "~30%", "#10b981"],
+                  ["Financials", "~13%", "#60a5fa"],
+                  ["Health Care", "~12%", "#c084fc"],
+                  ["Consumer Discretionary", "~10%", "#f59e0b"],
+                  ["Communication Services", "~9%", "#fb923c"],
+                  ["Industrials", "~8%", "#e879f9"],
+                ].map(([sector, pct, color]) => (
+                  <div key={sector} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: color }} />
+                    <span className="flex-1 text-sm">{sector}</span>
+                    <span className="text-sm font-bold font-mono-num" style={{ color }}>{pct}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Historical Performance</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The S&P 500&apos;s long-run annualized total return (including reinvested dividends) has been roughly 10–11%. After adjusting for inflation, the real return is approximately 7% per year — making it one of the most powerful long-term wealth-building tools available to individual investors.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              It does crash. The dot-com bust (2000–02), the global financial crisis (2008–09), and the COVID shock (2020) each caused drawdowns exceeding 50%. But after every single bear market, the index recovered and set new all-time highs.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
+              <p className="text-xs font-semibold mb-2" style={{ color: "var(--mint)" }}>📊 Key Statistics</p>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  ["Long-run annualized return", "~10–11%"],
+                  ["$10,000 invested 30 years", "~$174,000"],
+                  ["Worst peak-to-trough", "−56.8% (2009)"],
+                  ["Avg. recovery time", "~2–3 years"],
+                ].map(([label, value]) => (
+                  <div key={label} className="rounded-xl p-3" style={{ background: "rgba(0,0,0,0.2)" }}>
+                    <p className="text-[10px] mb-0.5" style={{ color: "var(--muted)" }}>{label}</p>
+                    <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>S&P 500 vs Nasdaq vs Dow</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The three major US indices serve different purposes and include different stocks.
+            </p>
+            <div className="flex flex-col gap-3">
+              {[
+                {
+                  name: "S&P 500",
+                  desc: "500 large-cap US companies across all sectors. The broadest and most representative benchmark. Used by institutional investors worldwide.",
+                  color: "#10b981",
+                },
+                {
+                  name: "Nasdaq Composite",
+                  desc: "All stocks listed on the Nasdaq exchange — heavily skewed toward tech and growth. More volatile than the S&P 500; outperforms in bull markets, underperforms in downturns.",
+                  color: "#60a5fa",
+                },
+                {
+                  name: "Dow Jones Industrial Average",
+                  desc: "Just 30 large, established US companies, price-weighted. The oldest index (since 1896), but considered less representative than the S&P 500 for portfolio benchmarking.",
+                  color: "#f59e0b",
+                },
+              ].map((item) => (
+                <div key={item.name} className="rounded-xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)", borderLeft: `3px solid ${item.color}` }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: item.color }}>{item.name}</p>
+                  <p className="text-[12px] leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>How to Invest in the S&P 500</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Individual investors access the S&P 500 primarily through ETFs. All three options below track the same index; the main differences are expense ratio and liquidity profile.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-3" style={{ color: "var(--text)" }}>Major S&P 500 ETFs</p>
+              <div className="flex flex-col gap-2">
+                {[
+                  { ticker: "SPY", name: "SPDR S&P 500 ETF Trust", fee: "0.09%", note: "World's largest ETF by AUM; most liquid" },
+                  { ticker: "VOO", name: "Vanguard S&P 500 ETF", fee: "0.03%", note: "Lowest expense ratio; popular for long-term DCA" },
+                  { ticker: "IVV", name: "iShares Core S&P 500 ETF", fee: "0.03%", note: "Run by BlackRock; near-identical to VOO" },
+                ].map((etf) => (
+                  <div key={etf.ticker} className="rounded-xl p-3 border flex items-start gap-3"
+                    style={{ background: "rgba(0,0,0,0.2)", borderColor: "rgba(255,255,255,0.06)" }}>
+                    <div className="flex-shrink-0">
+                      <p className="text-sm font-bold font-syne" style={{ color: "var(--mint)" }}>{etf.ticker}</p>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[11px] font-semibold" style={{ color: "var(--text)" }}>{etf.name}</p>
+                      <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
+                        Expense ratio {etf.fee} · {etf.note}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              For long-term investing, VOO or IVV are the most cost-efficient choices. The fee difference from SPY compounds meaningfully over decades.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Cap-Weighting and Market Breadth</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Because the S&P 500 is cap-weighted, the top 10 holdings can represent 30–35% of the index. When mega-cap tech is strong, the headline number looks great even if most of the other 490 stocks are flat or down. This gap between the index and its average member is called <strong style={{ color: "var(--text)" }}>market breadth</strong>.
+            </p>
+            <p className="text-sm leading-relaxed">
+              There is also an equal-weight S&P 500 ETF (RSP). It reduces mega-cap concentration, but adds more exposure to smaller companies and tends to behave differently during momentum-driven markets. For most beginners, the standard cap-weighted index is the simpler starting point.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Total Return vs. Price Return</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              When you read &ldquo;the S&P 500 returned 10% per year,&rdquo; that figure almost always includes <strong style={{ color: "var(--text)" }}>reinvested dividends</strong>. Price-only return is lower. ETF holders receive dividends as cash (subject to withholding tax) or reinvestment depending on brokerage settings.
+            </p>
+            <p className="text-sm leading-relaxed">
+              When comparing historical results, distinguish &ldquo;price return&rdquo; from &ldquo;total return.&rdquo; Korean investors must also account for dividend withholding tax and capital gains tax, which reduce the net return below the headline backtest figure. See the <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>US Stock Tax guide</Link> for details.
+            </p>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Past returns do not guarantee future results. All investments carry risk of principal loss.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/fear-greed" style={{ textDecoration: "none" }}>
@@ -281,8 +435,8 @@ export default function SP500Page() {
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">😱</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>공포탐욕지수 완전 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>시장 심리로 투자 타이밍 잡기</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "공포탐욕지수 완전 가이드" : "Complete Fear & Greed Index Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "시장 심리로 투자 타이밍 잡기" : "Reading market sentiment as context"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -292,8 +446,8 @@ export default function SP500Page() {
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🏦</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>버핏지수 완전 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>시장 고평가 여부 판단하기</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "버핏지수 완전 가이드" : "Complete Buffett Indicator Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "시장 고평가 여부 판단하기" : "Market cap/GDP and overvaluation context"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

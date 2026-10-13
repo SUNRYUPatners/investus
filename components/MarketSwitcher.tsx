@@ -19,7 +19,7 @@ export function MarketSwitcher({ current }: { current: MarketId }) {
       className="flex items-center justify-center gap-1 px-3 py-2 border-b lg:hidden"
       style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
       role="navigation"
-      aria-label="시장 선택"
+      aria-label={locale === "ko" ? "시장 선택" : "Select market"}
     >
       {MARKET_IDS.map((id) => {
         const m = MARKET_CONFIG[id];

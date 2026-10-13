@@ -1,50 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "기술적 분석 입문 — 이동평균·RSI·지지저항을 초보도 이해하게 | 인베스트어스",
-  description:
-    "차트·이동평균선·RSI·지지·저항이 무엇인지, 왜 보는지, 숫자 예시와 흔한 실수까지. 완전 초보를 위한 기술적 분석 입문 가이드.",
-  keywords: ["기술적 분석", "이동평균선", "RSI", "지지 저항", "차트 분석", "골든크로스"],
-  alternates: { canonical: "https://www.investus.kr/learn/technical-analysis" },
-  openGraph: {
-    title: "기술적 분석 입문 | 인베스트어스",
-    description: "이동평균·RSI·지지저항 — 차트는 보조 도구로",
-    url: "https://www.investus.kr/learn/technical-analysis",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function TechnicalAnalysisPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/technical-analysis")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(56,189,248,0.15)", color: "#38bdf8" }}>차트</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            기술적 분석 입문
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            주식을 처음 보면 화면에 선과 숫자가 가득합니다. 기술적 분석은 &ldquo;과거 가격과 거래량을 보고
-            지금 분위기를 읽는&rdquo; 방법입니다. 미래를 맞히는 마법이 아니라, <em>위험을 줄이고 과열·침체를 참고하는</em> 보조 도구로
-            이해하는 편이 안전합니다.
+            {isKo
+              ? "주식을 처음 보면 화면에 선과 숫자가 가득합니다. 기술적 분석은 \"과거 가격과 거래량을 보고 지금 분위기를 읽는\" 방법입니다. 미래를 맞히는 마법이 아니라 보조 도구로 이해하는 편이 안전합니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>한 줄 정의</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -196,22 +196,153 @@ export default function TechnicalAnalysisPage() {
             </ol>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 읽을 글</h2>
-            <p className="text-sm leading-relaxed">
-              기업 숫자 → <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>재무제표</Link>·
-              <Link href="/learn/valuation" style={{ color: "var(--mint)" }}>밸류에이션</Link>,
-              시장 분위기 → <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>공포탐욕</Link>·
-              <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>투자 심리</Link>,
-              상품 → <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF</Link>.
-            </p>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 차트 신호 기반 매매·종목 추천이 아닙니다. 투자 손실 가능성은 본인에게 있습니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>One-Line Definition</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Technical analysis</strong> is the study of past price and volume data to estimate the current balance between buyers and sellers — where price is likely to face resistance and where demand has historically stepped in.
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong style={{ color: "var(--text)" }}>Fundamental analysis</strong>, by contrast, looks at a company&apos;s earnings, financial health, and competitive position. See <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>financial statements</Link> and <Link href="/learn/valuation" style={{ color: "var(--mint)" }}>P/E &amp; valuation</Link>. For long-term compounders, fundamentals and diversification come first. Charts are most useful as a &ldquo;is the market overheated right now?&rdquo; check.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why People Read Charts</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Prices reflect the collective expectations and fears of all market participants at any moment</li>
+              <li>Short-term traders use charts to set entry and exit points for defined-risk trades</li>
+              <li>Long-term investors use them to sense broad market extremes — overheat or oversell — without changing strategy</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Important caveat: no chart signal produces &ldquo;80% probability up tomorrow.&rdquo; Two analysts can look at the same chart and reach opposite conclusions. That is why Investus treats technical signals as supplementary to <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link> and <Link href="/learn/compound" style={{ color: "var(--mint)" }}>long-term compounding</Link>, not as primary inputs.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Candlesticks: The Basic Building Block</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              A <strong style={{ color: "var(--text)" }}>candlestick</strong> represents one trading period (a day, week, or month). It encodes four prices: open, high, low, and close. The &ldquo;body&rdquo; spans open to close; the &ldquo;wicks&rdquo; show the high and low extremes.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Example:</strong> Stock A opens at $100, reaches a high of $105, dips to $98, and closes at $103. The candle tells you the full intraday range and whether buyers or sellers finished in control.</p>
+              <p>For beginners, complex candle pattern names are less important than noticing: <em>has price been trending higher or lower for several sessions, and did volume spike on the move?</em></p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Moving Averages — The Average Price Line</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              A <strong style={{ color: "var(--text)" }}>moving average (MA)</strong> is the rolling average of the last N closing prices, plotted as a smooth line. Common periods are 20, 50, and 200 days. When the price is above the MA, it is trading above its recent average — broadly bullish. Below the MA suggests the opposite.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Golden cross</strong> — short-term MA crosses above long-term MA. Often read as a bullish momentum shift.</li>
+              <li><strong style={{ color: "var(--text)" }}>Death cross</strong> — short-term MA crosses below long-term MA. Often read as bearish momentum.</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3">
+              Key limitation: moving averages are <em>lagging indicators</em>. A golden cross often appears well after a rally is already underway. Treating it as an immediate all-in buy signal can mean chasing the top of a move.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>RSI — Overbought and Oversold on a 0–100 Scale</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The <strong style={{ color: "var(--text)" }}>Relative Strength Index (RSI)</strong> compares the magnitude of recent gains to recent losses and outputs a number between 0 and 100. Above <strong style={{ color: "var(--text)" }}>70</strong> is conventionally &ldquo;overbought&rdquo;; below <strong style={{ color: "var(--text)" }}>30</strong> is &ldquo;oversold.&rdquo;
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Why to be careful:</strong> In a strong bull market, RSI can stay above 70 for weeks or months. Selling every time RSI hits 70 would have meant missing the bulk of many major rallies. Conversely, &ldquo;oversold means buy&rdquo; can catch you in a falling knife.</p>
+              <p>Better use: pair RSI with the <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>Fear &amp; Greed Index</Link> and news context to gauge whether sentiment is at an extreme — not as a standalone buy/sell trigger.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Support and Resistance</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Support</strong> is a price level where buying has repeatedly emerged, stopping declines. <strong style={{ color: "var(--text)" }}>Resistance</strong> is where selling has repeatedly capped advances.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              Example: if an ETF bounces three times near $480, many traders call $480 a support level. If it gets rejected three times at $520, $520 is resistance. Round numbers ($100, $500) often act as psychological support/resistance.
+            </p>
+            <p className="text-sm leading-relaxed">
+              When a level is broken convincingly, roles often flip — old resistance becomes new support. But a single strong earnings miss or macro shock can erase any technical level instantly. Do not over-rely on lines on a chart.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Volume — Is the Move Backed by Conviction?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              A price move accompanied by low volume is considered weak — few participants were interested. A sharp price move on <strong style={{ color: "var(--text)" }}>unusually high volume</strong> suggests broad market participation and is generally taken more seriously. For beginners: watch for volume spikes that are 2–3× the recent average during significant price moves.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Ignoring fundamentals entirely", "Even a pretty chart can belong to a company burning cash or buried in debt. Pair charts with financial statement checks."],
+                ["Stacking too many indicators", "Running MA + RSI + MACD + Bollinger Bands simultaneously generates conflicting signals. One or two indicators is usually enough."],
+                ["Curve-fitting rules to past charts", "Over-optimization. Rules that work perfectly on past data frequently fail going forward."],
+                ["Copying \"guaranteed patterns\" from social media", "The same pattern behaves differently across assets, timeframes, and market regimes."],
+                ["Using charts only to confirm what you already want to do", "Seeking confirming signals after already deciding to buy is confirmation bias — see the psychology guide."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Realistic Use for Long-Term Investors</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Keep the core portfolio in <Link href="/learn/etf" style={{ color: "var(--mint)" }}>index ETFs</Link> + <Link href="/learn/dca" style={{ color: "var(--mint)" }}>monthly contributions</Link> — do not let chart signals interrupt the system</li>
+              <li>Use charts only to check &ldquo;is the market excessively hot right now?&rdquo; — not as a reason to pause DCA</li>
+              <li>For individual stock satellite positions, complete the <Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>buy checklist</Link> (position size, tax, reason) before even opening the chart</li>
+              <li>Never mix chart signals with options or leverage — <Link href="/learn/options" style={{ color: "var(--mint)" }}>options</Link> are a separate high-risk category requiring their own discipline</li>
+            </ol>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Chart signals are not stock recommendations. Investment losses are possible and are the investor&apos;s own responsibility.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
+
+        <div className="mt-8">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
+          </p>
+          <div className="flex flex-col gap-2">
+            <Link href="/learn/valuation" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">🔢</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "PER·PBR 밸류에이션 가이드" : "P/E, P/B & Valuation Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "비싸거나 싼지 보는 법" : "Judging if a stock is cheap or expensive"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+            <Link href="/learn/fear-greed" style={{ textDecoration: "none" }}>
+              <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <span className="text-xl">😱</span>
+                <div className="flex-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "공포탐욕지수 완전 가이드" : "Complete Fear & Greed Index Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "시장 심리 온도계" : "Market sentiment thermometer"}</p>
+                </div>
+                <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

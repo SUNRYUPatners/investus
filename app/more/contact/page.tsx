@@ -1,18 +1,13 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft, Mail, Phone, MapPin, Building2 } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/businessInfo";
-import { getLocale } from "@/lib/getLocale";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
-export const metadata: Metadata = {
-  title: "문의 · 연락처 | Investus",
-  description:
-    "Investus(인베스트어스) 고객 문의, 광고 제휴, 사업자 연락처. 주식회사 선류파트너스.",
-};
-
-export default async function ContactPage() {
-  const locale = await getLocale();
+export default function ContactPage() {
+  const locale = useLocaleCode();
   const isKo = locale === "ko";
   const b = BUSINESS_INFO;
 

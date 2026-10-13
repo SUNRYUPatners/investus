@@ -148,17 +148,17 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
     if (!user) return;
     const content = draft.trim();
     if (content.length < 5) {
-      setSubmitErr("5자 이상 작성해주세요.");
+      setSubmitErr(isKo ? "5자 이상 작성해주세요." : "Please write at least 5 characters.");
       return;
     }
     if (content.length > 300) {
-      setSubmitErr("300자 이내로 작성해주세요.");
+      setSubmitErr(isKo ? "300자 이내로 작성해주세요." : "Please keep it under 300 characters.");
       return;
     }
     setSubmitting(true);
     setSubmitErr("");
     const holding = holdings.find((h) => h.symbol === upper);
-    const holdingLabel = holding ? `${holding.shares}주 보유` : (isKo ? "회원" : "Member");
+    const holdingLabel = holding ? (isKo ? `${holding.shares}주 보유` : `${holding.shares} shares`) : (isKo ? "회원" : "Member");
     try {
       const res = await fetch("/api/wall-posts", {
         method: "POST",
@@ -167,7 +167,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
       });
       const data = (await res.json()) as { id?: number; nickname?: string; error?: string };
       if (!res.ok || data.error) {
-        setSubmitErr(data.error ?? "게시 실패. 다시 시도해주세요.");
+        setSubmitErr(data.error ?? (isKo ? "게시 실패. 다시 시도해주세요." : "Post failed. Please try again."));
         return;
       }
       if (data.id) {
@@ -176,7 +176,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
             id: data.id!,
             symbol: upper,
             is_mine: true,
-            nickname: data.nickname ?? "익명",
+            nickname: data.nickname ?? (isKo ? "익명" : "Anonymous"),
             holding_label: holdingLabel,
             content,
             likes: 0,
@@ -189,7 +189,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
       setDraft("");
       setShowComposer(false);
     } catch {
-      setSubmitErr("네트워크 오류. 다시 시도해주세요.");
+      setSubmitErr(isKo ? "네트워크 오류. 다시 시도해주세요." : "Network error. Please try again.");
     } finally {
       setSubmitting(false);
     }
@@ -340,7 +340,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
                     className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold"
                     style={{ background: "var(--border)", color: "var(--muted)" }}
                   >
-                    익
+                    {isKo ? "익" : "A"}
                   </div>
                   <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>
                     {p.nickname}

@@ -5,6 +5,7 @@ import { LogoMark } from "@/components/LogoMark";
 import { getMarketConfig } from "@/lib/markets/config";
 import type { MarketId } from "@/lib/markets/types";
 import { isMarketSessionOpen } from "@/lib/markets/hours";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 export function PreviewHeader({ market }: { market: MarketId }) {
   const cfg = getMarketConfig(market);
@@ -12,6 +13,8 @@ export function PreviewHeader({ market }: { market: MarketId }) {
   const [date, setDate] = useState("");
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
 
   useEffect(() => {
     setMounted(true);
@@ -53,7 +56,7 @@ export function PreviewHeader({ market }: { market: MarketId }) {
               Investus
             </span>
             <span className="text-[10px] font-medium leading-tight" style={{ color: "var(--muted)" }}>
-              {cfg.emoji} {cfg.tagline} · 미리보기
+              {cfg.emoji} {cfg.tagline} · {isKo ? "미리보기" : "Preview"}
             </span>
           </div>
         </div>

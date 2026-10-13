@@ -56,7 +56,9 @@ export function MarketHomeShell({
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <h1 className="sr-only">
-        Investus — AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 · {isUs ? "미국주식" : cfg.labelKo}
+        {locale === "ko"
+          ? `Investus — AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 · ${isUs ? "미국주식" : cfg.labelKo}`
+          : `Investus — AI-powered next-gen wealth management fintech · ${isUs ? "US Stocks" : cfg.labelEn}`}
       </h1>
       <Header />
       {/* 시세·경제 티커는 항상 장중 배너보다 위 */}

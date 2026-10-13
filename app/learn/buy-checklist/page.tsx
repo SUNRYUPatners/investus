@@ -1,49 +1,50 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "매수 전 체크리스트 10가지 — 완전 초보 가이드 | 인베스트어스",
-  description:
-    "미국주식·ETF를 사기 전에 비중·이유·밸류·세금·환율·심리를 점검하는 10가지 질문을 완전 초보도 따라 할 수 있게 설명합니다. 숫자 예시와 흔한 실수 포함.",
-  keywords: ["매수 체크리스트", "투자 규칙", "미국주식 매수", "FOMO 방지", "포트폴리오 비중"],
-  alternates: { canonical: "https://www.investus.kr/learn/buy-checklist" },
-  openGraph: {
-    title: "매수 전 체크리스트 초보 가이드 | 인베스트어스",
-    description: "사기 전에 적을 10가지 규칙 — 비중·숫자·세금·심리",
-    url: "https://www.investus.kr/learn/buy-checklist",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function BuyChecklistPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/buy-checklist")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(16,185,129,0.15)", color: "#10b981" }}>습관</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 20분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            매수 전 체크리스트 10가지 — 완전 초보 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            단톡·유튜브·급등 차트에 손이 먼저 갈 때, 이 목록이 브레이크입니다.
-            규칙은 <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>심리</Link>를 이기는 도구이지, 완벽한 종목을 찾는 시험이 아닙니다.
+            {isKo
+              ? "단톡·유튜브·급등 차트에 손이 먼저 갈 때, 이 목록이 브레이크입니다. 규칙은 심리를 이기는 도구이지, 완벽한 종목을 찾는 시험이 아닙니다."
+              : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>체크리스트를 쓰는 이유</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -155,8 +156,8 @@ export default function BuyChecklistPage() {
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>흔한 실수</h2>
             <div className="flex flex-col gap-3">
               {[
-                ["체크리스트를 ‘나중에’로 미룸", "미루는 순간이 바로 FOMO 구간입니다. 북마크해 두세요."],
-                ["‘예’를 억지로 맞춤", "스스로 속이면 의미가 없습니다. 애매하면 ‘아니오’."],
+                ["체크리스트를 '나중에'로 미룸", "미루는 순간이 바로 FOMO 구간입니다. 북마크해 두세요."],
+                ["'예'를 억지로 맞춤", "스스로 속이면 의미가 없습니다. 애매하면 '아니오'."],
                 ["코어와 위성을 섞어 생각", "적립용 ETF에 단타 규칙을 적용하거나, 테마주에 10년 존버만 외치면 어긋납니다."],
                 ["세금·계좌를 나중에", "세후 수익률이 달라집니다. 사기 전에 한 번만 확인하세요."],
               ].map(([t, d]) => (
@@ -168,45 +169,137 @@ export default function BuyChecklistPage() {
             </div>
           </section>
 
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 할 일</h2>
-            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
-              <li>위 10문항을 메모장에 붙여 넣기.</li>
-              <li>본인 비중 상한 숫자를 채우기 (예: 개별주 합 15%).</li>
-              <li><Link href="/learn/us-stock-basics" style={{ color: "var(--mint)" }}>미국주식 입문</Link>으로 계좌·수수료 기초 복습.</li>
-              <li>매수 습관은 <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link>와 <Link href="/learn/myths" style={{ color: "var(--mint)" }}>초보 오해</Link>를 이어서 읽기.</li>
-            </ol>
-          </section>
-
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>관련 글</h2>
-            <p className="text-sm leading-relaxed">
-              <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>투자 심리</Link>,
-              <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}> 포트폴리오</Link>,
-              <Link href="/learn/valuation" style={{ color: "var(--mint)" }}> 밸류</Link>,
-              <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}> 세금</Link>,
-              <Link href="/learn/etf" style={{ color: "var(--mint)" }}> ETF</Link>.
-            </p>
-          </section>
-
           <div className="rounded-xl p-4 text-[11px] leading-relaxed"
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 매수·매도 권유가 아니며 원금 손실이 가능합니다. 세금은 세무 자문이 아닙니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Use a Checklist?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Most beginner investing losses don&apos;t happen because of a lack of research — they happen because <strong style={{ color: "var(--text)" }}>rules get skipped when emotions are running hot</strong>. FOMO, a viral stock tip, or a headline-induced panic are the real culprits. A pre-flight checklist — like pilots use before takeoff — forces the same deliberate questions every time, before the impulse fires.
+            </p>
+            <p className="text-sm leading-relaxed">
+              How to use it: save these 10 questions to your phone. Before pressing buy, mark each yes or no. If <strong style={{ color: "var(--text)" }}>fewer than 7 are &ldquo;yes,&rdquo;</strong> skip the trade today and stick to your core <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA contributions</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>1–3. Position — Size and Source of Funds</h2>
+            <div className="rounded-2xl p-4 border space-y-3 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>1. Is this core or satellite?</strong><br />
+                Core = long-term anchor holdings (e.g., S&amp;P 500 ETF). Satellite = thematic bets, individual stocks, small experiments. If you cannot categorize it, do not buy. See <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>portfolio strategy</Link>.</p>
+              <p><strong style={{ color: "var(--text)" }}>2. What is my position size limit?</strong><br />
+                Example: with $100,000 invested, no single stock exceeds $10,000 (10%). &ldquo;Just this once, 20%&rdquo; stacks up and lets one stock dominate your outcome.</p>
+              <p><strong style={{ color: "var(--text)" }}>3. Is this money separate from emergency funds and living expenses?</strong><br />
+                Keep 3–6 months of living expenses in cash, uninvested. Buying with money you may need next month makes panic-selling almost inevitable.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>4–6. Numbers — Reason and Counter-Scenarios</h2>
+            <div className="rounded-2xl p-4 border space-y-3 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>4. Can I write the reason in one sentence?</strong><br />
+                &ldquo;My friend made money&rdquo; is not a reason. Valid examples: &ldquo;I am dollar-cost averaging into a low-cost S&amp;P 500 ETF for 10 years&rdquo; or &ldquo;This company has grown revenue 3 consecutive years and generates positive FCF; I am adding 5% as satellite.&rdquo;</p>
+              <p><strong style={{ color: "var(--text)" }}>5. Have I checked valuation or product structure?</strong><br />
+                For stocks: compare <Link href="/learn/valuation" style={{ color: "var(--mint)" }}>P/E and sector peers</Link>. For ETFs: check the tracked index, expense ratio, and whether it uses leverage — see the <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF guide</Link>. Leveraged and inverse ETFs are generally not suitable for long-term DCA.</p>
+              <p><strong style={{ color: "var(--text)" }}>6. Have I written down 3 bearish scenarios?</strong><br />
+                Example: rates spike, earnings miss, regulatory change, or currency move. If you cannot articulate the risks, you are likely in confirmation bias mode — see <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>investor psychology</Link>.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              If an earnings report is imminent, also run through the <Link href="/learn/earnings-season" style={{ color: "var(--mint)" }}>earnings season checklist</Link>. For finding the financial numbers, see the <Link href="/learn/financial-statements" style={{ color: "var(--mint)" }}>financial statements guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>7–8. Costs, Tax, and Account Type</h2>
+            <div className="rounded-2xl p-4 border space-y-3 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>7. Have I accounted for currency and fees?</strong><br />
+                For US stocks bought in Korean won, the USD/KRW rate affects your returns in won — see the <Link href="/learn/usd-krw" style={{ color: "var(--mint)" }}>currency guide</Link>. Trading frequently to average in on small price moves can erode more than you gain once fees are included.</p>
+              <p><strong style={{ color: "var(--text)" }}>8. Am I using the right account type?</strong><br />
+                Tax-advantaged accounts (ISA, pension savings, IRP) have different caps, tax treatments, and eligible instruments. See <Link href="/learn/korea-accounts" style={{ color: "var(--mint)" }}>ISA &amp; pension accounts</Link>, <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>US stock tax for Korean residents</Link>, and <Link href="/learn/kr-us-etf" style={{ color: "var(--mint)" }}>Korea-listed vs US-listed ETFs</Link>.</p>
+            </div>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed mt-3" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>Cost intuition</p>
+              <p>On a $10,000 purchase, a combined round-trip cost (FX spread + broker commission) of 1% means you start $100 in the hole. Every unnecessary trade chips away at compounding — see <Link href="/learn/compound" style={{ color: "var(--mint)" }}>compound interest</Link>.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>9–10. Psychology and Exit Plan</h2>
+            <div className="rounded-2xl p-4 border space-y-3 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>9. Am I buying because of a stimulus?</strong><br />
+                Breaking news, a group chat pump, &ldquo;limited time&rdquo; framing. The more the <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>Fear &amp; Greed Index</Link> reads &ldquo;extreme greed,&rdquo; the more cautious new bets deserve to be.</p>
+              <p><strong style={{ color: "var(--text)" }}>10. Have I pre-written what I will do at -20% and +30%?</strong><br />
+                Examples: for core ETFs — maintain contributions and rebalance only. For satellite stocks — -25% triggers a thesis re-evaluation meeting; +30% means trimming back to the size limit. &ldquo;I&apos;ll figure it out then&rdquo; is not a plan.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Quick Reference: All 10 Questions</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Is core vs. satellite clearly defined?</li>
+              <li>Am I within my position size limit?</li>
+              <li>Is this money separate from emergency savings and living expenses?</li>
+              <li>Can I write the reason in one sentence?</li>
+              <li>Have I checked valuation or ETF structure (expense ratio, leverage)?</li>
+              <li>Have I listed 3 bearish counter-scenarios?</li>
+              <li>Have I factored in currency and transaction costs?</li>
+              <li>Is this the right account type (taxable, tax-advantaged)?</li>
+              <li>Am I acting on a trigger (hype, tip, sudden spike)?</li>
+              <li>Have I pre-written my -20% and +30% response rules?</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Situation-Based Quick Guide</h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li><strong style={{ color: "var(--text)" }}>Scheduled index ETF contribution:</strong> Run through items 1–3 and 7–8 quickly. Do not change the strategy every month based on market mood.</li>
+              <li><strong style={{ color: "var(--text)" }}>First purchase of an individual stock:</strong> All 10 items. Add earnings guidance check if a report is due soon.</li>
+              <li><strong style={{ color: "var(--text)" }}>Crypto or leveraged ETF:</strong> Satellite with a lower size limit than normal. See the <Link href="/learn/crypto" style={{ color: "var(--mint)" }}>crypto guide</Link>. Options are a separate high-risk category.</li>
+              <li><strong style={{ color: "var(--text)" }}>Dividend-focused buy:</strong> Do not fixate on yield alone — check sustainability and tax treatment. See the <Link href="/learn/dividend" style={{ color: "var(--mint)" }}>dividend guide</Link>.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Postponing the checklist to \"later\"", "The moment you feel the urge to skip it is exactly the FOMO moment the checklist is designed to catch. Bookmark it now."],
+                ["Forcing \"yes\" answers", "If you are rationalizing a questionable answer to clear the threshold, the checklist has failed. Uncertain = no."],
+                ["Mixing core and satellite logic", "Applying short-term trading rules to your index ETF, or vowing to hold a meme stock for 10 years, are both category errors."],
+                ["Deferring tax and account questions", "After-tax returns are what compound over time. Check once before buying — not years later when it is too late to optimize."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. This is not a buy or sell recommendation. Principal loss is possible. Tax information is not tax advice — consult a qualified tax professional for your specific situation.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/investing-psychology" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🧠</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>투자 심리·행동재무</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>FOMO·손실 회피</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "투자 심리·행동재무" : "Investor Psychology & Behavioral Finance"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "FOMO·손실 회피" : "FOMO, loss aversion & emotional mistakes"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -215,8 +308,8 @@ export default function BuyChecklistPage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">💼</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>포트폴리오 분산·리밸런싱</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>코어·위성 비중</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "포트폴리오 분산·리밸런싱" : "Portfolio Diversification & Rebalancing"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "코어·위성 비중" : "Core/satellite sizing and rebalancing"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

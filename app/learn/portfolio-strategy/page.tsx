@@ -1,23 +1,17 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "미국주식 포트폴리오 분산 투자 전략 — 흔들리지 않는 포트폴리오 구성법 | 인베스트어스",
-  description: "미국주식 포트폴리오 구성 전략. 집중 vs 분산 투자, 섹터 배분, 리밸런싱, 시가총액별 배분 방법까지 실전 포트폴리오 전략을 설명합니다.",
-  keywords: ["포트폴리오 전략", "분산 투자", "섹터 배분", "리밸런싱", "미국주식 포트폴리오"],
-  alternates: { canonical: "https://www.investus.kr/learn/portfolio-strategy" },
-  openGraph: {
-    title: "미국주식 포트폴리오 분산 투자 전략 | 인베스트어스",
-    description: "집중 vs 분산, 섹터 배분, 리밸런싱 — 흔들리지 않는 미국주식 포트폴리오 구성법",
-    url: "https://www.investus.kr/learn/portfolio-strategy",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function PortfolioStrategyPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/portfolio-strategy")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
@@ -25,28 +19,32 @@ export default function PortfolioStrategyPage() {
 
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
 
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(251,146,60,0.15)", color: "#fb923c" }}>전략</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 16분</span>
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            미국주식 포트폴리오 분산 투자 전략
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            주식 투자에서 수익을 내는 것만큼 중요한 것이 리스크 관리입니다.
-            분산 투자는 한 종목의 급락이 전체 자산을 날리는 상황을 막는 가장 기본적이고 강력한 방어책입니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
-
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
               왜 분산 투자가 필요한가
@@ -243,21 +241,6 @@ export default function PortfolioStrategyPage() {
             <p className="text-sm leading-relaxed">
               입문자는 주식 80~90% + 현금 10~20%로 시작해, 극단적 탐욕 구간에서는 현금을 조금 늘리고
               극단적 공포 구간에서는 적립액을 늘리는 식으로 조절할 수 있습니다.
-              타이밍을 &ldquo;맞추려&rdquo; 하지 말고 비중만 조금씩 움직이는 것이 핵심입니다.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
-              Investus 포트폴리오 기능 활용하기
-            </h2>
-            <p className="text-sm leading-relaxed mb-3">
-              Investus <Link href="/portfolio" style={{ color: "var(--mint)" }}>자산 탭</Link>에서
-              내 포트폴리오를 등록하면 실시간 수익률과 종목별 비중을 한눈에 확인할 수 있습니다.
-            </p>
-            <p className="text-sm leading-relaxed">
-              AI 투자비서(Claude)에게 &ldquo;내 포트폴리오 분산이 잘 됐어?&rdquo;,
-              &ldquo;특정 섹터에 너무 치우쳐 있는 건 아니야?&rdquo;라고 직접 물어볼 수도 있습니다.
             </p>
           </section>
 
@@ -267,12 +250,184 @@ export default function PortfolioStrategyPage() {
             개인의 투자 성향, 목표, 상황에 따라 최적의 구성이 다를 수 있으며,
             모든 투자는 원금 손실의 위험이 있습니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Why Diversification Matters</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              In February 2022, Meta (Facebook) fell 26% in a single day — erasing roughly $237 billion in market cap overnight. An investor who held only Meta lost a quarter of their investment in one session. Diversification is the defense against this kind of concentrated blow: by spreading capital across assets that don&apos;t all move together, a single company&apos;s collapse cannot destroy the whole portfolio.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
+              <p className="text-xs font-semibold mb-1" style={{ color: "var(--mint)" }}>The Core Principle</p>
+              <p className="text-sm leading-relaxed">
+                Combining assets with low or negative correlation reduces portfolio volatility without necessarily sacrificing long-term returns. When one asset falls, another may hold — cushioning the overall drawdown.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Concentration vs. Diversification</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Warren Buffett famously said diversification is &ldquo;protection against ignorance.&rdquo; He has at times held over 40% of Berkshire in a single stock. But Buffett has decades of deep company analysis behind him. For the vast majority of investors, concentration amplifies both upside and downside in ways that are psychologically unsustainable.
+            </p>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "rgba(16,185,129,0.3)" }}>
+                <p className="text-[11px] font-bold mb-2" style={{ color: "#10b981" }}>Concentration</p>
+                <div className="flex flex-col gap-1 text-[11px]">
+                  <p>✓ Higher potential upside</p>
+                  <p>✓ Fewer positions to track</p>
+                  <p>✗ Single-stock risk</p>
+                  <p>✗ Requires deep expertise</p>
+                </div>
+              </div>
+              <div className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "rgba(96,165,250,0.3)" }}>
+                <p className="text-[11px] font-bold mb-2" style={{ color: "#60a5fa" }}>Diversification</p>
+                <div className="flex flex-col gap-1 text-[11px]">
+                  <p>✓ Reduced single-asset risk</p>
+                  <p>✓ Suitable for beginners</p>
+                  <p>✗ Returns converge to average</p>
+                  <p>✗ More positions to manage</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Portfolio Templates by Experience Level</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              These are illustrative examples only. Adjust for your risk tolerance, investment horizon, and personal circumstances.
+            </p>
+            <div className="flex flex-col gap-4">
+              {[
+                {
+                  level: "Beginner",
+                  sub: "Under 1 year of experience",
+                  color: "#10b981",
+                  items: [
+                    { label: "S&P 500 ETF (SPY / VOO / IVV)", pct: "70%", desc: "Core position — instant exposure to 500 large US companies" },
+                    { label: "Nasdaq 100 ETF (QQQ)", pct: "20%", desc: "Additional growth / tech tilt" },
+                    { label: "1–2 individual blue-chip stocks", pct: "10%", desc: "Companies you genuinely understand (Apple, Microsoft, etc.)" },
+                  ],
+                },
+                {
+                  level: "Intermediate",
+                  sub: "2–5 years of experience",
+                  color: "#60a5fa",
+                  items: [
+                    { label: "Individual growth stocks (5–8)", pct: "50%", desc: "Cap each at 15–20% max" },
+                    { label: "S&P 500 ETF", pct: "30%", desc: "Safety net and market exposure" },
+                    { label: "Sector ETFs (semiconductors, health care, etc.)", pct: "20%", desc: "High-conviction sector overweight" },
+                  ],
+                },
+                {
+                  level: "Advanced",
+                  sub: "5+ years of experience",
+                  color: "#c084fc",
+                  items: [
+                    { label: "Individual growth stocks (8–15)", pct: "60%", desc: "Mix of sectors and market caps" },
+                    { label: "Core ETF", pct: "25%", desc: "Maintain broad market exposure" },
+                    { label: "Cash and bonds", pct: "15%", desc: "Dry powder for drawdown opportunities" },
+                  ],
+                },
+              ].map((p) => (
+                <div key={p.level} className="rounded-2xl border overflow-hidden" style={{ borderColor: p.color + "40" }}>
+                  <div className="px-4 py-2.5" style={{ background: p.color + "12" }}>
+                    <p className="text-sm font-bold" style={{ color: p.color }}>{p.level}</p>
+                    <p className="text-[10px]" style={{ color: "var(--muted)" }}>{p.sub}</p>
+                  </div>
+                  <div className="p-3 flex flex-col gap-2">
+                    {p.items.map((item) => (
+                      <div key={item.label} className="flex gap-3 items-start text-sm">
+                        <span className="font-bold flex-shrink-0 text-[11px] px-1.5 py-0.5 rounded"
+                          style={{ background: p.color + "20", color: p.color, minWidth: 36, textAlign: "center" }}>
+                          {item.pct}
+                        </span>
+                        <div>
+                          <p className="text-[12px] font-bold" style={{ color: "var(--text)" }}>{item.label}</p>
+                          <p className="text-[11px]">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Rebalancing — When and How</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Portfolios drift over time. If Nvidia rises 300%, a 10% allocation can balloon to 40% — leaving you far more exposed than intended. Rebalancing trims winners and adds to laggards to restore your target weights. The discipline also forces a mechanical form of &ldquo;sell high, buy low.&rdquo;
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>Rebalancing Approaches</p>
+              <div className="flex flex-col gap-2">
+                {[
+                  ["Calendar-based", "Rebalance quarterly (every 3 months) or semi-annually (every 6 months)"],
+                  ["Threshold-based", "Rebalance when any position drifts more than 5% from its target weight"],
+                  ["Event-based", "Review after major market dislocations (crashes or euphoric runs)"],
+                  ["Tax awareness", "Factor in capital gains tax before selling appreciated positions — sometimes it is cheaper to buy more of the underweight asset"],
+                ].map(([t, d]) => (
+                  <div key={t} className="flex gap-3 text-sm">
+                    <span className="font-bold flex-shrink-0" style={{ color: "var(--text)", minWidth: 80 }}>{t}</span>
+                    <span>{d}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Sector Diversification</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Owning 10 semiconductor stocks is not diversification — it is concentration with extra steps. Sector exposure matters as much as the number of positions. Different sectors shine at different points in the economic cycle.
+            </p>
+            <div className="flex flex-col gap-2">
+              {[
+                { sector: "Information Technology", when: "Outperforms in low-rate, high-growth environments", example: "NVDA, AAPL, MSFT", color: "#10b981" },
+                { sector: "Health Care", when: "Defensive — relatively stable earnings in downturns", example: "LLY, UNH, JNJ", color: "#60a5fa" },
+                { sector: "Financials", when: "Benefits from rising rates and economic recovery", example: "JPM, BAC, GS", color: "#f59e0b" },
+                { sector: "Energy", when: "Inflation hedge, geopolitical risk premium", example: "XOM, CVX", color: "#fb923c" },
+                { sector: "Consumer Staples", when: "Recession-resistant, steady dividends", example: "WMT, COST, PG", color: "#c084fc" },
+              ].map((s) => (
+                <div key={s.sector} className="rounded-xl p-3 border"
+                  style={{ background: "var(--card)", borderColor: "var(--border)", borderLeft: `3px solid ${s.color}` }}>
+                  <div className="flex items-center gap-2 mb-1">
+                    <p className="text-[12px] font-bold" style={{ color: s.color }}>{s.sector}</p>
+                    <span className="text-[10px]" style={{ color: "var(--muted)" }}>Examples: {s.example}</span>
+                  </div>
+                  <p className="text-[11px] leading-relaxed">{s.when}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              For a full breakdown of all 11 GICS sectors, see the <Link href="/learn/sectors" style={{ color: "var(--mint)" }}>Sectors Guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>The Role of Cash</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Cash is not a dead asset — it is optionality. A fully-invested portfolio has no purchasing power when a crash creates opportunities. More importantly, being 100% invested makes every drawdown feel like an emergency, increasing the likelihood of panic-selling at the worst time.
+            </p>
+            <p className="text-sm leading-relaxed">
+              A reasonable starting point for beginners: 80–90% equities, 10–20% cash. During extreme greed, let cash drift slightly higher. During extreme fear, deploy a portion of that cash through your existing <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA schedule</Link>. Do not try to time the exact bottom — adjust by size, not by conviction.
+            </p>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Portfolio examples are for educational purposes only and are not investment recommendations. Optimal allocation varies by individual goals, risk tolerance, and timeline. All investments carry principal loss risk.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/sp500" style={{ textDecoration: "none" }}>
@@ -280,8 +435,8 @@ export default function PortfolioStrategyPage() {
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">📈</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>S&P500 완전 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>미국 경제의 온도계를 읽는 법</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "S&P500 완전 가이드" : "Complete S&P 500 Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "미국 경제의 온도계를 읽는 법" : "The benchmark at the core of most portfolios"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -291,8 +446,8 @@ export default function PortfolioStrategyPage() {
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🏭</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>미국 주식 11개 섹터</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>기술 쏠림을 피하는 지도</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "미국 주식 11개 섹터" : "Guide to the 11 US Stock Sectors"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "기술 쏠림을 피하는 지도" : "Avoiding over-concentration in tech"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

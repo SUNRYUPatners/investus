@@ -1,52 +1,49 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "한국 부동산 입문 가이드 — 매매·전세·정책·대출을 초보도 이해하게 | 인베스트어스",
-  description:
-    "한국 부동산의 매매·전세·공급정책·DSR·세제를 처음 보는 분 눈높이로 정리합니다. 실수요와 투자 수요를 구분하고, 헤드라인과 실행 시차를 이해합니다.",
-  keywords: ["한국 부동산", "전세", "매매", "부동산 정책", "DSR", "재건축", "주택공급"],
-  alternates: { canonical: "https://www.investus.kr/learn/korea-real-estate" },
-  openGraph: {
-    title: "한국 부동산 입문 가이드 | 인베스트어스",
-    description: "매매·전세·정책·대출 — 초보용 삼각 축",
-    url: "https://www.investus.kr/learn/korea-real-estate",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function KoreaRealEstatePage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/korea-real-estate")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
 
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(52,211,153,0.15)", color: "#34d399" }}>부동산</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            한국 부동산 입문 가이드
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            시세 차트만 보면 놓치기 쉽습니다. 한국 부동산은
-            <strong style={{ color: "var(--text)" }}> 공급·정책 · 전세 수급 · 대출·세제</strong>가
-            가격 기대와 거래량에 바로 붙습니다. 세 축으로 나눠 봅니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
               주식과 무엇이 다른가
@@ -163,20 +160,107 @@ export default function KoreaRealEstatePage() {
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 특정 지역·단지 매수 권유가 아니며, 부동산·세무·법률 자문이 아닙니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>How Real Estate Differs from Stocks</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Stocks can be bought or sold with a few clicks. Residential property involves <strong style={{ color: "var(--text)" }}>transaction costs, taxes, loans, and physical relocation</strong> — and a long lead time between decision and execution. A headline announcing a policy change does not mean prices move immediately; real-world implementation follows months or years later.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Owner-occupier (실수요)</strong> — Primary driver is living location, school district, and commute. Price appreciation is secondary.</p>
+              <p><strong style={{ color: "var(--text)" }}>Investment demand (투자 수요)</strong> — Focused on capital gains and rental income. Significantly affected by regulation and holding taxes.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              Conflating the two leads to being driven by headlines. Clarify your own purpose before evaluating any market data.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Pillar 1 — Supply, Redevelopment &amp; Policy</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Announcements of expanded housing supply or relaxed redevelopment rules move <strong style={{ color: "var(--text)" }}>sentiment first</strong>. Actual permits, groundbreaking, and occupancy follow much later — sometimes by years. A policy headline is not the same as new housing being available.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Implementation speed depends on secondary regulations, safety assessments, and construction costs.</li>
+              <li>Price divergence between preferred and non-preferred neighborhoods tends to widen during policy transition periods.</li>
+              <li>When interest rates and lending restrictions tighten simultaneously, transaction volume can stall even if supply is constrained.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Pillar 2 — Jeonse: Korea&apos;s Unique Rental System</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Jeonse (전세)</strong> is a Korean rental arrangement where a tenant deposits a large lump sum (typically 60–80% of the property value) with the landlord, lives rent-free, and receives the deposit back at lease end. When jeonse deposits rise and supply of jeonse units tightens, some renters shift to buying; others shift to monthly rent.
+            </p>
+            <p className="text-sm leading-relaxed">
+              For beginners, tracking jeonse supply/demand trends and jeonse loan limits together gives a better picture than property prices alone. Rising jeonse prices do not automatically translate into buying activity if mortgage lending is restricted.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Pillar 3 — Loans, DSR &amp; Taxation</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Korea&apos;s DSR (Debt Service Ratio — 총부채원리금상환비율) regulation caps the proportion of income that can be committed to debt repayment. This creates a hard ceiling between &ldquo;wanting to buy&rdquo; and &ldquo;being able to buy.&rdquo; When DSR limits tighten, effective demand drops regardless of underlying desire.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Multi-property ownership taxes, capital gains holding periods, and acquisition taxes are additional variables that affect timing. Tax and legal situations are highly individual — always consult a specialist before a major transaction. (This article is not tax or legal advice.)
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>How This Differs from US REITs</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              US <Link href="/learn/reits" style={{ color: "var(--mint)" }}>REITs</Link> are publicly traded companies that own income-producing real estate. You buy shares on a stock exchange — liquid, no mortgages, no physical property. Korean apartment buying and jeonse are <strong style={{ color: "var(--text)" }}>physical transactions</strong> driven by policy, lending rules, and local supply dynamics.
+            </p>
+            <p className="text-sm leading-relaxed">
+              The word &ldquo;real estate&rdquo; covers both, but the risk drivers, liquidity, and leverage structures are fundamentally different.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Beginner Checklist</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li>Write down in one sentence whether your purpose is to live there or to invest.</li>
+              <li>Check your loan limit and DSR ceiling before getting emotionally attached to a property.</li>
+              <li>Separate policy headlines from implementation timelines — they are rarely the same date.</li>
+              <li>Track jeonse supply trends, upcoming move-in volumes, and your target neighborhood temperature together.</li>
+              <li>For major decisions, cross-check with a tax and legal professional.</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Related Articles</h2>
+            <p className="text-sm leading-relaxed">
+              <Link href="/learn/korea-stocks" style={{ color: "var(--mint)" }}>Korean Stocks</Link>,{" "}
+              <Link href="/learn/reits" style={{ color: "var(--mint)" }}>REITs</Link>,{" "}
+              <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>Interest Rates</Link>,{" "}
+              <Link href="/learn/safe-assets" style={{ color: "var(--mint)" }}>Safe Assets</Link>,{" "}
+              <Link href="/learn/korea-accounts" style={{ color: "var(--mint)" }}>ISA &amp; Pension</Link>.
+            </p>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not a recommendation to purchase any specific property or location. Not real estate, tax, or legal advice.
+          </div>
+            </>
+          )}
           </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/korea-stocks" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🇰🇷</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>한국주식 입문</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>코스피·수급·시총</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "한국주식 입문" : "Introduction to Korean Stocks"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "코스피·수급·시총" : "KOSPI, order flow, large-caps"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -185,8 +269,8 @@ export default function KoreaRealEstatePage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🏛️</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>금리·매크로</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>대출·자산가격과 연결</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "금리·매크로" : "CPI, Fed & Interest Rates"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "대출·자산가격과 연결" : "How rates connect to property prices"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

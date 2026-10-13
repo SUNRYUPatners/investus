@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Header } from "@/components/Header";
 import { InsightReportSection } from "@/components/InsightReportSection";
 import { YoutubeChannels } from "@/components/YoutubeChannels";
@@ -6,23 +7,13 @@ import { BookCarousel } from "@/components/BookCarousel";
 import Link from "next/link";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { EbookProductSection } from "@/components/PaidProductsSection";
-import { getLocale } from "@/lib/getLocale";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 import { getT } from "@/lib/i18n";
 import { LEARN_ARTICLES } from "@/lib/learnArticles";
 import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 
-export const metadata: Metadata = {
-  title: "투자 인사이트 & 리포트 | 인베스트어스",
-  description: "SUNRYU Partners CIO가 직접 작성한 미국주식 시장 분석 리포트. S&P500·NASDAQ 시장 흐름 분석, 개별 종목 실적·밸류에이션 분석을 무료로 제공합니다.",
-  openGraph: {
-    title: "투자 인사이트 & 리포트 | 인베스트어스",
-    description: "CIO 직접 작성 미국주식 분석 리포트 · ETF·밸류에이션·세금 심화 가이드",
-    type: "website",
-  },
-};
-
-export default async function InsightPage() {
-  const locale = await getLocale();
+export default function InsightPage() {
+  const locale = useLocaleCode();
   const isKo = locale === "ko";
   const t = getT(locale).insight;
 
@@ -144,7 +135,7 @@ export default async function InsightPage() {
         </div>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">{EduBanner}</section>
-        <section className="px-4 mb-6"><EbookProductSection /></section>
+        {isKo && <section className="px-4 mb-6"><EbookProductSection /></section>}
         <section className="px-4 mb-6"><InsightReportSection /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-4">{LearnBanner}</section>
@@ -212,7 +203,7 @@ export default async function InsightPage() {
             <AdFitStrip />
             {LearnBanner}
             <TodaysGuideCard locale={locale} />
-            <EbookProductSection />
+            {isKo && <EbookProductSection />}
             <AdFitBanner />
             <section>
               <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>

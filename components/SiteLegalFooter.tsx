@@ -30,12 +30,12 @@ export async function SiteLegalFooter() {
     <footer
       className="border-t mt-8 lg:mt-12 pb-safe"
       style={{ borderColor: "var(--border)", background: "var(--card)" }}
-      aria-label="사업자 정보 및 법적 고지"
+      aria-label={isKo ? "사업자 정보 및 법적 고지" : "Business info and legal notices"}
     >
       <div className="max-w-[480px] lg:max-w-4xl mx-auto px-4 py-6 lg:py-8">
         <nav
           className="flex flex-wrap gap-x-3 gap-y-1.5 text-[12px] mb-5"
-          aria-label="약관 및 정책"
+          aria-label={isKo ? "약관 및 정책" : "Terms and policies"}
         >
           <Link href="/shop" className="hover:underline" style={{ color: "var(--text)" }}>
             {isKo ? "유료상품" : "Shop"}

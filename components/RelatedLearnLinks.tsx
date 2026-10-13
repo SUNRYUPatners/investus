@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { LEARN_ARTICLES } from "@/lib/learnArticles";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 const RELATED: { keywords: RegExp; hrefs: string[] }[] = [
   { keywords: /금리|연준|FOMC|CPI|인플레|매크로|채권/, hrefs: ["/learn/macro-rates", "/learn/bonds"] },
@@ -40,6 +43,7 @@ function pickRelated(text: string, limit = 3) {
 }
 
 export function RelatedLearnLinks({ title, summary }: { title: string; summary?: string }) {
+  const locale = useLocaleCode();
   const related = pickRelated(`${title} ${summary ?? ""}`);
   if (related.length === 0) return null;
 
@@ -49,7 +53,7 @@ export function RelatedLearnLinks({ title, summary }: { title: string; summary?:
       style={{ borderColor: "var(--border)" }}
     >
       <p className="text-[10px] font-semibold tracking-widest uppercase mb-2 font-syne" style={{ color: "var(--muted)" }}>
-        관련 심화 가이드
+        {locale === "ko" ? "관련 심화 가이드" : "Related Guides"}
       </p>
       <div className="flex flex-col gap-1.5">
         {related.map((a) => (

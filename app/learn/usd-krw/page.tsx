@@ -1,49 +1,48 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import { LearnArticleWithAds } from "@/components/LearnArticleAds";
-
-export const metadata: Metadata = {
-  title: "환율과 미국주식 — 원/달러가 수익률을 바꾸는 방식 | 인베스트어스",
-  description:
-    "한국 투자자가 미국주식을 할 때 원/달러 환율이 매수 단가·평가손익·환전에 미치는 영향을 숫자 예시로 설명합니다. 환헤지 ETF와의 차이와 흔한 실수도 정리합니다.",
-  keywords: ["원달러", "환율 미국주식", "USD KRW", "환전", "환헤지", "원화 수익률"],
-  alternates: { canonical: "https://www.investus.kr/learn/usd-krw" },
-  openGraph: {
-    title: "환율과 미국주식 | 인베스트어스",
-    description: "달러 vs 원화 수익률, 환헤지 vs 환노출 — 완전 초보 가이드",
-    url: "https://www.investus.kr/learn/usd-krw",
-    type: "article",
-  },
-};
+import { useLocaleCode } from "@/contexts/LocaleContext";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export default function UsdKrwPage() {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const article = LEARN_ARTICLES.find(a => a.href === "/learn/usd-krw")!;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/learn" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 투자 지식 허브
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "투자 지식 허브" : "Learn Hub"}
           </Link>
         </div>
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(245,158,11,0.15)", color: "#f59e0b" }}>환율</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: `${article.tagColor}22`, color: article.tagColor }}>
+              {isKo ? article.tag : article.tagEn}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {article.minutes} {isKo ? "읽기" : "read"}
+            </span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
-            환율과 미국주식
+            {isKo ? article.title : article.titleEn}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            한국에서 미국 주식을 사면 수익률은 주가 × 환율입니다.
-            달러 차트만 보고 &ldquo;수익&rdquo;이라고 말하면, 원화 통장 기준으로는 다른 숫자가 나올 수 있습니다.
+            {isKo ? article.desc : article.descEn}
           </p>
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
+          {isKo ? (
+            <>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>원/달러 환율이란?</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -190,20 +189,152 @@ export default function UsdKrwPage() {
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 환율 예측·환전 타이밍 권유가 아니며 원금 손실이 가능합니다.
           </div>
+            </>
+          ) : (
+            <>
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>What Is USD/KRW?</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>USD/KRW</strong> is the exchange rate expressing how many Korean won it takes to buy one US dollar. When the number rises (e.g., 1,200 → 1,400), the dollar has strengthened against the won — meaning Korean investors pay more won for the same dollar amount. When it falls, the dollar has weakened.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Why does this matter? Your salary, living expenses, and financial goals are denominated in KRW, but US stock prices are in USD. Every return calculation for a Korean investor involves both axes simultaneously.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Two Different Return Numbers</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>USD return</strong> is the percentage change in the stock price from your purchase price. This is the number most brokerage apps show on the overseas stock screen.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>KRW return</strong> is the gain or loss measured against your original KRW outlay — what you actually get back when you sell and convert. This is the number that matters for your real financial life.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>Numeric Example (Conceptual)</p>
+              <p>You buy AAPL at $100 when USD/KRW = 1,300. KRW cost ≈ ₩130,000 (ignoring fees).</p>
+              <p>Later: AAPL = $110 (+10%), but USD/KRW = 1,200 (−7.7%). Sale proceeds: $110 × 1,200 = ₩132,000.</p>
+              <p>USD return: +10%. KRW return: only ~+1.5%. The FX move nearly erased the stock gain.</p>
+              <p>Conversely, if the stock stays flat but the dollar strengthens, your KRW position shows a gain purely from FX.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              The 2022 bear market is a classic example: US equities fell significantly in USD terms, but Korean investors holding unhedged US stocks were partially cushioned because the dollar strengthened sharply against the won at the same time.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Don&apos;t Chase the Conversion Rate</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              &ldquo;I&apos;ll wait until the dollar is cheaper to convert&rdquo; is the same trap as trying to time the stock market. While waiting, the market may rally significantly. No one consistently predicts daily or monthly FX moves — not central banks, not professional traders.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              For regular monthly investing, convert and invest on the same fixed day each month. <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link> spreads your FX entry points just as it spreads your stock entry points.
+            </p>
+            <p className="text-sm leading-relaxed">
+              When converting a lump sum, compare your brokerage&apos;s preferential FX rate versus the bank rate. The spread and fees differ and can be material on large amounts.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Currency Hedged vs. Unhedged</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Unhedged (환노출)</strong> means FX moves flow directly into your KRW return. Buying US-listed ETFs (SPY, VOO, QQQ) through a Korean brokerage is by default unhedged — you benefit when the dollar strengthens and suffer when it weakens.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>Hedged (환헤지)</strong> means the fund uses derivatives to reduce (though not eliminate) FX impact. Korea-listed versions of US index ETFs often carry an &ldquo;(H)&rdquo; suffix. Hedging has a cost and removes the potential tailwind from a stronger dollar.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>Unhedged suits you if:</strong> You want to build long-term USD exposure, or you want to avoid the drag of hedging costs.</p>
+              <p><strong style={{ color: "var(--text)" }}>Hedged suits you if:</strong> You want to reduce KRW-return volatility. But hedged is not &ldquo;always safer&rdquo; — it trades one risk for another.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              Even for the same underlying index, a Korea-listed ETF and a US-listed ETF differ in tax treatment, trading hours, and hedging. See the <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF Guide</Link> and <Link href="/learn/kr-us-etf" style={{ color: "var(--mint)" }}>KR vs US ETF Comparison</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Dollar Deposits vs. Equities — The Trade-off</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Holding only dollar deposits or money market instruments means you capture the FX tailwind if the dollar strengthens, but miss equity growth if US stocks rally while the dollar is weak. Pure equity exposure in USD means your KRW portfolio can get hit by a double negative — falling stocks plus a weaker dollar.
+            </p>
+            <p className="text-sm leading-relaxed">
+              A practical starting allocation: put the majority of investable assets into index ETF DCA, keep a KRW emergency fund, and hold a small dollar cash balance only if you have near-term dollar needs. Specific numbers belong in your <Link href="/learn/portfolio-strategy" style={{ color: "var(--mint)" }}>portfolio strategy</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>FX and Taxes</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              Capital gains on overseas stocks for Korean residents are calculated in KRW at the applicable exchange rate. This means you can have a taxable gain in KRW even if the stock price in USD was flat — purely because the dollar strengthened during the holding period. The reverse is also possible: a USD gain that results in little or no KRW gain because the dollar weakened.
+            </p>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>Conceptual Example</p>
+              <p>Buy at USD/KRW 1,200; sell at 1,400 with the stock price unchanged in USD → KRW gain exists. That gain may be reportable if it exceeds the annual basic deduction.</p>
+              <p>For details see the <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>US Stock Tax Guide</Link>.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              The exact applicable rate and formula follow your brokerage&apos;s reporting and Korean tax law. Investus does not calculate tax obligations.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Common Mistakes</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Pausing DCA because of a single day&apos;s FX rate", "This defeats the entire purpose of DCA. Stick to the monthly rule."],
+                ["Reporting only your USD return", "Your life runs on KRW. Check the KRW-denominated return too."],
+                ["Assuming hedged = always safer", "Hedging has a cost and a basis risk. The &apos;(H)&apos; label does not mean risk-free."],
+                ["Not comparing bank vs. brokerage conversion rates", "The spread difference on a large conversion can be significant. Always check the preferred rate."],
+                ["Timing a lump-sum conversion on a predicted FX view", "If right it&apos;s luck; if wrong it&apos;s a large opportunity cost. Split the conversion over time instead."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>How to Use the USD/KRW Rate on Investus</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              The USD/KRW rate on the Investus home screen is a pre-session reference, not a trading signal. The right mental model: note the rate as context for this month&apos;s DCA conversion, not as a prompt to pause or accelerate.
+            </p>
+            <p className="text-sm leading-relaxed">
+              When sharp FX moves coincide with macro events, read the Investus insight report macro section for context. The relationship between interest rates and the dollar is covered in the <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>CPI &amp; Fed Guide</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>Next Steps</h2>
+            <ol className="list-decimal pl-5 text-sm leading-relaxed space-y-2">
+              <li>Open your brokerage app and find both &ldquo;USD P&amp;L&rdquo; and &ldquo;KRW valuation&rdquo; for your overseas holdings.</li>
+              <li>If you invest monthly, set your conversion day to match your purchase day — same rule each month.</li>
+              <li>Check whether any Korea-listed ETFs you hold carry an &ldquo;(H)&rdquo; suffix and understand what that means.</li>
+              <li>Align currency strategy with your <Link href="/learn/dca" style={{ color: "var(--mint)" }}>DCA</Link> plan and <Link href="/learn/korea-accounts" style={{ color: "var(--mint)" }}>ISA/pension account</Link> roles.</li>
+            </ol>
+          </section>
+
+          <div className="rounded-xl p-4 text-[11px] leading-relaxed"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
+            ⚠️ Educational content only. Not a recommendation to time currency conversions. Principal loss is possible. Not tax or investment advice.
+          </div>
+            </>
+          )}
         </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            다음으로 읽을 글
+            {isKo ? "다음으로 읽을 글" : "Read Next"}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/learn/dca" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">📅</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>적립식 투자(DCA)</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>환율까지 시간에 분산</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "적립식 투자(DCA)" : "Dollar-Cost Averaging (DCA) Guide"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "환율까지 시간에 분산" : "Spread FX risk over time too"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
@@ -212,8 +343,8 @@ export default function UsdKrwPage() {
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <span className="text-xl">🧾</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>미국주식 세금</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>환율이 양도손익에 들어가는 이유</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "미국주식 세금" : "US Stock Taxes for Korean Residents"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? "환율이 양도손익에 들어가는 이유" : "Why FX affects your capital gains calculation"}</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

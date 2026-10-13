@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type ChartPoint = { ts: number; close: number };
 
@@ -35,6 +36,8 @@ export function MiniChartPopup({ symbol, name, price, changePercent, anchorX, an
   const router  = useRouter();
   const pos   = changePercent >= 0;
   const color = pos ? UP : DOWN;
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
 
   useEffect(() => {
     fetch(`/api/stock-chart?symbol=${encodeURIComponent(symbol)}&period=10Y`)
@@ -137,7 +140,7 @@ export function MiniChartPopup({ symbol, name, price, changePercent, anchorX, an
         <div
           style={{ width: CW, height: CH, display: "flex", alignItems: "center", justifyContent: "center" }}
         >
-          <span className="text-[10px]" style={{ color: "var(--muted)" }}>데이터 없음</span>
+          <span className="text-[10px]" style={{ color: "var(--muted)" }}>{isKo ? "데이터 없음" : "No data"}</span>
         </div>
       ) : (
         <svg width={CW} height={CH} viewBox={`0 0 ${CW} ${CH}`} style={{ overflow: "visible" }}>
@@ -153,7 +156,7 @@ export function MiniChartPopup({ symbol, name, price, changePercent, anchorX, an
       )}
 
       <p className="text-[9px] mt-1.5" style={{ color: "var(--muted)" }}>
-        10년 차트 · 탭하면 종목 페이지로 →
+        {isKo ? "10년 차트 · 탭하면 종목 페이지로 →" : "10-year chart · tap to open stock page →"}
       </p>
     </div>
   );

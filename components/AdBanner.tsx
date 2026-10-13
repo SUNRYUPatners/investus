@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 declare global {
   interface Window {
@@ -16,6 +17,8 @@ interface AdBannerProps {
 }
 
 export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
   const pubId  = process.env.NEXT_PUBLIC_ADSENSE_PUB_ID ?? PUB_ID;
   const slotId = slot ?? process.env.NEXT_PUBLIC_ADSENSE_SLOT_ID;
   const pushed  = useRef(false);
@@ -55,7 +58,7 @@ export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
       {/* 광고 미승인 중일 때 표시되는 광고 문의 배너 */}
       {!adFilled && (
         <a
-          href="mailto:sunryupatners@gmail.com?subject=Investus%20광고%20문의"
+          href={`mailto:sunryupatners@gmail.com?subject=Investus%20${isKo ? "광고%20문의" : "Advertising%20Inquiry"}`}
           className="flex items-center justify-between w-full px-4 py-3 transition-opacity hover:opacity-80 active:opacity-60"
           style={{
             background: "var(--muted-2)",
@@ -65,15 +68,17 @@ export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
         >
           <div>
             <p className="text-[11px] font-semibold" style={{ color: "var(--text)" }}>
-              📢 광고 문의
+              {isKo ? "📢 광고 문의" : "📢 Advertise"}
             </p>
             <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
-              증권사·핀테크·투자 관련 광고 · sunryupatners@gmail.com
+              {isKo
+                ? "증권사·핀테크·투자 관련 광고 · sunryupatners@gmail.com"
+                : "Finance & fintech ads · sunryupatners@gmail.com"}
             </p>
           </div>
           <span className="text-[10px] font-semibold px-2 py-1 rounded-lg flex-shrink-0 ml-3"
             style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>
-            문의하기
+            {isKo ? "문의하기" : "Contact"}
           </span>
         </a>
       )}

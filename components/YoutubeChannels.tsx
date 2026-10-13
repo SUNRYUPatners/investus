@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ExternalLink } from "lucide-react";
 import type { YTVideo } from "@/app/api/yt-videos/route";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type Channel = {
   key:     string;
@@ -110,6 +111,8 @@ export function YoutubeChannels() {
   const [avatars, setAvatars] = useState<Record<string, string | null>>({});
   const [videos,  setVideos]  = useState<Record<string, YTVideo[]>>({});
   const [loading, setLoading] = useState(true);
+  const locale = useLocaleCode();
+  if (locale !== "ko") return null;
 
   useEffect(() => {
     Promise.all([
@@ -140,7 +143,7 @@ export function YoutubeChannels() {
                 className="flex items-center gap-1 text-[10px] px-2 py-1 rounded-lg border"
                 style={{ borderColor: "var(--border)", color: "var(--muted)" }}
               >
-                채널 <ExternalLink className="w-3 h-3" />
+                Ch <ExternalLink className="w-3 h-3" />
               </a>
             </div>
 
@@ -160,7 +163,7 @@ export function YoutubeChannels() {
                   style={{ borderColor: "var(--border)", color: "var(--muted)", background: "var(--card)" }}
                 >
                   <ExternalLink className="w-4 h-4" />
-                  {ch.name} 채널 바로가기
+                  {ch.name}
                 </a>
               )}
             </div>
