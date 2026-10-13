@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T13OCT = 1791846000000; // 2026-10-13 08:00 KST
 const T12OCT = 1791759600000; // 2026-10-12 08:00 KST
 const T11OCT = 1791673200000; // 2026-10-11 08:00 KST
 const T08OCT = 1791414000000; // 2026-10-08 08:00 KST
@@ -140,7 +141,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T12OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T13OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -159,6 +160,61 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-13 신규 ────────────────────
+  { id: 122290, symbol: "TSLA", nickname: "제프리스사백이십", holdingLabel: "장투중",
+    content: "제프리스 350→420 올렸는데 HOLD는 그대로야 그게 포인트임. 로보택시 현실화 반영했다는데 왜 매수 안 줌? 21일 실적 보고 나서 판단한다는 거잖아",
+    createdAt: T13OCT + 8*60_000, likes: 53, comments: 0 },
+  { id: 122291, symbol: "TSLA", nickname: "사이버캡오백대", holdingLabel: "장기보유중",
+    content: "오스틴 사이버캡 30일 만에 500대 넘었다는 거 진짜임? 1분 대기면 우버보다 빠른 거잖아 12달러 28센트면 우버 시티라이드보다 싼데",
+    createdAt: T13OCT + 16*60_000, likes: 61, comments: 0 },
+  { id: 122292, symbol: "TSLA", nickname: "달라스확장중", holdingLabel: "매수고민",
+    content: "달라스 67대 휴스턴 32대 텍사스 전체 틀어막고 있는 거네. 탬파 마이애미 올랜도까지 6도시면 생각보다 빠르게 퍼지는 거 아님?",
+    createdAt: T13OCT + 24*60_000, likes: 44, comments: 0 },
+  { id: 122293, symbol: "TSLA", nickname: "중국소매최고치", holdingLabel: "장투중",
+    content: "중국 9월 소매 64837대 올해 최고치라는데 인센티브 얼마나 썼는지가 진짜 숫자임. 21일 컨콜에서 마진 18% 회복 여부 봐야 의미가 생김",
+    createdAt: T13OCT + 32*60_000, likes: 48, comments: 0 },
+  { id: 122294, symbol: "TSLA", nickname: "수출삼만오천", holdingLabel: "보유중",
+    content: "수출 30528대면 상하이가 유럽·동남아 수요까지 커버하는 글로벌 허브 역할 진짜 하는 거지. 프리몬트 부담 덜어주는 구조라 마진에도 좋음",
+    createdAt: T13OCT + 40*60_000, likes: 37, comments: 0 },
+  { id: 122295, symbol: "TSLA", nickname: "머스크앤트로픽", holdingLabel: "관심종목",
+    content: "머스크가 앤트로픽 우려에 동의했다는 게 신기함. AI 고문하지 말라는 거잖아. xAI 그록 훈련 방식에도 영향 줄 수 있나?",
+    createdAt: T13OCT + 48*60_000, likes: 29, comments: 0 },
+  { id: 122296, symbol: "TSLA", nickname: "메가팩팔백사십", holdingLabel: "장투중",
+    content: "아폴로 파워 840M 메가팩 1GW 계약 호주에서 터졌네. 기가와트급 단일 계약이면 에너지 부문 분기 매출 얼마나 뛰는 거임 다음 실적에서 표가 나올 텐데",
+    createdAt: T13OCT + 56*60_000, likes: 66, comments: 0 },
+  { id: 122297, symbol: "SPCX", nickname: "스타링크육천톤", holdingLabel: "장기보유중",
+    content: "스타링크 위성 총질량 6197t이 나머지 전체 5222t 넘었다고? ISS 15배 무게를 우주에 올린 회사가 하나라는 게 진짜 말이 안 됨",
+    createdAt: T13OCT + 64*60_000, likes: 72, comments: 0 },
+  { id: 122298, symbol: "SPCX", nickname: "우주인프라패권", holdingLabel: "보유중",
+    content: "스타링크 캘리포니아 산불 구조 통신에 썼다는 게 포인트임. 지상 인프라 다 끊겼을 때 유일하게 작동한 거잖아. 정부 재난 계약 이게 근거가 되는 거지",
+    createdAt: T13OCT + 72*60_000, likes: 58, comments: 0 },
+  { id: 122299, symbol: "MSFT", nickname: "마이아삼백효율", holdingLabel: "매수고민",
+    content: "Maia 300이 GPU 대비 40% 효율이면 같은 데이터센터 전력으로 AI 처리량 1.4배 나온다는 거잖아. 엔비디아한테 안 좋은 소식인데",
+    createdAt: T13OCT + 80*60_000, likes: 54, comments: 0 },
+  { id: 122300, symbol: "MSFT", nickname: "멀티기가와트이칠", holdingLabel: "장투중",
+    content: "멀티기가와트 2027 배포면 Azure 원가 얼마나 내려가는 거임. 구글 TPU랑 아마존 트레이니움이랑 3파전인데 누가 먼저 멀티GW 찍냐 경쟁임",
+    createdAt: T13OCT + 88*60_000, likes: 43, comments: 0 },
+  { id: 122301, symbol: "TSLA", nickname: "제번스역설실증", holdingLabel: "관심종목",
+    content: "H100 시간당 2.50달러 강세 유지인데 토큰 가격은 하락이라는 a16z 차트 봤음? 효율이 오를수록 수요가 더 빨리 늘어서 컴퓨트 가격이 안 내려가는 거 실증된 거네",
+    createdAt: T13OCT + 96*60_000, likes: 39, comments: 0 },
+  { id: 122302, symbol: "코스피", nickname: "외국인십사일째", holdingLabel: "관심종목",
+    content: "외국인 14일 연속 순매도에 누계 20.93조ㅠ 달러 102.21 미국채 5.24% 이 구조에서 외국인이 올 이유가 없잖아 내일 CPI만 보고 있음",
+    createdAt: T13OCT + 104*60_000, likes: 47, comments: 0 },
+  { id: 122303, symbol: "삼성전자", nickname: "삼성수급망가짐", holdingLabel: "보유중",
+    content: "250500원인데 자사주 매입도 끝났고 외국인 계속 팔고 기관도 역부족이고 3분기 역대 실적 발표해도 주가가 이 꼴이면 뭘 더 기다려야 함",
+    createdAt: T13OCT + 112*60_000, likes: 55, comments: 0 },
+  { id: 122304, symbol: "BTC", nickname: "CPI기다리는중", holdingLabel: "관심종목",
+    content: "비트코인 82929달러 -0.70% 내일 CPI 앞두고 다들 눈치 보는 거잖아 물가 높으면 80000 밑으로 갈 수도 있고 둔화 확인 되면 85000 넘을 것 같은데",
+    createdAt: T13OCT + 120*60_000, likes: 41, comments: 0 },
+  { id: 122305, symbol: "BTC", nickname: "현물ETF다섯주연속", holdingLabel: "장투중",
+    content: "현물 ETF 5주 연속 순유입이면 기관이 전략적으로 쌓고 있는 거임. 83000 하단 지지 여기서 무너지면 기관도 흔들리는 거라 중요한 지지선임",
+    createdAt: T13OCT + 128*60_000, likes: 36, comments: 0 },
+  { id: 122306, symbol: "SOL", nickname: "솔라나CPI촉매", holdingLabel: "매수고민",
+    content: "SOL 110.80 ETH 2500 CPI 결과 나오면 솔라나가 제일 빨리 튀는 패턴 반복될 것 같음. 디파이 예치 자산이 이더리움 수준 근접했다는 데이터가 받쳐주는 거고",
+    createdAt: T13OCT + 136*60_000, likes: 33, comments: 0 },
+  { id: 122307, symbol: "BTC", nickname: "아람코유가충격", holdingLabel: "관심종목",
+    content: "사우디 아람코 재고 60억 배럴 이하 경고인데 유가 115 가면 인플레 재점화라 금리 인하 2027로 미뤄지는 시나리오 가동됨. 코인이고 주식이고 다 역풍",
+    createdAt: T13OCT + 144*60_000, likes: 28, comments: 0 },
   // ── 2026-10-12 신규 ────────────────────
   { id: 122242, symbol: "TSLA", nickname: "파리첫눈목격자", holdingLabel: "장투중",
     content: "사이버캡이 진짜 파리 모터쇼 무대에 서있어 ㄷㄷ 스티어링 휠 없는 차를 유럽 사람들이 실제로 보는 첫날인 거잖아 테슬라 스탠드 C25에 가면 탈 수도 있나",
