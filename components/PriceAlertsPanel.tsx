@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Bell, Lock, Plus, Trash2 } from "lucide-react";
 import { getSupabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type AlertRow = {
   id: string;
@@ -63,6 +64,8 @@ export function PriceAlertsPanel({
 }) {
   const { user } = useAuth();
   const isPro = user?.isPro === true;
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
 
   const [alerts, setAlerts] = useState<AlertRow[]>([]);
   const [max, setMax] = useState(10);
@@ -95,14 +98,14 @@ export function PriceAlertsPanel({
     setError("");
     const t = parseFloat(target);
     if (!symbol || !Number.isFinite(t) || t <= 0) {
-      setError("종목과 목표가를 입력하세요");
+      setError(isKo ? "종목과 목표가를 입력하세요" : "Please enter a symbol and target price");
       return;
     }
     setLoading(true);
     try {
       const push = await ensurePushSubscription();
       if (!push) {
-        setError("브라우저 알림 권한이 필요합니다");
+        setError(isKo ? "브라우저 알림 권한이 필요합니다" : "Browser notification permission required");
         setLoading(false);
         return;
       }
@@ -119,20 +122,27 @@ export function PriceAlertsPanel({
       });
       const data = await res.json() as { error?: string; alert?: AlertRow };
       if (!res.ok) {
-        const map: Record<string, string> = {
-          limit_reached: `최대 ${max}개까지 설정할 수 있어요`,
-          duplicate: "같은 종목·방향 알림이 이미 있어요",
-          pro_required: "Pro 구독이 필요합니다",
-          push_subscription_required: "푸시 구독이 필요합니다",
-        };
-        setError(map[data.error ?? ""] ?? "저장에 실패했습니다");
+        const map: Record<string, string> = isKo
+          ? {
+              limit_reached: `최대 ${max}개까지 설정할 수 있어요`,
+              duplicate: "같은 종목·방향 알림이 이미 있어요",
+              pro_required: "Pro 구독이 필요합니다",
+              push_subscription_required: "푸시 구독이 필요합니다",
+            }
+          : {
+              limit_reached: `Maximum ${max} alerts allowed`,
+              duplicate: "An alert for this symbol & direction already exists",
+              pro_required: "Pro subscription required",
+              push_subscription_required: "Push subscription required",
+            };
+        setError(map[data.error ?? ""] ?? (isKo ? "저장에 실패했습니다" : "Failed to save"));
         setLoading(false);
         return;
       }
       setTarget("");
       await refresh();
     } catch {
-      setError("네트워크 오류");
+      setError(isKo ? "네트워크 오류" : "Network error");
     }
     setLoading(false);
   };
@@ -157,7 +167,7 @@ export function PriceAlertsPanel({
       >
         <div className="flex items-center gap-2 mb-2">
           <Bell className="w-4 h-4" style={{ color: "#f472b6" }} />
-          <p className="text-sm font-bold" style={{ color: "var(--text)" }}>가격 알림</p>
+          <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "가격 알림" : "Price Alerts"}</p>
           <span
             className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
             style={{ background: "rgba(244,114,182,0.15)", color: "#f472b6" }}
@@ -166,7 +176,9 @@ export function PriceAlertsPanel({
           </span>
         </div>
         <p className="text-[12px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
-          보유·관심 종목 목표가 도달 시 푸시로 알려드립니다. 종목당 상·하한가 각 1개.
+          {isKo
+            ? "보유·관심 종목 목표가 도달 시 푸시로 알려드립니다. 종목당 상·하한가 각 1개."
+            : "Get push notifications when your holdings hit a target price. One above & one below per ticker."}
         </p>
         <Link
           href="/subscribe"
@@ -174,7 +186,7 @@ export function PriceAlertsPanel({
           style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}
         >
           <Lock className="w-3.5 h-3.5" />
-          Pro로 알림 설정
+          {isKo ? "Pro로 알림 설정" : "Set alerts with Pro"}
         </Link>
       </div>
     );
@@ -191,7 +203,7 @@ export function PriceAlertsPanel({
       <div className="px-4 pt-4 pb-3 border-b flex items-center gap-2"
         style={{ borderColor: "rgba(244,114,182,0.12)" }}>
         <Bell className="w-4 h-4" style={{ color: "#f472b6" }} />
-        <p className="text-sm font-bold" style={{ color: "var(--text)" }}>가격 알림</p>
+        <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "가격 알림" : "Price Alerts"}</p>
         <span className="text-[10px] ml-auto" style={{ color: "var(--muted)" }}>
           {active.length}/{max}
         </span>
@@ -205,7 +217,7 @@ export function PriceAlertsPanel({
             className="text-[12px] rounded-xl px-3 py-2 border outline-none"
             style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}
           >
-            {symbols.length === 0 && <option value="">종목 없음</option>}
+            {symbols.length === 0 && <option value="">{isKo ? "종목 없음" : "No symbols"}</option>}
             {symbols.map((s) => (
               <option key={s} value={s}>{s}</option>
             ))}
@@ -216,13 +228,13 @@ export function PriceAlertsPanel({
             className="text-[12px] rounded-xl px-3 py-2 border outline-none"
             style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}
           >
-            <option value="above">이상 돌파</option>
-            <option value="below">이하 하회</option>
+            <option value="above">{isKo ? "이상 돌파" : "Above"}</option>
+            <option value="below">{isKo ? "이하 하회" : "Below"}</option>
           </select>
           <input
             type="number"
             inputMode="decimal"
-            placeholder={live ? `현재 $${live.toFixed(2)}` : "목표가 $"}
+            placeholder={live ? `${isKo ? "현재" : "Now"} $${live.toFixed(2)}` : (isKo ? "목표가 $" : "Target $")}
             value={target}
             onChange={(e) => setTarget(e.target.value)}
             className="flex-1 min-w-[100px] text-[12px] rounded-xl px-3 py-2 border outline-none"
@@ -235,7 +247,7 @@ export function PriceAlertsPanel({
             style={{ background: "rgba(244,114,182,0.2)", color: "#f472b6" }}
           >
             <Plus className="w-3.5 h-3.5" />
-            추가
+            {isKo ? "추가" : "Add"}
           </button>
         </div>
 
@@ -245,7 +257,7 @@ export function PriceAlertsPanel({
 
         {alerts.length === 0 ? (
           <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-            설정된 알림이 없습니다. 목표가 도달 시 푸시로 알려드립니다.
+            {isKo ? "설정된 알림이 없습니다. 목표가 도달 시 푸시로 알려드립니다." : "No alerts set. You'll get a push notification when the target price is hit."}
           </p>
         ) : (
           <ul className="flex flex-col gap-2">
@@ -267,14 +279,14 @@ export function PriceAlertsPanel({
                     </span>
                   </p>
                   <p className="text-[10px]" style={{ color: "var(--muted)" }}>
-                    {a.firedAt ? "발송 완료" : "대기 중"}
+                    {a.firedAt ? (isKo ? "발송 완료" : "Sent") : (isKo ? "대기 중" : "Pending")}
                   </p>
                 </div>
                 <button
                   onClick={() => void remove(a.id)}
                   className="p-1.5 rounded-lg"
                   style={{ color: "var(--muted)" }}
-                  aria-label="삭제"
+                  aria-label={isKo ? "삭제" : "Remove"}
                 >
                   <Trash2 className="w-3.5 h-3.5" />
                 </button>

@@ -134,7 +134,7 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
 
         <div className="flex-1 text-left min-w-0">
           <div className="flex items-center gap-1.5">
-            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{guru.name}</p>
+            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? guru.name : guru.nameEn}</p>
             {info && (
               <button
                 onClick={(e) => { e.stopPropagation(); setInfoOpen((v) => !v); }}
@@ -149,7 +149,7 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
         </div>
 
         <div className="text-right flex-shrink-0 mr-1">
-          <p className="text-xs font-semibold" style={{ color: guru.color }}>{guru.aum}</p>
+          <p className="text-xs font-semibold" style={{ color: guru.color }}>{isKo ? guru.aum : guru.aumEn}</p>
           <div className="flex items-center justify-end gap-1 mt-0.5">
             <span className="text-[9px] px-1 py-0.5 rounded"
               style={{ background: `${BADGE[guru.disclosureType].color}18`, color: BADGE[guru.disclosureType].color }}>
@@ -161,7 +161,7 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
             {isKo ? "공시 " : "Filed "}{guru.filingDate}
           </p>
           <p className="text-[9px] font-mono-num" style={{ color: isGuruFilingOverdue(guru) ? "#f59e0b" : "var(--muted)" }}>
-            {isGuruFilingOverdue(guru) ? (isKo ? "공시 대기 · " : "Pending · ") : (isKo ? "다음 " : "Next ")}{guru.nextFilingDate}
+            {isGuruFilingOverdue(guru) ? (isKo ? "공시 대기 · " : "Pending · ") : (isKo ? "다음 " : "Next ")}{isKo ? guru.nextFilingDate : (guru.nextFilingDateEn ?? guru.nextFilingDate)}
           </p>
         </div>
 

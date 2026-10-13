@@ -28,6 +28,7 @@ type PortfolioCtx = {
   fetchNews?:    boolean;   // 오늘 등락 이유 질문 시 전날 뉴스 조회
   history?:      { role: "user" | "assistant"; content: string }[];
   isPro?:        boolean;
+  locale?:       string;
 };
 
 // 전날(~오늘) 종목별 Finnhub 뉴스 헤드라인 조회
@@ -162,11 +163,12 @@ export async function POST(req: NextRequest) {
   try { body = await req.json(); }
   catch { return NextResponse.json({ error: "bad_request" }, { status: 400 }); }
 
+  const isEn = body.locale === "en";
   if (!body.question?.trim()) {
-    return NextResponse.json({ answer: "질문을 입력해주세요." });
+    return NextResponse.json({ answer: isEn ? "Please enter a question." : "질문을 입력해주세요." });
   }
   if (!body.holdings || body.holdings.length === 0) {
-    return NextResponse.json({ answer: "포트폴리오에 종목을 먼저 추가해주세요." });
+    return NextResponse.json({ answer: isEn ? "Please add holdings to your portfolio first." : "포트폴리오에 종목을 먼저 추가해주세요." });
   }
 
   // 오늘 등락 이유 질문 시: 전날 종목별 뉴스 조회
@@ -187,8 +189,33 @@ export async function POST(req: NextRequest) {
   const today = new Date().toLocaleDateString("ko-KR", {
     year: "numeric", month: "long", day: "numeric", weekday: "long",
   });
+  const system = isEn
+    ? `You are a personal AI portfolio advisor for retail US stock investors.
+Today: ${today}
 
-  const system = `당신은 한국 서학개미(미국 주식 개인 투자자)를 위한 개인 포트폴리오 AI 비서입니다.
+${portfolioSummary}${macroSummary ? `\n\n${macroSummary}` : ""}${newsSection}
+
+⚡ Sentiment rule (most important):
+- If "★ Today's portfolio weighted change" is positive → describe the portfolio as up/rising/strong
+- If negative → describe it as down/falling/weak
+- Never use bearish language when the number is positive, and vice versa
+- State the overall direction first, then break down individual holdings
+
+Role:
+- Provide personalized analysis and insights based on the user's actual portfolio data
+- Connect Futures Map / macro environment to portfolio context
+- Clearly separate today's winners and losers with specific percentages
+- No investment advice, no guaranteed returns, no trade timing
+
+Response rules:
+- In English, concise (5–9 sentences)
+- Open with the overall portfolio direction today
+- In the 2nd or 3rd sentence, briefly summarize today's macro / Futures Map environment
+- Include specific numbers (%, $)
+- Friendly, direct tone (1–2 emojis)
+- No disclaimer needed (shown in UI)
+${body.isPro ? "- Pro user: end with a one-liner on related tickers/themes (e.g. 「Related: NVDA · semis earnings cycle」)" : ""}`
+    : `당신은 한국 서학개미(미국 주식 개인 투자자)를 위한 개인 포트폴리오 AI 비서입니다.
 오늘 날짜: ${today}
 
 ${portfolioSummary}${macroSummary ? `\n\n${macroSummary}` : ""}${newsSection}

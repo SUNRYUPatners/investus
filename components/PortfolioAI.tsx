@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Send, Sparkles, ChevronDown, ChevronUp } from "lucide-react";
 import { AdGateModal } from "@/components/AdGateModal";
 import { useAuth } from "@/hooks/useAuth";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type LiveQ = { symbol: string; price: number; changePercent: number };
 
@@ -16,13 +17,21 @@ type HoldingInput = {
 
 type Message = { role: "user" | "assistant"; content: string };
 
-const CHIPS = [
+const CHIPS_KO = [
   "내 포트 현재 상태 요약해줘",
   "오늘 왜 떨어졌어?",
   "오늘 왜 올랐어?",
   "가장 손실 큰 종목이 뭐야?",
   "종목 비중이 너무 편향된 거 아냐?",
   "리밸런싱 해야 할까?",
+];
+const CHIPS_EN = [
+  "Summarize my portfolio",
+  "Why did it drop today?",
+  "Why did it rise today?",
+  "What's my biggest loser?",
+  "Is my allocation too concentrated?",
+  "Should I rebalance?",
 ];
 
 const DAILY_KEY = () => {
@@ -48,6 +57,9 @@ export function PortfolioAI({
 }) {
   const { user } = useAuth();
   const isPro = user?.isPro === true;
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const CHIPS = isKo ? CHIPS_KO : CHIPS_EN;
 
   const [messages,   setMessages]   = useState<Message[]>([]);
   const [input,      setInput]      = useState("");
@@ -116,18 +128,19 @@ export function PortfolioAI({
           question: trimmed,
           ...buildCtx(),
           history: messages.slice(-4),
+          locale: localeCode,
           ...(opts?.fetchNews ? { fetchNews: true } : {}),
         }),
       });
       const data = await res.json() as { answer?: string };
-      const answer = data.answer ?? "응답을 받지 못했습니다.";
+      const answer = data.answer ?? (isKo ? "응답을 받지 못했습니다." : "No response received.");
       setMessages([...next, { role: "assistant", content: answer }]);
 
       const newCount = count + 1;
       setCount(newCount);
       try { localStorage.setItem(DAILY_KEY(), String(newCount)); } catch {}
     } catch {
-      setMessages([...next, { role: "assistant", content: "오류가 발생했습니다. 잠시 후 다시 시도해주세요." }]);
+      setMessages([...next, { role: "assistant", content: isKo ? "오류가 발생했습니다. 잠시 후 다시 시도해주세요." : "An error occurred. Please try again shortly." }]);
     }
     setLoading(false);
   };
@@ -144,7 +157,7 @@ export function PortfolioAI({
         style={{ borderColor: "rgba(var(--mint-rgb),0.1)", background: "rgba(var(--mint-rgb),0.03)" }}>
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4" style={{ color: "var(--mint)" }} />
-          <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>나만의 AI 투자비서</p>
+          <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{isKo ? "나만의 AI 투자비서" : "My AI Portfolio Advisor"}</p>
           <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
             style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>
             {isPro ? "Pro" : "Claude"}
@@ -153,7 +166,9 @@ export function PortfolioAI({
         <div className="flex items-center gap-2">
           {!collapsed && !limitReached && (
             <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-              {isPro ? `오늘 ${remaining}/${PRO_LIMIT}회` : `오늘 ${remaining}회 남음`}
+              {isKo
+              ? (isPro ? `오늘 ${remaining}/${PRO_LIMIT}회` : `오늘 ${remaining}회 남음`)
+              : (isPro ? `${remaining}/${PRO_LIMIT} today` : `${remaining} left today`)}
             </span>
           )}
           <button onClick={() => setCollapsed((v) => !v)}
@@ -171,9 +186,13 @@ export function PortfolioAI({
           {messages.length === 0 && (
             <div className="px-4 py-3 border-b flex-shrink-0" style={{ borderColor: "rgba(var(--mint-rgb),0.08)" }}>
               <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                {isPro
-                  ? `내 종목·수익률·비중을 알고 있어요. Pro는 하루 ${PRO_LIMIT}회까지 이용할 수 있어요.`
-                  : `내 종목·수익률·비중을 모두 알고 있어요. 무료 ${FREE_LIMIT}회 · Pro는 하루 ${PRO_LIMIT}회.`}
+                {isKo
+                  ? (isPro
+                    ? `내 종목·수익률·비중을 알고 있어요. Pro는 하루 ${PRO_LIMIT}회까지 이용할 수 있어요.`
+                    : `내 종목·수익률·비중을 모두 알고 있어요. 무료 ${FREE_LIMIT}회 · Pro는 하루 ${PRO_LIMIT}회.`)
+                  : (isPro
+                    ? `I know your holdings, returns, and weights. Pro members get up to ${PRO_LIMIT} analyses per day.`
+                    : `I know your holdings, returns, and weights. Free: ${FREE_LIMIT}/day · Pro: ${PRO_LIMIT}/day.`)}
               </p>
             </div>
           )}
@@ -235,14 +254,14 @@ export function PortfolioAI({
               </div>
               <div>
                 <p className="text-sm font-bold mb-0.5" style={{ color: "var(--text)" }}>
-                  {isPro
-                    ? `오늘 Pro 분석 ${PRO_LIMIT}회 소진`
-                    : `오늘 무료 분석 ${baseLimit}회 소진`}
+                  {isKo
+                    ? (isPro ? `오늘 Pro 분석 ${PRO_LIMIT}회 소진` : `오늘 무료 분석 ${baseLimit}회 소진`)
+                    : (isPro ? `Pro limit reached (${PRO_LIMIT}/day)` : `Free limit reached (${baseLimit}/day)`)}
                 </p>
                 <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-                  {isPro
-                    ? "내일 다시 이용할 수 있어요"
-                    : "광고 시청으로 1회 추가 · 또는 Pro로 하루 30회"}
+                  {isKo
+                    ? (isPro ? "내일 다시 이용할 수 있어요" : "광고 시청으로 1회 추가 · 또는 Pro로 하루 30회")
+                    : (isPro ? "Come back tomorrow" : "Watch an ad for +1 · or upgrade to Pro for 30/day")}
                 </p>
               </div>
               {!isPro && (
@@ -251,17 +270,17 @@ export function PortfolioAI({
                     onClick={() => setShowAdGate(true)}
                     className="w-full py-2.5 rounded-xl text-sm font-bold transition-opacity active:opacity-80"
                     style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)", border: "1px solid rgba(var(--mint-rgb),0.3)" }}>
-                    광고 시청하고 1회 추가 →
+                    {isKo ? "광고 시청하고 1회 추가 →" : "Watch ad for +1 →"}
                   </button>
                   <Link
                     href="/subscribe"
                     className="w-full py-2.5 rounded-xl text-sm font-bold text-center transition-opacity active:opacity-80"
                     style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}>
-                    Pro로 계속하기 (하루 {PRO_LIMIT}회)
+                    {isKo ? `Pro로 계속하기 (하루 ${PRO_LIMIT}회)` : `Continue with Pro (${PRO_LIMIT}/day)`}
                   </Link>
                 </>
               )}
-              <p className="text-[9px]" style={{ color: "var(--muted)" }}>투자 참고용 · 투자 권유 아님</p>
+              <p className="text-[9px]" style={{ color: "var(--muted)" }}>{isKo ? "투자 참고용 · 투자 권유 아님" : "For reference only · Not investment advice"}</p>
             </div>
           ) : (
             <div className="px-4 py-3 border-t flex-shrink-0" style={{ borderColor: "rgba(var(--mint-rgb),0.1)" }}>
@@ -273,7 +292,7 @@ export function PortfolioAI({
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && ask(input)}
-                  placeholder="내 포트폴리오에 대해 뭐든 물어보세요"
+                  placeholder={isKo ? "내 포트폴리오에 대해 뭐든 물어보세요" : "Ask anything about my portfolio"}
                   className="flex-1 text-[13px] bg-transparent outline-none"
                   style={{ color: "var(--text)" }}
                 />
@@ -284,7 +303,7 @@ export function PortfolioAI({
                 </button>
               </div>
               <p className="text-[9px] text-center mt-1.5" style={{ color: "var(--muted)" }}>
-                투자 참고용 · 투자 권유 아님
+                {isKo ? "투자 참고용 · 투자 권유 아님" : "For reference only · Not investment advice"}
               </p>
             </div>
           )}
@@ -293,9 +312,9 @@ export function PortfolioAI({
 
       {showAdGate && (
         <AdGateModal
-          title="AI 투자비서 추가 이용"
-          headerText="무료 이용권 추가"
-          confirmText="분석하기"
+          title={isKo ? "AI 투자비서 추가 이용" : "Unlock AI Analysis"}
+          headerText={isKo ? "무료 이용권 추가" : "Add Free Session"}
+          confirmText={isKo ? "분석하기" : "Analyze"}
           onConfirm={() => {
             const newBonus = adBonus + 1;
             setAdBonus(newBonus);

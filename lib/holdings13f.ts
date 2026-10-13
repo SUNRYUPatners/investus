@@ -16,15 +16,18 @@ export type DisclosureType = "13F" | "STOCK_ACT";
 
 export type Guru = {
   id:             string;
-  name:           string;
+  name:           string;    // Korean display name
+  nameEn:         string;    // English display name
   fund:           string;
   emoji:          string;
   color:          string;
   quarter:        string;
-  aum:            string;
+  aum:            string;    // Korean (억 unit)
+  aumEn:          string;    // English (B/M unit)
   disclosureType: DisclosureType;
-  filingDate:     string;  // SEC 공시일 (YYYY-MM-DD)
-  nextFilingDate: string;  // 다음 공시 예정일
+  filingDate:     string;
+  nextFilingDate: string;
+  nextFilingDateEn: string;
   holdings:       Holding[];
 };
 
@@ -32,14 +35,17 @@ export const GURUS: Guru[] = [
   {
     id:             "berkshire",
     name:           "워렌 버핏",
+    nameEn:         "Warren Buffett",
     fund:           "Berkshire Hathaway",
     emoji:          "🎩",
     color:          "#fb923c",
     quarter:        "2026 Q1",
     aum:            "$2,631억",
+    aumEn:          "$263B",
     disclosureType: "13F",
     filingDate:     "2026-05-15",
     nextFilingDate: "2026-08-14",
+    nextFilingDateEn: "2026-08-14",
     holdings: [
       { symbol: "AAPL",  name: "Apple",                shares: 227918, portfolioPct: 22.0 },
       { symbol: "AXP",   name: "American Express",     shares: 151611, portfolioPct: 17.4 },
@@ -61,14 +67,17 @@ export const GURUS: Guru[] = [
   {
     id:             "ark",
     name:           "캐시 우드",
+    nameEn:         "Cathie Wood",
     fund:           "ARK Invest (ARKK)",
     emoji:          "🚀",
     color:          "#60a5fa",
     quarter:        "2026 Q1",
     aum:            "$129억",
+    aumEn:          "$12.9B",
     disclosureType: "13F",
     filingDate:     "2026-05-12",
     nextFilingDate: "2026-08-14",
+    nextFilingDateEn: "2026-08-14",
     holdings: [
       { symbol: "TSLA",  name: "Tesla",                shares:  2800, portfolioPct: 8.2 },
       { symbol: "AMD",   name: "AMD",                  shares:  2700, portfolioPct: 4.3 },
@@ -90,14 +99,17 @@ export const GURUS: Guru[] = [
   {
     id:             "baron",
     name:           "론 베론",
+    nameEn:         "Ron Baron",
     fund:           "Baron Capital Management",
     emoji:          "🏰",
     color:          "#f97316",
     quarter:        "2026 Q1",
     aum:            "$331억",
+    aumEn:          "$33.1B",
     disclosureType: "13F",
     filingDate:     "2026-05-15",
     nextFilingDate: "2026-08-14",
+    nextFilingDateEn: "2026-08-14",
     holdings: [
       { symbol: "TSLA",  name: "Tesla",                shares: 11900, portfolioPct: 13.4 },
       { symbol: "ACGL",  name: "Arch Capital",         shares: 16700, portfolioPct:  4.8 },
@@ -119,14 +131,17 @@ export const GURUS: Guru[] = [
   {
     id:             "pelosi",
     name:           "낸시 펠로시",
-    fund:           "Paul Pelosi (하원의원 공시)",
+    nameEn:         "Nancy Pelosi",
+    fund:           "Paul Pelosi (House disclosure)",
     emoji:          "🏛️",
     color:          "#f472b6",
     quarter:        "2025 Q4",
     aum:            "비공개",
+    aumEn:          "Undisclosed",
     disclosureType: "STOCK_ACT",
     filingDate:     "2026-01-22",
     nextFilingDate: "수시 공시",
+    nextFilingDateEn: "Rolling",
     holdings: [
       { symbol: "NVDA",  name: "NVIDIA",             shares:   200, portfolioPct: 28.4 },
       { symbol: "AAPL",  name: "Apple",              shares:   500, portfolioPct: 18.2 },
@@ -142,14 +157,17 @@ export const GURUS: Guru[] = [
   {
     id:             "leopold",
     name:           "레오폴드 아셴브레너",
+    nameEn:         "Leopold Aschenbrenner",
     fund:           "Situational Awareness Capital",
     emoji:          "🤖",
     color:          "#34d399",
     quarter:        "2025 Q4",
     aum:            "비공개",
+    aumEn:          "Undisclosed",
     disclosureType: "STOCK_ACT",
     filingDate:     "2026-01-10",
     nextFilingDate: "수시 공시",
+    nextFilingDateEn: "Rolling",
     holdings: [
       { symbol: "SPCX",  name: "SpaceX (SPCX ETF)",  shares:   530, portfolioPct: 34.6 },
       { symbol: "NVDA",  name: "NVIDIA",              shares:   210, portfolioPct: 24.1 },
@@ -162,14 +180,17 @@ export const GURUS: Guru[] = [
   {
     id:             "ackman",
     name:           "빌 애크먼",
+    nameEn:         "Bill Ackman",
     fund:           "Pershing Square",
     emoji:          "♟️",
     color:          "#a78bfa",
     quarter:        "2026 Q1",
     aum:            "$137억",
+    aumEn:          "$13.7B",
     disclosureType: "13F",
     filingDate:     "2026-05-15",
     nextFilingDate: "2026-08-14",
+    nextFilingDateEn: "2026-08-14",
     holdings: [
       { symbol: "BN",    name: "Brookfield",             shares: 59697, portfolioPct: 17.6 },
       { symbol: "AMZN",  name: "Amazon",                 shares: 11452, portfolioPct: 17.4 },
@@ -186,14 +207,17 @@ export const GURUS: Guru[] = [
   {
     id:             "druckenmiller",
     name:           "스탠리 드러켄밀러",
+    nameEn:         "Stanley Druckenmiller",
     fund:           "Duquesne Family Office",
     emoji:          "🦅",
     color:          "#fbbf24",
     quarter:        "2026 Q1",
     aum:            "$29억",
+    aumEn:          "$2.9B",
     disclosureType: "13F",
     filingDate:     "2026-05-15",
     nextFilingDate: "2026-08-14",
+    nextFilingDateEn: "2026-08-14",
     holdings: [
       { symbol: "NTRA",  name: "Natera",                 shares:  3064, portfolioPct: 20.9 },
       { symbol: "INSM",  name: "Insmed",                 shares:  1154, portfolioPct:  6.4 },

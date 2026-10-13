@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { getT, type Locale } from "@/lib/i18n";
 import Link from "next/link";
-import { ThumbsUp, MessageCircle, Lock, ShieldCheck, Upload, User, Sparkles, Users, TrendingUp, Send, X, EyeOff, FileCheck, Heart, Pencil, Check } from "lucide-react";
+import { ThumbsUp, MessageCircle, Lock, ShieldCheck, Upload, User, Sparkles, TrendingUp, Send, X, EyeOff, FileCheck, Heart, Pencil, Check } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CreatorCard } from "@/components/CreatorCard";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
@@ -511,7 +511,7 @@ function AskAI({ symbol, wall }: { symbol: string; wall?: WallT }) {
 // ── Page ─────────────────────────────────────────────────────────────────────
 
 type VerifyMode    = "none" | "upload" | "broker" | "broker-notice";
-type MainTab       = "discussion" | "creator" | "analyst";
+type MainTab       = "discussion" | "analyst";
 type AnalystStatus  = "none" | "approved" | "rejected";
 type AnalystPost    = { id: number; alias: string; content: string; symbol: string | null; likes: number; comments?: number; created_at: string; liked: boolean };
 type AnalystComment = { id: number; alias: string; content: string; created_at: string };
@@ -548,7 +548,7 @@ function computeDefaultSymbol(posts: Post[], fallback = "AAPL", market: MarketId
 function computeDefaultTab(): MainTab {
   if (typeof window !== "undefined") {
     const t = new URLSearchParams(window.location.search).get("tab");
-    if (t === "discussion" || t === "creator" || t === "analyst") return t;
+    if (t === "discussion" || t === "analyst") return t;
   }
   return "analyst";
 }
@@ -1246,21 +1246,6 @@ export default function WallPage() {
           </div>
           <div className="flex items-center gap-2">
             <LangToggle value={viewLang} onChange={setViewLang} />
-          {mainTab === "creator" && (
-            hasCreatorProfile ? (
-              <Link href="/creator/dashboard"
-                className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
-                style={{ background: "var(--down)", color: "#fff" }}>
-                ✦ {w.creatorMyChannel}
-              </Link>
-            ) : (
-              <Link href="/creator/setup"
-                className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
-                style={{ background: "var(--down)", color: "#fff" }}>
-                <Sparkles className="w-3.5 h-3.5" />{w.creatorChannelBtn}
-              </Link>
-            )
-          )}
           {mainTab === "discussion" && (
             <div className="flex items-center gap-1 text-[10px] px-2 py-1 rounded-full border"
               style={{ borderColor: "rgba(var(--up-rgb),0.35)", color: "var(--up)" }}>
@@ -1286,13 +1271,6 @@ export default function WallPage() {
               ? { background: "var(--up)", color: "#fff" }
               : { color: "var(--muted)" }}>
             <MessageCircle className="w-3.5 h-3.5" />{w.tabDiscussion}
-          </button>
-          <button onClick={() => setMainTab("creator")}
-            className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
-            style={mainTab === "creator"
-              ? { background: "var(--down)", color: "#fff" }
-              : { color: "var(--muted)" }}>
-            <Users className="w-3.5 h-3.5" />{w.tabCreator}
           </button>
         </div>
 
@@ -1537,8 +1515,8 @@ export default function WallPage() {
           </>
         )}
 
-        {/* ── CREATOR TAB ── */}
-        {mainTab === "creator" && (
+        {/* ── CREATOR TAB (hidden) ── */}
+        {false && (
           <div className="px-4">
             <div className="lg:grid lg:grid-cols-2 lg:gap-6 lg:items-start mb-5">
               {hasCreatorProfile ? (
