@@ -18,6 +18,7 @@ function ImageLightbox({ src, onClose }: { src: string; onClose: () => void }) {
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const [translate, setTranslate] = useState({ x: 0, y: 0 });
   const [dragOpacity, setDragOpacity] = useState(1);
+  const isKoLb = useLocaleCode() === "ko";
   const isTracking = useRef(false);
 
   // ESC 키로 닫기
@@ -86,7 +87,7 @@ function ImageLightbox({ src, onClose }: { src: string; onClose: () => void }) {
 
       {/* 배경 클릭 닫기 안내 — 데스크탑 */}
       <p className="hidden lg:block absolute top-4 left-1/2 -translate-x-1/2 text-xs text-white/40 pointer-events-none">
-        배경 클릭 또는 ESC로 닫기
+        {isKoLb ? "배경 클릭 또는 ESC로 닫기" : "Click background or ESC to close"}
       </p>
 
       {/* 이미지 영역 */}
@@ -176,6 +177,7 @@ function ImageGrid({ images, failedImgs, onError, onOpen }: {
   onError: (i: number) => void;
   onOpen: (src: string) => void;
 }) {
+  const isKoGrid = useLocaleCode() === "ko";
   const visible = images.filter((_, i) => !failedImgs.has(i));
   if (visible.length === 0) return null;
   return (
@@ -216,7 +218,7 @@ function ImageGrid({ images, failedImgs, onError, onOpen }: {
               className="absolute bottom-2 right-2 text-[9px] px-2 py-1 rounded-full font-semibold opacity-70 group-hover:opacity-100 transition-opacity"
               style={{ background: "rgba(0,0,0,0.55)", color: "rgba(255,255,255,0.85)" }}
             >
-              🔍 클릭하여 확대
+              {isKoGrid ? "🔍 클릭하여 확대" : "🔍 Click to zoom"}
             </span>
           </button>
         );
@@ -230,6 +232,7 @@ function ImageGrid({ images, failedImgs, onError, onOpen }: {
 function LockedReportGroup({ reports }: { reports: Report[] }) {
   const [expanded, setExpanded] = useState(false);
   const t = useLocale();
+  const isKoLock = useLocaleCode() === "ko";
   return (
     <div className="rounded-2xl border overflow-hidden" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
       {/* 헤더 토글 */}
@@ -243,7 +246,7 @@ function LockedReportGroup({ reports }: { reports: Report[] }) {
         <div className="flex-1 min-w-0">
           <p className="text-sm font-bold leading-none mb-0.5" style={{ color: "var(--text)" }}>{t.reports.lockedCount(reports.length)}</p>
           <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-            유료 구독 상품 — 이전 날짜 리포트 열람 · {proPriceSummaryKo()}
+            {isKoLock ? `유료 구독 상품 — 이전 날짜 리포트 열람 · ${proPriceSummaryKo()}` : "Premium subscription — access previous reports"}
           </p>
         </div>
         <ChevronDown
@@ -287,7 +290,9 @@ function LockedReportGroup({ reports }: { reports: Report[] }) {
           className="w-full py-2.5 rounded-xl text-sm font-bold text-black text-center block active:opacity-80 transition-opacity"
           style={{ background: "var(--mint)" }}
         >
-          {`구독하기 ${formatSubPrice()}/월 · ${formatSubPrice(SUBSCRIPTION.yearlyPriceKrw)}/년 (${SUBSCRIPTION.yearlyDiscountPercent}% 할인)`}
+          {isKoLock
+            ? `구독하기 ${formatSubPrice()}/월 · ${formatSubPrice(SUBSCRIPTION.yearlyPriceKrw)}/년 (${SUBSCRIPTION.yearlyDiscountPercent}% 할인)`
+            : "Subscribe"}
         </Link>
       </div>
     </div>

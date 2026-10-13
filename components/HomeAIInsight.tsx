@@ -210,10 +210,15 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
         method:  "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          question: market === "us"
-            ? "오늘 내 포트폴리오 각 종목이 왜 올랐거나 내렸는지, 그리고 Futures Map 기준 매크로 환경이 내 종목들에 어떤 영향을 줬는지 같이 분석해줘"
-            : `${cfg.labelKo} 포트폴리오 기준으로 오늘 각 보유 자산이 왜 올랐거나 내렸는지, 해당 시장 매크로·뉴스 맥락과 함께 분석해줘`,
+          question: isKo
+            ? (market === "us"
+                ? "오늘 내 포트폴리오 각 종목이 왜 올랐거나 내렸는지, 그리고 Futures Map 기준 매크로 환경이 내 종목들에 어떤 영향을 줬는지 같이 분석해줘"
+                : `${cfg.labelKo} 포트폴리오 기준으로 오늘 각 보유 자산이 왜 올랐거나 내렸는지, 해당 시장 매크로·뉴스 맥락과 함께 분석해줘`)
+            : (market === "us"
+                ? "Analyze why each holding in my portfolio moved today and how the macro/Futures Map environment affected them."
+                : `Analyze why each asset in my ${cfg.labelEn} portfolio moved today, with macro and news context.`),
           market,
+          locale: locale,
           ...buildPayload(),
           fetchNews: true,
         }),

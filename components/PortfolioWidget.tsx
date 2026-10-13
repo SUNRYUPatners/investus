@@ -158,7 +158,7 @@ export function PortfolioWidget() {
           className="flex items-center gap-0.5 px-1.5 py-0.5 rounded-lg transition-opacity hover:opacity-70"
           style={{ background: "var(--border)" }}
         >
-          <span className="text-[10px]" style={{ color: "var(--muted)" }}>{collapsed ? "펼치기" : "숨기기"}</span>
+          <span className="text-[10px]" style={{ color: "var(--muted)" }}>{collapsed ? (isKo ? "펼치기" : "Expand") : (isKo ? "숨기기" : "Hide")}</span>
           {collapsed
             ? <ChevronDown className="w-3 h-3" style={{ color: "var(--muted)" }} />
             : <ChevronUp className="w-3 h-3" style={{ color: "var(--muted)" }} />}
@@ -228,7 +228,7 @@ export function PortfolioWidget() {
             style={{ background: "var(--bg)", border: "1px dashed var(--border)", width: "64px", minHeight: "90px", scrollSnapAlign: "start" }}
             onClick={() => router.push("/portfolio")}>
             <span className="text-lg leading-none" style={{ color: "var(--muted)" }}>+</span>
-            <span className="text-[9px] mt-1 text-center leading-tight" style={{ color: "var(--muted)" }}>종목<br/>추가</span>
+            <span className="text-[9px] mt-1 text-center leading-tight" style={{ color: "var(--muted)" }}>{isKo ? <>종목<br/>추가</> : "Add"}</span>
           </button>
         </div>
 
@@ -285,7 +285,7 @@ export function PortfolioWidget() {
               className="w-full py-2.5 text-center text-[11px] border-t"
               style={{ borderColor: "var(--border)", color: "var(--muted)" }}
               onClick={() => router.push("/portfolio")}>
-              + 종목 추가
+              {isKo ? "+ 종목 추가" : "+ Add ticker"}
             </button>
           )}
         </div>

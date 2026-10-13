@@ -1,32 +1,25 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronRight } from "lucide-react";
 import { LearnHubCards } from "@/components/LearnHubCards";
 import { LEARN_ARTICLES, LEARN_SERIES } from "@/lib/learnArticles";
 import { TodaysGuideCard } from "@/components/TodaysGuideCard";
-
-export const metadata: Metadata = {
-  title: "투자 지식 허브 — 미국·한국주식·안전자산·부동산·ETF 가이드 | 인베스트어스",
-  description:
-    "미국주식·한국주식·안전자산(비트코인·금)·한국 부동산·ETF·세금까지 Investus 오리지널 심화 가이드.",
-  alternates: { canonical: "https://www.investus.kr/learn" },
-  openGraph: {
-    title: "투자 지식 허브 | 인베스트어스 Investus",
-    description: "미국·한국·안전자산·부동산 투자 심화 가이드 모음",
-    url: "https://www.investus.kr/learn",
-    type: "website",
-  },
-};
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 
 export default function LearnPage() {
+  const t = useLocale();
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
           <Link href="/more" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            더보기
+            {isKo ? "더보기" : "More"}
           </Link>
         </div>
 
@@ -35,21 +28,22 @@ export default function LearnPage() {
             INVESTUS LEARN
           </p>
           <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "var(--text)" }}>
-            투자 지식 허브
+            {isKo ? "투자 지식 허브" : "Investing Knowledge Hub"}
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            Investus 편집팀이 쓴 심화 가이드 {LEARN_ARTICLES.length}편.
-            시리즈로 묶었으니 입문 → 세금 → 매크로 순으로 읽어도 됩니다.
+            {isKo
+              ? `Investus 편집팀이 쓴 심화 가이드 ${LEARN_ARTICLES.length}편. 시리즈로 묶었으니 입문 → 세금 → 매크로 순으로 읽어도 됩니다.`
+              : `${LEARN_ARTICLES.length} in-depth guides from the Investus team. Organized into series — start with Basics, then Taxes, then Macro.`}
           </p>
         </div>
 
         <div className="mb-6">
-          <TodaysGuideCard />
+          <TodaysGuideCard locale={localeCode} />
         </div>
 
         <div className="mb-8 flex flex-col gap-3">
           <p className="text-[10px] font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-            시리즈
+            {isKo ? "시리즈" : "Series"}
           </p>
           {LEARN_SERIES.map((s) => {
             const count = LEARN_ARTICLES.filter((a) => a.series === s.id).length;
@@ -61,8 +55,10 @@ export default function LearnPage() {
                 style={{ background: "var(--card)", borderColor: "var(--border)", textDecoration: "none" }}
               >
                 <div>
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{s.title}</p>
-                  <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>{s.blurb} · {count}편</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? s.title : s.titleEn}</p>
+                  <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
+                    {isKo ? s.blurb : s.blurbEn} · {count}{isKo ? "편" : " guides"}
+                  </p>
                 </div>
                 <ChevronRight className="w-4 h-4 opacity-40" style={{ color: "var(--muted)" }} />
               </a>
@@ -76,8 +72,8 @@ export default function LearnPage() {
           return (
             <section key={s.id} id={`series-${s.id}`} className="mb-10 scroll-mt-20">
               <div className="mb-3">
-                <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{s.title}</h2>
-                <p className="text-[11px]" style={{ color: "var(--muted)" }}>{s.blurb}</p>
+                <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{isKo ? s.title : s.titleEn}</h2>
+                <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo ? s.blurb : s.blurbEn}</p>
               </div>
               <LearnHubCards articles={articles} />
             </section>
@@ -85,23 +81,27 @@ export default function LearnPage() {
         })}
 
         <div className="mt-2 mb-4">
-          <h2 className="text-sm font-bold font-syne mb-3" style={{ color: "var(--text)" }}>전체 가이드</h2>
+          <h2 className="text-sm font-bold font-syne mb-3" style={{ color: "var(--text)" }}>
+            {isKo ? "전체 가이드" : "All Guides"}
+          </h2>
           <LearnHubCards />
         </div>
 
         <div className="mt-6 rounded-2xl p-4 text-center border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
           <p className="text-xs font-semibold mb-1" style={{ color: "var(--text)" }}>
-            AI 투자비서에게 바로 물어보세요
+            {isKo ? "AI 투자비서에게 바로 물어보세요" : "Ask the AI Advisor directly"}
           </p>
           <p className="text-[11px] mb-3" style={{ color: "var(--muted)" }}>
-            포트폴리오 분석, 종목 질문, 시장 해석 — 자산 탭에서 무료로 이용
+            {isKo
+              ? "포트폴리오 분석, 종목 질문, 시장 해석 — 자산 탭에서 무료로 이용"
+              : "Portfolio analysis, stock questions, market interpretation — free in the Portfolio tab"}
           </p>
           <Link
             href="/portfolio"
             className="inline-flex items-center gap-1 px-4 py-2 rounded-xl text-sm font-semibold"
             style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}
           >
-            AI 투자비서 열기 <ChevronRight className="w-4 h-4" />
+            {isKo ? "AI 투자비서 열기" : "Open AI Advisor"} <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
       </main>

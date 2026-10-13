@@ -1,8 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { LEARN_ARTICLES, type LearnArticle } from "@/lib/learnArticles";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 export function LearnHubCards({ articles = LEARN_ARTICLES }: { articles?: LearnArticle[] }) {
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+
   return (
     <div className="flex flex-col gap-3">
       {articles.map((a) => (
@@ -23,17 +29,17 @@ export function LearnHubCards({ articles = LEARN_ARTICLES }: { articles?: LearnA
                   className="text-[10px] font-bold px-2 py-0.5 rounded-full"
                   style={{ background: `${a.tagColor}18`, color: a.tagColor }}
                 >
-                  {a.tag}
+                  {isKo ? a.tag : a.tagEn}
                 </span>
                 <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-                  {a.minutes} 읽기
+                  {a.minutes} {isKo ? "읽기" : "read"}
                 </span>
               </div>
               <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>
-                {a.title}
+                {isKo ? a.title : a.titleEn}
               </p>
               <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                {a.desc}
+                {isKo ? a.desc : a.descEn}
               </p>
             </div>
             <ChevronRight className="w-4 h-4 flex-shrink-0 mt-1 opacity-30" style={{ color: "var(--muted)" }} />

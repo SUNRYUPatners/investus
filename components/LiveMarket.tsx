@@ -325,7 +325,7 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
               className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
               style={{ background: "rgba(var(--mint-rgb),0.14)", color: "var(--mint)" }}
             >
-              예시
+              {locale === "ko" ? "예시" : "Sample"}
             </span>
           ) : (
             <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.cioPicks}</span>
