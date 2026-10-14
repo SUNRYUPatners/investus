@@ -336,19 +336,26 @@ function getTodayKey() {
   return `uss_ai_count_${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
-const FALLBACK_CHIPS = [
+const FALLBACK_CHIPS_KO = [
   "지금 매수 타이밍이야?",
   "최근 주가 하락 이유가 뭐야?",
   "목표주가 얼마로 보면 돼?",
 ];
+const FALLBACK_CHIPS_EN = [
+  "Is now a good buy?",
+  "Why did it drop recently?",
+  "What's the price target?",
+];
 
 function AskAI({ symbol, wall }: { symbol: string; wall?: WallT }) {
   const router = useRouter();
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
   const [question, setQuestion] = useState("");
   const [answer, setAnswer]     = useState("");
   const [loading, setLoading]   = useState(false);
   const [count, setCount]       = useState(0);
-  const [chips, setChips]       = useState<string[]>(FALLBACK_CHIPS);
+  const [chips, setChips]       = useState<string[]>(isKo ? FALLBACK_CHIPS_KO : FALLBACK_CHIPS_EN);
   const inputRef                = useRef<HTMLInputElement>(null);
   const t = useLocale();
   const w = wall ?? t.wall;
@@ -1798,8 +1805,8 @@ export default function WallPage() {
                   <FileCheck className="w-5 h-5" style={{ color: "#a78bfa" }} />
                 </div>
                 <div>
-                  <p className="text-sm font-bold" style={{ color: "#a78bfa" }}>애널리스트 인증 신청</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>명함 + 신분증 AI 인증 → 완전 익명으로 속마음 공유</p>
+                  <p className="text-sm font-bold" style={{ color: "#a78bfa" }}>{viewLang !== "en" ? "애널리스트 인증 신청" : "Apply for Analyst Verification"}</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{viewLang !== "en" ? "명함 + 신분증 AI 인증 → 완전 익명으로 속마음 공유" : "Business card + ID · AI-verified · share insights fully anonymous"}</p>
                 </div>
               </button>
             )}

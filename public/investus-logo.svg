@@ -1,54 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 88" width="320" height="88">
   <defs>
-    <!-- Investus 텍스트: 흰색 → 하단 골드 #d4af37 아주 살짝 -->
     <linearGradient id="textGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"   stop-color="#ffffff"/>
       <stop offset="65%"  stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#00d9a8"/>
     </linearGradient>
-
-    <!-- 아이콘 박스 내부: 깊은 다크 네이비 -->
     <linearGradient id="boxGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#111c35"/>
-      <stop offset="100%" stop-color="#0b1220"/>
+      <stop offset="0%" stop-color="#141852"/>
+      <stop offset="100%" stop-color="#0a0c2e"/>
     </linearGradient>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
 
-  <!-- 전체 배경 (다크 네이비) -->
+  <!-- Background -->
   <rect width="320" height="88" fill="#0a0f1e" rx="12"/>
 
-  <!-- 아이콘 박스 — 옥스포드 네이비 -->
-  <rect x="16" y="14" width="60" height="60" rx="14"
-        fill="#1a365d"
-        stroke="#243250" stroke-width="1.2"/>
+  <!-- Icon box -->
+  <rect x="12" y="12" width="64" height="64" rx="14" fill="url(#boxGrad)" stroke="#1e2a5e" stroke-width="1.2"/>
 
-  <!-- TrendingUp 화살표 — 골드 -->
-  <polyline
-    points="32,51  41,42  48,49  60,37"
-    fill="none" stroke="#b38f38" stroke-width="2.2"
-    stroke-linecap="round" stroke-linejoin="round"
-  />
-  <polyline
-    points="51,37  60,37  60,45"
-    fill="none" stroke="#b38f38" stroke-width="2.2"
-    stroke-linecap="round" stroke-linejoin="round"
-  />
+  <!-- Signal arcs (mini, center 38,36) -->
+  <path d="M 27,41 A 13,13 0 0,1 49,41" fill="none" stroke="#00ff7a" stroke-width="3.5" stroke-linecap="round" filter="url(#g)"/>
+  <path d="M 22,46 A 20,20 0 0,1 54,46" fill="none" stroke="#00ff7a" stroke-width="3.5" stroke-linecap="round" filter="url(#g)"/>
 
-  <!-- Investus 텍스트 (흰색 → 하단 골드 그라데이션) -->
-  <text
-    x="90" y="41"
-    font-family="Arial, sans-serif"
-    font-size="22" font-weight="bold"
-    fill="url(#textGrad)"
-    letter-spacing="0.5"
-  >Investus</text>
+  <!-- Center dot -->
+  <circle cx="38" cy="36" r="4" fill="#ffffff"/>
+  <circle cx="38" cy="36" r="2.5" fill="#00ff7a"/>
 
-  <!-- 인베스트어스 서브텍스트 -->
-  <text
-    x="91" y="62"
-    font-family="Arial, sans-serif"
-    font-size="13"
-    fill="#6b7fa3"
-    letter-spacing="0.3"
-  >인베스트어스</text>
+  <!-- Stem -->
+  <line x1="38" y1="40" x2="38" y2="56" stroke="#00ff7a" stroke-width="3.5" stroke-linecap="round"/>
+  <rect x="30" y="56" width="16" height="5" rx="2.5" fill="#00ff7a"/>
+
+  <!-- Investus text -->
+  <text x="88" y="41" font-family="Arial, sans-serif" font-size="22" font-weight="bold"
+        fill="url(#textGrad)" letter-spacing="0.5">Investus</text>
+
+  <!-- Sub text -->
+  <text x="89" y="62" font-family="Arial, sans-serif" font-size="13"
+        fill="#6b7fa3" letter-spacing="0.3">인베스트어스</text>
 </svg>

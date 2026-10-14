@@ -26,6 +26,7 @@ type AnalystRow = {
   id: number;
   alias: string;
   content: string;
+  contentEn?: string;
   symbol: string | null;
   likes: number;
   comments: number;
@@ -121,6 +122,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
         id: p.id,
         alias: p.alias,
         content: p.content,
+        contentEn: p.contentEn,
         symbol: p.symbol,
         likes: p.likes,
         comments: p.comments,
@@ -233,7 +235,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
                   className="text-[12px] leading-relaxed whitespace-pre-wrap line-clamp-4"
                   style={{ color: "var(--text)" }}
                 >
-                  {p.content}
+                  {isKo ? p.content : (p.contentEn ?? p.content)}
                 </p>
                 <div className="flex items-center gap-3 mt-2 text-[10px]" style={{ color: "var(--muted)" }}>
                   <span>♥ {p.likes.toLocaleString()}</span>
@@ -359,7 +361,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
                   className="text-[12px] leading-relaxed whitespace-pre-wrap line-clamp-4"
                   style={{ color: "var(--text)" }}
                 >
-                  {p.content}
+                  {isKo ? p.content : (p.contentEn ?? p.content)}
                 </p>
                 <div className="flex items-center gap-3 mt-2 text-[10px]" style={{ color: "var(--muted)" }}>
                   <span>♥ {p.likes.toLocaleString()}</span>

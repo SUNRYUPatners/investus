@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
+const US_ONLY_HREFS = new Set(["/learn/korea-real-estate", "/learn/korea-stocks", "/learn/korea-accounts"]);
+const US_ARTICLES = LEARN_ARTICLES.filter((a) => !US_ONLY_HREFS.has(a.href));
+
 /** Day-rotating featured guide for home / insight */
 export function TodaysGuideCard({ locale = "ko" }: { locale?: string }) {
   const isKo = locale === "ko";
   const day = Math.floor(Date.now() / 86_400_000);
-  const article = LEARN_ARTICLES[day % LEARN_ARTICLES.length];
+  const article = US_ARTICLES[day % US_ARTICLES.length];
 
   return (
     <Link

@@ -246,7 +246,7 @@ function LockedReportGroup({ reports }: { reports: Report[] }) {
         <div className="flex-1 min-w-0">
           <p className="text-sm font-bold leading-none mb-0.5" style={{ color: "var(--text)" }}>{t.reports.lockedCount(reports.length)}</p>
           <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-            {isKoLock ? `유료 구독 상품 — 이전 날짜 리포트 열람 · ${proPriceSummaryKo()}` : "Premium subscription — access previous reports"}
+            {isKoLock ? "이전 날짜 리포트" : "Previous date reports"}
           </p>
         </div>
         <ChevronDown
@@ -534,31 +534,35 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
 // ── 투자대가 명언 (날짜 기반 일별 자동 교체) ──────────────────────────────
 
 const GURU_QUOTES = [
-  { text: "주식 시장은 인내심 없는 사람의 돈을 인내심 있는 사람에게 이전하는 장치다.", name: "워렌 버핏", en: "Warren Buffett" },
-  { text: "훌륭한 기업을 적정 가격에 사는 것이, 적정 기업을 훌륭한 가격에 사는 것보다 훨씬 낫다.", name: "워렌 버핏", en: "Warren Buffett" },
-  { text: "10년을 보유할 자신이 없다면 10분도 보유하지 마라.", name: "워렌 버핏", en: "Warren Buffett" },
-  { text: "공포에 탐욕스러워지고, 탐욕에 두려워하라.", name: "워렌 버핏", en: "Warren Buffett" },
-  { text: "리스크는 자신이 무엇을 하는지 모를 때 발생한다.", name: "워렌 버핏", en: "Warren Buffett" },
-  { text: "가격은 당신이 지불하는 것이고, 가치는 당신이 얻는 것이다.", name: "워렌 버핏", en: "Warren Buffett" },
-  { text: "우리가 가장 좋아하는 보유 기간은 영원이다.", name: "워렌 버핏", en: "Warren Buffett" },
-  { text: "좋은 아이디어는 드물다. 기회가 왔을 때 크게 베팅하라.", name: "찰리 멍거", en: "Charlie Munger" },
-  { text: "천천히 부자가 되는 것에 만족하지 못하는 사람은 빠르게 가난해진다.", name: "찰리 멍거", en: "Charlie Munger" },
-  { text: "기다림은 투자자의 가장 강력한 도구다.", name: "찰리 멍거", en: "Charlie Munger" },
-  { text: "역전시킬 수 없는 실수를 조심하라. 항상 실패 가능성을 전제로 생각하라.", name: "찰리 멍거", en: "Charlie Munger" },
-  { text: "단순하게 생각하라. 복잡한 것이 반드시 좋은 것은 아니다.", name: "찰리 멍거", en: "Charlie Munger" },
-  { text: "모든 지식을 하나의 관점에서만 보면 세상을 제대로 이해할 수 없다.", name: "찰리 멍거", en: "Charlie Munger" },
-  { text: "주가 하락은 투자자에게 위협이 아닌 기회다.", name: "피터 린치", en: "Peter Lynch" },
-  { text: "주식에 투자하기 전에 회사에 대해 공부하는 데 최소 5분은 투자해야 한다.", name: "피터 린치", en: "Peter Lynch" },
-  { text: "훌륭한 기업을 찾아라, 그리고 오래 기다려라.", name: "피터 린치", en: "Peter Lynch" },
-  { text: "자신이 이해하는 것에만 투자하라.", name: "피터 린치", en: "Peter Lynch" },
-  { text: "시장을 예측하려 하지 마라. 좋은 기업을 사고 기다려라.", name: "피터 린치", en: "Peter Lynch" },
-  { text: "투자의 비결은 기업의 가치를 알고 그보다 싸게 사는 것이다.", name: "피터 린치", en: "Peter Lynch" },
+  { text: "주식 시장은 인내심 없는 사람의 돈을 인내심 있는 사람에게 이전하는 장치다.", name: "워렌 버핏", en: "Warren Buffett", textEn: "The stock market is a device for transferring money from the impatient to the patient." },
+  { text: "훌륭한 기업을 적정 가격에 사는 것이, 적정 기업을 훌륭한 가격에 사는 것보다 훨씬 낫다.", name: "워렌 버핏", en: "Warren Buffett", textEn: "It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price." },
+  { text: "10년을 보유할 자신이 없다면 10분도 보유하지 마라.", name: "워렌 버핏", en: "Warren Buffett", textEn: "If you aren't willing to own a stock for ten years, don't even think about owning it for ten minutes." },
+  { text: "공포에 탐욕스러워지고, 탐욕에 두려워하라.", name: "워렌 버핏", en: "Warren Buffett", textEn: "Be fearful when others are greedy and greedy when others are fearful." },
+  { text: "리스크는 자신이 무엇을 하는지 모를 때 발생한다.", name: "워렌 버핏", en: "Warren Buffett", textEn: "Risk comes from not knowing what you're doing." },
+  { text: "가격은 당신이 지불하는 것이고, 가치는 당신이 얻는 것이다.", name: "워렌 버핏", en: "Warren Buffett", textEn: "Price is what you pay. Value is what you get." },
+  { text: "우리가 가장 좋아하는 보유 기간은 영원이다.", name: "워렌 버핏", en: "Warren Buffett", textEn: "Our favorite holding period is forever." },
+  { text: "좋은 아이디어는 드물다. 기회가 왔을 때 크게 베팅하라.", name: "찰리 멍거", en: "Charlie Munger", textEn: "Good ideas are rare. When you get a chance, bet big." },
+  { text: "천천히 부자가 되는 것에 만족하지 못하는 사람은 빠르게 가난해진다.", name: "찰리 멍거", en: "Charlie Munger", textEn: "Those who can't be patient about getting rich slowly end up getting poor quickly." },
+  { text: "기다림은 투자자의 가장 강력한 도구다.", name: "찰리 멍거", en: "Charlie Munger", textEn: "Patience is the investor's most powerful tool." },
+  { text: "역전시킬 수 없는 실수를 조심하라. 항상 실패 가능성을 전제로 생각하라.", name: "찰리 멍거", en: "Charlie Munger", textEn: "Avoid irreversible mistakes. Always plan for the possibility of failure." },
+  { text: "단순하게 생각하라. 복잡한 것이 반드시 좋은 것은 아니다.", name: "찰리 멍거", en: "Charlie Munger", textEn: "Think simply. Complexity is not necessarily a virtue." },
+  { text: "모든 지식을 하나의 관점에서만 보면 세상을 제대로 이해할 수 없다.", name: "찰리 멍거", en: "Charlie Munger", textEn: "If you see all knowledge from only one angle, you cannot understand the world." },
+  { text: "주가 하락은 투자자에게 위협이 아닌 기회다.", name: "피터 린치", en: "Peter Lynch", textEn: "A stock market decline is not a threat to the investor — it's an opportunity." },
+  { text: "주식에 투자하기 전에 회사에 대해 공부하는 데 최소 5분은 투자해야 한다.", name: "피터 린치", en: "Peter Lynch", textEn: "Before you invest in a stock, spend at least five minutes studying the company." },
+  { text: "훌륭한 기업을 찾아라, 그리고 오래 기다려라.", name: "피터 린치", en: "Peter Lynch", textEn: "Find a great company, and wait." },
+  { text: "자신이 이해하는 것에만 투자하라.", name: "피터 린치", en: "Peter Lynch", textEn: "Invest only in what you understand." },
+  { text: "시장을 예측하려 하지 마라. 좋은 기업을 사고 기다려라.", name: "피터 린치", en: "Peter Lynch", textEn: "Don't try to predict the market. Buy good companies and wait." },
+  { text: "투자의 비결은 기업의 가치를 알고 그보다 싸게 사는 것이다.", name: "피터 린치", en: "Peter Lynch", textEn: "The secret of investing is to know the value of a business and buy it for less." },
 ];
 
 function DailyQuote() {
   const today = new Date();
   const seed  = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
   const q     = GURU_QUOTES[seed % GURU_QUOTES.length];
+  const localeCode = useLocaleCode();
+  const isKo = localeCode === "ko";
+  const quoteText = isKo ? q.text : (q.textEn ?? q.text);
+  const quoteName = isKo ? `${q.name} (${q.en})` : q.en;
 
   return (
     <div
@@ -568,10 +572,10 @@ function DailyQuote() {
       <span className="text-base flex-shrink-0 mt-0.5">💬</span>
       <div className="min-w-0">
         <p className="text-[11px] leading-relaxed italic" style={{ color: "var(--text)", opacity: 0.88 }}>
-          &ldquo;{q.text}&rdquo;
+          &ldquo;{quoteText}&rdquo;
         </p>
         <p className="text-[10px] mt-1.5 font-semibold" style={{ color: "var(--muted)" }}>
-          — {q.name} <span className="font-normal opacity-60">({q.en})</span>
+          — {quoteName}
         </p>
       </div>
     </div>
@@ -641,10 +645,6 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
         </p>
         <p className="text-[11px] mt-1.5 leading-relaxed break-keep" style={{ color: "var(--muted)" }}>
           {cioIntro}
-        </p>
-        <p className="text-[11px] mt-1.5 leading-relaxed break-keep" style={{ color: "var(--muted)" }}>
-          <span className="font-semibold" style={{ color: "var(--text)" }}>유료 구독 상품</span>
-          {" — "}오늘자 리포트 무료 · 이전 날짜 열람 {proPriceSummaryKo()}
         </p>
       </div>
 

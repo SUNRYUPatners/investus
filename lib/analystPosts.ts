@@ -2,6 +2,7 @@ export type AnalystMockPost = {
   id: number;
   alias: string;
   content: string;
+  contentEn?: string;
   symbol: string | null;
   likes: number;
   comments: number;
@@ -21,46 +22,55 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   {
     id: -1617, alias: "마포 흰죽지 #33", symbol: "TSLA",
     content: "제프리스가 350에서 420으로 올리면서 HOLD를 유지한 것은 로보택시·옵티머스 강세 시나리오를 현재 시점에서 매수 근거로 삼기 어렵다는 판단입니다. 현재 주가 382달러 기준 10% 여력이 남아 있지만, 10월 21일 3분기 실적에서 차량 마진과 FSD 구독자 수가 방향을 결정할 것입니다.",
+    contentEn: "Jefferies raising from $350 to $420 while keeping HOLD reflects a view that the robotaxi/Optimus bull case is not yet sufficient for a Buy. At $382 there's still 10% upside, but vehicle margin and FSD subscriber count at Oct 21 Q3 earnings will set the direction.",
     likes: 22, comments: 2, created_at: "2026-10-13T00:15:00.000Z", liked: false,
   },
   {
     id: -1618, alias: "서초 흰뺨딱새 #91", symbol: "TSLA",
     content: "오스틴 사이버캡 플릿이 30일 만에 500대를 넘어선 것에서 주목할 데이터는 대기 시간 1분입니다. 플릿 규모보다 공급밀도가 실용 서비스 기준을 충족했다는 신호이기 때문입니다. 공급밀도가 수익성으로 연결되려면 요금 12.28달러 수준에서 운영 비용 대비 마진이 나와야 하고, 그 확인은 21일 실적에 달려 있습니다.",
+    contentEn: "The key data from Austin Cybercab crossing 500 units in 30 days isn't fleet size — it's the 1-minute wait time. That supply density signals a commercially viable threshold. Whether it translates to profitability at $12.28/ride depends on operating margins, which the Oct 21 earnings will confirm.",
     likes: 18, comments: 2, created_at: "2026-10-13T00:17:00.000Z", liked: false,
   },
   {
     id: -1619, alias: "강동 바위종다리 #41", symbol: "TSLA",
     content: "중국 9월 소매 64,837대는 수량이 아니라 인센티브 구조와 함께 읽어야 합니다. 분기 최고치를 기록하는 달에 판촉 강화가 동반됐다면 실질 마진 회복과는 별개의 이야기입니다. 번스타인 목표가 360달러가 마진 확인 전까지 유보 조건을 달고 있는 이유입니다.",
+    contentEn: "China's September retail of 64,837 units needs to be read alongside the incentive structure. If record volumes came with heavier promotions, that's a separate story from margin recovery. That's why Bernstein's $360 target carries a 'pending margin confirmation' qualifier.",
     likes: 15, comments: 2, created_at: "2026-10-13T00:19:00.000Z", liked: false,
   },
   {
     id: -1620, alias: "노원 검은뺨딱새 #62", symbol: "TSLA",
     content: "아폴로 파워 840M 메가팩 계약은 단일 건 기준으로 역대 최대급 에너지 저장 계약 중 하나입니다. 1GW는 테슬라 에너지 부문 분기 최대치인 13.7GWh 연환산의 상당 부분을 단일 계약이 채우는 수준입니다. 에너지 마진이 차량 마진을 웃도는 현재 구조에서 수주 가속은 EPS에 직접 가시화됩니다.",
+    contentEn: "Apollo Power's $840M Megapack contract is among the largest single energy storage deals on record. 1GW fills a significant share of Tesla Energy's record quarterly run-rate of 13.7GWh annualized. With energy margins now exceeding vehicle margins, this accelerating order book feeds directly into EPS.",
     likes: 28, comments: 2, created_at: "2026-10-13T00:21:00.000Z", liked: false,
   },
   {
     id: -1621, alias: "용산 흑고니 #36", symbol: "SPCX",
     content: "스타링크 위성 총질량 6,197톤이 세계 나머지 위성 합계 5,222톤을 처음 초과한 것은 우주 인프라 패권 지표입니다. 단일 기업의 궤도 점유율이 이 수준에 도달하면 각국 정부·군이 스타링크 없이 통신 인프라를 설계하기 어려워집니다. 재난·군사 계약에서 가격 협상력이 구조적으로 강화되는 임계점입니다.",
+    contentEn: "Starlink's total satellite mass exceeding the global aggregate for the first time is a space infrastructure dominance metric. When one company controls this share of orbital capacity, governments and militaries can't design communication infrastructure without Starlink. This is the structural inflection point where pricing power in disaster and military contracts becomes permanent.",
     likes: 24, comments: 2, created_at: "2026-10-13T00:23:00.000Z", liked: false,
   },
   {
     id: -1622, alias: "광진 청둥오리 #97", symbol: "SPCX",
     content: "캘리포니아 산불 구조에서 스타링크가 유일하게 작동한 통신 인프라였다는 사실은 재난 대응 계약의 신규 근거가 됩니다. 지연 시간 20밀리초는 기존 정지궤도 위성 600밀리초 대비 30분의 1 수준으로 실시간 지휘 통신이 가능합니다. 미국과 유럽의 재난·국방 예산 배분에서 스타링크 우선순위가 올라가는 구조입니다.",
+    contentEn: "Starlink being the only functional communication infrastructure during the California wildfire rescue creates new grounds for disaster response contracts. At 20ms latency vs. 600ms for geostationary satellites, it enables real-time command and control. US and European disaster and defense budget allocations will increasingly prioritize Starlink.",
     likes: 19, comments: 2, created_at: "2026-10-13T00:25:00.000Z", liked: false,
   },
   {
     id: -1623, alias: "은평 참수리 #73", symbol: "MSFT",
     content: "Maia 300이 동일 전력에서 GPU 대비 40% 더 많은 AI 연산을 처리한다는 것은 Azure 데이터센터 투자 효율 지표를 바꾸는 숫자입니다. 2027년 멀티기가와트 배포가 실현되면 AI 추론 서비스 단가가 구조적으로 내려가고, 이는 Azure AI 수요 탄성을 자극합니다. 엔비디아 의존 완화는 GPU 조달 지연이 수익 변동성으로 이어지는 경로를 차단합니다.",
+    contentEn: "Maia 300 processing 40% more AI compute per watt rewrites Azure data center efficiency metrics. If multi-gigawatt deployment in 2027 materializes, AI inference unit costs structurally decline, stimulating Azure AI demand elasticity. Reduced Nvidia dependency eliminates the path where GPU procurement delays drive earnings volatility.",
     likes: 21, comments: 2, created_at: "2026-10-13T00:27:00.000Z", liked: false,
   },
   {
     id: -1624, alias: "강남 흰죽지 #55", symbol: "TSLA",
     content: "머스크가 앤트로픽 우려에 공감한 발언은 xAI의 그록 훈련 방식에 직접적 영향보다는 AI 안전 규제 논의 지형에 영향을 미칩니다. 처우 기준이 규제 프레임워크에 포함되면 개발 비용이 올라가고, 안전 프레임워크를 먼저 갖춘 기업이 계약 경쟁에서 유리해집니다. 앤트로픽과 협력 중인 구글·아마존의 밸류에이션 프리미엄 근거가 하나 더 추가된 상황입니다.",
+    contentEn: "Musk's agreement with Anthropic's concerns has more influence on AI safety regulatory dynamics than on xAI's Grok training. If welfare standards get embedded in regulatory frameworks, development costs rise, and companies with safety frameworks in place gain a procurement advantage — adding another valuation premium justification for Google and Amazon.",
     likes: 16, comments: 2, created_at: "2026-10-13T00:29:00.000Z", liked: false,
   },
   {
     id: -1625, alias: "마포 흰죽지 #80", symbol: "AI인프라",
     content: "a16z 차트가 보여주는 Jevons 역설 실증은 AI 인프라 투자 논리의 핵심 근거입니다. H100 시간당 2.50달러가 유지되는 동안 토큰 가격이 하락한다는 것은 수요 탄성이 공급 증가 속도를 초과한다는 의미입니다. 데이터센터 전력 인프라와 GPU 공급사가 이 구조적 수혜를 계속 받는 투자 테마는 단기 조정과 무관하게 유효합니다.",
+    contentEn: "The a16z chart documenting Jevons Paradox in AI is the core thesis for infrastructure investing. H100 compute holding at $2.50/hr while token prices fall means demand elasticity is outpacing supply growth. The structural beneficiaries — data center power and GPU vendors — remain intact regardless of short-term corrections.",
     likes: 27, comments: 2, created_at: "2026-10-13T00:31:00.000Z", liked: false,
   },
   // ── 2026-10-12 신규 ──────────────────────────
