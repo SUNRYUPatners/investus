@@ -36,6 +36,12 @@ const ALLOW = new Set([
   "nomura", "wedbush", "mizuho", "jefferies", "bernstein", "blackrock",
   "fidelity", "morningstar", "wellsfargo", "citigroup", "hsbc", "macquarie",
   "overweight", "outperform", "piper", "sandler", "canaccord",
+  // AI 회사명·모델명·제품명 (2026-10-14~)
+  "google", "microsoft", "openai", "anthropic", "gemini", "claude", "grok",
+  "kalshi", "nasa", "github", "copilot", "argon", "cloud", "studio",
+  "workspace", "bigquery", "phase", "tier", "rapid", "iteration",
+  "fail", "learn", "small", "whales", "plus", "fast", "figure",
+  "sumit", "guha", "teslasonomics", "deepseek", "perplexity", "mistral",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */
