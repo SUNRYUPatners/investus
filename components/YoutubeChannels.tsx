@@ -13,12 +13,28 @@ type Channel = {
   pageUrl: string;  // link for "채널 바로가기"
 };
 
-const CHANNELS: Channel[] = [
+const CHANNELS_KO: Channel[] = [
   { key: "sbs",    name: "SBS Biz",        initial: "SBS",  color: "#3b82f6", pageUrl: "https://www.youtube.com/@SBSBiz2021/streams"         },
   { key: "yonhap", name: "연합경제TV",      initial: "연합", color: "#ef4444", pageUrl: "https://www.youtube.com/@연합뉴스경제TV/streams"      },
   { key: "hk",     name: "한경글로벌마켓",  initial: "한경", color: "#f59e0b", pageUrl: "https://www.youtube.com/@한경글로벌마켓"            },
   { key: "money",  name: "머니코믹스",      initial: "머니", color: "#10b981", pageUrl: "https://www.youtube.com/@moneymoneycomics/streams"   },
   { key: "wepoll", name: "위폴",            initial: "위폴", color: "#a78bfa", pageUrl: "https://www.youtube.com/@wepoll_original"            },
+];
+
+type StaticChannel = {
+  name: string;
+  initial: string;
+  color: string;
+  pageUrl: string;
+  desc: string;
+};
+
+const CHANNELS_EN: StaticChannel[] = [
+  { name: "Bloomberg Markets",  initial: "BL",  color: "#3b82f6", pageUrl: "https://www.youtube.com/@BloombergMarkets",          desc: "Live markets & breaking finance news" },
+  { name: "CNBC",               initial: "CN",  color: "#ef4444", pageUrl: "https://www.youtube.com/@CNBCtelevision",             desc: "US markets, earnings & macro" },
+  { name: "Yahoo Finance",      initial: "YF",  color: "#6366f1", pageUrl: "https://www.youtube.com/@YahooFinance",               desc: "Stock news, interviews & charts" },
+  { name: "The Plain Bagel",    initial: "PB",  color: "#10b981", pageUrl: "https://www.youtube.com/@ThePlainBagel",              desc: "Personal finance & investing explained" },
+  { name: "Patrick Boyle",      initial: "PB",  color: "#f59e0b", pageUrl: "https://www.youtube.com/@PBoyle",                    desc: "Hedge fund-level market analysis" },
 ];
 
 /* ── avatar ─────────────────────────────────────────────────── */
@@ -106,15 +122,41 @@ function SkeletonCard() {
   );
 }
 
+/* ── English static channel card ────────────────────────────── */
+function EnChannelCard({ ch }: { ch: StaticChannel }) {
+  return (
+    <a
+      href={ch.pageUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 rounded-2xl border p-3 active:opacity-75 transition-opacity"
+      style={{ background: "var(--card)", borderColor: "var(--border)", textDecoration: "none" }}
+    >
+      <div
+        className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-[11px] font-bold text-white"
+        style={{ background: `linear-gradient(135deg, ${ch.color}cc, ${ch.color}66)` }}
+      >
+        {ch.initial}
+      </div>
+      <div className="flex-1 min-w-0">
+        <p className="text-sm font-semibold truncate" style={{ color: "var(--text)" }}>{ch.name}</p>
+        <p className="text-[11px] truncate" style={{ color: "var(--muted)" }}>{ch.desc}</p>
+      </div>
+      <ExternalLink className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
+    </a>
+  );
+}
+
 /* ── main export ─────────────────────────────────────────────── */
 export function YoutubeChannels() {
   const [avatars, setAvatars] = useState<Record<string, string | null>>({});
   const [videos,  setVideos]  = useState<Record<string, YTVideo[]>>({});
   const [loading, setLoading] = useState(true);
   const locale = useLocaleCode();
-  if (locale !== "ko") return null;
+  const isKo = locale === "ko";
 
   useEffect(() => {
+    if (!isKo) return;
     Promise.all([
       fetch("/api/yt-avatars").then((r) => r.json()).catch(() => ({})),
       fetch("/api/yt-videos").then((r)  => r.json()).catch(() => ({})),
@@ -123,11 +165,21 @@ export function YoutubeChannels() {
       setVideos(vd);
       setLoading(false);
     });
-  }, []);
+  }, [isKo]);
+
+  if (!isKo) {
+    return (
+      <div className="flex flex-col gap-2.5">
+        {CHANNELS_EN.map((ch) => (
+          <EnChannelCard key={ch.name} ch={ch} />
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-6">
-      {CHANNELS.map((ch) => {
+      {CHANNELS_KO.map((ch) => {
         const chVideos: YTVideo[] = videos[ch.key] ?? [];
 
         return (
@@ -154,7 +206,6 @@ export function YoutubeChannels() {
               ) : chVideos.length > 0 ? (
                 chVideos.map((v) => <VideoCard key={v.id} video={v} />)
               ) : (
-                /* Fallback if scraping returned nothing */
                 <a
                   href={ch.pageUrl}
                   target="_blank"

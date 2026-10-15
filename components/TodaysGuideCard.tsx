@@ -35,10 +35,10 @@ export function TodaysGuideCard({ locale = "ko" }: { locale?: string }) {
         <span className="text-2xl flex-shrink-0">{article.emoji}</span>
         <div className="min-w-0 flex-1">
           <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>
-            {article.title}
+            {isKo ? article.title : (article.titleEn ?? article.title)}
           </p>
           <p className="text-[12px] leading-relaxed line-clamp-2" style={{ color: "var(--muted)" }}>
-            {article.desc}
+            {isKo ? article.desc : (article.descEn ?? article.desc)}
           </p>
         </div>
         <span className="text-lg flex-shrink-0" style={{ color: "var(--muted)" }}>›</span>
