@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<defs>
+  <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0D1117"/>
+    <stop offset="100%" stop-color="#0A0E1A"/>
+  </linearGradient>
+  <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="50%" stop-color="#8B5CF6"/>
+    <stop offset="100%" stop-color="#60A5FA"/>
+  </linearGradient>
+  <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#60A5FA"/>
+    <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="50%" stop-color="#8B5CF6"/>
+    <stop offset="100%" stop-color="#60A5FA"/>
+  </linearGradient>
+</defs>
+<rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+<!-- ① Top gradient bar -->
+<rect x="0" y="0" width="1080" height="12" fill="url(#topBar)"/>
+
+<!-- ② Header badges -->
+<rect x="54" y="30" width="92" height="36" rx="8" fill="#EF4444"/>
+<text x="100" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">TSLA</text>
+<rect x="160" y="30" width="92" height="36" rx="8" fill="#60A5FA"/>
+<text x="206" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">SPCX</text>
+<rect x="266" y="30" width="138" height="36" rx="8" fill="#8B5CF6"/>
+<text x="335" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">CARD NEWS</text>
+
+<!-- ③ Eyebrow -->
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">Oct 15, 2026 · Tesla &amp; SpaceX Key Updates</text>
+
+<!-- ④ HUGE Hero -->
+<text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="108" fill="#fff" font-weight="900">TESLA</text>
+<text x="54" y="318" font-family="Arial Black,Arial,sans-serif" font-size="88" fill="url(#heroGrad)" font-weight="900">× SPACEX</text>
+
+<!-- ⑤ Sub-headline -->
+<text x="54" y="366" font-family="Arial,sans-serif" font-size="28" fill="#8B949E">Roadster TONIGHT · Cybercab 399 · SPCX $300</text>
+
+<!-- ⑥ Divider -->
+<rect x="54" y="390" width="972" height="3" fill="url(#divGrad)" rx="2"/>
+
+<!-- ⑦ Visual — Austin Cybercab Fleet + Driverless Sightings -->
+<text x="54" y="432" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#60A5FA" font-weight="900">Austin Robotaxi Fleet &amp; Driverless Sightings</text>
+<rect x="740" y="410" width="296" height="40" rx="8" fill="#0D1A2A" stroke="#60A5FA" stroke-width="1.5"/>
+<text x="888" y="436" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#60A5FA" text-anchor="middle" font-weight="900">Total Fleet: 399 vehicles</text>
+
+<text x="54" y="474" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Model Y</text>
+<rect x="274" y="452" width="510" height="28" rx="6" fill="#21262D"/>
+<rect x="274" y="452" width="233" height="28" rx="6" fill="#60A5FA"/>
+<text x="517" y="474" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">224</text>
+
+<text x="54" y="514" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Cybercab</text>
+<rect x="274" y="492" width="510" height="28" rx="6" fill="#21262D"/>
+<rect x="274" y="492" width="182" height="28" rx="6" fill="#8B5CF6"/>
+<text x="466" y="514" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">175</text>
+
+<text x="54" y="556" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Last Tue</text>
+<rect x="274" y="534" width="510" height="28" rx="6" fill="#21262D"/>
+<rect x="274" y="534" width="432" height="28" rx="6" fill="#374151"/>
+<text x="716" y="556" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">415 trips</text>
+
+<text x="54" y="596" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">This Tue</text>
+<rect x="274" y="574" width="510" height="28" rx="6" fill="#21262D"/>
+<rect x="274" y="574" width="510" height="28" rx="6" fill="#34D399"/>
+<text x="794" y="596" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">490 trips</text>
+<rect x="740" y="574" width="116" height="28" rx="6" fill="#0D2A1A" stroke="#34D399" stroke-width="1.5"/>
+<text x="798" y="593" font-family="Arial Black,Arial,sans-serif" font-size="18" fill="#34D399" text-anchor="middle" font-weight="900">+18% WoW</text>
+
+<!-- ⑧ 3 Stat cards -->
+<rect x="54" y="626" width="306" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="2"/>
+<text x="207" y="662" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" text-anchor="middle" font-weight="700">Roadster Reveal</text>
+<text x="207" y="710" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#fff" text-anchor="middle" font-weight="900">TONIGHT</text>
+<text x="207" y="740" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">7:55 PM CT Live</text>
+<rect x="384" y="626" width="306" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="2"/>
+<text x="537" y="662" font-family="Arial,sans-serif" font-size="19" fill="#60A5FA" text-anchor="middle" font-weight="700">Cybercab Fleet</text>
+<text x="537" y="710" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#fff" text-anchor="middle" font-weight="900">399</text>
+<text x="537" y="740" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Austin · +18% WoW</text>
+<rect x="714" y="626" width="312" height="130" rx="16" fill="#161B22" stroke="#34D399" stroke-width="2"/>
+<text x="870" y="662" font-family="Arial,sans-serif" font-size="19" fill="#34D399" text-anchor="middle" font-weight="700">SPCX Target</text>
+<text x="870" y="710" font-family="Arial Black,Arial,sans-serif" font-size="32" fill="#fff" text-anchor="middle" font-weight="900">$300</text>
+<text x="870" y="740" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Morgan Stanley Strong Buy</text>
+
+<!-- ⑨ Message box -->
+<rect x="54" y="784" width="972" height="456" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="830" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">Today's 5 Key Stories</text>
+<line x1="82" y1="844" x2="998" y2="844" stroke="#30363D" stroke-width="1"/>
+
+<circle cx="96" cy="872" r="7" fill="#EF4444"/>
+<text x="116" y="880" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Roadster reveal TONIGHT 7:55PM CT — livestreamed on Tesla &amp; X</text>
+<circle cx="96" cy="934" r="7" fill="#60A5FA"/>
+<text x="116" y="942" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Cybercab fleet 399 (Model Y 224 + Cybercab 175) — 490 driverless</text><text x="116" y="970" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">   sightings Tue, up 18% week over week</text>
+<circle cx="96" cy="1008" r="7" fill="#8B5CF6"/>
+<text x="116" y="1016" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Grok Voice 3.0 live — Starlink 20k calls/day, 70% auto-resolved</text>
+<circle cx="96" cy="1068" r="7" fill="#34D399"/>
+<text x="116" y="1076" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Morgan Stanley reiterates SPCX $300 Strong Buy — DIC top driver</text>
+<circle cx="96" cy="1128" r="7" fill="#F59E0B"/>
+<text x="116" y="1136" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Tesla Energy NightHawk Bocamno 2 Megapack done — Brazoria Co. TX</text>
+
+<!-- Calendar -->
+<rect x="82" y="1174" width="916" height="50" rx="12" fill="#1A2233" stroke="#FBBF24" stroke-width="1.5"/>
+<text x="110" y="1205" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#FBBF24" font-weight="900">Oct 21 — Tesla Q3 Earnings Call</text>
+
+<!-- ⑩ Footer -->
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.15</text>
+
+</svg>
