@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gblmjy" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#22C55E"/>
+    <stop offset="100%" stop-color="#16A34A"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gblmjy)"/>
+<rect x="54" y="30" width="206" height="36" rx="8" fill="#22C55E"/>
+<text x="157" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Stock Analysis</text>
+<rect x="254" y="30" width="76" height="36" rx="8" fill="#16A34A"/>
+<text x="292" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">NVDA</text>
+<rect x="330" y="30" width="141" height="36" rx="8" fill="#15803D"/>
+<text x="400.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">AI Safety</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.15 · Jensen Huang Bloomberg interview</text>
+<text x="54" y="200" font-family="Arial Black,Arial,sans-serif" font-size="56" fill="#22C55E" font-weight="900">"Would Halt Chips"</text>
+<text x="54" y="274" font-family="Arial Black,Arial,sans-serif" font-size="44" fill="#fff" font-weight="900">for unsafe AI developers</text>
+<text x="54" y="348" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Nvidia CEO Jensen Huang — Bloomberg · unprecedented stance</text>
+<defs><linearGradient id="dg374" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#22C55E" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#22C55E"/>
+    <stop offset="70%" stop-color="#16A34A"/>
+    <stop offset="100%" stop-color="#16A34A" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="374" width="972" height="3" fill="url(#dg374)" rx="2"/>
+<rect x="54" y="396" width="972" height="130" rx="16" fill="#052e16" stroke="#22C55E" stroke-width="2"/>
+<text x="82" y="437" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" font-weight="700">A chip supplier making hardware supply decisions based</text>
+<text x="82" y="475" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" font-weight="700">on AI software safety — first of its kind statement</text>
+<text x="82" y="513" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Timed with tightening US AI chip export controls</text>
+<rect x="54" y="556" width="972" height="550" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="600" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#22C55E" font-weight="900">Context &amp; Implications</text>
+<line x1="82" y1="614" x2="998" y2="614" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="644" r="7" fill="#22C55E"/>
+<text x="116" y="652" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Prior AI safety debate was software-layer only — not hardware</text>
+<circle cx="96" cy="704" r="7" fill="#16A34A"/>
+<text x="116" y="712" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Chip supplier stepping in = signal of governance role evolution</text>
+<circle cx="96" cy="764" r="7" fill="#15803D"/>
+<text x="116" y="772" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Hard to enforce — cloud-routed indirect access hard to block</text>
+<circle cx="96" cy="824" r="7" fill="#22C55E"/>
+<text x="116" y="832" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Strategic pre-positioning amid US AI chip export tightening</text>
+<circle cx="96" cy="884" r="7" fill="#16A34A"/>
+<text x="116" y="892" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Intent: build goodwill with governments &amp; regulators</text>
+<rect x="82" y="980" width="916" height="90" rx="12" fill="#052e16" stroke="#22C55E" stroke-width="1.5"/>
+<text x="110" y="1014" font-family="Arial,sans-serif" font-size="21" fill="#22C55E" font-weight="700">Limited near-term price impact · governance risk longer-term</text>
+<text x="110" y="1052" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">Nvidia positioning as AI safety arbiter in policy debates</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.15</text>
+</svg>

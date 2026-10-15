@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb8guq" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#0EA5E9"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb8guq)"/>
+<rect x="54" y="30" width="206" height="36" rx="8" fill="#3B82F6"/>
+<text x="157" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Stock Analysis</text>
+<rect x="254" y="30" width="76" height="36" rx="8" fill="#1D4ED8"/>
+<text x="292" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="330" y="30" width="128" height="36" rx="8" fill="#0284C7"/>
+<text x="394" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Megapack</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.15 · NightHawk Bocamno 2 · Brazoria County TX</text>
+<text x="54" y="200" font-family="Arial Black,Arial,sans-serif" font-size="80" fill="#3B82F6" font-weight="900">Bocamno 2</text>
+<text x="54" y="288" font-family="Arial Black,Arial,sans-serif" font-size="50" fill="#fff" font-weight="900">Megapack BESS Complete</text>
+<text x="54" y="352" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Brazoria County TX · NightHawk Energy · near Houston</text>
+<defs><linearGradient id="dg376" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#3B82F6"/>
+    <stop offset="70%" stop-color="#0EA5E9"/>
+    <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="376" width="972" height="3" fill="url(#dg376)" rx="2"/>
+<rect x="54" y="398" width="972" height="110" rx="16" fill="#0D1F3A" stroke="#3B82F6" stroke-width="2"/>
+<text x="82" y="439" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" font-weight="700">Bocamno 1 began commercial operation August 2026</text>
+<text x="82" y="481" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Phase 2 = second large-scale BESS in same county</text>
+<rect x="54" y="532" width="466" height="130" rx="16" fill="#161B22" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="287" y="568" font-family="Arial,sans-serif" font-size="19" fill="#3B82F6" text-anchor="middle" font-weight="700">Bocamno 1</text>
+<text x="287" y="616" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Aug 2026</text>
+<text x="287" y="646" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">commercial op start</text>
+<rect x="544" y="532" width="482" height="130" rx="16" fill="#161B22" stroke="#0EA5E9" stroke-width="1.5"/>
+<text x="785" y="568" font-family="Arial,sans-serif" font-size="19" fill="#0EA5E9" text-anchor="middle" font-weight="700">Bocamno 2</text>
+<text x="785" y="616" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Complete</text>
+<text x="785" y="646" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">NightHawk Phase 2</text>
+<rect x="54" y="692" width="972" height="510" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="736" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#3B82F6" font-weight="900">Tesla Energy Business Implications</text>
+<line x1="82" y1="750" x2="998" y2="750" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="780" r="7" fill="#3B82F6"/>
+<text x="116" y="788" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Texas ERCOT — repeated summer heat &amp; winter cold demand spikes</text>
+<circle cx="96" cy="840" r="7" fill="#0EA5E9"/>
+<text x="116" y="848" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Each Megapack ~3.9MWh · critical buffer for renewable intermittency</text>
+<circle cx="96" cy="900" r="7" fill="#1D4ED8"/>
+<text x="116" y="908" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Phase 1→2 sequential expansion becoming BESS industry standard</text>
+<circle cx="96" cy="960" r="7" fill="#3B82F6"/>
+<text x="116" y="968" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Tesla Energy = independent growth driver offsetting auto margin</text>
+<rect x="82" y="1056" width="916" height="100" rx="12" fill="#0D1F3A" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="110" y="1090" font-family="Arial,sans-serif" font-size="20" fill="#3B82F6" font-weight="700">Energy business rising as standalone growth engine</text>
+<text x="110" y="1128" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">Megapack backlog growing → Energy EPS weight expands 2027</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.15</text>
+</svg>

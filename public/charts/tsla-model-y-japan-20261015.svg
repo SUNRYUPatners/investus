@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb9buo" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#0EA5E9"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb9buo)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#10B981"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="190" y="30" width="76" height="36" rx="8" fill="#059669"/>
+<text x="228" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="266" y="30" width="50" height="36" rx="8" fill="#0EA5E9"/>
+<text x="291" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">일본</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.15 · 2026년 9월 일본 외국차 판매 순위</text>
+<text x="540" y="240" font-family="Arial Black,Arial,sans-serif" font-size="220" fill="#10B981" font-weight="900" text-anchor="middle">No.1</text>
+<text x="54" y="316" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">외국차 차종별 1위</text>
+<text x="54" y="374" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">테슬라 모델 Y · 2026년 9월 도 · 테슬라 재팬 공식 발표</text>
+<defs><linearGradient id="dg398" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#10B981"/>
+    <stop offset="70%" stop-color="#0EA5E9"/>
+    <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="398" width="972" height="3" fill="url(#dg398)" rx="2"/>
+<rect x="54" y="420" width="972" height="110" rx="16" fill="#052e1c" stroke="#10B981" stroke-width="2"/>
+<text x="82" y="461" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" font-weight="700">독일 프리미엄 브랜드 제치고 외국차 베스트셀러 달성</text>
+<text x="82" y="503" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">일본 자국 브랜드 90% 시장에서 수입 전기차가 1위 달성</text>
+<rect x="54" y="560" width="972" height="560" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="604" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#10B981" font-weight="900">의미 분석</text>
+<line x1="82" y1="618" x2="998" y2="618" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="648" r="7" fill="#10B981"/>
+<text x="116" y="656" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">일본: 도요타·혼다·닛산이 전체 판매의 90% 이상 차지</text>
+<circle cx="96" cy="708" r="7" fill="#059669"/>
+<text x="116" y="716" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">외국차 1위 = 벤츠·BMW 꺾은 것 — 브랜드 프리미엄 확인</text>
+<circle cx="96" cy="768" r="7" fill="#0EA5E9"/>
+<text x="116" y="776" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">일본 2035년 신차 100% 전기차·하이브리드 목표 추진 중</text>
+<circle cx="96" cy="828" r="7" fill="#10B981"/>
+<text x="116" y="836" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">테슬라 재팬 슈퍼차저·딜리버리센터 지속 확대 중</text>
+<circle cx="96" cy="888" r="7" fill="#059669"/>
+<text x="116" y="896" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">볼륨보다 상징성 — 전동화 리더십 글로벌 재확인</text>
+<rect x="82" y="994" width="916" height="90" rx="12" fill="#052e1c" stroke="#10B981" stroke-width="1.5"/>
+<text x="110" y="1028" font-family="Arial,sans-serif" font-size="21" fill="#10B981" font-weight="700">판매 대수보다 브랜드 지위 — 프리미엄 이미지 재확인</text>
+<text x="110" y="1066" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">일본 전동화 수요 확대 → 테슬라 점유율 추가 상승 기대</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.15</text>
+</svg>

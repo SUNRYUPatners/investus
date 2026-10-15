@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gbrzxr" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8B5CF6"/>
+    <stop offset="100%" stop-color="#7C3AED"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gbrzxr)"/>
+<rect x="54" y="30" width="206" height="36" rx="8" fill="#8B5CF6"/>
+<text x="157" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Stock Analysis</text>
+<rect x="254" y="30" width="76" height="36" rx="8" fill="#7C3AED"/>
+<text x="292" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">SPCX</text>
+<rect x="336" y="30" width="206" height="36" rx="8" fill="#6D28D9"/>
+<text x="439" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Morgan Stanley</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.15 · Morgan Stanley reiterates SPCX target</text>
+<text x="54" y="220" font-family="Arial Black,Arial,sans-serif" font-size="160" fill="#8B5CF6" font-weight="900">$300</text>
+<text x="54" y="298" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">Price Target · Strong Buy</text>
+<text x="54" y="354" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">vs ~$152 current · 97% upside · Adam Jones</text>
+<defs><linearGradient id="dg378" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#8B5CF6"/>
+    <stop offset="70%" stop-color="#7C3AED"/>
+    <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="378" width="972" height="3" fill="url(#dg378)" rx="2"/>
+<rect x="54" y="400" width="972" height="110" rx="16" fill="#1a0a3d" stroke="#8B5CF6" stroke-width="2"/>
+<text x="82" y="441" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" font-weight="700">Top Growth Driver: Distributed Inference Cloud (DIC)</text>
+<text x="82" y="483" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">Starlink network evolves into AI agent compute-sharing platform</text>
+<rect x="54" y="534" width="310" height="130" rx="16" fill="#161B22" stroke="#8B5CF6" stroke-width="1.5"/>
+<text x="209" y="570" font-family="Arial,sans-serif" font-size="19" fill="#8B5CF6" text-anchor="middle" font-weight="700">Price Target</text>
+<text x="209" y="618" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$300</text>
+<text x="209" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Strong Buy</text>
+<rect x="388" y="534" width="310" height="130" rx="16" fill="#161B22" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="543" y="570" font-family="Arial,sans-serif" font-size="19" fill="#7C3AED" text-anchor="middle" font-weight="700">Current</text>
+<text x="543" y="618" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">~$152</text>
+<text x="543" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">97% upside</text>
+<rect x="722" y="534" width="304" height="130" rx="16" fill="#161B22" stroke="#6D28D9" stroke-width="1.5"/>
+<text x="874" y="570" font-family="Arial,sans-serif" font-size="19" fill="#6D28D9" text-anchor="middle" font-weight="700">ROIC 2030E</text>
+<text x="874" y="618" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">~25%</text>
+<text x="874" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">beats AWS 16%</text>
+<rect x="54" y="694" width="972" height="500" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="738" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#8B5CF6" font-weight="900">Understanding DIC</text>
+<line x1="82" y1="752" x2="998" y2="752" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="782" r="7" fill="#8B5CF6"/>
+<text x="116" y="790" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">DIC = Starlink satellites as distributed AI inference nodes</text>
+<circle cx="96" cy="842" r="7" fill="#7C3AED"/>
+<text x="116" y="850" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Any device, anywhere — low-latency AI access via orbit</text>
+<circle cx="96" cy="902" r="7" fill="#6D28D9"/>
+<text x="116" y="910" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">SpaceX AI ROIC: -5% (2026E) → +25% (2030E) trajectory</text>
+<circle cx="96" cy="962" r="7" fill="#8B5CF6"/>
+<text x="116" y="970" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Musk on X replied: "This is a very big deal"</text>
+<rect x="82" y="1058" width="916" height="90" rx="12" fill="#1a0a3d" stroke="#8B5CF6" stroke-width="1.5"/>
+<text x="110" y="1092" font-family="Arial,sans-serif" font-size="20" fill="#8B5CF6" font-weight="700">ROIC reversal vs AWS &amp; GCP by 2030 — space-scale economics</text>
+<text x="110" y="1130" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">DIC = the core valuation driver for SpaceX next decade</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.15</text>
+</svg>

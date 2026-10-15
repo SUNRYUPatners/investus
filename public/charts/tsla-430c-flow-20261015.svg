@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gb6b6k" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="100%" stop-color="#F97316"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gb6b6k)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#EF4444"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="190" y="30" width="76" height="36" rx="8" fill="#B91C1C"/>
+<text x="228" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="266" y="30" width="89" height="36" rx="8" fill="#C2410C"/>
+<text x="310.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">옵션플로우</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.15 · TSLA 430C 04/16/2027 대형 옵션 플로우</text>
+<text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="120" fill="#EF4444" font-weight="900">$13.3M</text>
+<text x="54" y="298" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">하루 프리미엄 규모</text>
+<text x="54" y="356" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">4,846 계약 · 평균 $27.45 · 10월 13일 발생</text>
+<defs><linearGradient id="dg380" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#F97316"/>
+    <stop offset="100%" stop-color="#F97316" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="380" width="972" height="3" fill="url(#dg380)" rx="2"/>
+<rect x="54" y="402" width="972" height="110" rx="16" fill="#1A0808" stroke="#EF4444" stroke-width="2"/>
+<text x="82" y="443" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" font-weight="700">행사가 $430 — 현재가 $375.61 대비 14.5% OTM</text>
+<text x="82" y="485" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">만기까지 잔여 185일 (2027년 4월 16일 만기)</text>
+<rect x="54" y="536" width="310" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="1.5"/>
+<text x="209" y="572" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" text-anchor="middle" font-weight="700">거래량</text>
+<text x="209" y="620" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">4,846계약</text>
+<text x="209" y="650" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">하루 비정상 대량</text>
+<rect x="388" y="536" width="310" height="130" rx="16" fill="#161B22" stroke="#F97316" stroke-width="1.5"/>
+<text x="543" y="572" font-family="Arial,sans-serif" font-size="19" fill="#F97316" text-anchor="middle" font-weight="700">총 프리미엄</text>
+<text x="543" y="620" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$13.3M</text>
+<text x="543" y="650" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">10월 13일</text>
+<rect x="722" y="536" width="304" height="130" rx="16" fill="#161B22" stroke="#DC2626" stroke-width="1.5"/>
+<text x="874" y="572" font-family="Arial,sans-serif" font-size="19" fill="#DC2626" text-anchor="middle" font-weight="700">평균가</text>
+<text x="874" y="620" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$27.45</text>
+<text x="874" y="650" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">계약당</text>
+<rect x="54" y="696" width="972" height="500" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="740" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#EF4444" font-weight="900">대형 옵션 플로우 해석 3가지</text>
+<line x1="82" y1="754" x2="998" y2="754" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="784" r="7" fill="#EF4444"/>
+<text x="116" y="792" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">헤지 — 숏 포지션 보유자의 상방 리스크 방어용 매수</text>
+<circle cx="96" cy="844" r="7" fill="#F97316"/>
+<text x="116" y="852" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">강세 베팅 — $430 돌파 확신 기반 방향성 레버리지</text>
+<circle cx="96" cy="904" r="7" fill="#DC2626"/>
+<text x="116" y="912" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">기관 포지션 — 로드스터·Q3 실적 앞두고 포지션 구축</text>
+<circle cx="96" cy="964" r="7" fill="#EF4444"/>
+<text x="116" y="972" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">내재변동성(IV) 46% — 일반 옵션 대비 높은 변동성</text>
+<rect x="82" y="1060" width="916" height="90" rx="12" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="110" y="1094" font-family="Arial,sans-serif" font-size="20" fill="#EF4444" font-weight="700">옵션 플로우 ≠ 방향성 보장 · 헤지·스프레드 가능성 포함</text>
+<text x="110" y="1132" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">21일 Q3 실적 + 오늘 로드스터 이벤트 함께 주시</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.15</text>
+</svg>

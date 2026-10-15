@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs>
+  <linearGradient id="hgen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/>
+    <stop offset="50%" stop-color="#8B5CF6"/>
+    <stop offset="100%" stop-color="#10B981"/>
+  </linearGradient>
+</defs>
+<rect x="0" y="0" width="1080" height="10" fill="url(#hgen)"/>
+<rect x="54" y="28" width="206" height="36" rx="8" fill="#8B5CF6"/>
+<text x="157" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Daily Snapshot</text>
+<rect x="230" y="28" width="154" height="36" rx="8" fill="#374151"/>
+<text x="307" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">2026.10.15</text>
+<rect x="392" y="28" width="141" height="36" rx="8" fill="#1F2937"/>
+<text x="462.5" y="52" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">11 TOPICS</text>
+<text x="54" y="108" font-family="Arial Black,Arial,sans-serif" font-size="44" fill="#fff" font-weight="900">Today's 11 Key Stories</text>
+<text x="54" y="152" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">October 15, 2026 · Selected by investus.kr</text>
+
+<rect x="54" y="172" width="972" height="3" fill="#1F2937" rx="2"/>
+
+<text x="54" y="218" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">① BREAKING</text>
+<text x="54" y="252" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Tesla Roadster reveal livestreams tonight at 7:55PM CT</text>
+<rect x="54" y="268" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="54" y="308" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#3B82F6" font-weight="900">② xAI</text>
+<text x="54" y="342" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Grok Voice 3.0 launches — Starlink 20k calls/day, 70% auto-resolved</text>
+<rect x="54" y="358" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="54" y="398" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#10B981" font-weight="900">③ Cybercab</text>
+<text x="54" y="432" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Austin fleet 399 vehicles · 490 driverless sightings Tue (+18% WoW)</text>
+<rect x="54" y="448" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="54" y="488" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#F97316" font-weight="900">④ CPI</text>
+<text x="54" y="522" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">US Sept CPI 3.7% YoY — beat 3.6% est, gasoline +9.1%</text>
+<rect x="54" y="538" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="54" y="578" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#8B5CF6" font-weight="900">⑤ SPCX</text>
+<text x="54" y="612" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Morgan Stanley reiterates $300 PT · DIC as top growth driver</text>
+<rect x="54" y="628" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="54" y="668" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#3B82F6" font-weight="900">⑥ Optimus</text>
+<text x="54" y="702" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Xinjian Transmission files Shenzhen IPO — planetary roller screw T1</text>
+<rect x="54" y="718" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="54" y="758" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#10B981" font-weight="900">⑦ Japan</text>
+<text x="54" y="792" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Model Y tops Japan foreign car sales ranking in September 2026</text>
+<rect x="54" y="808" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="54" y="848" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#10B981" font-weight="900">⑧ China NEV</text>
+<text x="54" y="882" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Tesla China Sept: 4th at 6.0% · BYD 22.8% · Leapmotor 3rd 7.2%</text>
+<rect x="54" y="898" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="54" y="938" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">⑨ Options</text>
+<text x="54" y="972" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">TSLA 430C Apr-2027 — 4,846 contracts, $13.3M single-day flow</text>
+<rect x="54" y="988" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="54" y="1028" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#22C55E" font-weight="900">⑩ NVDA</text>
+<text x="54" y="1062" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">Jensen Huang: would halt chip supply to unsafe AI developers</text>
+<rect x="54" y="1078" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="54" y="1118" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#3B82F6" font-weight="900">⑪ Tesla Energy</text>
+<text x="54" y="1152" font-family="Arial,sans-serif" font-size="26" fill="#E6EDF3">NightHawk Bocamno 2 Megapack complete · Brazoria County TX</text>
+<rect x="54" y="1168" width="972" height="2" fill="#1F2937" rx="1"/>
+
+<text x="540" y="1220" font-family="Arial,sans-serif" font-size="20" fill="#4B5563" text-anchor="middle">Roadster reveal + Q3 earnings (Oct 21) — expect elevated volatility</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.15</text>
+</svg>

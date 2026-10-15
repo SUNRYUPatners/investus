@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gbz0a6" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#22C55E"/>
+    <stop offset="100%" stop-color="#16A34A"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gbz0a6)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#22C55E"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="190" y="30" width="76" height="36" rx="8" fill="#16A34A"/>
+<text x="228" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">NVDA</text>
+<rect x="266" y="30" width="89" height="36" rx="8" fill="#15803D"/>
+<text x="310.5" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">AI 안전</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.15 · 젠슨 황 CEO 블룸버그 인터뷰</text>
+<text x="54" y="200" font-family="Arial Black,Arial,sans-serif" font-size="64" fill="#22C55E" font-weight="900">"칩 공급 중단"</text>
+<text x="54" y="278" font-family="Arial Black,Arial,sans-serif" font-size="44" fill="#fff" font-weight="900">불안전한 AI 개발사에</text>
+<text x="54" y="348" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">엔비디아 젠슨 황 CEO — 블룸버그 발언 · 전례 없는 수준</text>
+<defs><linearGradient id="dg374" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#22C55E" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#22C55E"/>
+    <stop offset="70%" stop-color="#16A34A"/>
+    <stop offset="100%" stop-color="#16A34A" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="374" width="972" height="3" fill="url(#dg374)" rx="2"/>
+<rect x="54" y="396" width="972" height="130" rx="16" fill="#052e16" stroke="#22C55E" stroke-width="2"/>
+<text x="82" y="437" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" font-weight="700">반도체 공급사가 AI 소프트웨어 안전성 기준으로</text>
+<text x="82" y="475" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" font-weight="700">하드웨어 공급 여부 결정 선언 — 업계 최초</text>
+<text x="82" y="513" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">AI 칩 수출 통제 강화 시점에 자율 안전 기준 선제 표명</text>
+<rect x="54" y="556" width="972" height="550" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="600" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#22C55E" font-weight="900">배경 및 의미 분석</text>
+<line x1="82" y1="614" x2="998" y2="614" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="644" r="7" fill="#22C55E"/>
+<text x="116" y="652" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">기존 AI 안전 논의는 소프트웨어 레이어에 국한됐음</text>
+<circle cx="96" cy="704" r="7" fill="#16A34A"/>
+<text x="116" y="712" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">하드웨어 공급사 직접 개입 = 거버넌스 주체로 진화 신호</text>
+<circle cx="96" cy="764" r="7" fill="#15803D"/>
+<text x="116" y="772" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">실제 집행 어려움 — 클라우드 경유 간접 접근 차단 불가</text>
+<circle cx="96" cy="824" r="7" fill="#22C55E"/>
+<text x="116" y="832" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">미국 AI 칩 수출 규제 강화 배경 속 전략적 선점 포지셔닝</text>
+<circle cx="96" cy="884" r="7" fill="#16A34A"/>
+<text x="116" y="892" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">정부·규제기관과의 관계에서 우호적 위치 점유 의도</text>
+<rect x="82" y="980" width="916" height="90" rx="12" fill="#052e16" stroke="#22C55E" stroke-width="1.5"/>
+<text x="110" y="1014" font-family="Arial,sans-serif" font-size="21" fill="#22C55E" font-weight="700">단기 주가 영향 제한적 · 장기 거버넌스 리스크 부각 가능</text>
+<text x="110" y="1052" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">AI 칩 규제 논의에서 엔비디아 중재자 포지셔닝 강화</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.15</text>
+</svg>

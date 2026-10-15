@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gbhqrt" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#059669"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gbhqrt)"/>
+<rect x="54" y="30" width="206" height="36" rx="8" fill="#10B981"/>
+<text x="157" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Stock Analysis</text>
+<rect x="254" y="30" width="76" height="36" rx="8" fill="#059669"/>
+<text x="292" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="330" y="30" width="128" height="36" rx="8" fill="#047857"/>
+<text x="394" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">Cybercab</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.15 · Austin autonomous fleet update</text>
+<text x="54" y="220" font-family="Arial Black,Arial,sans-serif" font-size="160" fill="#10B981" font-weight="900">399</text>
+<text x="54" y="298" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">total fleet size</text>
+<text x="54" y="354" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">Model Y 224 + Cybercab 175 · deployed in Austin TX</text>
+<defs><linearGradient id="dg378" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#10B981"/>
+    <stop offset="70%" stop-color="#059669"/>
+    <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="378" width="972" height="3" fill="url(#dg378)" rx="2"/>
+<rect x="54" y="400" width="972" height="110" rx="16" fill="#052e1c" stroke="#10B981" stroke-width="2"/>
+<text x="82" y="441" font-family="Arial,sans-serif" font-size="24" fill="#E6EDF3" font-weight="700">490 driverless sightings Tuesday — up 18% week-over-week</text>
+<text x="82" y="483" font-family="Arial,sans-serif" font-size="22" fill="#8B949E">~90% of recent 30-day rides were Cybercab</text>
+<rect x="54" y="534" width="310" height="130" rx="16" fill="#161B22" stroke="#10B981" stroke-width="1.5"/>
+<text x="209" y="570" font-family="Arial,sans-serif" font-size="19" fill="#10B981" text-anchor="middle" font-weight="700">Driverless</text>
+<text x="209" y="618" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">490</text>
+<text x="209" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Tuesday sightings</text>
+<rect x="388" y="534" width="310" height="130" rx="16" fill="#161B22" stroke="#059669" stroke-width="1.5"/>
+<text x="543" y="570" font-family="Arial,sans-serif" font-size="19" fill="#059669" text-anchor="middle" font-weight="700">Total</text>
+<text x="543" y="618" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">757</text>
+<text x="543" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">Oct 13 count</text>
+<rect x="722" y="534" width="304" height="130" rx="16" fill="#161B22" stroke="#047857" stroke-width="1.5"/>
+<text x="874" y="570" font-family="Arial,sans-serif" font-size="19" fill="#047857" text-anchor="middle" font-weight="700">WoW Growth</text>
+<text x="874" y="618" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">+18%</text>
+<text x="874" y="648" font-family="Arial,sans-serif" font-size="18" fill="#8B949E" text-anchor="middle">vs 418 prior week</text>
+<rect x="54" y="694" width="972" height="500" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="738" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#10B981" font-weight="900">Fleet Growth Breakdown</text>
+<line x1="82" y1="752" x2="998" y2="752" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="782" r="7" fill="#10B981"/>
+<text x="116" y="790" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Model Y 224: steady growth since Jun 22 launch</text>
+<circle cx="96" cy="842" r="7" fill="#059669"/>
+<text x="116" y="850" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Cybercab 175: driving most recent fleet expansion</text>
+<circle cx="96" cy="902" r="7" fill="#047857"/>
+<text x="116" y="910" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Driverless share 72% Tue vs 54% Mon — fast recovery</text>
+<circle cx="96" cy="962" r="7" fill="#10B981"/>
+<text x="116" y="970" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Cybercab sightings 30d: 252 → 397 (+58%) surge</text>
+<rect x="82" y="1058" width="916" height="90" rx="12" fill="#052e1c" stroke="#10B981" stroke-width="1.5"/>
+<text x="110" y="1092" font-family="Arial,sans-serif" font-size="20" fill="#10B981" font-weight="700">Next catalyst: multi-city expansion announcement</text>
+<text x="110" y="1130" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">Robotaxi viability proven · scaling phase has begun</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.15</text>
+</svg>

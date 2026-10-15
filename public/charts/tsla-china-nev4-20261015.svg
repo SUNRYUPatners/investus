@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#0D1117"/>
+
+<defs><linearGradient id="gbwje8" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#DC2626"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="1080" height="12" fill="url(#gbwje8)"/>
+<rect x="54" y="30" width="76" height="36" rx="8" fill="#10B981"/>
+<text x="92" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">종목분석</text>
+<rect x="190" y="30" width="76" height="36" rx="8" fill="#059669"/>
+<text x="228" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">TSLA</text>
+<rect x="266" y="30" width="102" height="36" rx="8" fill="#DC2626"/>
+<text x="317" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">중국 NEV</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.15 · 중국 2026년 9월 NEV 소매 점유율 (CPCA)</text>
+<text x="54" y="218" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#10B981" font-weight="900">테슬라 차이나 4위 6.0%</text>
+<text x="54" y="280" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">BYD 22.8% · Geely 11.0% · Leapmotor 7.2% · Tesla 6.0%</text>
+<defs><linearGradient id="dg304" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#10B981"/>
+    <stop offset="70%" stop-color="#DC2626"/>
+    <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="304" width="972" height="3" fill="url(#dg304)" rx="2"/>
+<text x="54" y="360" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#8B949E" font-weight="700">2026년 9월 중국 NEV 소매 순위</text>
+<rect x="54" y="376" width="700" height="44" rx="8" fill="#DC2626"/>
+<text x="72" y="405" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#fff" font-weight="900">1. BYD — 22.8%</text>
+<rect x="54" y="430" width="338" height="44" rx="8" fill="#3B82F6"/>
+<text x="72" y="459" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#fff" font-weight="900">2. Geely — 11.0%</text>
+<rect x="54" y="484" width="221" height="44" rx="8" fill="#8B5CF6"/>
+<text x="72" y="513" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#fff" font-weight="900">3. Leapmotor — 7.2%</text>
+<rect x="54" y="538" width="184" height="44" rx="8" fill="#10B981"/>
+<text x="72" y="567" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#fff" font-weight="900">4. Tesla China — 6.0% ★</text>
+<rect x="54" y="592" width="175" height="44" rx="8" fill="#F97316"/>
+<text x="72" y="621" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#fff" font-weight="900">5. Changan — 5.7%</text>
+<rect x="54" y="646" width="157" height="44" rx="8" fill="#6B7280"/>
+<text x="72" y="675" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#fff" font-weight="900">6. SAIC-GM-Wuling — 5.1%</text>
+<defs><linearGradient id="dg706" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#10B981"/>
+    <stop offset="70%" stop-color="#DC2626"/>
+    <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+  </linearGradient></defs>
+<rect x="54" y="706" width="972" height="3" fill="url(#dg706)" rx="2"/>
+<rect x="54" y="724" width="972" height="470" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="768" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#10B981" font-weight="900">테슬라 차이나 분석</text>
+<line x1="82" y1="782" x2="998" y2="782" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="812" r="7" fill="#10B981"/>
+<text x="116" y="820" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Model 3·Y 라인업으로 6.0% — 절대 점유율 4위 유지</text>
+<circle cx="96" cy="872" r="7" fill="#059669"/>
+<text x="116" y="880" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">FSD 중국 출시 = 점유율 회복의 핵심 변수</text>
+<circle cx="96" cy="932" r="7" fill="#DC2626"/>
+<text x="116" y="940" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Leapmotor 7.2% — Stellantis 합작 유럽 진출 교두보</text>
+<circle cx="96" cy="992" r="7" fill="#8B5CF6"/>
+<text x="116" y="1000" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Xiaomi Auto 3.7% — 스마트폰 기업의 10위권 안착</text>
+<rect x="82" y="1078" width="916" height="80" rx="12" fill="#052e1c" stroke="#10B981" stroke-width="1.5"/>
+<text x="110" y="1110" font-family="Arial,sans-serif" font-size="21" fill="#10B981" font-weight="700">중국 NEV 시장 성장 중 → 상위 브랜드 동반 성장 가능</text>
+<text x="110" y="1148" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" font-weight="900">FSD 허가 + 옵티머스 중국 생산이 차기 모멘텀</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.15</text>
+</svg>
