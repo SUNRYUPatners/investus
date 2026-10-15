@@ -42,6 +42,20 @@ const ALLOW = new Set([
   "workspace", "bigquery", "phase", "tier", "rapid", "iteration",
   "fail", "learn", "small", "whales", "plus", "fast", "figure",
   "sumit", "guha", "teslasonomics", "deepseek", "perplexity", "mistral",
+  // 테슬라·SpaceX 제품명·사업부 (2026-10-15~)
+  "spcx", "cybercab", "megapack", "nighthawk", "bocamno", "bess", "ercot",
+  "voice", "model", "energy", "distributed", "inference",
+  "connectors", "strong", "roic", "coreweave", "unacceptable",
+  // NEV·중국 자동차 시장 기업명 (2026-10-15~)
+  "leapmotor", "geely", "changan", "saic", "wuling", "chery", "hima",
+  "phev", "zeeker", "polestar", "lynk", "stellantis", "xiaomi",
+  "china", "vehicle", "passenger", "auto",
+  // 기계부품·투자금융 용어 (2026-10-15~)
+  "xinjian", "transmission", "planetary", "roller", "screw", "supplier",
+  "force", "density", "adam", "jones", "space", "economies", "scale",
+  // \n 이스케이프 파싱 아티팩트 허용 (2026-10-15~)
+  "ninvestus", "nxai", "ntsla", "nbyd", "ncpca", "ndic", "napi", "ntts",
+  "ngrok", "nspacex", "nmegapack", "nthis", "nvery", "ndeal",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */
