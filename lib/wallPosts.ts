@@ -47,6 +47,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T18OCT = 1792278000000; // 2026-10-18 08:00 KST
 const T13OCT = 1791846000000; // 2026-10-13 08:00 KST
 const T12OCT = 1791759600000; // 2026-10-12 08:00 KST
 const T11OCT = 1791673200000; // 2026-10-11 08:00 KST
@@ -142,7 +143,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T13OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T18OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -161,6 +162,67 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-18 신규 ────────────────────
+  { id: 122302, symbol: "TSLA", nickname: "로드스터파운더스", holdingLabel: "장투중",
+    content: "로드스터 Founders 에디션 25만 달러 실물 공개됨. 성능이 0→100 1.8초라니 하이퍼카 수준 아님? SpaceX 스러스터 패키지 달면 더 빠르다는데 그게 현실적으로 가능한 거임",
+    contentEn: "Roadster Founders Edition unveiled at $250K. 0-60 in 1.8s is hypercar territory. With the SpaceX Thruster Package it gets even faster — is that actually real?",
+    createdAt: T18OCT + 8*60_000, likes: 74, comments: 0 },
+  { id: 122303, symbol: "TSLA", nickname: "퍼포먼스맥스", holdingLabel: "장기보유중",
+    content: "로드스터 퍼포먼스 18만 스포트 9만9천 3트림 확정이네. 파운더스 한정 수량 얼마나 되는지 안 나왔는데 대기 명단 얼마나 쌓인 거임",
+    contentEn: "Roadster Performance $180K, Sport $99K — 3 trims confirmed. Founders is limited but no number given. How long's the waitlist at this point?",
+    createdAt: T18OCT + 16*60_000, likes: 58, comments: 0 },
+  { id: 122304, symbol: "TSLA", nickname: "맥그리거부스터", holdingLabel: "보유중",
+    content: "SpaceX 맥그리거 기지에서 로드스터 로켓 부스터 테스트 했다고 뜨는데 진짜면 차에 로켓 엔진 다는 거잖아 ㄷㄷ 양산은 언제고 일단 가격이 문제지",
+    contentEn: "Reports of SpaceX thruster tests at McGregor for Roadster. If true, they're literally putting rocket engines in a car. Mass production timeline and price point are the real questions.",
+    createdAt: T18OCT + 24*60_000, likes: 89, comments: 0 },
+  { id: 122305, symbol: "TSLA", nickname: "TSLA오늘사퍼센트", holdingLabel: "매수고민",
+    content: "TSLA 오늘 +4% 로드스터 공개 반응이 예상보다 좋은 듯. 21일 실적 앞두고 이렇게 오르면 혹시 기대 선반영 되는 건 아닌지 걱정이 더 생기는데",
+    contentEn: "TSLA +4% today on Roadster reveal. Better reception than expected. With earnings on the 21st this rally makes me wonder if expectations are getting priced in too fast.",
+    createdAt: T18OCT + 32*60_000, likes: 52, comments: 0 },
+  { id: 122306, symbol: "TSLA", nickname: "테라팹합병설", holdingLabel: "관심종목",
+    content: "바클레이스가 테슬라-스페이스X 합병 법인 Terafab 기업가치 16.8조 달러 산출했다는 거 실화임? 테라팹이 무슨 뜻인지도 궁금하고 합병 성사 확률은 얼마나 보는 거야",
+    contentEn: "Barclays actually put out a $16.8T valuation for Tesla-SpaceX merger entity 'Terafab'? What's the probability they assign to this actually happening?",
+    createdAt: T18OCT + 40*60_000, likes: 97, comments: 0 },
+  { id: 122307, symbol: "TSLA", nickname: "십이월육일AGM", holdingLabel: "장투중",
+    content: "12월 6일 주주총회에서 합병 투표 한다는 게 사실이면 40일도 안 남은 거잖아. 바클레이스 3.5조 달러 목표가는 합병 성사 가정한 거라는데 현재가 대비 업사이드 계산하면 얼마야",
+    contentEn: "If the Dec 6 AGM merger vote is real that's less than 40 days away. Barclays' $3.5T target assumes the merger — what's the upside vs current price?",
+    createdAt: T18OCT + 48*60_000, likes: 83, comments: 0 },
+  { id: 122308, symbol: "SPCX", nickname: "스팩스이십일", holdingLabel: "장기보유중",
+    content: "SPCX Q3 실적 10월 20일이면 내일이잖아 ㄷㄷ 모건스탠리 300달러 Strong Buy 유지 중인데 스타링크 구독자 수랑 발사 횟수가 포인트일 듯",
+    contentEn: "SPCX Q3 earnings are tomorrow the 20th. Morgan Stanley holding $300 Strong Buy. Starlink subscriber count and launch cadence will be the key numbers.",
+    createdAt: T18OCT + 56*60_000, likes: 67, comments: 0 },
+  { id: 122309, symbol: "TSLA", nickname: "실적이십일일", holdingLabel: "보유중",
+    content: "테슬라 Q3 실적 21일인데 차량 마진 회복 얼마나 됐는지가 최대 관심. 에너지 부문 아폴로 840M 계약 반영 얼마나 되는지도 봐야 하고. FSD 리컬링 수익도",
+    contentEn: "Tesla Q3 on the 21st — vehicle margin recovery is the top focus. Plus how much of the Apollo $840M Megapack deal is reflected, and FSD recurring revenue progress.",
+    createdAt: T18OCT + 64*60_000, likes: 61, comments: 0 },
+  { id: 122310, symbol: "META", nickname: "뮤즈스파크오픈", holdingLabel: "관심종목",
+    content: "메타 Muse Spark 오픈 816B 파라미터 42B 활성화 GPT-5랑 비슷한 급인 거임? 1M 컨텍스트에 Mac Studio 2대로 돌린다고 맥 사용자들한테 혁명적인 소식인데",
+    contentEn: "Meta Muse Spark Open: 816B params, 42B active — comparable to GPT-5? 1M context running on 2 Mac Studios is a massive deal for Mac users. Open weights changes everything.",
+    createdAt: T18OCT + 72*60_000, likes: 78, comments: 0 },
+  { id: 122311, symbol: "META", nickname: "오픈소스AI강화", holdingLabel: "매수고민",
+    content: "오픈웨이트 공개하면 기업들이 자체 서버에서 돌리니까 메타한테 직접 수익은 없는 거잖아. 근데 개발자 생태계 락인이랑 광고 AI 고도화가 장기적으로 더 크다는 판단인 거겠지",
+    contentEn: "Open weights means companies run it themselves — no direct revenue for Meta. But the developer ecosystem lock-in and ad AI advancement may be the bigger long-term play.",
+    createdAt: T18OCT + 80*60_000, likes: 44, comments: 0 },
+  { id: 122312, symbol: "AAPL", nickname: "아이폰듀오완판", holdingLabel: "장투중",
+    content: "iPhone Duo 1999달러부터인데 완판이라고? 1월 2027 배송이면 3개월 기다리는 거잖아. 아이폰 역대 라인업에서 이 가격대 처음인데 수요가 이렇게 탄탄한 게 신기함",
+    contentEn: "iPhone Duo sold out at $1,999+? Jan 2027 delivery means a 3-month wait. First ever iPhone at this price point and demand is this strong. Impressive.",
+    createdAt: T18OCT + 88*60_000, likes: 55, comments: 0 },
+  { id: 122313, symbol: "AAPL", nickname: "애플폴더블폰", holdingLabel: "보유중",
+    content: "접이식 아이폰이 2천달러라는 게 처음엔 비싸다 싶었는데 갤럭시 Z폴드 가격이랑 비교하면 비슷한 대역이긴 하지. 애플 생태계 선호하는 사람들한테는 매력적인 선택지임",
+    contentEn: "iPhone Duo at $2K felt expensive at first but it's in line with Galaxy Z Fold pricing. For Apple ecosystem loyalists it's a compelling choice with the usual Apple polish.",
+    createdAt: T18OCT + 96*60_000, likes: 38, comments: 0 },
+  { id: 122314, symbol: "NVDA", nickname: "엔비디아마이너스", holdingLabel: "관심종목",
+    content: "NVDA -1.84% AMD AI GPU 예측 75% 하향이 같이 나온 날이네. AMD 에상치 75% 낮췄으면 AI 수요가 식는 거냐 아니면 엔비디아 독점이 강화되는 거냐 해석이 갈리는데",
+    contentEn: "NVDA -1.84% and AMD cutting AI GPU forecast by 75% on the same day. Is AI demand cooling or is Nvidia's monopoly getting stronger? Conflicting reads.",
+    createdAt: T18OCT + 104*60_000, likes: 46, comments: 0 },
+  { id: 122315, symbol: "NVDA", nickname: "AMD수요하향조정", holdingLabel: "장투중",
+    content: "AMD가 AI GPU 예상치 75% 낮춘 게 공급 이슈인지 수요 이슈인지 구분해야 함. TSMC 패키징 병목이면 NVDA도 같은 문제 있는 거고, 수요 이슈면 전체 AI 인프라 투자 속도 점검해야 함",
+    contentEn: "AMD cutting AI GPU forecast 75% — need to separate supply constraint from demand softness. If it's TSMC packaging bottleneck that affects Nvidia too. If demand, it's a broader AI capex slowdown signal.",
+    createdAt: T18OCT + 112*60_000, likes: 63, comments: 0 },
+  { id: 122316, symbol: "TSLA", nickname: "나이트호크메가팩", holdingLabel: "장투중",
+    content: "테슬라 에너지 NightHawk Bocamno 2 메가팩 텍사스 브라조리아 카운티 완공됐다는 거 에너지 부문 Q3 실적에 반영되는 건가. 에너지 마진이 차량 마진보다 높아진 구조에서 이런 완공 소식은 그냥 지나치면 안 되지",
+    contentEn: "Tesla Energy NightHawk Bocamno 2 Megapack complete in Brazoria County TX. Does this hit Q3 energy segment numbers? With energy margins exceeding vehicle margins this kind of completion news matters.",
+    createdAt: T18OCT + 120*60_000, likes: 49, comments: 0 },
   // ── 2026-10-13 신규 ────────────────────
   { id: 122290, symbol: "TSLA", nickname: "제프리스사백이십", holdingLabel: "장투중",
     content: "제프리스 350→420 올렸는데 HOLD는 그대로야 그게 포인트임. 로보택시 현실화 반영했다는데 왜 매수 안 줌? 21일 실적 보고 나서 판단한다는 거잖아",

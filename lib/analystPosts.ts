@@ -18,6 +18,97 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-10-18 신규 ──────────────────────────
+  {
+    id: -1626, alias: "북한산 매 #14", symbol: "TSLA",
+    content: "테슬라 로드스터 공개 행사는 제품 발표를 넘어 포지셔닝 선언입니다. Founders 에디션 25만 달러, Performance 18만 달러, Sport 9만9천 달러의 3트림 구조는 람보르기니 허라칸 라인업과 같은 방식으로 세그먼트를 수직 장악하는 전략입니다. 중요한 것은 SpaceX Thruster Package의 존재입니다. 맥그리거 기지에서 로켓 추진체 테스트를 완료한 사실은 단순한 마케팅이 아니라 SpaceX의 추진 기술이 민간 차량에 처음 통합되는 선례를 만드는 것입니다. 테슬라-SpaceX 기술 융합이 하나의 소비재 제품에서 가시화될 때 두 회사 합병 논리가 단순한 재무 시너지를 넘어 기술 플랫폼 통합으로 읽히게 됩니다. 주가 +4% 반응은 실적 발표(21일)를 앞두고 보수적이었던 포지션이 일부 해소된 것이며, 합병 옵션 밸류가 추가로 반영되기 시작한 신호입니다.",
+    contentEn: "Tesla Roadster's reveal is a positioning statement beyond a product launch. Three trims — Founders at $250K, Performance at $180K, Sport at $99K — vertically dominate the hypercar segment the same way Lamborghini structures its Huracan lineup. What matters most is the SpaceX Thruster Package. The completed test at McGregor isn't marketing; it's the first time SpaceX propulsion technology integrates into a consumer vehicle, setting a precedent. When Tesla-SpaceX technological convergence becomes visible in a single product, the merger thesis transitions from financial synergy to technology platform integration. The +4% stock reaction reflects partial unwind of conservative positioning ahead of Oct 21 earnings, with merger option value beginning to get priced in.",
+    likes: 43, comments: 2, created_at: "2026-10-18T00:05:00.000Z", liked: false,
+  },
+  {
+    id: -1627, alias: "수락산 독수리 #77", symbol: "TSLA",
+    content: "바클레이스의 Terafab 법인 기업가치 16.8조 달러 산출과 12월 6일 주주총회 합병 투표 일정은 서로 다른 층위의 정보입니다. 기업가치 산출은 분석가 모델이지만 주총 일정은 이사회 결의가 필요한 사항입니다. 현재 공식적으로 확인된 것은 12월 6일 정기 주주총회 예정이라는 사실뿐이며, 합병 안건이 의제에 포함된다는 공시는 없습니다. 바클레이스 목표가 3.5조 달러는 합병이 성사된 경우의 통합 법인 시가총액이며, 현재 테슬라 단독 밸류에이션 기준이 아닙니다. 투자 판단에서 중요한 것은 합병 성사 확률을 몇 %로 산정하느냐입니다. 합병 성사 시 단독 테슬라 보유자는 SPCX 자산을 내재가치 이상의 프리미엄으로 취득하게 되므로, 지금 두 종목 모두 보유하는 전략이 헤지 역할을 겸합니다.",
+    contentEn: "Barclays' Terafab $16.8T valuation and the December 6 AGM merger vote are different levels of information. The valuation is an analyst model; the AGM date requires board resolution. What's confirmed: a regular December 6 shareholder meeting. No filing has announced a merger agenda item. Barclays' $3.5T target represents the combined entity's market cap on merger completion, not Tesla's standalone valuation. What matters for investors is what probability to assign to merger completion. If it closes, standalone Tesla holders acquire SpaceX assets at an implicit premium, which is why holding both now serves as an effective hedge while capturing the optionality.",
+    likes: 38, comments: 2, created_at: "2026-10-18T00:07:00.000Z", liked: false,
+  },
+  {
+    id: -1628, alias: "관악산 새매 #52", symbol: "TSLA",
+    content: "10월 21일 테슬라 3분기 실적의 핵심 변수는 세 가지입니다. 첫째, 차량 마진 회복 여부입니다. 2분기 15.2%에서 3분기 15.8~16.2% 구간 회복이 컨센서스인데, 중국 9월 소매 64,837대를 달성하기 위해 투입된 인센티브 규모가 변수입니다. 둘째, 에너지 사업부 매출입니다. 아폴로 파워 840M 달러 메가팩 계약이 인식 시점에 따라 3분기 또는 4분기 반영이 갈리며, NightHawk Bocamno 2 완공도 추가 수주 파이프라인을 의미합니다. 셋째, FSD 구독 전환율입니다. 무료 체험 종료 후 유료 전환 비율이 20%를 넘으면 리커링 수익 모델이 가시화되는 전환점입니다. 컨콜에서 사이버캡 단위 경제성 수치를 공식 제시한다면 로보택시 밸류에이션 재산정 트리거가 됩니다.",
+    contentEn: "Three variables will define Tesla's Q3 earnings on October 21. First, vehicle margin recovery: consensus expects 15.8–16.2% vs. Q2's 15.2%, but China incentives for the 64,837-unit September record are the unknown. Second, energy segment revenue: the $840M Apollo Power Megapack contract may hit Q3 or Q4 depending on recognition timing, and NightHawk Bocamno 2 completion implies an expanding pipeline. Third, FSD subscription conversion rate: if post-trial conversion exceeds 20%, the recurring revenue model becomes structurally visible for the first time. If management provides Cybercab unit economics on the call, it becomes the trigger for re-rating robotaxi valuation multiples.",
+    likes: 51, comments: 2, created_at: "2026-10-18T00:09:00.000Z", liked: false,
+  },
+  {
+    id: -1629, alias: "청계산 황로 #28", symbol: "SPCX",
+    content: "SPCX 3분기 실적(10월 20일)에서 모건스탠리 300달러 Strong Buy를 지지하는 두 핵심 지표는 Direct Internet Connection 계약 수와 스타링크 구독자 순증입니다. DIC는 기업·정부 고객의 전용 위성 링크 서비스로, 계약 단가가 소비자 구독의 50배 이상입니다. 3분기 재난 대응 계약에서 스타링크가 유일 작동 인프라로 증명된 사례가 누적되면서 정부 채널 계약 파이프라인이 급증하고 있습니다. 스타링크 위성 총질량이 세계 나머지를 초과한 시점과 맞물려 궤도 점유율 기반의 진입 장벽이 가시화되고 있습니다. 분기 실적에서 발사 횟수와 배치 위성 수는 시장이 이미 알고 있는 데이터입니다. 실질 투자 지표는 ARPU(가입자당 평균 수익) 개선이며, DIC 비중이 올라갈수록 블렌디드 ARPU는 구조적으로 상승합니다.",
+    contentEn: "Two core metrics backing Morgan Stanley's $300 Strong Buy heading into SPCX Q3 earnings on October 20: Direct Internet Connection contract count and Starlink net subscriber additions. DIC is enterprise and government dedicated satellite links priced at 50× consumer subscriptions. Accumulated proof cases of Starlink as sole-functioning infrastructure in disaster response are creating a government contract pipeline surge. With total satellite mass exceeding the global aggregate, the orbital capacity moat is becoming tangible. Launch cadence and constellation size are already known. The true investment metric is ARPU improvement — as DIC share rises, blended ARPU structurally increases.",
+    likes: 33, comments: 2, created_at: "2026-10-18T00:11:00.000Z", liked: false,
+  },
+  {
+    id: -1630, alias: "불암산 흰죽지 #69", symbol: "META",
+    content: "메타 Muse Spark Open 816B 파라미터 모델 공개는 오픈 웨이트 전략의 규모 임계점 돌파입니다. 42B 활성 파라미터 MoE 구조, 1M 컨텍스트, Mac Studio 2대 운영 가능이라는 스펙은 GPT-5 수준의 모델을 기업이 자체 서버에서 직접 구동할 수 있음을 의미합니다. 메타의 오픈 웨이트 전략이 직접 수익을 포기하는 것처럼 보이지만, 실제 수익 모델은 두 갈래입니다. 첫째, 개발자 생태계 장악으로 Llama 계열을 사실상 산업 표준으로 만들고, 프라이빗 파인튜닝 서비스와 클라우드 API에서 수익화합니다. 둘째, 광고 AI 고도화입니다. 816B 규모 모델이 메타의 내부 광고 타겟팅 시스템에 통합되면 광고 수익 단가가 올라갑니다. 오픈소스 기여로 외부 연구자들이 모델을 개선하는 무임승차 효과도 있습니다. 2024년 Llama 2 공개 이후 메타 광고 ROAS 지표가 개선된 선례가 이 전략의 근거입니다.",
+    contentEn: "Meta's Muse Spark Open 816B parameter release is an open-weight strategy at a scale inflection point. 42B active parameters in MoE architecture, 1M context, and 2-Mac-Studio operation means enterprises can self-host GPT-5-class models on their own infrastructure. Meta's strategy appears to sacrifice direct revenue, but the actual monetization has two tracks. First, establishing Llama-lineage models as the de facto industry standard, then monetizing via private fine-tuning services and cloud APIs. Second, ad AI enhancement: integrating 816B-scale models into Meta's internal ad targeting raises ad revenue per impression. There's also the free R&D effect of external researchers improving the open model. Meta's ad ROAS improvement post-Llama 2 open release in 2024 is the empirical precedent for this strategy.",
+    likes: 29, comments: 2, created_at: "2026-10-18T00:13:00.000Z", liked: false,
+  },
+  {
+    id: -1631, alias: "아차산 흰뺨딱새 #83", symbol: "AAPL",
+    content: "iPhone Duo(접이식 아이폰) 1,999달러 시작가에 완판, 2027년 1월 배송은 세 가지를 확인해줍니다. 첫째, 애플 브랜드 프리미엄은 삼성 갤럭시 Z폴드 가격대를 정당화할 수 있는 수준입니다. 둘째, 폼팩터 혁신에 대한 소비자 지불 의향이 2,000달러 장벽을 넘었습니다. 셋째, 3개월 대기에도 불구한 완판은 초기 공급이 수요를 충족하지 못했음을 의미하며, 이는 1분기 출고량 상승으로 직결됩니다. 투자 관점에서 중요한 것은 ASP(평균판매단가) 구조 변화입니다. 아이폰 전체 라인업에서 2,000달러 이상 모델 비중이 올라가면 서비스 매출의 기반이 되는 설치 기반 가치도 함께 올라갑니다. 앱스토어·애플케어·아이클라우드의 ARPU는 디바이스 가격과 정의 상관관계에 있습니다.",
+    contentEn: "iPhone Duo (foldable iPhone) selling out at $1,999+ with January 2027 delivery confirms three things. First, Apple's brand premium can justify Galaxy Z Fold pricing. Second, consumer willingness to pay for form factor innovation has crossed the $2,000 barrier. Third, selling out despite a 3-month wait means initial supply undershot demand — a direct setup for elevated Q1 unit shipments. For investors, the key is the ASP (average selling price) structural shift. As $2,000+ models become a higher share of the iPhone mix, the installed base value driving services revenue rises in parallel. App Store, AppleCare, and iCloud ARPU are positively correlated with device price.",
+    likes: 22, comments: 2, created_at: "2026-10-18T00:15:00.000Z", liked: false,
+  },
+  {
+    id: -1632, alias: "대모산 청둥오리 #41", symbol: "NVDA",
+    content: "NVDA -1.84%와 AMD AI GPU 예측치 75% 하향이 같은 날 나온 것은 시장이 두 가지 상반된 해석 사이에서 혼란스럽다는 신호입니다. AMD의 75% 하향이 수요 이슈라면 AI 인프라 전반의 투자 속도가 꺾이는 신호입니다. 그러나 AMD의 AI GPU 점유율이 여전히 5% 미만이라는 점을 감안하면, AMD 추정치 하향이 엔비디아 수요를 반영하지 않습니다. 오히려 TSMC 패키징(CoWoS) 병목이 AMD 배분을 축소시켰을 가능성이 높습니다. NVDA 주가 하락이 AMD 뉴스로 인한 것이라면 과매도입니다. a16z의 Jevons 역설 데이터가 보여주듯, H100 수요는 토큰 가격 하락에도 불구하고 구조적으로 증가 중입니다. NVDA의 현재 조정은 Q4 실적(11월) 전 진입 구간으로 분류하는 것이 합리적입니다.",
+    contentEn: "NVDA -1.84% and AMD cutting AI GPU estimates by 75% on the same day signals market confusion between two conflicting interpretations. If AMD's cut reflects demand, it's a broad AI capex slowdown signal. However, AMD's AI GPU market share remains below 5%, meaning AMD estimates don't proxy Nvidia demand. More likely: TSMC CoWoS packaging bottlenecks reduced AMD's allocation. If NVDA's drop is driven by AMD news, it's oversold. As a16z's Jevons Paradox data shows, H100 demand grows structurally despite falling token prices. Classifying the current NVDA pullback as a pre-Q4 earnings (November) entry point is the rational framework.",
+    likes: 47, comments: 2, created_at: "2026-10-18T00:17:00.000Z", liked: false,
+  },
+  {
+    id: -1633, alias: "청계산 황조롱이 #36", symbol: "TSLA",
+    content: "Tesla Roadster SpaceX Thruster Package는 단순한 옵션 사양이 아니라 두 회사 기술 통합의 최초 가시적 결과물입니다. 추진체 테스트를 맥그리거 기지에서 진행했다는 것은 SpaceX 엔지니어링 팀이 로드스터 개발에 직접 참여했음을 의미합니다. 합병 논의와 무관하게 두 회사의 기술 인프라가 이미 연결되어 있다는 증거입니다. 이것이 Terafab 합병 논리에서 중요한 이유는, 합병의 기술 시너지가 '가정'이 아니라 '진행 중'이라는 것을 보여주기 때문입니다. 역사적으로 기술 시너지가 가정 단계에서 실증 단계로 넘어갈 때 합병 프리미엄이 확대됩니다. 인텔-모빌아이 분리보다 오히려 두 회사가 같은 방향으로 수렴하고 있다는 증거로 읽혀야 합니다.",
+    contentEn: "Tesla Roadster's SpaceX Thruster Package is not just a trim option — it's the first visible output of cross-company technology integration. Testing at SpaceX's McGregor facility means SpaceX engineering teams directly participated in Roadster development. This is evidence that the two companies' technical infrastructure is already connected, regardless of merger discussions. Why this matters for Terafab merger logic: it shows the technology synergy is 'ongoing' rather than 'assumed.' Historically, when tech synergy moves from hypothesis to proof, merger premiums expand. This should be read not as an Intel-Mobileye split but as two companies converging in the same direction.",
+    likes: 31, comments: 2, created_at: "2026-10-18T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -1634, alias: "수락산 두루미 #91", symbol: "TSLA",
+    content: "오스틴 로보택시 사이버캡 기준 오늘까지 399대, 총 주행 횟수 누적 490 driverless sightings(화요일 기준 490회)는 플릿 확장 속도와 운행 밀도 두 가지를 동시에 보여줍니다. 핵심은 화요일 490회가 전주 대비 18% 증가했다는 것입니다. 서비스 지역이 고정된 상태에서 운행 횟수가 18% 늘었다면 차량 1대당 효율이 개선된 것이며, 이는 소프트웨어 최적화 또는 배차 알고리즘 고도화의 결과입니다. 21일 컨콜에서 이 운행 효율 지표가 공식 언급되면, 로보택시 단위 경제성이 처음으로 공식 데이터로 확인되는 순간입니다. 현재 주당 총 운행 수익을 역산하면, 399대가 주 5일 490회 운행에 12.28달러를 곱한 수치는 약 300만 달러이며, 이것이 오스틴 단일 시장 주간 매출입니다.",
+    contentEn: "Austin robotaxi fleet at 399 units with 490 driverless sightings on Tuesday — up 18% week-over-week — simultaneously shows fleet expansion rate and operational density improvement. The critical insight: if sightings grew 18% with the same service area, it means per-vehicle trip efficiency improved, resulting from software optimization or dispatch algorithm enhancement. If this efficiency metric gets official mention on the Oct 21 call, it will be the first time robotaxi unit economics are confirmed with official data. Back-calculating: 399 vehicles × 490 weekly trips × $12.28 fare ≈ $3M — that's a single-market weekly revenue run rate for Austin.",
+    likes: 56, comments: 2, created_at: "2026-10-18T00:21:00.000Z", liked: false,
+  },
+  {
+    id: -1635, alias: "불암산 솔개 #24", symbol: "SPCX",
+    content: "모건스탠리 SPCX 300달러 Strong Buy 리터레이션의 핵심 근거는 DIC(Direct Internet Connection)입니다. DIC는 기업·정부가 스타링크 위성 여러 개를 전용 할당받아 전 세계 어디서나 고정 대역폭 직접 링크를 유지하는 서비스입니다. 계약 단가는 소비자 스타링크 월 120달러 대비 월 6,000~15,000달러 수준으로, ARPU 기여도가 50~125배입니다. DIC 성장이 SPCX 밸류에이션을 재산정하는 이유는 단순한 매출 증가가 아니라 고객 유형 구조 변화 때문입니다. 소비자 구독은 이탈률이 존재하지만, 정부·기업 DIC 계약은 3~5년 장기 계약으로 체결되며 해지가 구조적으로 어렵습니다. 반복 매출의 질이 다릅니다. SPCX 20일 실적에서 DIC 계약 건수나 ARR 기여도가 공개된다면 목표가 상향 재료가 됩니다.",
+    contentEn: "The core rationale for Morgan Stanley's SPCX $300 Strong Buy reiteration is Direct Internet Connection. DIC provides enterprises and governments with dedicated allocation of multiple Starlink satellites, maintaining fixed-bandwidth direct links globally. Contract pricing ranges from $6,000–$15,000/month vs. consumer Starlink at $120/month — an ARPU contribution of 50–125×. DIC growth rewrites SPCX valuation not just through revenue growth but through customer mix structural change. Consumer subscriptions have churn; government and enterprise DIC contracts are 3–5 year agreements with structurally low cancellation rates. The quality of recurring revenue differs fundamentally. If DIC contract count or ARR contribution is disclosed in the Oct 20 earnings, it becomes a price target upgrade catalyst.",
+    likes: 27, comments: 2, created_at: "2026-10-18T00:23:00.000Z", liked: false,
+  },
+  {
+    id: -1636, alias: "관악산 황로 #57", symbol: "META",
+    content: "Meta Muse Spark Open이 오픈 웨이트로 공개되면서 AI 모델 시장 경쟁 구도가 변합니다. 폐쇄형 모델(GPT-5, Claude 4, Gemini Ultra)과 오픈 웨이트 모델(Llama 계열) 사이의 성능 격차가 이번 816B 공개로 사실상 소멸됩니다. 기업 입장에서 동등 성능이라면 라이선스 비용과 데이터 통제권이 결정 변수입니다. 오픈 웨이트는 두 가지를 모두 해결합니다. 이 구도에서 수혜를 보는 것은 역설적으로 클라우드 인프라 기업입니다. 오픈 모델을 자체 서버에서 운영하려면 GPU 클라우드 또는 온프렘 서버 투자가 필요하기 때문입니다. AWS, GCP, Azure의 GPU 인스턴스 수요가 오픈 웨이트 확산에 따라 증가하는 구조입니다. NVDA 단기 조정이 오픈 웨이트 트렌드 때문이라는 해석은 틀렸으며, 오히려 컴퓨트 수요를 확대하는 요인입니다.",
+    contentEn: "Meta Muse Spark Open's open-weight release reshapes competitive dynamics in the AI model market. The performance gap between closed models (GPT-5, Claude 4, Gemini Ultra) and open-weight models effectively disappears with this 816B release. For enterprises, if performance is equivalent, licensing cost and data control become the deciding variables — and open weights solve both. Paradoxically, the structural beneficiaries are cloud infrastructure companies. Running open models on-premises requires GPU cloud or on-prem server investment. AWS, GCP, and Azure GPU instance demand grows with open-weight model proliferation. The interpretation that NVDA's short-term pullback reflects open-weight trends is incorrect; open weights expand compute demand.",
+    likes: 35, comments: 2, created_at: "2026-10-18T00:25:00.000Z", liked: false,
+  },
+  {
+    id: -1637, alias: "청계산 물수리 #18", symbol: "AAPL",
+    content: "iPhone Duo 완판과 Jan 2027 배송 일정은 애플의 공급망 전략을 드러냅니다. 처음으로 2,000달러를 넘는 아이폰 라인업을 출시하면서 공급을 의도적으로 제한한 것은 가격 탄성 테스트이자 브랜드 포지셔닝 강화 전략입니다. 샤오미·화웨이의 접이식 폰 가격이 1,200~1,600달러인 상황에서 애플이 2,000달러에 완판을 달성했다는 것은 브랜드 프리미엄이 최소 400달러 이상임을 확인합니다. 2027년 1월 배송이 의미하는 것은 Q4 FY2026 실적에 Duo 매출이 반영되지 않는다는 것입니다. 그러나 예약 선금이 이연 수익으로 잡히고, Q1 FY2027에 집중 인식되는 구조이므로 애플 FY2027 Q1 실적 기대치가 높아집니다.",
+    contentEn: "iPhone Duo's sellout with January 2027 delivery reveals Apple's supply chain strategy. Launching the first iPhone above $2,000 with intentionally constrained supply is both a price elasticity test and brand positioning reinforcement. With Xiaomi and Huawei foldables priced at $1,200–$1,600, Apple achieving a sellout at $2,000 confirms a brand premium of at least $400. The January delivery means Duo revenue won't hit Q4 FY2026 results. However, reservation deposits are recorded as deferred revenue, concentrated into FY2027 Q1 recognition — raising Q1 FY2027 earnings expectations meaningfully.",
+    likes: 19, comments: 2, created_at: "2026-10-18T00:27:00.000Z", liked: false,
+  },
+  {
+    id: -1638, alias: "북한산 흑고니 #45", symbol: "TSLA",
+    content: "Tesla Energy NightHawk Bocamno 2 메가팩 텍사스 브라조리아 카운티 완공은 에너지 사업부 파이프라인 실행력을 보여주는 사례입니다. NightHawk 시리즈는 야간 태양광 연계 대형 ESS로, 브라조리아 카운티는 휴스턴 남부 허리케인 위험 지역입니다. 재난 대비 에너지 저장 수요가 높은 지역에서 완공 사례를 쌓아가는 것은 텍사스 전력망 ERCOT 관계자 신뢰를 구축하는 과정이기도 합니다. ERCOT가 민간 ESS 기업에 발주하는 그리드 안정화 계약은 단일 계약 규모가 일반 상업 계약의 5~10배 수준입니다. 에너지 부문 마진이 20%를 넘어선 지금 메가팩 완공 실적이 쌓일수록 ERCOT 계약 수주 확률이 높아지고, 이것이 에너지 부문 매출 가속화의 핵심 경로입니다.",
+    contentEn: "Tesla Energy NightHawk Bocamno 2 Megapack completion in Brazoria County, TX demonstrates energy division pipeline execution. NightHawk is a night-linked large-scale ESS for solar, and Brazoria County is a high hurricane-risk zone south of Houston. Building proof cases in high disaster-risk areas establishes credibility with Texas grid operator ERCOT. ERCOT's grid stabilization contracts with private ESS companies are 5–10× the size of standard commercial contracts. With energy segment margins exceeding 20%, each Megapack completion increases ERCOT contract win probability — the critical path for accelerating energy segment revenue.",
+    likes: 24, comments: 2, created_at: "2026-10-18T00:29:00.000Z", liked: false,
+  },
+  {
+    id: -1639, alias: "수락산 참수리 #62", symbol: "NVDA",
+    content: "AMD AI GPU 예측치 75% 하향의 시사점을 NVDA 맥락에서 정확히 분리해야 합니다. AMD MI300X 출하량 하향의 원인으로 거론되는 것은 두 가지입니다. 첫째, TSMC CoWoS-L 패키징 물량이 NVDA B200/H200에 우선 배분되면서 AMD 물량이 축소됐을 가능성. 둘째, 기업 AI 지출이 추론(inference) 중심으로 이동하면서 훈련용 GPU 수요가 AMD 사업 모델에 상대적으로 더 불리하게 작용한 경우. 어느 쪽이든 NVDA에 대한 직접 부정적 함의는 없습니다. TSMC 패키징 병목이라면 NVDA도 공급 제약이 있지만 수요 견인이 강하다는 의미이고, 추론 이동이라면 NVDA H200 추론 최적화 버전 수요가 올라가는 구조입니다. 단기 -1.84%는 매수 관점에서 노이즈입니다.",
+    contentEn: "AMD's 75% AI GPU forecast cut needs precise separation from its implications for NVDA. Two causes are cited for MI300X shipment reduction. First: TSMC CoWoS-L packaging capacity being prioritized for NVDA B200/H200, reducing AMD allocation. Second: enterprise AI spending shifting toward inference, which is structurally more disadvantageous for AMD's training-focused model. Neither carries direct negative implications for NVDA. If it's a packaging bottleneck, NVDA has supply constraints but demand pull is strong. If it's an inference shift, NVDA H200 inference-optimized variants see demand increase. Short-term -1.84% is noise from a Buy perspective.",
+    likes: 44, comments: 2, created_at: "2026-10-18T00:31:00.000Z", liked: false,
+  },
+  {
+    id: -1640, alias: "불암산 왜가리 #33", symbol: "TSLA",
+    content: "이번 주 테슬라-SpaceX 관련 이벤트를 통합적으로 읽으면 세 가지 가치 레이어가 동시에 움직이고 있습니다. 첫째, 단기 실적 레이어: 21일 Q3 실적에서 차량 마진·에너지 매출·FSD 전환율. 둘째, 중기 로보택시 레이어: 오스틴 플릿 399대 + 18% WoW 성장 + 6도시 확장. 셋째, 장기 합병 옵션 레이어: Terafab 합병 논의, 12월 AGM, 바클레이스 3.5조 목표. 현재 주가가 세 가지 레이어를 충분히 반영하고 있는지가 투자 판단의 핵심입니다. Q3 실적 발표 후 단기 마진 데이터가 기대를 충족하면 중기·장기 레이어로 시장 집중이 이동합니다. 실망스러운 마진이면 세 레이어 모두 재산정됩니다. 21일까지 리스크 관리가 핵심인 구간입니다.",
+    contentEn: "Reading this week's Tesla-SpaceX events as an integrated whole reveals three simultaneous value layers. First, near-term earnings layer: Q3 on Oct 21 — vehicle margins, energy revenue, FSD conversion rate. Second, mid-term robotaxi layer: Austin fleet at 399 units + 18% WoW growth + 6-city expansion. Third, long-term merger option layer: Terafab merger discussions, December AGM, Barclays $3.5T target. Whether current price fully reflects all three layers is the core investment judgment. If Q3 earnings satisfy expectations, market attention shifts to mid and long-term layers. Disappointing margins re-price all three simultaneously. Risk management is paramount until the 21st.",
+    likes: 61, comments: 2, created_at: "2026-10-18T00:33:00.000Z", liked: false,
+  },
   // ── 2026-10-13 신규 ──────────────────────────
   {
     id: -1617, alias: "마포 흰죽지 #33", symbol: "TSLA",
@@ -10205,6 +10296,67 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-10-18 애널 댓글 ──────────────────────
+  [-1626]: [
+    { alias: "도봉 해오라기 #44", content: "파운더스 25만 달러가 람보르기니 에보 급이라는 포지셔닝이 맞습니다. 3트림 구조로 최대 공략 폭이 넓어졌네요.", created_at: "2026-10-18T00:05:04.000Z" },
+    { alias: "강남 독수리 #73", content: "스러스터 패키지가 옵션으로 열린다면 Founders 고객이 가장 먼저 구매할 텐데 대기 명단 길이가 궁금합니다.", created_at: "2026-10-18T00:05:07.000Z" },
+  ],
+  [-1627]: [
+    { alias: "마포 두견 #88", content: "합병 안건이 12월 6일 의제에 공식 포함된다는 공시가 없다는 지적이 정확합니다. 확률 가중치를 얼마로 잡느냐가 투자 판단의 핵심이죠.", created_at: "2026-10-18T00:07:04.000Z" },
+    { alias: "서초 흰뺨딱새 #34", content: "두 종목 동시 보유 헤지 전략은 합리적입니다. 합병 성사 여부와 무관하게 양방향 포지션이 되죠.", created_at: "2026-10-18T00:07:07.000Z" },
+  ],
+  [-1628]: [
+    { alias: "강동 바위종다리 #67", content: "차량 마진 회복과 에너지 인식 시점 두 가지 모두 21일 컨콜 핵심입니다. FSD 전환율까지 세 가지를 동시에 봐야 하네요.", created_at: "2026-10-18T00:09:04.000Z" },
+    { alias: "은평 비오리 #51", content: "사이버캡 단위 경제성 공식 제시가 나오면 진짜 밸류에이션 리레이팅 시점이 될 것 같습니다.", created_at: "2026-10-18T00:09:07.000Z" },
+  ],
+  [-1629]: [
+    { alias: "노원 꾀꼬리 #28", content: "DIC ARPU가 소비자의 50배라는 수치 처음 알았습니다. 블렌디드 ARPU 상승 구조가 밸류에이션에 미치는 영향이 크겠군요.", created_at: "2026-10-18T00:11:04.000Z" },
+    { alias: "용산 흑고니 #79", content: "발사 횟수보다 ARPU 개선이 실질 투자 지표라는 포인트가 시장이 놓치는 부분 같습니다.", created_at: "2026-10-18T00:11:07.000Z" },
+  ],
+  [-1630]: [
+    { alias: "광진 황조롱이 #53", content: "오픈 웨이트 전략의 두 수익화 경로를 정리해주셔서 이해가 됐습니다. 직접 수익은 없지만 광고 AI 고도화가 핵심이군요.", created_at: "2026-10-18T00:13:04.000Z" },
+    { alias: "은평 참수리 #86", content: "2024년 Llama 2 공개 후 광고 ROAS 개선 선례가 있다는 게 이번 전략의 근거가 되는 거군요.", created_at: "2026-10-18T00:13:07.000Z" },
+  ],
+  [-1631]: [
+    { alias: "강남 흰죽지 #37", content: "Jan 2027 배송이라 Q4 FY2026에 안 잡히고 FY2027 Q1에 집중된다는 구조 설명 감사합니다.", created_at: "2026-10-18T00:15:04.000Z" },
+    { alias: "마포 할미새 #92", content: "브랜드 프리미엄 400달러 이상 확인됐다는 관점이 좋습니다. 삼성 폴더블 대비 명확한 수치죠.", created_at: "2026-10-18T00:15:07.000Z" },
+  ],
+  [-1632]: [
+    { alias: "중랑 개구리매 #44", content: "AMD 하향이 NVDA 수요 반영 아니라는 점 명확히 해주셨습니다. CoWoS 패키징 병목 해석이 설득력 있네요.", created_at: "2026-10-18T00:17:04.000Z" },
+    { alias: "성북 물수리 #16", content: "추론 이동이라면 H200 추론 최적화 수요 증가로 연결된다는 역설적 논리가 흥미롭습니다.", created_at: "2026-10-18T00:17:07.000Z" },
+  ],
+  [-1633]: [
+    { alias: "도봉 왜가리 #68", content: "기술 시너지가 가정에서 실증으로 넘어가면 합병 프리미엄이 확대된다는 역사적 패턴 공감합니다.", created_at: "2026-10-18T00:19:04.000Z" },
+    { alias: "강북 솔개 #24", content: "맥그리거 테스트 사실 자체가 이미 두 조직이 통합 운영 중이라는 증거네요.", created_at: "2026-10-18T00:19:07.000Z" },
+  ],
+  [-1634]: [
+    { alias: "강동 청둥오리 #81", content: "오스틴 주간 매출 300만 달러 역산 방법론이 명확합니다. 6도시로 확장하면 주간 1,800만 달러 구조가 되는군요.", created_at: "2026-10-18T00:21:04.000Z" },
+    { alias: "양천 올빼미 #59", content: "운행 효율 18% 개선이 플릿 증가가 아니라 소프트웨어 최적화 결과라는 해석이 핵심 포인트네요.", created_at: "2026-10-18T00:21:07.000Z" },
+  ],
+  [-1635]: [
+    { alias: "영등포 두루미 #37", content: "DIC 계약 해지가 구조적으로 어렵다는 설명이 소비자 구독과 구분되는 핵심 차이점이군요.", created_at: "2026-10-18T00:23:04.000Z" },
+    { alias: "구로 흰죽지 #63", content: "20일 실적에서 DIC ARR 기여도가 공개되면 목표가 상향 재료라는 포인트 잘 짚었습니다.", created_at: "2026-10-18T00:23:07.000Z" },
+  ],
+  [-1636]: [
+    { alias: "관악 솔개 #47", content: "오픈 웨이트가 컴퓨트 수요를 확대한다는 역설이 인상적입니다. NVDA 단기 조정 노이즈 해석 동의합니다.", created_at: "2026-10-18T00:25:04.000Z" },
+    { alias: "종로 황로 #82", content: "AWS GCP Azure GPU 인스턴스 수요 증가 경로까지 연결해주셔서 인프라 투자 논리가 명확해졌습니다.", created_at: "2026-10-18T00:25:07.000Z" },
+  ],
+  [-1637]: [
+    { alias: "강서 백로 #53", content: "공급 의도적 제한으로 가격 탄성 테스트했다는 관점이 새롭습니다. 애플다운 전략이네요.", created_at: "2026-10-18T00:27:04.000Z" },
+    { alias: "노원 매 #19", content: "FY2027 Q1 집중 인식 구조라는 설명 덕에 실적 타임라인이 명확해졌습니다. Q1 기대치 상향 고려해야겠네요.", created_at: "2026-10-18T00:27:07.000Z" },
+  ],
+  [-1638]: [
+    { alias: "성북 해오라기 #75", content: "ERCOT 그리드 안정화 계약이 상업 계약의 5~10배라는 수치 처음 알았습니다. 메가팩 완공 실적 쌓는 게 ERCOT 수주의 열쇠군요.", created_at: "2026-10-18T00:29:04.000Z" },
+    { alias: "강동 두견 #41", content: "브라조리아 카운티 허리케인 위험 지역이라는 맥락이 ERCOT 신뢰 구축 전략과 연결되는군요.", created_at: "2026-10-18T00:29:07.000Z" },
+  ],
+  [-1639]: [
+    { alias: "마포 꾀꼬리 #68", content: "NVDA와 AMD를 분리해서 봐야 한다는 점 명확합니다. CoWoS 우선 배분 가설이 설득력 있네요.", created_at: "2026-10-18T00:31:04.000Z" },
+    { alias: "강남 새매 #34", content: "추론 이동이 AMD에 불리하고 NVDA에 유리한 구조라는 역방향 논리가 인상적입니다.", created_at: "2026-10-18T00:31:07.000Z" },
+  ],
+  [-1640]: [
+    { alias: "도봉 청둥오리 #91", content: "3개 가치 레이어를 한 번에 정리해주셔서 지금 테슬라 투자 판단 프레임이 명확해졌습니다.", created_at: "2026-10-18T00:33:04.000Z" },
+    { alias: "은평 독수리 #56", content: "21일 실적이 세 레이어 전체의 분기점이라는 표현이 적절합니다. 리스크 관리 구간 동의합니다.", created_at: "2026-10-18T00:33:07.000Z" },
+  ],
   // ── 2026-10-13 애널 댓글 ──────────────────────
   [-1617]: [
     { alias: "도봉 할미새 #62", content: "HOLD 유지 이유가 실적 확인 전 강세 시나리오 선반영을 꺼린다는 것 맞습니다. 21일이 진짜 분기점이네요.", created_at: "2026-10-13T00:15:04.000Z" },

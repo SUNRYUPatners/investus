@@ -56,6 +56,17 @@ const ALLOW = new Set([
   // \n 이스케이프 파싱 아티팩트 허용 (2026-10-15~)
   "ninvestus", "nxai", "ntsla", "nbyd", "ncpca", "ndic", "napi", "ntts",
   "ngrok", "nspacex", "nmegapack", "nthis", "nvery", "ndeal",
+  // 테슬라 로드스터 트림명·META·AAPL·반도체 제품명 (2026-10-18~)
+  "meta", "muse", "spark", "performance", "thrust", "rocket", "roadster",
+  "apple", "iphone", "terafab", "ultra", "laptop", "surface",
+  "starship", "starbase", "flops", "preorder", "splashdown",
+  // \n 아티팩트 추가 (2026-10-18~)
+  "ntsla", "nperformance", "nthrust", "nrocket", "nmeta", "nmuse",
+  "napple", "niphone", "nterafab", "nroadster",
+  // AMD·반도체 경쟁사·하이퍼스케일러 자체칩 (2026-10-18~)
+  "amd", "rocm", "blackwell", "amazon", "trainium", "mtia", "hopper",
+  // \n 아티팩트 추가 — AMD·NVDA 문단 시작 (2026-10-18~)
+  "namd", "nnvda", "nblackwell", "nrocm", "ntrainium",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */
