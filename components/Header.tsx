@@ -56,7 +56,11 @@ export function Header() {
     <>
       <header
         className="sticky top-0 z-50 border-b"
-        style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
+        style={{
+          background: "var(--header-bg)",
+          borderColor: "var(--border)",
+          paddingTop: "env(safe-area-inset-top)",
+        }}
       >
         <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 lg:hidden">
