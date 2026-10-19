@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<defs>
+  <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#0A0E1A"/>
+  </linearGradient>
+  <linearGradient id="tBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#A78BFA"/>
+  </linearGradient>
+  <linearGradient id="divG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#6366F1" stop-opacity="0"/><stop offset="30%" stop-color="#6366F1"/>
+    <stop offset="70%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="heroG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#A78BFA"/>
+  </linearGradient>
+</defs>
+<rect width="1080" height="1350" fill="url(#bgG)"/>
+<rect x="0" y="0" width="1080" height="12" fill="url(#tBar)"/>
+<rect x="54" y="30" width="80" height="36" rx="8" fill="#6366F1"/>
+<text x="94" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">META</text>
+<rect x="180" y="30" width="164" height="36" rx="8" fill="#A78BFA"/>
+<text x="262" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">MUSE SPARK</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.18 · 메타 Muse Spark Open 공개</text>
+<text x="54" y="200" font-family="Arial Black,Arial,sans-serif" font-size="100" fill="#fff" font-weight="900">META</text>
+<text x="54" y="300" font-family="Arial Black,Arial,sans-serif" font-size="74" fill="url(#heroG)" font-weight="900">816B 오픈</text>
+<text x="54" y="358" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">42B 활성 · 1M 컨텍스트 · Mac Studio 2대</text>
+<rect x="54" y="382" width="972" height="3" fill="url(#divG)" rx="2"/>
+<text x="54" y="426" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#A78BFA" font-weight="900">모델 스펙 비교</text>
+<text x="54" y="466" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">총 파라미터</text>
+<rect x="294" y="444" width="460" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="444" width="417" height="28" rx="6" fill="#A78BFA"/>
+<text x="721" y="466" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">816B</text>
+<text x="54" y="506" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">활성 파라미터</text>
+<rect x="294" y="484" width="460" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="484" width="21" height="28" rx="6" fill="#6366F1"/>
+<text x="325" y="506" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">42B</text>
+<text x="54" y="546" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">컨텍스트</text>
+<rect x="294" y="524" width="460" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="524" width="460" height="28" rx="6" fill="#34D399"/>
+<text x="764" y="546" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">1000K tok</text>
+<text x="54" y="586" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">소비전력</text>
+<rect x="294" y="564" width="460" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="564" width="230" height="28" rx="6" fill="#F59E0B"/>
+<text x="534" y="586" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">2Mac St.</text>
+<rect x="740" y="444" width="296" height="40" rx="8" fill="#1A1A2E" stroke="#A78BFA" stroke-width="1.5"/>
+<text x="888" y="470" font-family="Arial Black,Arial,sans-serif" font-size="19" fill="#A78BFA" text-anchor="middle" font-weight="900">오픈 웨이트 공개</text>
+<rect x="54" y="612" width="306" height="130" rx="16" fill="#161B22" stroke="#6366F1" stroke-width="2"/>
+<text x="207" y="648" font-family="Arial,sans-serif" font-size="18" fill="#6366F1" text-anchor="middle" font-weight="700">성능 수준</text>
+<text x="207" y="696" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">GPT-5급</text>
+<text x="207" y="726" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">오픈 웨이트 최초</text>
+<rect x="384" y="612" width="306" height="130" rx="16" fill="#161B22" stroke="#A78BFA" stroke-width="2"/>
+<text x="537" y="648" font-family="Arial,sans-serif" font-size="18" fill="#A78BFA" text-anchor="middle" font-weight="700">구동 환경</text>
+<text x="537" y="696" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Mac×2</text>
+<text x="537" y="726" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">일반 하드웨어 가능</text>
+<rect x="714" y="612" width="312" height="130" rx="16" fill="#161B22" stroke="#34D399" stroke-width="2"/>
+<text x="870" y="648" font-family="Arial,sans-serif" font-size="18" fill="#34D399" text-anchor="middle" font-weight="700">컨텍스트</text>
+<text x="870" y="696" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">1M</text>
+<text x="870" y="726" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">토큰 업계 최대</text>
+<rect x="54" y="770" width="972" height="462" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="816" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">전략 포인트</text>
+<line x1="82" y1="830" x2="998" y2="830" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="858" r="7" fill="#6366F1"/>
+<text x="116" y="866" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">오픈 웨이트 공개 = 폐쇄형 GPT-5·Claude 4와 성능 격차 사실상 소멸</text>
+<circle cx="96" cy="920" r="7" fill="#A78BFA"/>
+<text x="116" y="928" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">메타 직접 수익 없음 — 광고 AI 고도화 + 개발자 생태계 락인이 진짜 목적</text>
+<circle cx="96" cy="982" r="7" fill="#34D399"/>
+<text x="116" y="990" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">오픈 웨이트 확산 = GPU 클라우드 수요 증가 → NVDA 간접 수혜 구조</text>
+<circle cx="96" cy="1044" r="7" fill="#FBBF24"/>
+<text x="116" y="1052" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">Llama 2 공개 후 메타 광고 ROAS 개선 선례 → 816B에도 동일 전략 적용</text>
+<circle cx="96" cy="1106" r="7" fill="#F59E0B"/>
+<text x="116" y="1114" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">기업 자체 서버 운영 → AWS/GCP/Azure GPU 인스턴스 수요 구조적 증가</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.18</text>
+</svg>

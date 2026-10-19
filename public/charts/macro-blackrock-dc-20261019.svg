@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350"><defs>
+  <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#0A0E1A"/>
+  </linearGradient>
+  <linearGradient id="tBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#6366F1"/>
+  </linearGradient>
+  <linearGradient id="divG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/><stop offset="30%" stop-color="#3B82F6"/>
+    <stop offset="70%" stop-color="#6366F1"/><stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="hG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#6366F1"/>
+  </linearGradient>
+  <linearGradient id="barG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#6366F1"/>
+  </linearGradient>
+</defs>
+<rect width="1080" height="1350" fill="url(#bgG)"/>
+<rect x="0" y="0" width="1080" height="12" fill="url(#tBar)"/><rect x="54" y="30" width="67" height="36" rx="8" fill="#1D4ED8"/>
+<text x="87.5" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">매크로</text><rect x="204" y="30" width="93" height="36" rx="8" fill="#4338CA"/>
+<text x="250.5" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">AI인프라</text><text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.19 · 매크로 · AI 인프라</text><text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="88" fill="url(#hG)" font-weight="900">BlackRock</text><text x="54" y="262" font-family="Arial,sans-serif" font-size="26" fill="#BAE6FD">텍사스 AI 데이터센터 오픈 — AI 인프라 투자 가속</text><rect x="54" y="290" width="972" height="3" fill="url(#divG)" rx="2"/><rect x="54" y="326" width="972" height="100" rx="16" fill="#161B22" stroke="#3B82F6" stroke-width="2"/><text x="84" y="364" font-family="Arial,sans-serif" font-size="24" fill="#BAE6FD">세계 최대 자산운용사($10T+ AUM)</text><text x="84" y="398" font-family="Arial,sans-serif" font-size="24" fill="#BAE6FD">BlackRock, 텍사스 데이터센터 개설</text><rect x="54" y="446" width="972" height="100" rx="16" fill="#161B22" stroke="#6366F1" stroke-width="2"/><text x="84" y="484" font-family="Arial,sans-serif" font-size="24" fill="#BAE6FD">AI 연산 인프라 직접 구축 → 금융사의</text><text x="84" y="518" font-family="Arial,sans-serif" font-size="24" fill="#BAE6FD">AI 내재화 신호</text><rect x="54" y="566" width="972" height="100" rx="16" fill="#161B22" stroke="#3B82F6" stroke-width="2"/><text x="84" y="604" font-family="Arial,sans-serif" font-size="24" fill="#BAE6FD">JP모건·BlackRock 등 월가 주요사</text><text x="84" y="638" font-family="Arial,sans-serif" font-size="24" fill="#BAE6FD">AI 인프라 투자 경쟁</text><rect x="54" y="686" width="972" height="100" rx="16" fill="#161B22" stroke="#6366F1" stroke-width="2"/><text x="84" y="724" font-family="Arial,sans-serif" font-size="24" fill="#BAE6FD">NVDA·AMD·EQIX 등 데이터센터</text><text x="84" y="758" font-family="Arial,sans-serif" font-size="24" fill="#BAE6FD">인프라 수요 기반 확충</text><rect x="54" y="822" width="972" height="88" rx="16" fill="#0D1220" stroke="#3B82F6" stroke-width="1.5"/><text x="84" y="856" font-family="Arial,sans-serif" font-size="20" fill="#BAE6FD">AI 인프라는 이제 빅테크만의 영역이 아님 — </text><text x="84" y="890" font-family="Arial,sans-serif" font-size="20" fill="#BAE6FD">금융·보험·물류 전 산업이 직접 AI 컴퓨팅을 내재화하는 흐름</text><rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1326" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1326" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.19</text></svg>

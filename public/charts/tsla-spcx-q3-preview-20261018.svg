@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<defs>
+  <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#0A0E1A"/>
+  </linearGradient>
+  <linearGradient id="tBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#60A5FA"/>
+  </linearGradient>
+  <linearGradient id="divG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#34D399" stop-opacity="0"/><stop offset="30%" stop-color="#34D399"/>
+    <stop offset="70%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="heroG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#60A5FA"/>
+  </linearGradient>
+</defs>
+<rect width="1080" height="1350" fill="url(#bgG)"/>
+<rect x="0" y="0" width="1080" height="12" fill="url(#tBar)"/>
+<rect x="54" y="30" width="80" height="36" rx="8" fill="#EF4444"/>
+<text x="94" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">TSLA</text>
+<rect x="180" y="30" width="80" height="36" rx="8" fill="#60A5FA"/>
+<text x="220" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">SPCX</text>
+<rect x="306" y="30" width="94" height="36" rx="8" fill="#34D399"/>
+<text x="353" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">Q3 실적</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.18 · Q3 실적 프리뷰</text>
+<text x="54" y="200" font-family="Arial Black,Arial,sans-serif" font-size="88" fill="#fff" font-weight="900">Q3 실적</text>
+<text x="54" y="298" font-family="Arial Black,Arial,sans-serif" font-size="68" fill="url(#heroG)" font-weight="900">프리뷰</text>
+<text x="54" y="356" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">SPCX Oct 20 · TSLA Oct 21 · 핵심 지표</text>
+<rect x="54" y="380" width="972" height="3" fill="url(#divG)" rx="2"/>
+<text x="54" y="424" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#34D399" font-weight="900">TSLA 핵심 지표 — 컨센서스 vs 실제</text>
+<text x="54" y="464" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">차량 마진 2Q</text>
+<rect x="294" y="442" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="442" width="332" height="28" rx="6" fill="#8B949E"/>
+<text x="636" y="464" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">15.2%</text>
+<text x="54" y="504" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">마진 목표(3Q)</text>
+<rect x="294" y="482" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="482" width="353" height="28" rx="6" fill="#34D399"/>
+<text x="657" y="504" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">16.2%</text>
+<text x="54" y="544" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">중국 9월 소매</text>
+<rect x="294" y="522" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="522" width="445" height="28" rx="6" fill="#60A5FA"/>
+<text x="749" y="544" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">64837</text>
+<text x="54" y="584" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">에너지 GWh</text>
+<rect x="294" y="562" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="562" width="365" height="28" rx="6" fill="#FBBF24"/>
+<text x="669" y="584" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">13.7GWh</text>
+<rect x="740" y="562" width="122" height="28" rx="6" fill="#0D2A1A" stroke="#34D399" stroke-width="1.5"/>
+<text x="801" y="581" font-family="Arial Black,Arial,sans-serif" font-size="17" fill="#34D399" text-anchor="middle" font-weight="900">분기 최대</text>
+<rect x="54" y="614" width="306" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="2"/>
+<text x="207" y="650" font-family="Arial,sans-serif" font-size="18" fill="#60A5FA" text-anchor="middle" font-weight="700">SPCX 실적</text>
+<text x="207" y="698" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Oct 20</text>
+<text x="207" y="728" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">스타링크 ARPU·DIC</text>
+<rect x="384" y="614" width="306" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="2"/>
+<text x="537" y="650" font-family="Arial,sans-serif" font-size="18" fill="#EF4444" text-anchor="middle" font-weight="700">TSLA 실적</text>
+<text x="537" y="698" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Oct 21</text>
+<text x="537" y="728" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">차량마진·FSD전환</text>
+<rect x="714" y="614" width="312" height="130" rx="16" fill="#161B22" stroke="#34D399" stroke-width="2"/>
+<text x="870" y="650" font-family="Arial,sans-serif" font-size="18" fill="#34D399" text-anchor="middle" font-weight="700">FSD 목표</text>
+<text x="870" y="698" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">20%+</text>
+<text x="870" y="728" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">유료 전환율 임계점</text>
+<rect x="54" y="772" width="972" height="462" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="818" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">체크리스트</text>
+<line x1="82" y1="832" x2="998" y2="832" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="860" r="7" fill="#60A5FA"/>
+<text x="116" y="868" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">SPCX 10/20: DIC 계약 건수·ARPU 개선 폭 공개 여부 → 목표가 상향 트리거</text>
+<circle cx="96" cy="922" r="7" fill="#EF4444"/>
+<text x="116" y="930" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">TSLA 10/21: 차량 마진 15.8~16.2% 달성 여부 — 인센티브 비용이 변수</text>
+<circle cx="96" cy="984" r="7" fill="#FBBF24"/>
+<text x="116" y="992" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">아폴로 840M 메가팩 계약 3Q 인식 여부 → 에너지 매출 서프라이즈 가능성</text>
+<circle cx="96" cy="1046" r="7" fill="#34D399"/>
+<text x="116" y="1054" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">FSD 전환율 20% 돌파 시 리커링 수익 모델 공식화 → 밸류에이션 리레이팅</text>
+<circle cx="96" cy="1108" r="7" fill="#8B5CF6"/>
+<text x="116" y="1116" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">사이버캡 단위 경제성 공식 언급 시 로보택시 멀티플 확장 트리거</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.18</text>
+</svg>

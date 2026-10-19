@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350"><defs>
+  <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#0A0E1A"/>
+  </linearGradient>
+  <linearGradient id="tBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#FBBF24"/>
+  </linearGradient>
+  <linearGradient id="divG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#F59E0B" stop-opacity="0"/><stop offset="30%" stop-color="#F59E0B"/>
+    <stop offset="70%" stop-color="#FBBF24"/><stop offset="100%" stop-color="#FBBF24" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="hG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#FBBF24"/>
+  </linearGradient>
+  <linearGradient id="barG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#FBBF24"/>
+  </linearGradient>
+</defs>
+<rect width="1080" height="1350" fill="url(#bgG)"/>
+<rect x="0" y="0" width="1080" height="12" fill="url(#tBar)"/><rect x="54" y="30" width="67" height="36" rx="8" fill="#92400E"/>
+<text x="87.5" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">매크로</text><rect x="204" y="30" width="54" height="36" rx="8" fill="#B45309"/>
+<text x="231" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">AI</text><text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.19 · 매크로 · AI 규제</text><text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="100" fill="url(#hG)" font-weight="900">AI 안전법</text><text x="54" y="262" font-family="Arial,sans-serif" font-size="26" fill="#FDE68A">Anthropic, 의회에 AI 안전 법안 초안 제출</text><rect x="54" y="290" width="972" height="3" fill="url(#divG)" rx="2"/><rect x="54" y="326" width="972" height="100" rx="16" fill="#161B22" stroke="#F59E0B" stroke-width="2"/><text x="84" y="364" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">정부가 $1B+ 피해 유발 가능 AI 모델에</text><text x="84" y="398" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">차단 권한 부여</text><rect x="54" y="446" width="972" height="100" rx="16" fill="#161B22" stroke="#F59E0B" stroke-width="2"/><text x="84" y="484" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">안전 기준 미달 AI 개발사 → 정부 직접</text><text x="84" y="518" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">개발 차단 가능</text><rect x="54" y="566" width="972" height="100" rx="16" fill="#161B22" stroke="#F59E0B" stroke-width="2"/><text x="84" y="604" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Anthropic 입장: 선제적 안전 규제가</text><text x="84" y="638" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">장기 산업 신뢰 구축</text><rect x="54" y="686" width="972" height="100" rx="16" fill="#161B22" stroke="#F59E0B" stroke-width="2"/><text x="84" y="724" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">업계 반응: OpenAI·구글, 자율 규제</text><text x="84" y="758" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">선호 vs. Anthropic 법제화 선호</text><rect x="54" y="820" width="972" height="88" rx="16" fill="#1A1000" stroke="#F59E0B" stroke-width="1.5"/><text x="84" y="854" font-family="Arial,sans-serif" font-size="21" fill="#FDE68A">AI 안전 법제화는 Anthropic·Claud</text><text x="84" y="888" font-family="Arial,sans-serif" font-size="21" fill="#FDE68A">e에 유리한 구도 — 안전 우선 개발사가 규제 수혜 기업으로</text><rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1326" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1326" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.19</text></svg>

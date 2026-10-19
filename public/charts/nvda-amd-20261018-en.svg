@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<defs>
+  <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#0A0E1A"/>
+  </linearGradient>
+  <linearGradient id="tBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#76C442"/><stop offset="100%" stop-color="#F59E0B"/>
+  </linearGradient>
+  <linearGradient id="divG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#76C442" stop-opacity="0"/><stop offset="30%" stop-color="#76C442"/>
+    <stop offset="70%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="heroG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#76C442"/><stop offset="100%" stop-color="#F59E0B"/>
+  </linearGradient>
+</defs>
+<rect width="1080" height="1350" fill="url(#bgG)"/>
+<rect x="0" y="0" width="1080" height="12" fill="url(#tBar)"/>
+<rect x="54" y="30" width="80" height="36" rx="8" fill="#76C442"/>
+<text x="94" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">NVDA</text>
+<rect x="180" y="30" width="66" height="36" rx="8" fill="#F59E0B"/>
+<text x="213" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">AMD</text>
+<rect x="306" y="30" width="136" height="36" rx="8" fill="#60A5FA"/>
+<text x="374" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">AI CHIPS</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">Oct 18, 2026 · NVDA -1.84% · AMD Forecast Cut</text>
+<text x="54" y="200" font-family="Arial Black,Arial,sans-serif" font-size="96" fill="#fff" font-weight="900">NVDA</text>
+<text x="54" y="298" font-family="Arial Black,Arial,sans-serif" font-size="80" fill="url(#heroG)" font-weight="900">-1.84%</text>
+<text x="54" y="356" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">AMD AI GPU Forecast Cut 75% · CoWoS Bottleneck</text>
+<rect x="54" y="380" width="972" height="3" fill="url(#divG)" rx="2"/>
+<text x="54" y="424" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#76C442" font-weight="900">AI GPU Market Share Structure</text>
+<text x="54" y="464" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">NVDA AI GPU</text>
+<rect x="294" y="442" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="442" width="432" height="28" rx="6" fill="#76C442"/>
+<text x="736" y="464" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">90%</text>
+<text x="54" y="504" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">AMD AI GPU</text>
+<rect x="294" y="482" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="482" width="24" height="28" rx="6" fill="#F59E0B"/>
+<text x="328" y="504" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">5%</text>
+<text x="54" y="544" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Others</text>
+<rect x="294" y="522" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="522" width="24" height="28" rx="6" fill="#8B949E"/>
+<text x="328" y="544" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">5%</text>
+<text x="54" y="584" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">AMD Est Cut</text>
+<rect x="294" y="562" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="562" width="360" height="28" rx="6" fill="#EF4444"/>
+<text x="664" y="584" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">75%</text>
+<rect x="740" y="442" width="296" height="40" rx="8" fill="#0D1A0D" stroke="#76C442" stroke-width="1.5"/>
+<text x="888" y="468" font-family="Arial Black,Arial,sans-serif" font-size="19" fill="#76C442" text-anchor="middle" font-weight="900">NVDA unaffected</text>
+<rect x="54" y="614" width="306" height="130" rx="16" fill="#161B22" stroke="#76C442" stroke-width="2"/>
+<text x="207" y="650" font-family="Arial,sans-serif" font-size="18" fill="#76C442" text-anchor="middle" font-weight="700">NVDA H100</text>
+<text x="207" y="698" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">$2.50/hr</text>
+<text x="207" y="728" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">Jevons holds</text>
+<rect x="384" y="614" width="306" height="130" rx="16" fill="#161B22" stroke="#F59E0B" stroke-width="2"/>
+<text x="537" y="650" font-family="Arial,sans-serif" font-size="18" fill="#F59E0B" text-anchor="middle" font-weight="700">AMD Share</text>
+<text x="537" y="698" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">&lt;5%</text>
+<text x="537" y="728" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">AMD ≠ NVDA proxy</text>
+<rect x="714" y="614" width="312" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="2"/>
+<text x="870" y="650" font-family="Arial,sans-serif" font-size="18" fill="#60A5FA" text-anchor="middle" font-weight="700">CoWoS</text>
+<text x="870" y="698" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">NVDA First</text>
+<text x="870" y="728" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">AMD alloc cut theory</text>
+<rect x="54" y="772" width="972" height="462" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="818" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">Reading the NVDA Drop</text>
+<line x1="82" y1="832" x2="998" y2="832" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="860" r="7" fill="#76C442"/>
+<text x="116" y="868" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">AMD AI GPU market share &lt;5% → AMD estimate cut does NOT proxy NVDA demand</text>
+<circle cx="96" cy="922" r="7" fill="#F59E0B"/>
+<text x="116" y="930" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">TSMC CoWoS-L allocation → NVDA B200/H200 gets priority → AMD volume cut</text>
+<circle cx="96" cy="984" r="7" fill="#60A5FA"/>
+<text x="116" y="992" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">Inference shift scenario → H200 inference-optimized demand rises → NVDA net beneficiary</text>
+<circle cx="96" cy="1046" r="7" fill="#34D399"/>
+<text x="116" y="1054" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">a16z Jevons Paradox: H100 $2.50/hr holding while token prices fall — demand proven structural</text>
+<circle cx="96" cy="1108" r="7" fill="#FBBF24"/>
+<text x="116" y="1116" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">NVDA -1.84% = noise · Pre-Q4 earnings (Nov) entry window is the rational classification</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.18</text>
+</svg>

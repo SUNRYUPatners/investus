@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<defs>
+  <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#0A0E1A"/>
+  </linearGradient>
+  <linearGradient id="tBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#8B5CF6"/>
+  </linearGradient>
+  <linearGradient id="divG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/><stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="heroG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#8B5CF6"/>
+  </linearGradient>
+</defs>
+<rect width="1080" height="1350" fill="url(#bgG)"/>
+<rect x="0" y="0" width="1080" height="12" fill="url(#tBar)"/>
+<rect x="54" y="30" width="80" height="36" rx="8" fill="#EF4444"/>
+<text x="94" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">TSLA</text>
+<rect x="180" y="30" width="136" height="36" rx="8" fill="#8B5CF6"/>
+<text x="248" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">ROADSTER</text>
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">Oct 18, 2026 · Tesla Roadster Unveiled</text>
+<text x="54" y="210" font-family="Arial Black,Arial,sans-serif" font-size="96" fill="#fff" font-weight="900">TSLA</text>
+<text x="54" y="310" font-family="Arial Black,Arial,sans-serif" font-size="72" fill="url(#heroG)" font-weight="900">ROADSTER</text>
+<text x="54" y="368" font-family="Arial,sans-serif" font-size="26" fill="#8B949E">SpaceX Thruster · 3 Trims · +4% Stock</text>
+<rect x="54" y="392" width="972" height="3" fill="url(#divG)" rx="2"/>
+<text x="54" y="434" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="900">Trim Pricing</text>
+<text x="54" y="474" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Founders</text>
+<rect x="294" y="452" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="452" width="462" height="28" rx="6" fill="#EF4444"/>
+<text x="766" y="474" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">250K</text>
+<text x="54" y="514" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Performance</text>
+<rect x="294" y="492" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="492" width="332" height="28" rx="6" fill="#8B5CF6"/>
+<text x="636" y="514" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">180K</text>
+<text x="54" y="554" font-family="Arial,sans-serif" font-size="21" fill="#8B949E">Sport</text>
+<rect x="294" y="532" width="480" height="28" rx="6" fill="#21262D"/>
+<rect x="294" y="532" width="183" height="28" rx="6" fill="#60A5FA"/>
+<text x="487" y="554" font-family="Arial Black,Arial,sans-serif" font-size="21" fill="#fff" font-weight="900">99K</text>
+<rect x="740" y="452" width="296" height="40" rx="8" fill="#1A0D0D" stroke="#EF4444" stroke-width="1.5"/>
+<text x="888" y="478" font-family="Arial Black,Arial,sans-serif" font-size="19" fill="#EF4444" text-anchor="middle" font-weight="900">TSLA +4% Reaction</text>
+<rect x="54" y="600" width="306" height="130" rx="16" fill="#161B22" stroke="#EF4444" stroke-width="2"/>
+<text x="207" y="636" font-family="Arial,sans-serif" font-size="18" fill="#EF4444" text-anchor="middle" font-weight="700">0–60 mph</text>
+<text x="207" y="684" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">1.8s</text>
+<text x="207" y="714" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">Hypercar territory</text>
+<rect x="384" y="600" width="306" height="130" rx="16" fill="#161B22" stroke="#8B5CF6" stroke-width="2"/>
+<text x="537" y="636" font-family="Arial,sans-serif" font-size="18" fill="#8B5CF6" text-anchor="middle" font-weight="700">Top Speed</text>
+<text x="537" y="684" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">250mph</text>
+<text x="537" y="714" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">Sport estimate</text>
+<rect x="714" y="600" width="312" height="130" rx="16" fill="#161B22" stroke="#60A5FA" stroke-width="2"/>
+<text x="870" y="636" font-family="Arial,sans-serif" font-size="18" fill="#60A5FA" text-anchor="middle" font-weight="700">SpaceX</text>
+<text x="870" y="684" font-family="Arial Black,Arial,sans-serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="900">Thruster</text>
+<text x="870" y="714" font-family="Arial,sans-serif" font-size="17" fill="#8B949E" text-anchor="middle">McGregor test done</text>
+<rect x="54" y="758" width="972" height="476" rx="20" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+<text x="82" y="804" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#FBBF24" font-weight="900">Key Points</text>
+<line x1="82" y1="818" x2="998" y2="818" stroke="#30363D" stroke-width="1"/>
+<circle cx="96" cy="846" r="7" fill="#EF4444"/>
+<text x="116" y="854" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">Founders Edition at $250K limited qty — SpaceX Thruster Package option</text>
+<circle cx="96" cy="908" r="7" fill="#8B5CF6"/>
+<text x="116" y="916" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">SpaceX McGregor thruster test complete — first rocket tech in consumer car</text>
+<circle cx="96" cy="970" r="7" fill="#60A5FA"/>
+<text x="116" y="978" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">0–60 in 1.8s · Top speed 250mph · 620+ mile range per charge</text>
+<circle cx="96" cy="1032" r="7" fill="#34D399"/>
+<text x="116" y="1040" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">TSLA +4% same day — partial Terafab merger option pricing pre-Oct 21</text>
+<circle cx="96" cy="1094" r="7" fill="#FBBF24"/>
+<text x="116" y="1102" font-family="Arial,sans-serif" font-size="21" fill="#E6EDF3">Tesla-SpaceX tech convergence visualized → strengthens merger thesis</text>
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1320" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1320" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.18</text>
+</svg>
