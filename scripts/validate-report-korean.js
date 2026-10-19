@@ -99,6 +99,17 @@ const ALLOW = new Set([
   "heavy", "geo", "v2", "mini", "capacity",
   "tam", "b2b", "diamond", "platinum", "wifi", "southwest", "united",
   "direct", "to", "cell", "shay", "boloor", "jevons",
+  // 2026-10-20 추가 — 인물명·기업명·제품명·서비스명
+  "robyn", "denholm", "straubel", "minihard", "azure", "niazde",
+  "prometheus", "wonder", "million", "unsupervised", "redwood", "materials",
+  "albany", "llama", "instagram", "facebook", "whatsapp", "threads", "reels",
+  "intel", "datacenter",
+  // 2026-10-20 추가 — \n 아티팩트
+  "nspcx", "ntesla", "nfsd", "nspacex", "nbloomberg", "nmeta", "nnvidia",
+  "ninvestus", "ncybercab", "nmegapack", "nterafab", "nnmeta", "nmuse", "nrobyn",
+  "nstraubel", "namazon", "nazure", "nniazde", "nprometheus", "nwonder",
+  "nredwood", "nllama", "ninstagram", "nfacebook", "nwhatsapp", "nthreads", "nreels",
+  "nintel", "nkalshi", "nanthropik", "nbrowns", "nbrownsville", "nmemphis",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */
