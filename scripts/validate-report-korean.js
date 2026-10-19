@@ -67,6 +67,38 @@ const ALLOW = new Set([
   "amd", "rocm", "blackwell", "amazon", "trainium", "mtia", "hopper",
   // \n 아티팩트 추가 — AMD·NVDA 문단 시작 (2026-10-18~)
   "namd", "nnvda", "nblackwell", "nrocm", "ntrainium",
+  // 2026-10-19 추가 — SpaceX·NASA·Starlink·TSLA 관련 고유명
+  "starlink", "falcon", "artemis", "orion", "hls", "iac",
+  "drivewise", "robotaxi", "bloomberg", "citi", "citiresearch",
+  "virgin", "optimus", "x2", "musk",
+  "shotwell", "dwyane", "franz", "holzhausen", "von",
+  "michaelnicollsx", "woodhaus2", "constitutional",
+  "lcm", "lc39a", "lc36", "lc37", "starbase",
+  "nstarlink", "nfalcon", "nartems", "nroboxtaxi",
+  "nbloomberg", "nvirgin", "noptimus", "ndrivewise",
+  "nshottwell", "niac", "foregrip",
+  // 2026-10-19 추가 — 금융·천문 용어·단위·일반 영어
+  "mobile", "delta", "fear", "greed", "research", "early",
+  "iii", "iv", "vi", "vii", "viii",
+  "t", "b", "y", "q", "w", "m", "k", "x", "p",
+  "all", "stock", "big", "tech", "alert", "blue", "moon",
+  "new", "glenn", "deep", "sea", "cargo", "lander", "crew",
+  "first", "second", "third", "follow", "joint",
+  "safety", "bill", "draft", "act", "congress",
+  "iShares", "ishares", "aladdin", "risk",
+  // \n 아티팩트 (2026-10-19~)
+  "nstarship", "nstarlink", "nfalcon", "norion", "nartemis",
+  "ndelta", "nvirgin", "nbloomberg", "nmusk", "noptimus",
+  "nfear", "ngreed", "nresearch", "nciti",
+  // 2026-10-19 2차 — 합병·사람이름·트위터핸들·위성·항공
+  "michael", "nicolls", "cybertruck", "kcoleman", "kate", "rouch", "jgebbia", "teslajapan",
+  "mentorxai", "sawyermerritt",
+  "human", "landing", "system", "v", "origin",
+  "elon", "whole", "mars", "catalog",
+  "jonathan", "mcdowell", "gcat", "general", "artificial", "objects",
+  "heavy", "geo", "v2", "mini", "capacity",
+  "tam", "b2b", "diamond", "platinum", "wifi", "southwest", "united",
+  "direct", "to", "cell", "shay", "boloor", "jevons",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */

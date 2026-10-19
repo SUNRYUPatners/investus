@@ -807,17 +807,21 @@ function summary20261019(lang) {
   s += `<text x="54" y="234" font-family="Arial,sans-serif" font-size="26" fill="#C4B5FD">${sub}</text>`;
   s += div(258);
 
+  // 2줄 wrap: 1080px 폭 안에서 완결된 문장 2줄로 표시 (말줄임 금지)
   topics.forEach((t, i) => {
     const y = 278 + i * 92;
     const isOdd = i % 2;
+    const accent = i < 3 ? '#7C3AED' : (i < 6 ? '#1D4ED8' : (i < 9 ? '#991B1B' : '#B45309'));
+    const accentT = i < 3 ? '#A78BFA' : (i < 6 ? '#60A5FA' : (i < 9 ? '#F87171' : '#FCD34D'));
     s += `<rect x="54" y="${y}" width="972" height="82" rx="10" fill="${isOdd ? '#161B22' : '#0D1117'}" stroke="#21262D" stroke-width="1"/>`;
-    s += `<rect x="54" y="${y}" width="66" height="82" rx="10" fill="${i < 3 ? '#7C3AED' : (i < 6 ? '#1D4ED8' : (i < 9 ? '#991B1B' : '#B45309'))}22"/>`;
-    s += `<text x="87" y="${y + 50}" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="${i < 3 ? '#A78BFA' : (i < 6 ? '#60A5FA' : (i < 9 ? '#F87171' : '#FCD34D'))}" text-anchor="middle" font-weight="900">${t.n}</text>`;
-    // Text (truncate to fit)
-    const maxLen = ko ? 26 : 44;
-    const display = t.text.length > maxLen ? t.text.slice(0, maxLen) + '…' : t.text;
-    s += `<text x="136" y="${y + 38}" font-family="Arial Black,Arial,sans-serif" font-size="${ko ? 22 : 19}" fill="#fff" font-weight="900">${ko ? display : display.split(' ').slice(0, 5).join(' ')}</text>`;
-    s += `<text x="136" y="${y + 65}" font-family="Arial,sans-serif" font-size="${ko ? 19 : 17}" fill="#8B949E">${ko ? (t.text.length > maxLen ? t.text.slice(maxLen, maxLen + 24) : '') : t.text.split(' ').slice(5, 12).join(' ')}</text>`;
+    s += `<rect x="54" y="${y}" width="66" height="82" rx="10" fill="${accent}22"/>`;
+    s += `<text x="87" y="${y + 50}" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="${accentT}" text-anchor="middle" font-weight="900">${t.n}</text>`;
+    // 2줄 wrap: 첫줄 maxCh, 나머지 2줄째
+    const maxCh1 = ko ? 22 : 38;
+    const line1 = t.text.slice(0, maxCh1);
+    const line2 = t.text.slice(maxCh1, maxCh1 + (ko ? 26 : 44));
+    s += `<text x="136" y="${y + 35}" font-family="Arial Black,Arial,sans-serif" font-size="${ko ? 21 : 18}" fill="#fff" font-weight="900">${line1}</text>`;
+    s += `<text x="136" y="${y + 62}" font-family="Arial,sans-serif" font-size="${ko ? 18 : 16}" fill="#9CA3AF">${line2}</text>`;
   });
 
   s += footer('2026.10.19');
