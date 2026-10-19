@@ -520,7 +520,7 @@ function AskAI({ symbol, wall }: { symbol: string; wall?: WallT }) {
 type VerifyMode    = "none" | "upload" | "broker" | "broker-notice";
 type MainTab       = "discussion" | "analyst";
 type AnalystStatus  = "none" | "approved" | "rejected";
-type AnalystPost    = { id: number; alias: string; content: string; symbol: string | null; likes: number; comments?: number; created_at: string; liked: boolean };
+type AnalystPost    = { id: number; alias: string; content: string; contentEn?: string; symbol: string | null; likes: number; comments?: number; created_at: string; liked: boolean };
 type AnalystComment = { id: number; alias: string; content: string; created_at: string };
 type CreatorSort = "popular" | "return" | "views" | "subscribers" | "newest";
 
@@ -1434,9 +1434,9 @@ export default function WallPage() {
                           onClick={() => setExpandedDiscussion((prev) => { const n = new Set(prev); n.has(post.id) ? n.delete(post.id) : n.add(post.id); return n; })}
                           className="mb-3 cursor-pointer select-none active:opacity-70"
                         >
-                          <p className={`text-[13px] leading-relaxed ${expandedDiscussion.has(post.id) ? "" : "line-clamp-3"}`} style={{ color: "var(--text)" }}>{post.content}</p>
+                          <p className={`text-[13px] leading-relaxed ${expandedDiscussion.has(post.id) ? "" : "line-clamp-3"}`} style={{ color: "var(--text)" }}>{viewLang === "en" ? (post.contentEn ?? post.content) : post.content}</p>
                           {!expandedDiscussion.has(post.id) && (
-                            <span className="text-[11px] mt-0.5 block" style={{ color: "var(--up)", opacity: 0.8 }}>더보기</span>
+                            <span className="text-[11px] mt-0.5 block" style={{ color: "var(--up)", opacity: 0.8 }}>{viewLang === "en" ? "More" : "더보기"}</span>
                           )}
                         </div>
                       )}
@@ -1874,10 +1874,10 @@ export default function WallPage() {
                       })}
                       className="mb-2 cursor-pointer select-none active:opacity-70"
                     >
-                      <p className={`text-[13px] leading-relaxed ${expandedContent.has(post.id) || post.content.length < 120 ? "" : "line-clamp-2"}`} style={{ color: "var(--text)" }}>{post.content}</p>
+                      <p className={`text-[13px] leading-relaxed ${expandedContent.has(post.id) || post.content.length < 120 ? "" : "line-clamp-2"}`} style={{ color: "var(--text)" }}>{viewLang === "en" ? (post.contentEn ?? post.content) : post.content}</p>
                       {post.content.length >= 120 && (
                         <span className="text-[11px] mt-0.5 block" style={{ color: "#a78bfa" }}>
-                          {expandedContent.has(post.id) ? "접기" : "더보기"}
+                          {expandedContent.has(post.id) ? (viewLang === "en" ? "Collapse" : "접기") : (viewLang === "en" ? "More" : "더보기")}
                         </span>
                       )}
                     </div>

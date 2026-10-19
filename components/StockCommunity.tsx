@@ -91,8 +91,9 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
   const upper = symbol.toUpperCase();
   const { user } = useAuth();
   const { holdings } = usePortfolio();
-  const locale = useLocaleCode();
-  const isKo = locale === "ko";
+  const globalLocale = useLocaleCode();
+  const [communityLocale, setCommunityLocale] = useState<"ko" | "en">(globalLocale);
+  const isKo = communityLocale === "ko";
 
   const [realPosts, setRealPosts] = useState<RealWallPost[]>([]);
   const [draft, setDraft] = useState("");
@@ -204,7 +205,22 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
     <div className={`flex flex-col gap-5 ${className}`}>
       {/* 애널리스트 */}
       <section>
-        <SectionHeader title={isKo ? `${upper} 애널리스트` : `${upper} Analysts`} href={analystHref} linkLabel={isKo ? "전체 보기" : "View all"} />
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
+            {isKo ? `${upper} 애널리스트` : `${upper} Analysts`}
+          </h2>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setCommunityLocale((v) => v === "ko" ? "en" : "ko")}
+              className="text-[10px] font-bold px-2 py-0.5 rounded-full transition-opacity active:opacity-60"
+              style={{ background: "rgba(var(--text-rgb),0.08)", color: "var(--muted)", border: "1px solid rgba(var(--text-rgb),0.12)" }}>
+              {isKo ? "EN" : "한"}
+            </button>
+            <Link href={analystHref} className="inline-flex items-center gap-0.5 text-[11px] no-underline" style={{ color: "var(--mint)" }}>
+              {isKo ? "전체 보기" : "View all"} <ChevronRight className="w-3 h-3" />
+            </Link>
+          </div>
+        </div>
         {analystPosts.length === 0 ? (
           <p className="text-xs py-4 text-center" style={{ color: "var(--muted)" }}>
             {isKo ? "아직 이 종목 애널 글이 없습니다." : "No analyst posts for this stock yet."}

@@ -8,14 +8,17 @@ const _cache = new Map<string, { data: Awaited<ReturnType<typeof getNewsForMarke
 const TTL = 10 * 60_000;
 
 export async function GET(req: Request) {
-  const market = parseMarketId(new URL(req.url).searchParams.get("market"), "us");
-  const hit = _cache.get(market);
+  const url = new URL(req.url);
+  const market = parseMarketId(url.searchParams.get("market"), "us");
+  const locale = url.searchParams.get("locale") ?? "en";
+  const cacheKey = `${market}_${locale}`;
+  const hit = _cache.get(cacheKey);
   if (hit && Date.now() - hit.at < TTL) {
     return NextResponse.json(hit.data);
   }
   try {
-    const news = await getNewsForMarket(market);
-    _cache.set(market, { data: news, at: Date.now() });
+    const news = await getNewsForMarket(market, locale);
+    _cache.set(cacheKey, { data: news, at: Date.now() });
     return NextResponse.json(news);
   } catch {
     if (hit) return NextResponse.json(hit.data);

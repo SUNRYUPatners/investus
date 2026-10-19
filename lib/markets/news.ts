@@ -62,8 +62,45 @@ const MOCK_BY_MARKET: Record<Exclude<MarketId, "us">, NewsItem[]> = {
   ],
 };
 
-export async function getNewsForMarket(market: MarketId): Promise<NewsItem[]> {
+async function getUsNewsKo(): Promise<NewsItem[]> {
+  try {
+    const q = encodeURIComponent("미국증시 나스닥 S&P500");
+    const url = `https://news.google.com/rss/search?q=${q}&hl=ko&gl=US&ceid=US:ko`;
+    const res = await fetch(url, {
+      headers: { "User-Agent": "Mozilla/5.0", Accept: "application/rss+xml, application/xml, text/xml" },
+      cache: "no-store",
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok) throw new Error(`rss ${res.status}`);
+    const xml = await res.text();
+    const raw = parseRssItems(xml).slice(0, 12);
+    if (raw.length === 0) throw new Error("empty");
+    return raw.map((r, i) => {
+      const { category, categoryColor } = detectCategory(r.title);
+      const pub = r.pubDate ? new Date(r.pubDate) : new Date();
+      return {
+        id: i + 1,
+        title: r.title,
+        summary: "",
+        source: r.source,
+        time: relTimeEn(Number.isNaN(pub.getTime()) ? new Date() : pub),
+        category,
+        categoryColor,
+        url: r.link || undefined,
+        image: newsFallbackImage("us", category),
+      };
+    });
+  } catch {
+    return [];
+  }
+}
+
+export async function getNewsForMarket(market: MarketId, locale = "en"): Promise<NewsItem[]> {
   if (market === "us") {
+    if (locale === "ko") {
+      const koNews = await getUsNewsKo();
+      if (koNews.length > 0) return koNews;
+    }
     const { getNews } = await import("@/lib/api");
     return getNews();
   }
