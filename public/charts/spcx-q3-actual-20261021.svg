@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#0A0520"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="divG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="28" width="112" height="40" rx="20" fill="#2D1657"/>
+    <rect x="40" y="28" width="112" height="40" rx="20" fill="none" stroke="#C084FC" stroke-width="2"/>
+    <text x="96" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#C084FC">SPCX</text>
+  <rect x="164" y="28" width="100" height="40" rx="20" fill="#14532D"/>
+  <rect x="164" y="28" width="100" height="40" rx="20" fill="none" stroke="#4ADE80" stroke-width="2"/>
+  <text x="214" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#4ADE80">Q3 어닝</text>
+  <rect x="878" y="28" width="162" height="40" rx="20" fill="#1F2937"/>
+  <text x="959" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9CA3AF">INVESTUS</text>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">2026년 10월 20일 발표</text>
+  <text x="40" y="144" font-family="Arial,sans-serif" font-size="21" letter-spacing="2" fill="#9CA3AF">SPCX Q3 실적 · 역대 최대 어닝 서프라이즈</text>
+  <text x="40" y="380" font-family="Arial Black,Arial,sans-serif" font-size="180" font-weight="900" fill="#4ADE80">$0.35</text>
+  <text x="40" y="428" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Q3 조정 EPS — 컨센서스 $0.10 대비 250% 상회</text>
+  <text x="40" y="484" font-family="Arial Black,Arial,sans-serif" font-size="46" font-weight="900" fill="#FFFFFF">매출 $14.6B · 전년 대비 +161%</text>
+  <text x="40" y="534" font-family="Arial Black,Arial,sans-serif" font-size="46" font-weight="900" fill="#FFFFFF">순이익 $4.4B · 상장 이래 최대 분기 흑자</text>
+  <rect x="40" y="558" width="1000" height="2" rx="1" fill="url(#divG)"/>
+  <text x="40" y="600" font-family="Arial,sans-serif" font-size="21" letter-spacing="1" fill="#9CA3AF">Q3 사업부별 매출 분해</text>
+  <text x="178" y="648" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#A855F7">SPCX AI</text><rect x="190" y="620" width="425" height="52" rx="8" fill="#A855F7" opacity="1"/><text x="625" y="654" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">$7.56B</text><text x="178" y="732" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#3B82F6">Starlink</text><rect x="190" y="704" width="292" height="52" rx="8" fill="#3B82F6" opacity="0.7"/><text x="492" y="738" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">$5.2B</text><text x="178" y="816" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#6B7280">발사·기타</text><rect x="190" y="788" width="102" height="52" rx="8" fill="#6B7280" opacity="0.7"/><text x="302" y="822" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">$1.82B</text>
+  <rect x="40" y="884" width="1000" height="1" fill="#1F2937"/>
+  <rect x="54" y="910" width="972" height="336" rx="16" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="84" y="948" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F3F4F6" font-weight="900">핵심 포인트</text><rect x="84" y="956" width="904" height="1" fill="#2D333B"/><circle cx="106" cy="982" r="8" fill="#EF4444"/><text x="126" y="980" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">EPS $0.35 — 컨센서스 $0.10 대비 250% 어</text><text x="126" y="1006" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">닝 서프라이즈</text><circle cx="106" cy="1038" r="8" fill="#A855F7"/><text x="126" y="1036" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI 슈퍼인텔리전스 매출 $7.56B (+830% YoY)</text><circle cx="106" cy="1094" r="8" fill="#3B82F6"/><text x="126" y="1092" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Starlink 구독자 1,360만, 연결 매출 $5.2B </text><text x="126" y="1118" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">(+69%)</text><circle cx="106" cy="1150" r="8" fill="#10B981"/><text x="126" y="1148" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">시간외 주가 $151.70 (정규장 $147.79)</text><circle cx="106" cy="1206" r="8" fill="#F59E0B"/><text x="126" y="1204" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">합병 특위 공식 확인 — 머스크 어닝콜 직접 발언</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

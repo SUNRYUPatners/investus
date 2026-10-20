@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0A0020"/><stop offset="100%" stop-color="#050015"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="divG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="28" width="112" height="40" rx="20" fill="#2D1657"/>
+    <rect x="40" y="28" width="112" height="40" rx="20" fill="none" stroke="#C084FC" stroke-width="2"/>
+    <text x="96" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#C084FC">SPCX</text>
+  <rect x="164" y="28" width="100" height="40" rx="20" fill="#1A0A2E"/>
+  <rect x="164" y="28" width="100" height="40" rx="20" fill="none" stroke="#A855F7" stroke-width="2"/>
+  <text x="214" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="15" font-weight="900" fill="#A855F7">AI 사업부</text>
+  <rect x="878" y="28" width="162" height="40" rx="20" fill="#1F2937"/>
+  <text x="959" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9CA3AF">INVESTUS</text>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">2026년 10월 20일 Q3 어닝 발표</text>
+  <text x="40" y="146" font-family="Arial,sans-serif" font-size="21" letter-spacing="2" fill="#9CA3AF">SPCX AI 슈퍼인텔리전스 · 역대 최대 성장</text>
+  <text x="40" y="380" font-family="Arial Black,Arial,sans-serif" font-size="160" font-weight="900" fill="#A855F7">+830%</text>
+  <text x="40" y="428" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">AI 슈퍼인텔리전스 사업부 Q3 매출 — 전년 $813M → $7.56B</text>
+  <text x="40" y="486" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">SpaceX는 이제 AI 인프라 기업.</text>
+  <text x="40" y="542" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">로켓 회사는 옛말.</text>
+  <rect x="40" y="566" width="1000" height="2" rx="1" fill="url(#divG)"/>
+  <!-- Comparison bars -->
+  <text x="40" y="608" font-family="Arial,sans-serif" font-size="21" letter-spacing="1" fill="#9CA3AF">SPCX 사업부별 분기 매출</text>
+  <!-- AI bar: 7.56 / 7.56 * 820 = 820 -->
+  <text x="178" y="660" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#A855F7">AI</text>
+  <rect x="190" y="636" width="820" height="52" rx="8" fill="#A855F7"/>
+  <text x="1018" y="670" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#FFFFFF">$7.56B</text>
+  <!-- Starlink bar: 5.2 / 7.56 * 820 = 564 -->
+  <text x="178" y="726" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#3B82F6">Starlink</text>
+  <rect x="190" y="704" width="564" height="52" rx="8" fill="#3B82F6" opacity="0.8"/>
+  <text x="762" y="738" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#FFFFFF">$5.2B</text>
+  <!-- Launch bar: 1.82/7.56*820 = 197 -->
+  <text x="178" y="792" text-anchor="end" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">발사 등</text>
+  <rect x="190" y="772" width="197" height="52" rx="8" fill="#374151"/>
+  <text x="396" y="806" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">$1.82B</text>
+  <!-- Year comparison note -->
+  <text x="40" y="848" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">전년 Q3 AI 사업부 $813M → 금년 $7.56B (+830%) · 연환산 ~$30B</text>
+  <rect x="40" y="868" width="1000" height="1" fill="#1F2937"/>
+  <rect x="54" y="940" width="972" height="280" rx="16" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="84" y="978" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F3F4F6" font-weight="900">핵심 포인트</text><rect x="84" y="986" width="904" height="1" fill="#2D333B"/><circle cx="106" cy="1012" r="8" fill="#EF4444"/><text x="126" y="1010" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI 사업부 분기 $7.56B — 연환산 $30B 규모</text><circle cx="106" cy="1068" r="8" fill="#A855F7"/><text x="126" y="1066" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Starlink 연결 매출 $5.2B 제치고 최대 사업부 </text><text x="126" y="1092" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">등극</text><circle cx="106" cy="1124" r="8" fill="#3B82F6"/><text x="126" y="1122" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">브라운스빌 GPU 클러스터 5~6개 이상 2년 내 자체 구</text><text x="126" y="1148" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">축</text><circle cx="106" cy="1180" r="8" fill="#10B981"/><text x="126" y="1178" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AWS·Google·Azure 공급 불가 판정 — 자체 인</text><text x="126" y="1204" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">프라 선택</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

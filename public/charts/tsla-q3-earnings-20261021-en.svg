@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#0A0520"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="divG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="28" width="112" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="40" y="28" width="112" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="96" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#EF4444">TSLA</text>
+  <rect x="164" y="28" width="130" height="40" rx="20" fill="#451A03"/>
+  <rect x="164" y="28" width="130" height="40" rx="20" fill="none" stroke="#FB923C" stroke-width="2"/>
+  <text x="229" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FB923C">Q3 EARNINGS</text>
+  <rect x="878" y="28" width="162" height="40" rx="20" fill="#1F2937"/>
+  <text x="959" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9CA3AF">INVESTUS</text>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">Reporting Oct 21, 2026 at 4:30pm CT</text>
+  <text x="40" y="146" font-family="Arial,sans-serif" font-size="21" letter-spacing="2" fill="#9CA3AF">TESLA Q3 2026 EARNINGS  ·  AFTER CLOSE TODAY</text>
+  <text x="40" y="400" font-family="Arial Black,Arial,sans-serif" font-size="200" font-weight="900" fill="url(#accentG)">TONIGHT</text>
+  <text x="40" y="448" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Tesla Q3 results — 4:30pm CT / Oct 22 6:30am KST</text>
+  <text x="40" y="506" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">Deliveries Already Beat.</text>
+  <text x="40" y="562" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">Margins, FSD, Merger Talk Are the Keys.</text>
+  <rect x="40" y="586" width="1000" height="2" rx="1" fill="url(#divG)"/>
+  <text x="40" y="726" font-family="Arial,sans-serif" font-size="21" letter-spacing="1" fill="#9CA3AF">ALREADY REPORTED Q3 METRICS</text>
+  <rect x="40" y="740" width="320" height="150" rx="14" fill="#111827"/><rect x="40" y="740" width="320" height="5" rx="2.5" fill="#4ADE80"/><text x="200" y="782" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#4ADE80">Deliveries</text><text x="200" y="832" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#FFFFFF">486,532</text><text x="200" y="864" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">vs 461,974 consensus</text><rect x="130" y="874" width="140" height="28" rx="12" fill="#4ADE80" opacity="0.18"/><text x="200" y="894" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="15" font-weight="900" fill="#4ADE80">BEAT</text><rect x="386" y="740" width="320" height="150" rx="14" fill="#111827"/><rect x="386" y="740" width="320" height="5" rx="2.5" fill="#EF4444"/><text x="546" y="782" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#EF4444">Energy GWh</text><text x="546" y="832" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#FFFFFF">13.7</text><text x="546" y="864" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">vs 15.9 GWh consensus</text><rect x="476" y="874" width="140" height="28" rx="12" fill="#EF4444" opacity="0.18"/><text x="546" y="894" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="15" font-weight="900" fill="#EF4444">MISS</text><rect x="732" y="740" width="320" height="150" rx="14" fill="#111827"/><rect x="732" y="740" width="320" height="5" rx="2.5" fill="#F59E0B"/><text x="892" y="782" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#F59E0B">EPS Consensus</text><text x="892" y="832" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#FFFFFF">$0.44</text><text x="892" y="864" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">vs $0.50 a year ago</text><rect x="822" y="874" width="140" height="28" rx="12" fill="#F59E0B" opacity="0.18"/><text x="892" y="894" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="15" font-weight="900" fill="#F59E0B">TBD</text>
+  <rect x="40" y="904" width="1000" height="1" fill="#1F2937"/>
+  <rect x="54" y="934" width="972" height="336" rx="16" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="84" y="972" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F3F4F6" font-weight="900">Key Points</text><rect x="84" y="980" width="904" height="1" fill="#2D333B"/><circle cx="106" cy="1006" r="8" fill="#EF4444"/><text x="126" y="1004" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Deliveries: 486,532 vs 461,974E (+5.3% beat)</text><circle cx="106" cy="1062" r="8" fill="#A855F7"/><text x="126" y="1060" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Energy storage: 13.7 GWh vs 15.9 GWh consensus</text><text x="126" y="1086" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">(miss)</text><circle cx="106" cy="1118" r="8" fill="#3B82F6"/><text x="126" y="1116" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Auto gross margin consensus: 15.8–16.2% (recovery</text><text x="126" y="1142" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">from 15.2%)</text><circle cx="106" cy="1174" r="8" fill="#10B981"/><text x="126" y="1172" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">FSD conversion &gt;20% = first visible recurring</text><text x="126" y="1198" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">revenue</text><circle cx="106" cy="1230" r="8" fill="#F59E0B"/><text x="126" y="1228" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Merger commentary — top catalyst on this call</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

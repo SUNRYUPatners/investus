@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#0A0520"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="divG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="28" width="112" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="40" y="28" width="112" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="96" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#EF4444">TSLA</text>
+  <rect x="164" y="28" width="112" height="40" rx="20" fill="#2D1657"/>
+    <rect x="164" y="28" width="112" height="40" rx="20" fill="none" stroke="#C084FC" stroke-width="2"/>
+    <text x="220" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#C084FC">SPCX</text>
+  <rect x="878" y="28" width="162" height="40" rx="20" fill="#1F2937"/>
+  <text x="959" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9CA3AF">INVESTUS</text>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">Oct 21, 2026</text>
+  <text x="40" y="146" font-family="Arial,sans-serif" font-size="21" letter-spacing="2" fill="#9CA3AF">MERGER STRUCTURE  ·  APPROVAL THRESHOLD  ·  TIMELINE</text>
+  <text x="40" y="380" font-family="Arial Black,Arial,sans-serif" font-size="200" font-weight="900" fill="url(#accentG)">50%</text>
+  <text x="40" y="428" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Tesla merger approval threshold — majority of ALL outstanding shares</text>
+  <text x="40" y="484" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">"Not just those who vote —</text>
+  <text x="40" y="540" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">all shareholders." — Musk</text>
+  <rect x="40" y="566" width="1000" height="2" rx="1" fill="url(#divG)"/>
+  <!-- Shareholder breakdown bar -->
+  <text x="40" y="608" font-family="Arial,sans-serif" font-size="21" letter-spacing="1" fill="#9CA3AF">ESTIMATED TSLA SHAREHOLDER BREAKDOWN</text>
+  <rect x="40" y="622" width="1000" height="60" rx="10" fill="#1F2937"/>
+  <!-- Musk 13%: 130px -->
+  <rect x="40" y="622" width="130" height="60" rx="10" fill="#EF4444" opacity="0.85"/>
+  <text x="105" y="658" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" fill="#FFF">13%</text>
+  <!-- Institutional 50%: 500px -->
+  <rect x="170" y="622" width="500" height="60" fill="#3B82F6" opacity="0.75"/>
+  <text x="420" y="658" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" fill="#FFF">Institutional ~50%</text>
+  <!-- Retail 37% -->
+  <rect x="670" y="622" width="370" height="60" rx="0 10 10 0" fill="#6B7280" opacity="0.7"/>
+  <text x="855" y="658" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" fill="#FFF">Retail ~37%</text>
+  <text x="105" y="700" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#EF4444">Musk</text>
+  <text x="420" y="700" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#3B82F6">Institutions — Essential</text>
+  <!-- Valuation comparison -->
+  <text x="40" y="748" font-family="Arial,sans-serif" font-size="21" letter-spacing="1" fill="#9CA3AF">POST-MERGER VALUATION (BARCLAYS)</text>
+  <!-- Current: TSLA $1.4T + SPCX $0.7T -->
+  <rect x="40" y="762" width="420" height="80" rx="12" fill="#1F2937"/>
+  <text x="250" y="798" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">Current combined</text>
+  <text x="250" y="832" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#FFFFFF">~$2.1T</text>
+  <!-- Arrow -->
+  <text x="498" y="810" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="40" fill="#C084FC">→</text>
+  <!-- Post-merger: $3.5T -->
+  <rect x="558" y="762" width="480" height="80" rx="12" fill="#2D1657"/>
+  <rect x="558" y="762" width="480" height="5" rx="2.5" fill="#C084FC"/>
+  <text x="798" y="798" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#C084FC">Barclays post-merger</text>
+  <text x="798" y="832" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#FFFFFF">$3.5T</text>
+  <!-- +$1.4T premium label -->
+  <text x="540" y="872" font-family="Arial,sans-serif" font-size="20" fill="#4ADE80">+$1.4T merger synergy premium (AI + energy + transport)</text>
+  <rect x="40" y="890" width="1000" height="1" fill="#1F2937"/>
+  <rect x="54" y="960" width="972" height="280" rx="16" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="84" y="998" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F3F4F6" font-weight="900">Key Points</text><rect x="84" y="1006" width="904" height="1" fill="#2D333B"/><circle cx="106" cy="1032" r="8" fill="#EF4444"/><text x="126" y="1030" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">~3.2B total TSLA shares, 50%+ = 1.6B+ votes needed</text><circle cx="106" cy="1088" r="8" fill="#A855F7"/><text x="126" y="1086" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Musk ~13% — institutional majority support is</text><text x="126" y="1112" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">essential</text><circle cx="106" cy="1144" r="8" fill="#3B82F6"/><text x="126" y="1142" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Downside: if committees fail, merger premium unwinds</text><circle cx="106" cy="1200" r="8" fill="#10B981"/><text x="126" y="1198" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Post-merger $3.5T vs current ~$2.1T combined — $1.4T</text><text x="126" y="1224" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">synergy premium</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

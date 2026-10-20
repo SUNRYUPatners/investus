@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0A0010"/><stop offset="100%" stop-color="#0A0520"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="divG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="28" width="112" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="40" y="28" width="112" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="96" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#EF4444">TSLA</text>
+  <rect x="164" y="28" width="112" height="40" rx="20" fill="#2D1657"/>
+    <rect x="164" y="28" width="112" height="40" rx="20" fill="none" stroke="#C084FC" stroke-width="2"/>
+    <text x="220" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#C084FC">SPCX</text>
+  <rect x="296" y="28" width="160" height="40" rx="20" fill="#450A0A"/>
+  <rect x="296" y="28" width="160" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="376" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCA5A5">BREAKING</text>
+  <rect x="878" y="28" width="162" height="40" rx="20" fill="#1F2937"/>
+  <text x="959" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9CA3AF">INVESTUS</text>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">Oct 21, 2026</text>
+  <text x="40" y="146" font-family="Arial,sans-serif" font-size="21" letter-spacing="2" fill="#9CA3AF">MUSK CONFIRMS  ·  MERGER SPECIAL COMMITTEES FORMED</text>
+  <text x="40" y="380" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="url(#accentG)">MERGER</text>
+  <text x="40" y="480" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="url(#accentG)">CONFIRMED</text>
+  <text x="40" y="530" font-family="Arial,sans-serif" font-size="25" fill="#9CA3AF">Both boards form independent special committees — Musk earnings call</text>
+  <rect x="40" y="556" width="1000" height="2" rx="1" fill="url(#divG)"/>
+  <text x="40" y="596" font-family="Arial,sans-serif" font-size="21" letter-spacing="1" fill="#9CA3AF">MERGER TIMELINE ROADMAP</text>
+  <line x1="104" y1="620" x2="104" y2="930" stroke="#374151" stroke-width="2"/><circle cx="104" cy="620" r="12" fill="#EF4444"/><text x="130" y="614" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#F3F4F6">Oct 20</text><text x="130" y="638" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Musk confirms committees on SPCX call</text><circle cx="104" cy="720" r="12" fill="#F59E0B"/><text x="130" y="714" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#F3F4F6">Late Oct–Nov</text><text x="130" y="738" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Barclays: merger announcement expected</text><circle cx="104" cy="820" r="12" fill="#A855F7"/><text x="130" y="814" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#F3F4F6">Dec 6</text><text x="130" y="838" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Tesla AGM — shareholder vote window</text><circle cx="104" cy="920" r="12" fill="#10B981"/><text x="130" y="914" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#F3F4F6">Q1 2027</text><text x="130" y="938" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Expected merger close (est.)</text>
+  <rect x="40" y="956" width="1000" height="1" fill="#1F2937"/>
+  <rect x="40" y="962" width="1000" height="64" rx="12" fill="#1F2937"/>
+  <text x="60" y="1000" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#C084FC">Barclays Post-Merger Valuation</text>
+  <text x="740" y="1000" font-family="Arial Black,Arial,sans-serif" font-size="36" font-weight="900" fill="#FFFFFF">$3.5T</text>
+  <rect x="54" y="928" width="972" height="336" rx="16" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="84" y="966" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F3F4F6" font-weight="900">Key Points</text><rect x="84" y="974" width="904" height="1" fill="#2D333B"/><circle cx="106" cy="1000" r="8" fill="#EF4444"/><text x="126" y="998" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Both boards formed independent-director special</text><text x="126" y="1024" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">committees</text><circle cx="106" cy="1056" r="8" fill="#A855F7"/><text x="126" y="1054" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Musk excluded as conflicted party — not in committee</text><text x="126" y="1080" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">talks</text><circle cx="106" cy="1112" r="8" fill="#3B82F6"/><text x="126" y="1110" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Tesla requires 50%+ of ALL outstanding shares to</text><text x="126" y="1136" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">approve</text><circle cx="106" cy="1168" r="8" fill="#10B981"/><text x="126" y="1166" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Barclays: announcement late Oct–early Nov, $3.5T</text><text x="126" y="1192" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">entity value</text><circle cx="106" cy="1224" r="8" fill="#F59E0B"/><text x="126" y="1222" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Kalshi merger odds rising further from 67%</text><text x="126" y="1248" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">post-confirmation</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>
