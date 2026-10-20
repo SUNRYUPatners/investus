@@ -134,7 +134,7 @@ function ReportCard({ r, isKo }: { r: Report; isKo: boolean }) {
 
         {/* 제목 */}
         <h3 className="text-sm font-bold leading-snug mb-2" style={{ color: "var(--text)" }}>
-          {r.title}
+          {isKo ? r.title : (r.titleEn ?? r.title)}
         </h3>
 
         {/* 요약 — 3줄 클램프, 펼치면 전체 */}
@@ -148,7 +148,7 @@ function ReportCard({ r, isKo }: { r: Report; isKo: boolean }) {
             overflow: open ? "visible" : "hidden",
           }}
         >
-          {r.summary}
+          {isKo ? r.summary : (r.summaryEn ?? r.summary)}
         </p>
 
         {/* 더 보기 버튼 */}
@@ -204,10 +204,12 @@ function getDateKey(r: Report): string {
   return s.split(" ")[0].replace(/\./g, "-");
 }
 
-function StockReports({ symbol, className = "", isKo }: { symbol: string; className?: string; isKo: boolean }) {
+function StockReports({ symbol, className = "", isKo: isKoProp }: { symbol: string; className?: string; isKo: boolean }) {
   const [showOlder, setShowOlder] = useState(false);
   const [query, setQuery]         = useState("");
   const [searching, setSearching] = useState(false);
+  const [reportLang, setReportLang] = useState<"ko" | "en">(isKoProp ? "ko" : "en");
+  const isKo = reportLang === "ko";
   const inputRef = useRef<HTMLInputElement>(null);
   const { user } = useAuth();
   const isPro = user?.isPro === true;
@@ -255,12 +257,28 @@ function StockReports({ symbol, className = "", isKo }: { symbol: string; classN
     <div className={className}>
       {/* 헤더 행 */}
       <div className="flex items-center justify-between mb-3">
-        <h2
-          className="text-xs font-semibold tracking-widest uppercase font-syne"
-          style={{ color: "var(--muted)" }}
-        >
-          Investus {isKo ? "리포트" : "Reports"}
-        </h2>
+        <div className="flex items-center gap-2">
+          <h2
+            className="text-xs font-semibold tracking-widest uppercase font-syne"
+            style={{ color: "var(--muted)" }}
+          >
+            Investus {isKo ? "리포트" : "Reports"}
+          </h2>
+          <div className="flex items-center gap-0.5">
+            {(["ko", "en"] as const).map((l) => (
+              <button
+                key={l}
+                onClick={() => setReportLang(l)}
+                className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full transition-colors"
+                style={reportLang === l
+                  ? { background: "var(--navy)", color: "var(--text)" }
+                  : { background: "transparent", color: "var(--muted)" }}
+              >
+                {l === "ko" ? "한글" : "EN"}
+              </button>
+            ))}
+          </div>
+        </div>
         <button
           onClick={() => {
             setSearching((v) => {
@@ -512,7 +530,7 @@ export default function StockPage({
   useEffect(() => {
     fetchDetailRef.current();
 
-    fetch(`/api/stock-news?symbol=${encodeURIComponent(upper)}`)
+    fetch(`/api/stock-news?symbol=${encodeURIComponent(upper)}&locale=${locale}`)
       .then((r) => r.json())
       .then(setNews)
       .catch(() => {});

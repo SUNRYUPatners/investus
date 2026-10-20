@@ -592,6 +592,7 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
   const [showOlder, setShowOlder] = useState(false);
 
   const uiLang: "ko" | "en" = lang ?? (localeCode === "en" ? "en" : "ko");
+  const [feedLang, setFeedLang] = useState<"ko" | "en">(uiLang);
   const cioIntro = getReportCioIntro(market, uiLang);
   const reportSubtitle = getReportSubtitle(market, uiLang);
 
@@ -634,12 +635,28 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
     <>
       {/* Section header — 모바일에서 저자 라벨이 본문을 가리지 않도록 한 열로만 쌓음 */}
       <div className="mb-3 min-w-0">
-        <h2
-          className="text-xs font-semibold tracking-widest uppercase font-syne"
-          style={{ color: "var(--muted)" }}
-        >
-          {t.reports.sectionTitle}
-        </h2>
+        <div className="flex items-center justify-between gap-2">
+          <h2
+            className="text-xs font-semibold tracking-widest uppercase font-syne"
+            style={{ color: "var(--muted)" }}
+          >
+            {t.reports.sectionTitle}
+          </h2>
+          <div className="flex items-center gap-0.5 flex-shrink-0">
+            {(["ko", "en"] as const).map((l) => (
+              <button
+                key={l}
+                onClick={() => setFeedLang(l)}
+                className="text-[11px] font-semibold px-2 py-0.5 rounded-full transition-colors"
+                style={feedLang === l
+                  ? { background: "var(--navy)", color: "var(--text)" }
+                  : { background: "transparent", color: "var(--muted)" }}
+              >
+                {l === "ko" ? "한글" : "EN"}
+              </button>
+            ))}
+          </div>
+        </div>
         <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
           {reportSubtitle}
         </p>
@@ -655,7 +672,7 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
       {all.length > 0 && (
         <div className="flex flex-col gap-3">
           {/* 최신 날짜 리포트 — 항상 표시 */}
-          {latest.free.map((r) => <ReportCard key={r.id} report={r} lang={lang} />)}
+          {latest.free.map((r) => <ReportCard key={r.id} report={r} lang={feedLang} />)}
           {latest.locked.length > 0 && <LockedReportGroup reports={latest.locked} />}
 
           {/* 이전 날짜 리포트 — 더보기 토글 */}
@@ -672,7 +689,7 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
                 </button>
               ) : (
                 <>
-                  {older.free.map((r) => <ReportCard key={r.id} report={r} lang={lang} />)}
+                  {older.free.map((r) => <ReportCard key={r.id} report={r} lang={feedLang} />)}
                   {older.locked.length > 0 && <LockedReportGroup reports={older.locked} />}
                   <button
                     className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl border text-sm font-semibold transition-opacity active:opacity-60"
