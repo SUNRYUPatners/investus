@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<defs>
+  <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#080D1A"/>
+  </linearGradient>
+  <linearGradient id="tBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#3B82F6"/>
+  </linearGradient>
+  <linearGradient id="heroG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#3B82F6"/>
+  </linearGradient>
+  <linearGradient id="divG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#EF4444"/>
+    <stop offset="70%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="card1G" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#1A0808"/><stop offset="100%" stop-color="#0D1117"/>
+  </linearGradient>
+  <linearGradient id="card2G" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#080D1A"/><stop offset="100%" stop-color="#0D1117"/>
+  </linearGradient>
+</defs>
+
+<!-- bg -->
+<rect width="1080" height="1350" fill="url(#bgG)"/>
+<rect x="0" y="0" width="1080" height="12" fill="url(#tBar)"/>
+
+<!-- badges -->
+<rect x="54" y="30" width="90" height="36" rx="8" fill="#EF4444"/>
+<text x="99" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">TSLA</text>
+<rect x="160" y="30" width="102" height="36" rx="8" fill="#3B82F6"/>
+<text x="211" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">SpaceX</text>
+<rect x="278" y="30" width="116" height="36" rx="8" fill="#7C3AED"/>
+<text x="336" y="54" font-family="Arial Black,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="900">합병시그널</text>
+
+<!-- date -->
+<text x="54" y="104" font-family="Arial,sans-serif" font-size="24" fill="#8B949E">2026.10.19 · 오늘의 TSLA × SpaceX 빅픽처</text>
+
+<!-- hero headline -->
+<text x="54" y="196" font-family="Arial Black,Arial,sans-serif" font-size="72" fill="url(#heroG)" font-weight="900">합병 시그널</text>
+<text x="54" y="278" font-family="Arial Black,Arial,sans-serif" font-size="72" fill="url(#heroG)" font-weight="900">폭증 중</text>
+<text x="54" y="346" font-family="Arial,sans-serif" font-size="28" fill="#D1D5DB">임원 팔로우 · Citi Research · 공동 근무 · $3.5T</text>
+
+<!-- divider -->
+<rect x="54" y="374" width="972" height="3" fill="url(#divG)" rx="2"/>
+
+<!-- 4 stat boxes: 2x2 grid -->
+<!-- Row 1 -->
+<rect x="54" y="396" width="462" height="200" rx="20" fill="url(#card1G)" stroke="#EF4444" stroke-width="2"/>
+<text x="78" y="436" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" font-weight="700">합병 시그널</text>
+<text x="78" y="490" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">3중</text>
+<text x="78" y="542" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">임원팔로우 + Citi + 공동근무</text>
+<text x="78" y="572" font-family="Arial,sans-serif" font-size="19" fill="#FCA5A5">합산가치 $3.5T · 12월 발표 가능</text>
+
+<rect x="564" y="396" width="462" height="200" rx="20" fill="url(#card2G)" stroke="#3B82F6" stroke-width="2"/>
+<text x="588" y="436" font-family="Arial,sans-serif" font-size="19" fill="#3B82F6" font-weight="700">SpaceX 발사 지배력</text>
+<text x="588" y="490" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">4.3x</text>
+<text x="588" y="542" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">나머지 전 세계 합산 대비</text>
+<text x="588" y="572" font-family="Arial,sans-serif" font-size="19" fill="#93C5FD">2025년 2,308t vs 534t</text>
+
+<!-- Row 2 -->
+<rect x="54" y="614" width="462" height="200" rx="20" fill="url(#card2G)" stroke="#3B82F6" stroke-width="2"/>
+<text x="78" y="654" font-family="Arial,sans-serif" font-size="19" fill="#3B82F6" font-weight="700">Starlink Mobile</text>
+<text x="78" y="712" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">$65B</text>
+<text x="78" y="764" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Bloomberg 2031E 전망</text>
+<text x="78" y="794" font-family="Arial,sans-serif" font-size="19" fill="#93C5FD">Delta 고객 이탈 · 항공·철도 확산</text>
+
+<rect x="564" y="614" width="462" height="200" rx="20" fill="url(#card1G)" stroke="#EF4444" stroke-width="2"/>
+<text x="588" y="654" font-family="Arial,sans-serif" font-size="19" fill="#EF4444" font-weight="700">텍사스 로보택시</text>
+<text x="588" y="712" font-family="Arial Black,Arial,sans-serif" font-size="52" fill="#fff" font-weight="900">800대+</text>
+<text x="588" y="764" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Cybercab 346 + Model Y 454</text>
+<text x="588" y="794" font-family="Arial,sans-serif" font-size="19" fill="#FCA5A5">Drivewise 87% · 3일 연속 신기록</text>
+
+<!-- big message box -->
+<rect x="54" y="836" width="972" height="120" rx="20" fill="#10161F" stroke="#7C3AED" stroke-width="2"/>
+<text x="84" y="878" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#A78BFA" font-weight="900">Musk: &quot;초거대 규모로 성장할 것은 X2와 로봇뿐&quot;</text>
+<text x="84" y="920" font-family="Arial,sans-serif" font-size="23" fill="#D1D5DB">Cybercab은 이미 라이브 · Q3 실적 10월 21일 · Optimus X2 핵심 내러티브</text>
+
+<!-- NASA row -->
+<rect x="54" y="978" width="972" height="100" rx="16" fill="#0D1A1A" stroke="#22C55E" stroke-width="1.5"/>
+<text x="84" y="1018" font-family="Arial,sans-serif" font-size="22" fill="#22C55E" font-weight="700">NASA 아르테미스 HLS 업데이트</text>
+<text x="84" y="1056" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">Artemis IV 2028년 초 유인 달 착륙 · Starship HLS vs Blue Moon · SPCX 직접 수혜</text>
+
+<!-- Fear & Greed row -->
+<rect x="54" y="1096" width="972" height="100" rx="16" fill="#1A0808" stroke="#EF4444" stroke-width="1.5"/>
+<text x="84" y="1136" font-family="Arial,sans-serif" font-size="22" fill="#EF4444" font-weight="700">시장 심리: 극단적 공포 18 (1주 만에 46→18 급락)</text>
+<text x="84" y="1174" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">공포 구간 + 실적 발표 주간 = 역발상 매수 타이밍 논의 중</text>
+
+<!-- bottom cta -->
+<rect x="54" y="1218" width="972" height="44" rx="10" fill="url(#tBar)" opacity="0.15"/>
+<text x="540" y="1247" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#fff" text-anchor="middle" font-weight="900">10.20 SPCX Q3 · 10.21 TSLA Q3 실적 발표 주목</text>
+
+<!-- footer -->
+<rect x="0" y="1278" width="1080" height="72" fill="#161B22"/>
+<text x="54" y="1326" font-family="Arial Black,Arial,sans-serif" font-size="22" fill="#58A6FF" font-weight="900">investus.kr</text>
+<text x="1026" y="1326" font-family="Arial,sans-serif" font-size="20" fill="#8B949E" text-anchor="end">2026.10.19</text>
+</svg>
