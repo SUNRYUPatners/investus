@@ -110,6 +110,16 @@ const ALLOW = new Set([
   "nstraubel", "namazon", "nazure", "nniazde", "nprometheus", "nwonder",
   "nredwood", "nllama", "ninstagram", "nfacebook", "nwhatsapp", "nthreads", "nreels",
   "nintel", "nkalshi", "nanthropik", "nbrowns", "nbrownsville", "nmemphis",
+  // 2026-10-21 추가 — 제품명·인물명·서비스명
+  "alipay", "ferrari", "vigna", "benedetto", "semi", "pepsico", "class",
+  "uber", "uberx", "austin", "driverless", "save", "wait",
+  "milk", "road", "kyle", "reidhead",
+  // 2026-10-21 추가 — 금융 용어·시나리오
+  "cagr", "base", "case", "bear", "bull", "monte", "carlo", "recurring", "revenue",
+  // 2026-10-21 추가 — 중국 NEV 모델명
+  "song", "seal", "galaxy", "yuan", "atto", "dolphin", "seagull",
+  // 2026-10-21 추가 — \n 아티팩트
+  "nalipay", "nferrari", "nubber", "naustin", "nsemi", "nuber",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */
