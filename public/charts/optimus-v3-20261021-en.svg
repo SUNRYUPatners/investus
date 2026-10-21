@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#07090D"/><stop offset="100%" stop-color="#040812"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="divG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="28" width="112" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="40" y="28" width="112" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="96" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#EF4444">TSLA</text>
+  <rect x="164" y="28" width="160" height="40" rx="20" fill="#1E3A5F"/>
+  <rect x="164" y="28" width="160" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="244" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#60A5FA">SEC FILING</text>
+  <rect x="878" y="28" width="162" height="40" rx="20" fill="#1F2937"/>
+  <text x="959" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9CA3AF">INVESTUS</text>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">Oct 19, 2026 SEC Filing</text>
+  <text x="40" y="144" font-family="Arial,sans-serif" font-size="21" letter-spacing="2" fill="#9CA3AF">OPTIMUS V3  ·  MASS PRODUCTION OFFICIAL  ·  FREMONT</text>
+  <text x="40" y="350" font-family="Arial Black,Arial,sans-serif" font-size="130" font-weight="900" fill="#3B82F6">1M</text>
+  <text x="40" y="400" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Fremont Optimus V3 annual capacity — first official production disclosure</text>
+  <text x="40" y="456" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">SEC Filing: First Production Line Output.</text>
+  <text x="40" y="514" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">Largest Humanoid Robot Production Project in History.</text>
+  <!-- spec badges -->
+  <rect x="40" y="548" width="220" height="50" rx="12" fill="#1E3A5F"/>
+  <text x="150" y="579" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#60A5FA">1M/yr cap</text>
+  <rect x="274" y="548" width="260" height="50" rx="12" fill="#1E3A5F"/>
+  <text x="404" y="579" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#60A5FA">10,000+ parts</text>
+  <rect x="548" y="548" width="260" height="50" rx="12" fill="#1E3A5F"/>
+  <text x="678" y="579" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#60A5FA">Fremont live</text>
+  <rect x="40" y="618" width="1000" height="2" rx="1" fill="url(#divG)"/>
+  <text x="40" y="642" font-family="Arial,sans-serif" font-size="21" letter-spacing="1" fill="#9CA3AF">OPTIMUS PRODUCTION ROADMAP</text>
+  <line x1="104" y1="640" x2="104" y2="880" stroke="#374151" stroke-width="2"/><circle cx="104" cy="640" r="12" fill="#3B82F6"/><text x="132" y="634" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#F3F4F6">2025</text><text x="132" y="658" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Optimus V2 internal trials · deployed inside Fremont factory</text><circle cx="104" cy="714" r="12" fill="#8B5CF6"/><text x="132" y="708" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#F3F4F6">Oct 19, 2026</text><text x="132" y="732" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">SEC filing — V3 production lines official (Chair Denholm cited)</text><circle cx="104" cy="788" r="12" fill="#10B981"/><text x="132" y="782" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#F3F4F6">2027–2028</text><text x="132" y="806" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Terafab transition &amp; scale — external commercial sales expected</text><circle cx="104" cy="862" r="12" fill="#F59E0B"/><text x="132" y="856" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#F3F4F6">ARK 2031 Base</text><text x="132" y="880" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">ARK Invest: 1M units/yr · $17.5T market cap assumed</text>
+  <rect x="40" y="890" width="1000" height="1" fill="#1F2937"/>
+  <rect x="54" y="900" width="972" height="280" rx="16" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="84" y="938" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F3F4F6" font-weight="900">Key Points</text><rect x="84" y="946" width="904" height="1" fill="#2D333B"/><circle cx="106" cy="972" r="8" fill="#EF4444"/><text x="126" y="970" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Oct 19 SEC filing — Chair Robyn Denholm cited in</text><text x="126" y="996" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">filing</text><circle cx="106" cy="1028" r="8" fill="#A855F7"/><text x="126" y="1026" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Annual capacity up to 1M units · 10,000+ components</text><circle cx="106" cy="1084" r="8" fill="#3B82F6"/><text x="126" y="1082" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Fremont Phase 1 → Terafab (Grimes County, TX) Phase</text><text x="126" y="1108" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">2</text><circle cx="106" cy="1140" r="8" fill="#10B981"/><text x="126" y="1138" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Matches ARK TSLA 2031 Base Case assumption of 1M</text><text x="126" y="1164" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">units/yr</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

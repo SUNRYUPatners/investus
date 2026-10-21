@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0A0015"/><stop offset="100%" stop-color="#050012"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="divG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="28" width="120" height="40" rx="20" fill="#1A0A2E"/>
+  <rect x="40" y="28" width="120" height="40" rx="20" fill="none" stroke="#A855F7" stroke-width="2"/>
+  <text x="100" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C084FC">AI/매크로</text>
+  <rect x="878" y="28" width="162" height="40" rx="20" fill="#1F2937"/>
+  <text x="959" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9CA3AF">INVESTUS</text>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">Oct 21, 2026 · Bloomberg / Kalshi</text>
+  <text x="40" y="144" font-family="Arial,sans-serif" font-size="21" letter-spacing="2" fill="#9CA3AF">AI ECOSYSTEM  ·  OPENAI  ·  S&amp;P500 CONCENTRATION  ·  MUSK</text>
+
+  <!-- S&P500 concentration hero -->
+  <text x="40" y="350" font-family="Arial Black,Arial,sans-serif" font-size="190" font-weight="900" fill="#C084FC">49%</text>
+  <text x="40" y="398" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">AI stocks make up 49% of the S&amp;P 500 — 2nd highest sector concentration ever</text>
+  <text x="40" y="454" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#FFFFFF">#1 All-Time: 1880s Railroads (Industrial Infrastructure Monopoly)</text>
+  <rect x="40" y="480" width="1000" height="2" rx="1" fill="url(#divG)"/>
+
+  <!-- Three info cards -->
+  <rect x="40" y="498" width="310" height="370" rx="16" fill="#111827"/>
+  <rect x="40" y="498" width="310" height="6" rx="3" fill="#C084FC"/>
+  <text x="195" y="540" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#C084FC">OpenAI</text>
+  <text x="195" y="594" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">$30B</text>
+  <text x="195" y="636" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">new funding in talks</text>
+  <text x="195" y="678" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#FFFFFF">$1.4T</text>
+  <text x="195" y="714" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">target valuation</text>
+  <text x="195" y="758" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">ARR $50B</text>
+  <text x="195" y="792" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">YE target $70B</text>
+  <text x="195" y="834" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#A855F7">Anthropic IPO: Nov (Kalshi 50%)</text>
+  <text x="195" y="858" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280"></text>
+
+  <rect x="370" y="498" width="310" height="370" rx="16" fill="#111827"/>
+  <rect x="370" y="498" width="310" height="6" rx="3" fill="#A855F7"/>
+  <text x="525" y="540" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#A855F7">Milk Road Synergies</text>
+  <text x="390" y="590" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#F3F4F6">TSLA×SPCX</text>
+  <text x="390" y="632" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">① Tesla+X+SpaceX data</text>
+  <text x="390" y="660" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">on shared GPU cluster</text>
+  <text x="390" y="700" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">② $11.2B compute arbitrage</text>
+  <text x="390" y="740" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">③ SpaceX AI loss $3.7B</text>
+  <text x="390" y="768" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">offset vs Tesla taxable profit</text>
+  <text x="390" y="808" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">④ Eliminate duplicate overhead</text>
+  <text x="390" y="848" font-family="Arial,sans-serif" font-size="18" fill="#C084FC">Core driver: data + compute unification</text>
+
+  <rect x="700" y="498" width="340" height="370" rx="16" fill="#111827"/>
+  <rect x="700" y="498" width="340" height="6" rx="3" fill="#F59E0B"/>
+  <text x="870" y="540" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F59E0B">Musk Vision</text>
+  <text x="720" y="596" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">"In a Starship major world"</text>
+  <text x="870" y="656" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">$50T</text>
+  <text x="870" y="698" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#F59E0B">SpaceX revenue+ — "low estimate"</text>
+  <text x="720" y="744" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Oct 8 quote: "SpaceX being worth</text>
+  <text x="720" y="770" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">orders of magnitude more than</text>
+  <text x="720" y="796" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">the current Earth economy"</text>
+  <text x="720" y="832" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">→ 11.3M views on X</text>
+  <text x="720" y="860" font-family="Arial,sans-serif" font-size="18" fill="#F59E0B">Requires: Starship commercialization (10-20yr)</text>
+
+  <rect x="40" y="880" width="1000" height="1" fill="#1F2937"/>
+  <rect x="54" y="900" width="972" height="280" rx="16" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="84" y="938" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F3F4F6" font-weight="900">Key Points</text><rect x="84" y="946" width="904" height="1" fill="#2D333B"/><circle cx="106" cy="972" r="8" fill="#EF4444"/><text x="126" y="970" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">OpenAI raising $30B at $1.4T valuation — racing</text><text x="126" y="996" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Anthropic IPO</text><circle cx="106" cy="1028" r="8" fill="#A855F7"/><text x="126" y="1026" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Annualized revenue $50B, targeting $70B year-end ·</text><text x="126" y="1052" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Anthropic IPO: Nov</text><circle cx="106" cy="1084" r="8" fill="#3B82F6"/><text x="126" y="1082" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI stocks = 49% of S&amp;P 500 — 2nd highest sector</text><text x="126" y="1108" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">concentration ever</text><circle cx="106" cy="1140" r="8" fill="#10B981"/><text x="126" y="1138" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Musk: &quot;SpaceX $50T+ in a Starship world — that is a</text><text x="126" y="1164" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">low estimate&quot;</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

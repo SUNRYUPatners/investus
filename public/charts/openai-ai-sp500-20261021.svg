@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0A0015"/><stop offset="100%" stop-color="#050012"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="divG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="28" width="120" height="40" rx="20" fill="#1A0A2E"/>
+  <rect x="40" y="28" width="120" height="40" rx="20" fill="none" stroke="#A855F7" stroke-width="2"/>
+  <text x="100" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C084FC">AI/매크로</text>
+  <rect x="878" y="28" width="162" height="40" rx="20" fill="#1F2937"/>
+  <text x="959" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9CA3AF">INVESTUS</text>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">2026년 10월 21일 · Bloomberg / Kalshi</text>
+  <text x="40" y="144" font-family="Arial,sans-serif" font-size="21" letter-spacing="2" fill="#9CA3AF">AI 생태계 · OPENAI · S&amp;P500 집중도 · MUSK</text>
+
+  <!-- S&P500 concentration hero -->
+  <text x="40" y="350" font-family="Arial Black,Arial,sans-serif" font-size="190" font-weight="900" fill="#C084FC">49%</text>
+  <text x="40" y="398" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">AI 주식이 S&amp;P500 지수의 49%를 차지 — 역대 2위 섹터 집중도</text>
+  <text x="40" y="454" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#FFFFFF">역대 1위: 1880년대 철도 섹터 (산업화 인프라 독점)</text>
+  <rect x="40" y="480" width="1000" height="2" rx="1" fill="url(#divG)"/>
+
+  <!-- Three info cards -->
+  <rect x="40" y="498" width="310" height="370" rx="16" fill="#111827"/>
+  <rect x="40" y="498" width="310" height="6" rx="3" fill="#C084FC"/>
+  <text x="195" y="540" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#C084FC">OpenAI</text>
+  <text x="195" y="594" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">$30B</text>
+  <text x="195" y="636" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">신규 펀딩 협상 중</text>
+  <text x="195" y="678" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#FFFFFF">$1.4T</text>
+  <text x="195" y="714" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">목표 기업가치</text>
+  <text x="195" y="758" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">연환산 매출 $50B</text>
+  <text x="195" y="792" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">연말 목표 $70B</text>
+  <text x="195" y="834" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#A855F7">Anthropic IPO 11월 전망</text>
+  <text x="195" y="858" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">(Kalshi 확률 50%)</text>
+
+  <rect x="370" y="498" width="310" height="370" rx="16" fill="#111827"/>
+  <rect x="370" y="498" width="310" height="6" rx="3" fill="#A855F7"/>
+  <text x="525" y="540" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#A855F7">Milk Road 시너지</text>
+  <text x="390" y="590" font-family="Arial Black,Arial,sans-serif" font-size="26" fill="#F3F4F6">TSLA×SPCX</text>
+  <text x="390" y="632" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">① Tesla+X+SpaceX 데이터</text>
+  <text x="390" y="660" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">동일 GPU로 통합 학습</text>
+  <text x="390" y="700" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">② 컴퓨팅 차익 $11.2B 절감 추정</text>
+  <text x="390" y="740" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">③ SpaceX AI 손실 $3.7B</text>
+  <text x="390" y="768" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Tesla 과세이익 상계 가능</text>
+  <text x="390" y="808" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">④ 법무·HR·IR 중복 비용 제거</text>
+  <text x="390" y="848" font-family="Arial,sans-serif" font-size="18" fill="#C084FC">최대 가치 드라이버: 데이터+컴퓨팅 통합</text>
+
+  <rect x="700" y="498" width="340" height="370" rx="16" fill="#111827"/>
+  <rect x="700" y="498" width="340" height="6" rx="3" fill="#F59E0B"/>
+  <text x="870" y="540" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F59E0B">Musk Vision</text>
+  <text x="720" y="596" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">"Starship 시대"</text>
+  <text x="870" y="656" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">$50T</text>
+  <text x="870" y="698" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#F59E0B">SpaceX 매출 이상 — "낮은 추정치"</text>
+  <text x="720" y="744" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Oct 8 발언: "SpaceX 가치</text>
+  <text x="720" y="770" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">= 지구 경제 전체보다 클 수도"</text>
+  <text x="720" y="796" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">1,130만 뷰 기록</text>
+  <text x="720" y="832" font-family="Arial,sans-serif" font-size="18" fill="#6B7280"></text>
+  <text x="720" y="860" font-family="Arial,sans-serif" font-size="18" fill="#F59E0B">전제: Starship 상업화 성공 (10~20년)</text>
+
+  <rect x="40" y="880" width="1000" height="1" fill="#1F2937"/>
+  <rect x="54" y="900" width="972" height="280" rx="16" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="84" y="938" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F3F4F6" font-weight="900">핵심 포인트</text><rect x="84" y="946" width="904" height="1" fill="#2D333B"/><circle cx="106" cy="972" r="8" fill="#EF4444"/><text x="126" y="970" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">OpenAI $30B 펀딩 협상 · 기업가치 $1.4T 목</text><text x="126" y="996" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">표</text><circle cx="106" cy="1028" r="8" fill="#A855F7"/><text x="126" y="1026" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">연환산 매출 $50B → 연말 $70B 목표 · </text><text x="126" y="1052" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Anthropic IPO 11월 전망</text><circle cx="106" cy="1084" r="8" fill="#3B82F6"/><text x="126" y="1082" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">AI 주식 S&amp;P500 49% — 역대 1위 1880년대 </text><text x="126" y="1108" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">철도 수준 근접</text><circle cx="106" cy="1140" r="8" fill="#10B981"/><text x="126" y="1138" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Musk: &quot;Starship 시대 SpaceX 매출 </text><text x="126" y="1164" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">$50T+ — 낮은 추정치&quot;</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

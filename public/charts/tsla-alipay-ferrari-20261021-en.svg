@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0A0A"/><stop offset="100%" stop-color="#170808"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="divG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="28" width="112" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="40" y="28" width="112" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="96" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#EF4444">TSLA</text>
+  <rect x="878" y="28" width="162" height="40" rx="20" fill="#1F2937"/>
+  <text x="959" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9CA3AF">INVESTUS</text>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">Oct 21, 2026</text>
+  <text x="40" y="144" font-family="Arial,sans-serif" font-size="21" letter-spacing="2" fill="#9CA3AF">TESLA × ALIPAY  ·  FERRARI CEO  ·  SEMI ROLLOUT</text>
+
+  <!-- Top card: Tesla × Alipay -->
+  <rect x="40" y="170" width="1000" height="340" rx="20" fill="#111827"/>
+  <rect x="40" y="170" width="1000" height="6" rx="3" fill="#EF4444"/>
+  <text x="70" y="218" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#EF4444">Tesla × Alipay</text>
+  <text x="70" y="258" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">China In-Car Payment Official</text>
+  <text x="70" y="306" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Pay parking fees directly from vehicle screen · via OTA software update</text>
+  <text x="70" y="352" font-family="Arial,sans-serif" font-size="24" fill="#6B7280">Alipay 50%+ of China offline payments — ecosystem integration complete</text>
+  <text x="70" y="394" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">→ Directly counters BYD native OTA ecosystem in China market</text>
+  <text x="70" y="434" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">China: Tesla's largest overseas single market</text>
+  <text x="70" y="470" font-family="Arial,sans-serif" font-size="20" fill="#4ADE80">→ Positive for both software monetization and ecosystem depth</text>
+
+  <!-- Bottom card: Ferrari 10/10 + Semi -->
+  <rect x="40" y="530" width="480" height="340" rx="20" fill="#111827"/>
+  <rect x="40" y="530" width="480" height="6" rx="3" fill="#F59E0B"/>
+  <text x="70" y="578" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">Ferrari CEO</text>
+  <text x="70" y="622" font-family="Arial Black,Arial,sans-serif" font-size="62" font-weight="900" fill="#FFFFFF">10/10</text>
+  <text x="70" y="666" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">Technology 10/10 · Presentation 10/10</text>
+  <text x="70" y="712" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">Benedetto Vigna</text>
+  <text x="70" y="748" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">"Even in an old world,</text>
+  <text x="70" y="776" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">you can still innovate and dare"</text>
+  <text x="70" y="812" font-family="Arial,sans-serif" font-size="18" fill="#4ADE80">Supercar benchmark has shifted</text>
+  <text x="70" y="842" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">Competitor CEO public perfect rating — unusual</text>
+
+  <rect x="540" y="530" width="500" height="340" rx="20" fill="#111827"/>
+  <rect x="540" y="530" width="500" height="6" rx="3" fill="#3B82F6"/>
+  <text x="570" y="578" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#3B82F6">Tesla Semi</text>
+  <text x="570" y="622" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#FFFFFF">Rollout Underway</text>
+  <text x="570" y="666" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">Gigafactory Semi production rollout</text>
+  <text x="570" y="712" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">Class 8 EV truck in service at</text>
+  <text x="570" y="746" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">PepsiCo, Amazon, and others</text>
+  <text x="570" y="790" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">→ B2B revenue diversification</text>
+  <text x="570" y="820" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">→ Leader in commercial freight electrification</text>
+  <text x="570" y="858" font-family="Arial,sans-serif" font-size="18" fill="#4ADE80">Revenue channel alongside consumer</text>
+
+  <rect x="40" y="888" width="1000" height="1" fill="#1F2937"/>
+  <rect x="54" y="898" width="972" height="280" rx="16" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="84" y="936" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F3F4F6" font-weight="900">Key Points</text><rect x="84" y="944" width="904" height="1" fill="#2D333B"/><circle cx="106" cy="970" r="8" fill="#EF4444"/><text x="126" y="968" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Tesla × Alipay: park &amp; pay directly from in-car</text><text x="126" y="994" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">screen via OTA</text><circle cx="106" cy="1026" r="8" fill="#A855F7"/><text x="126" y="1024" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Alipay holds 50%+ of China offline payments — de</text><text x="126" y="1050" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">facto standard</text><circle cx="106" cy="1082" r="8" fill="#3B82F6"/><text x="126" y="1080" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">Ferrari CEO Vigna: Technology 10/10 · Presentation</text><text x="126" y="1106" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">10/10</text><circle cx="106" cy="1138" r="8" fill="#10B981"/><text x="126" y="1136" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">&quot;Even in an old world, you can still innovate and</text><text x="126" y="1162" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">dare&quot; — Ferrari CEO</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

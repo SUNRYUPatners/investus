@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0A0A"/><stop offset="100%" stop-color="#170808"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="divG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="28" width="112" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="40" y="28" width="112" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="96" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#EF4444">TSLA</text>
+  <rect x="164" y="28" width="130" height="40" rx="20" fill="#14532D"/>
+  <rect x="164" y="28" width="130" height="40" rx="20" fill="none" stroke="#4ADE80" stroke-width="2"/>
+  <text x="229" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#4ADE80">글로벌 1위</text>
+  <rect x="878" y="28" width="162" height="40" rx="20" fill="#1F2937"/>
+  <text x="959" y="54" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9CA3AF">INVESTUS</text>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="22" fill="#6B7280">2026년 1~8월 누적 · 中汽数研 집계</text>
+  <text x="40" y="144" font-family="Arial,sans-serif" font-size="21" letter-spacing="2" fill="#9CA3AF">TESLA MODEL Y · 글로벌 NEV 판매 1위</text>
+  <text x="40" y="360" font-family="Arial Black,Arial,sans-serif" font-size="190" font-weight="900" fill="#EF4444">#1</text>
+  <text x="40" y="410" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">2026년 1~8월 전 세계 전기차 모델별 판매 1위</text>
+  <text x="40" y="466" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">748,088대</text>
+  <text x="40" y="522" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#4ADE80">2위 BYD 대비 130% 더 판매</text>
+  <rect x="40" y="550" width="1000" height="2" rx="1" fill="url(#divG)"/>
+  <text x="40" y="590" font-family="Arial,sans-serif" font-size="21" letter-spacing="1" fill="#9CA3AF">글로벌 Top 5 · 2026년 1~8월 누적 판매</text>
+  <text x="40" y="628" text-anchor="start" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#EF4444">#1</text><rect x="90" y="600" width="680" height="50" rx="8" fill="#EF4444" opacity="1"/><text x="778" y="620" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#FFFFFF">748,088</text><text x="778" y="642" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">Tesla Model Y</text><text x="40" y="696" text-anchor="start" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6B7280">#2</text><rect x="90" y="668" width="296" height="50" rx="8" fill="#6B7280" opacity="0.45"/><text x="394" y="688" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#FFFFFF">325,091</text><text x="394" y="710" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">BYD Song / Seal U</text><text x="40" y="764" text-anchor="start" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6B7280">#3</text><rect x="90" y="736" width="292" height="50" rx="8" fill="#6B7280" opacity="0.45"/><text x="390" y="756" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#FFFFFF">321,454</text><text x="390" y="778" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">Geely Galaxy EX2</text><text x="40" y="832" text-anchor="start" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6B7280">#4</text><rect x="90" y="804" width="272" height="50" rx="8" fill="#6B7280" opacity="0.45"/><text x="370" y="824" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#FFFFFF">298,903</text><text x="370" y="846" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">BYD Model 3</text><text x="40" y="900" text-anchor="start" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6B7280">#5</text><rect x="90" y="872" width="205" height="50" rx="8" fill="#6B7280" opacity="0.45"/><text x="303" y="892" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#FFFFFF">225,334</text><text x="303" y="914" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">BYD Yuan UP/Atto 2</text>
+  <rect x="40" y="946" width="1000" height="1" fill="#1F2937"/>
+  <rect x="54" y="906" width="972" height="280" rx="16" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="84" y="944" font-family="Arial Black,Arial,sans-serif" font-size="24" fill="#F3F4F6" font-weight="900">핵심 포인트</text><rect x="84" y="952" width="904" height="1" fill="#2D333B"/><circle cx="106" cy="978" r="8" fill="#EF4444"/><text x="126" y="976" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">시장 점유율 5.7% — 글로벌 NEV 시장 </text><text x="126" y="1002" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">13,041,660대</text><circle cx="106" cy="1034" r="8" fill="#A855F7"/><text x="126" y="1032" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">2위 BYD Song/Seal U(325,091)보다 </text><text x="126" y="1058" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">423,000대 더 판매</text><circle cx="106" cy="1090" r="8" fill="#3B82F6"/><text x="126" y="1088" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">2~5위 모두 BYD — 비중국 브랜드 유일 Top5</text><circle cx="106" cy="1146" r="8" fill="#10B981"/><text x="126" y="1144" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">유럽·북미·아시아 3대 시장 동시 상위권 유일 모델</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>
