@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Chart generator — 2026-10-22 — TSLA Q3 2026 어닝 (9 charts KO+EN + summary)
+// Chart generator — 2026-10-22 — TSLA Q3 2026 어닝 (10 charts KO+EN + summary)
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
@@ -10,27 +10,31 @@ const DATE = '20261022';
 function escXml(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
-function wrapText(text, maxChars, isKo) {
+
+// Visual-width aware wrap: Korean/CJK = 2 units, ASCII = 1 unit, splits on spaces only
+function wrapText(text, maxVis, _isKo) {
+  function visLen(s) {
+    let v = 0;
+    for (const ch of s) v += /[가-힯぀-ヿ一-鿿]/.test(ch) ? 2 : 1;
+    return v;
+  }
+  const words = text.split(' ');
   const lines = [];
-  if (!isKo) {
-    const words = text.split(' '); let cur = '';
-    for (const w of words) {
-      const test = cur ? cur + ' ' + w : w;
-      if (test.length > maxChars && cur) { lines.push(cur); cur = w; } else cur = test;
+  let cur = '', curV = 0;
+  for (const w of words) {
+    const wv = visLen(w);
+    const sep = cur ? 1 : 0;
+    if (curV + sep + wv > maxVis && cur) {
+      lines.push(cur); cur = w; curV = wv;
+    } else {
+      cur = cur ? cur + ' ' + w : w;
+      curV += sep + wv;
     }
-    if (cur) lines.push(cur); return lines;
   }
-  let cur = '', i = 0;
-  while (i < text.length) {
-    const ch = text[i];
-    if (/[a-zA-Z0-9$]/.test(ch)) {
-      let word = '';
-      while (i < text.length && /[a-zA-Z0-9$.,+\-:%/·×]/.test(text[i])) word += text[i++];
-      if (cur.length + word.length > maxChars && cur.length > 0) { lines.push(cur); cur = word; } else cur += word;
-    } else { cur += ch; i++; if (cur.length >= maxChars) { lines.push(cur); cur = ''; } }
-  }
-  if (cur.trim()) lines.push(cur.trim()); return lines;
+  if (cur) lines.push(cur);
+  return lines;
 }
+
 function base(f1='#0D1117', f2='#0A0520') {
   return `<defs>
     <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
@@ -70,47 +74,100 @@ async function save(name, svgStr) {
 // ── 0. SUMMARY ─────────────────────────────────────────────────────────────
 function makeSummary(ko) {
   const rows = ko ? [
-    { label:'TSLA', color:'#EF4444', text:'TSLA Q3 어닝: EPS $0.48 beat · FCF +$1.53B(WS -$4.5B) · GM 19.6%' },
-    { label:'TSLA', color:'#EF4444', text:'FSD 구독 1.74M (+67%) · 북미 어태치율 75%+ · 누적 15B 마일' },
-    { label:'TSLA', color:'#10B981', text:'Cybercab 무감독 2M 마일 8배 QoQ · Robotaxi 10개 도시 확장' },
-    { label:'TSLA', color:'#10B981', text:'Optimus Early Ramp 공식 확인 · Fremont 양산 시작' },
-    { label:'TSLA', color:'#EF4444', text:'Tesla 2030 5M 대 목표 · "수요가 생산 상당히 초과"' },
-    { label:'MERGE', color:'#C084FC', text:'TSLA-SPCX 합병 특위 어닝콜 공식 확인 · TSLA +1% $377' },
-    { label:'SPCX',  color:'#A855F7', text:'JPMorgan SPCX $500 목표 · 10GW AI 2027 · $400B ARR' },
-    { label:'SPCX',  color:'#A855F7', text:'전 세계 GPU 모두 없어 — NVDA·Google·Amazon 재고 전무' },
-    { label:'SPCX',  color:'#3B82F6', text:'Starship 1기 = Falcon 9 10기 · Terafab 2028 Q3 칩 양산' },
+    { label:'TSLA', color:'#EF4444',
+      title:'Q3 어닝 — FCF +$1.53B 역전, EPS $0.48 beat',
+      detail:'총이익률 19.6% (+280bp QoQ) · 현금 $45.4B · WS -$4.5B 압도' },
+    { label:'TSLA', color:'#EF4444',
+      title:'FSD 구독 1.74M (+67%) · 어태치율 75%+',
+      detail:'누적 FSD 주행 약 15B 마일 · EU 9개국 · 100K+ 유럽 고객' },
+    { label:'TSLA', color:'#10B981',
+      title:'Cybercab 무감독 2M 마일 — 8배 QoQ',
+      detail:'Austin 3.1M 마일 0사고 · 라스베이거스·피닉스 등 10개 도시' },
+    { label:'TSLA', color:'#10B981',
+      title:'Optimus Early Ramp — 프리몬트 양산 공식 확인',
+      detail:'공식 Q3 실적 자료 첫 기재 · 텍사스 라인 착공 중' },
+    { label:'TSLA', color:'#F59E0B',
+      title:'2030년 5M 대 생산 목표 발표',
+      detail:'"수요가 생산 상당히 초과" — 4년 만에 최대 주문 잔고' },
+    { label:'MERGE', color:'#C084FC',
+      title:'합병 특위 어닝콜 공식 확인 · TSLA +1% $377',
+      detail:'양사 이사회 독립 특위 구성 확인 · 먼스터 역대 최고 시너지' },
+    { label:'SPCX', color:'#A855F7',
+      title:'JPMorgan SPCX 목표가 $500',
+      detail:'2027년 AI 컴퓨팅 10GW · $400B ARR · 2027~28 추정치 2배 이상 상향' },
+    { label:'SPCX', color:'#EF4444',
+      title:'전 세계 GPU 모두 품절',
+      detail:'NVDA GB300·H100, Google TPU, Amazon Trainium 모두 재고 없음' },
+    { label:'SPCX', color:'#3B82F6',
+      title:'Starship 1기 = Falcon 9 10기 · Flight 14',
+      detail:'V3 위성 26기 배포 · +26Tbps 추가 · 탑재 여유 50%만 채웠음' },
+    { label:'SPCX', color:'#F59E0B',
+      title:'Terafab — $16.8B · 2028 Q3 칩 양산 목표',
+      detail:'Musk "세계에서 경제 가치 가장 높은 건물" · 한국 반도체 10개사 NDA' },
   ] : [
-    { label:'TSLA', color:'#EF4444', text:'TSLA Q3: EPS $0.48 beat · FCF +$1.53B vs -$4.5B est · GM 19.6%' },
-    { label:'TSLA', color:'#EF4444', text:'FSD 1.74M (+67% YoY) · 75%+ NA attach rate · ~15B cumulative miles' },
-    { label:'TSLA', color:'#10B981', text:'Cybercab: 2M unsupervised miles (8× QoQ) · expanding to 10 cities' },
-    { label:'TSLA', color:'#10B981', text:'Optimus "Early Ramp" in Fremont official investor disclosure' },
-    { label:'TSLA', color:'#EF4444', text:'Tesla 2030 target: 5M vehicles/year · demand exceeds supply' },
-    { label:'MERGE', color:'#C084FC', text:'TSLA-SPCX merger committees confirmed on earnings call · +1% $377' },
-    { label:'SPCX',  color:'#A855F7', text:'JPMorgan SPCX $500 · 10GW AI compute by 2027 · ~$400B ARR' },
-    { label:'SPCX',  color:'#A855F7', text:'SpaceX tried NVDA GB300/200, H100s, Google TPU, Trainium — none available' },
-    { label:'SPCX',  color:'#3B82F6', text:'Starship = 10× Falcon 9 capacity · Terafab Q3 2028 chip volume' },
+    { label:'TSLA', color:'#EF4444',
+      title:'Q3 Earnings — FCF +$1.53B beat · EPS $0.48',
+      detail:'GM 19.6% (+280bp QoQ) · Cash $45.4B · Services +33% YoY' },
+    { label:'TSLA', color:'#EF4444',
+      title:'FSD subscriptions 1.74M (+67% YoY) · 75%+ NA attach',
+      detail:'~15B miles · 9 EU countries · 100K+ EU FSD customers' },
+    { label:'TSLA', color:'#10B981',
+      title:'Cybercab: 2M unsupervised miles (8× QoQ)',
+      detail:'Austin 3.1M miles, 0 accidents · expanding to 10 cities total' },
+    { label:'TSLA', color:'#10B981',
+      title:'Optimus "Early Ramp" confirmed at Fremont',
+      detail:'Official Q3 investor disclosure · Texas construction underway' },
+    { label:'TSLA', color:'#F59E0B',
+      title:'2030 target: 5M vehicles/year announced',
+      detail:'Record deliveries globally · demand significantly exceeds supply' },
+    { label:'MERGE', color:'#C084FC',
+      title:'TSLA-SPCX merger committees confirmed on earnings call',
+      detail:'Both boards formed independent committees · TSLA +1% $377' },
+    { label:'SPCX', color:'#A855F7',
+      title:'JPMorgan SPCX $500 price target',
+      detail:'10GW AI compute by 2027 · ~$400B ARR · estimates doubled' },
+    { label:'SPCX', color:'#EF4444',
+      title:'No GPU supply available globally',
+      detail:'NVDA GB300/H100, Google TPU, Amazon Trainium — all unavailable' },
+    { label:'SPCX', color:'#3B82F6',
+      title:'Starship = 10× Falcon 9 capacity · Flight 14',
+      detail:'26 V3 sats · +26Tbps · Starship payload only half utilized' },
+    { label:'SPCX', color:'#F59E0B',
+      title:'Terafab — $16.8B · Q3 2028 chip volume target',
+      detail:'Musk: "most valuable building in world" · 10+ Korean semi NDA' },
   ];
-  const rowH = 84, topY = 200;
-  const totalH = rows.length * rowH + 30;
+
+  const TITLE_FS = 22, TITLE_LH = 27;
+  const DETAIL_FS = 18, DETAIL_LH = 22;
+  const PAD_T = 12, GAP = 4, PAD_B = 10, ROW_GAP = 5;
   let rowsSvg = '';
-  rows.forEach((r,i) => {
-    const y = topY + i * rowH;
-    const lines = wrapText(r.text, ko ? 30 : 50, ko);
-    rowsSvg += `<rect x="54" y="${y}" width="972" height="${rowH-6}" rx="12" fill="#111827" stroke="${r.color}" stroke-width="1.5" stroke-opacity="0.5"/>`;
-    rowsSvg += `<rect x="54" y="${y}" width="8" height="${rowH-6}" rx="4" fill="${r.color}"/>`;
-    rowsSvg += `<text x="84" y="${y+24}" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="${r.color}">${escXml(r.label)}</text>`;
-    lines.forEach((ln,li) => {
-      rowsSvg += `<text x="170" y="${y+24+li*24}" font-family="Arial,sans-serif" font-size="${ko?22:20}" fill="#E6EDF3">${escXml(ln)}</text>`;
+  let curY = 188;
+
+  rows.forEach((r) => {
+    const tLines = wrapText(r.title, 54, ko);
+    const dLines = wrapText(r.detail, 62, ko);
+    const rowH = PAD_T + tLines.length * TITLE_LH + GAP + dLines.length * DETAIL_LH + PAD_B;
+    rowsSvg += `<rect x="54" y="${curY}" width="972" height="${rowH}" rx="12" fill="#111827" stroke="${r.color}" stroke-width="1.5" stroke-opacity="0.4"/>`;
+    rowsSvg += `<rect x="54" y="${curY}" width="8" height="${rowH}" rx="4" fill="${r.color}"/>`;
+    rowsSvg += `<text x="84" y="${curY + PAD_T + 18}" font-family="Arial Black,Arial,sans-serif" font-size="15" font-weight="900" fill="${r.color}">${escXml(r.label)}</text>`;
+    tLines.forEach((ln, li) => {
+      rowsSvg += `<text x="168" y="${curY + PAD_T + TITLE_LH * (li + 1) - 3}" font-family="Arial Black,Arial,sans-serif" font-size="${TITLE_FS}" font-weight="900" fill="#F3F4F6">${escXml(ln)}</text>`;
     });
+    const detailStartY = curY + PAD_T + tLines.length * TITLE_LH + GAP;
+    dLines.forEach((ln, li) => {
+      rowsSvg += `<text x="168" y="${detailStartY + DETAIL_LH * (li + 1) - 3}" font-family="Arial,sans-serif" font-size="${DETAIL_FS}" fill="#9CA3AF">${escXml(ln)}</text>`;
+    });
+    curY += rowH + ROW_GAP;
   });
+
   const heroText = ko ? '2026-10-22 오늘의 요약' : 'Daily Summary 2026-10-22';
-  const subText = ko ? `총 ${rows.length}개 토픽` : `${rows.length} topics today`;
+  const subText  = ko ? `총 ${rows.length}개 토픽` : `${rows.length} topics today`;
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
   ${base()}
-  <text x="540" y="100" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#F3F4F6">${escXml(heroText)}</text>
-  <text x="540" y="150" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">${escXml(subText)} · TSLA Q3 2026 어닝</text>
-  <rect x="54" y="168" width="972" height="2" fill="url(#accentG)" opacity="0.6"/>
+  <text x="540" y="92" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#F3F4F6">${escXml(heroText)}</text>
+  <text x="540" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">${escXml(subText)} · TSLA Q3 2026 ${ko?'어닝':'Earnings'}</text>
+  <rect x="54" y="160" width="972" height="2" fill="url(#accentG)" opacity="0.6"/>
   ${rowsSvg}
   ${footer(ko)}
 </svg>`;
@@ -123,27 +180,27 @@ function makeTslaQ3(ko) {
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
   ${base('#0D0508','#1A0A05')}
   ${badge(54,18,130,'TSLA','#7F1D1D','#EF4444','#FCA5A5')}
-  ${badge(196,18,130,'어닝','#1C1917','#F59E0B','#FDE68A')}
+  ${badge(196,18,130,ko?'어닝':'Earnings','#1C1917','#F59E0B','#FDE68A')}
   <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
   <text x="540" y="152" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="96" font-weight="900" fill="#EF4444">+$1.53B</text>
   <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#F1F5F9">${ko?'잉여현금흐름 (FCF)':'Free Cash Flow'}</text>
   <text x="540" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">${ko?'Wall Street 예상 -$4.5B — 6B달러 역전':'Wall Street estimated -$4.5B — $6B positive swing'}</text>
   <rect x="200" y="282" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
-  ${statBox(54,300,476,178,ko?'Non-GAAP EPS':'Non-GAAP EPS','$0.48',ko?'vs $0.40 예상':'vs $0.40 est','컨센서스 상회','#10B981')}
+  ${statBox(54,300,476,178,ko?'Non-GAAP EPS':'Non-GAAP EPS','$0.48',ko?'vs $0.40 예상':'vs $0.40 est',ko?'컨센서스 상회':'Consensus beat','#10B981')}
   ${statBox(550,300,476,178,ko?'총이익률':'Gross Margin','19.6%',ko?'전분기 +280bp':'+280bp QoQ','Q2 2026: 16.8%','#F59E0B')}
-  ${statBox(54,496,476,178,ko?'총매출':'Revenue','$28.05B',ko?'전년 동기 보합':'Flat YoY','서비스 +33% YoY','#3B82F6')}
-  ${statBox(550,496,476,178,ko?'현금 및 유가증권':'Cash &amp; Investments','$45.4B',ko?'+9% QoQ':'+9% QoQ','역대 최고 수준','#A855F7')}
+  ${statBox(54,496,476,178,ko?'총매출':'Revenue','$28.05B',ko?'전년 동기 보합':'Flat YoY',ko?'서비스 +33% YoY':'Services +33% YoY','#3B82F6')}
+  ${statBox(550,496,476,178,ko?'현금 및 유가증권':'Cash &amp; Investments','$45.4B',ko?'+9% QoQ':'+9% QoQ',ko?'역대 최고 수준':'All-time high','#A855F7')}
   <rect x="54" y="684" width="972" height="1.5" fill="#1F2937"/>
   <text x="108" y="726" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">${ko?'추가 주요 수치':'Additional Key Metrics'}</text>
   <rect x="108" y="734" width="864" height="1" fill="#374151"/>
   ${[
-    [ko?'딜리버리':'Deliveries','486,532대','전분기 -2% / 컨센 상회'],
-    [ko?'생산량':'Production','464,391대','+4% YoY'],
-    [ko?'영업이익':'Operating Income','$718M','영업이익률 2.6%'],
-    [ko?'GAAP 순이익':'GAAP Net Income','$787M ($0.22/주)',''],
+    [ko?'딜리버리':'Deliveries',ko?'486,532대':'486,532 units',ko?'전분기 -2% / 컨센 상회':'-2% QoQ · consensus beat'],
+    [ko?'생산량':'Production',ko?'464,391대':'464,391 units','+4% YoY'],
+    [ko?'영업이익':'Operating Income','$718M',ko?'영업이익률 2.6%':'2.6% op. margin'],
+    [ko?'GAAP 순이익':'GAAP Net Income',ko?'$787M ($0.22/주)':'$787M ($0.22/share)',''],
     [ko?'에너지 배포':'Energy Deployed','13.7 GWh','+10% YoY'],
-    [ko?'규제 크레딧':'Reg. Credits','$113M','Q3\'25 $417M 대비 급감'],
-    [ko?'비트코인 평가익':'Bitcoin Gain','$288M','공정가치 첫 반영'],
+    [ko?'규제 크레딧':'Reg. Credits','$113M',ko?'Q3\'25 $417M 대비 급감':'vs Q3\'25 $417M, sharp drop'],
+    [ko?'비트코인 평가익':'Bitcoin Gain','$288M',ko?'공정가치 첫 반영':'Fair value accounting (new)'],
     [ko?'설비투자':'CapEx','$4.73B',''],
   ].map(([k,v,s],i)=>{
     const y=762+i*62;
@@ -191,9 +248,9 @@ function makeFSD(ko) {
   <rect x="54" y="830" width="972" height="1.5" fill="#1F2937"/>
   ${[
     [ko?'북미 신차 어태치율':'NA New Vehicle Attach Rate','75%+',ko?'전분기 대비 +20%p':'+20pp QoQ','#10B981'],
-    [ko?'EU 서비스 국가':'EU Countries','9개국',ko?'Q2 대비 4개국 추가':'4 added since Q2','#3B82F6'],
+    [ko?'EU 서비스 국가':'EU Countries',ko?'9개국':'9 Countries',ko?'Q2 대비 4개국 추가':'4 added since Q2','#3B82F6'],
     [ko?'EU 고객':'EU FSD Customers','100K+',ko?'누적 160M km 주행':'160M+ km driven','#A855F7'],
-    [ko?'누적 FSD 주행':'Cumulative FSD Miles','~15B 마일',ko?'V12+ 버전이 대부분':'V12+ makes up majority','#F59E0B'],
+    [ko?'누적 FSD 주행':'Cumulative FSD Miles',ko?'~15B 마일':'~15B miles',ko?'V12+ 버전이 대부분':'V12+ makes up majority','#F59E0B'],
   ].map(([k,v,s,c],i)=>{
     const y=856+i*106;
     return `<rect x="54" y="${y}" width="972" height="96" rx="16" fill="#111827" stroke="${c}" stroke-width="1.5" stroke-opacity="0.5"/>
@@ -336,8 +393,8 @@ function makeTesla5M(ko) {
   return svg;
 }
 
-// ── 6. Starship + Terafab ────────────────────────────────────────────────────
-function makeStarshipTerafab(ko) {
+// ── 6. Starship ───────────────────────────────────────────────────────────────
+function makeStarship(ko) {
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
   ${base('#050A1A','#0D1117')}
@@ -349,29 +406,71 @@ function makeStarshipTerafab(ko) {
   <text x="540" y="252" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#6B7280">${ko?'탑재 여유도 ~50% — 절반만 채워도 Falcon 9 10기 대등':'Only half loaded — still equals 10 Falcon 9 launches'}</text>
   <rect x="54" y="274" width="972" height="2" fill="#1F2937"/>
   ${statBox(54,290,476,178,ko?'Starship 다운링크 용량':'Starship Downlink','10×','Falcon 9 대비','V3 위성 1기 = V1.5 ×10','#3B82F6')}
-  ${statBox(550,290,476,178,ko?'V3 위성 단일 발사':'V3 Sats Deployed','26기',ko?'(~26 Tbps 추가)':'(+~26 Tbps)','Flight 14 배포','#A855F7')}
+  ${statBox(550,290,476,178,ko?'V3 위성 단일 발사':'V3 Sats Deployed','26기',ko?'(~26 Tbps 추가)':'(+~26 Tbps)','Flight 14','#A855F7')}
   <rect x="54" y="480" width="972" height="2" fill="#1F2937"/>
-  <text x="108" y="526" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#F59E0B">Terafab</text>
-  <text x="108" y="560" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">${ko?'"세계에서 경제 가치가 가장 높은 건물 — 상위 20개국 수준"':'"Will be the most valuable building in the world — top 20 countries"'}</text>
-  <text x="108" y="590" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">— Elon Musk, Tesla Q3 2026 Earnings Call</text>
+  <text x="108" y="526" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#F9FAFB">${ko?'Starlink 용량 혁신':'Starlink Capacity Revolution'}</text>
   ${[
-    [ko?'기계 설비 착수':'Machinery Commissioning','2027년 H1','#F59E0B'],
-    [ko?'첫 테스트 칩':'First Test Chip','2027년 5~6월','#F59E0B'],
-    [ko?'칩 양산 규모':'Chip Volume Production','2028년 Q3 목표','#EF4444'],
-    [ko?'1단계 투자':'Phase 1 Investment','$16.8B · 1억 sqft','#A855F7'],
-    [ko?'한국 반도체 파트너':'Korean Semi NDA','10개사+ NDA 체결','#3B82F6'],
+    [ko?'V3 단일 위성 용량':'V3 Single Sat Capacity',ko?'V1.5 대비 10배':'10× vs V1.5 per satellite','#3B82F6'],
+    [ko?'Starship 1기 등가':'Starship 1 Launch Equiv.',ko?'Falcon 9 10기':'10 Falcon 9 launches','#A855F7'],
+    [ko?'탑재 여유도':'Payload Utilization',ko?'~50% (절반만 채움)':'~50% (half loaded)','#6366F1'],
+    [ko?'Starlink 구독자':'Starlink Subscribers','13.6M · +161% YoY','#10B981'],
+    [ko?'Flight 14 기록':'Flight 14 Record',ko?'26기 배포 · +26Tbps':'26 sats deployed · +26Tbps','#F59E0B'],
   ].map(([k,v,c],i)=>{
-    const y=616+i*118;
-    return `<rect x="54" y="${y}" width="972" height="108" rx="16" fill="#0F1623" stroke="${c}" stroke-width="1.5"/>
-    <text x="84" y="${y+38}" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">${escXml(k)}</text>
-    <text x="84" y="${y+76}" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="${c}">${escXml(v)}</text>`;
+    const y=548+i*152;
+    return `<rect x="54" y="${y}" width="972" height="142" rx="18" fill="#0F1623" stroke="${c}" stroke-width="1.5"/>
+    <text x="84" y="${y+44}" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">${escXml(k)}</text>
+    <text x="84" y="${y+96}" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="${c}">${escXml(v)}</text>`;
   }).join('')}
   ${footer(ko)}
 </svg>`;
   return svg;
 }
 
-// ── 7. SPCX JPMorgan ─────────────────────────────────────────────────────────
+// ── 7. Terafab ───────────────────────────────────────────────────────────────
+function makeTerafab(ko) {
+  const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  ${base('#0A0A18','#0D1117')}
+  ${badge(54,18,130,'SPCX','#3B0764','#A855F7','#D8B4FE')}
+  ${badge(196,18,160,'Terafab','#1C1917','#F59E0B','#FDE68A')}
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="156" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="96" font-weight="900" fill="#F59E0B">$16.8B</text>
+  <text x="540" y="214" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="36" font-weight="900" fill="#F1F5F9">${ko?'Phase 1 투자 · 1억 sqft 텍사스':'Phase 1 Investment · 100M sqft Texas'}</text>
+  <text x="540" y="258" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">"${ko?'세계에서 경제 가치가 가장 높은 건물 — 상위 20개국 수준':'Will be the most valuable building in the world — top 20 countries'}"</text>
+  <text x="540" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">— Elon Musk, Tesla Q3 2026 Earnings Call</text>
+  <rect x="54" y="308" width="972" height="2" fill="#1F2937"/>
+  ${[
+    [ko?'기계 설비 착수':'Machinery Commissioning',ko?'2027년 H1':'H1 2027','#F59E0B'],
+    [ko?'첫 테스트 칩':'First Test Chip',ko?'2027년 5~6월':'May–Jun 2027','#F59E0B'],
+    [ko?'칩 양산 규모':'Chip Volume Production',ko?'2028년 Q3 목표':'Q3 2028 Target','#EF4444'],
+    [ko?'한국 반도체 파트너':'Korean Semi Partners',ko?'10개사+ NDA 체결':'10+ firms under NDA','#3B82F6'],
+  ].map(([k,v,c],i)=>{
+    const y=324+i*118;
+    return `<rect x="54" y="${y}" width="972" height="108" rx="16" fill="#0F1623" stroke="${c}" stroke-width="1.5"/>
+    <text x="84" y="${y+38}" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">${escXml(k)}</text>
+    <text x="84" y="${y+78}" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="${c}">${escXml(v)}</text>`;
+  }).join('')}
+  <rect x="54" y="796" width="972" height="1.5" fill="#1F2937"/>
+  <text x="108" y="838" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#EF4444">${ko?'GPU 대여 시도 — 전 세계 모두 없음':'GPU Rental Attempt — None Available Globally'}</text>
+  ${[
+    ['NVDA GB300 / GB200',ko?'재고 없음':'Unavailable'],
+    ['NVDA H100',ko?'재고 없음':'Unavailable'],
+    ['Google TPU',ko?'재고 없음':'Unavailable'],
+    ['Amazon Trainium',ko?'재고 없음':'Unavailable'],
+  ].map(([k,v],i)=>{
+    const y=854+i*100;
+    return `<rect x="54" y="${y}" width="972" height="90" rx="14" fill="#1F0A0A" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="84" y="${y+38}" font-family="Arial,sans-serif" font-size="24" fill="#F3F4F6">${escXml(k)}</text>
+    <text x="920" y="${y+54}" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#EF4444">${escXml(v)}</text>`;
+  }).join('')}
+  <rect x="54" y="1262" width="972" height="58" rx="16" fill="#0F1623" stroke="#A855F7" stroke-width="1.5"/>
+  <text x="540" y="1299" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#A855F7">${ko?'결론: 자체 AI 인프라 구축이 유일한 전략':'Conclusion: Self-built AI infrastructure is the only path'}</text>
+  ${footer(ko)}
+</svg>`;
+  return svg;
+}
+
+// ── 8. SPCX JPMorgan ─────────────────────────────────────────────────────────
 function makeSpcxJPMorgan(ko) {
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
@@ -386,27 +485,29 @@ function makeSpcxJPMorgan(ko) {
   ${statBox(54,310,476,178,ko?'2027년 AI 컴퓨팅':'2027 AI Compute','10GW',ko?'목표 달성 시':'Target by end-2027','2×+ from current 1.7GW','#A855F7')}
   ${statBox(550,310,476,178,ko?'예상 ARR':'Projected ARR','~$400B',ko?'연간 반복 매출':'Annual Recurring Revenue','10GW 달성 시','#F59E0B')}
   <rect x="54" y="500" width="972" height="1.5" fill="#1F2937"/>
-  <text x="108" y="544" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#EF4444">${ko?'GPU 대여 시도 — 전 세계 모두 없음':'GPU Rental Attempt — None Available Globally'}</text>
+  ${statBox(54,514,476,178,'Deutsche Bank','$70~80B',ko?'2027년 예상 매출':'2027 Revenue Est.','SuperIntelligence','#3B82F6')}
+  ${statBox(550,514,476,178,ko?'SPCX Q3 AI 매출':'SPCX Q3 AI Revenue','$7.56B','+830% YoY',ko?'슈퍼인텔리전스':'SuperIntelligence','#10B981')}
+  <rect x="54" y="704" width="972" height="1.5" fill="#1F2937"/>
+  <text x="108" y="746" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">${ko?'AI 컴퓨팅 성장 경로':'AI Compute Growth Path'}</text>
   ${[
-    ['NVDA GB300 / GB200',ko?'재고 없음':'Unavailable'],
-    ['NVDA H100 (구형)',ko?'재고 없음':'Unavailable'],
-    ['Google TPU',ko?'재고 없음':'Unavailable'],
-    ['Amazon Trainium',ko?'재고 없음':'Unavailable'],
-  ].map(([k,v],i)=>{
-    const y=560+i*110;
-    return `<rect x="54" y="${y}" width="972" height="100" rx="16" fill="#1F0A0A" stroke="#EF4444" stroke-width="1.5"/>
-    <text x="84" y="${y+42}" font-family="Arial,sans-serif" font-size="26" fill="#F3F4F6">${escXml(k)}</text>
-    <text x="900" y="${y+58}" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#EF4444">${escXml(v)}</text>`;
+    [ko?'현재 (Q3 2026)':'Current (Q3 2026)','1.7 GW','#6B7280'],
+    [ko?'2026 말 목표':'Target End-2026','3~4 GW','#9CA3AF'],
+    [ko?'2027 말 목표 (JPMorgan)':'Target End-2027 (JPMorgan)','10 GW','#A855F7'],
+    [ko?'예상 ARR @ 10GW':'Projected ARR @ 10GW','~$400B','#F59E0B'],
+  ].map(([k,v,c],i)=>{
+    const y=768+i*118;
+    return `<rect x="54" y="${y}" width="972" height="108" rx="16" fill="#0F1623" stroke="${c}" stroke-width="1.5"/>
+    <text x="84" y="${y+40}" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">${escXml(k)}</text>
+    <text x="84" y="${y+78}" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="${c}">${escXml(v)}</text>`;
   }).join('')}
-  <rect x="54" y="1010" width="972" height="110" rx="18" fill="#0F1623" stroke="#A855F7" stroke-width="2"/>
-  <text x="108" y="1054" font-family="Arial,sans-serif" font-size="23" fill="#D8B4FE">${ko?'결론: 자체 AI 인프라(Terafab) 구축이 유일한 전략':'Conclusion: Self-built AI infrastructure is the only viable path'}</text>
-  <text x="108" y="1090" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A855F7">${ko?'Deutsche Bank: SPCX 슈퍼인텔리전스 2027년 $70~80B 매출':'Deutsche Bank: SPCX SuperIntelligence $70–80B revenue by 2027'}</text>
+  <rect x="54" y="1246" width="972" height="74" rx="18" fill="#0F1623" stroke="#A855F7" stroke-width="2"/>
+  <text x="540" y="1291" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#A855F7">${ko?'슈퍼인텔리전스 매출 폭발 → AI 인프라 자체 구축 필수':'SuperIntelligence explosion drives self-built AI infrastructure'}</text>
   ${footer(ko)}
 </svg>`;
   return svg;
 }
 
-// ── 8. 합병 특위 어닝콜 ──────────────────────────────────────────────────────
+// ── 9. 합병 특위 어닝콜 ──────────────────────────────────────────────────────
 function makeMergerCall(ko) {
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
@@ -435,7 +536,7 @@ function makeMergerCall(ko) {
     },
   ].map((it,i)=>{
     const y=524+i*280;
-    const ql=wrapText(it.quote,ko?26:42,ko);
+    const ql=wrapText(it.quote,54,ko);
     const qh=ql.length*30+16;
     return `<rect x="54" y="${y}" width="972" height="${80+qh}" rx="18" fill="#111827" stroke="${it.color}" stroke-width="2"/>
     <rect x="54" y="${y}" width="972" height="4" rx="2" fill="${it.color}"/>
@@ -452,23 +553,25 @@ function makeMergerCall(ko) {
 
 // ── MAIN ──────────────────────────────────────────────────────────────────────
 (async () => {
-  await save(`summary-${DATE}`,      makeSummary(true));
-  await save(`summary-${DATE}-en`,   makeSummary(false));
-  await save(`tsla-q3-2026-${DATE}`,    makeTslaQ3(true));
-  await save(`tsla-q3-2026-${DATE}-en`, makeTslaQ3(false));
-  await save(`fsd-growth-${DATE}`,      makeFSD(true));
-  await save(`fsd-growth-${DATE}-en`,   makeFSD(false));
+  await save(`summary-${DATE}`,        makeSummary(true));
+  await save(`summary-${DATE}-en`,     makeSummary(false));
+  await save(`tsla-q3-2026-${DATE}`,      makeTslaQ3(true));
+  await save(`tsla-q3-2026-${DATE}-en`,   makeTslaQ3(false));
+  await save(`fsd-growth-${DATE}`,        makeFSD(true));
+  await save(`fsd-growth-${DATE}-en`,     makeFSD(false));
   await save(`robotaxi-expansion-${DATE}`,    makeRoboTaxi(true));
   await save(`robotaxi-expansion-${DATE}-en`, makeRoboTaxi(false));
   await save(`optimus-earlyramp-${DATE}`,    makeOptimusRamp(true));
   await save(`optimus-earlyramp-${DATE}-en`, makeOptimusRamp(false));
   await save(`tesla-5m-2030-${DATE}`,    makeTesla5M(true));
   await save(`tesla-5m-2030-${DATE}-en`, makeTesla5M(false));
-  await save(`starship-terafab-${DATE}`,    makeStarshipTerafab(true));
-  await save(`starship-terafab-${DATE}-en`, makeStarshipTerafab(false));
+  await save(`starship-${DATE}`,    makeStarship(true));
+  await save(`starship-${DATE}-en`, makeStarship(false));
+  await save(`terafab-${DATE}`,    makeTerafab(true));
+  await save(`terafab-${DATE}-en`, makeTerafab(false));
   await save(`spcx-jpmorgan-${DATE}`,    makeSpcxJPMorgan(true));
   await save(`spcx-jpmorgan-${DATE}-en`, makeSpcxJPMorgan(false));
   await save(`merger-call-${DATE}`,    makeMergerCall(true));
   await save(`merger-call-${DATE}-en`, makeMergerCall(false));
-  console.log('✅ All 18 charts done.');
+  console.log('✅ All 20 charts done.');
 })();

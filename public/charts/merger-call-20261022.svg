@@ -35,13 +35,13 @@
     <text x="788" y="438" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">Base 2031</text>
     <text x="788" y="468" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">합병 시너지 미반영</text>
   <rect x="54" y="500" width="972" height="1.5" fill="#1F2937"/>
-  <rect x="54" y="524" width="972" height="186" rx="18" fill="#111827" stroke="#F59E0B" stroke-width="2"/>
+  <rect x="54" y="524" width="972" height="156" rx="18" fill="#111827" stroke="#F59E0B" stroke-width="2"/>
     <rect x="54" y="524" width="972" height="4" rx="2" fill="#F59E0B"/>
     <text x="84" y="562" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">진 먼스터 (딥워터)</text>
-    <text x="84" y="592" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">&quot;지금까지 분석한 모든 기업 합병 중 시너지가 </text><text x="84" y="622" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">가장 크다. TSLA 주주들이 좋은 조건의 딜을</text><text x="84" y="652" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">받게 될 것.&quot;</text><rect x="54" y="804" width="972" height="186" rx="18" fill="#111827" stroke="#A855F7" stroke-width="2"/>
+    <text x="84" y="592" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">&quot;지금까지 분석한 모든 기업 합병 중 시너지가 가장 크다.</text><text x="84" y="622" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">TSLA 주주들이 좋은 조건의 딜을 받게 될 것.&quot;</text><rect x="54" y="804" width="972" height="156" rx="18" fill="#111827" stroke="#A855F7" stroke-width="2"/>
     <rect x="54" y="804" width="972" height="4" rx="2" fill="#A855F7"/>
     <text x="84" y="842" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#A855F7">콜 그라인드</text>
-    <text x="84" y="872" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">&quot;Tesla = 물리 인프라, SpaceX = </text><text x="84" y="902" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">디지털·우주. 하나가 되면 지구상 단연 가장 큰</text><text x="84" y="932" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">시총의 기업이 될 것.&quot;</text>
+    <text x="84" y="872" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">&quot;Tesla = 물리 인프라, SpaceX = 디지털·우주. 하나가</text><text x="84" y="902" font-family="Arial,sans-serif" font-size="22" fill="#E6EDF3">되면 지구상 단연 가장 큰 시총의 기업이 될 것.&quot;</text>
   <rect x="54" y="1100" width="972" height="130" rx="18" fill="#1F0A2A" stroke="#C084FC" stroke-width="2"/>
   <text x="108" y="1148" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#C084FC">합병 특위 구성 = 이사회 레벨 법적 절차 시작</text>
   <text x="108" y="1190" font-family="Arial,sans-serif" font-size="23" fill="#D8B4FE">교환 비율 산정·실사 단계 진입 — 이제 루머가 아닙니다</text>

@@ -39,14 +39,14 @@
     <text x="84" y="928" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#10B981">75%+</text>
     <text x="204" y="928" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">+20pp QoQ</text><rect x="54" y="962" width="972" height="96" rx="16" fill="#111827" stroke="#3B82F6" stroke-width="1.5" stroke-opacity="0.5"/>
     <text x="84" y="998" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">EU Countries</text>
-    <text x="84" y="1034" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#3B82F6">9개국</text>
-    <text x="184" y="1034" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">4 added since Q2</text><rect x="54" y="1068" width="972" height="96" rx="16" fill="#111827" stroke="#A855F7" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="84" y="1034" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#3B82F6">9 Countries</text>
+    <text x="344" y="1034" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">4 added since Q2</text><rect x="54" y="1068" width="972" height="96" rx="16" fill="#111827" stroke="#A855F7" stroke-width="1.5" stroke-opacity="0.5"/>
     <text x="84" y="1104" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">EU FSD Customers</text>
     <text x="84" y="1140" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#A855F7">100K+</text>
     <text x="224" y="1140" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">160M+ km driven</text><rect x="54" y="1174" width="972" height="96" rx="16" fill="#111827" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.5"/>
     <text x="84" y="1210" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">Cumulative FSD Miles</text>
-    <text x="84" y="1246" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#F59E0B">~15B 마일</text>
-    <text x="264" y="1246" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">V12+ makes up majority</text>
+    <text x="84" y="1246" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#F59E0B">~15B miles</text>
+    <text x="324" y="1246" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">V12+ makes up majority</text>
   <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
     <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
 </svg>

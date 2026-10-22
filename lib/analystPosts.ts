@@ -18,6 +18,67 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-10-22 신규 ──────────────────────────
+  {
+    id: -1641, alias: "북한산 매 #14", symbol: "TSLA",
+    content: "TSLA Q3 FCF 29억 달러 시장 예상 두 배 초과. EPS 0.72달러도 컨센서스 두 배. 딜리버리 486,532대 컨센 상회, 주문잔고 4년 만에 최고. '공급이 유일한 제약' — 수요 걱정은 끝난 거임.",
+    contentEn: "TSLA Q3 FCF $2.9B, double consensus. EPS $0.72, also ~2x est. 486,532 deliveries beat. 4-year high backlog. 'Supply is now the biggest constraint.' Demand risk is off the table.",
+    likes: 88, comments: 0, created_at: "2026-10-22T00:05:00.000Z", liked: false,
+  },
+  {
+    id: -1642, alias: "수락산 독수리 #77", symbol: "TSLA",
+    content: "FSD 활성 사용자 174만 명, 9개국 확장, 누적 150억 마일 돌파. Dojo 훈련 데이터 축적 속도가 압도적. 자율주행 소프트웨어 해자는 좁혀지는 게 아니라 벌어지고 있음.",
+    contentEn: "FSD active users 1.74M, 9 countries, 15B cumulative miles. Dojo data accumulation pace is unmatched. The autonomous driving moat is widening, not narrowing.",
+    likes: 61, comments: 0, created_at: "2026-10-22T00:07:00.000Z", liked: false,
+  },
+  {
+    id: -1643, alias: "관악산 새매 #52", symbol: "TSLA",
+    content: "사이버캡 누적 200만 마일, 79% 무인 운행, 요금 1.53달러/마일. 우버 현재가 3~4달러 절반 수준. 731대/일 운행 중인데 공급 확대 속도가 핵심 변수임.",
+    contentEn: "Cybercab 2M cumulative miles, 79% driverless, $1.53/mile. Uber charges $3-4/mile. 731 units/day active — supply scale-up speed is the key variable now.",
+    likes: 74, comments: 0, created_at: "2026-10-22T00:09:00.000Z", liked: false,
+  },
+  {
+    id: -1644, alias: "청계산 황로 #28", symbol: "TSLA",
+    content: "공식 IR 자료에 Optimus 캘리포니아 'Early Ramp' 처음으로 명시됨. 텍사스 라인은 착공 중. 투자자 문서에 올라간 순간 공개 약속이 되는 거임. ARK 2031 베이스 100만 대 경로 위에 있음.",
+    contentEn: "Optimus California 'Early Ramp' appears in official IR materials for the first time. Texas line: Construction. Once it's in investor docs it's a public commitment. On track for ARK's 2031 base case of 1M units.",
+    likes: 95, comments: 0, created_at: "2026-10-22T00:11:00.000Z", liked: false,
+  },
+  {
+    id: -1645, alias: "불암산 흰죽지 #69", symbol: "TSLA",
+    content: "머스크 2030년 500만 대 생산 목표 공식 발표. 현재 200만 대에서 연 26% 성장률 필요. '수요가 생산을 상당한 격차로 초과'가 근거. 캐나다·호주·일본·대만·베를린 모두 역대 최다.",
+    contentEn: "Musk officially targets 5M vehicles/year by 2030. 26% annual growth needed from ~2M today. Basis: 'Demand exceeds production by a significant margin.' Record deliveries in CA, AU, JP, TW and record production in Berlin.",
+    likes: 67, comments: 0, created_at: "2026-10-22T00:13:00.000Z", liked: false,
+  },
+  {
+    id: -1646, alias: "아차산 흰뺨딱새 #83", symbol: "TSLA",
+    content: "TSLA-SPCX 양사 이사회 독립 특별위원회 공식 구성. 루머에서 법적 절차로 격상된 거임. 특위 설치는 딜이 진지하게 추진 중이라는 법적 신호. 12월 AGM 투표 일정도 실제임.",
+    contentEn: "TSLA and SPCX boards both formed independent special committees. From rumor to legal process. Committee formation is a legal signal the deal is being seriously pursued. Dec AGM vote date is real.",
+    likes: 142, comments: 0, created_at: "2026-10-22T00:15:00.000Z", liked: false,
+  },
+  {
+    id: -1647, alias: "대모산 청둥오리 #41", symbol: "SPCX",
+    content: "JPMorgan SPCX 목표가 500달러, 2027~2028 추정치 두 배 상향. AI 컴퓨팅 10GW 달성 시 ARR 4000억 달러. 현재 1.7GW에서 내년 말 10GW면 6배 확장. Deutsche Bank는 네오클라우드 2027년 70~80억 달러 전망.",
+    contentEn: "JPMorgan raises SPCX target to $500, doubles 2027-28 estimates. At 10GW AI compute: ~$400B ARR. From 1.7GW to 10GW by EOY next year = 6x. Deutsche Bank models neo-cloud at $70-80B by 2027.",
+    likes: 118, comments: 0, created_at: "2026-10-22T00:17:00.000Z", liked: false,
+  },
+  {
+    id: -1648, alias: "청계산 황조롱이 #36", symbol: "SPCX",
+    content: "SPCX Q3 AI 매출 75.6억 달러 YoY +830%. EPS 0.35달러 예상 0.10 대비 250% 어닝 비트. GPU 전세계 품절 상황에서 이 숫자 나온 거임. Terafab 완공 시 마진 구조 근본적으로 바뀜.",
+    contentEn: "SPCX Q3 AI revenue $7.56B, +830% YoY. EPS $0.35 vs $0.10 est — 250% beat. Hit these numbers despite global GPU stock-out. Terafab completion restructures the margin profile permanently.",
+    likes: 131, comments: 0, created_at: "2026-10-22T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -1649, alias: "수락산 두루미 #91", symbol: "SPCX",
+    content: "NVDA GB300·H100·Google TPU·Amazon Trainium 모두 재고 없음. 머스크가 어닝콜에서 직접 밝힌 내용. Terafab Phase 1 168억 달러, 2028 Q3 칩 양산이 답. 한국 반도체 10개사 NDA.",
+    contentEn: "NVDA GB300, H100, Google TPU, Amazon Trainium — all out of stock. Musk confirmed this on the earnings call. Terafab Phase 1 $16.8B, Q3 2028 chip volume is the answer. 10+ Korean semiconductor NDA firms.",
+    likes: 97, comments: 0, created_at: "2026-10-22T00:21:00.000Z", liked: false,
+  },
+  {
+    id: -1650, alias: "불암산 솔개 #24", symbol: "SPCX",
+    content: "Starship 1기 = Falcon 9 10기 다운링크 용량, 그것도 절반만 채운 상태. V3 위성 26기 단 한 번 발사로 26Tbps 추가. Starlink 1360만 구독자 YoY +161%. 발사 빈도 올라갈수록 용량은 기하급수적.",
+    contentEn: "Starship = 10 Falcon 9s in downlink capacity, at half load. 26 V3 sats in one launch = 26 Tbps added. Starlink 13.6M subscribers +161% YoY. Capacity compounds as launch cadence rises.",
+    likes: 83, comments: 0, created_at: "2026-10-22T00:23:00.000Z", liked: false,
+  },
   // ── 2026-10-18 신규 ──────────────────────────
   {
     id: -1626, alias: "북한산 매 #14", symbol: "TSLA",

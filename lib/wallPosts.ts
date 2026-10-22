@@ -47,6 +47,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T22OCT = 1792623600000; // 2026-10-22 08:00 KST
 const T18OCT = 1792278000000; // 2026-10-18 08:00 KST
 const T13OCT = 1791846000000; // 2026-10-13 08:00 KST
 const T12OCT = 1791759600000; // 2026-10-12 08:00 KST
@@ -143,7 +144,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T18OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T22OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -162,6 +163,67 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-22 신규 ────────────────────
+  { id: 122350, symbol: "TSLA", nickname: "Q3어닝쇼크아님", holdingLabel: "장투중",
+    content: "FCF 29억 달러 시장 예상 13억인데 두 배 넘게 나왔잖아. EPS 0.72달러도 컨센서스 두 배야. 주당 0.22달러 순이익은 전년 대비 빠진 거 맞는데 공정가치 회계 변경 효과 빼면 실질적으로 나쁘지 않음",
+    contentEn: "FCF $2.9B vs consensus $1.3B — more than double. EPS $0.72 also ~2x consensus. Net income per share dropped YoY but that's fair value accounting change. Strip it out and the underlying picture is fine.",
+    createdAt: T22OCT + 8*60_000, likes: 128, comments: 0 },
+  { id: 122351, symbol: "TSLA", nickname: "딜리버리기대이상", holdingLabel: "장기보유중",
+    content: "486,532대 딜리버리 컨센 상회. 역대 최다 주문잔고 4년 만에 최고. '공급이 유일한 제약' 이 말 한 마디가 전부임. 수요 문제 아니라는 거잖아",
+    contentEn: "486,532 deliveries beat consensus. 4-year high order backlog. 'Supply is now the biggest constraint' — that one line says it all. Demand is not the problem.",
+    createdAt: T22OCT + 16*60_000, likes: 95, comments: 0 },
+  { id: 122352, symbol: "TSLA", nickname: "FSD백칠십사만", holdingLabel: "보유중",
+    content: "FSD 활성 사용자 174만 명 이게 얼마나 대단한 건지 사람들이 몰라. 작년 대비 9개국 확장에 누적 주행거리 150억 마일 이미 넘었고 Dojo 학습 데이터 쌓이는 속도가 장난 아님",
+    contentEn: "FSD active users 1.74M — people don't realize how big this is. 9-country expansion, 15B+ cumulative miles, and Dojo is absorbing all of it. The moat is widening every day.",
+    createdAt: T22OCT + 24*60_000, likes: 87, comments: 0 },
+  { id: 122353, symbol: "TSLA", nickname: "사이버캡이백만마일", holdingLabel: "장투중",
+    content: "사이버캡 누적 200만 마일 그리고 79% 무인 운행 이제 숫자가 증명함. 1.53달러/마일은 진짜 게임체인저야 우버 현재가 3~4달러인데 절반도 안 되잖아",
+    contentEn: "Cybercab hit 2M miles, 79% fully driverless. $1.53/mile is a genuine game-changer — Uber is $3-4/mile. Less than half the price and no driver.",
+    createdAt: T22OCT + 32*60_000, likes: 143, comments: 0 },
+  { id: 122354, symbol: "TSLA", nickname: "옵티머스얼리램프", holdingLabel: "장기보유중",
+    content: "공식 실적자료에 Optimus 캘리포니아 Early Ramp 찍혔다. 투자자 IR 문서에 처음 나온 거야. 텍사스 라인은 Construction 중이고. 이제 공식 약속임",
+    contentEn: "Optimus California listed as 'Early Ramp' in official investor materials — first time it's appeared in IR docs. Texas line is 'Construction.' This is now a public commitment.",
+    createdAt: T22OCT + 40*60_000, likes: 112, comments: 0 },
+  { id: 122355, symbol: "TSLA", nickname: "이천삼십년오백만대", holdingLabel: "매수고민",
+    content: "머스크가 2030년 500만대 목표 공식 선언했는데 현재 200만대에서 26% 연간성장률 필요함. 테슬라 역사상 가장 공격적인 생산 목표인데 수요가 공급 초과 상태라 가능성은 있어 보임",
+    contentEn: "Musk officially targets 5M vehicles/year by 2030. From ~2M today that's 26% annual growth — Tesla's most ambitious production goal ever. With demand exceeding supply it's not crazy.",
+    createdAt: T22OCT + 48*60_000, likes: 76, comments: 0 },
+  { id: 122356, symbol: "TSLA", nickname: "합병특위공식화", holdingLabel: "장투중",
+    content: "TSLA SPCX 양사 이사회 독립 특별위원회 구성 확인됨. 루머가 아니라 법적 절차야. 특위 설치 자체가 딜이 진지하게 검토되고 있다는 신호임. 12월 AGM 투표 일정도 그냥 나온 말이 아닌 거지",
+    contentEn: "Both TSLA and SPCX boards confirmed independent special merger committees. This isn't rumor — it's a legal board-level process. Committee formation signals the deal is being seriously evaluated. Dec AGM vote date isn't just talk.",
+    createdAt: T22OCT + 56*60_000, likes: 198, comments: 0 },
+  { id: 122357, symbol: "SPCX", nickname: "JPM오백목표가", holdingLabel: "장기보유중",
+    content: "JPMorgan SPCX 목표가 500달러 2027~2028 추정치 두 배 상향. AI 컴퓨팅 10GW 달성 시 연간 ARR 4000억 달러 가능하다고 보고 있음. 현재 컴퓨팅 1.7GW에서 내년 말 10GW면 6배 확장이야",
+    contentEn: "JPMorgan targets SPCX at $500, doubling 2027-2028 estimates. At 10GW AI compute they model ~$400B ARR. From 1.7GW today to 10GW by year-end next year is 6x expansion.",
+    createdAt: T22OCT + 64*60_000, likes: 161, comments: 0 },
+  { id: 122358, symbol: "SPCX", nickname: "도이치뱅크칠팔십억", holdingLabel: "보유중",
+    content: "도이치뱅크도 슈퍼인텔리전스 네오클라우드 사업 2027년 연간 70~80억 달러 수익 전망 내놨네. JPM이랑 DB 둘 다 기존 금융 모델로는 못 잡는 성장 속도라고 인정한 거 맞음",
+    contentEn: "Deutsche Bank projects SPCX SuperIntelligence (neo-cloud) at $70-80B annual revenue by 2027. Both JPM and DB acknowledge the growth rate exceeds conventional financial modeling.",
+    createdAt: T22OCT + 72*60_000, likes: 88, comments: 0 },
+  { id: 122359, symbol: "SPCX", nickname: "Q3830퍼어닝비트", holdingLabel: "장투중",
+    content: "SPCX Q3 EPS 0.35달러 예상 0.10 대비 250% 어닝 비트. AI 슈퍼인텔리전스 매출 75.6억 달러 YoY +830%. 이게 분기 숫자야 연간이 아니라. GPU 없어서 외부 조달 시도 다 실패했는데도 이 숫자 나온 거임",
+    contentEn: "SPCX Q3 EPS $0.35 vs $0.10 est — 250% beat. AI SuperIntelligence revenue $7.56B, +830% YoY. This is a quarter, not a year. And they hit this while failing to get any external GPUs.",
+    createdAt: T22OCT + 80*60_000, likes: 175, comments: 0 },
+  { id: 122360, symbol: "SPCX", nickname: "GPU전세계품절", holdingLabel: "매수고민",
+    content: "NVDA GB300 GB200 H100 구글 TPU 아마존 트레이니움 다 재고 없음. 머스크가 직접 어닝콜에서 말한 거잖아. AI 수요가 공급을 이 정도로 초과한다는 게 오히려 SPCX 자체 인프라 필요성을 증명하는 거",
+    contentEn: "NVDA GB300, GB200, H100, Google TPU, Amazon Trainium — all out of stock globally. Musk said this on the earnings call. The fact that demand is this far ahead of supply actually proves why SPCX needs its own infrastructure.",
+    createdAt: T22OCT + 88*60_000, likes: 134, comments: 0 },
+  { id: 122361, symbol: "SPCX", nickname: "테라팹십육팔조", holdingLabel: "장투중",
+    content: "테라팹 Phase 1 투자 168억 달러 확정. 기계 설비 2027 상반기 착수, 첫 테스트 칩 5~6월, 양산 2028 Q3 목표. 한국 반도체 10개사 NDA 체결. 텍사스 그라임스 카운티 1억 sqft 짓는 거 진짜임",
+    contentEn: "Terafab Phase 1 confirmed at $16.8B. Machinery start H1 2027, first test chip May-June, volume production Q3 2028. 10+ Korean semiconductor firms under NDA. 100M sqft in Grimes County TX — this is real.",
+    createdAt: T22OCT + 96*60_000, likes: 156, comments: 0 },
+  { id: 122362, symbol: "SPCX", nickname: "스타십팔콘십배", holdingLabel: "장기보유중",
+    content: "스타십 1기가 팔콘9 10기랑 동등한 다운링크 용량인데 절반만 채웠음. V3 위성 26기 단 한 번 발사에 26Tbps 추가. 스타링크 구독자 1360만명 YoY +161%. 이게 복리 성장이야",
+    contentEn: "One Starship = 10 Falcon 9s in downlink capacity, and it was only half loaded. 26 V3 satellites, 26 Tbps added in a single launch. Starlink 13.6M subscribers +161% YoY. This is compounding.",
+    createdAt: T22OCT + 104*60_000, likes: 99, comments: 0 },
+  { id: 122363, symbol: "TSLA", nickname: "ARK사천사백목표", holdingLabel: "보유중",
+    content: "ARK TSLA 2031 기준 베이스 4400달러 베어 3300 불 5000. 로보택시만으로도 2031년 ARK 모델에서 엄청난 비중 차지하는데 사이버캡 200만 마일 달성이 그 경로 위에 있는 거지",
+    contentEn: "ARK TSLA 2031: Base $4,400, Bear $3,300, Bull $5,000. Robotaxi is a massive component of the model and Cybercab hitting 2M miles is exactly on that trajectory.",
+    createdAt: T22OCT + 112*60_000, likes: 118, comments: 0 },
+  { id: 122364, symbol: "TSLA", nickname: "모델Y글로벌일위", holdingLabel: "장투중",
+    content: "모델Y 글로벌 판매 748,088대로 1위 유지. 캐나다 호주 일본 대만 역대 최다 딜리버리. 베를린 기가팩토리 역대 최대 생산. 테슬라 천만 번째 차량도 이번 분기에 출고됨",
+    contentEn: "Model Y #1 globally at 748,088 units. Record deliveries in Canada, Australia, Japan, Taiwan. Record production at Giga Berlin. Tesla's 10 millionth vehicle delivered this quarter.",
+    createdAt: T22OCT + 120*60_000, likes: 82, comments: 0 },
   // ── 2026-10-18 신규 ────────────────────
   { id: 122302, symbol: "TSLA", nickname: "로드스터파운더스", holdingLabel: "장투중",
     content: "로드스터 Founders 에디션 25만 달러 실물 공개됨. 성능이 0→100 1.8초라니 하이퍼카 수준 아님? SpaceX 스러스터 패키지 달면 더 빠르다는데 그게 현실적으로 가능한 거임",
