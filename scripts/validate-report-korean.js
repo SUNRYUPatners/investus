@@ -120,6 +120,24 @@ const ALLOW = new Set([
   "song", "seal", "galaxy", "yuan", "atto", "dolphin", "seagull",
   // 2026-10-21 추가 — \n 아티팩트
   "nalipay", "nferrari", "nubber", "naustin", "nsemi", "nuber",
+  // 2026-10-22 추가 — TSLA Q3 어닝 관련 용어·지명·인물
+  "ramp", "flight", "attach", "deepwater", "grinde", "munster",
+  "dallas", "houston", "phoenix", "vegas", "jacksonville", "tampa", "miami",
+  "fremont", "brownsville", "memphis", "nevada", "giga",
+  "mentovia", "electrickao", "teslachan", "sawy", "boloor",
+  "waiver", "nhtsa", "dmv", "permit", "miles", "driven", "rides",
+  "since", "reach", "fleet", "bundle", "modal", "transit",
+  "gene", "cole", "vincent", "saas", "arpu", "data",
+  // 2026-10-22 추가 — 지명·재무·기업 용어
+  "texas", "florida", "arizona", "waymo",
+  "gaap", "wall", "street", "ebitda",
+  "construction", "production", "design", "development", "invest",
+  // 2026-10-22 추가 — \n 아티팩트
+  "nramp", "nflight", "nattach", "nfremont", "ndallas", "nhouston",
+  "nphoenix", "nvegas", "njacksonville", "ntampa", "nmiami",
+  "ngiga", "ngene", "ncole", "nsaas", "ndata", "nmiles",
+  "ntesla", "nark", "ninvest", "ncybercab", "njpmorgan",
+  "nwall", "ngaap", "nebitda", "nwaymo", "nconstruction",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */

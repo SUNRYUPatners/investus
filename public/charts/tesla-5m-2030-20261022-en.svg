@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#1A0A05"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#FCA5A5">TSLA</text>
+  <rect x="196" y="18" width="130" height="40" rx="20" fill="#1C1917"/>
+    <rect x="196" y="18" width="130" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="261" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#FDE68A">2030</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="160" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="120" font-weight="900" fill="#EF4444">5M</text>
+  <text x="540" y="220" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#F1F5F9">2030 Annual Production Target</text>
+  <text x="540" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#9CA3AF">"Demand growing rapidly, exceeding production" — Musk, Q3 2026 call</text>
+  <rect x="200" y="292" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+  <rect x="54" y="318" width="972" height="174" rx="18" fill="#111827" stroke="#374151" stroke-width="1"/>
+    
+    <text x="84" y="358" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#374151">2026</text>
+    <text x="200" y="358" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#F3F4F6">~2M</text>
+    <text x="84" y="392" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Current annual run rate</text>
+    <rect x="84" y="408" width="172" height="20" rx="10" fill="#374151" opacity="0.8"/><rect x="54" y="506" width="972" height="174" rx="18" fill="#111827" stroke="#4B5563" stroke-width="1"/>
+    
+    <text x="84" y="546" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#4B5563">2027</text>
+    <text x="200" y="546" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#F3F4F6">~2.5M</text>
+    <text x="84" y="580" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">On 26% CAGR path</text>
+    <rect x="84" y="596" width="344" height="20" rx="10" fill="#4B5563" opacity="0.8"/><rect x="54" y="694" width="972" height="174" rx="18" fill="#111827" stroke="#6B7280" stroke-width="1"/>
+    
+    <text x="84" y="734" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#6B7280">2028</text>
+    <text x="200" y="734" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#F3F4F6">~3.2M</text>
+    <text x="84" y="768" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Compounding trajectory</text>
+    <rect x="84" y="784" width="516" height="20" rx="10" fill="#6B7280" opacity="0.8"/><rect x="54" y="882" width="972" height="174" rx="18" fill="#111827" stroke="#9CA3AF" stroke-width="1"/>
+    
+    <text x="84" y="922" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#9CA3AF">2029</text>
+    <text x="200" y="922" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#F3F4F6">~4M</text>
+    <text x="84" y="956" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Cybercab + Optimus added</text>
+    <rect x="84" y="972" width="688" height="20" rx="10" fill="#9CA3AF" opacity="0.8"/><rect x="54" y="1070" width="972" height="174" rx="18" fill="#1F0A0A" stroke="#EF4444" stroke-width="2.5"/>
+    <rect x="54" y="1070" width="972" height="5" rx="3" fill="#EF4444"/>
+    <text x="84" y="1110" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#EF4444">2030</text>
+    <text x="200" y="1110" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#F3F4F6">5M</text>
+    <text x="84" y="1144" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Musk earnings call target</text>
+    <rect x="84" y="1160" width="860" height="20" rx="10" fill="#EF4444" opacity="0.8"/>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

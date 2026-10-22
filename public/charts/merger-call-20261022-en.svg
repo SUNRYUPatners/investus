@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#1A0505"/><stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#FCA5A5">TSLA</text>
+  <rect x="196" y="18" width="130" height="40" rx="20" fill="#3B0764"/>
+    <rect x="196" y="18" width="130" height="40" rx="20" fill="none" stroke="#A855F7" stroke-width="2"/>
+    <text x="261" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#D8B4FE">SPCX</text>
+  <rect x="338" y="18" width="160" height="40" rx="20" fill="#1C1917"/>
+    <rect x="338" y="18" width="160" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="418" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#FDE68A">Merger Cmte</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="158" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="64" font-weight="900" fill="#EF4444">MERGER COMMITTEE</text>
+  <text x="540" y="218" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#F1F5F9">CONFIRMED ON EARNINGS CALL</text>
+  <text x="540" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#9CA3AF">Musk confirmed directly — both boards formed independent special committees</text>
+  <rect x="200" y="294" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+  <rect x="54" y="310" width="476" height="178" rx="18" fill="#0F1623" stroke="#10B981" stroke-width="2"/>
+    <text x="292" y="344" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">TSLA Post-Earnings</text>
+    <text x="292" y="406" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#10B981">+1.01%</text>
+    <text x="292" y="438" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">$377.49</text>
+    <text x="292" y="468" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Absorbed merger + EPS beat</text>
+  <rect x="550" y="310" width="476" height="178" rx="18" fill="#0F1623" stroke="#F59E0B" stroke-width="2"/>
+    <text x="788" y="344" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">ARK TSLA Target</text>
+    <text x="788" y="406" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#F59E0B">$4,400</text>
+    <text x="788" y="438" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">Base 2031</text>
+    <text x="788" y="468" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Merger upside not yet reflected</text>
+  <rect x="54" y="500" width="972" height="1.5" fill="#1F2937"/>
+  <rect x="54" y="524" width="972" height="186" rx="18" fill="#111827" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="54" y="524" width="972" height="4" rx="2" fill="#F59E0B"/>
+    <text x="84" y="562" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">Gene Munster (Deepwater)</text>
+    <text x="84" y="592" font-family="Arial,sans-serif" font-size="20" fill="#E6EDF3">&quot;Greatest synergies of any company merger</text><text x="84" y="622" font-family="Arial,sans-serif" font-size="20" fill="#E6EDF3">I've analyzed. TSLA shareholders will get</text><text x="84" y="652" font-family="Arial,sans-serif" font-size="20" fill="#E6EDF3">a good bid.&quot;</text><rect x="54" y="804" width="972" height="186" rx="18" fill="#111827" stroke="#A855F7" stroke-width="2"/>
+    <rect x="54" y="804" width="972" height="4" rx="2" fill="#A855F7"/>
+    <text x="84" y="842" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#A855F7">Cole Grinde</text>
+    <text x="84" y="872" font-family="Arial,sans-serif" font-size="20" fill="#E6EDF3">&quot;Tesla has the physical, SpaceX has the</text><text x="84" y="902" font-family="Arial,sans-serif" font-size="20" fill="#E6EDF3">digital. Largest company on earth by a</text><text x="84" y="932" font-family="Arial,sans-serif" font-size="20" fill="#E6EDF3">mile if it comes to fruition.&quot;</text>
+  <rect x="54" y="1100" width="972" height="130" rx="18" fill="#1F0A2A" stroke="#C084FC" stroke-width="2"/>
+  <text x="108" y="1148" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#C084FC">Special Committee = Board-level legal process initiated</text>
+  <text x="108" y="1190" font-family="Arial,sans-serif" font-size="23" fill="#D8B4FE">Due diligence &amp; ratio negotiation phase — no longer a rumor</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

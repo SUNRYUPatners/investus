@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#050A1A"/><stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#3B0764"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#A855F7" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#D8B4FE">SPCX</text>
+  <rect x="196" y="18" width="160" height="40" rx="20" fill="#0C1A2E"/>
+    <rect x="196" y="18" width="160" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+    <text x="276" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#93C5FD">Starship</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="148" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="60" font-weight="900" fill="#3B82F6">Starship = Falcon 9 × 10</text>
+  <text x="540" y="208" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Flight 14 · 26 Starlink V3 sats · +~26Tbps in one launch</text>
+  <text x="540" y="252" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#6B7280">Only half loaded — still equals 10 Falcon 9 launches</text>
+  <rect x="54" y="274" width="972" height="2" fill="#1F2937"/>
+  <rect x="54" y="290" width="476" height="178" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+    <text x="292" y="324" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Starship Downlink</text>
+    <text x="292" y="386" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#3B82F6">10×</text>
+    <text x="292" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">Falcon 9 대비</text>
+    <text x="292" y="448" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">V3 위성 1기 = V1.5 ×10</text>
+  <rect x="550" y="290" width="476" height="178" rx="18" fill="#0F1623" stroke="#A855F7" stroke-width="2"/>
+    <text x="788" y="324" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">V3 Sats Deployed</text>
+    <text x="788" y="386" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#A855F7">26기</text>
+    <text x="788" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">(+~26 Tbps)</text>
+    <text x="788" y="448" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Flight 14 배포</text>
+  <rect x="54" y="480" width="972" height="2" fill="#1F2937"/>
+  <text x="108" y="526" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#F59E0B">Terafab</text>
+  <text x="108" y="560" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">"Will be the most valuable building in the world — top 20 countries"</text>
+  <text x="108" y="590" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">— Elon Musk, Tesla Q3 2026 Earnings Call</text>
+  <rect x="54" y="616" width="972" height="108" rx="16" fill="#0F1623" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="84" y="654" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Machinery Commissioning</text>
+    <text x="84" y="692" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#F59E0B">2027년 H1</text><rect x="54" y="734" width="972" height="108" rx="16" fill="#0F1623" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="84" y="772" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">First Test Chip</text>
+    <text x="84" y="810" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#F59E0B">2027년 5~6월</text><rect x="54" y="852" width="972" height="108" rx="16" fill="#0F1623" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="84" y="890" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Chip Volume Production</text>
+    <text x="84" y="928" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#EF4444">2028년 Q3 목표</text><rect x="54" y="970" width="972" height="108" rx="16" fill="#0F1623" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="84" y="1008" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Phase 1 Investment</text>
+    <text x="84" y="1046" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#A855F7">$16.8B · 1억 sqft</text><rect x="54" y="1088" width="972" height="108" rx="16" fill="#0F1623" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="84" y="1126" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Korean Semi NDA</text>
+    <text x="84" y="1164" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#3B82F6">10개사+ NDA 체결</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

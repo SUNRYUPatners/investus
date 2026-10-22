@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#051010"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#FCA5A5">TSLA</text>
+  <rect x="196" y="18" width="160" height="40" rx="20" fill="#064E3B"/>
+    <rect x="196" y="18" width="160" height="40" rx="20" fill="none" stroke="#10B981" stroke-width="2"/>
+    <text x="276" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#6EE7B7">로보택시</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="156" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="108" font-weight="900" fill="#10B981">2M</text>
+  <text x="540" y="214" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#F1F5F9">무감독 자율주행 마일 (8배 QoQ)</text>
+  <text x="540" y="264" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#9CA3AF">Austin 3.1M 총 자율 마일 · 사고 0건</text>
+  <rect x="200" y="285" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+  <text x="108" y="328" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F9FAFB">운행 도시 현황 (10개 도시)</text>
+  <rect x="54" y="342" width="972" height="85" rx="14" fill="#0A1F1A" stroke="#10B981" stroke-width="2"/>
+    <circle cx="96" cy="384" r="10" fill="#10B981"/>
+    <text x="116" y="390" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F3F4F6">오스틴 (TX)</text>
+    <text x="900" y="390" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6EE7B7">2,118,015</text><rect x="54" y="437" width="972" height="85" rx="14" fill="#0A1F1A" stroke="#10B981" stroke-width="2"/>
+    <circle cx="96" cy="479" r="10" fill="#10B981"/>
+    <text x="116" y="485" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F3F4F6">댈러스 (TX)</text>
+    <text x="900" y="485" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6EE7B7">608,130</text><rect x="54" y="532" width="972" height="85" rx="14" fill="#0A1F1A" stroke="#10B981" stroke-width="2"/>
+    <circle cx="96" cy="574" r="10" fill="#10B981"/>
+    <text x="116" y="580" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F3F4F6">휴스턴 (TX)</text>
+    <text x="900" y="580" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6EE7B7">225,964</text><rect x="54" y="627" width="972" height="85" rx="14" fill="#0A1F1A" stroke="#10B981" stroke-width="2"/>
+    <circle cx="96" cy="669" r="10" fill="#10B981"/>
+    <text x="116" y="675" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F3F4F6">마이애미 (FL)</text>
+    <text x="900" y="675" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6EE7B7">46,262</text><rect x="54" y="722" width="972" height="85" rx="14" fill="#0A1F1A" stroke="#10B981" stroke-width="2"/>
+    <circle cx="96" cy="764" r="10" fill="#10B981"/>
+    <text x="116" y="770" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F3F4F6">올랜도 (FL)</text>
+    <text x="900" y="770" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6EE7B7">61,053</text><rect x="54" y="817" width="972" height="85" rx="14" fill="#0A1F1A" stroke="#10B981" stroke-width="2"/>
+    <circle cx="96" cy="859" r="10" fill="#10B981"/>
+    <text x="116" y="865" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F3F4F6">탬파 (FL)</text>
+    <text x="900" y="865" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6EE7B7">53,117</text><rect x="54" y="912" width="972" height="85" rx="14" fill="#111827" stroke="#374151" stroke-width="1"/>
+    <circle cx="96" cy="954" r="10" fill="#374151"/>
+    <text x="116" y="960" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F3F4F6">라스베이거스 (NV)</text>
+    <text x="900" y="960" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#9CA3AF">출시 예정</text><rect x="54" y="1007" width="972" height="85" rx="14" fill="#111827" stroke="#374151" stroke-width="1"/>
+    <circle cx="96" cy="1049" r="10" fill="#374151"/>
+    <text x="116" y="1055" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F3F4F6">피닉스 (AZ)</text>
+    <text x="900" y="1055" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#9CA3AF">출시 예정</text><rect x="54" y="1102" width="972" height="85" rx="14" fill="#111827" stroke="#374151" stroke-width="1"/>
+    <circle cx="96" cy="1144" r="10" fill="#374151"/>
+    <text x="116" y="1150" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F3F4F6">샌안토니오 (TX)</text>
+    <text x="900" y="1150" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#9CA3AF">출시 예정</text><rect x="54" y="1197" width="972" height="85" rx="14" fill="#111827" stroke="#374151" stroke-width="1"/>
+    <circle cx="96" cy="1239" r="10" fill="#374151"/>
+    <text x="116" y="1245" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F3F4F6">잭슨빌 (FL)</text>
+    <text x="900" y="1245" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#9CA3AF">출시 예정</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

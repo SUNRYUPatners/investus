@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#0A1020"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#FCA5A5">TSLA</text>
+  <rect x="196" y="18" width="100" height="40" rx="20" fill="#1E1B4B"/>
+    <rect x="196" y="18" width="100" height="40" rx="20" fill="none" stroke="#6366F1" stroke-width="2"/>
+    <text x="246" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#A5B4FC">FSD</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="158" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="108" font-weight="900" fill="#EF4444">1.74M</text>
+  <text x="540" y="216" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#F1F5F9">FSD Active Subscriptions</text>
+  <text x="540" y="266" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">+67% YoY · Q3 2025: 1.04M</text>
+  <rect x="80" y="460" width="920" height="320" fill="none"/>
+  <rect x="120.47999999999999" y="604.8421052631579" width="101.2" height="175.1578947368421" rx="8" fill="#374151"/>
+    <text x="171.07999999999998" y="594.8421052631579" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#9CA3AF">1.04M</text>
+    <text x="171.07999999999998" y="808" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">Q3'25</text><rect x="304.48" y="594.7368421052631" width="101.2" height="185.26315789473685" rx="8" fill="#374151"/>
+    <text x="355.08000000000004" y="584.7368421052631" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#9CA3AF">1.1M</text>
+    <text x="355.08000000000004" y="808" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">Q4'25</text><rect x="488.48" y="564.421052631579" width="101.2" height="215.5789473684211" rx="8" fill="#374151"/>
+    <text x="539.08" y="554.421052631579" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#9CA3AF">1.28M</text>
+    <text x="539.08" y="808" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">Q1'26</text><rect x="672.48" y="530.7368421052631" width="101.2" height="249.26315789473682" rx="8" fill="#374151"/>
+    <text x="723.08" y="520.7368421052631" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#9CA3AF">1.48M</text>
+    <text x="723.08" y="808" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">Q2'26</text><rect x="856.48" y="486.9473684210526" width="101.2" height="293.0526315789474" rx="8" fill="#EF4444"/>
+    <text x="907.08" y="476.9473684210526" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#EF4444">1.74M</text>
+    <text x="907.08" y="808" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">Q3'26</text>
+  <rect x="80" y="780" width="920" height="1.5" fill="#374151"/>
+  <rect x="54" y="830" width="972" height="1.5" fill="#1F2937"/>
+  <rect x="54" y="856" width="972" height="96" rx="16" fill="#111827" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="84" y="892" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">NA New Vehicle Attach Rate</text>
+    <text x="84" y="928" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#10B981">75%+</text>
+    <text x="204" y="928" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">+20pp QoQ</text><rect x="54" y="962" width="972" height="96" rx="16" fill="#111827" stroke="#3B82F6" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="84" y="998" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">EU Countries</text>
+    <text x="84" y="1034" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#3B82F6">9개국</text>
+    <text x="184" y="1034" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">4 added since Q2</text><rect x="54" y="1068" width="972" height="96" rx="16" fill="#111827" stroke="#A855F7" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="84" y="1104" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">EU FSD Customers</text>
+    <text x="84" y="1140" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#A855F7">100K+</text>
+    <text x="224" y="1140" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">160M+ km driven</text><rect x="54" y="1174" width="972" height="96" rx="16" fill="#111827" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="84" y="1210" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">Cumulative FSD Miles</text>
+    <text x="84" y="1246" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#F59E0B">~15B 마일</text>
+    <text x="264" y="1246" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">V12+ makes up majority</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0508"/><stop offset="100%" stop-color="#1A0A05"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#FCA5A5">TSLA</text>
+  <rect x="196" y="18" width="130" height="40" rx="20" fill="#1C1917"/>
+    <rect x="196" y="18" width="130" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="261" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#FDE68A">어닝</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="152" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="96" font-weight="900" fill="#EF4444">+$1.53B</text>
+  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#F1F5F9">잉여현금흐름 (FCF)</text>
+  <text x="540" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Wall Street 예상 -$4.5B — 6B달러 역전</text>
+  <rect x="200" y="282" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+  <rect x="54" y="300" width="476" height="178" rx="18" fill="#0F1623" stroke="#10B981" stroke-width="2"/>
+    <text x="292" y="334" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Non-GAAP EPS</text>
+    <text x="292" y="396" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#10B981">$0.48</text>
+    <text x="292" y="428" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">vs $0.40 예상</text>
+    <text x="292" y="458" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">컨센서스 상회</text>
+  <rect x="550" y="300" width="476" height="178" rx="18" fill="#0F1623" stroke="#F59E0B" stroke-width="2"/>
+    <text x="788" y="334" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">총이익률</text>
+    <text x="788" y="396" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#F59E0B">19.6%</text>
+    <text x="788" y="428" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">전분기 +280bp</text>
+    <text x="788" y="458" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Q2 2026: 16.8%</text>
+  <rect x="54" y="496" width="476" height="178" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+    <text x="292" y="530" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">총매출</text>
+    <text x="292" y="592" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#3B82F6">$28.05B</text>
+    <text x="292" y="624" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">전년 동기 보합</text>
+    <text x="292" y="654" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">서비스 +33% YoY</text>
+  <rect x="550" y="496" width="476" height="178" rx="18" fill="#0F1623" stroke="#A855F7" stroke-width="2"/>
+    <text x="788" y="530" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">현금 및 유가증권</text>
+    <text x="788" y="592" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#A855F7">$45.4B</text>
+    <text x="788" y="624" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">+9% QoQ</text>
+    <text x="788" y="654" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">역대 최고 수준</text>
+  <rect x="54" y="684" width="972" height="1.5" fill="#1F2937"/>
+  <text x="108" y="726" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">추가 주요 수치</text>
+  <rect x="108" y="734" width="864" height="1" fill="#374151"/>
+  <rect x="54" y="762" width="972" height="56" rx="10" fill="#111827"/>
+    <text x="84" y="796" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">딜리버리</text>
+    <text x="600" y="796" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">486,532대</text>
+    <text x="620" y="796" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">전분기 -2% / 컨센 상회</text><rect x="54" y="824" width="972" height="56" rx="10" fill="#0F1623"/>
+    <text x="84" y="858" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">생산량</text>
+    <text x="600" y="858" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">464,391대</text>
+    <text x="620" y="858" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">+4% YoY</text><rect x="54" y="886" width="972" height="56" rx="10" fill="#111827"/>
+    <text x="84" y="920" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">영업이익</text>
+    <text x="600" y="920" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">$718M</text>
+    <text x="620" y="920" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">영업이익률 2.6%</text><rect x="54" y="948" width="972" height="56" rx="10" fill="#0F1623"/>
+    <text x="84" y="982" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">GAAP 순이익</text>
+    <text x="600" y="982" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">$787M ($0.22/주)</text>
+    <text x="620" y="982" font-family="Arial,sans-serif" font-size="18" fill="#6B7280"></text><rect x="54" y="1010" width="972" height="56" rx="10" fill="#111827"/>
+    <text x="84" y="1044" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">에너지 배포</text>
+    <text x="600" y="1044" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">13.7 GWh</text>
+    <text x="620" y="1044" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">+10% YoY</text><rect x="54" y="1072" width="972" height="56" rx="10" fill="#0F1623"/>
+    <text x="84" y="1106" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">규제 크레딧</text>
+    <text x="600" y="1106" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">$113M</text>
+    <text x="620" y="1106" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Q3'25 $417M 대비 급감</text><rect x="54" y="1134" width="972" height="56" rx="10" fill="#111827"/>
+    <text x="84" y="1168" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">비트코인 평가익</text>
+    <text x="600" y="1168" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">$288M</text>
+    <text x="620" y="1168" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">공정가치 첫 반영</text><rect x="54" y="1196" width="972" height="56" rx="10" fill="#0F1623"/>
+    <text x="84" y="1230" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">설비투자</text>
+    <text x="600" y="1230" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">$4.73B</text>
+    <text x="620" y="1230" font-family="Arial,sans-serif" font-size="18" fill="#6B7280"></text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>
