@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000A18"/><stop offset="100%" stop-color="#00081A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#1E3A5F"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#93C5FD">TSLA</text>
+  <rect x="196" y="18" width="100" height="40" rx="20" fill="#1E3A5F"/>
+    <rect x="196" y="18" width="100" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+    <text x="246" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#93C5FD">FSD</text>
+  <rect x="308" y="18" width="150" height="40" rx="20" fill="#164E63"/>
+    <rect x="308" y="18" width="150" height="40" rx="20" fill="none" stroke="#06B6D4" stroke-width="2"/>
+    <text x="383" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#A5F3FC">Robotaxi</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+
+  <text x="540" y="158" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="url(#heroG)" filter="url(#glow)">1.74M</text>
+  <text x="540" y="218" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="36" font-weight="900" fill="#F1F5F9">FSD ACTIVE SUBSCRIPTIONS — +67% YoY</text>
+  <text x="540" y="268" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">2M cumulative unsupervised miles · World-class safety data</text>
+  <rect x="200" y="290" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+
+  <rect x="54" y="306" width="972" height="82" rx="14" fill="#1E3A5F" stroke="#3B82F6" stroke-width="2"/>
+  <text x="108" y="336" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#93C5FD">Ashok Elluswamy — Tesla AI/FSD VP, Q3 2026 Earnings Call</text>
+  <text x="108" y="372" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">"v15 stack enables clear path to millions of vehicles"</text>
+
+  <text x="108" y="404" font-family="Arial,sans-serif" font-size="20" fill="#93C5FD">&quot;We see a clear path towards scaling to millions of</text><text x="108" y="432" font-family="Arial,sans-serif" font-size="20" fill="#93C5FD">vehicles over the next several months.&quot;</text><text x="108" y="484" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">&quot;The technology investments of the last several years</text><text x="108" y="512" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">are now paying off.&quot;</text><text x="108" y="564" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">&quot;The v15 stack is the core — the foundations are like an</text><text x="108" y="592" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">iceberg below the surface.&quot;</text><text x="108" y="644" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">&quot;The same technology should scale to millions of</text><text x="108" y="672" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">vehicles wherever we are allowed to operate.&quot;</text>
+
+  <rect x="54" y="800" width="972" height="1.5" fill="#1F2937"/>
+
+  <rect x="54" y="820" width="476" height="168" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+    <text x="292" y="854" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Cumulative FSD Miles</text>
+    <text x="292" y="916" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#3B82F6">~15B</text>
+    <text x="292" y="948" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">miles driven</text>
+    <text x="292" y="978" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Exponential growth post-v12</text>
+  <rect x="550" y="820" width="476" height="168" rx="18" fill="#0F1623" stroke="#06B6D4" stroke-width="2"/>
+    <text x="788" y="854" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Unsupervised Robotaxi</text>
+    <text x="788" y="916" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#06B6D4">2M</text>
+    <text x="788" y="948" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">miles, zero accidents</text>
+    <text x="788" y="978" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">8× QoQ · Austin-based</text>
+
+  <rect x="54" y="1012" width="972" height="340" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+    <rect x="54" y="1012" width="972" height="5" rx="3" fill="url(#accentG)"/>
+    <text x="108" y="1056" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">Why Ashok's Statement Matters</text>
+    <rect x="108" y="1064" width="864" height="1" fill="#1E3A5F"/>
+    <text x="108" y="1084" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">The FSD VP — not Musk — said &quot;millions of vehicles in next several months&quot; on earnings call.</text><text x="108" y="1118" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">That is an engineering leadership technical confirmation, not a vision statement.</text><text x="108" y="1152" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">v15 stack → best-in-class safety data → regulatory expansion: a flywheel.</text><text x="108" y="1186" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">2M unsupervised miles is empirical proof of data-driven autonomy at scale.</text>
+
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

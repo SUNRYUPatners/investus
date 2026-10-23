@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0A0014"/><stop offset="100%" stop-color="#18003A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EC4899"/><stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EC4899"/><stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#4C1D95"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#A855F7" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#D8B4FE">MERGE</text>
+  <rect x="196" y="18" width="160" height="40" rx="20" fill="#1C1917"/>
+    <rect x="196" y="18" width="160" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="276" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FDE68A">Reuters</text>
+  <rect x="368" y="18" width="120" height="40" rx="20" fill="#7F1D1D"/>
+    <rect x="368" y="18" width="120" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <text x="428" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCA5A5">Exclusive</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+
+  <text x="540" y="158" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="90" font-weight="900" fill="url(#heroG)" filter="url(#glow)">3 PATHS</text>
+  <text x="540" y="222" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#F1F5F9">REUTERS EXCLUSIVE — DEAL STRUCTURES DISCLOSED</text>
+  <text x="540" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">Possibilities under discussion, not agreed terms · Apollo &amp; GS 8.3% financing</text>
+  <rect x="200" y="294" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+
+  <text x="54" y="375" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Structures under consideration (Reuters, Oct 22 2026)</text>
+  <rect x="54" y="390" width="972" height="168" rx="16" fill="#0F1623" stroke="#A855F7" stroke-width="2.5"/><text x="108" y="440" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#A855F7">①</text><text x="170" y="440" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#F3F4F6">SPCX Acquires TSLA</text><text x="108" y="482" font-family="Arial,sans-serif" font-size="23" fill="#D1D5DB">Tesla shareholders receive SpaceX shares as</text><text x="108" y="514" font-family="Arial,sans-serif" font-size="23" fill="#D1D5DB">consideration</text><rect x="54" y="580" width="972" height="168" rx="16" fill="#0F1623" stroke="#EC4899" stroke-width="2.5"/><text x="108" y="630" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#EC4899">②</text><text x="170" y="630" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#F3F4F6">New Holding Company</text><text x="108" y="672" font-family="Arial,sans-serif" font-size="23" fill="#D1D5DB">Both become subsidiaries of a newly established parent</text><text x="108" y="704" font-family="Arial,sans-serif" font-size="23" fill="#D1D5DB">company</text><rect x="54" y="770" width="972" height="168" rx="16" fill="#0F1623" stroke="#3B82F6" stroke-width="2.5"/><text x="108" y="820" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#3B82F6">③</text><text x="170" y="820" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#F3F4F6">All-Stock Transaction</text><text x="108" y="862" font-family="Arial,sans-serif" font-size="23" fill="#D1D5DB">No cash payment — companies exchange shares to complete</text><text x="108" y="894" font-family="Arial,sans-serif" font-size="23" fill="#D1D5DB">the deal</text>
+
+  <rect x="54" y="966" width="972" height="90" rx="14" fill="#0F1623" stroke="#EC4899" stroke-width="2"/>
+  <text x="540" y="1000" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">Combined market cap if merged</text>
+  <text x="540" y="1046" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#EC4899">$3.63T — 5th most valuable company globally</text>
+
+  <rect x="54" y="1078" width="972" height="220" rx="22" fill="#0F0A00" stroke="#4C1D95" stroke-width="2.5"/>
+    <rect x="54" y="1078" width="972" height="5" rx="3" fill="url(#accentG)"/>
+    <text x="108" y="1122" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">Why This Matters</text>
+    <rect x="108" y="1130" width="864" height="1" fill="#4C1D95"/>
+    <text x="108" y="1150" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Reuters named three specific deal structures — this is not vague reporting.</text><text x="108" y="1184" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Apollo &amp; Goldman hiring signals the deal has entered formal legal phase.</text><text x="108" y="1218" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Under scenario ①: TSLA holders directly receive SpaceX shares.</text>
+
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

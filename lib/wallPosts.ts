@@ -47,6 +47,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T23OCT = 1792710000000; // 2026-10-23 08:00 KST
 const T22OCT = 1792623600000; // 2026-10-22 08:00 KST
 const T18OCT = 1792278000000; // 2026-10-18 08:00 KST
 const T13OCT = 1791846000000; // 2026-10-13 08:00 KST
@@ -144,7 +145,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T22OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T23OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -163,6 +164,67 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-23 신규 ────────────────────
+  { id: 122380, symbol: "TSLA", nickname: "총마진회복확인자", holdingLabel: "장투중",
+    content: "Q3 총마진 19.6% 나왔네. Q2 16.8%에서 +2.8%p 올라온 거 맞음. Q3 25년 18.0%도 뛰어넘음. 12개월 누적 매출 $100B 2분기 연속이고 서비스 총이익 $724M 역대 최고라는데 이게 진짜 숨겨진 핵심임",
+    contentEn: "Q3 gross margin 19.6% confirmed. Up +2.8pp from Q2's 16.8%, beats Q3 2025's 18.0% too. Trailing 12M revenue $100B+ for the 2nd straight quarter and services gross profit $724M is an all-time record. That's the hidden story.",
+    createdAt: T23OCT + 8*60_000, likes: 94, comments: 0 },
+  { id: 122381, symbol: "TSLA", nickname: "순이익착시주의", holdingLabel: "보유중",
+    content: "순이익 $804M -42% YoY 보고 놀란 사람들 공정가치 회계 변경 영향임. Non-GAAP EPS $0.72 컨센서스 $0.35 두 배야. FCF $2.9B 컨센서스 $1.3B 두 배야. 숫자 제대로 보자",
+    contentEn: "Net income $804M -42% YoY scared some people but that's the fair value accounting change. Non-GAAP EPS $0.72 is 2x the $0.35 consensus. FCF $2.9B is 2x the $1.3B consensus. Read the numbers right.",
+    createdAt: T23OCT + 16*60_000, likes: 78, comments: 0 },
+  { id: 122382, symbol: "TSLA", nickname: "CLSA반전충격", holdingLabel: "매수고민",
+    content: "CLSA가 Underperform에서 Hold로 등급 올리고 목표가 $310→$400 올렸다고? 저 하우스가 제일 부정적이었는데 이게 반전임. 10개 하우스 전원 상향이 진짜 의미있는 시그널이지",
+    contentEn: "CLSA went from Underperform to Hold and raised PT $310→$400? That was the most bearish house. This is a real reversal. All 10 houses raising together is the signal that matters.",
+    createdAt: T23OCT + 24*60_000, likes: 112, comments: 0 },
+  { id: 122383, symbol: "TSLA", nickname: "캔터사백팔십오", holdingLabel: "장기보유중",
+    content: "목표가 범위 $360(GS 중립)에서 $485(캔터 비중확대)까지 평균 $436. GS가 $360 중립 유지하는 이유는 자율주행 상업화 타임라인에 가장 보수적이어서임. 나머지 5개는 매수 이상",
+    contentEn: "Target range $360 (GS Neutral) to $485 (Cantor OW), average $436. GS at $360 Neutral is the most conservative on robotaxi commercialization timeline. Other 5 houses are Buy or better.",
+    createdAt: T23OCT + 32*60_000, likes: 67, comments: 0 },
+  { id: 122384, symbol: "TSLA", nickname: "로이터합병구조", holdingLabel: "장투중",
+    content: "Reuters가 합병 구조 3가지 단독 보도: SPCX→TSLA 인수, 신규 지주회사, 전주식교환. Apollo Goldman Sachs 8.3% 딜 파이낸싱 중이라고도 나옴. 파이낸싱 어드바이저 선임이 진짜 법적 단계 진입 신호임",
+    contentEn: "Reuters named 3 specific deal structures: SPCX acquires TSLA, new holdco, all-stock swap. Apollo and Goldman Sachs reportedly lined up ~8.3% financing. Financing advisor appointment means the deal has entered formal legal process.",
+    createdAt: T23OCT + 40*60_000, likes: 186, comments: 0 },
+  { id: 122385, symbol: "TSLA", nickname: "TSLA보유SPCX수령", holdingLabel: "장기보유중",
+    content: "케빈 오리어리가 'TSLA 보유하면 새 합병 회사 주식 받는다'는 발언이 구조 ①이 현실화되면 문자 그대로 맞는 말임. SPCX+TSLA 합산 $3.63T 글로벌 5위잖아",
+    contentEn: "Kevin O'Leary said 'if you own Tesla you'll own the new company' — under structure ①, TSLA holders literally receive SPCX shares. Combined $3.63T makes it the 5th most valuable company globally.",
+    createdAt: T23OCT + 48*60_000, likes: 143, comments: 0 },
+  { id: 122386, symbol: "SPCX", nickname: "AI최대사업등극", holdingLabel: "장투중",
+    content: "SPCX Q3 AI Solutions $7.02B +1856% YoY 전체의 48%. 처음으로 로켓도 스타링크도 아닌 AI가 1위 사업이 됨. 이 숫자가 분기 단위임. 연환산 $28B+ AI 매출만으로도",
+    contentEn: "SPCX Q3 AI Solutions $7.02B +1856% YoY — 48% of total. AI became #1 segment for the first time, surpassing rockets AND Starlink. This is a quarterly number. Annualized $28B+ from AI alone.",
+    createdAt: T23OCT + 56*60_000, likes: 158, comments: 0 },
+  { id: 122387, symbol: "SPCX", nickname: "총이익률육십이퍼", holdingLabel: "보유중",
+    content: "SPCX 총이익률 62.3% 이게 소프트웨어 마진임. AI 컴퓨팅 서비스가 하드웨어 판매보다 마진이 훨씬 높음. Terafab 완공 후 자체 칩으로 전환되면 마진 추가 개선. 순이익 $4.4B",
+    contentEn: "SPCX gross margin 62.3% — software-level economics on compute infrastructure. AI services have far higher margins than hardware sales. Post-Terafab own chips = further margin expansion. Net income $4.4B.",
+    createdAt: T23OCT + 64*60_000, likes: 88, comments: 0 },
+  { id: 122388, symbol: "SPCX", nickname: "10GW초과머스크", holdingLabel: "장기보유중",
+    content: "머스크 '내년 10GW 초과 가능' 직접 발언. 기존 가이던스가 2027년 말 10GW였는데 초과로 상향. 미국 전체 AI 컴퓨팅 신규 증설 43GW 중 25%가 SpaceX 하나임. BofA $100B 런레이트 현실화 근접",
+    contentEn: "Musk said 'shot at exceeding 10GW next year' — explicit upward revision from the prior 10GW-by-end-2027 guidance. SpaceX alone = 25% of projected US AI compute additions of 43GW. BofA: $100B run-rate approaching reality.",
+    createdAt: T23OCT + 72*60_000, likes: 134, comments: 0 },
+  { id: 122389, symbol: "SPCX", nickname: "Q1가이던스충격", holdingLabel: "매수고민",
+    content: "Q1 27 가이던스 $33~37B 컨센서스 $22B이 50~68% 상회임. 4로 곱하면 연환산 $132~148B. 이미 $100B 런레이트 넘음. 근데 아직 주가가 이걸 다 반영 안 했다는 게 포인트",
+    contentEn: "Q1'27 guidance $33-37B vs $22B consensus = 50-68% above. Annualized $132-148B — already past $100B run-rate. The market hasn't fully priced this in yet.",
+    createdAt: T23OCT + 80*60_000, likes: 112, comments: 0 },
+  { id: 122390, symbol: "TSLA", nickname: "옵티머스S커브초입", holdingLabel: "장투중",
+    content: "머스크 Optimus '초기 양산 시작, S커브 초입, 1M/년 라인 프리몬트 대부분 완료'. 전기기계·AI 이슈 내년 말 해결 목표. '지구 최대 제품' 확신하지만 기대 조정 요청. 1년 더 필요한 과정",
+    contentEn: "Musk: 'Early production started, S curve initial stage, vast majority of 1M/yr line at Fremont installed.' Design and AI issues target end of next year. 'Biggest product on Earth' — but tempering expectations, about a year more needed.",
+    createdAt: T23OCT + 88*60_000, likes: 103, comments: 0 },
+  { id: 122391, symbol: "TSLA", nickname: "Ashok수백만대경로", holdingLabel: "장기보유중",
+    content: "Ashok Elluswamy CEO가 아니라 FSD VP가 '수개월 안에 수백만 대 확장 경로 명확'이라고 한 게 포인트임. 비전이 아니라 기술 확인임. v15 스택 완성이 기반. 174만 구독자 +67%",
+    contentEn: "The point is it's the FSD VP — not the CEO — saying 'clear path to millions of vehicles in next several months.' Engineering confirmation, not a vision statement. v15 stack is the foundation. 1.74M subscribers +67%.",
+    createdAt: T23OCT + 96*60_000, likes: 89, comments: 0 },
+  { id: 122392, symbol: "TSLA", nickname: "공매도최고수준", holdingLabel: "장투중",
+    content: "Goldman이 헤지펀드 공매도가 역대 최고 수준 99th percentile 매도:매수 5:1 글로벌 비율이라고 보고함. TSLA 전통적 공매도 대상인데 전원 상향+합병 특위가 겹치면 공매도 커버 압박 커짐",
+    contentEn: "Goldman says hedge fund short positions are at the 99th percentile, 5:1 sells to buys globally. TSLA is a traditional short target. Universal analyst upgrades + merger committee = structural squeeze pressure building.",
+    createdAt: T23OCT + 104*60_000, likes: 76, comments: 0 },
+  { id: 122393, symbol: "TSLA", nickname: "무인주행이백만마일", holdingLabel: "보유중",
+    content: "Cybercab 누적 무인주행 200만 마일 사고 0건. QoQ 8배 성장. 이 데이터가 규제 확장 근거임. 9개국 유럽 FSD 확장의 근거도 이거고. 안전 데이터 계속 쌓이면 더 많은 시장 열림",
+    contentEn: "Cybercab 2M cumulative unsupervised miles, zero accidents. 8x QoQ. This data is the regulatory expansion argument. It's also why 9 EU countries unlocked FSD. More safety data = more markets.",
+    createdAt: T23OCT + 112*60_000, likes: 95, comments: 0 },
+  { id: 122394, symbol: "SPCX", nickname: "스페이스X매출구조", holdingLabel: "장기보유중",
+    content: "SPCX Q3 전체 매출 $14.6B +161% 총이익 $9.1B +217% 순이익 $4.4B. AI 48% Starlink 21% 정부 15% 기타 16%. 근데 R&D $4.6B +101% 쓰면서 성장 투자도 하고 있음. 둘 다 폭발적",
+    contentEn: "SPCX Q3: Revenue $14.6B +161%, Gross profit $9.1B +217%, Net income $4.4B. AI 48%, Starlink 21%, Govt 15%, Other 16%. Also: R&D $4.6B +101% — both revenue AND investment are exploding.",
+    createdAt: T23OCT + 120*60_000, likes: 108, comments: 0 },
   // ── 2026-10-22 신규 ────────────────────
   { id: 122350, symbol: "TSLA", nickname: "Q3어닝쇼크아님", holdingLabel: "장투중",
     content: "FCF 29억 달러 시장 예상 13억인데 두 배 넘게 나왔잖아. EPS 0.72달러도 컨센서스 두 배야. 주당 0.22달러 순이익은 전년 대비 빠진 거 맞는데 공정가치 회계 변경 효과 빼면 실질적으로 나쁘지 않음",

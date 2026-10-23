@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000E18"/><stop offset="100%" stop-color="#001820"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#06B6D4"/><stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#06B6D4"/><stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#164E63"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#06B6D4" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#A5F3FC">SPCX</text>
+  <rect x="196" y="18" width="160" height="40" rx="20" fill="#164E63"/>
+    <rect x="196" y="18" width="160" height="40" rx="20" fill="none" stroke="#06B6D4" stroke-width="2"/>
+    <text x="276" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#A5F3FC">Compute Scale</text>
+  <rect x="368" y="18" width="150" height="40" rx="20" fill="#1C1917"/>
+    <rect x="368" y="18" width="150" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="443" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FDE68A">Q1'27 Guide</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+
+  <text x="540" y="158" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="url(#heroG)" filter="url(#glow)">10GW</text>
+  <text x="540" y="218" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#F1F5F9">MUSK: "SHOT AT EXCEEDING 10GW NEXT YEAR"</text>
+  <text x="540" y="266" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">~25% of projected total US AI compute capacity by 2027</text>
+  <rect x="200" y="288" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+
+  <rect x="54" y="308" width="972" height="168" rx="16" fill="#0F1A20" stroke="#06B6D4" stroke-width="2.5"/>
+  <text x="108" y="352" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#A5F3FC">Musk Earnings Call Quote</text>
+  <text x="108" y="390" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">"We have a shot at exceeding 10GW next year"</text>
+  <text x="108" y="428" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">— Elon Musk, SPCX Q3 2026 Earnings Call</text>
+  <text x="108" y="464" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">Prior guidance: 10GW by 2027 · Current: 1.7GW (~17%)</text>
+
+  
+    <text x="54" y="484" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">2027 AI compute scale comparison (GW)</text>
+    <rect x="54" y="500" width="972" height="52" rx="10" fill="#1F2937"/>
+    <rect x="54" y="500" width="38" height="52" rx="10" fill="#6B7280"/>
+    <rect x="54" y="500" width="226" height="52" rx="4" fill="#06B6D4" opacity="0.7"/>
+    <text x="73" y="535" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#fff">Now 1.7GW</text>
+    <text x="290" y="535" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#06B6D4">10GW+</text>
+    <text x="1026" y="535" text-anchor="end" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">US total 43GW</text>
+  
+    <text x="54" y="604" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Q1 2027 Revenue Guidance vs Consensus</text>
+    <rect x="54" y="620" width="578" height="56" rx="8" fill="#6B7280" opacity="0.6"/>
+    <rect x="54" y="620" width="972" height="56" rx="8" fill="none" stroke="#06B6D4" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="343" y="658" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#fff">Consensus $22B</text>
+    <text x="1010" y="658" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#06B6D4">Guidance $33–37B</text>
+
+  <rect x="54" y="716" width="476" height="168" rx="18" fill="#0F1623" stroke="#06B6D4" stroke-width="2"/>
+    <text x="292" y="750" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Q1'27 Guide Low</text>
+    <text x="292" y="812" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#06B6D4">$33B</text>
+    <text x="292" y="844" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">vs $22B consensus</text>
+    <text x="292" y="874" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">+50% above</text>
+  <rect x="550" y="716" width="476" height="168" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+    <text x="788" y="750" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">BofA SPCX Target</text>
+    <text x="788" y="812" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#3B82F6">$275</text>
+    <text x="788" y="844" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">$235→raised</text>
+    <text x="788" y="874" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">$100B run-rate reality basis</text>
+
+  <rect x="54" y="908" width="972" height="390" rx="22" fill="#0F0A00" stroke="#164E63" stroke-width="2.5"/>
+    <rect x="54" y="908" width="972" height="5" rx="3" fill="url(#accentG)"/>
+    <text x="108" y="952" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">$100B Run-Rate Reality</text>
+    <rect x="108" y="960" width="864" height="1" fill="#164E63"/>
+    <text x="108" y="980" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">BofA: &quot;$100B run-rate by end of 2026 is not only on track, it's approaching reality.&quot;</text><text x="108" y="1014" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Q1'27 guide $33–37B × 4 = $132–148B annualized — already past $100B threshold.</text><text x="108" y="1048" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">1.7GW now → 10GW target → path to 25% of projected US AI infrastructure.</text><text x="108" y="1082" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Pre-Terafab (before Q3 2028): organic expansion bridges to 10GW.</text>
+
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

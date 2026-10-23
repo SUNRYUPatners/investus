@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#020E08"/><stop offset="100%" stop-color="#040A02"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#064E3B"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#10B981" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#6EE7B7">TSLA</text>
+  <rect x="196" y="18" width="160" height="40" rx="20" fill="#064E3B"/>
+    <rect x="196" y="18" width="160" height="40" rx="20" fill="none" stroke="#10B981" stroke-width="2"/>
+    <text x="276" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#6EE7B7">Margin Recovery</text>
+  <rect x="368" y="18" width="160" height="40" rx="20" fill="#1C1917"/>
+    <rect x="368" y="18" width="160" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="448" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FDE68A">Q3 Earnings</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+
+  <text x="540" y="160" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="url(#heroG)" filter="url(#glow)">19.6%</text>
+  <text x="540" y="218" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="36" font-weight="900" fill="#F1F5F9">GROSS MARGIN — RECOVERY CONFIRMED</text>
+  <text x="540" y="266" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">Q2 16.8% → Q3 19.6% · +2.8pp · Surpasses Q3 2025 (18.0%)</text>
+  <rect x="200" y="288" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+
+  <line x1="250" y1="490" x2="720" y2="490" stroke="#10B981" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+    <text x="540" y="484" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#10B981">+2.8pp recovery</text>
+  <rect x="160" y="413" width="180" height="147" rx="8" fill="#6B7280" opacity="0.7"/><text x="250" y="401" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#6B7280">18%</text><text x="250" y="590" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Q3 2025</text><rect x="440" y="423" width="180" height="137" rx="8" fill="#EF4444" opacity="0.7"/><text x="530" y="411" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#EF4444">16.8%</text><text x="530" y="590" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Q2 2026</text><rect x="720" y="400" width="180" height="160" rx="8" fill="#10B981" opacity="1"/><text x="810" y="388" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#10B981">19.6%</text><text x="810" y="590" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Q3 2026</text>
+
+  <rect x="54" y="610" width="972" height="1.5" fill="#1F2937"/>
+
+  <rect x="54" y="630" width="476" height="168" rx="18" fill="#0F1623" stroke="#F59E0B" stroke-width="2"/>
+    <text x="292" y="664" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Trailing 12M Revenue</text>
+    <text x="292" y="726" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F59E0B">$100B+</text>
+    <text x="292" y="758" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">2nd straight quarter</text>
+    <text x="292" y="788" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Revenue defense maintained</text>
+  <rect x="550" y="630" width="476" height="168" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+    <text x="788" y="664" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Services Gross Profit</text>
+    <text x="788" y="726" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#3B82F6">$724M</text>
+    <text x="788" y="758" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">All-time record</text>
+    <text x="788" y="788" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">+36% YoY · Charging, Insurance, Parts</text>
+
+  <rect x="54" y="815" width="972" height="1.5" fill="#1F2937"/>
+
+  <text x="108" y="858" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">Net Income &amp; EPS Note</text>
+  <rect x="108" y="866" width="864" height="1" fill="#374151"/>
+  
+    <rect x="54" y="890" width="972" height="80" rx="12" fill="#0F1623" stroke="#EF4444" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="108" y="920" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Q3 Net Income</text>
+    <text x="108" y="952" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#EF4444">$804M</text>
+    <text x="780" y="952" text-anchor="end" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">-42.1% YoY (fair value accounting change)</text>
+    <rect x="54" y="986" width="972" height="80" rx="12" fill="#0F1623" stroke="#EF4444" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="108" y="1016" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Trailing 12M Net Income</text>
+    <text x="108" y="1048" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#EF4444">$3,279M</text>
+    <text x="780" y="1048" text-anchor="end" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">-15.1% from end of prior quarter</text>
+    <rect x="54" y="1082" width="972" height="80" rx="12" fill="#0F1623" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="108" y="1112" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Non-GAAP EPS</text>
+    <text x="108" y="1144" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#10B981">$0.72</text>
+    <text x="780" y="1144" text-anchor="end" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">vs ~$0.35 consensus, approx. 2×</text>
+    <rect x="54" y="1178" width="972" height="80" rx="12" fill="#0F1623" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="108" y="1208" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Free Cash Flow</text>
+    <text x="108" y="1240" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#10B981">$2.9B</text>
+    <text x="780" y="1240" text-anchor="end" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">vs $1.3B consensus — more than doubled</text>
+
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

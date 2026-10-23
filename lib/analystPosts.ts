@@ -18,6 +18,49 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-10-23 신규 ──────────────────────────
+  {
+    id: -1651, alias: "북한산 매 #14", symbol: "TSLA",
+    content: "TSLA Q3 총마진 19.6% — Q2 16.8% 대비 +2.8%p 회복, Q3'25 18.0% 상회. 12개월 $100B 2분기 연속 돌파. 서비스 총이익 $724M 역대 최고. FCF $2.9B·Non-GAAP EPS $0.72 각각 컨센서스 두 배. 마진 저점은 Q2였음.",
+    contentEn: "TSLA Q3 GM 19.6% — +2.8pp from Q2, above Q3'25. Trailing 12M $100B+ for 2nd straight quarter. Services gross profit $724M record. FCF $2.9B and Non-GAAP EPS $0.72 both ~2× consensus. Q2 was the gross margin trough.",
+    likes: 76, comments: 0, created_at: "2026-10-23T00:05:00.000Z", liked: false,
+  },
+  {
+    id: -1652, alias: "수락산 독수리 #77", symbol: "TSLA",
+    content: "10개 하우스 전원 목표가 인상 — 캔터 $485 최고, GS $360 최저, 평균 $436. CLSA 가장 눈에 띔: Underperform→Hold, $310→$400 인상. 역대 이 하우스가 제일 부정적이었는데 반전. 5개 하우스 매수 이상.",
+    contentEn: "All 10 houses raised targets — Cantor $485 high, GS $360 low, avg ~$436. CLSA stands out: Underperform→Hold, $310→$400. Most bearish house reversed. Five houses at Buy/OW or above.",
+    likes: 84, comments: 0, created_at: "2026-10-23T00:07:00.000Z", liked: false,
+  },
+  {
+    id: -1653, alias: "관악산 새매 #52", symbol: "TSLA",
+    content: "Reuters TSLA-SPCX 합병 구조 3가지 단독: SPCX가 TSLA 인수·신규 지주회사·전주식교환. Apollo·Goldman Sachs 8.3% 파이낸싱. 파이낸싱 어드바이저 선임은 딜이 법적 단계에 진입했다는 명확한 신호.",
+    contentEn: "Reuters exclusive: 3 deal structures — SPCX acquires TSLA / new holdco / all-stock swap. Apollo & Goldman Sachs 8.3% financing lined up. Financing advisor appointment = deal has entered formal legal stage.",
+    likes: 147, comments: 0, created_at: "2026-10-23T00:09:00.000Z", liked: false,
+  },
+  {
+    id: -1654, alias: "청계산 황로 #28", symbol: "SPCX",
+    content: "SPCX Q3 매출 $14.6B +161% — AI Solutions $7.02B +1856%가 전체의 48% 차지하며 처음으로 1위 사업 등극. 로켓도 스타링크도 아닌 AI. 총이익률 62.3% 소프트웨어 수준. 순이익 $4.4B.",
+    contentEn: "SPCX Q3 revenue $14.6B +161% — AI Solutions $7.02B +1856% became the #1 segment at 48% of total. Not rockets, not Starlink — AI. Gross margin 62.3% (software-level). Net income $4.4B.",
+    likes: 132, comments: 0, created_at: "2026-10-23T00:11:00.000Z", liked: false,
+  },
+  {
+    id: -1655, alias: "불암산 흰죽지 #69", symbol: "SPCX",
+    content: "머스크 '내년 10GW 초과 가능' 직접 발언. Q1'27 가이던스 $33~37B 컨센서스 $22B 50~68% 상회. 연환산 $132~148B, $100B 런레이트 이미 돌파. BofA '$100B 현실화 접근 중' — 목표가 $235→$275.",
+    contentEn: "Musk: 'Shot at exceeding 10GW next year.' Q1'27 guide $33-37B vs $22B consensus (+50-68%). Annualized $132-148B already past $100B run-rate. BofA: '$100B approaching reality' — raised to $275 from $235.",
+    likes: 118, comments: 0, created_at: "2026-10-23T00:13:00.000Z", liked: false,
+  },
+  {
+    id: -1656, alias: "아차산 흰뺨딱새 #83", symbol: "TSLA",
+    content: "머스크 Optimus: '초기 양산 시작, S커브 초입, 기울기 완만. 1M/년 라인 프리몬트 대부분 완료. 전기기계·AI 이슈 내년 말 해결 예상. Optimus 지구 최대 제품 될 것 확신. 아직 1년 더 필요.' Kalshi: V3 영상 1~2개월 내.",
+    contentEn: "Musk on Optimus: 'Early production started, S curve shallow slope. 1M/yr line mostly at Fremont. Design & AI issues solved by end of next year. Convinced it will be the biggest product on Earth. About a year more.' Kalshi: V3 video in 1-2 months.",
+    likes: 97, comments: 0, created_at: "2026-10-23T00:15:00.000Z", liked: false,
+  },
+  {
+    id: -1657, alias: "대모산 청둥오리 #41", symbol: "TSLA",
+    content: "Ashok Elluswamy FSD VP가 어닝콜에서 '수개월 안에 수백만 대 확장 경로 명확'이라고 직접 발언. 머스크 비전이 아니라 엔지니어링 책임자 기술 확인. v15 스택 기반. 무인주행 200만 마일 사고 0건.",
+    contentEn: "Ashok Elluswamy (FSD VP) on earnings call: 'Clear path to millions of vehicles in next several months.' Engineering lead confirmation, not CEO vision. v15 stack is the foundation. 2M unsupervised miles, zero accidents.",
+    likes: 89, comments: 0, created_at: "2026-10-23T00:17:00.000Z", liked: false,
+  },
   // ── 2026-10-22 신규 ──────────────────────────
   {
     id: -1641, alias: "북한산 매 #14", symbol: "TSLA",

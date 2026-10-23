@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#08001A"/><stop offset="100%" stop-color="#100030"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#A855F7"/><stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#A855F7"/><stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#3B0764"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#A855F7" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#D8B4FE">SPCX</text>
+  <rect x="196" y="18" width="130" height="40" rx="20" fill="#1C1917"/>
+    <rect x="196" y="18" width="130" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="261" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FDE68A">Q3 실적</text>
+  <rect x="338" y="18" width="130" height="40" rx="20" fill="#3B0764"/>
+    <rect x="338" y="18" width="130" height="40" rx="20" fill="none" stroke="#EC4899" stroke-width="2"/>
+    <text x="403" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9A8D4">AI 1위</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+
+  <text x="540" y="154" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="100" font-weight="900" fill="url(#heroG)" filter="url(#glow)">$14.6B</text>
+  <text x="540" y="212" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#F1F5F9">Q3 2026 총매출 · +161% YoY</text>
+  <text x="540" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">AI Solutions가 처음으로 1위 사업 등극 — 전체의 48%</text>
+  <rect x="200" y="282" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+
+  <text x="54" y="330" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">매출 구성 (Q3 2026)</text>
+  <rect x="54" y="340" width="346" height="80" rx="10" fill="#A855F7" opacity="0.85"/><text x="72" y="370" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#000">AI Solutions</text><text x="72" y="400" font-family="Arial,sans-serif" font-size="20" fill="#000">$7.02B (48%) +1856% YoY</text><rect x="54" y="460" width="154" height="80" rx="10" fill="#3B82F6" opacity="0.85"/><text x="72" y="490" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#000">Starlink (소비자)</text><text x="72" y="520" font-family="Arial,sans-serif" font-size="20" fill="#000">$3.12B (21%) +57% YoY</text><rect x="54" y="580" width="105" height="80" rx="10" fill="#10B981" opacity="0.85"/><text x="72" y="610" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#000">엔터프라이즈·정부</text><text x="72" y="640" font-family="Arial,sans-serif" font-size="20" fill="#000">$2.13B (15%) +91% YoY</text><rect x="54" y="700" width="114" height="80" rx="10" fill="#6B7280" opacity="0.85"/><text x="72" y="730" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#000">기타</text><text x="72" y="760" font-family="Arial,sans-serif" font-size="20" fill="#000">$2.31B (16%) +9% YoY</text>
+
+  <rect x="54" y="830" width="972" height="1.5" fill="#2D1B69"/>
+
+  <rect x="54" y="852" width="296" height="170" rx="18" fill="#0F1623" stroke="#A855F7" stroke-width="2"/>
+    <text x="202" y="886" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">총이익</text>
+    <text x="202" y="948" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A855F7">$9.1B</text>
+    <text x="202" y="980" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">+217% YoY</text>
+    <text x="202" y="1010" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">총이익률 62.3%</text>
+  <rect x="392" y="852" width="296" height="170" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+    <text x="540" y="886" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">영업이익</text>
+    <text x="540" y="948" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#3B82F6">$2.79B</text>
+    <text x="540" y="980" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Q3 2026</text>
+    <text x="540" y="1010" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">영업이익률 19.1%</text>
+  <rect x="730" y="852" width="296" height="170" rx="18" fill="#0F1623" stroke="#10B981" stroke-width="2"/>
+    <text x="878" y="886" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">순이익</text>
+    <text x="878" y="948" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#10B981">$4.4B</text>
+    <text x="878" y="980" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Q3 2026</text>
+    <text x="878" y="1010" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">YoY 보합</text>
+
+  <rect x="54" y="1044" width="972" height="240" rx="22" fill="#0F0A00" stroke="#4C1D95" stroke-width="2.5"/>
+    <rect x="54" y="1044" width="972" height="5" rx="3" fill="url(#accentG)"/>
+    <text x="108" y="1088" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">핵심 포인트</text>
+    <rect x="108" y="1096" width="864" height="1" fill="#4C1D95"/>
+    <text x="108" y="1116" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">SpaceX의 가장 큰 사업은 이제 로켓도 스타링크도 아닌 AI다.</text><text x="108" y="1150" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Q3 한 분기에만 AI 매출 $7.02B — 이 숫자가 분기 단위다.</text><text x="108" y="1184" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">AI Solutions +1856% YoY · R&amp;D $4.6B · S&amp;A $1.71B 함께 급증.</text><text x="108" y="1218" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">2027년 AI 컴퓨팅 10GW 목표가 이 성장 속도를 설명한다.</text>
+
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

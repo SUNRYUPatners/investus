@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0A0800"/><stop offset="100%" stop-color="#150F00"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#78350F"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FDE68A">TSLA</text>
+  <rect x="196" y="18" width="200" height="40" rx="20" fill="#78350F"/>
+    <rect x="196" y="18" width="200" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="296" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FDE68A">목표가 전원 상향</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+
+  <text x="540" y="148" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="90" font-weight="900" fill="url(#heroG)" filter="url(#glow)">전원 인상</text>
+  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="36" font-weight="900" fill="#F1F5F9">10개 하우스 목표가 전원 인상</text>
+  <text x="540" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">Q3 어닝비트 반응 · 목표가 범위 $360~$485</text>
+  <rect x="200" y="282" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+
+  
+    <rect x="54" y="310" width="972" height="12" rx="6" fill="#1F2937"/>
+    <rect x="168.35294117647058" y="310" width="714.7058823529411" height="12" rx="6" fill="url(#accentG)" opacity="0.6"/>
+    <text x="168.35294117647058" y="346" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">$360</text>
+    <text x="883.0588235294117" y="346" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#10B981">$485</text>
+    <text x="602.8941176470588" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#F59E0B">평균 ~$436</text>
+    <line x1="602.8941176470588" y1="306" x2="602.8941176470588" y2="322" stroke="#F59E0B" stroke-width="2"/>
+  <rect x="54" y="376" width="972" height="76" rx="10" fill="#0F1623" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.6"/><text x="108" y="406" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">Cantor Fitzgerald</text><text x="108" y="434" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">비중확대</text><text x="990" y="426" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#10B981">$485</text><rect x="54" y="464" width="972" height="76" rx="10" fill="#0F1623" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.6"/><text x="108" y="494" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">TD Cowen</text><text x="108" y="522" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">매수</text><text x="990" y="514" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#10B981">$460</text><rect x="54" y="552" width="972" height="76" rx="10" fill="#0F1623" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.6"/><text x="108" y="582" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">Baird</text><text x="108" y="610" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">매수 · $450→$460</text><text x="990" y="602" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#10B981">$460</text><rect x="54" y="640" width="972" height="76" rx="10" fill="#0F1623" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.6"/><text x="108" y="670" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">Canaccord</text><text x="108" y="698" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">비중확대 · $450→$460</text><text x="990" y="690" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#10B981">$460</text><rect x="54" y="728" width="972" height="76" rx="10" fill="#0F1623" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.6"/><text x="108" y="758" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">Mizuho</text><text x="108" y="786" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">비중확대 · $450→$460</text><text x="990" y="778" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#10B981">$460</text><rect x="54" y="816" width="972" height="76" rx="10" fill="#0F1623" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.6"/><text x="108" y="846" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">JPMorgan</text><text x="108" y="874" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">중립 · $415→$440</text><text x="990" y="866" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#F59E0B">$440</text><rect x="54" y="904" width="972" height="76" rx="10" fill="#0F1623" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.6"/><text x="108" y="934" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">UBS</text><text x="108" y="962" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">중립 · $391→$425</text><text x="990" y="954" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#F59E0B">$425</text><rect x="54" y="992" width="972" height="76" rx="10" fill="#0F1623" stroke="#A855F7" stroke-width="1.5" stroke-opacity="0.6"/><text x="108" y="1022" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">CLSA</text><text x="108" y="1050" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">보유 · UP→Hold $310→$400</text><text x="990" y="1042" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#A855F7">$400</text><rect x="54" y="1080" width="972" height="76" rx="10" fill="#0F1623" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.6"/><text x="108" y="1110" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">Morgan Stanley</text><text x="108" y="1138" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">비중유지 · $400→$410</text><text x="990" y="1130" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#F59E0B">$410</text><rect x="54" y="1168" width="972" height="76" rx="10" fill="#0F1623" stroke="#6B7280" stroke-width="1.5" stroke-opacity="0.6"/><text x="108" y="1198" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F3F4F6">Goldman Sachs</text><text x="108" y="1226" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">중립</text><text x="990" y="1218" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#6B7280">$360</text>
+
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

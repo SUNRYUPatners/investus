@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0A0400"/><stop offset="100%" stop-color="#180800"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#F97316"/><stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#F97316"/><stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#7C2D12"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#F97316" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FED7AA">TSLA</text>
+  <rect x="196" y="18" width="140" height="40" rx="20" fill="#7C2D12"/>
+    <rect x="196" y="18" width="140" height="40" rx="20" fill="none" stroke="#F97316" stroke-width="2"/>
+    <text x="266" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FED7AA">Optimus</text>
+  <rect x="348" y="18" width="180" height="40" rx="20" fill="#1C1917"/>
+    <rect x="348" y="18" width="180" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="438" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FDE68A">Musk on Optimus</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+
+  <text x="540" y="152" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="72" font-weight="900" fill="url(#heroG)" filter="url(#glow)">BIGGEST PRODUCT</text>
+  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#F1F5F9">MUSK · TESLA Q3 2026 EARNINGS CALL</text>
+  <text x="540" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">"Early production started · S curve early stage · 1M/yr line at Fremont"</text>
+  <rect x="200" y="282" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+
+  <rect x="54" y="350" width="972" height="174" rx="16" fill="#0F1623" stroke="#F97316" stroke-width="2" stroke-opacity="0.9"/><rect x="54" y="350" width="6" height="174" rx="3" fill="#F97316" opacity="1"/><text x="88" y="396" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FED7AA">&quot;We've started early production&quot;</text><text x="88" y="498" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">S curve — initial curve is a shallow slope</text><rect x="54" y="546" width="972" height="174" rx="16" fill="#0F1623" stroke="#F97316" stroke-width="2" stroke-opacity="0.75"/><rect x="54" y="546" width="6" height="174" rx="3" fill="#F97316" opacity="0.8"/><text x="88" y="592" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FED7AA">&quot;Vast majority of 1M/yr line installed at Fremont&quot;</text><text x="88" y="694" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">Some design tweaks and AI work still in progress</text><rect x="54" y="742" width="972" height="174" rx="16" fill="#0F1623" stroke="#F97316" stroke-width="2" stroke-opacity="0.6000000000000001"/><rect x="54" y="742" width="6" height="174" rx="3" fill="#F97316" opacity="0.6"/><text x="88" y="788" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FED7AA">&quot;Design &amp; AI issues to be solved by end of next</text><text x="88" y="824" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FED7AA">year&quot;</text><text x="88" y="890" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">Electromechanical design, reliability, usage life, AI</text><rect x="54" y="938" width="972" height="174" rx="16" fill="#0F1623" stroke="#F97316" stroke-width="2" stroke-opacity="0.45000000000000007"/><rect x="54" y="938" width="6" height="174" rx="3" fill="#F97316" opacity="0.3999999999999999"/><text x="88" y="984" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FED7AA">&quot;Optimus will be the biggest product on Earth&quot;</text><text x="88" y="1086" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">Tempering expectations: &quot;about a year to get through&quot;</text>
+
+  <rect x="54" y="1140" width="972" height="72" rx="14" fill="#0F1623" stroke="#FBBF24" stroke-width="2"/>
+  <text x="108" y="1170" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">Additional · Kalshi Report (Oct 22)</text>
+  <text x="108" y="1202" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FBBF24">Optimus V3 video in 1–2 months · AI5 chip integration target April 2027</text>
+
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

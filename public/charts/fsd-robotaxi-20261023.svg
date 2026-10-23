@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000A18"/><stop offset="100%" stop-color="#00081A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#1E3A5F"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#93C5FD">TSLA</text>
+  <rect x="196" y="18" width="100" height="40" rx="20" fill="#1E3A5F"/>
+    <rect x="196" y="18" width="100" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+    <text x="246" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#93C5FD">FSD</text>
+  <rect x="308" y="18" width="150" height="40" rx="20" fill="#164E63"/>
+    <rect x="308" y="18" width="150" height="40" rx="20" fill="none" stroke="#06B6D4" stroke-width="2"/>
+    <text x="383" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#A5F3FC">로보택시</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+
+  <text x="540" y="158" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="url(#heroG)" filter="url(#glow)">1.74M</text>
+  <text x="540" y="218" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="36" font-weight="900" fill="#F1F5F9">FSD 활성 구독자 — 67% YoY 성장</text>
+  <text x="540" y="268" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">누적 무인주행 200만 마일 달성 · 안전 데이터 업계 최고</text>
+  <rect x="200" y="290" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+
+  <rect x="54" y="306" width="972" height="82" rx="14" fill="#1E3A5F" stroke="#3B82F6" stroke-width="2"/>
+  <text x="108" y="336" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#93C5FD">Ashok Elluswamy — Tesla AI/FSD 책임자, Q3 어닝콜</text>
+  <text x="108" y="372" font-family="Arial,sans-serif" font-size="21" fill="#6B7280">"v15 스택 기반으로 수백만 대 확장 경로 명확"</text>
+
+  <text x="108" y="404" font-family="Arial,sans-serif" font-size="21" fill="#93C5FD">&quot;수백만 대 규모로 확장하는 경로가 명확하게 보인다.&quot;</text><text x="108" y="468" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">&quot;수개월 안에 수백만 대로 확장이 진행 중이다.&quot;</text><text x="108" y="532" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">&quot;지난 수년간의 기술 투자가 이제 결실을 맺고 있다.&quot;</text><text x="108" y="596" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">&quot;v15 스택이 핵심 — 기초가 빙산처럼 수면 아래에 있다.&quot;</text><text x="108" y="660" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">&quot;이 기술은 우리가 운영 가능한 모든 곳의 수백만 대로</text><text x="108" y="688" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">확장될 것이다.&quot;</text>
+
+  <rect x="54" y="740" width="972" height="1.5" fill="#1F2937"/>
+
+  <rect x="54" y="760" width="476" height="168" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+    <text x="292" y="794" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">FSD 누적 주행</text>
+    <text x="292" y="856" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#3B82F6">~15B</text>
+    <text x="292" y="888" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">마일 (약 240억 km)</text>
+    <text x="292" y="918" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">v12 이후 급격한 증가</text>
+  <rect x="550" y="760" width="476" height="168" rx="18" fill="#0F1623" stroke="#06B6D4" stroke-width="2"/>
+    <text x="788" y="794" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">누적 무인주행</text>
+    <text x="788" y="856" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#06B6D4">2M</text>
+    <text x="788" y="888" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">마일 — 사고 0건</text>
+    <text x="788" y="918" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">QoQ 8배 성장 · Austin 중심</text>
+
+  <rect x="54" y="952" width="972" height="340" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+    <rect x="54" y="952" width="972" height="5" rx="3" fill="url(#accentG)"/>
+    <text x="108" y="996" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">Ashok 발언의 의미</text>
+    <rect x="108" y="1004" width="864" height="1" fill="#1E3A5F"/>
+    <text x="108" y="1024" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">FSD VP가 어닝콜에서 직접 &quot;수개월 안에 수백만 대&quot; 발언.</text><text x="108" y="1058" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">이는 Musk의 비전이 아닌 엔지니어링 리더의 기술적 확인이다.</text><text x="108" y="1092" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">v15 스택 → 안전 데이터 업계 최고 → 규제 확장의 선순환.</text><text x="108" y="1126" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">무인주행 누적 200만 마일은 데이터 기반 자율주행의 실증이다.</text>
+
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

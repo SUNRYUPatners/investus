@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0A0400"/><stop offset="100%" stop-color="#180800"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#F97316"/><stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#F97316"/><stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="54" y="18" width="130" height="40" rx="20" fill="#7C2D12"/>
+    <rect x="54" y="18" width="130" height="40" rx="20" fill="none" stroke="#F97316" stroke-width="2"/>
+    <text x="119" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FED7AA">TSLA</text>
+  <rect x="196" y="18" width="140" height="40" rx="20" fill="#7C2D12"/>
+    <rect x="196" y="18" width="140" height="40" rx="20" fill="none" stroke="#F97316" stroke-width="2"/>
+    <text x="266" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FED7AA">Optimus</text>
+  <rect x="348" y="18" width="180" height="40" rx="20" fill="#1C1917"/>
+    <rect x="348" y="18" width="180" height="40" rx="20" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="438" y="44" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FDE68A">머스크 발언</text>
+  <rect x="54" y="70" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+
+  <text x="540" y="152" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="72" font-weight="900" fill="url(#heroG)" filter="url(#glow)">지구 최대 제품</text>
+  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#F1F5F9">Musk, Tesla Q3 2026 어닝콜 발언 전문</text>
+  <text x="540" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">"초기 양산 시작 · S커브 초입 · 1M/년 라인 프리몬트 완료"</text>
+  <rect x="200" y="282" width="680" height="2" fill="url(#accentG)" opacity="0.4"/>
+
+  <rect x="54" y="350" width="972" height="174" rx="16" fill="#0F1623" stroke="#F97316" stroke-width="2" stroke-opacity="0.9"/><rect x="54" y="350" width="6" height="174" rx="3" fill="#F97316" opacity="1"/><text x="88" y="396" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FED7AA">&quot;초기 양산을 시작했다&quot;</text><text x="88" y="498" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">S커브 초입 — 초기 기울기는 완만하게 시작</text><rect x="54" y="546" width="972" height="174" rx="16" fill="#0F1623" stroke="#F97316" stroke-width="2" stroke-opacity="0.75"/><rect x="54" y="546" width="6" height="174" rx="3" fill="#F97316" opacity="0.8"/><text x="88" y="592" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FED7AA">&quot;1M대/년 라인 대부분 프리몬트 설치 완료&quot;</text><text x="88" y="694" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">일부 설계 조정·AI 개선 작업 진행 중</text><rect x="54" y="742" width="972" height="174" rx="16" fill="#0F1623" stroke="#F97316" stroke-width="2" stroke-opacity="0.6000000000000001"/><rect x="54" y="742" width="6" height="174" rx="3" fill="#F97316" opacity="0.6"/><text x="88" y="788" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FED7AA">&quot;설계·AI 이슈는 내년 말까지 해결 예상&quot;</text><text x="88" y="890" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">전기기계 설계, 신뢰성, 수명, AI — 모두 내년 말</text><rect x="54" y="938" width="972" height="174" rx="16" fill="#0F1623" stroke="#F97316" stroke-width="2" stroke-opacity="0.45000000000000007"/><rect x="54" y="938" width="6" height="174" rx="3" fill="#F97316" opacity="0.3999999999999999"/><text x="88" y="984" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FED7AA">&quot;Optimus는 지구 최대 제품이 될 것&quot;</text><text x="88" y="1086" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">기대 조정도 함께 — &quot;아직 1년 더 필요한 과정&quot;</text>
+
+  <rect x="54" y="1140" width="972" height="72" rx="14" fill="#0F1623" stroke="#FBBF24" stroke-width="2"/>
+  <text x="108" y="1170" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">추가 — Kalshi 리포트 (10.22)</text>
+  <text x="108" y="1202" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FBBF24">Optimus V3 영상 1~2개월 내 공개 · AI5 칩 통합 목표 2027년 4월</text>
+
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+    <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>
