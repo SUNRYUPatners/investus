@@ -3,11 +3,9 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LogoMark } from "@/components/LogoMark";
-import { MarketSwitcher } from "@/components/MarketSwitcher";
-import { MarketSwitcherDesktop } from "@/components/MarketSwitcherDesktop";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isMarketSessionOpen, isStockMarketOpen } from "@/lib/markets/hours";
-import { isMarketHomePath, parseMarketPath } from "@/lib/markets/marketPath";
+import { parseMarketPath } from "@/lib/markets/marketPath";
 import { GuestStartButton } from "@/components/GuestStartButton";
 import { useAuth } from "@/hooks/useAuth";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
@@ -19,7 +17,6 @@ export function Header() {
   const pathname = usePathname() ?? "";
   const { market } = parseMarketPath(pathname);
   const cfg = getMarketConfig(market);
-  const showSwitcher = isMarketHomePath(pathname);
   const { user, loaded } = useAuth();
   const isGuest = loaded && !user;
   const [time, setTime] = useState("");
@@ -63,7 +60,7 @@ export function Header() {
         }}
       >
         <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2">
             <LogoMark size="sm" />
             <span
               className="text-lg font-bold tracking-tight font-syne"
@@ -72,8 +69,6 @@ export function Header() {
               Investus
             </span>
           </div>
-
-          <MarketSwitcherDesktop current={market} />
 
           <div className="flex items-center gap-2 flex-shrink-0">
             <GuestStartButton compact />
@@ -110,7 +105,6 @@ export function Header() {
           </div>
         </div>
       </header>
-      {showSwitcher && <MarketSwitcher current={market} />}
     </>
   );
 }
