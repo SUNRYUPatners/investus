@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#080010"/><stop offset="100%" stop-color="#04000A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EC4899"/><stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EC4899"/><stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="54" y="54" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">2026.10.24</text>
+  <text x="1026" y="54" text-anchor="end" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">@investus.kr</text>
+  <rect x="54" y="68" width="130" height="40" rx="20" fill="#1E0A2E"/>
+  <rect x="54" y="68" width="130" height="40" rx="20" fill="none" stroke="#A855F7" stroke-width="2"/>
+  <text x="119" y="94" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#D8B4FE"># SPCX</text>
+  <rect x="196" y="68" width="180" height="40" rx="20" fill="#1C1917"/>
+  <rect x="196" y="68" width="180" height="40" rx="20" fill="none" stroke="#F97316" stroke-width="2"/>
+  <text x="286" y="94" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FED7AA"># LOCKUP</text>
+  <rect x="54" y="120" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="198" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="62" font-weight="900" fill="url(#heroG)" filter="url(#glow)">328M주 해제</text>
+  <text x="540" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#C084FC">10월 26일(월) 시장 공급 압박</text>
+  <rect x="320" y="270" width="660" height="42" rx="8" fill="#1F2937"/><rect x="320" y="270" width="660" height="42" rx="8" fill="#6B7280" opacity="0.85"/><text x="308" y="298" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#F3F4F6">IPO 직후</text><text x="990" y="287" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6B7280">2.1B</text><text x="990" y="309" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">기관·초기 직원 1차 해제</text><rect x="320" y="340" width="660" height="42" rx="8" fill="#1F2937"/><rect x="320" y="340" width="409" height="42" rx="8" fill="#EF4444" opacity="0.85"/><text x="308" y="368" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#F3F4F6">10/22 (목)</text><text x="739" y="357" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#EF4444">1.3B</text><text x="739" y="379" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">분기 어닝 + 최대 단일 해제</text><rect x="320" y="410" width="660" height="42" rx="8" fill="#1F2937"/><rect x="320" y="410" width="99" height="42" rx="8" fill="#F97316" opacity="0.85"/><text x="308" y="438" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#F3F4F6">10/26 (월)</text><text x="429" y="427" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F97316">328M</text><text x="429" y="449" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">토요일 만기 → 월요일 거래</text><rect x="320" y="480" width="660" height="42" rx="8" fill="#1F2937"/><rect x="320" y="480" width="66" height="42" rx="8" fill="#EAB308" opacity="0.85"/><text x="308" y="508" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#F3F4F6">11/8 (예정)</text><text x="396" y="497" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#EAB308">~200M</text><text x="396" y="519" font-family="Arial,sans-serif" font-size="17" fill="#9CA3AF">다음 정기 잠금 만기</text>
+  <rect x="54" y="570" width="476" height="180" rx="18" fill="#0F1623" stroke="#EF4444" stroke-width="2"/>
+  <text x="292" y="604" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">10/22 해제</text>
+  <text x="292" y="666" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#EF4444">1.3B</text>
+  <text x="292" y="698" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">주 (최대 단일)</text>
+  <text x="292" y="728" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">어닝 동시 발표</text>
+  <rect x="550" y="570" width="476" height="180" rx="18" fill="#0F1623" stroke="#F97316" stroke-width="2"/>
+  <text x="788" y="604" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">10/26 해제</text>
+  <text x="788" y="666" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F97316">328M</text>
+  <text x="788" y="698" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">주 (토→월 이연)</text>
+  <text x="788" y="728" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">거래 시작 월요일</text>
+  <rect x="54" y="766" width="476" height="180" rx="18" fill="#0F1623" stroke="#6B7280" stroke-width="2"/>
+  <text x="292" y="800" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">IPO 이후 총 해제</text>
+  <text x="292" y="862" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#6B7280">~3.7B</text>
+  <text x="292" y="894" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">주 누적</text>
+  <text x="292" y="924" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">전체 발행주의 ~42%</text>
+  <rect x="550" y="766" width="476" height="180" rx="18" fill="#0F1623" stroke="#A855F7" stroke-width="2"/>
+  <text x="788" y="800" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">SPCX 현재가</text>
+  <text x="788" y="862" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A855F7">$147</text>
+  <text x="788" y="894" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">10/23 종가</text>
+  <text x="788" y="924" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">10/22 고점 $149</text>
+  <rect x="54" y="962" width="972" height="310" rx="22" fill="#0F0A00" stroke="#4B0082" stroke-width="2.5"/>
+  <rect x="54" y="962" width="972" height="5" rx="3" fill="#A855F7"/>
+  <text x="108" y="1006" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">핵심 체크포인트</text>
+  <rect x="108" y="1014" width="864" height="1" fill="#4B0082"/>
+  <text x="108" y="1034" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">10/22에 이미 1.3B주(최대 단일 해제)가 풀렸고 주가는 버텼습니다.</text><text x="108" y="1068" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">10/26 328M주 추가 공급 — 단기 수급 압박 가능성.</text><text x="108" y="1102" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">어닝 서프라이즈 + 합병 기대가 매도 물량 흡수 여부 결정.</text><text x="108" y="1136" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">장기 보유자는 10GW 가이던스·Q1'27 $33~37B 가이던스 기준으로 판단.</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

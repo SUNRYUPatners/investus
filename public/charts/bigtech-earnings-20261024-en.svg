@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#020814"/><stop offset="100%" stop-color="#0A0510"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#00BCF2"/><stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#00BCF2"/><stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="54" y="54" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">2026.10.24</text>
+  <text x="1026" y="54" text-anchor="end" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">@investus.kr</text>
+  <rect x="54" y="68" width="130" height="40" rx="20" fill="#04141A"/>
+  <rect x="54" y="68" width="130" height="40" rx="20" fill="none" stroke="#00BCF2" stroke-width="2"/>
+  <text x="119" y="94" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#7DD3FC"># TECH</text>
+  <rect x="196" y="68" width="180" height="40" rx="20" fill="#100A28"/>
+  <rect x="196" y="68" width="180" height="40" rx="20" fill="none" stroke="#A855F7" stroke-width="2"/>
+  <text x="286" y="94" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#D8B4FE"># EARNINGS</text>
+  <rect x="54" y="120" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="198" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="url(#heroG)" filter="url(#glow)">Earnings Week</text>
+  <text x="540" y="244" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Oct 28–29 · MSFT · GOOGL · AMZN</text>
+  <rect x="54" y="274" width="972" height="186" rx="18" fill="#0F1623" stroke="#00BCF2" stroke-width="2"/><rect x="54" y="274" width="8" height="186" rx="4" fill="#00BCF2"/><text x="90" y="336" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#00BCF2">Microsoft</text><text x="90" y="376" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">MSFT · Oct 28 (Wed)</text><text x="90" y="414" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">Azure cloud +25% · Copilot monetization</text><text x="1002" y="368" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#00BCF2">UPCOMING</text><rect x="54" y="488" width="972" height="186" rx="18" fill="#0F1623" stroke="#4285F4" stroke-width="2"/><rect x="54" y="488" width="8" height="186" rx="4" fill="#4285F4"/><text x="90" y="550" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#4285F4">Alphabet</text><text x="90" y="590" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">GOOGL · Oct 28 (Wed)</text><text x="90" y="628" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">Google Cloud +30% · AI Overviews ad rev</text><text x="1002" y="582" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#4285F4">UPCOMING</text><rect x="54" y="702" width="972" height="186" rx="18" fill="#0F1623" stroke="#FF9900" stroke-width="2"/><rect x="54" y="702" width="8" height="186" rx="4" fill="#FF9900"/><text x="90" y="764" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#FF9900">Amazon</text><text x="90" y="804" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">AMZN · Oct 29 (Thu)</text><text x="90" y="842" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">AWS +22% · AI services acceleration</text><text x="1002" y="796" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#FF9900">UPCOMING</text>
+  <rect x="54" y="904" width="308" height="180" rx="18" fill="#0F1623" stroke="#A855F7" stroke-width="2"/>
+  <text x="208" y="938" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">BigTech AI capex</text>
+  <text x="208" y="1000" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A855F7">$725B</text>
+  <text x="208" y="1032" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">2026 combined est.</text>
+  <text x="208" y="1062" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">4 hyperscalers</text>
+  <rect x="386" y="904" width="308" height="180" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+  <text x="540" y="938" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">META Q3 capex</text>
+  <text x="540" y="1000" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#3B82F6">$34.9B</text>
+  <text x="540" y="1032" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">$140B annualized</text>
+  <text x="540" y="1062" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">+13% vs Q2's $31B</text>
+  <rect x="718" y="904" width="308" height="180" rx="18" fill="#0F1623" stroke="#EC4899" stroke-width="2"/>
+  <text x="872" y="938" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Merger synergy</text>
+  <text x="872" y="1000" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#EC4899">$3.63T</text>
+  <text x="872" y="1032" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">TSLA+SPCX combined</text>
+  <text x="872" y="1062" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">global mktcap #5</text>
+  <rect x="54" y="1100" width="972" height="182" rx="22" fill="#0F0A00" stroke="#0C4A6E" stroke-width="2.5"/>
+  <rect x="54" y="1100" width="972" height="5" rx="3" fill="#00BCF2"/>
+  <text x="108" y="1144" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">This Week's Key Watch</text>
+  <rect x="108" y="1152" width="864" height="1" fill="#0C4A6E"/>
+  <text x="108" y="1172" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Azure &amp; AWS cloud growth: competition vs. complementary with SpaceX AI.</text><text x="108" y="1206" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">AI capex guidance: confirming $725B combined estimate for 2026.</text><text x="108" y="1240" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Watch for any TSLA-SPCX merger commentary from Nadella or Pichai.</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

@@ -18,6 +18,31 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-10-24 (토) 주말 자체수집 ──────────────
+  {
+    id: -1661, alias: "북한산 매 #14", symbol: "SPCX",
+    content: "SPCX 328M주 잠금해제 10/24(토) 만기 → 10/26(월)부터 매도 가능. 이미 10/22에 1.3B주(최대 단일) 해제됐는데 어닝 서프라이즈+합병 모멘텀이 소화함. 이번 328M은 그것의 25% 규모. 단기 변동성 있을 수 있으나 Q1'27 $33~37B 가이던스가 흡수 여력 제공.",
+    contentEn: "SPCX 328M share lockup expires Oct 24 (Sat) — tradeable from Oct 26 (Mon). Oct 22 already absorbed 1.3B shares (largest single batch) on earnings + merger momentum. This batch is ~25% that size. Q1'27 guide $33-37B vs $22B consensus provides fundamental absorption capacity.",
+    likes: 98, comments: 0, created_at: "2026-10-24T00:05:00.000Z", liked: false,
+  },
+  {
+    id: -1662, alias: "수락산 독수리 #77", symbol: "TSLA",
+    content: "Tesla Cybercab 10개 도시 공식 확장(10/23 발표): 라스베이거스·피닉스·잭슨빌·샌안토니오 추가. 6개 도시 누적 3.4M 마일, 무인 2M 마일 사고 0건. 달라스 11월 Cybercab 전용 차량 투입. 연말 플릿 판매 시작 예고.",
+    contentEn: "Tesla Cybercab officially expanding to 10 cities (announced Oct 23): Las Vegas, Phoenix, Jacksonville, San Antonio added. 6-city cumulative: 3.4M miles; 2M unsupervised miles zero accidents. Dallas Cybercab-only launch in November. Fleet operator sales by year-end.",
+    likes: 124, comments: 0, created_at: "2026-10-24T00:07:00.000Z", liked: false,
+  },
+  {
+    id: -1663, alias: "관악산 새매 #52", symbol: "META",
+    content: "Meta Q3: 매출 $64.6B +26% 컨센 상회, adj EPS $7.40 vs $6.54E. GAAP 영업이익 -37%는 $9.9B 법적 합의 일회성 — 제외하면 실질 영업이익 성장. AI capex 분기 $34.9B(YoY +80%), 연간 가이던스 $135~145B으로 상향. Q4 가이던스 $73~76B.",
+    contentEn: "Meta Q3: Revenue $64.6B +26%, beats consensus. Adj EPS $7.40 vs $6.54E. GAAP operating income -37% is purely the $9.9B one-time legal charge — strip it and core operating income grew. AI capex $34.9B (YoY +80%), full-year guide raised to $135-145B. Q4 guide $73-76B.",
+    likes: 83, comments: 0, created_at: "2026-10-24T00:09:00.000Z", liked: false,
+  },
+  {
+    id: -1664, alias: "청계산 황로 #28", symbol: "TSLA",
+    content: "Optimus 프리몬트 생산라인 공식 가동. Model S/X 라인 46일 만에 전환 완료, 첫 양산품질 로봇 출고. 머스크: 'S커브 초입, 1M/년 라인 대부분 설치, 전기기계·AI 이슈 내년 말 해결 예상'. 텍사스 라인 건설 중.",
+    contentEn: "Optimus Fremont production line officially running. Model S/X line retooled in 46 days, first production-quality bots shipped. Musk: 'S-curve initial stage, 1M/yr line mostly installed, design and AI issues target end of next year.' Texas line under construction.",
+    likes: 91, comments: 0, created_at: "2026-10-24T00:11:00.000Z", liked: false,
+  },
   // ── 2026-10-23 신규 ──────────────────────────
   {
     id: -1651, alias: "북한산 매 #14", symbol: "TSLA",

@@ -47,6 +47,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T24OCT = 1792796400000; // 2026-10-24 09:00 KST (토)
 const T23OCT = 1792710000000; // 2026-10-23 08:00 KST
 const T22OCT = 1792623600000; // 2026-10-22 08:00 KST
 const T18OCT = 1792278000000; // 2026-10-18 08:00 KST
@@ -145,7 +146,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T23OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T24OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -164,6 +165,67 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-24 (토) 주말 자체수집 ─────────────────────
+  { id: 122395, symbol: "SPCX", nickname: "잠금해제월요일주의", holdingLabel: "보유중",
+    content: "SPCX 328M주 잠금해제 만기가 오늘(토) 도래함. 토요일이라 실제 매도는 월요일(10/26)부터 가능. 10/22에 1.3B주 이미 해제됐는데 주가가 버텼잖아. 이번 328M은 그것의 25% 수준. 근데 월요일 장 초반은 변동성 있을 수 있음",
+    contentEn: "SPCX 328M share lock-up expires today (Saturday) — tradeable from Monday Oct 26. Oct 22 already released 1.3B shares and the stock held. This batch is 25% that size. Still, expect volatility at Monday open.",
+    createdAt: T24OCT + 5*60_000, likes: 143, comments: 0 },
+  { id: 122396, symbol: "SPCX", nickname: "1.3B흡수가진짜신호", holdingLabel: "장투중",
+    content: "10/22에 1.3B주(IPO 이후 최대 단일 배치) 해제됐는데 주가가 빠지지 않음. Q3 어닝 +250% 비트+합병 특위가 그 물량을 다 받아냄. 시장이 강하다는 증거. 오늘 328M주는 부담이 아님",
+    contentEn: "1.3B shares (largest single IPO batch) were released on Oct 22 — the stock didn't break down. Q3 earnings 250% beat + merger committee absorbed all of it. Market showed real strength. Today's 328M is not the problem.",
+    createdAt: T24OCT + 12*60_000, likes: 167, comments: 0 },
+  { id: 122397, symbol: "SPCX", nickname: "Q1가이던스흡수논리", holdingLabel: "장기보유중",
+    content: "Q1 27 가이던스 $33~37B vs 컨센서스 $22B이 50~68% 초과. 연환산 $132~148B. BofA '$100B 런레이트 2026년 내 현실화 접근'. JPM 목표가 $500. 이게 잠금해제 물량 흡수 근거임. 펀더멘털이 공급 압박을 이긴다",
+    contentEn: "Q1'27 guide $33-37B vs $22B consensus — 50-68% beat. Annualized $132-148B. BofA: '$100B run-rate approaching 2026.' JPM $500 target. This is the thesis that absorbs lock-up selling. Fundamentals beat supply pressure.",
+    createdAt: T24OCT + 19*60_000, likes: 121, comments: 0 },
+  { id: 122398, symbol: "TSLA", nickname: "사이버캡10개도시확정", holdingLabel: "장투중",
+    content: "어제(10/23) Tesla 공식 발표. 라스베이거스·피닉스·잭슨빌·샌안토니오 4개 도시 추가. 기존 오스틴·달라스·휴스턴·마이애미·올랜도·탬파 6개 합쳐서 총 10개 도시. 오스틴은 11월 US 그랑프리 앞두고 지오펜스도 확장함",
+    contentEn: "Tesla officially announced yesterday (Oct 23): adding Las Vegas, Phoenix, Jacksonville, San Antonio. With existing 6 cities (Austin, Dallas, Houston, Miami, Orlando, Tampa) = 10 total. Austin geofence also expanded ahead of the Nov US Grand Prix.",
+    createdAt: T24OCT + 26*60_000, likes: 198, comments: 0 },
+  { id: 122399, symbol: "TSLA", nickname: "달라스Cybercab십일월", holdingLabel: "장기보유중",
+    content: "달라스 11월에 핸들·페달 없는 진짜 Cybercab 차량이 처음 투입됨. 지금은 Model Y 기반인데 전용 차량으로 교체되는 건 오스틴에 이어 두 번째야. 연말엔 플릿 운영자한테 Cybercab 판매도 시작한다고",
+    contentEn: "Dallas gets actual Cybercab (no wheel, no pedals) in November — the first deployment outside Austin. Currently Model Y-based. Fleet operator Cybercab sales also planned by year-end. Two revenue streams: direct service + vehicle sales.",
+    createdAt: T24OCT + 33*60_000, likes: 154, comments: 0 },
+  { id: 122400, symbol: "TSLA", nickname: "3.4M마일6개도시", holdingLabel: "보유중",
+    content: "6개 운영 도시 누적 주행거리 합산 3.4M 마일. 무인(완전 무감독) 만으로는 2M 마일 달성에 사고 0건. QoQ 8배 성장. 이 안전 데이터가 규제 확장 근거고 나머지 4개 도시 허가의 기반이 되는 거",
+    contentEn: "6-city total: 3.4M cumulative miles. Unsupervised only: 2M miles, zero accidents, 8x QoQ. This safety record is the regulatory unlock key — it's why 4 new cities just got approved and why 9 EU countries opened up.",
+    createdAt: T24OCT + 40*60_000, likes: 137, comments: 0 },
+  { id: 122401, symbol: "TSLA", nickname: "프리몬트46일전환완료", holdingLabel: "장투중",
+    content: "Tesla 공식 주주 서한에 Optimus 프리몬트 생산라인 가동 확인. Model S/X 라인을 46일 만에 전환해서 첫 양산품질 로봇 출고함. 투자자 IR 문서에 처음 기록됨. 텍사스 라인은 아직 건설 중",
+    contentEn: "Tesla shareholder letter confirms Optimus Fremont production line is running. Model S/X line retooled in 46 days — first production-quality bots shipped. First time it appears in official IR documentation. Texas line still under construction.",
+    createdAt: T24OCT + 47*60_000, likes: 113, comments: 0 },
+  { id: 122402, symbol: "TSLA", nickname: "S커브초입1M년라인", holdingLabel: "장기보유중",
+    content: "머스크 말: '초기 양산 시작, S커브 초입, 프리몬트 1M/년 라인 대부분 완료, 전기기계·AI 이슈 내년 말 해결 목표'. 지구 최대 제품이라고 했는데 1년 더 걸린다는 거 현실적인 발언. 빠르면 2027년 말부터 스케일업",
+    contentEn: "Musk: 'Early production started, S-curve initial stage, vast majority of 1M/yr Fremont line installed, design and AI issues target end of next year.' Called it 'biggest product on Earth' — and asked people to adjust expectations by about one year. Scale-up earliest 2027 end.",
+    createdAt: T24OCT + 54*60_000, likes: 89, comments: 0 },
+  { id: 122403, symbol: "META", nickname: "메타Q3서프라이즈확인", holdingLabel: "보유중",
+    content: "Meta Q3: 매출 $64.6B +26% YoY 컨센 $63.4B 상회. adj EPS $7.40 vs 컨센 $6.54 +13% 비트. GAAP 영업이익이 -37% 빠진 건 $9.9B 법적 합의 일회성 비용 때문임. 실질 영업이익 $22.9B은 성장했음",
+    contentEn: "Meta Q3: Revenue $64.6B +26% YoY, beats $63.4B. Adj EPS $7.40 vs $6.54 est — 13% beat. GAAP operating income fell 37% but that's entirely the $9.9B one-time legal settlement. Core operating income $22.9B grew YoY.",
+    createdAt: T24OCT + 61*60_000, likes: 105, comments: 0 },
+  { id: 122404, symbol: "META", nickname: "AI캐펙스삼십사점구B", holdingLabel: "장기보유중",
+    content: "Meta Q3 AI 설비투자 $34.9B 분기 단위임. 전년 동기 $19.4B 대비 +80%. 연환산 $140B. 연간 capex 가이던스도 $115~135B에서 $135~145B으로 상향. 빅테크 4사 합산 $725B짜리 AI 인프라 투자 사이클이 계속 가속 중",
+    contentEn: "Meta Q3 AI capex $34.9B — in a single quarter, up 80% from $19.4B a year ago. Annualized ~$140B. Full-year capex guidance raised from $115-135B to $135-145B. Big-4 combined ~$725B AI capex cycle keeps accelerating.",
+    createdAt: T24OCT + 68*60_000, likes: 92, comments: 0 },
+  { id: 122405, symbol: "META", nickname: "Q4가이던스칠삼칠육B", holdingLabel: "매수고민",
+    content: "Meta Q4 가이던스 $73~76B 컨센 $73.7B 일치 수준. Muse AI 어시스턴트 500만 유저. WhatsApp·Instagram·Threads 30억 넘는 사용자 기반에 AI 붙이면 스케일 가능성 있음. Class C 주식 발행은 주커버그 의결권 유지 목적",
+    contentEn: "Meta Q4 guide $73-76B (midpoint in-line with $73.7B consensus). Muse AI: 5M users. WhatsApp, Instagram, Threads — 3B+ user base as distribution for AI products is unmatched. Class C shares = Zuckerberg keeps voting control while raising capital.",
+    createdAt: T24OCT + 75*60_000, likes: 71, comments: 0 },
+  { id: 122406, symbol: "GOOGL", nickname: "구글클라우드삼십퍼기대", holdingLabel: "관심종목",
+    content: "10/28 Alphabet 어닝. Google Cloud 성장률 컨센서스 +30%. 실제로 30% 넘으면 AI 수요 가속 확인. Gemini 매출 기여가 구체화됐는지도 포인트. Search 광고는 AI 오버뷰 도입 후 CTR 변화가 관건. 내일 오후 4시 결과 나옴",
+    contentEn: "Alphabet reports Oct 28. Google Cloud consensus: +30%. If it beats 30%, AI demand acceleration confirmed. Key: Gemini revenue contribution, and whether AI Overviews hurt Search ad CTR. Results out tomorrow 4pm ET.",
+    createdAt: T24OCT + 82*60_000, likes: 84, comments: 0 },
+  { id: 122407, symbol: "MSFT", nickname: "Azure이십오퍼이상나와라", holdingLabel: "보유중",
+    content: "10/28 Microsoft 어닝. Azure 성장률 컨센서스 +25%. Copilot 365 MAU 공개되면 AI 수익화 진행 상황 확인 가능. capex 가이던스 $180~190B에서 추가 상향 있으면 AI 투자 사이클 더 길어짐. GOOGL이랑 같은 날이라 비교되는 날",
+    contentEn: "Microsoft reports Oct 28. Azure consensus +25%. Copilot 365 MAU disclosure would confirm AI monetization progress. If capex guidance goes above $180-190B, the AI investment cycle extends further. Same day as Alphabet — the comparison will be instant.",
+    createdAt: T24OCT + 89*60_000, likes: 79, comments: 0 },
+  { id: 122408, symbol: "AMZN", nickname: "AWS이십이퍼방어선", holdingLabel: "장기보유중",
+    content: "10/29 Amazon 어닝. AWS 성장률 컨센서스 +22%. AI 인스턴스 수요가 공급 제약 받는지 어닝콜에서 확인 가능. Trainium2 리드타임이나 대기열 언급 나오면 NVDA 공급 부족이랑 같은 맥락임. 아마존 광고 매출 성장도 체크 포인트",
+    contentEn: "Amazon reports Oct 29. AWS consensus +22%. The call should reveal whether AI instance demand is supply-constrained. Any Trainium2 waitlist or lead-time comment is the same supply crunch NVDA is talking about. Amazon ad revenue growth is the other key metric.",
+    createdAt: T24OCT + 96*60_000, likes: 68, comments: 0 },
+  { id: 122409, symbol: "SPCX", nickname: "빅테크725B이SPCX수요근거", holdingLabel: "장투중",
+    content: "Meta $34.9B 분기 AI capex. 빅4 합산 $725B 연간. 이게 다 GPU 데이터센터 전력에 들어감. 머스크가 어닝콜서 NVDA GB300 H100 구글TPU 아마존Trainium 전부 재고없다고 했잖아. SPCX가 자체 10GW 짓는 이유가 이거임. 수요가 외부 공급 초과",
+    contentEn: "Meta's $34.9B Q3 AI capex. Big-4 combined ~$725B per year. All flowing into GPUs, data centers, power. Musk on the call: NVDA GB300, H100, Google TPU, Amazon Trainium — all out of stock globally. That's exactly why SPCX is building 10GW internally. Demand exceeds external supply.",
+    createdAt: T24OCT + 103*60_000, likes: 156, comments: 0 },
   // ── 2026-10-23 신규 ────────────────────
   { id: 122380, symbol: "TSLA", nickname: "총마진회복확인자", holdingLabel: "장투중",
     content: "Q3 총마진 19.6% 나왔네. Q2 16.8%에서 +2.8%p 올라온 거 맞음. Q3 25년 18.0%도 뛰어넘음. 12개월 누적 매출 $100B 2분기 연속이고 서비스 총이익 $724M 역대 최고라는데 이게 진짜 숨겨진 핵심임",

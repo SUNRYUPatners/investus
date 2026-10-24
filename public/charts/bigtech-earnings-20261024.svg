@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#020814"/><stop offset="100%" stop-color="#0A0510"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#00BCF2"/><stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#00BCF2"/><stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="54" y="54" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">2026.10.24</text>
+  <text x="1026" y="54" text-anchor="end" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">@investus.kr</text>
+  <rect x="54" y="68" width="130" height="40" rx="20" fill="#04141A"/>
+  <rect x="54" y="68" width="130" height="40" rx="20" fill="none" stroke="#00BCF2" stroke-width="2"/>
+  <text x="119" y="94" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#7DD3FC"># TECH</text>
+  <rect x="196" y="68" width="180" height="40" rx="20" fill="#100A28"/>
+  <rect x="196" y="68" width="180" height="40" rx="20" fill="none" stroke="#A855F7" stroke-width="2"/>
+  <text x="286" y="94" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#D8B4FE"># EARNINGS</text>
+  <rect x="54" y="120" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="198" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="url(#heroG)" filter="url(#glow)">어닝 위크</text>
+  <text x="540" y="244" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">10/28~29 · MSFT · GOOGL · AMZN</text>
+  <rect x="54" y="274" width="972" height="186" rx="18" fill="#0F1623" stroke="#00BCF2" stroke-width="2"/><rect x="54" y="274" width="8" height="186" rx="4" fill="#00BCF2"/><text x="90" y="336" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#00BCF2">Microsoft</text><text x="90" y="376" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">MSFT · 10/28 (수)</text><text x="90" y="414" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">클라우드 Azure +25% · Copilot 매출화</text><text x="1002" y="368" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#00BCF2">발표 예정</text><rect x="54" y="488" width="972" height="186" rx="18" fill="#0F1623" stroke="#4285F4" stroke-width="2"/><rect x="54" y="488" width="8" height="186" rx="4" fill="#4285F4"/><text x="90" y="550" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#4285F4">Alphabet</text><text x="90" y="590" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">GOOGL · 10/28 (수)</text><text x="90" y="628" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">Google Cloud +30% · AI Overviews 광고</text><text x="1002" y="582" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#4285F4">발표 예정</text><rect x="54" y="702" width="972" height="186" rx="18" fill="#0F1623" stroke="#FF9900" stroke-width="2"/><rect x="54" y="702" width="8" height="186" rx="4" fill="#FF9900"/><text x="90" y="764" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#FF9900">Amazon</text><text x="90" y="804" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">AMZN · 10/29 (목)</text><text x="90" y="842" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">AWS +22% · AI 서비스 가속</text><text x="1002" y="796" text-anchor="end" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#FF9900">발표 예정</text>
+  <rect x="54" y="904" width="308" height="180" rx="18" fill="#0F1623" stroke="#A855F7" stroke-width="2"/>
+  <text x="208" y="938" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">빅테크 AI capex</text>
+  <text x="208" y="1000" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A855F7">$725B</text>
+  <text x="208" y="1032" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">2026년 합산 예상</text>
+  <text x="208" y="1062" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">4대 하이퍼스케일러</text>
+  <rect x="386" y="904" width="308" height="180" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+  <text x="540" y="938" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">META Q3 capex</text>
+  <text x="540" y="1000" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#3B82F6">$34.9B</text>
+  <text x="540" y="1032" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">연환산 $140B</text>
+  <text x="540" y="1062" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">전분기 $31B 대비 +13%</text>
+  <rect x="718" y="904" width="308" height="180" rx="18" fill="#0F1623" stroke="#EC4899" stroke-width="2"/>
+  <text x="872" y="938" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">합병 시너지</text>
+  <text x="872" y="1000" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#EC4899">$3.63T</text>
+  <text x="872" y="1032" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">TSLA+SPCX 합산</text>
+  <text x="872" y="1062" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">글로벌 시총 5위</text>
+  <rect x="54" y="1100" width="972" height="182" rx="22" fill="#0F0A00" stroke="#0C4A6E" stroke-width="2.5"/>
+  <rect x="54" y="1100" width="972" height="5" rx="3" fill="#00BCF2"/>
+  <text x="108" y="1144" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">이번주 핵심 관전 포인트</text>
+  <rect x="108" y="1152" width="864" height="1" fill="#0C4A6E"/>
+  <text x="108" y="1172" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Azure·AWS 클라우드 성장률 → SpaceX AI 수요와 경쟁 vs 보완 구도.</text><text x="108" y="1206" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">AI 설비투자 가이던스 → $725B 합산 유지 여부 확인.</text><text x="108" y="1240" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">TSLA-SPCX 합병 업데이트 가능성 · 관련 발언 주목.</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

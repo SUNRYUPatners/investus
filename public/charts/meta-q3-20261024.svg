@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#020814"/><stop offset="100%" stop-color="#06001A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="54" y="54" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">2026.10.24</text>
+  <text x="1026" y="54" text-anchor="end" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">@investus.kr</text>
+  <rect x="54" y="68" width="130" height="40" rx="20" fill="#0A0E2A"/>
+  <rect x="54" y="68" width="130" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="119" y="94" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#93C5FD"># META</text>
+  <rect x="196" y="68" width="160" height="40" rx="20" fill="#1A1040"/>
+  <rect x="196" y="68" width="160" height="40" rx="20" fill="none" stroke="#818CF8" stroke-width="2"/>
+  <text x="276" y="94" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C7D2FE"># Q3 2026</text>
+  <rect x="54" y="120" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="206" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="80" font-weight="900" fill="url(#heroG)" filter="url(#glow)">+26%</text>
+  <text x="540" y="254" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#F3F4F6">매출 $64.6B — AI capex $34.9B 급증</text>
+  <text x="540" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#818CF8">Q3 2026 어닝 · 2026년 10월 21일 발표</text>
+  <rect x="200" y="308" width="680" height="2" fill="url(#accentG)" opacity="0.3"/>
+  <rect x="54" y="322" width="308" height="190" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+  <text x="208" y="356" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Q3 매출</text>
+  <text x="208" y="418" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#3B82F6">$64.6B</text>
+  <text x="208" y="450" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">+26% YoY</text>
+  <text x="208" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">컨센서스 $63.4B 상회</text>
+  <rect x="386" y="322" width="308" height="190" rx="18" fill="#0F1623" stroke="#818CF8" stroke-width="2"/>
+  <text x="540" y="356" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">조정 EPS</text>
+  <text x="540" y="418" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#818CF8">$7.40</text>
+  <text x="540" y="450" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">vs 컨센서스 $6.54</text>
+  <text x="540" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">+13.1% 어닝 서프라이즈</text>
+  <rect x="718" y="322" width="308" height="190" rx="18" fill="#0F1623" stroke="#EF4444" stroke-width="2"/>
+  <text x="872" y="356" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">AI 설비투자</text>
+  <text x="872" y="418" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#EF4444">$34.9B</text>
+  <text x="872" y="450" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">(연환산 $140B+)</text>
+  <text x="872" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Q3'25 $19.4B 대비 +80%</text>
+  <rect x="54" y="528" width="308" height="190" rx="18" fill="#0F1623" stroke="#10B981" stroke-width="2"/>
+  <text x="208" y="562" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Q4 매출 가이던스</text>
+  <text x="208" y="624" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#10B981">$73-76B</text>
+  <text x="208" y="656" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">컨센서스 $73.7B</text>
+  <text x="208" y="686" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">중간값 $74.5B</text>
+  <rect x="386" y="528" width="308" height="190" rx="18" fill="#0F1623" stroke="#F59E0B" stroke-width="2"/>
+  <text x="540" y="562" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">연간 capex 상향</text>
+  <text x="540" y="624" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F59E0B">$135-145B</text>
+  <text x="540" y="656" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">(기존 $115-135B)</text>
+  <text x="540" y="686" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">AI 인프라 투자 가속</text>
+  <rect x="718" y="528" width="308" height="190" rx="18" fill="#0F1623" stroke="#6B7280" stroke-width="2"/>
+  <text x="872" y="562" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">잉여현금흐름</text>
+  <text x="872" y="624" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#6B7280">-$2.1B</text>
+  <text x="872" y="656" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">설비투자 급증 효과</text>
+  <text x="872" y="686" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">법적비용 $9.9B 일회성</text>
+  <!-- capex bar chart -->
+  <text x="540" y="758" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#9CA3AF">META AI 설비투자 추이</text>
+  <rect x="54" y="770" width="972" height="2" fill="#1F2937"/>
+  <rect x="160" y="800" width="110" height="100" rx="8" fill="#4B5563"/>
+<text x="215" y="790" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#4B5563">$19.4B</text>
+<text x="215" y="922" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#9CA3AF">Q3'25</text><rect x="315" y="787" width="110" height="113" rx="8" fill="#4B5563"/>
+<text x="370" y="777" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#4B5563">$22B</text>
+<text x="370" y="922" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#9CA3AF">Q4'25</text><rect x="470" y="756" width="110" height="144" rx="8" fill="#3B82F6"/>
+<text x="525" y="746" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#3B82F6">$28B</text>
+<text x="525" y="922" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#9CA3AF">Q1'26</text><rect x="625" y="740" width="110" height="160" rx="8" fill="#3B82F6"/>
+<text x="680" y="730" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#3B82F6">$31B</text>
+<text x="680" y="922" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#9CA3AF">Q2'26</text><rect x="780" y="720" width="110" height="180" rx="8" fill="#818CF8"/>
+<text x="835" y="710" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#818CF8">$34.9B</text>
+<text x="835" y="922" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#9CA3AF">Q3'26</text>
+  <rect x="54" y="940" width="972" height="342" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <rect x="54" y="940" width="972" height="5" rx="3" fill="#3B82F6"/>
+  <text x="108" y="984" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">핵심 시사점</text>
+  <rect x="108" y="992" width="864" height="1" fill="#1E3A5F"/>
+  <text x="108" y="1012" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">$9.9B 법적 합의 → 일회성. 실질 영업이익 $22.9B은 전년 대비 성장.</text><text x="108" y="1046" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">AI capex $34.9B/분기 = 연환산 $140B. Muse 500만 유저 돌파.</text><text x="108" y="1080" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Q4 가이던스 $73-76B: AI 광고 효율·Reels 성장이 계속 매출 견인.</text><text x="108" y="1114" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">빅테크 AI 인프라 합산 $725B → SpaceX 수요 흡수 능력 검증 중.</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>
