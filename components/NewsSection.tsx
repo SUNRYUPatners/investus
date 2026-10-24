@@ -10,15 +10,28 @@ const INITIAL_COUNT = 4;
 
 function NewsSkeleton() {
   return (
-    <div className="flex flex-col gap-3">
-      {Array.from({ length: INITIAL_COUNT }).map((_, i) => (
-        <div
-          key={i}
-          className="rounded-2xl border animate-pulse"
-          style={{ background: "var(--card)", borderColor: "var(--border)", height: 80 }}
-        />
-      ))}
-    </div>
+    <>
+      {/* mobile: horizontal skeleton */}
+      <div className="flex flex-row gap-3 overflow-x-auto pb-2 -mx-4 px-4 lg:hidden">
+        {Array.from({ length: INITIAL_COUNT }).map((_, i) => (
+          <div
+            key={i}
+            className="flex-shrink-0 w-[280px] rounded-2xl border animate-pulse"
+            style={{ background: "var(--card)", borderColor: "var(--border)", height: 80 }}
+          />
+        ))}
+      </div>
+      {/* desktop: vertical skeleton */}
+      <div className="hidden lg:flex flex-col gap-3">
+        {Array.from({ length: INITIAL_COUNT }).map((_, i) => (
+          <div
+            key={i}
+            className="rounded-2xl border animate-pulse"
+            style={{ background: "var(--card)", borderColor: "var(--border)", height: 80 }}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -78,7 +91,7 @@ export function NewsSection({
         {loaded && news.length > INITIAL_COUNT && (
           <button
             onClick={() => setExpanded((v) => !v)}
-            className="flex items-center gap-0.5 text-xs font-medium transition-opacity hover:opacity-80"
+            className="hidden lg:flex items-center gap-0.5 text-xs font-medium transition-opacity hover:opacity-80"
             style={{ color: "var(--mint)" }}
           >
             {expanded ? (
@@ -94,7 +107,20 @@ export function NewsSection({
         <NewsSkeleton />
       ) : (
         <>
-          <div className="flex flex-col gap-3">
+          {/* mobile: horizontal snap scroll */}
+          <div
+            className="no-scrollbar flex flex-row gap-3 overflow-x-auto pb-2 -mx-4 px-4 lg:hidden"
+            style={{ scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" }}
+          >
+            {news.map((item) => (
+              <div key={item.id} className="flex-shrink-0 w-[280px]" style={{ scrollSnapAlign: "start" }}>
+                <NewsCard item={item} />
+              </div>
+            ))}
+          </div>
+
+          {/* desktop: vertical list with expand */}
+          <div className="hidden lg:flex flex-col gap-3">
             {visible.map((item) => (
               <NewsCard key={item.id} item={item} large={expanded} />
             ))}
@@ -103,7 +129,7 @@ export function NewsSection({
           {!expanded && news.length > INITIAL_COUNT && (
             <button
               onClick={() => setExpanded(true)}
-              className="w-full mt-3 py-2.5 rounded-2xl text-xs font-semibold transition-opacity hover:opacity-80"
+              className="hidden lg:block w-full mt-3 py-2.5 rounded-2xl text-xs font-semibold transition-opacity hover:opacity-80"
               style={{ background: "rgba(255,255,255,0.04)", color: "var(--muted)", border: "1px solid var(--border)" }}
             >
               {isKo ? `뉴스 ${news.length - INITIAL_COUNT}개 더보기` : `Load ${news.length - INITIAL_COUNT} more`}
