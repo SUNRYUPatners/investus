@@ -81,40 +81,43 @@ export function MarketHomeShell({
         </div>
       )}
 
-      <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 lg:pb-10">
-        {/* QuickTickers — 바로 시세 확인 (전체 너비) */}
+      <main className="max-w-[480px] mx-auto lg:max-w-screen-2xl lg:px-8 lg:pb-10">
+        {/* QuickTickers — 모바일: 가로 스크롤 / 데스크탑: 6열 그리드 */}
         <section className="pt-3">
           <QuickTickers />
         </section>
 
-        <div className="lg:flex lg:gap-8 lg:items-start lg:pt-2">
+        <div className="lg:flex lg:gap-8 lg:items-start lg:pt-3">
           <div className="lg:flex-1 lg:min-w-0">
-            {/* 1. 모닝 브리핑 — 하루 컨텍스트 */}
+            {/* 1. 모닝 브리핑 */}
             <section className="px-4 lg:px-0 pt-3">
               <MorningBriefingCard locale={uiLocale} market={market} />
             </section>
 
-            {/* 2. 리포트 — 핵심 콘텐츠 (모바일: 가로 스와이프) */}
-            <section className="pt-3 lg:pt-4">
-              <ReportFeed market={market} />
-            </section>
-
-            {/* 3. 뉴스 — 최신 소식 (모바일: 가로 스와이프, 데스크탑: 사이드바) */}
-            <section className="pt-4 lg:hidden">
-              <NewsSection market={market} />
-            </section>
-
-            {/* 4. 관심종목 */}
-            <WatchlistSection />
-
-            {/* 5. 실시간 시장 */}
+            {/* 2. 실시간 시장 — 데스크탑에서 두 번째 (핵심 시세) */}
             {isUs ? (
               <LiveMarket initialData={initialData} />
             ) : (
               <MarketLiveMarket market={market} />
             )}
 
-            {/* 6. 공포/탐욕 (모바일: 여기, 데스크탑: 사이드바) */}
+            {/* 3. 가입 CTA (비로그인에만 표시) */}
+            <HomeValueStrip market={market} />
+
+            {/* 4. 관심종목 */}
+            <WatchlistSection />
+
+            {/* 5. 리포트 — 핵심 콘텐츠 (모바일: 가로 스와이프) */}
+            <section className="pt-3 lg:pt-4">
+              <ReportFeed market={market} />
+            </section>
+
+            {/* 6. 뉴스 — 모바일 전용 (데스크탑: 사이드바) */}
+            <section className="pt-4 lg:hidden">
+              <NewsSection market={market} />
+            </section>
+
+            {/* 7. 공포/탐욕 — 모바일 전용 (데스크탑: 사이드바) */}
             {showFear && (
               <>
                 <section className="px-4 lg:hidden pt-4">
@@ -132,18 +135,17 @@ export function MarketHomeShell({
               </>
             )}
 
-            {/* 7. 포트폴리오 */}
+            {/* 8. 포트폴리오 */}
             {isUs ? <PortfolioWidget /> : <MarketPortfolioStub market={market} />}
 
-            {/* 8. 보조 콘텐츠 (하단) */}
-            <HomeValueStrip market={market} />
-
-            <section className="px-4 lg:px-0 pt-3">
+            {/* 9. TodaysGuide — 모바일 전용 (데스크탑: 사이드바) */}
+            <section className="px-4 lg:hidden pt-3">
               <TodaysGuideCard locale={uiLocale} />
             </section>
 
+            {/* 10. AIInsight — 모바일 전용 (데스크탑: 사이드바) */}
             {market !== "kr-re" && (
-              <section className="px-4 lg:px-0 pt-3">
+              <section className="px-4 lg:hidden pt-3">
                 <HomeAIInsight market={market} />
               </section>
             )}
@@ -156,7 +158,8 @@ export function MarketHomeShell({
           </div>
 
           {/* 데스크탑 사이드바 */}
-          <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
+          <div className="hidden lg:flex lg:flex-col lg:w-[360px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
+            {/* 감정 지수 */}
             {showFear && (
               <>
                 {isUs ? (
@@ -167,7 +170,12 @@ export function MarketHomeShell({
                 {showBuffett && <BuffettWidget locale={uiLocale} />}
               </>
             )}
+            {/* 오늘의 가이드 */}
+            <TodaysGuideCard locale={uiLocale} />
+            {/* 뉴스 */}
             <NewsSection market={market} />
+            {/* AI 인사이트 */}
+            {market !== "kr-re" && <HomeAIInsight market={market} />}
             <AdFitBanner />
           </div>
         </div>

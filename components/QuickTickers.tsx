@@ -51,7 +51,7 @@ export function QuickTickers() {
 
   return (
     <div
-      className="no-scrollbar flex flex-row gap-2.5 overflow-x-auto px-4 lg:px-0 pb-0.5"
+      className="no-scrollbar flex flex-row gap-2.5 overflow-x-auto px-4 pb-0.5 lg:grid lg:grid-cols-6 lg:gap-3 lg:overflow-visible lg:px-0"
       style={{ scrollSnapType: "x mandatory" }}
     >
       {SYMBOLS.map(({ sym, label, color }) => {
@@ -63,7 +63,7 @@ export function QuickTickers() {
           <Link
             key={sym}
             href={`/stock/${sym}`}
-            className="flex-shrink-0 flex flex-col gap-0.5 px-3 py-2.5 rounded-2xl border no-underline"
+            className="flex-shrink-0 flex flex-col gap-0.5 px-3 py-2.5 rounded-2xl border no-underline lg:flex-shrink lg:min-w-0 lg:px-4 lg:py-3.5"
             style={{
               scrollSnapAlign: "start",
               background: "var(--card)",
@@ -71,11 +71,11 @@ export function QuickTickers() {
               minWidth: 88,
             }}
           >
-            <span className="text-[11px] font-bold" style={{ color }}>{label}</span>
-            <span className="text-[15px] font-bold font-mono-num tabular-nums leading-tight" style={{ color: "var(--text)" }}>
+            <span className="text-[11px] font-bold lg:text-[12px]" style={{ color }}>{label}</span>
+            <span className="text-[15px] font-bold font-mono-num tabular-nums leading-tight lg:text-[18px]" style={{ color: "var(--text)" }}>
               {p ? fmt(p.price, sym) : "—"}
             </span>
-            <span className="text-[11px] font-mono-num font-semibold" style={{ color: pctColor }}>
+            <span className="text-[11px] font-mono-num font-semibold lg:text-[12px]" style={{ color: pctColor }}>
               {p ? `${pos ? "+" : ""}${p.changePercent.toFixed(2)}%` : "—"}
             </span>
           </Link>
