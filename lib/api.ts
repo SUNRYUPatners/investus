@@ -141,6 +141,24 @@ const mockIndices: IndexQuote[] = [
     changePercent: 4.1,
     sparkline: [18, 19, 20, 19.5, 21, 20.5, 19.8, 20.2, 20.5],
   },
+  {
+    symbol: "TNX",
+    name: "10Y Yield",
+    fullName: "US 10-Year Treasury Yield",
+    value: 4.21,
+    change: 0.03,
+    changePercent: 0.72,
+    sparkline: [4.10, 4.12, 4.15, 4.17, 4.18, 4.19, 4.20, 4.21, 4.21],
+  },
+  {
+    symbol: "SOX",
+    name: "PHLX Semi",
+    fullName: "Philadelphia Semiconductor Index",
+    value: 5184.3,
+    change: -42.1,
+    changePercent: -0.81,
+    sparkline: [5240, 5230, 5220, 5210, 5200, 5195, 5190, 5186, 5184],
+  },
 ];
 
 const mockQuotes: Quote[] = [

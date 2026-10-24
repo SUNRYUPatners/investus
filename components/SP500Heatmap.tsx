@@ -161,7 +161,7 @@ function SectorBlock({
                   {s.symbol}
                 </p>
                 <p
-                  className="text-[8px] leading-tight truncate mt-0.5 font-medium"
+                  className="hidden lg:block text-[8px] leading-tight truncate mt-0.5 font-medium"
                   style={{ color: c.sub }}
                 >
                   {s.name}

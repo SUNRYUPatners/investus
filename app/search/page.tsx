@@ -24,7 +24,7 @@ import type { MarketId } from "@/lib/markets/types";
 const UP   = "var(--up)";
 const DOWN = "var(--down)";
 
-const POPULAR_US_FALLBACK = ["TSLA", "SPCX", "BTC", "ETH", "NVDA", "DOGE", "SOL", "PLTR", "AAPL", "MSFT", "AMZN", "META", "AMD", "GOOGL", "RKLB"];
+const POPULAR_US_FALLBACK = ["TSLA", "SPCX", "NVDA", "BTC", "PLTR", "AAPL", "MSFT", "AMZN", "META", "RKLB"];
 
 // Static symbol registry — source of truth for symbol + name only (US)
 const SYMBOL_REGISTRY_US = mockQuotes.map(({ symbol, name, volume, marketCap }) => ({

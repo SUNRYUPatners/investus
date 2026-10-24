@@ -676,25 +676,8 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
       {/* Report cards */}
       {all.length > 0 && (
         <>
-          {/* 모바일: 가로 snap scroll */}
-          <div
-            className="no-scrollbar lg:hidden flex flex-row overflow-x-auto gap-3 -mx-4 px-4 pb-2"
-            style={{ scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" }}
-          >
-            {[...latest.free, ...older.free].map((r) => (
-              <div key={r.id} className="flex-shrink-0 w-[300px]" style={{ scrollSnapAlign: "start" }}>
-                <ReportCard report={r} lang={feedLang} />
-              </div>
-            ))}
-            {latest.locked.length + older.locked.length > 0 && (
-              <div className="flex-shrink-0 w-[300px]" style={{ scrollSnapAlign: "start" }}>
-                <LockedReportGroup reports={[...latest.locked, ...older.locked]} />
-              </div>
-            )}
-          </div>
-
-          {/* 데스크톱: 세로 목록 + 더보기 */}
-          <div className="hidden lg:flex flex-col gap-3">
+          {/* 세로 목록 + 더보기 (모바일·데스크탑 공통) */}
+          <div className="flex flex-col gap-3">
             {latest.free.map((r) => <ReportCard key={r.id} report={r} lang={feedLang} />)}
             {latest.locked.length > 0 && <LockedReportGroup reports={latest.locked} />}
 
