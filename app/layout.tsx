@@ -252,7 +252,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <PWAInstallPrompt />
             <div className="lg:min-h-screen">
               <DesktopSidebar />
-              <div className="lg:pl-64" style={{ background: "var(--bg)" }}>
+              <div style={{ background: "var(--bg)" }}>
                 {children}
                 <SiteLegalFooter />
               </div>

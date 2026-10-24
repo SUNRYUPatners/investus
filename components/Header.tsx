@@ -1,21 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { LogoMark } from "@/components/LogoMark";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isMarketSessionOpen, isStockMarketOpen } from "@/lib/markets/hours";
-import { parseMarketPath } from "@/lib/markets/marketPath";
+import { parseMarketPath, marketHref, type MarketTab } from "@/lib/markets/marketPath";
 import { GuestStartButton } from "@/components/GuestStartButton";
 import { useAuth } from "@/hooks/useAuth";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
+
+const NAV_TABS: MarketTab[] = ["home", "search", "portfolio", "wall", "insight", "more"];
 
 export function Header() {
   const t = useLocale();
   const locale = useLocaleCode();
   const isKo = locale === "ko";
   const pathname = usePathname() ?? "";
-  const { market } = parseMarketPath(pathname);
+  const router = useRouter();
+  const { market, tab } = parseMarketPath(pathname);
   const cfg = getMarketConfig(market);
   const { user, loaded } = useAuth();
   const isGuest = loaded && !user;
@@ -49,6 +53,18 @@ export function Header() {
     return () => clearInterval(id);
   }, [market, cfg.timezone]);
 
+  const navItems = NAV_TABS.map((tabKey) => ({
+    href: marketHref(market, tabKey),
+    label:
+      tabKey === "home"      ? t.nav.home
+      : tabKey === "search"  ? t.nav.search
+      : tabKey === "portfolio" ? t.nav.portfolio
+      : tabKey === "wall"    ? t.nav.wall
+      : tabKey === "insight" ? t.nav.insight
+      : t.nav.more,
+    tabKey,
+  }));
+
   return (
     <>
       <header
@@ -59,17 +75,58 @@ export function Header() {
           paddingTop: "env(safe-area-inset-top)",
         }}
       >
-        <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
-            <LogoMark size="sm" />
-            <span
-              className="text-lg font-bold tracking-tight font-syne"
-              style={{ color: "var(--navy)" }}
-            >
-              Investus
-            </span>
-          </div>
+        <div className="max-w-[480px] lg:max-w-screen-2xl mx-auto px-4 lg:px-8 h-14 flex items-center justify-between gap-4">
 
+          {/* 로고 + 브랜드 */}
+          <Link href={marketHref(market, "home")} className="flex items-center gap-2 no-underline flex-shrink-0">
+            <LogoMark size="sm" />
+            <div className="leading-none">
+              <div
+                className="text-lg font-bold tracking-tight font-syne leading-tight"
+                style={{ color: "var(--navy)" }}
+              >
+                Investus
+              </div>
+              <div
+                className="hidden lg:block text-[10px] font-medium leading-tight mt-0.5"
+                style={{ color: "var(--muted)" }}
+              >
+                {isKo ? "테슬라 · 스페이스엑스 · 머스크 생태계" : "TSLA · SpaceX · Musk Ecosystem"}
+              </div>
+            </div>
+          </Link>
+
+          {/* 데스크탑 수평 nav */}
+          <nav className="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
+            {navItems.map(({ href, label, tabKey }) => {
+              const isActive = tabKey === tab;
+              return (
+                <button
+                  key={href}
+                  onClick={() => {
+                    if (isActive) window.scrollTo({ top: 0, behavior: "smooth" });
+                    else router.push(href);
+                  }}
+                  className="px-3.5 py-1.5 rounded-xl text-sm font-semibold transition-all"
+                  style={
+                    isActive
+                      ? { background: "rgba(var(--mint-rgb),0.14)", color: "var(--navy)" }
+                      : { color: "var(--muted)" }
+                  }
+                >
+                  {label}
+                  {isActive && (
+                    <span
+                      className="ml-1.5 inline-block w-1 h-1 rounded-full align-middle"
+                      style={{ background: "var(--mint)" }}
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </nav>
+
+          {/* 우측: 로그인 + 시간 + 마켓 상태 */}
           <div className="flex items-center gap-2 flex-shrink-0">
             <GuestStartButton compact />
             {mounted && (
@@ -92,17 +149,10 @@ export function Header() {
                     {open ? (isKo ? "● 장중" : t.header.marketOpen) : (isKo ? "● CLOSED" : t.header.marketClosed)}
                   </span>
                 )}
-                {open && market === "us" && (
-                  <span
-                    className="text-[9px] font-mono-num"
-                    style={{ color: "var(--muted)", opacity: 0.6 }}
-                  >
-                    ↻ 60s
-                  </span>
-                )}
               </div>
             )}
           </div>
+
         </div>
       </header>
     </>

@@ -60,7 +60,7 @@ export function DesktopSidebar() {
 
   return (
     <aside
-      className="hidden lg:flex flex-col fixed top-0 left-0 h-full w-64 border-r z-40"
+      className="hidden flex-col fixed top-0 left-0 h-full w-64 border-r z-40"
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
       <div className="px-5 py-5 border-b" style={{ borderColor: "var(--border)" }}>
