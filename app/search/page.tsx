@@ -24,7 +24,7 @@ import type { MarketId } from "@/lib/markets/types";
 const UP   = "var(--up)";
 const DOWN = "var(--down)";
 
-const POPULAR_US = ["TSLA", "SPCX", "BTC", "ETH", "NVDA", "DOGE", "SOL", "PLTR"];
+const POPULAR_US_FALLBACK = ["TSLA", "SPCX", "BTC", "ETH", "NVDA", "DOGE", "SOL", "PLTR", "AAPL", "MSFT", "AMZN", "META", "AMD", "GOOGL", "RKLB"];
 
 // Static symbol registry — source of truth for symbol + name only (US)
 const SYMBOL_REGISTRY_US = mockQuotes.map(({ symbol, name, volume, marketCap }) => ({
@@ -124,10 +124,21 @@ export default function SearchPage() {
   const [, startTransition]   = useTransition();
   const [searchQuery, setSearchQuery] = useState("");
   const { list, toggle }      = useWatchlist();
+  const [trendingUs, setTrendingUs] = useState<string[]>(POPULAR_US_FALLBACK);
+
+  useEffect(() => {
+    if (!isUs) return;
+    fetch("/api/trending")
+      .then((r) => r.ok ? r.json() : null)
+      .then((d: { symbols?: string[] } | null) => {
+        if (Array.isArray(d?.symbols) && d.symbols.length >= 5) setTrendingUs(d.symbols);
+      })
+      .catch(() => {});
+  }, [isUs]);
 
   const POPULAR = useMemo(
-    () => (isUs ? POPULAR_US : cfg.popular.map((s) => s.symbol)),
-    [isUs, cfg.popular],
+    () => (isUs ? trendingUs : cfg.popular.map((s) => s.symbol)),
+    [isUs, trendingUs, cfg.popular],
   );
   const RECOMMENDED = useMemo(
     () => (isUs ? RECOMMENDED_SYMBOLS : cfg.recommended.map((s) => s.symbol)),

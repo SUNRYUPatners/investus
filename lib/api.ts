@@ -132,6 +132,15 @@ const mockIndices: IndexQuote[] = [
     changePercent: 0.30,
     sparkline: [2790, 2795, 2800, 2805, 2808, 2812, 2815, 2818, 2820],
   },
+  {
+    symbol: "VIX",
+    name: "VIX",
+    fullName: "CBOE Volatility Index",
+    value: 20.5,
+    change: 0.8,
+    changePercent: 4.1,
+    sparkline: [18, 19, 20, 19.5, 21, 20.5, 19.8, 20.2, 20.5],
+  },
 ];
 
 const mockQuotes: Quote[] = [
@@ -455,6 +464,7 @@ export const INDEX_MAP: { yahoo: string; symbol: string; name: string; fullName:
   { yahoo: "^DJI",     symbol: "DJI",    name: "DOW",          fullName: "Dow Jones Industrial" },
   { yahoo: "^RUT",     symbol: "RTY",    name: "Russell 2000", fullName: "Russell 2000 Index" },
   { yahoo: "USDKRW=X", symbol: "USDKRW", name: "원달러",       fullName: "USD/KRW 환율", isCurrency: true },
+  { yahoo: "^VIX",     symbol: "VIX",    name: "VIX",          fullName: "CBOE Volatility Index" },
 ];
 export { mockIndices, mockFutures };
 

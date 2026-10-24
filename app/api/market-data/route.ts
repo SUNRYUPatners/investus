@@ -405,7 +405,7 @@ export async function GET(req: Request) {
     // Yahoo Finance direct index fetch: ^GSPC, ^IXIC, ^DJI — backup when Finnhub ETF proxies fail
     (async (): Promise<Map<string, ETFQuote>> => {
       const out = new Map<string, ETFQuote>();
-      const MAP = { SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI", RTY: "^RUT" } as const;
+      const MAP = { SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI", RTY: "^RUT", VIX: "^VIX" } as const;
       await Promise.allSettled(Object.entries(MAP).map(async ([sym, yfSym]) => {
         try {
           const ctrl = new AbortController();
@@ -503,6 +503,7 @@ export async function GET(req: Request) {
     DJI:    { symbol: "DJI",    name: "DOW",          fullName: "Dow Jones Industrial" },
     RTY:    { symbol: "RTY",    name: "Russell 2000", fullName: "Russell 2000 Index" },
     USDKRW: { symbol: "USDKRW", name: "원달러",       fullName: "USD/KRW 환율", isCurrency: true },
+    VIX:    { symbol: "VIX",    name: "VIX",          fullName: "CBOE Volatility Index" },
   };
 
   const indices: IndexQuote[] = [];

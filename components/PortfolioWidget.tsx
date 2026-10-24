@@ -42,7 +42,7 @@ function CurToggle({ cur, onChange }: { cur: Cur; onChange: (c: Cur) => void }) 
   );
 }
 
-export function PortfolioWidget() {
+export function PortfolioWidget({ sidebar = false }: { sidebar?: boolean } = {}) {
   const router  = useRouter();
   const locale  = useLocaleCode();
   const isKo    = locale === "ko";
@@ -105,6 +105,7 @@ export function PortfolioWidget() {
   if (!loaded) return null;
 
   if (!isLoggedIn) {
+    if (sidebar) return null;
     return (
       <section className="px-4 lg:px-0 pt-4">
         <GuestPortfolioPreview market="us" />
@@ -182,6 +183,48 @@ export function PortfolioWidget() {
       </div>
     </div>
   );
+
+  // ── Sidebar compact mode ──────────────────────────────────────────────────
+  if (sidebar) {
+    return (
+      <div className="rounded-2xl overflow-hidden" style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
+        <div className="flex items-center justify-between px-4 pt-3 pb-1.5">
+          <div className="flex items-center gap-2">
+            <Wallet className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} />
+            <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "내 보유종목" : "My Holdings"}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-bold tabular-nums" style={{ color: "var(--text)" }}>{fmtVal(totalValue, cur, usdkrw)}</span>
+            <span className="text-[11px] font-semibold tabular-nums" style={{ color: clr(totalPnl) }}>
+              {sgn(totalPnlPct)}{totalPnlPct.toFixed(1)}%
+            </span>
+            <button onClick={() => router.push("/portfolio")}>
+              <ChevronRight className="w-4 h-4" style={{ color: "var(--muted)" }} />
+            </button>
+          </div>
+        </div>
+        <div className="flex gap-2 overflow-x-auto no-scrollbar px-4 pb-3" style={{ scrollSnapType: "x mandatory" }}>
+          {enriched.map((h) => {
+            const dayChg = h.q?.changePercent ?? 0;
+            const pnlPct = h.cost > 0 ? ((h.val - h.cost) / h.cost) * 100 : 0;
+            return (
+              <button key={h.symbol}
+                className="flex-shrink-0 flex flex-col gap-1 rounded-xl px-3 py-2.5 text-left"
+                style={{ background: "var(--bg)", border: "1px solid var(--border)", minWidth: 90, scrollSnapAlign: "start" }}
+                onClick={() => router.push(`/stock/${h.symbol}`)}>
+                <span className="text-[11px] font-bold" style={{ color: "var(--text)" }}>{h.symbol}</span>
+                <span className="text-[13px] font-bold tabular-nums" style={{ color: "var(--text)" }}>{fmtVal(h.val, cur, usdkrw)}</span>
+                <div className="flex gap-1.5">
+                  <span className="text-[10px] tabular-nums" style={{ color: clr(pnlPct) }}>{sgn(pnlPct)}{pnlPct.toFixed(1)}%</span>
+                  {h.q && <span className="text-[10px] tabular-nums" style={{ color: clr(dayChg) }}>{sgn(dayChg)}{dayChg.toFixed(1)}%↗</span>}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <section className="px-4 lg:px-0 pt-4">

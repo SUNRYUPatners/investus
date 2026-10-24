@@ -22,7 +22,6 @@ import { MorningBriefingCard } from "@/components/MorningBriefingCard";
 import { HomeValueStrip } from "@/components/HomeValueStrip";
 import { MarketPortfolioStub } from "@/components/market/MarketPortfolioStub";
 import { ShopPreviewSection } from "@/components/ShopPreviewSection";
-import { QuickTickers } from "@/components/QuickTickers";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import type { Locale } from "@/lib/i18n";
@@ -82,11 +81,6 @@ export function MarketHomeShell({
       )}
 
       <main className="max-w-[480px] mx-auto lg:max-w-screen-2xl lg:px-8 lg:pb-10">
-        {/* QuickTickers — 모바일: 가로 스크롤 / 데스크탑: 6열 그리드 */}
-        <section className="pt-3">
-          <QuickTickers />
-        </section>
-
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-3">
           <div className="lg:flex-1 lg:min-w-0">
             {/* 1. 모닝 브리핑 */}
@@ -107,17 +101,22 @@ export function MarketHomeShell({
             {/* 4. 관심종목 */}
             <WatchlistSection />
 
-            {/* 5. 리포트 — 핵심 콘텐츠 (모바일: 가로 스와이프) */}
+            {/* 5. 광고 — 리포트 바로 위 (상단 노출) */}
+            <section className="px-4 lg:px-0 pt-4">
+              <AdFitBanner />
+            </section>
+
+            {/* 6. 리포트 — 핵심 콘텐츠 (모바일: 가로 스와이프) */}
             <section className="pt-3 lg:pt-4">
               <ReportFeed market={market} />
             </section>
 
-            {/* 6. 뉴스 — 모바일 전용 (데스크탑: 사이드바) */}
+            {/* 7. 뉴스 — 모바일 전용 (데스크탑: 사이드바) */}
             <section className="pt-4 lg:hidden">
               <NewsSection market={market} />
             </section>
 
-            {/* 7. 공포/탐욕 — 모바일 전용 (데스크탑: 사이드바) */}
+            {/* 8. 공포/탐욕 — 모바일 전용 (데스크탑: 사이드바) */}
             {showFear && (
               <>
                 <section className="px-4 lg:hidden pt-4">
@@ -135,8 +134,10 @@ export function MarketHomeShell({
               </>
             )}
 
-            {/* 8. 포트폴리오 */}
-            {isUs ? <PortfolioWidget /> : <MarketPortfolioStub market={market} />}
+            {/* 9. 포트폴리오 — 모바일: 전체, 데스크탑: 사이드바로 이동 */}
+            <div className="lg:hidden">
+              {isUs ? <PortfolioWidget /> : <MarketPortfolioStub market={market} />}
+            </div>
 
             {/* 9. TodaysGuide — 모바일 전용 (데스크탑: 사이드바) */}
             <section className="px-4 lg:hidden pt-3">
@@ -150,10 +151,6 @@ export function MarketHomeShell({
               </section>
             )}
 
-            <section className="px-4 pt-4">
-              <AdFitBanner />
-            </section>
-
             <ShopPreviewSection />
           </div>
 
@@ -161,6 +158,10 @@ export function MarketHomeShell({
           <div className="hidden lg:flex lg:flex-col lg:w-[360px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
             {/* AI 인사이트 — 맨 위 */}
             {market !== "kr-re" && <HomeAIInsight market={market} />}
+            {/* 내 포트폴리오 — 가로 스와이프 컴팩트 */}
+            {isUs && <PortfolioWidget sidebar />}
+            {/* 광고 */}
+            <AdFitBanner />
             {/* 감정 지수 */}
             {showFear && (
               <>
@@ -176,7 +177,6 @@ export function MarketHomeShell({
             <TodaysGuideCard locale={uiLocale} />
             {/* 뉴스 */}
             <NewsSection market={market} />
-            <AdFitBanner />
           </div>
         </div>
       </main>

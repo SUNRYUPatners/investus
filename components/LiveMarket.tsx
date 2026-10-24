@@ -271,7 +271,7 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
           <div ref={idxScroll.ref} className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
             {loading
               ? Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)
-              : indices.map((idx) => <IndexCard key={idx.symbol} index={idx} />)}
+              : indices.filter((idx) => !idx.isCurrency).map((idx) => <IndexCard key={idx.symbol} index={idx} />)}
           </div>
           {idxScroll.canRight && (
             <div className="absolute right-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center justify-end"
