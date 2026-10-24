@@ -156,10 +156,10 @@ export function MarketHomeShell({
 
           {/* 데스크탑 사이드바 */}
           <div className="hidden lg:flex lg:flex-col lg:w-[360px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
-            {/* AI 인사이트 — 맨 위 */}
-            {market !== "kr-re" && <HomeAIInsight market={market} />}
-            {/* 내 포트폴리오 — 가로 스와이프 컴팩트 */}
+            {/* 내 포트폴리오 — 가로 스와이프 컴팩트 (맨 위) */}
             {isUs && <PortfolioWidget sidebar />}
+            {/* AI 인사이트 */}
+            {market !== "kr-re" && <HomeAIInsight market={market} />}
             {/* 광고 */}
             <AdFitBanner />
             {/* 감정 지수 */}
