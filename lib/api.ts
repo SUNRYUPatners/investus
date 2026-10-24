@@ -446,8 +446,7 @@ const mockNews: NewsItem[] = [
 
 // ── API Functions ──────────────────────────────────────────────────────────
 
-// Musk 생태계 + AI 인프라 특화 추천 종목
-export const RECOMMENDED_SYMBOLS = ["TSLA", "SPCX", "NVDA", "PLTR", "RKLB"];
+export const RECOMMENDED_SYMBOLS = ["TSLA", "SPCX", "IBM", "JPM"];
 const ALL_QUOTE_SYMBOLS = mockQuotes.map((q) => q.symbol);
 
 export const INDEX_MAP: { yahoo: string; symbol: string; name: string; fullName: string; isCurrency?: boolean }[] = [

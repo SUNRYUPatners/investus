@@ -670,40 +670,58 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
 
       {/* Report cards */}
       {all.length > 0 && (
-        <div className="flex flex-col gap-3">
-          {/* 최신 날짜 리포트 — 항상 표시 */}
-          {latest.free.map((r) => <ReportCard key={r.id} report={r} lang={feedLang} />)}
-          {latest.locked.length > 0 && <LockedReportGroup reports={latest.locked} />}
+        <>
+          {/* 모바일: 가로 snap scroll */}
+          <div
+            className="no-scrollbar lg:hidden flex flex-row overflow-x-auto gap-3 -mx-4 px-4 pb-2"
+            style={{ scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" }}
+          >
+            {[...latest.free, ...older.free].map((r) => (
+              <div key={r.id} className="flex-shrink-0 w-[300px]" style={{ scrollSnapAlign: "start" }}>
+                <ReportCard report={r} lang={feedLang} />
+              </div>
+            ))}
+            {latest.locked.length + older.locked.length > 0 && (
+              <div className="flex-shrink-0 w-[300px]" style={{ scrollSnapAlign: "start" }}>
+                <LockedReportGroup reports={[...latest.locked, ...older.locked]} />
+              </div>
+            )}
+          </div>
 
-          {/* 이전 날짜 리포트 — 더보기 토글 */}
-          {olderGroup.length > 0 && (
-            <>
-              {!showOlder ? (
-                <button
-                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl border text-sm font-semibold transition-opacity active:opacity-60"
-                  style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}
-                  onClick={() => setShowOlder(true)}
-                >
-                  {t.reports.olderCount(olderGroup.length)}
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              ) : (
-                <>
-                  {older.free.map((r) => <ReportCard key={r.id} report={r} lang={feedLang} />)}
-                  {older.locked.length > 0 && <LockedReportGroup reports={older.locked} />}
+          {/* 데스크톱: 세로 목록 + 더보기 */}
+          <div className="hidden lg:flex flex-col gap-3">
+            {latest.free.map((r) => <ReportCard key={r.id} report={r} lang={feedLang} />)}
+            {latest.locked.length > 0 && <LockedReportGroup reports={latest.locked} />}
+
+            {olderGroup.length > 0 && (
+              <>
+                {!showOlder ? (
                   <button
                     className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl border text-sm font-semibold transition-opacity active:opacity-60"
                     style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}
-                    onClick={() => setShowOlder(false)}
+                    onClick={() => setShowOlder(true)}
                   >
-                    {t.reports.collapse}
-                    <ChevronDown className="w-4 h-4 rotate-180" />
+                    {t.reports.olderCount(olderGroup.length)}
+                    <ChevronDown className="w-4 h-4" />
                   </button>
-                </>
-              )}
-            </>
-          )}
-        </div>
+                ) : (
+                  <>
+                    {older.free.map((r) => <ReportCard key={r.id} report={r} lang={feedLang} />)}
+                    {older.locked.length > 0 && <LockedReportGroup reports={older.locked} />}
+                    <button
+                      className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl border text-sm font-semibold transition-opacity active:opacity-60"
+                      style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}
+                      onClick={() => setShowOlder(false)}
+                    >
+                      {t.reports.collapse}
+                      <ChevronDown className="w-4 h-4 rotate-180" />
+                    </button>
+                  </>
+                )}
+              </>
+            )}
+          </div>
+        </>
       )}
     </>
   );
