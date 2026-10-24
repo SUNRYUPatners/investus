@@ -14,31 +14,31 @@ type ViewLang = "ko" | "en";
 
 function LangToggle({ value, onChange }: { value: ViewLang; onChange: (v: ViewLang) => void }) {
   return (
-    <div
-      className="flex rounded-full border overflow-hidden flex-shrink-0"
-      style={{ borderColor: "var(--border)" }}
-      role="group"
-      aria-label="브리핑 언어"
-    >
+    <div className="flex items-center flex-shrink-0" role="group" aria-label="브리핑 언어" style={{ gap: 0 }}>
       {([
         { id: "en" as const, label: "EN" },
         { id: "ko" as const, label: "한글" },
-      ]).map((opt) => {
+      ]).map((opt, i) => {
         const active = value === opt.id;
         return (
-          <button
-            key={opt.id}
-            type="button"
-            onClick={() => onChange(opt.id)}
-            className="text-[10px] font-bold px-2.5 py-0.5"
-            style={{
-              background: active ? "var(--mint)" : "transparent",
-              color: active ? "var(--on-accent)" : "var(--muted)",
-            }}
-            aria-pressed={active}
-          >
-            {opt.label}
-          </button>
+          <>
+            {i > 0 && (
+              <span key={`sep-${opt.id}`} className="text-[11px]" style={{ color: "var(--muted)", padding: "0 2px" }}>/</span>
+            )}
+            <button
+              key={opt.id}
+              type="button"
+              onClick={() => onChange(opt.id)}
+              className="text-[11px] font-semibold px-1.5 py-0.5 transition-colors"
+              style={{
+                color: active ? "var(--text)" : "var(--muted)",
+                fontWeight: active ? 700 : 600,
+              }}
+              aria-pressed={active}
+            >
+              {opt.label}
+            </button>
+          </>
         );
       })}
     </div>

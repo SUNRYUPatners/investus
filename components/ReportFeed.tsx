@@ -642,18 +642,23 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
           >
             {t.reports.sectionTitle}
           </h2>
-          <div className="flex items-center gap-0.5 flex-shrink-0">
-            {(["en", "ko"] as const).map((l) => (
-              <button
-                key={l}
-                onClick={() => setFeedLang(l)}
-                className="text-[11px] font-semibold px-2 py-0.5 rounded-full transition-colors"
-                style={feedLang === l
-                  ? { background: "var(--navy)", color: "var(--text)" }
-                  : { background: "transparent", color: "var(--muted)" }}
-              >
-                {l === "ko" ? "한글" : "EN"}
-              </button>
+          <div className="flex items-center flex-shrink-0" style={{ gap: 0 }}>
+            {(["en", "ko"] as const).map((l, i) => (
+              <>
+                {i > 0 && (
+                  <span key={`sep-${l}`} className="text-[11px]" style={{ color: "var(--muted)", padding: "0 2px" }}>/</span>
+                )}
+                <button
+                  key={l}
+                  onClick={() => setFeedLang(l)}
+                  className="text-[11px] font-semibold px-1.5 py-0.5 transition-colors"
+                  style={feedLang === l
+                    ? { color: "var(--text)", fontWeight: 700 }
+                    : { color: "var(--muted)" }}
+                >
+                  {l === "ko" ? "한글" : "EN"}
+                </button>
+              </>
             ))}
           </div>
         </div>
