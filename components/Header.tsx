@@ -91,7 +91,7 @@ export function Header() {
                 className="hidden lg:block text-[10px] font-medium leading-tight mt-0.5"
                 style={{ color: "var(--muted)" }}
               >
-                {isKo ? "테슬라 · 스페이스엑스 · 머스크 생태계" : "TSLA · SpaceX · Musk Ecosystem"}
+                {isKo ? "AI 기반 차세대 자산관리 핀테크" : "AI-Powered Global Asset Intelligence"}
               </div>
             </div>
           </Link>
