@@ -591,7 +591,7 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
   const localeCode = useLocaleCode();
   const [showOlder, setShowOlder] = useState(false);
 
-  const uiLang: "ko" | "en" = lang ?? (localeCode === "en" ? "en" : "ko");
+  const uiLang: "ko" | "en" = lang ?? "en";
   const [feedLang, setFeedLang] = useState<"ko" | "en">(uiLang);
   const cioIntro = getReportCioIntro(market, uiLang);
   const reportSubtitle = getReportSubtitle(market, uiLang);
@@ -643,7 +643,7 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
             {t.reports.sectionTitle}
           </h2>
           <div className="flex items-center gap-0.5 flex-shrink-0">
-            {(["ko", "en"] as const).map((l) => (
+            {(["en", "ko"] as const).map((l) => (
               <button
                 key={l}
                 onClick={() => setFeedLang(l)}

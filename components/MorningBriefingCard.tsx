@@ -21,8 +21,8 @@ function LangToggle({ value, onChange }: { value: ViewLang; onChange: (v: ViewLa
       aria-label="브리핑 언어"
     >
       {([
-        { id: "ko" as const, label: "한글" },
         { id: "en" as const, label: "EN" },
+        { id: "ko" as const, label: "한글" },
       ]).map((opt) => {
         const active = value === opt.id;
         return (
@@ -111,7 +111,7 @@ export function MorningBriefingCard({
   const [briefing, setBriefing] = useState<SessionBriefing | null>(null);
   const [loading, setLoading] = useState(true);
   const [openId, setOpenId] = useState<string | null>(null);
-  const [viewLang, setViewLang] = useState<ViewLang>(_locale === "ko" ? "ko" : "en");
+  const [viewLang, setViewLang] = useState<ViewLang>("en");
   const viewEn = viewLang === "en";
   const isKo = !viewEn;
   const isKr = market === "kr";

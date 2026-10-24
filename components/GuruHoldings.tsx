@@ -134,7 +134,9 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
 
         <div className="flex-1 text-left min-w-0">
           <div className="flex items-center gap-1.5 min-w-0">
-            <p className="text-sm font-bold truncate flex-1 min-w-0" style={{ color: "var(--text)" }}>{isKo ? guru.name : guru.nameEn}</p>
+            <p className="text-sm font-bold truncate flex-1 min-w-0" style={{ color: "var(--text)" }}>
+              {info?.title ?? (isKo ? guru.name : guru.nameEn)}
+            </p>
             {info && (
               <button
                 onClick={(e) => { e.stopPropagation(); setInfoOpen((v) => !v); }}
