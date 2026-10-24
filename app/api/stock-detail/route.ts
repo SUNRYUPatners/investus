@@ -261,8 +261,16 @@ export async function GET(req: NextRequest) {
       ZC:  { yfSym: "ZC=F",     name: "옥수수 선물",          group: "농산물" },
       ZW:  { yfSym: "ZW=F",     name: "밀 선물",              group: "농산물" },
       ZS:  { yfSym: "ZS=F",     name: "대두 선물",            group: "농산물" },
-      BTC: { yfSym: "BTC-USD",  name: "Bitcoin",              group: "암호화폐" },
-      ETH: { yfSym: "ETH-USD",  name: "Ethereum",             group: "암호화폐" },
+      BTC:  { yfSym: "BTC-USD",   name: "Bitcoin — 비트코인",    group: "암호화폐" },
+      ETH:  { yfSym: "ETH-USD",   name: "Ethereum — 이더리움",  group: "암호화폐" },
+      SOL:  { yfSym: "SOL-USD",   name: "Solana — 솔라나",      group: "암호화폐" },
+      DOGE: { yfSym: "DOGE-USD",  name: "Dogecoin — 도지코인",  group: "암호화폐" },
+      XRP:  { yfSym: "XRP-USD",   name: "XRP — 리플",           group: "암호화폐" },
+      BNB:  { yfSym: "BNB-USD",   name: "BNB — 바이낸스코인",   group: "암호화폐" },
+      ADA:  { yfSym: "ADA-USD",   name: "Cardano — 카르다노",   group: "암호화폐" },
+      AVAX: { yfSym: "AVAX-USD",  name: "Avalanche — 아발란체", group: "암호화폐" },
+      LINK: { yfSym: "LINK-USD",  name: "Chainlink — 체인링크", group: "암호화폐" },
+      DOT:  { yfSym: "DOT-USD",   name: "Polkadot — 폴카닷",    group: "암호화폐" },
     };
     const futuresMeta = FUTURES_YF[rawSymbol];
     if (futuresMeta) {

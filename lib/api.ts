@@ -371,6 +371,17 @@ const mockQuotes: Quote[] = [
   { symbol: "AAON", name: "AAON Inc. — HVAC 공조 시스템",                      price: 80.0,   change: 0.8,  changePercent: 1.01, sparkline: [], volume: "0.5M", marketCap: "7B"   },
   { symbol: "VST",  name: "Vistra Corp — 비스트라 전력·에너지",                  price: 165.0,  change: 3.0,  changePercent: 1.85, sparkline: [], volume: "4M",   marketCap: "49B"  },
   { symbol: "CEG",  name: "Constellation Energy — 컨스텔레이션 원자력",          price: 280.0,  change: 4.0,  changePercent: 1.45, sparkline: [], volume: "2M",   marketCap: "82B"  },
+  // ── 암호화폐 (크립토) ──
+  { symbol: "BTC",  name: "Bitcoin — 비트코인",                                  price: 108000, change: 1800, changePercent: 1.69, sparkline: [], volume: "48B",  marketCap: "2.1T" },
+  { symbol: "ETH",  name: "Ethereum — 이더리움",                                 price: 5800,   change: 120,  changePercent: 2.11, sparkline: [], volume: "22B",  marketCap: "700B" },
+  { symbol: "SOL",  name: "Solana — 솔라나",                                     price: 285,    change: 8.5,  changePercent: 3.07, sparkline: [], volume: "6B",   marketCap: "135B" },
+  { symbol: "DOGE", name: "Dogecoin — 도지코인 일론머스크",                      price: 0.52,   change: 0.02, changePercent: 4.00, sparkline: [], volume: "3B",   marketCap: "75B"  },
+  { symbol: "XRP",  name: "XRP — 리플",                                          price: 1.85,   change: 0.06, changePercent: 3.35, sparkline: [], volume: "5B",   marketCap: "108B" },
+  { symbol: "BNB",  name: "BNB — 바이낸스코인",                                  price: 720,    change: 15,   changePercent: 2.13, sparkline: [], volume: "1.8B", marketCap: "104B" },
+  { symbol: "ADA",  name: "Cardano — 카르다노",                                  price: 1.12,   change: 0.04, changePercent: 3.70, sparkline: [], volume: "1.2B", marketCap: "40B"  },
+  { symbol: "AVAX", name: "Avalanche — 아발란체",                                price: 58,     change: 2.1,  changePercent: 3.76, sparkline: [], volume: "0.8B", marketCap: "24B"  },
+  { symbol: "LINK", name: "Chainlink — 체인링크",                                price: 24,     change: 0.8,  changePercent: 3.45, sparkline: [], volume: "0.6B", marketCap: "15B"  },
+  { symbol: "DOT",  name: "Polkadot — 폴카닷",                                   price: 11,     change: 0.3,  changePercent: 2.80, sparkline: [], volume: "0.4B", marketCap: "16B"  },
 ];
 
 const mockFearGreed: FearGreedData = {
@@ -435,7 +446,8 @@ const mockNews: NewsItem[] = [
 
 // ── API Functions ──────────────────────────────────────────────────────────
 
-export const RECOMMENDED_SYMBOLS = ["TSLA", "SPCX", "IBM", "JPM"];
+// Musk 생태계 + AI 인프라 특화 추천 종목
+export const RECOMMENDED_SYMBOLS = ["TSLA", "SPCX", "NVDA", "PLTR", "RKLB"];
 const ALL_QUOTE_SYMBOLS = mockQuotes.map((q) => q.symbol);
 
 export const INDEX_MAP: { yahoo: string; symbol: string; name: string; fullName: string; isCurrency?: boolean }[] = [

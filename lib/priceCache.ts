@@ -15,6 +15,14 @@ import { kvGetPrice, kvSetPrice, type PriceData } from "@/lib/kv";
 
 export type PriceEntry = { price: number; change: number; changePercent: number };
 
+// 크립토 bare symbol → Yahoo Finance USD pair 매핑
+const CRYPTO_YF: Record<string, string> = {
+  BTC: "BTC-USD", ETH: "ETH-USD", SOL: "SOL-USD", DOGE: "DOGE-USD",
+  XRP: "XRP-USD", BNB: "BNB-USD", ADA: "ADA-USD", AVAX: "AVAX-USD",
+  LINK: "LINK-USD", DOT: "DOT-USD",
+};
+const CRYPTO_YF_REV = Object.fromEntries(Object.entries(CRYPTO_YF).map(([k, v]) => [v, k]));
+
 type CacheEntry = PriceEntry & { at: number };
 
 // Module-level singleton — shared across all requests within the same instance
@@ -123,13 +131,16 @@ export async function getPrices(
   if (need.length === 0) return result;
 
   // 3) Yahoo Finance v7 batch (same source as market-data — correct prices)
+  // 크립토 심볼은 Yahoo가 BTC-USD 형식을 요구 — 변환 후 결과를 역매핑
   try {
-    const yfRows = await fetchBatchQuotes(need);
+    const yfSymbols = need.map((s) => CRYPTO_YF[s] ?? s);
+    const yfRows = await fetchBatchQuotes(yfSymbols);
     yfRows.forEach((q) => {
+      const origSym = CRYPTO_YF_REV[q.symbol] ?? q.symbol;
       if (q.price > 0) {
         const entry = { price: q.price, change: q.change, changePercent: q.changePercent };
-        result[q.symbol] = entry;
-        setCache(q.symbol, entry);
+        result[origSym] = entry;
+        setCache(origSym, entry);
       }
     });
   } catch { /* return partial results */ }
