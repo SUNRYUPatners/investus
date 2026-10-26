@@ -47,6 +47,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T26OCT = 1792969200000; // 2026-10-26 08:00 KST (월)
 const T24OCT = 1792796400000; // 2026-10-24 09:00 KST (토)
 const T23OCT = 1792710000000; // 2026-10-23 08:00 KST
 const T22OCT = 1792623600000; // 2026-10-22 08:00 KST
@@ -146,7 +147,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T24OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T26OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -165,6 +166,22 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-26 (월) 신규 ────────────────
+  { id: 122410, symbol: "SPCX", nickname: "삼이팔엠해제", holdingLabel: "관심종목",
+    content: "SPCX 오늘 328M주 잠금해제. 1.3B 풀릴때도 주가 올랐잖아. IPO 이후 6번 다 올랐다니까 이게 공급 압박이 아니라 호재로 보는 건가",
+    createdAt: T26OCT + 8*60_000, likes: 32, comments: 2 },
+  { id: 122411, symbol: "TSLA", nickname: "합병독립위", holdingLabel: "관심종목",
+    content: "테슬라 스페이스엑스 합병 독립위원회 꾸렸다고. 머스크는 이해충돌로 불참이래. 상장한지 4개월인데 벌써 합병 얘기ㅋㅋ 그냥 하나로 가려는 거 아님?",
+    createdAt: T26OCT + 16*60_000, likes: 31, comments: 2 },
+  { id: 122412, symbol: "TSLA", nickname: "FSD백칠십사만", holdingLabel: "관심종목",
+    content: "테슬라 Q3 순이익 -43% ㄷㄷ 근데 FSD 구독 174만에 67% 증가라네. 옵티머스 프리몬트 양산까지 시작했다고. 주가 빠진 게 단기냐 장기냐가 핵심이지",
+    createdAt: T26OCT + 24*60_000, likes: 30, comments: 2 },
+  { id: 122413, symbol: "SPCX", nickname: "백육십일퍼센트", holdingLabel: "관심종목",
+    content: "스페이스엑스 Q3 매출 +161% 145억달러. AI 사업이 절반이라고 ㄷㄷ EPS 0.35 예상은 0.15였는데. 근데 엔비디아 칩 400억달러 산다고? 연 매출이랑 거의 같은 규모인데",
+    createdAt: T26OCT + 32*60_000, likes: 29, comments: 2 },
+  { id: 122414, symbol: "MACRO", nickname: "다섯퍼센트국채", holdingLabel: "관심종목",
+    content: "10년물 금리가 5% 넘었네. 테슬라 스페이스엑스 같이 미래 성장주는 할인율 올라가면 타격이잖아. 브렌트유도 116달러면 인플레 또 고개드는 거 아님?",
+    createdAt: T26OCT + 40*60_000, likes: 28, comments: 2 },
   // ── 2026-10-24 (토) 주말 자체수집 ─────────────────────
   { id: 122395, symbol: "SPCX", nickname: "잠금해제월요일주의", holdingLabel: "보유중",
     content: "SPCX 328M주 잠금해제 만기가 오늘(토) 도래함. 토요일이라 실제 매도는 월요일(10/26)부터 가능. 10/22에 1.3B주 이미 해제됐는데 주가가 버텼잖아. 이번 328M은 그것의 25% 수준. 근데 월요일 장 초반은 변동성 있을 수 있음",
@@ -6099,6 +6116,26 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  122410: [
+    { id: 1224101, nickname: "합병독립위", holdingLabel: "관심종목", content: "잠금해제는 매도 권리 생긴 거고 매도 의무 아님", createdAt: T26OCT + 720000, likes: 5 },
+    { id: 1224102, nickname: "백육십일퍼센트", holdingLabel: "관심종목", content: "6번 다 올랐다고 7번도 오른다는 건 아님. 이번엔 금리 5%가 다름", createdAt: T26OCT + 900000, likes: 4 },
+  ],
+  122411: [
+    { id: 1224111, nickname: "FSD백칠십사만", holdingLabel: "관심종목", content: "위원회 설치는 탐색 단계야. 확정 조건 없음", createdAt: T26OCT + 780000, likes: 5 },
+    { id: 1224112, nickname: "다섯퍼센트국채", holdingLabel: "관심종목", content: "주주 투표도 필요해. 비율 협상이 핵심", createdAt: T26OCT + 960000, likes: 4 },
+  ],
+  122412: [
+    { id: 1224121, nickname: "백육십일퍼센트", holdingLabel: "관심종목", content: "순이익 감소는 R&D 69% 폭증 때문이야. 숫자 나눠서 봐야", createdAt: T26OCT + 840000, likes: 5 },
+    { id: 1224122, nickname: "삼이팔엠해제", holdingLabel: "관심종목", content: "FSD 10억 ARR은 아직 추정치야. 공식 매출 발표는 아님", createdAt: T26OCT + 1020000, likes: 4 },
+  ],
+  122413: [
+    { id: 1224131, nickname: "다섯퍼센트국채", holdingLabel: "관심종목", content: "161%는 전년 동기 대비야. 기저가 낮았던 것도 고려해야", createdAt: T26OCT + 900000, likes: 5 },
+    { id: 1224132, nickname: "합병독립위", holdingLabel: "관심종목", content: "AI 사업 절반은 세부 내역 공개 안 됨. 스타링크랑 분리 확인이 다음", createdAt: T26OCT + 1080000, likes: 4 },
+  ],
+  122414: [
+    { id: 1224141, nickname: "삼이팔엠해제", holdingLabel: "관심종목", content: "5%는 금요일 종가야. 실시간으로 계속 움직임", createdAt: T26OCT + 960000, likes: 5 },
+    { id: 1224142, nickname: "FSD백칠십사만", holdingLabel: "관심종목", content: "할인율 영향은 이론상 명확한데 실제 주가는 다른 변수도 많음", createdAt: T26OCT + 1140000, likes: 4 },
+  ],
   122172: [
     { id: 1221721, nickname: "추격손떨림", holdingLabel: "관심종목", content: "고가 176은 이미 갔는데 나는 손이 안 감 ㅋㅋ", createdAt: T07OCT + 720000, likes: 5 },
     { id: 1221722, nickname: "존버중임", holdingLabel: "관심종목", content: "일주일 17%면 추격하면 물리기 딱임. 형들은 홀딩?", createdAt: T07OCT + 900000, likes: 4 },

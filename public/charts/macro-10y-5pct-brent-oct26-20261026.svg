@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0004"/><stop offset="100%" stop-color="#080002"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="54" y="54" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">2026.10.26</text>
+  <text x="1026" y="54" text-anchor="end" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">@investus.kr</text>
+  <rect x="54" y="68" width="170" height="40" rx="20" fill="#200004"/>
+  <rect x="54" y="68" width="170" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+  <text x="139" y="94" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCA5A5"># 매크로</text>
+  <rect x="236" y="68" width="170" height="40" rx="20" fill="#180800"/>
+  <rect x="236" y="68" width="170" height="40" rx="20" fill="none" stroke="#F97316" stroke-width="2"/>
+  <text x="321" y="94" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FED7AA"># 10Y 금리</text>
+  <rect x="54" y="120" width="972" height="2" fill="url(#accentG)" opacity="0.5"/>
+  <text x="540" y="206" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="96" font-weight="900" fill="url(#heroG)" filter="url(#glow)">5.00%</text>
+  <text x="540" y="258" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#F3F4F6">10년 국채수익률 — 2025년 이후 최고</text>
+  <text x="540" y="294" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#FCA5A5">성장주 할인율 직접 압박 · 2026년 10월 24일</text>
+  <rect x="54" y="310" width="474" height="100" rx="14" fill="#0F1623" stroke="#EF4444" stroke-width="2"/><rect x="54" y="310" width="6" height="100" rx="3" fill="#EF4444"/><text x="74" y="340" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">10Y 국채수익률</text><text x="74" y="382" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#EF4444">5.00%</text><text x="74" y="406" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">10/24 금요일 종가 · 2025 이후 최고</text><rect x="540" y="310" width="474" height="100" rx="14" fill="#0F1623" stroke="#F97316" stroke-width="2"/><rect x="540" y="310" width="6" height="100" rx="3" fill="#F97316"/><text x="560" y="340" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">브렌트유</text><text x="560" y="382" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#F97316">$116.72</text><text x="560" y="406" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">중동 공급 우려 지속</text><rect x="54" y="420" width="474" height="100" rx="14" fill="#0F1623" stroke="#EAB308" stroke-width="2"/><rect x="54" y="420" width="6" height="100" rx="3" fill="#EAB308"/><text x="74" y="450" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">1년 물가기대</text><text x="74" y="492" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#EAB308">4.7%</text><text x="74" y="516" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">미시간대 소비자심리 조사</text><rect x="540" y="420" width="474" height="100" rx="14" fill="#0F1623" stroke="#6B7280" stroke-width="2"/><rect x="540" y="420" width="6" height="100" rx="3" fill="#6B7280"/><text x="560" y="450" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">S&amp;P 500</text><text x="560" y="492" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#6B7280">-0.52%</text><text x="560" y="516" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">NASDAQ -0.21% · 주간 기준</text><rect x="54" y="530" width="474" height="100" rx="14" fill="#0F1623" stroke="#10B981" stroke-width="2"/><rect x="54" y="530" width="6" height="100" rx="3" fill="#10B981"/><text x="74" y="560" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">러셀 2000</text><text x="74" y="602" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#10B981">+2%</text><text x="74" y="626" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">주간 상승 · 소형주 로테이션</text><rect x="540" y="530" width="474" height="100" rx="14" fill="#0F1623" stroke="#A855F7" stroke-width="2"/><rect x="540" y="530" width="6" height="100" rx="3" fill="#A855F7"/><text x="560" y="560" font-family="Arial,sans-serif" font-size="19" fill="#9CA3AF">VIX</text><text x="560" y="602" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#A855F7">19.71</text><text x="560" y="626" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">공포지수 · 경계 수준 유지</text>
+  <rect x="54" y="660" width="972" height="330" rx="22" fill="#0F0A00" stroke="#7F1D1D" stroke-width="2.5"/>
+  <rect x="54" y="660" width="972" height="5" rx="3" fill="#EF4444"/>
+  <text x="108" y="704" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">성장주 영향</text>
+  <rect x="108" y="712" width="864" height="1" fill="#7F1D1D"/>
+  <text x="108" y="732" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">10Y 5% → 미래 현금흐름 현재가치(PV) 하락 · TSLA·SPCX 직접 타격.</text><text x="108" y="766" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">브렌트 116달러 → 인플레 기대 고착화 → Fed 동결 압박 유지.</text><text x="108" y="800" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">소형주 +2% → 금리 민감도 낮은 가치주로 자금 이동 시작.</text><text x="108" y="834" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">11월 FOMC 금리 동결 예상 — 추가 인상 가능성은 에너지에 달림.</text>
+  <rect x="54" y="1006" width="972" height="276" rx="22" fill="#0F0A00" stroke="#7C2D12" stroke-width="2.5"/>
+  <rect x="54" y="1006" width="972" height="5" rx="3" fill="#F97316"/>
+  <text x="108" y="1050" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">투자 시사점</text>
+  <rect x="108" y="1058" width="864" height="1" fill="#7C2D12"/>
+  <text x="108" y="1078" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">웨드부시: FSD·로보택시 전환 스토리가 금리 변수를 넘는 차별화 요인.</text><text x="108" y="1112" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">모건스탠리: 성장주 금리 압박 단기 유효 · AI 구조 수요는 지속.</text><text x="108" y="1146" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">다음 확인: 11/6 FOMC, 에너지 공급 협상, 물가기대 추이.</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>
