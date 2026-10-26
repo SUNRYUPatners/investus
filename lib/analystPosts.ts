@@ -18,32 +18,6 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
-  // ── 2026-10-26 (월) 신규 ──────────────────────
-  {
-    id: -1665, alias: "마포 살쾡이 #14", symbol: "SPCX",
-    content: "328M주 해제는 공급 가능성이지 매도 확정이 아닙니다. 10/22 1.3B 흡수 선례와 EPS 0.35 어닝 서프라이즈를 나란히 두고, 모건스탠리 300달러·씨티 900달러 범위에서 봅니다.",
-    likes: 18, comments: 2, created_at: "2026-10-26T00:00:00.000Z", liked: false,
-  },
-  {
-    id: -1666, alias: "한남 재규어 #55", symbol: "TSLA",
-    content: "독립위원회 설치는 탐색 단계로 둡니다. 다음 확인은 위원회 보고 일정, 합병 비율 가정, 주주 의결 구조입니다. 웨드부시 600달러·씨티 900달러는 합병 프리미엄 시나리오 때 다시 봅니다.",
-    likes: 19, comments: 2, created_at: "2026-10-26T00:07:00.000Z", liked: false,
-  },
-  {
-    id: -1667, alias: "여의도 매 #36", symbol: "TSLA",
-    content: "FSD 174만 +67%와 Optimus 양산은 AI 전환 지표로 보겠습니다. 순이익 -43%는 R&D 27.6억 때문이고, 자본지출 하향과 분리해 읽습니다. 웨드부시 600달러는 FSD·Optimus 가정 위에 있습니다.",
-    likes: 20, comments: 2, created_at: "2026-10-26T00:14:00.000Z", liked: false,
-  },
-  {
-    id: -1668, alias: "송파 백로 #18", symbol: "SPCX",
-    content: "매출 161%와 EPS 2.3배 서프라이즈는 기대치를 큰 폭으로 상회합니다. AI 사업 절반과 400억 달러 엔비디아 구매를 씨티 900달러·모건스탠리 300달러 범위에서 봅니다.",
-    likes: 21, comments: 2, created_at: "2026-10-26T00:21:00.000Z", liked: false,
-  },
-  {
-    id: -1669, alias: "분당 늑대 #22", symbol: "MACRO",
-    content: "10Y 5.00%는 성장주 할인율 직접 변수입니다. 브렌트 116달러와 물가기대 4.7%를 같이 두고, 11월 FOMC 결정을 다음 확인으로 봅니다.",
-    likes: 22, comments: 2, created_at: "2026-10-26T00:28:00.000Z", liked: false,
-  },
   // ── 2026-10-26 (월) 추가 ──────────────────────
   {
     id: -1670, alias: "삼성동 고래 #61", symbol: "META",
@@ -10497,27 +10471,6 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   [-1674]: [
     { alias: "삼성동 고래 #61", content: "195억달러는 가정용 요금제 기준 추산이야. 실제 믹스는 달라", created_at: "2026-10-26T01:36:04:00.000Z" },
     { alias: "압구정 독수리 #12", content: "가입자 증가는 좋은데 해지율 데이터는 공개 안 됨", created_at: "2026-10-26T01:36:07:00.000Z" },
-  ],
-  // ── 2026-10-26 애널 댓글 ──────────────────────
-  [-1665]: [
-    { alias: "송파 백로 #18", content: "잠금해제는 매도 권리 생긴 거고 매도 의무 아님", created_at: "2026-10-26T00:00:04:00.000Z" },
-    { alias: "광화문 올빼미 #47", content: "6번 다 올랐다고 7번도 오른다는 건 아님. 이번엔 금리 5% 환경이 변수야", created_at: "2026-10-26T00:00:07:00.000Z" },
-  ],
-  [-1666]: [
-    { alias: "분당 늑대 #22", content: "위원회 설치는 탐색 단계야. 확정 조건 없음", created_at: "2026-10-26T00:07:04:00.000Z" },
-    { alias: "삼성동 고래 #61", content: "주주 투표도 필요해. 비율 협상이 핵심", created_at: "2026-10-26T00:07:07:00.000Z" },
-  ],
-  [-1667]: [
-    { alias: "성수 판다 #81", content: "순이익 감소는 R&D 69% 폭증 때문이야. 숫자 나눠서 봐야", created_at: "2026-10-26T00:14:04:00.000Z" },
-    { alias: "해운대 여우 #33", content: "FSD 10억 ARR은 아직 추정치야. 공식 매출 발표는 아님", created_at: "2026-10-26T00:14:07:00.000Z" },
-  ],
-  [-1668]: [
-    { alias: "역삼 치타 #09", content: "161%는 전년 동기 대비야. 기저가 낮았던 것도 고려해야", created_at: "2026-10-26T00:21:04:00.000Z" },
-    { alias: "종로 수리 #70", content: "AI 사업 절반은 세부 내역 공개 안 됨. 스타링크랑 분리 확인이 다음", created_at: "2026-10-26T00:21:07:00.000Z" },
-  ],
-  [-1669]: [
-    { alias: "광화문 올빼미 #47", content: "5%는 금요일 종가야. 실시간으로 계속 움직임", created_at: "2026-10-26T00:28:04:00.000Z" },
-    { alias: "판교 까치 #25", content: "할인율 영향은 이론상 명확한데 실제 주가는 다른 변수도 많음", created_at: "2026-10-26T00:28:07:00.000Z" },
   ],
   // ── 2026-10-18 애널 댓글 ──────────────────────
   [-1626]: [
