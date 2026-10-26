@@ -84,7 +84,7 @@ export function HeroLanding({ locale }: { locale: Locale }) {
         <div className="lg:flex lg:items-center lg:gap-12">
 
           {/* ── LEFT: copy ─────────────────────────────────────────── */}
-          <div className="flex-1 min-w-0">
+          <div className="w-full lg:flex-1 lg:min-w-0">
             {/* badge */}
             <div
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-4"
@@ -153,64 +153,38 @@ export function HeroLanding({ locale }: { locale: Locale }) {
               ))}
             </div>
 
-            {/* logo + orbit */}
+            {/* logo */}
             <div className="flex items-center justify-center">
               <div className="relative">
-                {/* orbit rings */}
+                {/* outer glow ring */}
                 <div
-                  className="absolute rounded-full border"
+                  className="absolute rounded-2xl pointer-events-none"
                   style={{
-                    inset: "-28px",
-                    borderColor: "rgba(34,197,94,0.12)",
-                    animation: "spin 22s linear infinite",
+                    inset: "-3px",
+                    background: "linear-gradient(135deg, rgba(34,197,94,0.5) 0%, rgba(96,165,250,0.3) 50%, rgba(34,197,94,0.1) 100%)",
+                    borderRadius: "20px",
+                    filter: "blur(4px)",
                   }}
                 />
                 <div
-                  className="absolute rounded-full border"
-                  style={{
-                    inset: "-52px",
-                    borderColor: "rgba(96,165,250,0.07)",
-                    animation: "spin 40s linear infinite reverse",
-                  }}
-                />
-
-                {/* orbit dot TSLA */}
-                <div
-                  className="absolute w-5 h-5 rounded-full flex items-center justify-center text-white font-black"
-                  style={{
-                    fontSize: "6px",
-                    background: "#EF4444",
-                    top: "50%",
-                    left: "50%",
-                    transformOrigin: "0 0",
-                    transform: "translate(-10px, -10px) rotate(0deg) translateX(52px)",
-                    animation: "spin 22s linear infinite",
-                  }}
-                >
-                  T
-                </div>
-                {/* orbit dot SPCX */}
-                <div
-                  className="absolute w-5 h-5 rounded-full flex items-center justify-center text-white font-black"
-                  style={{
-                    fontSize: "6px",
-                    background: "#60A5FA",
-                    top: "50%",
-                    left: "50%",
-                    transformOrigin: "0 0",
-                    transform: "translate(-10px, -10px) rotate(180deg) translateX(76px)",
-                    animation: "spin 40s linear infinite reverse",
-                  }}
-                >
-                  S
-                </div>
-
-                {/* logo */}
-                <div
-                  className="w-20 h-20 lg:w-24 lg:h-24 rounded-2xl overflow-hidden"
-                  style={{ boxShadow: "0 0 40px rgba(34,197,94,0.25), 0 0 80px rgba(34,197,94,0.1)" }}
+                  className="w-20 h-20 lg:w-24 lg:h-24 rounded-2xl overflow-hidden relative z-10"
+                  style={{ boxShadow: "0 0 48px rgba(34,197,94,0.3), 0 0 96px rgba(34,197,94,0.1)" }}
                 >
                   <img src="/investus-logo.png" alt="Investus" className="w-full h-full object-cover" />
+                </div>
+                {/* TSLA pill — top right */}
+                <div
+                  className="absolute z-20 px-2 py-0.5 rounded-full text-white font-bold"
+                  style={{ fontSize: "9px", background: "#EF4444", top: "-10px", right: "-22px", boxShadow: "0 2px 8px rgba(239,68,68,0.4)" }}
+                >
+                  TSLA
+                </div>
+                {/* SPCX pill — bottom left */}
+                <div
+                  className="absolute z-20 px-2 py-0.5 rounded-full text-white font-bold"
+                  style={{ fontSize: "9px", background: "#3B82F6", bottom: "-10px", left: "-24px", boxShadow: "0 2px 8px rgba(59,130,246,0.4)" }}
+                >
+                  SPCX
                 </div>
               </div>
             </div>
