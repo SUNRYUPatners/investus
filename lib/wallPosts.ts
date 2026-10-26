@@ -6153,20 +6153,20 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
     { id: 1224192, nickname: "거스트너사백이십달러", holdingLabel: "관심종목", content: "가입자 증가는 좋은데 해지율 데이터는 공개 안 됨", createdAt: T26OCT + 5820000, likes: 3 },
   ],
   122420: [
-    { id: 1344200, postId: 122420, nickname: "벤치마크거스트너", content: "교환비율이 진짜 핵심이죠. 칼시 70%가 맞다 쳐도 TSLA 주주가 받는 스페이스엑스 지분 가치가 얼마냐에 따라 실제 득실이 달라져요.", likes: 4, createdAt: T26OCT + 123*60_000 },
-    { id: 1344201, postId: 122420, nickname: "합병리스크체크", content: "대등합병이면 희석 걱정이고 인수면 스페이스엑스 자금 부담이에요. 어느 방식이든 단기 변동성은 피하기 어려울 것 같아요.", likes: 3, createdAt: T26OCT + 131*60_000 },
+    { id: 1344200, nickname: "벤치마크거스트너", holdingLabel: "관심종목", content: "교환비율이 진짜 핵심이죠. 칼시 70%가 맞다 쳐도 TSLA 주주가 받는 스페이스엑스 지분 가치가 얼마냐에 따라 실제 득실이 달라져요.", likes: 4, createdAt: T26OCT + 123*60_000 },
+    { id: 1344201, nickname: "합병리스크체크", holdingLabel: "관심종목", content: "대등합병이면 희석 걱정이고 인수면 스페이스엑스 자금 부담이에요. 어느 방식이든 단기 변동성은 피하기 어려울 것 같아요.", likes: 3, createdAt: T26OCT + 131*60_000 },
   ],
   122421: [
-    { id: 1344210, postId: 122421, nickname: "FSD킬러피처", content: "가격 안 낮춰도 팔린다는 게 핵심이잖아요. ASP 유지나 인상 여지도 생겨서 마진 회복에 직결돼요.", likes: 5, createdAt: T26OCT + 132*60_000 },
-    { id: 1344211, postId: 122421, nickname: "생산병목확인필요", content: "수요가 넘치는데 어디서 막히는지가 중요해요. 배터리야 라인 가동률이야. 어닝콜 트랜스크립트 다시 봐야겠다", likes: 3, createdAt: T26OCT + 140*60_000 },
+    { id: 1344210, nickname: "FSD킬러피처", holdingLabel: "관심종목", content: "가격 안 낮춰도 팔린다는 게 핵심이잖아요. ASP 유지나 인상 여지도 생겨서 마진 회복에 직결돼요.", likes: 5, createdAt: T26OCT + 132*60_000 },
+    { id: 1344211, nickname: "생산병목확인필요", holdingLabel: "관심종목", content: "수요가 넘치는데 어디서 막히는지가 중요해요. 배터리야 라인 가동률이야. 어닝콜 트랜스크립트 다시 봐야겠다", likes: 3, createdAt: T26OCT + 140*60_000 },
   ],
   122422: [
-    { id: 1344220, postId: 122422, nickname: "PEG계산맞네", content: "PEG 13배 계산 맞아요. 근데 18.5% 성장 가정이 틀리면 Normal 225달러까지 조정 가능성도 있어서 이게 리스크예요.", likes: 4, createdAt: T26OCT + 140*60_000 },
-    { id: 1344221, postId: 122422, nickname: "합병프리미엄제거시", content: "합병이 무산되면 프리미엄 빠지면서 밸류에이션 압박이 올 수 있죠. 결국 합병 성사 여부가 TSLA 배수 유지의 전제 조건이 되는 거네", likes: 3, createdAt: T26OCT + 148*60_000 },
+    { id: 1344220, nickname: "PEG계산맞네", holdingLabel: "관심종목", content: "PEG 13배 계산 맞아요. 근데 18.5% 성장 가정이 틀리면 Normal 225달러까지 조정 가능성도 있어서 이게 리스크예요.", likes: 4, createdAt: T26OCT + 140*60_000 },
+    { id: 1344221, nickname: "합병프리미엄제거시", holdingLabel: "관심종목", content: "합병이 무산되면 프리미엄 빠지면서 밸류에이션 압박이 올 수 있죠. 결국 합병 성사 여부가 TSLA 배수 유지의 전제 조건이 되는 거네", likes: 3, createdAt: T26OCT + 148*60_000 },
   ],
   122423: [
-    { id: 1344230, postId: 122423, nickname: "빅테크어닝주", content: "이번주 MSFT·GOOGL(화요일)·AMZN(수요일)도 어닝 있어요. AI capex 가이던스 방향이 SpaceX 수요 논리 유지 여부를 추가 확인해줄 것 같아요.", likes: 5, createdAt: T26OCT + 148*60_000 },
-    { id: 1344231, postId: 122423, nickname: "오늘하루정리완료", content: "정리 감사합니다. 합병 확률 70%가 제일 임팩트 있는 뉴스인 것 같아요. 주말 전에 독립위원회 발표라도 나오면 시장 반응 클 듯", likes: 4, createdAt: T26OCT + 156*60_000 },
+    { id: 1344230, nickname: "빅테크어닝주", holdingLabel: "관심종목", content: "이번주 MSFT·GOOGL(화요일)·AMZN(수요일)도 어닝 있어요. AI capex 가이던스 방향이 SpaceX 수요 논리 유지 여부를 추가 확인해줄 것 같아요.", likes: 5, createdAt: T26OCT + 148*60_000 },
+    { id: 1344231, nickname: "오늘하루정리완료", holdingLabel: "관심종목", content: "정리 감사합니다. 합병 확률 70%가 제일 임팩트 있는 뉴스인 것 같아요. 주말 전에 독립위원회 발표라도 나오면 시장 반응 클 듯", likes: 4, createdAt: T26OCT + 156*60_000 },
   ],
   122172: [
     { id: 1221721, nickname: "추격손떨림", holdingLabel: "관심종목", content: "고가 176은 이미 갔는데 나는 손이 안 감 ㅋㅋ", createdAt: T07OCT + 720000, likes: 5 },
