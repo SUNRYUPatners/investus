@@ -49,15 +49,18 @@ function statBox(x,y,w,h,top,big,unit,sub,accent='#EF4444'){
   <text x="${x+w/2}" y="${y+128}" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">${escXml(unit)}</text>
   <text x="${x+w/2}" y="${y+158}" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">${escXml(sub)}</text>`;
 }
-function msgBox(y,h,titleText,lines,accentTop='#F59E0B',borderColor='#92400E'){
-  const lh=34;
-  const textSvg=lines.map((ln,i)=>
+// msgBox: auto-calculates height from line count. Returns {svg, h, nextY}.
+function msgBox(y, titleText, lines, accentTop='#F59E0B', borderColor='#92400E'){
+  const lh = 34;
+  const h = 72 + lines.length * lh + 28;
+  const textSvg = lines.map((ln, i) =>
     `<text x="108" y="${y+72+i*lh}" font-family="Arial,sans-serif" font-size="24" fill="${i===lines.length-1?'#FDE68A':'#E5E7EB'}">${escXml(ln)}</text>`
   ).join('');
-  return `<rect x="54" y="${y}" width="972" height="${h}" rx="22" fill="#0F0A00" stroke="${borderColor}" stroke-width="2.5"/>
+  const svg = `<rect x="54" y="${y}" width="972" height="${h}" rx="22" fill="#0F0A00" stroke="${borderColor}" stroke-width="2.5"/>
   <line x1="54" y1="${y+48}" x2="1026" y2="${y+48}" stroke="${accentTop}" stroke-width="2"/>
   <text x="108" y="${y+33}" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="${accentTop}">${escXml(titleText)}</text>
   ${textSvg}`;
+  return { svg, h, nextY: y + h + 14 };
 }
 
 async function save(slug, svg) {
@@ -73,14 +76,14 @@ function makeMetaFcf(ko){
   const titleLine = ko ? 'META · Q3 2026' : 'META · Q3 2026';
   const heroMain = ko ? 'FCF 사상 첫 적자' : 'First Negative FCF Ever';
   const heroNum  = ko ? '-$1.2B' : '-$1.2B';
-  const msg1 = ko
+  const msg1lines = ko
     ? ['2012년 상장 이후 처음으로 분기 잉여현금흐름이 마이너스가 됐습니다.',
        'AI 자본지출 $34.9B이 분기 영업현금흐름을 초과한 결과입니다.',
        '매출 $64.6B(+26%), adj EPS $7.40은 컨센서스를 웃돌았습니다.']
     : ['Free cash flow turned negative for the first time since 2012 IPO.',
        'AI capex of $34.9B in a single quarter exceeded operating cash flow.',
        'Revenue $64.6B (+26%), adj EPS $7.40 both beat consensus.'];
-  const msg2 = ko
+  const msg2lines = ko
     ? ['연간 capex 가이던스 $135~145B으로 상향됐습니다.',
        '현금 마이너스가 일회성인지, AI 사이클이 끝나는',
        '2027년까지 지속되는지가 핵심 관전 포인트입니다.']
@@ -96,7 +99,7 @@ function makeMetaFcf(ko){
     {label:'Q2\'26', val:9.0,  pct:55, pos:true},
     {label:'Q3\'26', val:-1.2, pct:7,  pos:false},
   ];
-  const barW=110, barGap=18, barMaxH=160, barY0=780;
+  const barW=110, barGap=18, barMaxH=160, barY0=700;
   const totalW=bars.length*(barW+barGap)-barGap;
   const startX=(1080-totalW)/2;
   const barsSvg=bars.map((b,i)=>{
@@ -112,6 +115,9 @@ function makeMetaFcf(ko){
   }).join('');
   const chartLabel=ko?'FCF 분기별 추이 (단위: $B)':'Quarterly FCF trend ($B)';
 
+  const m1 = msgBox(916, ko?'🔵 포인트':'🔵 Key Point', msg1lines, '#3B82F6', '#1D4ED8');
+  const m2 = msgBox(m1.nextY, ko?'📊 다음 확인':'📊 Next', msg2lines, '#60A5FA', '#1E3A5F');
+
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
   ${base('#0A0A1A','#0A0A0A','#3B82F6','#1D4ED8')}
   ${badge(40,24,120,'META','#1D4ED8','#3B82F6','#fff')}
@@ -120,13 +126,13 @@ function makeMetaFcf(ko){
   <text x="540" y="268" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="40" font-weight="900" fill="#F87171">${escXml(heroMain)}</text>
   <line x1="54" y1="300" x2="1026" y2="300" stroke="#1D4ED8" stroke-width="1.5" stroke-dasharray="6,4"/>
   <text x="40" y="345" font-family="Arial,sans-serif" font-size="26" fill="#93C5FD">${escXml(chartLabel)}</text>
-  <line x1="40" y1="${780}" x2="1040" y2="${780}" stroke="#374151" stroke-width="1.5"/>
+  <line x1="40" y1="${barY0}" x2="1040" y2="${barY0}" stroke="#374151" stroke-width="1.5"/>
   ${barsSvg}
-  ${statBox(40,834,310,176,ko?'AI 자본지출':'AI Capex','$34.9B',ko?'분기':'quarterly',ko?'전년비 +80%':'YoY +80%','#3B82F6')}
-  ${statBox(380,834,310,176,ko?'Q3 매출':'Revenue','$64.6B',ko?'YoY':'YoY',ko?'+26% 성장':'+26% growth','#10B981')}
-  ${statBox(720,834,320,176,ko?'연 capex 가이던스':'Annual Capex','$135~','145B',ko?'가이던스 상향':'guidance raised','#F59E0B')}
-  ${msgBox(1040,130,ko?'🔵 포인트':'🔵 Key Point',msg1,'#3B82F6','#1D4ED8')}
-  ${msgBox(1184,128,ko?'📊 다음 확인':'📊 Next',msg2,'#60A5FA','#1E3A5F')}
+  ${statBox(40,740,310,170,ko?'AI 자본지출':'AI Capex','$34.9B',ko?'분기':'quarterly',ko?'전년비 +80%':'YoY +80%','#3B82F6')}
+  ${statBox(380,740,310,170,ko?'Q3 매출':'Revenue','$64.6B',ko?'YoY':'YoY',ko?'+26% 성장':'+26% growth','#10B981')}
+  ${statBox(720,740,320,170,ko?'연 capex 가이던스':'Annual Capex','$135~','145B',ko?'가이던스 상향':'guidance raised','#F59E0B')}
+  ${m1.svg}
+  ${m2.svg}
   ${footer()}
 </svg>`;
 }
@@ -135,7 +141,7 @@ function makeMetaFcf(ko){
 function makeCybercabTexas(ko){
   const heroNum  = ko ? '970대' : '970 Vehicles';
   const heroSub  = ko ? '텍사스 Tesla 로보택시 (10/25 DMV 기준)' : 'Texas Tesla Robotaxi Fleet (DMV as of Oct 25)';
-  const msg1 = ko
+  const msg1lines = ko
     ? ['Cybercab 463대(47.7%) · Model Y 507대(52.3%)',
        '6월 9일 59대에서 4개월 반 만에 16배 성장',
        '10월 한 달만 +78% 증가 (+424대)',
@@ -144,7 +150,7 @@ function makeCybercabTexas(ko){
        '16x growth from 59 units on Jun 9 in 4.5 months',
        'October alone: +78% increase (+424 units)',
        'Austin F1 qualifying: 1,250 sightings — all-time record'];
-  const msg2 = ko
+  const msg2lines = ko
     ? ['웨이모는 현재 1,207대로 237대 앞서 있습니다.',
        '이 속도가 유지되면 연말~내년 초 역전 가능성이 있습니다.',
        '무인 주행 비율: 오스틴 F1 예선 92.7%(1159/1250)']
@@ -168,7 +174,9 @@ function makeCybercabTexas(ko){
     <text x="${x+barW/2}" y="${barY0-h-12}" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="${col}">${escXml(b.val)}</text>
     <text x="${x+barW/2}" y="${barY0+26}" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">${escXml(b.label)}</text>`;
   }).join('');
-  const arrowSvg=`<text x="108" y="420" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#10B981">▲ ${ko?'16x 성장 4개월':'16x growth in 4 months'}</text>`;
+
+  const m1 = msgBox(794, ko?'📍 오늘 포인트':'📍 Key Data', msg1lines, '#10B981', '#065F46');
+  const m2 = msgBox(m1.nextY, ko?'🏁 웨이모와 비교':'🏁 vs Waymo', msg2lines, '#F59E0B', '#78350F');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
   ${base('#020F0A','#010D08','#10B981','#059669')}
@@ -182,8 +190,8 @@ function makeCybercabTexas(ko){
   <text x="40" y="452" font-family="Arial,sans-serif" font-size="26" fill="#A7F3D0">${ko?'텍사스 플리트 성장 추이':'Texas Fleet Growth'}</text>
   <line x1="40" y1="${barY0}" x2="1040" y2="${barY0}" stroke="#065F46" stroke-width="1.5"/>
   ${growthSvg}
-  ${msgBox(794,150,ko?'📍 오늘 포인트':'📍 Key Data',msg1,'#10B981','#065F46')}
-  ${msgBox(958,144,ko?'🏁 웨이모와 비교':'🏁 vs Waymo',msg2,'#F59E0B','#78350F')}
+  ${m1.svg}
+  ${m2.svg}
   ${footer()}
 </svg>`;
 }
@@ -192,7 +200,7 @@ function makeCybercabTexas(ko){
 function makeNeoclouds(ko){
   const heroLine = ko ? '네오클라우드 200개 이상' : '200+ Neoclouds';
   const heroSub  = ko ? '붕괴 예고 · SpaceX AI 컴퓨트 독점 가속' : 'Collapse Incoming · SpaceX AI Compute Dominance';
-  const msg1 = ko
+  const msg1lines = ko
     ? ['머스크: 부채시장이 AI 데이터센터 외 기업에 자금줄을 끊었습니다.',
        'SpaceX는 GPU 구매를 위해 400억달러 부채를 이미 조달했습니다.',
        '200개 이상 네오클라우드가 구피 수준의 죽음과 통합에 직면합니다.',
@@ -201,13 +209,16 @@ function makeNeoclouds(ko){
        'SpaceX closed $40B in debt financing for GPU purchases.',
        '200+ neoclouds face guppy-level death and consolidation.',
        'SpaceX will buy their GPU scraps at distressed prices.'];
-  const msg2 = ko
+  const msg2lines = ko
     ? ['Panke: SpaceX, 7GW 인수로 총 13GW 컴퓨트 달성 전망',
        'Beth Kindig: GB300(블랙웰울트라) 월 20만대씩 배포 예정',
        'SpaceX AI 사업, Q3 전체 매출의 거의 절반(+9배 성장)']
     : ['Panke: SpaceX acquires 7GW from dying neoclouds → total 13GW compute',
        'Beth Kindig: 200K GB300 (Blackwell Ultra) units online per month',
        'SpaceX AI biz: ~half of Q3 revenue, grew 9x YoY'];
+
+  const m1 = msgBox(752, ko?'🔴 시장 구조 변화':'🔴 Market Structure Shift', msg1lines, '#9333EA', '#4C1D95');
+  const m2 = msgBox(m1.nextY, ko?'📡 SpaceX AI 컴퓨트 전망':'📡 SpaceX AI Compute Outlook', msg2lines, '#22C55E', '#14532D');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
   ${base('#0D0520','#070212','#9333EA','#6B21A8')}
@@ -227,8 +238,8 @@ function makeNeoclouds(ko){
   <text x="80" y="634" font-family="Arial,sans-serif" font-size="24" fill="#C084FC">${ko?'"SpaceX는 GPU용 $40B 부채를 조달했다.':'&quot;SpaceX closed $40B of debt for GPUs,'}</text>
   <text x="80" y="668" font-family="Arial,sans-serif" font-size="24" fill="#C084FC">${ko?'우리는 투자등급이고 스타링크·발사 매출이 있다."':'we&apos;re investment grade with Starlink &amp; launch revenue.&quot;'}</text>
   <text x="80" y="712" font-family="Arial,sans-serif" font-size="24" fill="#F87171">${ko?'"200개 이상 네오클라우드가 구피 수준의 죽음을 맞는다."':'&quot;200+ neoclouds will see guppy-level death.&quot;'}</text>
-  ${msgBox(752,148,ko?'🔴 시장 구조 변화':'🔴 Market Structure Shift',msg1,'#9333EA','#4C1D95')}
-  ${msgBox(914,140,ko?'📡 SpaceX AI 컴퓨트 전망':'📡 SpaceX AI Compute Outlook',msg2,'#22C55E','#14532D')}
+  ${m1.svg}
+  ${m2.svg}
   ${footer()}
 </svg>`;
 }
@@ -238,20 +249,23 @@ function makeGerstner(ko){
   const heroTop  = ko ? 'Brad Gerstner (Benchmark Capital)' : 'Brad Gerstner · Benchmark Capital';
   const heroMain = ko ? '$420~$550' : '$420–$550';
   const heroSub  = ko ? 'SpaceX가 Tesla를 인수할 수 있다 — CNBC' : 'SpaceX could acquire Tesla — CNBC';
-  const msg1 = ko
+  const msg1lines = ko
     ? ['현재 TSLA 주가(~$379) 대비 최대 45% 프리미엄에 해당합니다.',
        '독립위원회의 대등합병(merger of equals) 탐색과 다른 구도입니다.',
        'SpaceX가 인수 주체, Tesla가 피인수 대상인 시나리오입니다.']
     : ['Up to 45% premium over TSLA\'s price (~$379) at time of comment.',
        'Distinct from the merger-of-equals scenario the independent committees explore.',
        'Scenario: SpaceX as acquirer, Tesla as the acquisition target.'];
-  const msg2 = ko
+  const msg2lines = ko
     ? ['Tesla 주주: 현금 인수 프리미엄이 단기 상승 이벤트.',
        'SpaceX 주주: 대규모 자금 조달과 EV 사업 리스크를 검토해야 합니다.',
        '현재 공식 절차는 독립위원회 탐색 단계 — 확정 조건 없음.']
     : ['Tesla shareholders: acquisition premium = near-term upside event.',
        'SpaceX shareholders: large funding need + EV business risk to assess.',
        'Current official process: independent committee exploration — no firm terms.'];
+
+  const m1 = msgBox(724, ko?'💡 각 주주 입장':'💡 Stakeholder View', msg1lines, '#10B981', '#064E3B');
+  const m2 = msgBox(m1.nextY, ko?'⚠️ 확인 필요':'⚠️ To Monitor', msg2lines, '#F59E0B', '#78350F');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
   ${base('#020D0A','#01080A','#10B981','#0D9488')}
@@ -270,8 +284,8 @@ function makeGerstner(ko){
   <text x="80" y="612" font-family="Arial,sans-serif" font-size="24" fill="#A7F3D0">${ko?'▸ 독립위원회: 대등합병(비율 협상, 두 회사 병존)':'▸ Independent Committee: merger of equals (ratio negotiation)'}</text>
   <text x="80" y="648" font-family="Arial,sans-serif" font-size="24" fill="#10B981">${ko?'▸ Gerstner 시나리오: SpaceX가 Tesla를 매수(현금 프리미엄)':'▸ Gerstner scenario: SpaceX acquires Tesla (cash premium)'}</text>
   <text x="80" y="684" font-family="Arial,sans-serif" font-size="24" fill="#6B7280">${ko?'두 시나리오는 현재 동시에 거론 중 — 어느 쪽도 확정 아님':'Both scenarios circulating now — neither is confirmed'}</text>
-  ${msgBox(724,148,ko?'💡 각 주주 입장':'💡 Stakeholder View',msg1,'#10B981','#064E3B')}
-  ${msgBox(888,136,ko?'⚠️ 확인 필요':'⚠️ To Monitor',msg2,'#F59E0B','#78350F')}
+  ${m1.svg}
+  ${m2.svg}
   ${footer()}
 </svg>`;
 }
@@ -280,7 +294,7 @@ function makeGerstner(ko){
 function makeStarlink(ko){
   const heroNum  = ko ? '1,360만' : '13.6M';
   const heroSub  = ko ? 'Starlink 구독자 (2026년 10월 기준)' : 'Starlink Subscribers (as of Oct 2026)';
-  const msg1 = ko
+  const msg1lines = ko
     ? ['1년 전(2025년 10월): 720만 구독자',
        '1년 만에 +640만 → 89% 증가',
        '월 구독료 $120 기준 연환산 매출 약 $195억',
@@ -289,7 +303,7 @@ function makeStarlink(ko){
        '+6.4M in 12 months → +89% YoY growth',
        'At $120/month: ~$19.5B annualized run rate',
        'Underpins SpaceX\'s investment-grade credit for $40B GPU debt'];
-  const msg2 = ko
+  const msg2lines = ko
     ? ['AI 사업이 매출 절반을 차지하는 중에도 구독 기반 반복 매출 확장.',
        'Starlink·발사·AI — 세 수익원이 동시 성장하는 구조입니다.',
        '다음 확인: Q4 2026 가입자 1,500만 돌파 여부']
@@ -320,6 +334,9 @@ function makeStarlink(ko){
     <text x="${x+barW/2}" y="${barY0+26}" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">${escXml(b.label)}</text>`;
   }).join('');
 
+  const m1 = msgBox(808, ko?'📡 성장 데이터':'📡 Growth Data', msg1lines, '#9333EA', '#4C1D95');
+  const m2 = msgBox(m1.nextY, ko?'🚀 SpaceX 수익 구조':'🚀 SpaceX Revenue Structure', msg2lines, '#7C3AED', '#3B0764');
+
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
   ${base('#0A0520','#060312','#9333EA','#7C3AED')}
   ${badge(40,24,130,'SPCX','#4C1D95','#9333EA','#E9D5FF')}
@@ -332,8 +349,8 @@ function makeStarlink(ko){
   <text x="40" y="454" font-family="Arial,sans-serif" font-size="26" fill="#E9D5FF">${ko?'Starlink 구독자 성장 추이 (백만)':'Subscriber Growth (millions)'}</text>
   <line x1="40" y1="${barY0}" x2="1040" y2="${barY0}" stroke="#4C1D95" stroke-width="1.5"/>
   ${barsSvg}
-  ${msgBox(808,168,ko?'📡 성장 데이터':'📡 Growth Data',msg1,'#9333EA','#4C1D95')}
-  ${msgBox(992,132,ko?'🚀 SpaceX 수익 구조':'🚀 SpaceX Revenue Structure',msg2,'#7C3AED','#3B0764')}
+  ${m1.svg}
+  ${m2.svg}
   ${footer()}
 </svg>`;
 }

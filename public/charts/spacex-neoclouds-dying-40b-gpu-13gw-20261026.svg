@@ -42,14 +42,14 @@
   <text x="80" y="634" font-family="Arial,sans-serif" font-size="24" fill="#C084FC">"SpaceX는 GPU용 $40B 부채를 조달했다.</text>
   <text x="80" y="668" font-family="Arial,sans-serif" font-size="24" fill="#C084FC">우리는 투자등급이고 스타링크·발사 매출이 있다."</text>
   <text x="80" y="712" font-family="Arial,sans-serif" font-size="24" fill="#F87171">"200개 이상 네오클라우드가 구피 수준의 죽음을 맞는다."</text>
-  <rect x="54" y="752" width="972" height="148" rx="22" fill="#0F0A00" stroke="#4C1D95" stroke-width="2.5"/>
+  <rect x="54" y="752" width="972" height="236" rx="22" fill="#0F0A00" stroke="#4C1D95" stroke-width="2.5"/>
   <line x1="54" y1="800" x2="1026" y2="800" stroke="#9333EA" stroke-width="2"/>
   <text x="108" y="785" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#9333EA">🔴 시장 구조 변화</text>
   <text x="108" y="824" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">머스크: 부채시장이 AI 데이터센터 외 기업에 자금줄을 끊었습니다.</text><text x="108" y="858" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">SpaceX는 GPU 구매를 위해 400억달러 부채를 이미 조달했습니다.</text><text x="108" y="892" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">200개 이상 네오클라우드가 구피 수준의 죽음과 통합에 직면합니다.</text><text x="108" y="926" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">SpaceX가 붕괴하는 네오클라우드 GPU를 헐값에 흡수합니다.</text>
-  <rect x="54" y="914" width="972" height="140" rx="22" fill="#0F0A00" stroke="#14532D" stroke-width="2.5"/>
-  <line x1="54" y1="962" x2="1026" y2="962" stroke="#22C55E" stroke-width="2"/>
-  <text x="108" y="947" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#22C55E">📡 SpaceX AI 컴퓨트 전망</text>
-  <text x="108" y="986" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Panke: SpaceX, 7GW 인수로 총 13GW 컴퓨트 달성 전망</text><text x="108" y="1020" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Beth Kindig: GB300(블랙웰울트라) 월 20만대씩 배포 예정</text><text x="108" y="1054" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">SpaceX AI 사업, Q3 전체 매출의 거의 절반(+9배 성장)</text>
+  <rect x="54" y="1002" width="972" height="202" rx="22" fill="#0F0A00" stroke="#14532D" stroke-width="2.5"/>
+  <line x1="54" y1="1050" x2="1026" y2="1050" stroke="#22C55E" stroke-width="2"/>
+  <text x="108" y="1035" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#22C55E">📡 SpaceX AI 컴퓨트 전망</text>
+  <text x="108" y="1074" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Panke: SpaceX, 7GW 인수로 총 13GW 컴퓨트 달성 전망</text><text x="108" y="1108" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Beth Kindig: GB300(블랙웰울트라) 월 20만대씩 배포 예정</text><text x="108" y="1142" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">SpaceX AI 사업, Q3 전체 매출의 거의 절반(+9배 성장)</text>
   <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
   <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
 </svg>

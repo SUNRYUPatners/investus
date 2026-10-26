@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#030A18"/><stop offset="100%" stop-color="#020712"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#1D4ED8"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#BFDBFE">TSLA</text>
+  <text x="540" y="188" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="160" font-weight="900" fill="#3B82F6" filter="url(#glow)">244.5x</text>
+  <text x="540" y="252" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#BFDBFE">TSLA Blended P/E · GNG Research · Oct 23, 2026</text>
+  <line x1="54" y1="282" x2="1026" y2="282" stroke="#1D4ED8" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <rect x="40" y="302" width="320" height="176" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+  <text x="200" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Custom FV (244.5x)</text>
+  <text x="200" y="398" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#3B82F6">$372</text>
+  <text x="200" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">= 현재가</text>
+  <text x="200" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">no overvaluation</text>
+  <rect x="390" y="302" width="300" height="176" rx="18" fill="#0F1623" stroke="#EF4444" stroke-width="2"/>
+  <text x="540" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Normal FV (148.1x)</text>
+  <text x="540" y="398" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#EF4444">$226</text>
+  <text x="540" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">vs $372</text>
+  <text x="540" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">39% gap</text>
+  <rect x="720" y="302" width="320" height="176" rx="18" fill="#0F1623" stroke="#10B981" stroke-width="2"/>
+  <text x="880" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">EPS CAGR</text>
+  <text x="880" y="398" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#10B981">+18.5%</text>
+  <text x="880" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">FY25-27E</text>
+  <text x="880" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">annual</text>
+  <rect x="54" y="506" width="972" height="270" rx="22" fill="#030F24" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="540" y="552" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#60A5FA">P/E Multiple Analysis — Custom vs Normal</text>
+  <line x1="54" y1="564" x2="1026" y2="564" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="80" y="610" font-family="Arial,sans-serif" font-size="24" fill="#BFDBFE">▸ Custom FV 244.5x: fair IF 18.5% EPS CAGR sustained</text>
+  <text x="80" y="648" font-family="Arial,sans-serif" font-size="24" fill="#F87171">▸ Normal FV 148.1x: mean reversion scenario → $225 (-39%)</text>
+  <text x="80" y="686" font-family="Arial,sans-serif" font-size="24" fill="#10B981">▸ PEG ratio: 244.5 ÷ 18.5 = 13.2x (reasonable for high-growth)</text>
+  <text x="80" y="724" font-family="Arial,sans-serif" font-size="24" fill="#6B7280">→ Remove merger premium → Custom FV basis weakens — key risk</text>
+  <rect x="54" y="808" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1D4ED8" stroke-width="2.5"/>
+  <line x1="54" y1="856" x2="1026" y2="856" stroke="#3B82F6" stroke-width="2"/>
+  <text x="108" y="841" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#3B82F6">📊 GNG Valuation Summary</text>
+  <text x="108" y="880" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">P/E blended 244.5x · TTM 258.5x · Price $372.22</text><text x="108" y="914" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">65% premium to own 10-yr normal P/E of 148.1x</text><text x="108" y="948" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">GNG Custom FV (244.5x) = $372.22 → current price = fair</text><text x="108" y="982" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Normal FV (148.1x) = $225.52 → 39% overvalued at normal</text>
+  <rect x="54" y="1058" width="972" height="202" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="1106" x2="1026" y2="1106" stroke="#10B981" stroke-width="2"/>
+  <text x="108" y="1091" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#10B981">📈 EPS Growth &amp; Merger Logic</text>
+  <text x="108" y="1130" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">EPS CAGR FY25-27E +18.5%/yr → PEG 13.2x (reasonable)</text><text x="108" y="1164" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Vulcan Research: growth + TSLA/SPCX merger premium</text><text x="108" y="1198" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Custom FV path by Dec 2027: +43.8%/yr → $572 scenario</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

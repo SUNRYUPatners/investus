@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#050518"/><stop offset="100%" stop-color="#030315"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#064E3B"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#10B981" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#A7F3D0">TSLA</text>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="#312E81"/>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="none" stroke="#6366F1" stroke-width="2"/>
+  <text x="257" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C7D2FE">SPCX</text>
+  <text x="540" y="200" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="220" font-weight="900" fill="#6366F1" filter="url(#glow)">70%</text>
+  <text x="540" y="286" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#C7D2FE">Tesla-SpaceX 합병 · 2028년 전 성사 확률 (Kalshi 예측시장)</text>
+  <line x1="54" y1="316" x2="1026" y2="316" stroke="#4338CA" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <rect x="40" y="336" width="310" height="176" rx="18" fill="#0F1623" stroke="#6366F1" stroke-width="2"/>
+  <text x="195" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">합병 규모</text>
+  <text x="195" y="432" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#6366F1">$3.7T</text>
+  <text x="195" y="464" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">추산</text>
+  <text x="195" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">합산 기업가치</text>
+  <rect x="380" y="336" width="310" height="176" rx="18" fill="#0F1623" stroke="#10B981" stroke-width="2"/>
+  <text x="535" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">인수 상단 (Gerstner)</text>
+  <text x="535" y="432" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#10B981">$550</text>
+  <text x="535" y="464" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">per share</text>
+  <text x="535" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">현재가 +45%</text>
+  <rect x="720" y="336" width="320" height="176" rx="18" fill="#0F1623" stroke="#F59E0B" stroke-width="2"/>
+  <text x="880" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">TSLA (발언 시점)</text>
+  <text x="880" y="432" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F59E0B">$379</text>
+  <text x="880" y="464" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">TSLA</text>
+  <text x="880" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">CNBC 기준</text>
+  <rect x="54" y="540" width="972" height="248" rx="22" fill="#0A0A2A" stroke="#4338CA" stroke-width="2"/>
+  <text x="540" y="586" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A5B4FC">합병 vs 인수 — 두 시나리오 비교</text>
+  <line x1="54" y1="598" x2="1026" y2="598" stroke="#4338CA" stroke-width="1.5"/>
+  <text x="80" y="644" font-family="Arial,sans-serif" font-size="24" fill="#C7D2FE">▸ 독립위원회: 대등합병(비율 협상, 양사 병존)</text>
+  <text x="80" y="682" font-family="Arial,sans-serif" font-size="24" fill="#6EE7B7">▸ Gerstner: SpaceX가 Tesla를 현금 매수($420~550)</text>
+  <text x="80" y="720" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">시너지: FSD+Starlink · Optimus+AI 컴퓨트 · 에너지 생태계</text>
+  <text x="80" y="758" font-family="Arial,sans-serif" font-size="24" fill="#6B7280">→ 어느 쪽도 확정 없음. 탐색 단계.</text>
+  <rect x="54" y="808" width="972" height="236" rx="22" fill="#0F0A00" stroke="#312E81" stroke-width="2.5"/>
+  <line x1="54" y1="856" x2="1026" y2="856" stroke="#6366F1" stroke-width="2"/>
+  <text x="108" y="841" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#6366F1">📊 Kalshi 예측시장</text>
+  <text x="108" y="880" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Kalshi: 2028년 전 Tesla-SpaceX 합병 성사 확률 70%</text><text x="108" y="914" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">$3.7조 메가딜 — SpaceX 1.7조 + Tesla 1.2조 합산</text><text x="108" y="948" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">양사 독립위원회 구성, 대등합병 탐색 단계</text><text x="108" y="982" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">확정 조건·교환비율 없음 — 탐색 단계</text>
+  <rect x="54" y="1058" width="972" height="202" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="1106" x2="1026" y2="1106" stroke="#10B981" stroke-width="2"/>
+  <text x="108" y="1091" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#10B981">💡 Gerstner 인수 시나리오</text>
+  <text x="108" y="1130" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Gerstner(Benchmark): SpaceX가 TSLA를 $420~$550에 현금 인수 시나리오</text><text x="108" y="1164" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Tesla 주주: 최대 45% 프리미엄 수령 구도</text><text x="108" y="1198" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">SpaceX 주주: 자금 조달 부담 + EV 리스크 검토 필요</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

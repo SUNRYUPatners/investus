@@ -138,6 +138,21 @@ const ALLOW = new Set([
   "ngiga", "ngene", "ncole", "nsaas", "ndata", "nmiles",
   "ntesla", "nark", "ninvest", "ncybercab", "njpmorgan",
   "nwall", "ngaap", "nebitda", "nwaymo", "nconstruction",
+  // 2026-10-26 추가 — 합병·밸류에이션·인물명·서비스명
+  "significant", "margin", "full", "self", "driving",
+  "ark", "invest", "cathie", "wood",
+  "custom", "fv", "vulcan", "normal", "blended", "ttm", "peg", "gng",
+  "doctor", "jack", "polymarket", "benchmark", "capital",
+  "cnbc", "gerstner", "brad",
+  "merger", "acquisition", "synergies", "committee", "independent", "equals",
+  "kalshi", "finance", "prediction", "market", "probability",
+  "demand", "supply", "exceeds", "exceeding", "surging", "ramp",
+  "significant", "margin", "proven", "commercial",
+  "wedbush", "dan", "ives",
+  // \n 아티팩트 (2026-10-26)
+  "nkalshi", "npolymarket", "ngerstner", "ndoctor", "nvulcan",
+  "nark", "nmerger", "nacquisition", "nsynergies", "ncommittee",
+  "ndemand", "nsupply",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */

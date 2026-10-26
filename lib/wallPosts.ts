@@ -182,6 +182,22 @@ export const MOCK_POSTS: Post[] = [
   { id: 122419, symbol: "SPCX", nickname: "스타링크천삼백육십만", holdingLabel: "관심종목",
     content: "스타링크 구독자 1360만이래. 1년전엔 720만이었는데 89% 증가ㄷㄷ 월 구독료 120달러면 단순 계산해도 연 195억달러야. 스페이스엑스 AI 사업도 크지만 이 구독 기반이 신용등급 유지하는 거 아니야?",
     createdAt: T26OCT + 112*60_000, likes: 24, comments: 2 },
+  { id: 122420, symbol: "TSLA", nickname: "칼시합병칠십퍼센트", holdingLabel: "관심종목",
+    content: "칼시 예측시장이 테슬라-스페이스엑스 합병 70% 확률이라고ㄷㄷ 2028년 전에 합쳐진다는 거잖아. 3.7조달러 규모... 이게 현실이 되면 진짜 세계 최대 테크기업 아냐? 거스트너는 420~550달러 인수 얘기도 했는데 지금 주가 379달러면 프리미엄이 어마어마하네",
+    contentEn: "Kalshi prediction market: 70% probability Tesla-SpaceX merger before 2028. $3.7T deal if it happens. Gerstner floated $420-550 acquisition price vs current $379. If either scenario plays out this is going to be massive.",
+    createdAt: T26OCT + 120*60_000, likes: 22, comments: 2 },
+  { id: 122421, symbol: "TSLA", nickname: "FSD수요생산초과", holdingLabel: "관심종목",
+    content: "머스크가 FSD 수요가 생산을 significant margin으로 초과한다고 직접 말했네. 22~24년에 가격 깎아서 팔던 거랑 완전 반대 상황이 된 거잖아. 오스틴 F1 예선 사이버캡 1250건 목격에 무인이 92.7%라는 게 데이터로 증명되는 중",
+    contentEn: "Musk says FSD demand exceeds production capacity by a 'significant margin' - total reversal from the 2022-24 price cut era. Austin F1 qualifying 1,250 Cybercab sightings, 92.7% driverless. Demand is real.",
+    createdAt: T26OCT + 128*60_000, likes: 21, comments: 2 },
+  { id: 122422, symbol: "TSLA", nickname: "PE244배GNG공정가치", holdingLabel: "관심종목",
+    content: "GNG 차트 보니까 테슬라 PE 244.5배인데 Custom FV가 지금 주가랑 같은 372달러래. 10년 평균 PE 148배랑 비교하면 65% 프리미엄이고 Normal FV는 225달러로 떨어지는데. FY25~27 EPS 18.5% 성장 가정이 맞으면 PEG 13배라 이상한 수준은 아닌데",
+    contentEn: "GNG chart shows Tesla P/E 244.5x but their Custom FV is exactly $372 (current price). 10-yr normal 148x puts fair value at $225. If FY25-27 EPS CAGR 18.5% holds, PEG is 13x which isn't insane for a high-growth story.",
+    createdAt: T26OCT + 136*60_000, likes: 20, comments: 2 },
+  { id: 122423, symbol: "TSLA", nickname: "한장요약1026", holdingLabel: "관심종목",
+    content: "오늘 요약: 합병 칼시 70%, META FCF 첫 적자, 사이버캡 텍사스 970대 F1 신기록, FSD 수요 > 생산, TSLA PE 244배, SpaceX 40B 부채+네오클라우드 흡수. 합병 + FSD 수요 초과 + AI 컴퓨트 독점이 동시에 진행되는 주라서 변동성 클 수 있음",
+    contentEn: "Today's wrap: Merger Kalshi 70%, META first FCF loss, Cybercab TX 970 + F1 record, FSD demand>supply, TSLA P/E 244x, SpaceX $40B debt + neocloid absorption. Merger + FSD demand surge + AI compute dominance all moving at once - expect volatility.",
+    createdAt: T26OCT + 144*60_000, likes: 19, comments: 2 },
   // ── 2026-10-24 (토) 주말 자체수집 ─────────────────────
   { id: 122395, symbol: "SPCX", nickname: "잠금해제월요일주의", holdingLabel: "보유중",
     content: "SPCX 328M주 잠금해제 만기가 오늘(토) 도래함. 토요일이라 실제 매도는 월요일(10/26)부터 가능. 10/22에 1.3B주 이미 해제됐는데 주가가 버텼잖아. 이번 328M은 그것의 25% 수준. 근데 월요일 장 초반은 변동성 있을 수 있음",
@@ -6135,6 +6151,22 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   122419: [
     { id: 1224191, nickname: "오스틴천이백오십건", holdingLabel: "관심종목", content: "195억달러는 가정용 요금제 기준 추산이야. 실제 믹스는 달라", createdAt: T26OCT + 5640000, likes: 4 },
     { id: 1224192, nickname: "거스트너사백이십달러", holdingLabel: "관심종목", content: "가입자 증가는 좋은데 해지율 데이터는 공개 안 됨", createdAt: T26OCT + 5820000, likes: 3 },
+  ],
+  122420: [
+    { id: 1344200, postId: 122420, nickname: "벤치마크거스트너", content: "교환비율이 진짜 핵심이죠. 칼시 70%가 맞다 쳐도 TSLA 주주가 받는 스페이스엑스 지분 가치가 얼마냐에 따라 실제 득실이 달라져요.", likes: 4, createdAt: T26OCT + 123*60_000 },
+    { id: 1344201, postId: 122420, nickname: "합병리스크체크", content: "대등합병이면 희석 걱정이고 인수면 스페이스엑스 자금 부담이에요. 어느 방식이든 단기 변동성은 피하기 어려울 것 같아요.", likes: 3, createdAt: T26OCT + 131*60_000 },
+  ],
+  122421: [
+    { id: 1344210, postId: 122421, nickname: "FSD킬러피처", content: "가격 안 낮춰도 팔린다는 게 핵심이잖아요. ASP 유지나 인상 여지도 생겨서 마진 회복에 직결돼요.", likes: 5, createdAt: T26OCT + 132*60_000 },
+    { id: 1344211, postId: 122421, nickname: "생산병목확인필요", content: "수요가 넘치는데 어디서 막히는지가 중요해요. 배터리야 라인 가동률이야. 어닝콜 트랜스크립트 다시 봐야겠다", likes: 3, createdAt: T26OCT + 140*60_000 },
+  ],
+  122422: [
+    { id: 1344220, postId: 122422, nickname: "PEG계산맞네", content: "PEG 13배 계산 맞아요. 근데 18.5% 성장 가정이 틀리면 Normal 225달러까지 조정 가능성도 있어서 이게 리스크예요.", likes: 4, createdAt: T26OCT + 140*60_000 },
+    { id: 1344221, postId: 122422, nickname: "합병프리미엄제거시", content: "합병이 무산되면 프리미엄 빠지면서 밸류에이션 압박이 올 수 있죠. 결국 합병 성사 여부가 TSLA 배수 유지의 전제 조건이 되는 거네", likes: 3, createdAt: T26OCT + 148*60_000 },
+  ],
+  122423: [
+    { id: 1344230, postId: 122423, nickname: "빅테크어닝주", content: "이번주 MSFT·GOOGL(화요일)·AMZN(수요일)도 어닝 있어요. AI capex 가이던스 방향이 SpaceX 수요 논리 유지 여부를 추가 확인해줄 것 같아요.", likes: 5, createdAt: T26OCT + 148*60_000 },
+    { id: 1344231, postId: 122423, nickname: "오늘하루정리완료", content: "정리 감사합니다. 합병 확률 70%가 제일 임팩트 있는 뉴스인 것 같아요. 주말 전에 독립위원회 발표라도 나오면 시장 반응 클 듯", likes: 4, createdAt: T26OCT + 156*60_000 },
   ],
   122172: [
     { id: 1221721, nickname: "추격손떨림", holdingLabel: "관심종목", content: "고가 176은 이미 갔는데 나는 손이 안 감 ㅋㅋ", createdAt: T07OCT + 720000, likes: 5 },

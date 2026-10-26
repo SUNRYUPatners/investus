@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#050510"/><stop offset="100%" stop-color="#020208"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#064E3B"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#10B981" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#A7F3D0">TSLA</text>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="#312E81"/>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="none" stroke="#6366F1" stroke-width="2"/>
+  <text x="257" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C7D2FE">SPCX</text>
+  <rect x="344" y="24" width="120" height="40" rx="20" fill="#1D4ED8"/>
+  <rect x="344" y="24" width="120" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="404" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#BFDBFE">META</text>
+  <text x="540" y="130" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#E5E7EB" filter="url(#glow)">Oct 26, 2026 — TOP 8</text>
+  <text x="540" y="184" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#9CA3AF">TSLA · SPCX · META Daily Summary</text>
+  <line x1="54" y1="210" x2="1026" y2="210" stroke="#4338CA" stroke-width="1.5"/>
+  <text x="54" y="268" font-family="Arial Black,Arial,sans-serif" font-size="36" font-weight="900" fill="#6366F1">MERGER: Kalshi 70%</text>
+  <text x="54" y="314" font-family="Arial,sans-serif" font-size="24" fill="#C7D2FE">Tesla+SpaceX before 2028 · $3.7T mega-deal · independent committees exploring</text>
+  <line x1="54" y1="340" x2="1026" y2="340" stroke="#1F2937" stroke-width="1"/>
+  <rect x="54" y="360" width="490" height="94" rx="16" fill="#0A0A1A" stroke="#6366F1" stroke-width="1.5"/>
+    <rect x="54" y="360" width="100" height="94" rx="16" fill="#6366F122"/>
+    <text x="104" y="398" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#6366F1">MERGER</text>
+    <text x="104" y="422" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#6366F1">Kalshi 70%</text>
+    <text x="170" y="415" font-family="Arial,sans-serif" font-size="21" fill="#E5E7EB">Tesla-SpaceX before 2028 on Kalshi</text><rect x="54" y="468" width="490" height="94" rx="16" fill="#0A0A1A" stroke="#3B82F6" stroke-width="1.5"/>
+    <rect x="54" y="468" width="100" height="94" rx="16" fill="#3B82F622"/>
+    <text x="104" y="506" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#3B82F6">META</text>
+    <text x="104" y="530" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#3B82F6">FCF Negative</text>
+    <text x="170" y="523" font-family="Arial,sans-serif" font-size="21" fill="#E5E7EB">First-ever negative FCF -$1.2B since IPO</text><rect x="54" y="576" width="490" height="94" rx="16" fill="#0A0A1A" stroke="#10B981" stroke-width="1.5"/>
+    <rect x="54" y="576" width="100" height="94" rx="16" fill="#10B98122"/>
+    <text x="104" y="614" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#10B981">Cybercab</text>
+    <text x="104" y="638" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#10B981">970 Record</text>
+    <text x="170" y="631" font-family="Arial,sans-serif" font-size="21" fill="#E5E7EB">TX 970 fleet · F1 1,250 sightings 92.7%</text><rect x="54" y="684" width="490" height="94" rx="16" fill="#0A0A1A" stroke="#34D399" stroke-width="1.5"/>
+    <rect x="54" y="684" width="100" height="94" rx="16" fill="#34D39922"/>
+    <text x="104" y="722" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#34D399">FSD</text>
+    <text x="104" y="746" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#34D399">Demand&gt;Supply</text>
+    <text x="170" y="739" font-family="Arial,sans-serif" font-size="21" fill="#E5E7EB">Musk: significant margin · ramp promised</text><rect x="564" y="360" width="490" height="94" rx="16" fill="#0A0A1A" stroke="#60A5FA" stroke-width="1.5"/>
+    <rect x="564" y="360" width="100" height="94" rx="16" fill="#60A5FA22"/>
+    <text x="614" y="398" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#60A5FA">TSLA</text>
+    <text x="614" y="422" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#60A5FA">P/E 244.5x</text>
+    <text x="680" y="415" font-family="Arial,sans-serif" font-size="21" fill="#E5E7EB">GNG Custom FV=$372 · Normal=$226 gap</text><rect x="564" y="468" width="490" height="94" rx="16" fill="#0A0A1A" stroke="#9333EA" stroke-width="1.5"/>
+    <rect x="564" y="468" width="100" height="94" rx="16" fill="#9333EA22"/>
+    <text x="614" y="506" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#9333EA">SPCX</text>
+    <text x="614" y="530" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#9333EA">$40B GPU</text>
+    <text x="680" y="523" font-family="Arial,sans-serif" font-size="21" fill="#E5E7EB">200+ neoclouds collapse · GPU absorption</text><rect x="564" y="576" width="490" height="94" rx="16" fill="#0A0A1A" stroke="#A855F7" stroke-width="1.5"/>
+    <rect x="564" y="576" width="100" height="94" rx="16" fill="#A855F722"/>
+    <text x="614" y="614" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#A855F7">Starlink</text>
+    <text x="614" y="638" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#A855F7">13.6M</text>
+    <text x="680" y="631" font-family="Arial,sans-serif" font-size="21" fill="#E5E7EB">YoY+89% · underpins $40B credit profile</text><rect x="564" y="684" width="490" height="94" rx="16" fill="#0A0A1A" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="564" y="684" width="100" height="94" rx="16" fill="#F59E0B22"/>
+    <text x="614" y="722" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#F59E0B">Gerstner</text>
+    <text x="614" y="746" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" fill="#F59E0B">$420–550</text>
+    <text x="680" y="739" font-family="Arial,sans-serif" font-size="21" fill="#E5E7EB">SpaceX acquires Tesla cash scenario</text>
+  <line x1="54" y1="810" x2="1026" y2="810" stroke="#1F2937" stroke-width="1"/>
+  <text x="54" y="866" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#10B981">Key Takeaway</text>
+  <text x="54" y="912" font-family="Arial,sans-serif" font-size="23" fill="#A7F3D0">Merger 70% + FSD demand>supply + AI compute dominance — all three converging</text>
+  <text x="54" y="956" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">META first FCF loss confirms AI capex cycle is in cash-burn phase</text>
+  <text x="54" y="1000" font-family="Arial,sans-serif" font-size="23" fill="#9CA3AF">MSFT·GOOGL(10/28)·AMZN(10/29) earnings will confirm AI capex cycle</text>
+  <line x1="54" y1="1030" x2="1026" y2="1030" stroke="#1F2937" stroke-width="1"/>
+  <text x="54" y="1090" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900" fill="#F59E0B">Key Numbers at a Glance</text>
+  <text x="54" y="1134" font-family="Arial,sans-serif" font-size="23" fill="#FDE68A">TSLA P/E 244.5x  ·  Merger $3.7T  ·  Gerstner $420–550</text>
+  <text x="54" y="1178" font-family="Arial,sans-serif" font-size="23" fill="#FDE68A">Cybercab 970 · F1 1,250 sightings · 92.7% driverless  ·  Starlink 13.6M</text>
+  <text x="54" y="1222" font-family="Arial,sans-serif" font-size="23" fill="#FDE68A">META FCF -$1.2B · AI capex $34.9B  ·  SpaceX $40B GPU debt</text>
+  <text x="54" y="1266" font-family="Arial,sans-serif" font-size="23" fill="#FDE68A">SpaceX 13GW compute · 200K GB300/mo  ·  Starlink +89% YoY</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

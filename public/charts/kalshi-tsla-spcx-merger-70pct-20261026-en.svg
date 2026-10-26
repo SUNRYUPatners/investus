@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#050518"/><stop offset="100%" stop-color="#030315"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#064E3B"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#10B981" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#A7F3D0">TSLA</text>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="#312E81"/>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="none" stroke="#6366F1" stroke-width="2"/>
+  <text x="257" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C7D2FE">SPCX</text>
+  <text x="540" y="200" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="220" font-weight="900" fill="#6366F1" filter="url(#glow)">70%</text>
+  <text x="540" y="286" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#C7D2FE">Tesla-SpaceX merger before 2028 — Kalshi prediction market</text>
+  <line x1="54" y1="316" x2="1026" y2="316" stroke="#4338CA" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <rect x="40" y="336" width="310" height="176" rx="18" fill="#0F1623" stroke="#6366F1" stroke-width="2"/>
+  <text x="195" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Deal Size</text>
+  <text x="195" y="432" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#6366F1">$3.7T</text>
+  <text x="195" y="464" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">estimated</text>
+  <text x="195" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">combined market cap</text>
+  <rect x="380" y="336" width="310" height="176" rx="18" fill="#0F1623" stroke="#10B981" stroke-width="2"/>
+  <text x="535" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Upper Price (Gerstner)</text>
+  <text x="535" y="432" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#10B981">$550</text>
+  <text x="535" y="464" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">per share</text>
+  <text x="535" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">vs ~$379 +45%</text>
+  <rect x="720" y="336" width="320" height="176" rx="18" fill="#0F1623" stroke="#F59E0B" stroke-width="2"/>
+  <text x="880" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">TSLA at comment</text>
+  <text x="880" y="432" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F59E0B">$379</text>
+  <text x="880" y="464" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">TSLA</text>
+  <text x="880" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">CNBC ref price</text>
+  <rect x="54" y="540" width="972" height="248" rx="22" fill="#0A0A2A" stroke="#4338CA" stroke-width="2"/>
+  <text x="540" y="586" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A5B4FC">Merger vs Acquisition — Two Scenarios</text>
+  <line x1="54" y1="598" x2="1026" y2="598" stroke="#4338CA" stroke-width="1.5"/>
+  <text x="80" y="644" font-family="Arial,sans-serif" font-size="24" fill="#C7D2FE">▸ Independent Committee: merger of equals (ratio negotiation)</text>
+  <text x="80" y="682" font-family="Arial,sans-serif" font-size="24" fill="#6EE7B7">▸ Gerstner: SpaceX acquires Tesla for cash ($420–550)</text>
+  <text x="80" y="720" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">Synergies: FSD+Starlink · Optimus+AI compute · Energy</text>
+  <text x="80" y="758" font-family="Arial,sans-serif" font-size="24" fill="#6B7280">→ Neither confirmed. Exploration phase only.</text>
+  <rect x="54" y="808" width="972" height="236" rx="22" fill="#0F0A00" stroke="#312E81" stroke-width="2.5"/>
+  <line x1="54" y1="856" x2="1026" y2="856" stroke="#6366F1" stroke-width="2"/>
+  <text x="108" y="841" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#6366F1">📊 Kalshi Prediction Market</text>
+  <text x="108" y="880" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Kalshi: 70% odds Tesla-SpaceX merge before 2028</text><text x="108" y="914" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">$3.7T mega-deal — SpaceX ~$1.7T + Tesla ~$1.2T</text><text x="108" y="948" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Both companies formed independent committees</text><text x="108" y="982" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">No confirmed terms or exchange ratio yet</text>
+  <rect x="54" y="1058" width="972" height="202" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="1106" x2="1026" y2="1106" stroke="#10B981" stroke-width="2"/>
+  <text x="108" y="1091" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#10B981">💡 Gerstner Acquisition Scenario</text>
+  <text x="108" y="1130" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Gerstner(Benchmark): SpaceX acquires TSLA at $420–$550 cash</text><text x="108" y="1164" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Tesla shareholders: up to 45% premium scenario</text><text x="108" y="1198" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">SpaceX shareholders: financing burden + EV risk to assess</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

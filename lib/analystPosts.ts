@@ -44,6 +44,24 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content: "1,360만 구독자는 SpaceX AI 사업과 병행해 구독 기반 반복 매출이 확장되고 있음을 보여줍니다. $40B 부채 조달의 신용 근거로서 다음 분기 가입자 트렌드를 확인합니다.",
     likes: 25, comments: 2, created_at: "2026-10-26T01:36:00.000Z", liked: false,
   },
+  {
+    id: -1675, alias: "마포 올빼미 #19", symbol: "TSLA",
+    content: "Kalshi 70%는 예측시장이 합병을 기본 시나리오로 반영했다는 뜻입니다. 남은 변수는 교환비율과 인수vs합병 방식 선택입니다. Tesla 주주는 프리미엄 받는 구도지만 SpaceX 주주는 재무 부담을 검토해야 합니다.",
+    contentEn: "Kalshi 70% means the prediction market now treats the merger as its base case. Remaining variables: exchange ratio and acquisition vs. merger-of-equals structure. Tesla shareholders see a premium scenario; SpaceX holders face financing risk.",
+    likes: 19, comments: 2, created_at: "2026-10-26T01:45:00.000Z", liked: false,
+  },
+  {
+    id: -1676, alias: "광화문 기러기 #47", symbol: "TSLA",
+    content: "수요가 생산을 '상당한 격차'로 초과한다는 머스크 직접 발언은 가격 인하 없이 수요 유지되는 구조를 확인합니다. FSD가 킬러 피처로 자리 잡으면 마진 압박 없이 판매 확대가 가능하고, 생산 램프업 속도가 단기 EPS를 결정합니다.",
+    contentEn: "Musk's 'significant margin' demand-production gap confirms Tesla doesn't need price cuts to sustain demand. FSD as a killer feature means margin-safe volume growth — production ramp speed is the short-term EPS lever now.",
+    likes: 18, comments: 2, created_at: "2026-10-26T01:54:00.000Z", liked: false,
+  },
+  {
+    id: -1677, alias: "여의도 흰죽지 #83", symbol: "TSLA",
+    content: "GNG 차트에서 P/E 244.5배가 Custom FV $372와 일치한다는 건 시장 컨센서스가 이미 이 배수를 정상으로 받아들였다는 뜻입니다. EPS CAGR 18.5%와 합병 프리미엄을 제거하면 Normal FV $225까지 조정 여지가 있어 이 격차가 리스크입니다.",
+    contentEn: "P/E 244.5x matching GNG Custom FV $372 means the market has already priced this multiple as 'fair.' Remove the 18.5% EPS CAGR assumption and/or merger premium and Normal FV is $225 — that gap is the embedded risk.",
+    likes: 17, comments: 2, created_at: "2026-10-26T02:03:00.000Z", liked: false,
+  },
   // ── 2026-10-24 (토) 주말 자체수집 ──────────────
   {
     id: -1661, alias: "북한산 매 #14", symbol: "SPCX",
@@ -10471,6 +10489,18 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   [-1674]: [
     { alias: "삼성동 고래 #61", content: "195억달러는 가정용 요금제 기준 추산이야. 실제 믹스는 달라", created_at: "2026-10-26T01:36:04:00.000Z" },
     { alias: "압구정 독수리 #12", content: "가입자 증가는 좋은데 해지율 데이터는 공개 안 됨", created_at: "2026-10-26T01:36:07:00.000Z" },
+  ],
+  [-1675]: [
+    { id: -16750, postId: -1675, alias: "부산 독수리 #11", content: "교환비율 협상이 진짜 핵심이죠. Kalshi 70%가 맞다고 해도 TSLA 주주가 받는 주식 가치가 얼마냐가 결국 수익을 결정합니다.", likes: 5, created_at: "2026-10-26T02:05:00.000Z", liked: false },
+    { id: -16751, postId: -1675, alias: "제주 갈매기 #64", content: "SPCX 주주 입장에서는 Tesla EV 사업 부채랑 마진 부담이 걱정이죠. SpaceX AI 순수 플레이가 더 나을 수 있다는 시각도 있어요.", likes: 4, created_at: "2026-10-26T02:18:00.000Z", liked: false },
+  ],
+  [-1676]: [
+    { id: -16760, postId: -1676, alias: "대전 참수리 #39", content: "수요>생산이면 ASP(평균판매가격) 유지나 인상도 가능한 거 아닐까요. 2022년처럼 가격 올리는 선택지도 생깁니다.", likes: 6, created_at: "2026-10-26T02:14:00.000Z", liked: false },
+    { id: -16761, postId: -1676, alias: "수원 왜가리 #72", content: "FSD 수요 급증인데 생산이 못 따라가는 건 병목이 어딘지가 중요하죠. 배터리? 라인 가동률? 어닝콜에서 구체적으로 나왔나요?", likes: 3, created_at: "2026-10-26T02:28:00.000Z", liked: false },
+  ],
+  [-1677]: [
+    { id: -16770, postId: -1677, alias: "인천 청둥오리 #55", content: "PEG 13.2배라고 설명하면 고성장주 기준으로 이해가 되긴 하죠. 문제는 18.5% 성장 가정이 얼마나 현실적이냐입니다.", likes: 5, created_at: "2026-10-26T02:22:00.000Z", liked: false },
+    { id: -16771, postId: -1677, alias: "울산 민물가마우지 #93", content: "합병 프리미엄 제거하면 Normal $225까지 갈 수 있다는 게 인상적이네요. 합병이 안 되면 현 배수가 지속되기 어려울 수도 있겠어요.", likes: 4, created_at: "2026-10-26T02:35:00.000Z", liked: false },
   ],
   // ── 2026-10-18 애널 댓글 ──────────────────────
   [-1626]: [

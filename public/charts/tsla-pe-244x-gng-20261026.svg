@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#030A18"/><stop offset="100%" stop-color="#020712"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#1D4ED8"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#BFDBFE">TSLA</text>
+  <text x="540" y="188" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="160" font-weight="900" fill="#3B82F6" filter="url(#glow)">244.5x</text>
+  <text x="540" y="252" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#BFDBFE">TSLA P/E 블렌드 (GNG Research · 10월 23일 기준)</text>
+  <line x1="54" y1="282" x2="1026" y2="282" stroke="#1D4ED8" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <rect x="40" y="302" width="320" height="176" rx="18" fill="#0F1623" stroke="#3B82F6" stroke-width="2"/>
+  <text x="200" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Custom FV (244.5x)</text>
+  <text x="200" y="398" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#3B82F6">$372</text>
+  <text x="200" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">= 현재가</text>
+  <text x="200" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">과대평가 없음</text>
+  <rect x="390" y="302" width="300" height="176" rx="18" fill="#0F1623" stroke="#EF4444" stroke-width="2"/>
+  <text x="540" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Normal FV (148.1x)</text>
+  <text x="540" y="398" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#EF4444">$226</text>
+  <text x="540" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">vs $372</text>
+  <text x="540" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">-39% 괴리</text>
+  <rect x="720" y="302" width="320" height="176" rx="18" fill="#0F1623" stroke="#10B981" stroke-width="2"/>
+  <text x="880" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">EPS CAGR</text>
+  <text x="880" y="398" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#10B981">+18.5%</text>
+  <text x="880" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">FY25-27E</text>
+  <text x="880" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">연간 성장</text>
+  <rect x="54" y="506" width="972" height="270" rx="22" fill="#030F24" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="540" y="552" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#60A5FA">P/E 배수 분해 — Custom vs Normal</text>
+  <line x1="54" y1="564" x2="1026" y2="564" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="80" y="610" font-family="Arial,sans-serif" font-size="24" fill="#BFDBFE">▸ Custom FV 244.5x: EPS CAGR 18.5% 지속 가정 기준 적정</text>
+  <text x="80" y="648" font-family="Arial,sans-serif" font-size="24" fill="#F87171">▸ Normal FV 148.1x: 역사적 평균 회귀 시 $225 (-39%)</text>
+  <text x="80" y="686" font-family="Arial,sans-serif" font-size="24" fill="#10B981">▸ PEG 비율: 244.5 ÷ 18.5 = 13.2배 (고성장주 기준 합리적)</text>
+  <text x="80" y="724" font-family="Arial,sans-serif" font-size="24" fill="#6B7280">→ 합병 프리미엄 제거 시 Custom FV 근거 약화 — 리스크 요소</text>
+  <rect x="54" y="808" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1D4ED8" stroke-width="2.5"/>
+  <line x1="54" y1="856" x2="1026" y2="856" stroke="#3B82F6" stroke-width="2"/>
+  <text x="108" y="841" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#3B82F6">📊 GNG 밸류에이션 요약</text>
+  <text x="108" y="880" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">P/E 블렌드 244.5배 · TTM 258.5배 · 주가 $372.22</text><text x="108" y="914" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">10년 Normal P/E 148.1배 대비 현재 65% 프리미엄</text><text x="108" y="948" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">GNG Custom FV(244.5배) = $372.22 → 현재가 = 공정가치</text><text x="108" y="982" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Normal FV(148.1배) = $225.52 → 현재 39% 고평가 구도</text>
+  <rect x="54" y="1058" width="972" height="202" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="1106" x2="1026" y2="1106" stroke="#10B981" stroke-width="2"/>
+  <text x="108" y="1091" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#10B981">📈 EPS 성장 &amp; 합병 논리</text>
+  <text x="108" y="1130" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">EPS CAGR FY25~FY27E +18.5%/년 → PEG 13.2배 (합리적 수준)</text><text x="108" y="1164" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Vulcan Research: FY25~27 성장 + TSLA/SPCX 합병 잠재력</text><text x="108" y="1198" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">2027년 말 Custom FV 기준 +43.8%/년 → $572 시나리오</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>
