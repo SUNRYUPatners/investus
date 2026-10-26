@@ -44,6 +44,32 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content: "10Y 5.00%는 성장주 할인율 직접 변수입니다. 브렌트 116달러와 물가기대 4.7%를 같이 두고, 11월 FOMC 결정을 다음 확인으로 봅니다.",
     likes: 22, comments: 2, created_at: "2026-10-26T00:28:00.000Z", liked: false,
   },
+  // ── 2026-10-26 (월) 추가 ──────────────────────
+  {
+    id: -1670, alias: "삼성동 고래 #61", symbol: "META",
+    content: "FCF -12억달러는 AI 투자 사이클이 현금흐름 흡수 단계에 진입했다는 신호입니다. 매출 +26%·EPS 서프라이즈는 유지되고 있어, capex 회수 속도가 다음 관전 포인트입니다.",
+    likes: 21, comments: 2, created_at: "2026-10-26T01:00:00.000Z", liked: false,
+  },
+  {
+    id: -1671, alias: "해운대 여우 #33", symbol: "TSLA",
+    content: "DMV 970대와 F1 예선 무인 1,159건은 Cybercab 양산-운행 사이클이 데이터로 확인되는 단계입니다. 주간 목격 트렌드와 신규 4개 도시 등록 개시 시점을 다음 지표로 봅니다.",
+    likes: 22, comments: 2, created_at: "2026-10-26T01:09:00.000Z", liked: false,
+  },
+  {
+    id: -1672, alias: "종로 수리 #70", symbol: "SPCX",
+    content: "$40B GPU 부채 조달 완료와 네오클라우드 붕괴-흡수 구도는 SpaceX AI 컴퓨트 독점 가설의 실행 단계로 봅니다. GB300 월 20만대 배포 속도가 Q1 2027 가이던스 330~370억달러 가정과 일치하는지 확인합니다.",
+    likes: 23, comments: 2, created_at: "2026-10-26T01:18:00.000Z", liked: false,
+  },
+  {
+    id: -1673, alias: "판교 까치 #25", symbol: "TSLA",
+    content: "Gerstner의 $420~$550 인수 시나리오는 독립위원회의 합병 탐색과 별개 구도입니다. Tesla 주주에 프리미엄이지만, SpaceX 주주는 인수 자금 조달과 EV 사업 리스크를 검토해야 합니다.",
+    likes: 24, comments: 2, created_at: "2026-10-26T01:27:00.000Z", liked: false,
+  },
+  {
+    id: -1674, alias: "인천 너구리 #58", symbol: "SPCX",
+    content: "1,360만 구독자는 SpaceX AI 사업과 병행해 구독 기반 반복 매출이 확장되고 있음을 보여줍니다. $40B 부채 조달의 신용 근거로서 다음 분기 가입자 트렌드를 확인합니다.",
+    likes: 25, comments: 2, created_at: "2026-10-26T01:36:00.000Z", liked: false,
+  },
   // ── 2026-10-24 (토) 주말 자체수집 ──────────────
   {
     id: -1661, alias: "북한산 매 #14", symbol: "SPCX",
@@ -10451,6 +10477,27 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-10-26 추가 애널 댓글 ──────────────────────
+  [-1670]: [
+    { alias: "분당 늑대 #22", content: "FCF 적자는 투자 집중 때문이야. 영업이익은 229억 달러 났음", created_at: "2026-10-26T01:00:04:00.000Z" },
+    { alias: "해운대 여우 #33", content: "capex가 매출보다 빠르게 늘면 언젠가는 현금 회수 확인해야 함", created_at: "2026-10-26T01:00:07:00.000Z" },
+  ],
+  [-1671]: [
+    { alias: "성수 판다 #81", content: "DMV 등록이랑 실제 운행은 다름. 가동률이 핵심", created_at: "2026-10-26T01:09:04:00.000Z" },
+    { alias: "종로 수리 #70", content: "오스틴은 지오펜스 확장된 특수 지역이야. 다른 도시 데이터도 나와야 함", created_at: "2026-10-26T01:09:07:00.000Z" },
+  ],
+  [-1672]: [
+    { alias: "역삼 치타 #09", content: "네오클라우드 붕괴는 NVDA 기존 고객 이탈로 보는 시각도 있음", created_at: "2026-10-26T01:18:04:00.000Z" },
+    { alias: "판교 까치 #25", content: "13GW는 예상치야. 실제 조달 확인은 SpaceX 다음 어닝에서", created_at: "2026-10-26T01:18:07:00.000Z" },
+  ],
+  [-1673]: [
+    { alias: "광화문 올빼미 #47", content: "인수랑 합병은 다름. 합병은 비율 협상이고 인수는 현금 매수", created_at: "2026-10-26T01:27:04:00.000Z" },
+    { alias: "인천 너구리 #58", content: "420~550은 Gerstner의 시나리오 레인지야. 확정 조건 아님", created_at: "2026-10-26T01:27:07:00.000Z" },
+  ],
+  [-1674]: [
+    { alias: "삼성동 고래 #61", content: "195억달러는 가정용 요금제 기준 추산이야. 실제 믹스는 달라", created_at: "2026-10-26T01:36:04:00.000Z" },
+    { alias: "압구정 독수리 #12", content: "가입자 증가는 좋은데 해지율 데이터는 공개 안 됨", created_at: "2026-10-26T01:36:07:00.000Z" },
+  ],
   // ── 2026-10-26 애널 댓글 ──────────────────────
   [-1665]: [
     { alias: "송파 백로 #18", content: "잠금해제는 매도 권리 생긴 거고 매도 의무 아님", created_at: "2026-10-26T00:00:04:00.000Z" },

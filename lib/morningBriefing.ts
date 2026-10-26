@@ -39,7 +39,8 @@ function kstParts(now = new Date()) {
 
 /**
  * 장전: 한국 평일 18:00 ~ 미국 정규장 마감(및 장중)
- * 장후: 마감 이후 ~ 다음날 한국 18:00 전, 주말
+ *       + 주말 이후 월요일 오전(~18:00) — 주말 건너온 첫 US 세션 준비
+ * 장후: 화~금 오전(미국장 마감 후 ~ 18:00), 주말
  *
  * 미국 휴장일(노동절 등)이라도 다음 거래일 장전이 있으므로
  * ET 당일 휴장 여부로 막지 않는다 — upcomingSessionDate가 다음 개장일을 잡는다.
@@ -48,7 +49,9 @@ export function getBriefPhase(now = new Date()): BriefPhase {
   if (isMarketOpen()) return "pre";
 
   const { dow, mins } = kstParts(now);
-  // 한국 평일 오후 6시부터 다음 미국장 장전.
+  // 월요일 오전(~18시): 주말 건너온 US 세션 장전
+  if (dow === 1 && mins < 18 * 60) return "pre";
+  // 평일(월~금) 18시부터 → 다음 US 세션 장전
   if (dow >= 1 && dow <= 5 && mins >= 18 * 60) return "pre";
   return "post";
 }

@@ -704,7 +704,7 @@ export default function WallPage() {
   const [savingEdit, setSavingEdit]         = useState(false);
 
   // ── Real posts (from Supabase) merged on top of mock posts ───────────────
-  type RealPost = { id: number; symbol: string; is_mine: boolean; nickname: string; holding_label: string; content: string; likes: number; comments: number; created_at: string };
+  type RealPost = { id: number; symbol: string; is_mine: boolean; nickname: string; holding_label: string; content: string; contentEn?: string; likes: number; comments: number; created_at: string };
   const [realPosts, setRealPosts]         = useState<RealPost[]>([]);
 
   // ── Holdings from localStorage (portfolio) ───────────────────────────────
@@ -783,7 +783,17 @@ export default function WallPage() {
       fetch("/api/analyst/posts", { headers: h })
         .then((r) => r.json())
         .then((d) => {
-          const real = Array.isArray(d) ? d : [];
+          const real: AnalystPost[] = (Array.isArray(d) ? d : []).map((p: Record<string, unknown>) => ({
+            id: p.id as number,
+            alias: p.alias as string,
+            content: p.content as string,
+            contentEn: (p.content_en as string | undefined) ?? undefined,
+            symbol: p.symbol as string | null,
+            likes: p.likes as number,
+            comments: p.comments as number | undefined,
+            created_at: p.created_at as string,
+            liked: false,
+          }));
           const merged = [...real, ...MOCK_ANALYST_POSTS];
           merged.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
           setAnalystPosts(merged);
@@ -1144,7 +1154,22 @@ export default function WallPage() {
   useEffect(() => {
     fetch(`/api/wall-posts?symbol=${selected}`)
       .then((r) => r.json())
-      .then((d) => { if (Array.isArray(d)) setRealPosts(d); })
+      .then((d) => {
+        if (Array.isArray(d)) {
+          setRealPosts(d.map((p: Record<string, unknown>) => ({
+            id: p.id as number,
+            symbol: p.symbol as string,
+            is_mine: p.is_mine as boolean,
+            nickname: p.nickname as string,
+            holding_label: p.holding_label as string,
+            content: p.content as string,
+            contentEn: (p.content_en as string | undefined) ?? undefined,
+            likes: p.likes as number,
+            comments: p.comments as number,
+            created_at: p.created_at as string,
+          })));
+        }
+      })
       .catch(() => {});
   }, [selected]);
 

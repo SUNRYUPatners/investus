@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
 
   let query = supabase
     .from("analyst_posts")
-    .select("id, alias, content, symbol, likes, created_at")
+    .select("id, alias, content, content_en, symbol, likes, created_at")
     .order("created_at", { ascending: false })
     .limit(30);
 

@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
   const [{ data, error }, authUser] = await Promise.all([
     getAdminSupabase()
       .from("wall_posts")
-      .select("id, symbol, user_id, nickname, holding_label, content, likes, comments, created_at")
+      .select("id, symbol, user_id, nickname, holding_label, content, content_en, likes, comments, created_at")
       .eq("symbol", symbol)
       .order("created_at", { ascending: false })
       .limit(50),

@@ -166,6 +166,22 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-26 (월) 추가 ────────────────
+  { id: 122415, symbol: "META", nickname: "메타FCF첫적자", holdingLabel: "관심종목",
+    content: "메타 Q3 잉여현금흐름 -12억달러. 상장 이후 처음으로 FCF 마이너스ㄷㄷ AI 설비투자 349억달러가 현금흐름을 다 잡아먹은 거래. 매출은 +26%인데 현금이 빠져나가는 상황이면 투자자가 어떻게 봐야 하는 거야",
+    createdAt: T26OCT + 80*60_000, likes: 28, comments: 2 },
+  { id: 122416, symbol: "TSLA", nickname: "오스틴천이백오십건", holdingLabel: "관심종목",
+    content: "텍사스 DMV 데이터보면 테슬라 로보택시 970대인데 사이버캡이 463대래. 6월에 59대였다는게 4개월만에 16배임ㄷㄷ 웨이모가 아직 237대 앞서있긴한데 10월에 78% 증가속도면 연말쯤 역전하는 거 아님?",
+    createdAt: T26OCT + 88*60_000, likes: 27, comments: 2 },
+  { id: 122417, symbol: "SPCX", nickname: "이백개네오클라우드붕괴", holdingLabel: "관심종목",
+    content: "머스크가 네오클라우드 200개 이상 다 죽는다고 직접 말했네. 채권시장이 AI 데이터센터 외 기업에 돈 안 빌려준대. 스페이스엑스는 투자등급이라 40조원 빌렸다고ㄷㄷ 죽어가는 네오클라우드 GPU를 헐값에 사겠다는 거잖아",
+    createdAt: T26OCT + 96*60_000, likes: 26, comments: 2 },
+  { id: 122418, symbol: "TSLA", nickname: "거스트너사백이십달러", holdingLabel: "관심종목",
+    content: "CNBC에서 Gerstner가 스페이스엑스가 테슬라를 420~550달러에 인수할 수 있다고 했네. 지금 주가 379달러면 최대 45% 프리미엄이잖아. 근데 독립위원회는 대등합병 검토하는 건데 이건 인수야? 구도가 다르네",
+    createdAt: T26OCT + 104*60_000, likes: 25, comments: 2 },
+  { id: 122419, symbol: "SPCX", nickname: "스타링크천삼백육십만", holdingLabel: "관심종목",
+    content: "스타링크 구독자 1360만이래. 1년전엔 720만이었는데 89% 증가ㄷㄷ 월 구독료 120달러면 단순 계산해도 연 195억달러야. 스페이스엑스 AI 사업도 크지만 이 구독 기반이 신용등급 유지하는 거 아니야?",
+    createdAt: T26OCT + 112*60_000, likes: 24, comments: 2 },
   // ── 2026-10-26 (월) 신규 ────────────────
   { id: 122410, symbol: "SPCX", nickname: "삼이팔엠해제", holdingLabel: "관심종목",
     content: "SPCX 오늘 328M주 잠금해제. 1.3B 풀릴때도 주가 올랐잖아. IPO 이후 6번 다 올랐다니까 이게 공급 압박이 아니라 호재로 보는 건가",
@@ -6116,6 +6132,26 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  122415: [
+    { id: 1224151, nickname: "이백개네오클라우드붕괴", holdingLabel: "관심종목", content: "FCF 적자는 투자 집중 때문이야. 영업이익은 229억 달러 났음", createdAt: T26OCT + 5400000, likes: 4 },
+    { id: 1224152, nickname: "스타링크천삼백육십만", holdingLabel: "관심종목", content: "capex가 매출보다 빠르게 늘면 언젠가는 현금 회수 확인해야 함", createdAt: T26OCT + 5580000, likes: 3 },
+  ],
+  122416: [
+    { id: 1224161, nickname: "거스트너사백이십달러", holdingLabel: "관심종목", content: "DMV 등록이랑 실제 운행은 다름. 가동률이 핵심", createdAt: T26OCT + 5460000, likes: 4 },
+    { id: 1224162, nickname: "메타FCF첫적자", holdingLabel: "관심종목", content: "오스틴은 지오펜스 확장된 특수 지역이야. 다른 도시 데이터도 나와야 함", createdAt: T26OCT + 5640000, likes: 3 },
+  ],
+  122417: [
+    { id: 1224171, nickname: "스타링크천삼백육십만", holdingLabel: "관심종목", content: "네오클라우드 붕괴는 NVDA 기존 고객 이탈로 보는 시각도 있음", createdAt: T26OCT + 5520000, likes: 4 },
+    { id: 1224172, nickname: "오스틴천이백오십건", holdingLabel: "관심종목", content: "13GW는 예상치야. 실제 조달 확인은 SpaceX 다음 어닝에서", createdAt: T26OCT + 5700000, likes: 3 },
+  ],
+  122418: [
+    { id: 1224181, nickname: "메타FCF첫적자", holdingLabel: "관심종목", content: "인수랑 합병은 다름. 합병은 비율 협상이고 인수는 현금 매수", createdAt: T26OCT + 5580000, likes: 4 },
+    { id: 1224182, nickname: "이백개네오클라우드붕괴", holdingLabel: "관심종목", content: "420~550은 Gerstner의 시나리오 레인지야. 확정 조건 아님", createdAt: T26OCT + 5760000, likes: 3 },
+  ],
+  122419: [
+    { id: 1224191, nickname: "오스틴천이백오십건", holdingLabel: "관심종목", content: "195억달러는 가정용 요금제 기준 추산이야. 실제 믹스는 달라", createdAt: T26OCT + 5640000, likes: 4 },
+    { id: 1224192, nickname: "거스트너사백이십달러", holdingLabel: "관심종목", content: "가입자 증가는 좋은데 해지율 데이터는 공개 안 됨", createdAt: T26OCT + 5820000, likes: 3 },
+  ],
   122410: [
     { id: 1224101, nickname: "합병독립위", holdingLabel: "관심종목", content: "잠금해제는 매도 권리 생긴 거고 매도 의무 아님", createdAt: T26OCT + 720000, likes: 5 },
     { id: 1224102, nickname: "백육십일퍼센트", holdingLabel: "관심종목", content: "6번 다 올랐다고 7번도 오른다는 건 아님. 이번엔 금리 5%가 다름", createdAt: T26OCT + 900000, likes: 4 },

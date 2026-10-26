@@ -5,9 +5,10 @@ import { isNYSEHoliday } from "@/lib/marketHours";
 
 export const maxDuration = 180;
 
-type SessionType = "open" | "midday" | "close" | "report";
+type SessionType = "open" | "midday" | "close" | "report" | "hourly";
 
-const TARGET_SYMBOLS = ["NVDA", "TSLA", "AAPL", "MSFT", "PLTR", "META", "AMZN", "AMD"];
+// Tesla·SpaceX·BigTech·Bitcoin 위주 (2026-10-26~)
+const TARGET_SYMBOLS = ["TSLA", "SPCX", "NVDA", "AAPL", "MSFT", "GOOGL", "META", "AMZN", "BTC", "PLTR", "AMD"];
 
 // 실제 애널리스트처럼 보이는 alias 풀 — 봇 느낌 전혀 없도록
 const ALIAS_POOL = [
@@ -60,7 +61,10 @@ const SESSION_CTX: Record<SessionType, string> = {
   midday: "장 중반 지나고 있음. 오전 흐름 보고 나서 느낀 점",
   close:  "장 방금 마감됨. 오늘 하루 결과 보고 드는 생각, 내일 전망",
   report: "새 리서치 리포트 봤는데 할 말 생김. 리포트 내용이나 종목 현황 관련",
+  hourly: "방금 시장 뉴스·가격 움직임 봤음. 지금 이 순간 생각 한 마디",
 };
+
+type BilingualContent = { ko: string; en: string };
 
 async function generatePost(
   symbol: string,
@@ -68,11 +72,10 @@ async function generatePost(
   apiKey: string,
   session: SessionType,
   alias: string
-): Promise<string | null> {
+): Promise<BilingualContent | null> {
   const newsCtx = headlines.slice(0, 6).join("\n- ");
   const sessionCtx = SESSION_CTX[session];
 
-  // 페르소나별 글쓰기 스타일 랜덤화
   const styles = [
     "요즘 내 포지션 얘기 한 마디 섞어서",
     "공식 리포트엔 못 쓰는 내부 분위기 암시하는 뉘앙스로",
@@ -95,15 +98,13 @@ async function generatePost(
 작성 스타일: ${style}
 
 규칙:
-- 반드시 한국어 구어체 (말하듯이 자연스럽게, "~임", "~함", "~거임" 등)
-- 80~180자
-- 첫 문장이 뉴스 요약이나 "지정학적" "거시적" 같은 뻔한 말로 시작하면 절대 안 됨
-- 종목 특성에 맞는 구체적 수치나 팩트 한 개 이상 언급
-- "공식 리포트엔 못 쓰지만", "내부에선", "개인적으론", "팀에서 보면" 같은 표현 자연스럽게 섞기
-- "솔직히"라는 단어 사용 금지
-- 매수/매도 직접 권유 금지
-- 이모지 없음
-- 코멘트 내용만 바로 출력 (설명·제목·번호 없이)`;
+- 한국어 구어체 ("~임", "~함", "~거임" 등), 80~180자
+- 첫 문장이 뉴스 요약이나 "지정학적" "거시적" 같은 뻔한 말로 시작 금지
+- 구체적 수치·팩트 한 개 이상 언급
+- "솔직히" 사용 금지 · 매매 권유 금지 · 이모지 없음
+
+반드시 아래 JSON 형식으로만 출력 (마크다운·설명 없이):
+{"ko":"한국어 코멘트","en":"English version of the same comment, same style, 80-180 chars"}`;
 
   try {
     const res = await fetch("https://api.anthropic.com/v1/messages", {
@@ -115,15 +116,22 @@ async function generatePost(
       },
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
-        max_tokens: 250,
+        max_tokens: 400,
         messages: [{ role: "user", content: prompt }],
       }),
-      signal: AbortSignal.timeout(12000),
+      signal: AbortSignal.timeout(14000),
     });
     if (!res.ok) return null;
     const data = await res.json() as { content?: { text: string }[] };
-    const text = data.content?.[0]?.text?.trim() ?? "";
-    return text.length >= 20 ? text : null;
+    const raw = data.content?.[0]?.text?.trim() ?? "";
+    try {
+      const parsed = JSON.parse(raw.replace(/^```json\n?/, "").replace(/\n?```$/, "")) as { ko?: string; en?: string };
+      const ko = parsed.ko?.trim() ?? "";
+      const en = parsed.en?.trim() ?? "";
+      if (ko.length >= 20 && en.length >= 20) return { ko, en };
+    } catch { /* JSON parse error — fall back to plain Korean */ }
+    // fallback: treat raw as Korean only
+    return raw.length >= 20 ? { ko: raw, en: raw } : null;
   } catch {
     return null;
   }
@@ -189,7 +197,7 @@ async function generateAnalystPost(
   apiKey: string,
   session: SessionType,
   alias: string
-): Promise<string | null> {
+): Promise<BilingualContent | null> {
   const newsCtx = headlines.slice(0, 6).join("\n- ");
   const sessionCtx = SESSION_CTX[session];
 
@@ -214,15 +222,14 @@ async function generateAnalystPost(
 접근 방식: ${angle}
 
 규칙:
-- 반드시 한국어 구어체 ("~임", "~함", "~거임", "~하는 중" 등)
-- 100~220자
-- 첫 문장이 뉴스 요약이나 거시 지표 언급으로 시작하면 절대 안 됨 — 바로 본론부터
-- 구체적인 수치(%, $, 배수 등) 한 개 이상 포함
-- "공식 리포트엔 못 쓰지만", "내부에선", "개인 계좌로는", "팀에서", "우리 쪽에서 보면" 같은 표현 자연스럽게 포함
-- "솔직히"라는 단어는 절대 사용 금지
-- 매수/매도 직접 권유 금지
-- 이모지 없음
-- 코멘트 내용만 바로 출력`;
+- 한국어 구어체, 100~220자
+- 첫 문장이 뉴스 요약이나 거시 지표 언급으로 시작 금지 — 바로 본론부터
+- 구체적 수치(%, $, 배수 등) 한 개 이상 포함
+- "공식 리포트엔 못 쓰지만", "내부에선", "팀에서" 등 표현 자연스럽게 포함
+- "솔직히" 사용 금지 · 매매 권유 금지 · 이모지 없음
+
+반드시 아래 JSON 형식으로만 출력 (마크다운·설명 없이):
+{"ko":"한국어 코멘트","en":"English version, same analyst tone, same length"}`;
 
   try {
     const res = await fetch("https://api.anthropic.com/v1/messages", {
@@ -234,15 +241,21 @@ async function generateAnalystPost(
       },
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
-        max_tokens: 350,
+        max_tokens: 500,
         messages: [{ role: "user", content: prompt }],
       }),
-      signal: AbortSignal.timeout(12000),
+      signal: AbortSignal.timeout(14000),
     });
     if (!res.ok) return null;
     const data = await res.json() as { content?: { text: string }[] };
-    const text = data.content?.[0]?.text?.trim() ?? "";
-    return text.length >= 20 ? text : null;
+    const raw = data.content?.[0]?.text?.trim() ?? "";
+    try {
+      const parsed = JSON.parse(raw.replace(/^```json\n?/, "").replace(/\n?```$/, "")) as { ko?: string; en?: string };
+      const ko = parsed.ko?.trim() ?? "";
+      const en = parsed.en?.trim() ?? "";
+      if (ko.length >= 20 && en.length >= 20) return { ko, en };
+    } catch { /* fallback */ }
+    return raw.length >= 20 ? { ko: raw, en: raw } : null;
   } catch {
     return null;
   }
@@ -307,11 +320,17 @@ const BOT_USER_IDS: Record<SessionType, { post: string; comment: string }> = {
   midday: { post: "bot-midday@investus.kr",  comment: "bot-midday2@investus.kr" },
   close:  { post: "bot-close@investus.kr",   comment: "bot-close2@investus.kr" },
   report: { post: "bot-report@investus.kr",  comment: "bot-report2@investus.kr" },
+  hourly: { post: "bot-hourly@investus.kr",  comment: "bot-hourly2@investus.kr" },
 };
 
 const PICK_COUNT: Record<SessionType, number> = {
-  open: 3, midday: 2, close: 2, report: 2,
+  open: 3, midday: 2, close: 2, report: 2, hourly: 0, // hourly uses random 3-5
 };
+
+function pickCount(session: SessionType): number {
+  if (session === "hourly") return 3 + Math.floor(Math.random() * 3); // 3~5
+  return PICK_COUNT[session];
+}
 
 export async function GET(req: NextRequest) {
   const denied = assertCronAuth(req);
@@ -332,14 +351,20 @@ export async function GET(req: NextRequest) {
   const session: SessionType =
     sessionParam === "midday" ? "midday" :
     sessionParam === "close"  ? "close"  :
-    sessionParam === "report" ? "report" : "open";
+    sessionParam === "report" ? "report" :
+    sessionParam === "hourly" ? "hourly" : "open";
 
   const db = getAdminSupabase();
   const headlines = await fetchNewsHeadlines();
-  const today = new Date().toISOString().slice(0, 10);
+  const now = new Date();
+  const today = now.toISOString().slice(0, 10);
+  // hourly dedup: 지난 50분 내 같은 봇 포스트 있으면 스킵
+  const hourlyWindow = session === "hourly"
+    ? new Date(now.getTime() - 50 * 60 * 1000).toISOString()
+    : `${today}T00:00:00.000Z`;
 
   const shuffled = [...TARGET_SYMBOLS].sort(() => Math.random() - 0.5);
-  const picks = shuffled.slice(0, PICK_COUNT[session]);
+  const picks = shuffled.slice(0, pickCount(session));
   const { post: botPost, comment: botComment } = BOT_USER_IDS[session];
 
   const results: {
@@ -363,20 +388,20 @@ export async function GET(req: NextRequest) {
     const analystAlias = pickAlias(aliasSeed, 14);
     const analystCommentAlias = pickAlias(aliasSeed, 21);
 
-    // ── 종토방 글 + 애널리스트 글 병렬 생성 ──
-    const [content, analystContent] = await Promise.all([
+    // ── 종토방 글 + 애널리스트 글 병렬 생성 (한/영 동시) ──
+    const [bilingual, analystBilingual] = await Promise.all([
       generatePost(symbol, headlines, apiKey, session, wallAlias),
       generateAnalystPost(symbol, headlines, apiKey, session, analystAlias),
     ]);
 
-    if (!content && !analystContent) {
+    if (!bilingual && !analystBilingual) {
       result.error = "generation failed";
       results.push(result);
       continue;
     }
 
     // ── 종토방(wall_posts) 글 ──
-    if (content) {
+    if (bilingual) {
       const botSeed = `${botPost}_${symbol}_${today}`;
       const nickname = makeAnonNick(botSeed);
 
@@ -385,13 +410,13 @@ export async function GET(req: NextRequest) {
         .select("id")
         .eq("symbol", symbol)
         .eq("user_id", botPost)
-        .gte("created_at", `${today}T00:00:00.000Z`)
+        .gte("created_at", hourlyWindow)
         .maybeSingle();
 
       if (!existing) {
         const { data: post, error: postErr } = await db
           .from("wall_posts")
-          .insert({ symbol, user_id: botPost, nickname, holding_label: session, content })
+          .insert({ symbol, user_id: botPost, nickname, holding_label: session, content: bilingual.ko, content_en: bilingual.en })
           .select("id")
           .single();
 
@@ -406,7 +431,7 @@ export async function GET(req: NextRequest) {
             pickAlias(aliasSeed, 7 + ci * 5)
           );
           const commentTexts = await Promise.all(
-            commentAliases.map((cAlias) => generateComment(content, symbol, apiKey, cAlias))
+            commentAliases.map((cAlias) => generateComment(bilingual.ko, symbol, apiKey, cAlias))
           );
           let insertedComments = 0;
           for (let ci = 0; ci < commentTexts.length; ci++) {
@@ -437,26 +462,26 @@ export async function GET(req: NextRequest) {
     }
 
     // ── 애널리스트 탭(analyst_posts) 글 ──
-    if (analystContent) {
+    if (analystBilingual) {
       const { data: existingAnalyst } = await db
         .from("analyst_posts")
         .select("id")
         .eq("symbol", symbol)
         .eq("alias", analystAlias)
-        .gte("created_at", `${today}T00:00:00.000Z`)
+        .gte("created_at", hourlyWindow)
         .maybeSingle();
 
       if (!existingAnalyst) {
         const { data: analystPost, error: analystErr } = await db
           .from("analyst_posts")
-          .insert({ symbol, alias: analystAlias, content: analystContent, likes: 0 })
+          .insert({ symbol, alias: analystAlias, content: analystBilingual.ko, content_en: analystBilingual.en, likes: 0 })
           .select("id")
           .single();
 
         if (!analystErr && analystPost) {
           result.analystPostId = analystPost.id;
 
-          const analystCommentText = await generateAnalystComment(analystContent, symbol, apiKey, analystCommentAlias);
+          const analystCommentText = await generateAnalystComment(analystBilingual.ko, symbol, apiKey, analystCommentAlias);
           if (analystCommentText) {
             const { data: analystComment } = await db
               .from("analyst_post_comments")
