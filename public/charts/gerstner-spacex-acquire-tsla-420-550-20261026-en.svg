@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#020D0A"/><stop offset="100%" stop-color="#01080A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#064E3B"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#10B981" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#A7F3D0">TSLA</text>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="#312E81"/>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="none" stroke="#6366F1" stroke-width="2"/>
+  <text x="257" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C7D2FE">SPCX</text>
+  <text x="540" y="86" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#A7F3D0">Brad Gerstner · Benchmark Capital</text>
+  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="#10B981" filter="url(#glow)">$420–$550</text>
+  <text x="540" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="#6EE7B7">SpaceX could acquire Tesla — CNBC</text>
+  <line x1="54" y1="300" x2="1026" y2="300" stroke="#0D9488" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <rect x="40" y="320" width="320" height="170" rx="18" fill="#0F1623" stroke="#10B981" stroke-width="2"/>
+  <text x="200" y="354" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Lower Bound</text>
+  <text x="200" y="416" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#10B981">$420</text>
+  <text x="200" y="448" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">per share</text>
+  <text x="200" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">vs current +11%</text>
+  <rect x="390" y="320" width="300" height="170" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="540" y="354" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Upper Bound</text>
+  <text x="540" y="416" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">$550</text>
+  <text x="540" y="448" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">per share</text>
+  <text x="540" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">vs current +45%</text>
+  <rect x="720" y="320" width="320" height="170" rx="18" fill="#0F1623" stroke="#F59E0B" stroke-width="2"/>
+  <text x="880" y="354" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">TSLA at time</text>
+  <text x="880" y="416" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F59E0B">$379</text>
+  <text x="880" y="448" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">TSLA</text>
+  <text x="880" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Gerstner CNBC</text>
+  <rect x="54" y="516" width="972" height="188" rx="22" fill="#021A14" stroke="#0D9488" stroke-width="2"/>
+  <text x="540" y="556" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#34D399">Merger vs Acquisition — Key Difference</text>
+  <line x1="54" y1="568" x2="1026" y2="568" stroke="#0D9488" stroke-width="1.5"/>
+  <text x="80" y="612" font-family="Arial,sans-serif" font-size="24" fill="#A7F3D0">▸ Independent Committee: merger of equals (ratio negotiation)</text>
+  <text x="80" y="648" font-family="Arial,sans-serif" font-size="24" fill="#10B981">▸ Gerstner scenario: SpaceX acquires Tesla (cash premium)</text>
+  <text x="80" y="684" font-family="Arial,sans-serif" font-size="24" fill="#6B7280">Both scenarios circulating now — neither is confirmed</text>
+  <rect x="54" y="724" width="972" height="148" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="772" x2="1026" y2="772" stroke="#10B981" stroke-width="2"/>
+  <text x="108" y="757" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#10B981">💡 Stakeholder View</text>
+  <text x="108" y="796" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Up to 45% premium over TSLA's price (~$379) at time of comment.</text><text x="108" y="830" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Distinct from the merger-of-equals scenario the independent committees explore.</text><text x="108" y="864" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Scenario: SpaceX as acquirer, Tesla as the acquisition target.</text>
+  <rect x="54" y="888" width="972" height="136" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="936" x2="1026" y2="936" stroke="#F59E0B" stroke-width="2"/>
+  <text x="108" y="921" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">⚠️ To Monitor</text>
+  <text x="108" y="960" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Tesla shareholders: acquisition premium = near-term upside event.</text><text x="108" y="994" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">SpaceX shareholders: large funding need + EV business risk to assess.</text><text x="108" y="1028" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Current official process: independent committee exploration — no firm terms.</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#020F0A"/><stop offset="100%" stop-color="#010D08"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#065F46"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#10B981" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#A7F3D0">TSLA</text>
+  <text x="540" y="160" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="90" font-weight="900" fill="#10B981" filter="url(#glow)">970대</text>
+  <text x="540" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#A7F3D0">텍사스 Tesla 로보택시 (10/25 DMV 기준)</text>
+  <rect x="40" y="256" width="240" height="156" rx="18" fill="#0F1623" stroke="#10B981" stroke-width="2"/>
+  <text x="160" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Cybercab</text>
+  <text x="160" y="352" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#10B981">463</text>
+  <text x="160" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">47.7%</text>
+  <text x="160" y="414" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">전체의 절반 육박</text>
+  <rect x="302" y="256" width="240" height="156" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="422" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">오스틴 F1 목격</text>
+  <text x="422" y="352" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">1,250</text>
+  <text x="422" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">건</text>
+  <text x="422" y="414" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">사상 최다</text>
+  <rect x="564" y="256" width="240" height="156" rx="18" fill="#0F1623" stroke="#6EE7B7" stroke-width="2"/>
+  <text x="684" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">무인 주행</text>
+  <text x="684" y="352" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#6EE7B7">1,159</text>
+  <text x="684" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">건</text>
+  <text x="684" y="414" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">기존 기록 +26%</text>
+  <rect x="826" y="256" width="214" height="156" rx="18" fill="#0F1623" stroke="#F59E0B" stroke-width="2"/>
+  <text x="933" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">vs 웨이모</text>
+  <text x="933" y="352" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F59E0B">1,207</text>
+  <text x="933" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Waymo</text>
+  <text x="933" y="414" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">237대 앞서</text>
+  <text x="40" y="452" font-family="Arial,sans-serif" font-size="26" fill="#A7F3D0">텍사스 플리트 성장 추이</text>
+  <line x1="40" y1="760" x2="1040" y2="760" stroke="#065F46" stroke-width="1.5"/>
+  <rect x="165" y="748" width="100" height="12" rx="8" fill="#065F46"/>
+    <text x="215" y="736" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#065F46">59</text>
+    <text x="215" y="786" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">6/9</text><rect x="295" y="729" width="100" height="31" rx="8" fill="#065F46"/>
+    <text x="345" y="717" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#065F46">150</text>
+    <text x="345" y="786" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">7</text><rect x="425" y="694" width="100" height="66" rx="8" fill="#065F46"/>
+    <text x="475" y="682" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#065F46">320</text>
+    <text x="475" y="786" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">8</text><rect x="555" y="659" width="100" height="101" rx="8" fill="#065F46"/>
+    <text x="605" y="647" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#065F46">490</text>
+    <text x="605" y="786" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">9</text><rect x="685" y="647" width="100" height="113" rx="8" fill="#065F46"/>
+    <text x="735" y="635" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#065F46">546</text>
+    <text x="735" y="786" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">10/1</text><rect x="815" y="560" width="100" height="200" rx="8" fill="#10B981"/>
+    <text x="865" y="548" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#10B981">970</text>
+    <text x="865" y="786" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">10/25</text>
+  <rect x="54" y="794" width="972" height="150" rx="22" fill="#0F0A00" stroke="#065F46" stroke-width="2.5"/>
+  <line x1="54" y1="842" x2="1026" y2="842" stroke="#10B981" stroke-width="2"/>
+  <text x="108" y="827" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#10B981">📍 오늘 포인트</text>
+  <text x="108" y="866" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Cybercab 463대(47.7%) · Model Y 507대(52.3%)</text><text x="108" y="900" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">6월 9일 59대에서 4개월 반 만에 16배 성장</text><text x="108" y="934" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">10월 한 달만 +78% 증가 (+424대)</text><text x="108" y="968" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">오스틴 F1 예선 Cybercab 목격 1,250건 — 사상 최다</text>
+  <rect x="54" y="958" width="972" height="144" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="1006" x2="1026" y2="1006" stroke="#F59E0B" stroke-width="2"/>
+  <text x="108" y="991" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">🏁 웨이모와 비교</text>
+  <text x="108" y="1030" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">웨이모는 현재 1,207대로 237대 앞서 있습니다.</text><text x="108" y="1064" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">이 속도가 유지되면 연말~내년 초 역전 가능성이 있습니다.</text><text x="108" y="1098" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">무인 주행 비율: 오스틴 F1 예선 92.7%(1159/1250)</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

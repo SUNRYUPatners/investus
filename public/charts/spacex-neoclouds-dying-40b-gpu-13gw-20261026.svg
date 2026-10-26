@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0520"/><stop offset="100%" stop-color="#070212"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#9333EA"/><stop offset="100%" stop-color="#6B21A8"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#4C1D95"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#9333EA" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#E9D5FF">SPCX</text>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="#14532D"/>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="none" stroke="#22C55E" stroke-width="2"/>
+  <text x="257" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#BBF7D0">NVDA</text>
+  <text x="540" y="140" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="58" font-weight="900" fill="#C084FC" filter="url(#glow)">네오클라우드 200개 이상</text>
+  <text x="540" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#E9D5FF">붕괴 예고 · SpaceX AI 컴퓨트 독점 가속</text>
+  <line x1="54" y1="226" x2="1026" y2="226" stroke="#7C3AED" stroke-width="1.5"/>
+  <rect x="40" y="246" width="310" height="176" rx="18" fill="#0F1623" stroke="#9333EA" stroke-width="2"/>
+  <text x="195" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">GPU 부채 조달</text>
+  <text x="195" y="342" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#9333EA">$40B</text>
+  <text x="195" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">closed</text>
+  <text x="195" y="404" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">투자등급 SpaceX</text>
+  <rect x="380" y="246" width="310" height="176" rx="18" fill="#0F1623" stroke="#A855F7" stroke-width="2"/>
+  <text x="535" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">확보 컴퓨트</text>
+  <text x="535" y="342" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A855F7">13GW</text>
+  <text x="535" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">guaranteed</text>
+  <text x="535" y="404" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">7GW 네오클라우드 흡수</text>
+  <rect x="720" y="246" width="320" height="176" rx="18" fill="#0F1623" stroke="#22C55E" stroke-width="2"/>
+  <text x="880" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">GB300 배포</text>
+  <text x="880" y="342" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#22C55E">200K</text>
+  <text x="880" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">대/월</text>
+  <text x="880" y="404" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">올해 남은 기간</text>
+  <rect x="54" y="452" width="972" height="280" rx="22" fill="#1A0938" stroke="#7C3AED" stroke-width="2"/>
+  <text x="540" y="498" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#C084FC">머스크 직접 발언 (10/25/26)</text>
+  <line x1="54" y1="510" x2="1026" y2="510" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="80" y="556" font-family="Arial,sans-serif" font-size="24" fill="#E9D5FF">"부채시장이 AI 데이터센터 실질매출 없는 기업에</text>
+  <text x="80" y="590" font-family="Arial,sans-serif" font-size="24" fill="#E9D5FF">자금줄을 거의 완전히 끊었다."</text>
+  <text x="80" y="634" font-family="Arial,sans-serif" font-size="24" fill="#C084FC">"SpaceX는 GPU용 $40B 부채를 조달했다.</text>
+  <text x="80" y="668" font-family="Arial,sans-serif" font-size="24" fill="#C084FC">우리는 투자등급이고 스타링크·발사 매출이 있다."</text>
+  <text x="80" y="712" font-family="Arial,sans-serif" font-size="24" fill="#F87171">"200개 이상 네오클라우드가 구피 수준의 죽음을 맞는다."</text>
+  <rect x="54" y="752" width="972" height="148" rx="22" fill="#0F0A00" stroke="#4C1D95" stroke-width="2.5"/>
+  <line x1="54" y1="800" x2="1026" y2="800" stroke="#9333EA" stroke-width="2"/>
+  <text x="108" y="785" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#9333EA">🔴 시장 구조 변화</text>
+  <text x="108" y="824" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">머스크: 부채시장이 AI 데이터센터 외 기업에 자금줄을 끊었습니다.</text><text x="108" y="858" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">SpaceX는 GPU 구매를 위해 400억달러 부채를 이미 조달했습니다.</text><text x="108" y="892" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">200개 이상 네오클라우드가 구피 수준의 죽음과 통합에 직면합니다.</text><text x="108" y="926" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">SpaceX가 붕괴하는 네오클라우드 GPU를 헐값에 흡수합니다.</text>
+  <rect x="54" y="914" width="972" height="140" rx="22" fill="#0F0A00" stroke="#14532D" stroke-width="2.5"/>
+  <line x1="54" y1="962" x2="1026" y2="962" stroke="#22C55E" stroke-width="2"/>
+  <text x="108" y="947" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#22C55E">📡 SpaceX AI 컴퓨트 전망</text>
+  <text x="108" y="986" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Panke: SpaceX, 7GW 인수로 총 13GW 컴퓨트 달성 전망</text><text x="108" y="1020" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Beth Kindig: GB300(블랙웰울트라) 월 20만대씩 배포 예정</text><text x="108" y="1054" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">SpaceX AI 사업, Q3 전체 매출의 거의 절반(+9배 성장)</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>

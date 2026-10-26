@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0520"/><stop offset="100%" stop-color="#070212"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#9333EA"/><stop offset="100%" stop-color="#6B21A8"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#4C1D95"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#9333EA" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#E9D5FF">SPCX</text>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="#14532D"/>
+  <rect x="192" y="24" width="130" height="40" rx="20" fill="none" stroke="#22C55E" stroke-width="2"/>
+  <text x="257" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#BBF7D0">NVDA</text>
+  <text x="540" y="140" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="58" font-weight="900" fill="#C084FC" filter="url(#glow)">200+ Neoclouds</text>
+  <text x="540" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#E9D5FF">Collapse Incoming · SpaceX AI Compute Dominance</text>
+  <line x1="54" y1="226" x2="1026" y2="226" stroke="#7C3AED" stroke-width="1.5"/>
+  <rect x="40" y="246" width="310" height="176" rx="18" fill="#0F1623" stroke="#9333EA" stroke-width="2"/>
+  <text x="195" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">GPU Debt</text>
+  <text x="195" y="342" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#9333EA">$40B</text>
+  <text x="195" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">closed</text>
+  <text x="195" y="404" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investment grade</text>
+  <rect x="380" y="246" width="310" height="176" rx="18" fill="#0F1623" stroke="#A855F7" stroke-width="2"/>
+  <text x="535" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Compute Target</text>
+  <text x="535" y="342" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A855F7">13GW</text>
+  <text x="535" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">guaranteed</text>
+  <text x="535" y="404" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">7GW from neoclouds</text>
+  <rect x="720" y="246" width="320" height="176" rx="18" fill="#0F1623" stroke="#22C55E" stroke-width="2"/>
+  <text x="880" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">GB300/month</text>
+  <text x="880" y="342" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#22C55E">200K</text>
+  <text x="880" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">units</text>
+  <text x="880" y="404" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">through year-end</text>
+  <rect x="54" y="452" width="972" height="280" rx="22" fill="#1A0938" stroke="#7C3AED" stroke-width="2"/>
+  <text x="540" y="498" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#C084FC">Musk Direct Quote (Oct 25, 2026)</text>
+  <line x1="54" y1="510" x2="1026" y2="510" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="80" y="556" font-family="Arial,sans-serif" font-size="24" fill="#E9D5FF">&quot;Debt markets have almost entirely shut off access</text>
+  <text x="80" y="590" font-family="Arial,sans-serif" font-size="24" fill="#E9D5FF">to money for companies without AI datacenter revenue.&quot;</text>
+  <text x="80" y="634" font-family="Arial,sans-serif" font-size="24" fill="#C084FC">&quot;SpaceX closed $40B of debt for GPUs,</text>
+  <text x="80" y="668" font-family="Arial,sans-serif" font-size="24" fill="#C084FC">we&apos;re investment grade with Starlink &amp; launch revenue.&quot;</text>
+  <text x="80" y="712" font-family="Arial,sans-serif" font-size="24" fill="#F87171">&quot;200+ neoclouds will see guppy-level death.&quot;</text>
+  <rect x="54" y="752" width="972" height="148" rx="22" fill="#0F0A00" stroke="#4C1D95" stroke-width="2.5"/>
+  <line x1="54" y1="800" x2="1026" y2="800" stroke="#9333EA" stroke-width="2"/>
+  <text x="108" y="785" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#9333EA">🔴 Market Structure Shift</text>
+  <text x="108" y="824" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Musk: debt markets shut off money for non-AI-datacenter companies.</text><text x="108" y="858" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">SpaceX closed $40B in debt financing for GPU purchases.</text><text x="108" y="892" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">200+ neoclouds face guppy-level death and consolidation.</text><text x="108" y="926" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">SpaceX will buy their GPU scraps at distressed prices.</text>
+  <rect x="54" y="914" width="972" height="140" rx="22" fill="#0F0A00" stroke="#14532D" stroke-width="2.5"/>
+  <line x1="54" y1="962" x2="1026" y2="962" stroke="#22C55E" stroke-width="2"/>
+  <text x="108" y="947" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#22C55E">📡 SpaceX AI Compute Outlook</text>
+  <text x="108" y="986" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Panke: SpaceX acquires 7GW from dying neoclouds → total 13GW compute</text><text x="108" y="1020" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Beth Kindig: 200K GB300 (Blackwell Ultra) units online per month</text><text x="108" y="1054" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">SpaceX AI biz: ~half of Q3 revenue, grew 9x YoY</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · INVESTUS SRP</text>
+</svg>
