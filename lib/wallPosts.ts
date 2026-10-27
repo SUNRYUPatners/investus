@@ -177,7 +177,7 @@ export const MOCK_POSTS: Post[] = [
     content: "Tesla Q3 EPS $0.48 나왔는데 컨센 $0.45 넘었고 CapEx $25B→$20B 낮춘다는 게 FCF 개선 신호. FSD 1.7M 사용자. 순이익 -43%는 비현금 항목 때문이라 실제 사업은 나쁘지 않음. 장중 +6%까지 갔음",
     contentEn: "Tesla Q3 EPS $0.48 beat $0.45 est. CapEx guide cut $25B→$20B = FCF improvement signal. FSD 1.7M users. Net income -43% is mostly non-cash items. Stock up +6% intraday.",
     createdAt: T28OCT + 88*60_000, likes: 31, comments: 2 },
-  { id: 122433, symbol: null, nickname: "FOMC동결삼점칠오사점영영", holdingLabel: "관심종목",
+  { id: 122433, symbol: "", nickname: "FOMC동결삼점칠오사점영영", holdingLabel: "관심종목",
     content: "FOMC 3.75-4.00% 동결 만장일치. 인상 확률 11%였으니까 예상대로. S&P +0.70% Nasdaq +0.83% 마감. 금리 동결이 유지되는 동안은 기술주에 할인율 압박 없으니까 멀티플 환경은 우호적",
     contentEn: "FOMC holds 3.75-4.00% unanimously. 11% hike odds priced in, no surprise. S&P +0.70% Nasdaq +0.83%. Rate hold = no discount rate pressure on tech multiples. Favorable environment holds.",
     createdAt: T28OCT + 96*60_000, likes: 28, comments: 2 },
