@@ -170,7 +170,7 @@ export function HeroLanding({ locale }: { locale: Locale }) {
                   className="w-20 h-20 lg:w-24 lg:h-24 rounded-2xl overflow-hidden relative z-10"
                   style={{ boxShadow: "0 0 48px rgba(34,197,94,0.3), 0 0 96px rgba(34,197,94,0.1)" }}
                 >
-                  <img src="/investus-logo.png" alt="Investus" className="w-full h-full object-cover" />
+                  <img src="/logo.png" alt="Investus" className="w-full h-full object-cover" />
                 </div>
                 {/* TSLA pill — top right */}
                 <div
