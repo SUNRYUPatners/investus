@@ -307,9 +307,9 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
           <Sparkles className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
           <div className="flex-1 text-left min-w-0">
             <span className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
-              {marketOpen
-                ? (isKo ? `${cfg.labelKo} 장중 분석` : `${cfg.labelEn} Intraday Analysis`)
-                : (isKo ? `${cfg.labelKo} 등락 분석` : `${cfg.labelEn} Market Analysis`)}
+              {isKo
+                ? (marketOpen ? "내 포트폴리오 & 시장분석" : "내 포트폴리오 & 시장분석")
+                : (marketOpen ? "My Portfolio & Market Analysis" : "My Portfolio & Market Analysis")}
             </span>
             {!marketOpen && analysisDate && (
               <span className="block text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
@@ -371,9 +371,11 @@ export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
                   </button>
                 </div>
               ) : displayAnswer ? (
-                <p className="text-[12px] leading-relaxed whitespace-pre-line" style={{ color: "var(--text)" }}>
-                  {displayAnswer}
-                </p>
+                <div className="overflow-y-auto max-h-[60vh]">
+                  <p className="text-[12px] leading-relaxed whitespace-pre-line" style={{ color: "var(--text)" }}>
+                    {displayAnswer}
+                  </p>
+                </div>
               ) : (
                 <p className="text-[12px]" style={{ color: "var(--muted)" }}>
                   {marketOpen

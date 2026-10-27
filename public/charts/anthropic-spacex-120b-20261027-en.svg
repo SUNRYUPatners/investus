@@ -20,28 +20,45 @@
   <rect x="376" y="24" width="140" height="40" rx="20" fill="#1C1917"/>
   <rect x="376" y="24" width="140" height="40" rx="20" fill="none" stroke="#D97706" stroke-width="2"/>
   <text x="446" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCD34D">AMZN</text>
-  <text x="540" y="84" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#E9D5FF">Anthropic S-1 — Largest Compute Commitments Ever</text>
-  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="180" font-weight="900" fill="#A78BFA" filter="url(#glow)">$120.5B</text>
-  <text x="540" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#C4B5FD">SpaceXAI compute contract — confirmed in SEC S-1 filing</text>
-  <line x1="54" y1="322" x2="1026" y2="322" stroke="#4C1D95" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="54" y="376" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A78BFA">3 Compute Contracts Total $250B+</text>
-  <rect x="54" y="700" width="316" height="200" rx="18" fill="#130C2A" stroke="#A78BFA" stroke-width="2.5"/>
-    <text x="212" y="740" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">SpaceXAI Compute</text>
-    <text x="212" y="808" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#A78BFA">$120.5B</text>
-    <text x="212" y="840" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">$3.1B/mo </text>
-    <text x="212" y="864" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280"> NVDA GPU · through 2029</text><rect x="384" y="700" width="316" height="200" rx="18" fill="#130C2A" stroke="#60A5FA" stroke-width="2.5"/>
-    <text x="542" y="740" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Amazon (AWS)</text>
-    <text x="542" y="808" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#60A5FA">$110.0B</text>
-    <text x="542" y="840" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">10yr non-cancel </text>
-    <text x="542" y="864" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280"> 2026-2036</text><rect x="714" y="700" width="316" height="200" rx="18" fill="#130C2A" stroke="#34D399" stroke-width="2.5"/>
-    <text x="872" y="740" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">AMD Helios Rack</text>
-    <text x="872" y="808" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#34D399">$20B+</text>
-    <text x="872" y="840" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">from 2027 </text>
-    <text x="872" y="864" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280"> supply diversification</text>
-  <rect x="54" y="926" width="972" height="202" rx="22" fill="#0F0A00" stroke="#5B21B6" stroke-width="2.5"/>
-  <line x1="54" y1="974" x2="1026" y2="974" stroke="#A78BFA" stroke-width="2"/>
-  <text x="108" y="959" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#A78BFA">📊 Anthropic Financials (S-1)</text>
-  <text x="108" y="998" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">H1 2026 revenue $16.3B — 3.5x full-year 2025 ($4.6B) in just 6 months</text><text x="108" y="1032" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Annualized ARR ≈ $32.6B · Operating loss $693M (-4.3%, near breakeven)</text><text x="108" y="1066" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Net loss $80.7B — $72.4B from convertible note fair value change (non-cash)</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="#E9D5FF">Anthropic S-1 — Largest Compute Commitments Ever</text>
+  <text x="540" y="278" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="155" font-weight="900" fill="#A78BFA" filter="url(#glow)">$120.5B</text>
+  <text x="540" y="338" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#C4B5FD">SpaceXAI compute contract — confirmed in SEC S-1 filing</text>
+  <line x1="54" y1="368" x2="1026" y2="368" stroke="#4C1D95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="54" y="418" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A78BFA">3 Compute Contracts Total $250B+</text>
+  <rect x="54" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#A78BFA" stroke-width="2.5"/>
+    <text x="212" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">SpaceXAI Compute</text>
+    <text x="212" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#A78BFA">$120.5B</text>
+    <text x="212" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">$3.1B/mo · NVDA GPU</text>
+    <text x="212" y="616" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">through 2029</text><rect x="384" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#60A5FA" stroke-width="2.5"/>
+    <text x="542" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Amazon (AWS)</text>
+    <text x="542" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#60A5FA">$110.0B</text>
+    <text x="542" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">10yr non-cancel</text>
+    <text x="542" y="616" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">2026–2036</text><rect x="714" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#34D399" stroke-width="2.5"/>
+    <text x="872" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">AMD Helios Rack</text>
+    <text x="872" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#34D399">$20B+</text>
+    <text x="872" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">from 2027</text>
+    <text x="872" y="616" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">supply divers.</text>
+  <rect x="54" y="665" width="972" height="202" rx="22" fill="#0F0A00" stroke="#5B21B6" stroke-width="2.5"/>
+  <line x1="54" y1="713" x2="1026" y2="713" stroke="#A78BFA" stroke-width="2"/>
+  <text x="108" y="698" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#A78BFA">📊 Anthropic Financials (S-1)</text>
+  <text x="108" y="737" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">H1 2026 revenue $16.3B — 3.5x full-year 2025 ($4.6B) in 6 months</text><text x="108" y="771" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Annualized ARR ≈ $32.6B · Op. loss $693M (−4.3%), near breakeven</text><text x="108" y="805" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Net loss $80.7B: $72.4B from convertible note fair-value change (non-cash)</text>
+  <rect x="54" y="887" width="972" height="202" rx="22" fill="#0F0A00" stroke="#065F46" stroke-width="2.5"/>
+  <line x1="54" y1="935" x2="1026" y2="935" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="920" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">🚀 SPCX Investment Implications</text>
+  <text x="108" y="959" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">S-1 confirms SpaceX as core AI infrastructure supplier on record with SEC</text><text x="108" y="993" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">AI revenue stream beyond rockets underpins $1T valuation reassessment</text><text x="108" y="1027" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">$250B+ contract trio: SpaceX → NVDA GPU demand chain directly confirmed</text>
+  <rect x="54" y="1110" width="316" height="160" rx="18" fill="#0F1623" stroke="#A78BFA" stroke-width="2"/>
+  <text x="212" y="1144" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Anthropic ARR</text>
+  <text x="212" y="1206" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A78BFA">$32.6B</text>
+  <text x="212" y="1238" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Annualized rev</text>
+  <text x="212" y="1268" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">op loss −4.3%</text><rect x="384" y="1110" width="316" height="160" rx="18" fill="#0F1623" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="542" y="1144" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">SpaceX AI Deal</text>
+  <text x="542" y="1206" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#C4B5FD">$120.5B</text>
+  <text x="542" y="1238" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">5yr total</text>
+  <text x="542" y="1268" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">$3.1B/mo NVDA</text><rect x="714" y="1110" width="316" height="160" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="872" y="1144" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">3 Contracts</text>
+  <text x="872" y="1206" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">$250B+</text>
+  <text x="872" y="1238" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">compute total</text>
+  <text x="872" y="1268" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">SpaceX+AWS+AMD</text>
   <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
   <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 2026-10-27 · INVESTUS SRP</text>
 </svg>

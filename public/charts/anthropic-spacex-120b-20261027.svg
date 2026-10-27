@@ -20,28 +20,45 @@
   <rect x="376" y="24" width="140" height="40" rx="20" fill="#1C1917"/>
   <rect x="376" y="24" width="140" height="40" rx="20" fill="none" stroke="#D97706" stroke-width="2"/>
   <text x="446" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCD34D">AMZN</text>
-  <text x="540" y="84" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#E9D5FF">Anthropic S-1 공개 — 역대 최대 컴퓨팅 계약</text>
-  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="180" font-weight="900" fill="#A78BFA" filter="url(#glow)">$120.5B</text>
-  <text x="540" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#C4B5FD">SpaceXAI 컴퓨팅 계약 — S-1 SEC 공식 문서 확인</text>
-  <line x1="54" y1="322" x2="1026" y2="322" stroke="#4C1D95" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="54" y="376" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A78BFA">3대 컴퓨팅 계약 합산 $250B+</text>
-  <rect x="54" y="700" width="316" height="200" rx="18" fill="#130C2A" stroke="#A78BFA" stroke-width="2.5"/>
-    <text x="212" y="740" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">SpaceX AI 컴퓨팅</text>
-    <text x="212" y="808" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#A78BFA">$120.5B</text>
-    <text x="212" y="840" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">월 $3.1B </text>
-    <text x="212" y="864" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280"> NVDA GPU · 2029년까지</text><rect x="384" y="700" width="316" height="200" rx="18" fill="#130C2A" stroke="#60A5FA" stroke-width="2.5"/>
-    <text x="542" y="740" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Amazon (AWS)</text>
-    <text x="542" y="808" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#60A5FA">$110.0B</text>
-    <text x="542" y="840" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">10년 비해약 </text>
-    <text x="542" y="864" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280"> 2026-2036</text><rect x="714" y="700" width="316" height="200" rx="18" fill="#130C2A" stroke="#34D399" stroke-width="2.5"/>
-    <text x="872" y="740" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">AMD Helios 랙 시스템</text>
-    <text x="872" y="808" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#34D399">$20B+</text>
-    <text x="872" y="840" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">2027년부터 </text>
-    <text x="872" y="864" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280"> 공급선 다변화</text>
-  <rect x="54" y="926" width="972" height="202" rx="22" fill="#0F0A00" stroke="#5B21B6" stroke-width="2.5"/>
-  <line x1="54" y1="974" x2="1026" y2="974" stroke="#A78BFA" stroke-width="2"/>
-  <text x="108" y="959" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#A78BFA">📊 Anthropic 재무 현황 (S-1)</text>
-  <text x="108" y="998" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">H1 2026 매출 $16.3B — 2025년 연간($4.6B)의 3.5배를 상반기 6개월에 달성</text><text x="108" y="1032" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">연환산 ARR ≈ $32.6B · 영업손실 $693M (매출 대비 -4.3%, 거의 손익분기)</text><text x="108" y="1066" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">순손실 $80.7B 중 $72.4B은 전환사채 공정가치 변동 — 비현금 항목</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="#E9D5FF">Anthropic S-1 공개 — 역대 최대 컴퓨팅 계약</text>
+  <text x="540" y="278" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="155" font-weight="900" fill="#A78BFA" filter="url(#glow)">$120.5B</text>
+  <text x="540" y="338" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#C4B5FD">SpaceXAI 컴퓨팅 계약 — S-1 SEC 공식 문서 확인</text>
+  <line x1="54" y1="368" x2="1026" y2="368" stroke="#4C1D95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="54" y="418" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A78BFA">3대 컴퓨팅 계약 합산 $250B+</text>
+  <rect x="54" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#A78BFA" stroke-width="2.5"/>
+    <text x="212" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">SpaceX AI 컴퓨팅</text>
+    <text x="212" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#A78BFA">$120.5B</text>
+    <text x="212" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">월 $3.1B · NVDA GPU</text>
+    <text x="212" y="616" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">2029년까지</text><rect x="384" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#60A5FA" stroke-width="2.5"/>
+    <text x="542" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Amazon (AWS)</text>
+    <text x="542" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#60A5FA">$110.0B</text>
+    <text x="542" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">10년 비해약</text>
+    <text x="542" y="616" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">2026–2036</text><rect x="714" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#34D399" stroke-width="2.5"/>
+    <text x="872" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">AMD Helios 랙</text>
+    <text x="872" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#34D399">$20B+</text>
+    <text x="872" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">2027년부터</text>
+    <text x="872" y="616" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">공급 다변화</text>
+  <rect x="54" y="665" width="972" height="202" rx="22" fill="#0F0A00" stroke="#5B21B6" stroke-width="2.5"/>
+  <line x1="54" y1="713" x2="1026" y2="713" stroke="#A78BFA" stroke-width="2"/>
+  <text x="108" y="698" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#A78BFA">📊 Anthropic 재무 현황 (S-1)</text>
+  <text x="108" y="737" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">H1 2026 매출 $16.3B — 2025년 연간($4.6B)의 3.5배를 6개월에 달성</text><text x="108" y="771" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">연환산 ARR ≈ $32.6B · 영업손실 $693M (-4.3%), 손익분기 근접</text><text x="108" y="805" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">순손실 $80.7B 중 $72.4B은 전환사채 공정가치 변동 (비현금)</text>
+  <rect x="54" y="887" width="972" height="202" rx="22" fill="#0F0A00" stroke="#065F46" stroke-width="2.5"/>
+  <line x1="54" y1="935" x2="1026" y2="935" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="920" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">🚀 SPCX 투자 포인트</text>
+  <text x="108" y="959" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Anthropic S-1: SpaceX가 AI 인프라 핵심 공급자임을 SEC 공식 확인</text><text x="108" y="993" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">AI 수익 다각화 — 로켓 이외 수익원으로 기업가치 $1T 재평가 근거</text><text x="108" y="1027" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">3대 계약($250B+) 수혜 = SpaceX → NVDA GPU 수요 연결 고리 직접 확인</text>
+  <rect x="54" y="1110" width="316" height="160" rx="18" fill="#0F1623" stroke="#A78BFA" stroke-width="2"/>
+  <text x="212" y="1144" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Anthropic ARR</text>
+  <text x="212" y="1206" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A78BFA">$32.6B</text>
+  <text x="212" y="1238" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">연환산 매출</text>
+  <text x="212" y="1268" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">영업손실 −4.3%</text><rect x="384" y="1110" width="316" height="160" rx="18" fill="#0F1623" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="542" y="1144" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">SpaceX AI 계약</text>
+  <text x="542" y="1206" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#C4B5FD">$120.5B</text>
+  <text x="542" y="1238" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">5년 총액</text>
+  <text x="542" y="1268" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">월 $3.1B · NVDA 전량</text><rect x="714" y="1110" width="316" height="160" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="872" y="1144" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">3대 합산</text>
+  <text x="872" y="1206" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">$250B+</text>
+  <text x="872" y="1238" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">컴퓨팅 계약 합산</text>
+  <text x="872" y="1268" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">SpaceX+AWS+AMD</text>
   <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
   <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 2026-10-27 · INVESTUS SRP</text>
 </svg>

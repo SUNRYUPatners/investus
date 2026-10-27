@@ -66,48 +66,70 @@ async function save(slug, svg) {
 
 // ── 1. Anthropic S-1 SpaceX $120.5B ──────────────────────────────
 function makeAnthropic(ko){
-  const accent = '#A78BFA'; // purple
+  const accent = '#A78BFA';
   const accentDark = '#5B21B6';
   const green = '#34D399';
-  const blue = '#60A5FA';
 
+  // Contract boxes: start at y=460, h=185 (no gap from label above)
   const contractData = [
-    { label: ko?'SpaceX AI 컴퓨팅':'SpaceXAI Compute', val: '$120.5B', sub: ko?'월 $3.1B · NVDA GPU · 2029년까지':'$3.1B/mo · NVDA GPU · through 2029', col: '#A78BFA' },
-    { label: ko?'Amazon (AWS)':'Amazon (AWS)', val: '$110.0B', sub: ko?'10년 비해약 · 2026-2036':'10yr non-cancel · 2026-2036', col: '#60A5FA' },
-    { label: ko?'AMD Helios 랙 시스템':'AMD Helios Rack', val: '$20B+', sub: ko?'2027년부터 · 공급선 다변화':'from 2027 · supply diversification', col: '#34D399' },
+    { label: ko?'SpaceX AI 컴퓨팅':'SpaceXAI Compute', val: '$120.5B', sub1: ko?'월 $3.1B · NVDA GPU':'$3.1B/mo · NVDA GPU', sub2: ko?'2029년까지':'through 2029', col: '#A78BFA' },
+    { label: ko?'Amazon (AWS)':'Amazon (AWS)',         val: '$110.0B', sub1: ko?'10년 비해약':'10yr non-cancel',   sub2: ko?'2026–2036':'2026–2036',      col: '#60A5FA' },
+    { label: ko?'AMD Helios 랙':'AMD Helios Rack',     val: '$20B+',  sub1: ko?'2027년부터':'from 2027',        sub2: ko?'공급 다변화':'supply divers.', col: '#34D399' },
   ];
 
   const contractSvg = contractData.map((c, i) => {
-    const bx = 54 + i * 330, by = 700, bw = 316, bh = 200;
+    const bx = 54 + i * 330, by = 460, bw = 316, bh = 185;
     return `<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="18" fill="#130C2A" stroke="${c.col}" stroke-width="2.5"/>
-    <text x="${bx+bw/2}" y="${by+40}" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">${escXml(c.label)}</text>
-    <text x="${bx+bw/2}" y="${by+108}" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="${c.col}">${escXml(c.val)}</text>
-    <text x="${bx+bw/2}" y="${by+140}" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">${escXml(c.sub.split('·')[0])}</text>
-    <text x="${bx+bw/2}" y="${by+164}" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">${escXml(c.sub.split('·').slice(1).join('·'))}</text>`;
+    <text x="${bx+bw/2}" y="${by+34}" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">${escXml(c.label)}</text>
+    <text x="${bx+bw/2}" y="${by+98}" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="${c.col}">${escXml(c.val)}</text>
+    <text x="${bx+bw/2}" y="${by+132}" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">${escXml(c.sub1)}</text>
+    <text x="${bx+bw/2}" y="${by+156}" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">${escXml(c.sub2)}</text>`;
   }).join('');
 
-  const m1 = msgBox(926, ko?'📊 Anthropic 재무 현황 (S-1)':'📊 Anthropic Financials (S-1)',
+  // msgBox1 at y=665 (20px after contract boxes end at 645)
+  const m1 = msgBox(665, ko?'📊 Anthropic 재무 현황 (S-1)':'📊 Anthropic Financials (S-1)',
     ko
-      ? ['H1 2026 매출 $16.3B — 2025년 연간($4.6B)의 3.5배를 상반기 6개월에 달성',
-         '연환산 ARR ≈ $32.6B · 영업손실 $693M (매출 대비 -4.3%, 거의 손익분기)',
-         '순손실 $80.7B 중 $72.4B은 전환사채 공정가치 변동 — 비현금 항목']
-      : ['H1 2026 revenue $16.3B — 3.5x full-year 2025 ($4.6B) in just 6 months',
-         'Annualized ARR ≈ $32.6B · Operating loss $693M (-4.3%, near breakeven)',
-         'Net loss $80.7B — $72.4B from convertible note fair value change (non-cash)'],
+      ? ['H1 2026 매출 $16.3B — 2025년 연간($4.6B)의 3.5배를 6개월에 달성',
+         '연환산 ARR ≈ $32.6B · 영업손실 $693M (-4.3%), 손익분기 근접',
+         '순손실 $80.7B 중 $72.4B은 전환사채 공정가치 변동 (비현금)']
+      : ['H1 2026 revenue $16.3B — 3.5x full-year 2025 ($4.6B) in 6 months',
+         'Annualized ARR ≈ $32.6B · Op. loss $693M (−4.3%), near breakeven',
+         'Net loss $80.7B: $72.4B from convertible note fair-value change (non-cash)'],
     accent, accentDark);
+
+  // msgBox2 at y=887 (20px after m1 ends at ~867)
+  const m2 = msgBox(887, ko?'🚀 SPCX 투자 포인트':'🚀 SPCX Investment Implications',
+    ko
+      ? ['Anthropic S-1: SpaceX가 AI 인프라 핵심 공급자임을 SEC 공식 확인',
+         'AI 수익 다각화 — 로켓 이외 수익원으로 기업가치 $1T 재평가 근거',
+         '3대 계약($250B+) 수혜 = SpaceX → NVDA GPU 수요 연결 고리 직접 확인']
+      : ['S-1 confirms SpaceX as core AI infrastructure supplier on record with SEC',
+         'AI revenue stream beyond rockets underpins $1T valuation reassessment',
+         '$250B+ contract trio: SpaceX → NVDA GPU demand chain directly confirmed'],
+    green, '#065F46');
+
+  // 3 mini stat boxes at y=1110
+  const miniStats = [
+    { x:54,  top: ko?'Anthropic ARR':'Anthropic ARR', big:'$32.6B', unit:ko?'연환산 매출':'Annualized rev', sub:ko?'영업손실 −4.3%':'op loss −4.3%', col:'#A78BFA' },
+    { x:384, top: ko?'SpaceX AI 계약':'SpaceX AI Deal', big:'$120.5B', unit:ko?'5년 총액':'5yr total', sub:ko?'월 $3.1B · NVDA 전량':'$3.1B/mo NVDA', col:'#C4B5FD' },
+    { x:714, top: ko?'3대 합산':'3 Contracts', big:'$250B+', unit:ko?'컴퓨팅 계약 합산':'compute total', sub:ko?'SpaceX+AWS+AMD':'SpaceX+AWS+AMD', col:green },
+  ];
+  const statsRowSvg = miniStats.map(s => statBox(s.x, 1110, 316, 160, s.top, s.big, s.unit, s.sub, s.col)).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
   ${base('#08051A','#04021A',accent,'#7C3AED')}
   ${badge(40,24,160,'SPCX','#1E1B4B','#6D28D9','#C4B5FD')}
   ${badge(218,24,140,'NVDA','#052E16','#16A34A','#86EFAC')}
   ${badge(376,24,140,'AMZN','#1C1917','#D97706','#FCD34D')}
-  <text x="540" y="84" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#E9D5FF">${ko?'Anthropic S-1 공개 — 역대 최대 컴퓨팅 계약':'Anthropic S-1 — Largest Compute Commitments Ever'}</text>
-  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="180" font-weight="900" fill="${accent}" filter="url(#glow)">$120.5B</text>
-  <text x="540" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#C4B5FD">${ko?'SpaceXAI 컴퓨팅 계약 — S-1 SEC 공식 문서 확인':'SpaceXAI compute contract — confirmed in SEC S-1 filing'}</text>
-  <line x1="54" y1="322" x2="1026" y2="322" stroke="#4C1D95" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="54" y="376" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A78BFA">${ko?'3대 컴퓨팅 계약 합산 $250B+':'3 Compute Contracts Total $250B+'}</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="#E9D5FF">${ko?'Anthropic S-1 공개 — 역대 최대 컴퓨팅 계약':'Anthropic S-1 — Largest Compute Commitments Ever'}</text>
+  <text x="540" y="278" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="155" font-weight="900" fill="${accent}" filter="url(#glow)">$120.5B</text>
+  <text x="540" y="338" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#C4B5FD">${ko?'SpaceXAI 컴퓨팅 계약 — S-1 SEC 공식 문서 확인':'SpaceXAI compute contract — confirmed in SEC S-1 filing'}</text>
+  <line x1="54" y1="368" x2="1026" y2="368" stroke="#4C1D95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="54" y="418" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A78BFA">${ko?'3대 컴퓨팅 계약 합산 $250B+':'3 Compute Contracts Total $250B+'}</text>
   ${contractSvg}
   ${m1.svg}
+  ${m2.svg}
+  ${statsRowSvg}
   ${footer(ko?'2026-10-27':'2026-10-27')}
 </svg>`;
 }

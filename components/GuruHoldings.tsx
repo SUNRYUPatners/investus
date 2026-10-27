@@ -32,6 +32,10 @@ const GURU_INFO: Record<string, { ko: { title: string; body: string }; en: { tit
     ko: { title: "스탠리 드러켄밀러", body: "듀케인 패밀리 오피스 운용. 조지 소로스와 함께 영란은행을 무너뜨린 전설적 매크로 투자자. 트렌드 추종 + 집중 투자 전략." },
     en: { title: "Stanley Druckenmiller", body: "Runs Duquesne Family Office. Legendary macro investor who, alongside George Soros, broke the Bank of England. Known for trend-following combined with concentrated high-conviction bets." },
   },
+  leopold: {
+    ko: { title: "레오폴드 아셴브레너", body: "Situational Awareness Capital 창업자. 전 OpenAI 연구원. AI 안전·AGI 전환 시나리오 분석으로 주목받는 투자자. SPCX·NVDA 등 AI 인프라 집중 포트폴리오 운용." },
+    en: { title: "Leopold Aschenbrenner", body: "Founder of Situational Awareness Capital. Former OpenAI researcher. Known for AGI transition scenario analysis and AI safety research. Runs a concentrated AI-infrastructure portfolio: SPCX, NVDA, TSLA." },
+  },
 };
 
 const BADGE: Record<string, { label: string; color: string }> = {
