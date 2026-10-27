@@ -48,6 +48,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
 }
 
 const T26OCT = 1792969200000; // 2026-10-26 08:00 KST (월)
+const T27OCT = 1793055600000; // 2026-10-27 08:00 KST (화)
 const T24OCT = 1792796400000; // 2026-10-24 09:00 KST (토)
 const T23OCT = 1792710000000; // 2026-10-23 08:00 KST
 const T22OCT = 1792623600000; // 2026-10-22 08:00 KST
@@ -147,7 +148,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T26OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T27OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -166,6 +167,35 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-27 (화) 추가 ────────────────
+  { id: 122424, symbol: "SPCX", nickname: "앤트로픽스페이스엑스120B", holdingLabel: "관심종목",
+    content: "Anthropic S-1 보니까 SpaceX에 $120.5B 계약이 공식 문서에 명기됐다ㄷㄷ 월 $31억달러 한화로 4.2조원이 SpaceX AI로 들어오는 거잖아. 연간 37.2조원 ARR... 이게 SpaceX 기업가치 $500B~$1T 얘기가 나오는 이유임. Amazon $110B까지 합하면 이 회사 컴퓨팅 투자만 $230B 넘는다ㄷ",
+    contentEn: "Anthropic S-1 confirms $120.5B contract with SpaceX — it's in the SEC filing. $3.1B/month = $37.2B ARR flowing into SpaceX AI. Add Amazon's $110B and this one company alone is committing $230B+ to compute. That's the SPCX thesis right there.",
+    createdAt: T27OCT + 80*60_000, likes: 29, comments: 2 },
+  { id: 122425, symbol: "NVDA", nickname: "스페이스엑스캐팩스Q4백삼십B", holdingLabel: "관심종목",
+    content: "SpaceX 컴퓨팅 분기 CAPEX 차트 봤는데 Q4'26 가이던스가 $40B이고 Q4'27 예상이 $130B임ㄷㄷ 그 중 NVDA 몫이 $116B(89%)래. 단일 고객 NVDA 분기 매출이 저렇게 나온다고? 그러면 NVDA 데이터센터 매출 전망치를 대폭 상향해야 하는 거 아님?",
+    contentEn: "SpaceX compute capex: Q4'26 guide $40B, Q4'27 est $130B. NVDA takes 89% = $116B from SpaceX alone per quarter. If this plays out, NVDA datacenter revenue estimates need major revision upward.",
+    createdAt: T27OCT + 88*60_000, likes: 27, comments: 2 },
+  { id: 122426, symbol: "TSLA", nickname: "FSD투로렌탈내일개방", holdingLabel: "관심종목",
+    content: "내일(28일)부터 Turo에서 FSD 켜진 Tesla 빌릴 수 있다ㄷㄷ CEO가 직접 발표했고 수천 대 이미 올라와 있대. 렌탈 오너는 FSD 요금으로 추가 수익 생기는 거고. Tesla가 렌탈카 시장에서 FSD 수익화 채널 하나 더 생긴 셈이잖아. 아직 소규모지만 방향성 있음",
+    contentEn: "Turo FSD Tesla launch tomorrow (Oct 28) — CEO confirmed, thousands already listed. Owners get FSD rental premium, renters get the experience. Small for now but the direction is clear. Another FSD monetization vector opens.",
+    createdAt: T27OCT + 96*60_000, likes: 26, comments: 2 },
+  { id: 122427, symbol: "TSLA", nickname: "초당매출삼천이백팔십사달러", holdingLabel: "관심종목",
+    content: "Tesla 초당 매출이 2026년 $3,284.18임ㄷㄷ 2011년엔 $6.38이었는데 15년만에 514배됨. 연환산 $103.6B. 하루로 환산하면 매일 $2.84억달러 = 약 3,900억원이 들어오는 셈이야. 성장 배수는 둔화 중이지만 FSD·Cybercab이 새 레이어 추가하면 2031년엔 또 다른 숫자가 나올 것 같아",
+    contentEn: "Tesla 2026 revenue per second: $3,284.18 — up from $6.38 in 2011. 514x in 15 years = $103.6B annualized. $284M/day. Growth multiplier is slowing but FSD + Cybercab could add a new layer by 2031.",
+    createdAt: T27OCT + 104*60_000, likes: 25, comments: 2 },
+  { id: 122428, symbol: "MSFT", nickname: "마이크로소프트육만명AI대체", holdingLabel: "관심종목",
+    content: "Microsoft가 직원 6만명한테 희망퇴직 패키지 제시한다ㄷ 전체 22만명의 27%. AI로 업무 대체하겠다고 명시적으로 밝혔음. 데이터센터·판매·마케팅 대상이래. 단기엔 퇴직금 비용 발생하지만 2027년부터 인건비 절감 효과가 EPS에 반영될 것 같음",
+    contentEn: "MSFT offering buyouts to 60k workers — 27% of 220k headcount. Explicitly says AI is replacing the work. Data centers, sales, marketing targeted. Short-term: severance costs. From 2027: margin improvement.",
+    createdAt: T27OCT + 112*60_000, likes: 24, comments: 2 },
+  { id: 122429, symbol: "SPCX", nickname: "코어위브부채열배레버리지", holdingLabel: "관심종목",
+    content: "NeoCloud 부채비율 CRWV(CoreWeave) 10.27배ㄷㄷ 자본의 10배를 빌려서 AI GPU 클라우드 구축한 거임. SpaceX가 AI 컴퓨팅 다 먹으면 CRWV같은 데는 계약 못 따와서 부채에 압사당하는 거고, 반대로 SpaceX 선에서 넘치는 수요를 받으면 대박나는 구조. Musk가 NeoCloud 200개 붕괴 경고했는데 CRWV는 어느 쪽?",
+    contentEn: "CoreWeave 10.27x debt/equity — borrowed 10x equity to build AI GPU cloud. If SpaceX dominates, CRWV can't get contracts and collapses under debt. If SpaceX overflow goes to CRWV, it prints. Which side does CRWV land on? That's the bet.",
+    createdAt: T27OCT + 120*60_000, likes: 23, comments: 2 },
+  { id: 122430, symbol: "TSLA", nickname: "오늘요약1027", holdingLabel: "관심종목",
+    content: "오늘 정리: Anthropic S-1 SpaceX $120.5B 확인, NVDA Q4'27 $130B 예상(89%), Tesla FSD Turo 내일 개방, 초당 매출 $3,284, MSFT 6만명 AI 희망퇴직, NeoCloud CRWV 부채 10배. SPCX+NVDA 투자 케이스가 공식 문서로 뒷받침된 날임",
+    contentEn: "Today: Anthropic S-1 confirms SpaceX $120.5B, NVDA Q4'27 $130B est (89%), Tesla FSD Turo tomorrow, $3,284/sec revenue, MSFT 60k AI buyouts, NeoCloud CRWV 10x leverage. SPCX+NVDA thesis just got official document support.",
+    createdAt: T27OCT + 128*60_000, likes: 22, comments: 2 },
   // ── 2026-10-26 (월) 추가 ────────────────
   { id: 122415, symbol: "META", nickname: "메타FCF첫적자", holdingLabel: "관심종목",
     content: "메타 Q3 잉여현금흐름 -12억달러. 상장 이후 처음으로 FCF 마이너스ㄷㄷ AI 설비투자 349억달러가 현금흐름을 다 잡아먹은 거래. 매출은 +26%인데 현금이 빠져나가는 상황이면 투자자가 어떻게 봐야 하는 거야",
@@ -6167,6 +6197,34 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   122423: [
     { id: 1344230, nickname: "빅테크어닝주", holdingLabel: "관심종목", content: "이번주 MSFT·GOOGL(화요일)·AMZN(수요일)도 어닝 있어요. AI capex 가이던스 방향이 SpaceX 수요 논리 유지 여부를 추가 확인해줄 것 같아요.", likes: 5, createdAt: T26OCT + 148*60_000 },
     { id: 1344231, nickname: "오늘하루정리완료", holdingLabel: "관심종목", content: "정리 감사합니다. 합병 확률 70%가 제일 임팩트 있는 뉴스인 것 같아요. 주말 전에 독립위원회 발표라도 나오면 시장 반응 클 듯", likes: 4, createdAt: T26OCT + 156*60_000 },
+  ],
+  122424: [
+    { id: 1224241, nickname: "스페이스엑스캐팩스Q4백삼십B", holdingLabel: "관심종목", content: "Amazon $110B까지 보면 Anthropic 혼자 $230B 컴퓨팅 공약이야. 이 회사 대고객이 한둘이 아닐 텐데 SpaceX 컴퓨팅 총수요가 진짜 얼마인지 아무도 모름", likes: 6, createdAt: T27OCT + 5160000 },
+    { id: 1224242, nickname: "FSD투로렌탈내일개방", holdingLabel: "관심종목", content: "비해약 기간이 2027년 1~3월까지래. 그 이후 90일 통보로 해지 가능한 건데 그렇다고 쉽게 나올 수 있나? 이미 인프라 의존도 높아지면 못 빠져나오는 거지", likes: 5, createdAt: T27OCT + 5340000 },
+  ],
+  122425: [
+    { id: 1224251, nickname: "앤트로픽스페이스엑스120B", holdingLabel: "관심종목", content: "Q4'27 예상치고 아직 가이던스 아님. 근데 Anthropic $120.5B 계약이 확정된 것만 봐도 Q4'26 $40B 가이던스는 충분히 현실적임", likes: 5, createdAt: T27OCT + 5220000 },
+    { id: 1224252, nickname: "코어위브부채열배레버리지", holdingLabel: "관심종목", content: "NVDA 주가 이미 많이 올랐는데 SpaceX 단일 고객 $116B이 선반영 됐냐 안 됐냐가 포인트임. 공개된 게 이번이 처음이니까 아직 안 됐을 가능성이 높음", likes: 4, createdAt: T27OCT + 5400000 },
+  ],
+  122426: [
+    { id: 1224261, nickname: "초당매출삼천이백팔십사달러", holdingLabel: "관심종목", content: "데이터 축적 관점도 있어. 오너도 아닌 다양한 운전자가 다양한 환경에서 FSD 돌리면 엣지케이스 데이터가 폭발적으로 늘어남", likes: 5, createdAt: T27OCT + 5280000 },
+    { id: 1224262, nickname: "마이크로소프트육만명AI대체", holdingLabel: "관심종목", content: "지금은 FSD 활성화가 된 Tesla를 렌탈하는 거지 진짜 무인은 아님. Cybercab이 Turo에 합류하는 날이 진짜 게임체인저겠지", likes: 4, createdAt: T27OCT + 5460000 },
+  ],
+  122427: [
+    { id: 1224271, nickname: "앤트로픽스페이스엑스120B", holdingLabel: "관심종목", content: "2031년 초당 매출 예상치 역산해보면 FSD 로열티 얼마냐에 따라 천차만별이지. 지금 $3,284이면 FSD 10%만 더해도 $3,600+임", likes: 4, createdAt: T27OCT + 5340000 },
+    { id: 1224272, nickname: "FSD투로렌탈내일개방", holdingLabel: "관심종목", content: "성장 배수가 2.2배로 떨어지는 게 아쉽긴한데 절대값 증가는 $57B이잖아. 작은 기업이 2.2배면 환호하는 거임", likes: 3, createdAt: T27OCT + 5520000 },
+  ],
+  122428: [
+    { id: 1224281, nickname: "스페이스엑스캐팩스Q4백삼십B", holdingLabel: "관심종목", content: "6만명 평균 연봉 $15만달러로 보면 연간 $90억달러 절감인데 퇴직금이 1인당 $20~30만달러면 단기 일회성 비용이 $120~180억달러야", likes: 5, createdAt: T27OCT + 5400000 },
+    { id: 1224282, nickname: "코어위브부채열배레버리지", holdingLabel: "관심종목", content: "AI가 일자리 뺏는다는 게 Big Tech 공식 성명으로 나온 거잖아. MSFT가 명시적으로 말한 건 업계 처음인 것 같음", likes: 4, createdAt: T27OCT + 5580000 },
+  ],
+  122429: [
+    { id: 1224291, nickname: "초당매출삼천이백팔십사달러", holdingLabel: "관심종목", content: "SpaceX가 다 먹어도 AI 전체 수요가 너무 빠르게 커지니까 NeoCloud 전체가 망하진 않을 것 같음. 근데 상위 몇 개만 살아남는 구조겠지", likes: 4, createdAt: T27OCT + 5460000 },
+    { id: 1224292, nickname: "마이크로소프트육만명AI대체", holdingLabel: "관심종목", content: "부채 10배는 진짜 위험한 거잖아. 계약 하나만 틀어져도 뇌관이 됨. CRWV가 장기 계약 현황을 얼마나 공시하느냐가 중요할 것 같음", likes: 3, createdAt: T27OCT + 5640000 },
+  ],
+  122430: [
+    { id: 1224301, nickname: "앤트로픽스페이스엑스120B", holdingLabel: "관심종목", content: "오늘 제일 큰 건 역시 S-1 확인이지. 공식 문서라는 점에서 전날까지 루머 수준이었던 게 완전히 달라짐", likes: 5, createdAt: T27OCT + 5520000 },
+    { id: 1224302, nickname: "FSD투로렌탈내일개방", holdingLabel: "관심종목", content: "MSFT 구조조정이랑 SPCX 상승이 동시에 일어나는 날. AI 투자받는 쪽이랑 AI에 자리 뺏기는 쪽이 같이 보임", likes: 4, createdAt: T27OCT + 5700000 },
   ],
   122172: [
     { id: 1221721, nickname: "추격손떨림", holdingLabel: "관심종목", content: "고가 176은 이미 갔는데 나는 손이 안 감 ㅋㅋ", createdAt: T07OCT + 720000, likes: 5 },

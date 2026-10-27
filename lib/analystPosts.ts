@@ -18,6 +18,49 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-10-27 (화) 추가 ──────────────────────
+  {
+    id: -1678, alias: "마포 두루미 #55", symbol: "SPCX",
+    content: "$120.5B가 S-1 공식 문서에 명기됐다는 게 핵심입니다. SpaceX AI 컴퓨팅 계약이 루머나 추정이 아니라 SEC 제출 서류로 확인된 겁니다. 월 $3.1B NVDA GPU 매출이 2029년까지 잠기는 거잖아요.",
+    contentEn: "$120.5B confirmed in Anthropic's S-1 — not rumor, not estimate. Filed with the SEC, locked in through 2029 at $3.1B/month. SpaceX AI revenue visibility just got a massive upgrade.",
+    likes: 26, comments: 2, created_at: "2026-10-27T01:00:00.000Z", liked: false,
+  },
+  {
+    id: -1679, alias: "종로 두견새 #39", symbol: "NVDA",
+    content: "SpaceX 컴퓨팅 분기 CAPEX가 Q4'27에 $130B 예상이고 NVDA 몫이 $116B이래요. 단일 고객에서 분기 $116B이 NVDA로 들어간다는 건데, 이게 NVDA 밸류에이션에 어느 정도 반영됐는지가 궁금해지는 대목입니다.",
+    contentEn: "SpaceX quarterly compute capex expected to hit $130B in Q4'27 with NVDA taking $116B — from a single customer. How much of this is already priced into NVDA? That's the question.",
+    likes: 24, comments: 2, created_at: "2026-10-27T01:09:00.000Z", liked: false,
+  },
+  {
+    id: -1680, alias: "여의도 도요새 #62", symbol: "TSLA",
+    content: "Turo에서 FSD 활성화 Tesla를 빌릴 수 있게 됐습니다. CEO가 공식 발표했고 이미 수천 대가 등록 완료됐어요. 렌탈 오너 입장에선 주차장에 세워놓는 대신 FSD 기능으로 추가 수익이 생기는 거니까 동기가 충분합니다.",
+    contentEn: "FSD-enabled Tesla rental is live on Turo — CEO confirmed, thousands already listed. For owners, it's extra income from a sitting car. For renters, a chance to experience FSD. Small step, interesting direction.",
+    likes: 22, comments: 2, created_at: "2026-10-27T01:18:00.000Z", liked: false,
+  },
+  {
+    id: -1681, alias: "강남 뜸부기 #88", symbol: "TSLA",
+    content: "2011년 Tesla가 1초에 번 돈 $6.38, 2026년엔 $3,284.18입니다. 15년에 514배. 5년마다 성장 배수는 줄어들지만 절대 증가액은 오히려 커지고 있어요. FSD·Cybercab이 자리잡으면 2031년 숫자가 또 다를 겁니다.",
+    contentEn: "Tesla revenue per second: $6.38 in 2011, $3,284.18 in 2026. 514x in 15 years. Growth multiples are shrinking but absolute dollar additions keep growing. Wait for the FSD + Cybercab era to see the next step change.",
+    likes: 21, comments: 2, created_at: "2026-10-27T01:27:00.000Z", liked: false,
+  },
+  {
+    id: -1682, alias: "광화문 논병아리 #14", symbol: "MSFT",
+    content: "마이크로소프트가 직원 6만명 희망퇴직을 AI 구조조정 이유로 공식화했습니다. 22만명 중 27%. AI로 매출 만들고 AI로 비용 줄이는 구조인데, 영업이익률 개선 효과가 2027년부터 숫자로 나올 것 같습니다.",
+    contentEn: "Microsoft formalizes 60,000 buyouts explicitly citing AI replacement — 27% of headcount. Revenue from AI, cost cuts from AI. The margin improvement story should show up in numbers from 2027.",
+    likes: 19, comments: 2, created_at: "2026-10-27T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -1683, alias: "노원 알락할미새 #71", symbol: null,
+    content: "NeoCloud 7개사 부채비율 비교를 보면 스펙트럼이 엄청납니다. CoreWeave 10.27배 vs WYFI 0.95배. SpaceX가 AI 컴퓨팅 시장을 독식하는 속도에 따라 이 레버리지 전략의 성패가 갈리는 구도입니다. Musk가 '200개 NeoCloud 붕괴' 경고한 게 과장이 아닐 수 있어요.",
+    contentEn: "NeoCloud debt/equity spectrum: CoreWeave 10.27x vs WYFI 0.95x. Success or failure depends on how fast SpaceX dominates AI compute. Musk's '200 NeoCloud collapse' warning may not be hyperbole.",
+    likes: 18, comments: 2, created_at: "2026-10-27T01:45:00.000Z", liked: false,
+  },
+  {
+    id: -1684, alias: "용산 뻐꾸기 #27", symbol: "TSLA",
+    content: "오늘 핵심 6개 — Anthropic S-1 SpaceX $120.5B 확인, NVDA Q4'27 $130B 예상 89% 흡수, Tesla FSD Turo 내일 개방, 초당 매출 $3,284(514배), MSFT 6만명 희망퇴직 AI 공식화, NeoCloud CRWV 부채 10배. SPCX+NVDA 투자자들한테 데이터가 많이 나온 날입니다.",
+    contentEn: "Today's 6: Anthropic S-1 confirms SpaceX $120.5B, NVDA Q4'27 $130B est (89% share), Tesla FSD Turo launch tomorrow, $3,284/sec revenue (514x), MSFT 60k AI buyouts, NeoCloud CRWV 10x leverage. Data-heavy day for SPCX+NVDA holders.",
+    likes: 20, comments: 2, created_at: "2026-10-27T01:54:00.000Z", liked: false,
+  },
   // ── 2026-10-26 (월) 추가 ──────────────────────
   {
     id: -1670, alias: "삼성동 고래 #61", symbol: "META",
@@ -10501,6 +10544,35 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   [-1677]: [
     { alias: "인천 청둥오리 #55", content: "PEG 13.2배라고 설명하면 고성장주 기준으로 이해가 되긴 하죠. 문제는 18.5% 성장 가정이 얼마나 현실적이냐입니다.", created_at: "2026-10-26T02:22:00.000Z" },
     { alias: "울산 민물가마우지 #93", content: "합병 프리미엄 제거하면 Normal $225까지 갈 수 있다는 게 인상적이네요. 합병이 안 되면 현 배수가 지속되기 어려울 수도 있겠어요.", created_at: "2026-10-26T02:35:00.000Z" },
+  ],
+  // ── 2026-10-27 애널 댓글 ──────────────────────
+  [-1678]: [
+    { alias: "판교 민물도요 #33", content: "S-1 확인이 중요한 이유가 법적 구속력 있는 문서이기 때문이죠. 루머랑은 차원이 다릅니다", created_at: "2026-10-27T01:12:00.000Z" },
+    { alias: "강서 쏙독새 #88", content: "SpaceXAI가 구 xAI라는 것도 중요합니다. Grok 팀 인프라를 Anthropic이 쓰는 구도", created_at: "2026-10-27T01:25:00.000Z" },
+  ],
+  [-1679]: [
+    { alias: "강동 물총새 #45", content: "분기 $116B이면 연간 $464B NVDA가 SpaceX 하나에서 받는 거잖아요... 시총 대비 PER 계산이 달라지겠네요", created_at: "2026-10-27T01:21:00.000Z" },
+    { alias: "성북 호반새 #62", content: "이게 가이던스이지 확정 계약은 아니에요. 실제 집행 여부를 분기마다 확인해야 합니다", created_at: "2026-10-27T01:34:00.000Z" },
+  ],
+  [-1680]: [
+    { alias: "동작 물닭 #17", content: "FSD 데이터 축적 관점에서도 중요하죠. 다양한 운전자가 다양한 환경에서 운행하면 AI 학습 데이터 질이 달라집니다", created_at: "2026-10-27T01:30:00.000Z" },
+    { alias: "영등포 해오라기 #54", content: "아직 완전 무인 렌탈은 아니죠. Cybercab이 합류하는 시점이 진짜 게임체인저일 것 같아요", created_at: "2026-10-27T01:43:00.000Z" },
+  ],
+  [-1681]: [
+    { alias: "마포 두루미 #55", content: "성장률 둔화와 절대값 성장이 공존한다는 분석이 좋네요. PER 투자자와 성장률 투자자가 다르게 볼 수 있는 데이터입니다", created_at: "2026-10-27T01:39:00.000Z" },
+    { alias: "종로 두견새 #39", content: "2031년 초당 매출 예상치를 거꾸로 계산해보면 재미있을 것 같아요. FSD 로열티가 얼마나 더해질지에 달렸겠죠", created_at: "2026-10-27T01:52:00.000Z" },
+  ],
+  [-1682]: [
+    { alias: "강남 뜸부기 #88", content: "퇴직금이랑 이행 비용이 단기에 발생하니까 당장 EPS는 오히려 악화될 수 있어요. 절감 효과는 2027년부터죠", created_at: "2026-10-27T01:48:00.000Z" },
+    { alias: "여의도 도요새 #62", content: "6만명이 '자발적' 퇴직이어도 거절하면 압박이 오는 구조잖아요. 실질적으론 구조조정입니다", created_at: "2026-10-27T02:01:00.000Z" },
+  ],
+  [-1683]: [
+    { alias: "광화문 논병아리 #14", content: "CoreWeave가 SpaceX 독식 시나리오에서도 살아남으려면 어떤 차별화가 있는지가 관건입니다", created_at: "2026-10-27T01:57:00.000Z" },
+    { alias: "강서 쏙독새 #88", content: "CRWV 10배 레버리지에 장기 계약이 받쳐주면 되는 거잖아요. 계약 현황 공시가 중요한 이유입니다", created_at: "2026-10-27T02:10:00.000Z" },
+  ],
+  [-1684]: [
+    { alias: "노원 알락할미새 #71", content: "오늘은 SPCX 리레이팅 근거 데이터가 집중적으로 나왔네요. S-1 확인이 제일 큰 것 같아요", created_at: "2026-10-27T02:06:00.000Z" },
+    { alias: "판교 민물도요 #33", content: "NVDA 분기 $130B 예상은 시장이 얼마나 선반영했는지 모르겠는데 아직 모르는 사람이 많을 것 같아요", created_at: "2026-10-27T02:19:00.000Z" },
   ],
   // ── 2026-10-18 애널 댓글 ──────────────────────
   [-1626]: [

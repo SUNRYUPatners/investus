@@ -153,6 +153,14 @@ const ALLOW = new Set([
   "nkalshi", "npolymarket", "ngerstner", "ndoctor", "nvulcan",
   "nark", "nmerger", "nacquisition", "nsynergies", "ncommittee",
   "ndemand", "nsupply",
+  // 2026-10-27 추가 — Turo·NeoCloud·Anthropic S-1 관련
+  "turo", "haddad", "andre", "neocloud", "neoclouds", "crwv", "wyfi", "iren", "docn", "hut",
+  "aws", "helios", "macrohard", "p2p", "buyout", "buyouts", "fiscal",
+  "liquidation", "leverage", "leveraged", "deleveraging",
+  "spcx", "h1", "s1", "fy", "arr",
+  // \n 아티팩트 (2026-10-27)
+  "nturo", "nneocloud", "ncrwv", "nwyfi", "nhaddad", "nandre",
+  "naws", "nhelios", "nmacrohard", "nbuyout",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */
