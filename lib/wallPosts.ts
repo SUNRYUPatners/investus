@@ -49,6 +49,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
 
 const T26OCT = 1792969200000; // 2026-10-26 08:00 KST (월)
 const T27OCT = 1793055600000; // 2026-10-27 08:00 KST (화)
+const T28OCT = 1793142000000; // 2026-10-28 08:00 KST (수)
 const T24OCT = 1792796400000; // 2026-10-24 09:00 KST (토)
 const T23OCT = 1792710000000; // 2026-10-23 08:00 KST
 const T22OCT = 1792623600000; // 2026-10-22 08:00 KST
@@ -148,7 +149,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T27OCT;      // NEW 배지 기준
+export const LATEST_UPDATE = T28OCT;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -167,6 +168,35 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-28 (수) 추가 ────────────────
+  { id: 122431, symbol: "SPCX", nickname: "SpaceX사십B아폴로골드만", holdingLabel: "보유중",
+    content: "SpaceX $40B GPU 파이낸싱 나왔다. Apollo 리드에 Goldman 단독 구조, KKR BlackRock까지 들어온 거잖아. 어제 Anthropic S-1 $120.5B 나오고 오늘 $40B 파이낸싱. 이틀 만에 AI 컴퓨팅 실체 두 번 확인됨",
+    contentEn: "SpaceX $40B GPU financing dropped. Apollo leading, Goldman structuring, KKR and BlackRock in the consortium. Yesterday Anthropic S-1 $120.5B, today $40B financing. AI compute reality confirmed twice in two days.",
+    createdAt: T28OCT + 80*60_000, likes: 34, comments: 2 },
+  { id: 122432, symbol: "TSLA", nickname: "테슬라EPS마흔여덟센트", holdingLabel: "보유중",
+    content: "Tesla Q3 EPS $0.48 나왔는데 컨센 $0.45 넘었고 CapEx $25B→$20B 낮춘다는 게 FCF 개선 신호. FSD 1.7M 사용자. 순이익 -43%는 비현금 항목 때문이라 실제 사업은 나쁘지 않음. 장중 +6%까지 갔음",
+    contentEn: "Tesla Q3 EPS $0.48 beat $0.45 est. CapEx guide cut $25B→$20B = FCF improvement signal. FSD 1.7M users. Net income -43% is mostly non-cash items. Stock up +6% intraday.",
+    createdAt: T28OCT + 88*60_000, likes: 31, comments: 2 },
+  { id: 122433, symbol: null, nickname: "FOMC동결삼점칠오사점영영", holdingLabel: "관심종목",
+    content: "FOMC 3.75-4.00% 동결 만장일치. 인상 확률 11%였으니까 예상대로. S&P +0.70% Nasdaq +0.83% 마감. 금리 동결이 유지되는 동안은 기술주에 할인율 압박 없으니까 멀티플 환경은 우호적",
+    contentEn: "FOMC holds 3.75-4.00% unanimously. 11% hike odds priced in, no surprise. S&P +0.70% Nasdaq +0.83%. Rate hold = no discount rate pressure on tech multiples. Favorable environment holds.",
+    createdAt: T28OCT + 96*60_000, likes: 28, comments: 2 },
+  { id: 122434, symbol: "BTC", nickname: "BTC팔만일천달러지지선", holdingLabel: "관심종목",
+    content: "BTC $81,115 +1.40% DOGE $0.0787 +2.00% 금 $3,995 -0.52%. FOMC 동결 후 가상자산 소폭 올랐고 금은 소폭 빠졌다. $80K 선 지키는 게 핵심. 현물 ETF 자금이 받쳐주는 한 아래로는 잘 안 열림",
+    contentEn: "BTC $81,115 +1.40% DOGE $0.0787 +2.00% Gold $3,995 -0.52%. FOMC hold = mild risk-on. $80K floor is the key support. Spot ETF bid underneath keeps the floor firm.",
+    createdAt: T28OCT + 104*60_000, likes: 26, comments: 2 },
+  { id: 122435, symbol: "NVDA", nickname: "메타삼B엔비디아오라클NVL72", holdingLabel: "보유중",
+    content: "Meta가 NVDA에 $3B 투자 + Oracle NVL72 Supercluster 수주. SpaceX $120.5B·$40B에 Meta·Oracle까지 더해지면 NVDA 수요가 다층화됨. 단일 고객 리스크 분산되면서 오히려 구조가 좋아지는 거잖아",
+    contentEn: "Meta $3B into NVDA + Oracle NVL72 Supercluster. Add SpaceX $120.5B + $40B financing + Meta + Oracle — demand is diversifying. Single-customer risk gone, total demand growing. Structure is getting better.",
+    createdAt: T28OCT + 112*60_000, likes: 29, comments: 2 },
+  { id: 122436, symbol: "SPCX", nickname: "번스타인이육팔BofA이칠오", holdingLabel: "보유중",
+    content: "번스타인 $268 BofA $275 모두 올렸다. SPCX $150에서 목표가 $275면 업사이드 83%야. 어제오늘 나온 근거 두 개가 이 목표가를 지지하는 팩트. 아직 주가에 다 반영됐다고 보기 어려운 레벨",
+    contentEn: "Bernstein $268 BofA $275 both upgraded. SPCX at $150 → $275 target = 83% upside. Two confirming data points this week support these targets. Price still hasn't fully caught up to the fundamentals.",
+    createdAt: T28OCT + 120*60_000, likes: 32, comments: 2 },
+  { id: 122437, symbol: "TSLA", nickname: "오늘요약1028", holdingLabel: "보유중",
+    content: "오늘 핵심 — SpaceX $40B Apollo파이낸싱·Goldman단독구조, Tesla Q3 EPS$0.48 어닝비트·CapEx$20B하향, FOMC 동결 S&P+0.7%, BTC$81K DOGE$0.079, NVDA Meta$3B·Oracle NVL72, SPCX 번스타인$268·BofA$275. TSLA+SPCX+NVDA 강세 지속",
+    contentEn: "Today's key: SpaceX $40B Apollo/Goldman financing, Tesla Q3 EPS $0.48 beat + CapEx $20B guide, FOMC hold S&P+0.7%, BTC $81K, NVDA Meta $3B + Oracle NVL72, SPCX Bernstein $268 / BofA $275. TSLA+SPCX+NVDA bull case reinforced.",
+    createdAt: T28OCT + 128*60_000, likes: 30, comments: 2 },
   // ── 2026-10-27 (화) 추가 ────────────────
   { id: 122424, symbol: "SPCX", nickname: "앤트로픽스페이스엑스120B", holdingLabel: "관심종목",
     content: "Anthropic S-1 보니까 SpaceX에 $120.5B 계약이 공식 문서에 명기됐다ㄷㄷ 월 $31억달러 한화로 4.2조원이 SpaceX AI로 들어오는 거잖아. 연간 37.2조원 ARR... 이게 SpaceX 기업가치 $500B~$1T 얘기가 나오는 이유임. Amazon $110B까지 합하면 이 회사 컴퓨팅 투자만 $230B 넘는다ㄷ",
@@ -6225,6 +6255,34 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   122430: [
     { id: 1224301, nickname: "앤트로픽스페이스엑스120B", holdingLabel: "관심종목", content: "오늘 제일 큰 건 역시 S-1 확인이지. 공식 문서라는 점에서 전날까지 루머 수준이었던 게 완전히 달라짐", likes: 5, createdAt: T27OCT + 5520000 },
     { id: 1224302, nickname: "FSD투로렌탈내일개방", holdingLabel: "관심종목", content: "MSFT 구조조정이랑 SPCX 상승이 동시에 일어나는 날. AI 투자받는 쪽이랑 AI에 자리 뺏기는 쪽이 같이 보임", likes: 4, createdAt: T27OCT + 5700000 },
+  ],
+  122431: [
+    { id: 1224311, nickname: "테슬라EPS마흔여덟센트", holdingLabel: "보유중", content: "Goldman 단독 구조라는 게 의미가 커. $40B를 Goldman이 혼자 설계했다는 건 수수료 독점이고 기관 신뢰도 독점이야", likes: 8, createdAt: T28OCT + 4860000 },
+    { id: 1224312, nickname: "번스타인이육팔BofA이칠오", holdingLabel: "보유중", content: "Vera Rubin이 2027 H1에 들어오면 SpaceX 컴퓨팅 용량이 또 한번 비약하는 거잖아. $40B짜리 업그레이드", likes: 7, createdAt: T28OCT + 5040000 },
+  ],
+  122432: [
+    { id: 1224321, nickname: "SpaceX사십B아폴로골드만", holdingLabel: "보유중", content: "CapEx 낮춘 게 오히려 주가엔 좋을 수 있어. FCF 개선되면 자사주 매입이나 투자 유연성이 생기거든", likes: 7, createdAt: T28OCT + 4920000 },
+    { id: 1224322, nickname: "FOMC동결삼점칠오사점영영", holdingLabel: "관심종목", content: "FSD 1.7M이면 소프트웨어 수익이 진짜 커지고 있는 거야. 마진이 80%+인 구독 수익이 이 규모면 게임 체인저", likes: 6, createdAt: T28OCT + 5100000 },
+  ],
+  122433: [
+    { id: 1224331, nickname: "BTC팔만일천달러지지선", holdingLabel: "관심종목", content: "2027년 1분기 인하 기대가 살아있으면 그게 다음 랠리 촉매가 될 수 있어. 지금은 동결이 지지해주는 중", likes: 6, createdAt: T28OCT + 4980000 },
+    { id: 1224332, nickname: "메타삼B엔비디아오라클NVL72", holdingLabel: "보유중", content: "인상 가능성이 11%밖에 안 됐는데도 동결 확인 후 랠리가 나온 건 시장이 AI 뉴스에 더 집중했다는 거임", likes: 5, createdAt: T28OCT + 5160000 },
+  ],
+  122434: [
+    { id: 1224341, nickname: "오늘요약1028", holdingLabel: "보유중", content: "$80K 지지가 핵심이야. 그 선이 깨지지 않는 한 BTC 중기 추세는 위임. 현물 ETF가 받쳐주는 구조", likes: 6, createdAt: T28OCT + 5040000 },
+    { id: 1224342, nickname: "SpaceX사십B아폴로골드만", holdingLabel: "보유중", content: "금 $4,000 돌파 시도가 이번 주 안에 다시 나올 것 같음. FOMC 소화하고 나면 다음 방향은 지정학 변수", likes: 4, createdAt: T28OCT + 5220000 },
+  ],
+  122435: [
+    { id: 1224351, nickname: "테슬라EPS마흔여덟센트", holdingLabel: "보유중", content: "Oracle NVL72 수주 규모가 얼마인지 공개 안 됐는데 대규모라는 표현 쓴 거 보면 수백~수천억 달러 단위일 수 있어", likes: 6, createdAt: T28OCT + 4980000 },
+    { id: 1224352, nickname: "번스타인이육팔BofA이칠오", holdingLabel: "보유중", content: "Meta $3B가 전략적 투자면 Meta-NVDA 협력 공식화야. MTIA 자체 칩 개발하면서도 NVDA랑 공존하는 전략", likes: 5, createdAt: T28OCT + 5160000 },
+  ],
+  122436: [
+    { id: 1224361, nickname: "FOMC동결삼점칠오사점영영", holdingLabel: "관심종목", content: "현재 $150에서 $268이면 79%고 $275면 83%야. 6~12개월 시계에서 나온 목표가인데 기반이 이번 주 두 개로 확실해졌음", likes: 7, createdAt: T28OCT + 5040000 },
+    { id: 1224362, nickname: "BTC팔만일천달러지지선", holdingLabel: "관심종목", content: "SpaceX AI 컴퓨팅 사업이 $1T 기업가치에 반영되면 SPCX는 지금보다 몇 배야. 아직 초입인 거임", likes: 6, createdAt: T28OCT + 5220000 },
+  ],
+  122437: [
+    { id: 1224371, nickname: "메타삼B엔비디아오라클NVL72", holdingLabel: "보유중", content: "이틀 연속으로 SPCX+NVDA+TSLA에 대형 호재들. AI 인프라 사이클이 주가에 얼마나 반영됐는지가 앞으로의 관건이겠지", likes: 6, createdAt: T28OCT + 5100000 },
+    { id: 1224372, nickname: "SpaceX사십B아폴로골드만", holdingLabel: "보유중", content: "FOMC 동결까지 가세하니까 환경 자체가 AI 성장주에 최적. 언제까지 이 환경이 유지되느냐가 포인트임", likes: 5, createdAt: T28OCT + 5280000 },
   ],
   122172: [
     { id: 1221721, nickname: "추격손떨림", holdingLabel: "관심종목", content: "고가 176은 이미 갔는데 나는 손이 안 감 ㅋㅋ", createdAt: T07OCT + 720000, likes: 5 },

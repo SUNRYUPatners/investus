@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0A00"/><stop offset="100%" stop-color="#1A1200"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="160" height="40" rx="20" fill="#1C1505"/>
+  <rect x="40" y="24" width="160" height="40" rx="20" fill="none" stroke="#B45309" stroke-width="2"/>
+  <text x="120" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCD34D">FOMC</text>
+  <rect x="218" y="24" width="160" height="40" rx="20" fill="#1C1505"/>
+  <rect x="218" y="24" width="160" height="40" rx="20" fill="none" stroke="#92400E" stroke-width="2"/>
+  <text x="298" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FDE68A">매크로</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">FOMC October Hold — 3.75-4.00%, Market Relief Rally</text>
+  <text x="540" y="278" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="#F59E0B" filter="url(#glow)">HOLD</text>
+  <text x="540" y="338" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#FDE68A">3.75–4.00% Unanimous · S&amp;P +0.70% · Nasdaq +0.83%</text>
+  <line x1="54" y1="368" x2="1026" y2="368" stroke="#92400E" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="54" y="418" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">Market Reaction &amp; Implications</text>
+  <rect x="54" y="435" width="460" height="32" rx="10" fill="#1C1505" stroke="#B45309" stroke-width="1.5"/>
+  <text x="284" y="457" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#FCD34D">Hike probability 11% → hold fully priced</text>
+  <rect x="528" y="435" width="498" height="32" rx="10" fill="#1C1505" stroke="#B45309" stroke-width="1.5"/>
+  <text x="777" y="457" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#FDE68A">Next: Dec 2026 · Dot plot implies 2027 cut</text>
+  <rect x="54" y="480" width="972" height="236" rx="22" fill="#0F0A00" stroke="#92400E" stroke-width="2.5"/>
+  <line x1="54" y1="528" x2="1026" y2="528" stroke="#F59E0B" stroke-width="2"/>
+  <text x="108" y="513" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">🌐 FOMC October Decision</text>
+  <text x="108" y="552" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Hold 3.75-4.00% unanimous — hike prob 11%, no surprise</text><text x="108" y="586" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">S&amp;P 500 7,676.77 (+0.70%) · Nasdaq +0.83% relief rally</text><text x="108" y="620" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Statement: inflation progress toward 2%, data-dependent stance</text><text x="108" y="654" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">First cut expected: 2027 Q1 — hold cycle continues</text>
+  <rect x="54" y="730" width="972" height="168" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <line x1="54" y1="778" x2="1026" y2="778" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="763" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">📊 Impact on AI &amp; Tech</text>
+  <text x="108" y="802" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Rate hold = no discount rate pressure → growth multiple support</text><text x="108" y="836" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Goldman year-end S&amp;P 7,900 target · JPM positive on TSLA·NVDA·SPCX</text>
+  <rect x="54" y="916" width="316" height="160" rx="18" fill="#0F1623" stroke="#F59E0B" stroke-width="2"/>
+  <text x="212" y="950" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Fed Rate</text>
+  <text x="212" y="1012" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F59E0B">3.75%</text>
+  <text x="212" y="1044" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">~4.00%</text>
+  <text x="212" y="1074" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Unanimous hold</text><rect x="394" y="916" width="316" height="160" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="552" y="950" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">S&amp;P 500</text>
+  <text x="552" y="1012" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">7,677</text>
+  <text x="552" y="1044" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">+0.70%</text>
+  <text x="552" y="1074" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Relief rally</text><rect x="734" y="916" width="316" height="160" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="892" y="950" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">First Cut Est</text>
+  <text x="892" y="1012" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">2027Q1</text>
+  <text x="892" y="1044" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB"> </text>
+  <text x="892" y="1074" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">~3.5% target</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 20261028 · INVESTUS SRP</text>
+</svg>

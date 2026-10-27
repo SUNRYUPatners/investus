@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0505"/><stop offset="100%" stop-color="#1A0A0A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="140" height="40" rx="20" fill="#1A0505"/>
+  <rect x="40" y="24" width="140" height="40" rx="20" fill="none" stroke="#B91C1C" stroke-width="2"/>
+  <text x="110" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCA5A5">TSLA</text>
+  <rect x="198" y="24" width="150" height="40" rx="20" fill="#1A0505"/>
+  <rect x="198" y="24" width="150" height="40" rx="20" fill="none" stroke="#C2410C" stroke-width="2"/>
+  <text x="273" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FED7AA">어닝 시즌</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FCA5A5">Tesla Q3 2026 Earnings — EPS $0.48 Beat · CapEx Cut</text>
+  <text x="540" y="278" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="140" font-weight="900" fill="#EF4444" filter="url(#glow)">$0.48</text>
+  <text x="540" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#FCA5A5">Adj EPS — Beats $0.45 Consensus · Revenue $28.05B · CapEx $20B</text>
+  <line x1="54" y1="358" x2="1026" y2="358" stroke="#7F1D1D" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="54" y="408" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#EF4444">Q3 2026 Results Summary</text>
+  <rect x="54" y="425" width="229" height="42" rx="12" fill="#1A0505" stroke="#7F1D1D" stroke-width="1.5"/>
+  <text x="168" y="452" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#FCA5A5">EPS $0.48 (est $0.45)</text>
+  <rect x="297" y="425" width="229" height="42" rx="12" fill="#1A0505" stroke="#7F1D1D" stroke-width="1.5"/>
+  <text x="411" y="452" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#FED7AA">Revenue $28.05B</text>
+  <rect x="540" y="425" width="229" height="42" rx="12" fill="#1A0505" stroke="#7F1D1D" stroke-width="1.5"/>
+  <text x="654" y="452" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#FDE68A">CapEx $20B(↓$25B)</text>
+  <rect x="783" y="425" width="243" height="42" rx="12" fill="#1A0505" stroke="#7F1D1D" stroke-width="1.5"/>
+  <text x="904" y="452" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#86EFAC">FSD 1.7M users</text>
+  <rect x="54" y="480" width="972" height="236" rx="22" fill="#0F0A00" stroke="#7F1D1D" stroke-width="2.5"/>
+  <line x1="54" y1="528" x2="1026" y2="528" stroke="#EF4444" stroke-width="2"/>
+  <text x="108" y="513" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#EF4444">💰 Tesla Q3 2026 Key Metrics</text>
+  <text x="108" y="552" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Adj EPS $0.48 — beat $0.45 consensus by 7%</text><text x="108" y="586" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Revenue $28.05B · Net income $787M (-43% YoY, mostly non-cash)</text><text x="108" y="620" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">CapEx guide cut $25B → $20B — FCF improvement signal</text><text x="108" y="654" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">FSD active users 1.7M+ — software flywheel turning</text>
+  <rect x="54" y="730" width="972" height="168" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="778" x2="1026" y2="778" stroke="#F59E0B" stroke-width="2"/>
+  <text x="108" y="763" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">📊 House View</text>
+  <text x="108" y="802" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Wedbush $600 — CapEx cut = FCF pivot ahead of Cybercab ramp</text><text x="108" y="836" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Morgan Stanley $415 base / $610 bull — FSD monetization pace is the key</text>
+  <rect x="54" y="916" width="316" height="160" rx="18" fill="#0F1623" stroke="#EF4444" stroke-width="2"/>
+  <text x="212" y="950" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Adj EPS</text>
+  <text x="212" y="1012" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#EF4444">$0.48</text>
+  <text x="212" y="1044" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">vs $0.45 est</text>
+  <text x="212" y="1074" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">+7% beat</text><rect x="394" y="916" width="316" height="160" rx="18" fill="#0F1623" stroke="#F97316" stroke-width="2"/>
+  <text x="552" y="950" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Revenue</text>
+  <text x="552" y="1012" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F97316">$28.05B</text>
+  <text x="552" y="1044" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">QoQ growth</text>
+  <text x="552" y="1074" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">~$112B annualized</text><rect x="734" y="916" width="316" height="160" rx="18" fill="#0F1623" stroke="#FBBF24" stroke-width="2"/>
+  <text x="892" y="950" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">FSD Users</text>
+  <text x="892" y="1012" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#FBBF24">1.7M</text>
+  <text x="892" y="1044" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Active users</text>
+  <text x="892" y="1074" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Turo live today</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 20261028 · INVESTUS SRP</text>
+</svg>

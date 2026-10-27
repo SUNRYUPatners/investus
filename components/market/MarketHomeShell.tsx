@@ -22,7 +22,6 @@ import { MorningBriefingCard } from "@/components/MorningBriefingCard";
 import { HomeValueStrip } from "@/components/HomeValueStrip";
 import { MarketPortfolioStub } from "@/components/market/MarketPortfolioStub";
 import { ShopPreviewSection } from "@/components/ShopPreviewSection";
-import { HeroLanding } from "@/components/HeroLanding";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import type { Locale } from "@/lib/i18n";
@@ -81,7 +80,6 @@ export function MarketHomeShell({
         </div>
       )}
 
-      {isUs && <HeroLanding locale={uiLocale} />}
 
       <main className="max-w-[480px] mx-auto lg:max-w-screen-2xl lg:px-8 lg:pb-10">
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-3">

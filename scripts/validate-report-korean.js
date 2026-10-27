@@ -161,6 +161,16 @@ const ALLOW = new Set([
   // \n 아티팩트 (2026-10-27)
   "nturo", "nneocloud", "ncrwv", "nwyfi", "nhaddad", "nandre",
   "naws", "nhelios", "nmacrohard", "nbuyout",
+  // 2026-10-28 추가 — SpaceX $40B 파이낸싱·NVDA·FOMC·가상자산 관련
+  "apollo", "global", "management", "sole", "structuring", "agent",
+  "kkr", "vera", "rubin", "oracle", "nvl", "supercluster", "oci",
+  "larry", "ellison", "platforms", "fair", "jp", "srp", "investuskr",
+  "gb", "gb300", "gb200", "blackwellgb",
+  // \n 아티팩트 (2026-10-28)
+  "napollo", "nkkr", "noracle", "nrubin", "nvera", "ninvestuskr",
+  "nplatforms", "nellison", "nlarry", "nsrp",
+  "banthropic", "spacexanthropic", "metaoracle", "infrastructureoci",
+  "awsazure", "kkrblackrock",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */

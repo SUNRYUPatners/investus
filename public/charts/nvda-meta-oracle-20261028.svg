@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#020D08"/><stop offset="100%" stop-color="#04150A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#22C55E"/><stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="140" height="40" rx="20" fill="#052E16"/>
+  <rect x="40" y="24" width="140" height="40" rx="20" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <text x="110" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#86EFAC">NVDA</text>
+  <rect x="198" y="24" width="140" height="40" rx="20" fill="#030D1A"/>
+  <rect x="198" y="24" width="140" height="40" rx="20" fill="none" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="268" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#93C5FD">Meta</text>
+  <rect x="356" y="24" width="160" height="40" rx="20" fill="#0D0A00"/>
+  <rect x="356" y="24" width="160" height="40" rx="20" fill="none" stroke="#B45309" stroke-width="2"/>
+  <text x="436" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCD34D">Oracle</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#86EFAC">NVDA: Meta $3B 신규 투자 · Oracle NVL72 Supercluster 수주</text>
+  <text x="300" y="260" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="#22C55E" filter="url(#glow)">$3B</text>
+  <text x="300" y="316" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#86EFAC">Meta → NVDA 신규 투자</text>
+  <text x="780" y="240" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="72" font-weight="900" fill="#60A5FA" filter="url(#glow2)">NVL72</text>
+  <text x="780" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#93C5FD">Oracle Supercluster 수주</text>
+  <text x="540" y="390" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="72" font-weight="900" fill="#86EFAC" filter="url(#glow2)">$216</text>
+  <text x="540" y="445" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#86EFAC">NVDA 주가 · AI 수요 4개 파이프라인 확인</text>
+  <line x1="54" y1="462" x2="1026" y2="462" stroke="#065F46" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="54" y="485" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#22C55E">SpaceX · Anthropic · Meta · Oracle</text>
+  <rect x="54" y="500" width="972" height="236" rx="22" fill="#0F0A00" stroke="#065F46" stroke-width="2.5"/>
+  <line x1="54" y1="548" x2="1026" y2="548" stroke="#86EFAC" stroke-width="2"/>
+  <text x="108" y="533" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#86EFAC">🔍 NVDA 수요 파이프라인 다층화</text>
+  <text x="108" y="572" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Meta $3B 신규 투자 — MTIA 자체칩 개발과 동시 NVDA 협력 공식화</text><text x="108" y="606" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Oracle NVL72 Supercluster 수주 — OCI AI 용량 대폭 확장</text><text x="108" y="640" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">SpaceX $120.5B+$40B · Anthropic · Meta · Oracle 4개 파이프라인 확인</text><text x="108" y="674" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">단일 고객 리스크 분산, 총 수요는 증가 — 구조적으로 더 강해짐</text>
+  <rect x="54" y="750" width="972" height="168" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <line x1="54" y1="798" x2="1026" y2="798" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="783" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">📊 하우스 뷰</text>
+  <text x="108" y="822" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">웨드부시: 수요 다층화로 데이터센터 추정치 추가 상향 근거 축적</text><text x="108" y="856" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">JP모건 오버웨이트 $230 — Blackwell→Rubin 수요 연속성 핵심</text>
+  <rect x="54" y="936" width="316" height="160" rx="18" fill="#0F1623" stroke="#86EFAC" stroke-width="2"/>
+  <text x="212" y="970" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Meta 투자</text>
+  <text x="212" y="1032" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#86EFAC">$3B</text>
+  <text x="212" y="1064" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">NVDA 신규</text>
+  <text x="212" y="1094" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">전략적 파트너십</text><rect x="394" y="936" width="316" height="160" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="552" y="970" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Oracle 수주</text>
+  <text x="552" y="1032" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">NVL72</text>
+  <text x="552" y="1064" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Supercluster</text>
+  <text x="552" y="1094" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">OCI AI 대규모 확장</text><rect x="734" y="936" width="316" height="160" rx="18" fill="#0F1623" stroke="#A78BFA" stroke-width="2"/>
+  <text x="892" y="970" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">NVDA 주가</text>
+  <text x="892" y="1032" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A78BFA">$216</text>
+  <text x="892" y="1064" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">안정적 흐름</text>
+  <text x="892" y="1094" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">추가 상방 촉매</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 20261028 · INVESTUS SRP</text>
+</svg>

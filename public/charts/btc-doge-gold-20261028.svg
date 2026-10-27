@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0800"/><stop offset="100%" stop-color="#1A1200"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="120" height="40" rx="20" fill="#1C1400"/>
+  <rect x="40" y="24" width="120" height="40" rx="20" fill="none" stroke="#B45309" stroke-width="2"/>
+  <text x="100" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCD34D">BTC</text>
+  <rect x="178" y="24" width="140" height="40" rx="20" fill="#1C1400"/>
+  <rect x="178" y="24" width="140" height="40" rx="20" fill="none" stroke="#D97706" stroke-width="2"/>
+  <text x="248" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FDE68A">DOGE</text>
+  <rect x="336" y="24" width="120" height="40" rx="20" fill="#1C1400"/>
+  <rect x="336" y="24" width="120" height="40" rx="20" fill="none" stroke="#92400E" stroke-width="2"/>
+  <text x="396" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCD34D">Gold</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FDE68A">BTC · DOGE · 금 — FOMC 동결 후 가상자산·안전자산 동향</text>
+  <text x="300" y="260" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="90" font-weight="900" fill="#F59E0B" filter="url(#glow)">$81K</text>
+  <text x="300" y="318" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#FDE68A">BTC +1.40%</text>
+  <text x="780" y="240" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="72" font-weight="900" fill="#FBBF24" filter="url(#glow2)">$0.079</text>
+  <text x="780" y="298" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">DOGE +2.00%</text>
+  <text x="540" y="390" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="80" font-weight="900" fill="#FCD34D" filter="url(#glow2)">$3,995</text>
+  <text x="540" y="445" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">금 -0.52% · $4,000 목전</text>
+  <line x1="54" y1="472" x2="1026" y2="472" stroke="#92400E" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="54" y="520" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">FOMC 동결 이후 시장 반응</text>
+  <rect x="54" y="560" width="972" height="236" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="608" x2="1026" y2="608" stroke="#F59E0B" stroke-width="2"/>
+  <text x="108" y="593" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">₿ 가상자산·안전자산 동향</text>
+  <text x="108" y="632" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">BTC $81,115 (+1.40%) — $80K 지지선 유지, 현물 ETF 자금 유입 지속</text><text x="108" y="666" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">DOGE $0.0787 (+2.00%) — Elon 생태계 이벤트 민감 반응</text><text x="108" y="700" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">금 $3,995 (-0.52%) — FOMC 후 위험선호 소폭 이동, $4,000 목전</text><text x="108" y="734" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">FOMC 동결 후 가상자산 상승·금 소폭 하락 = 위험선호 재확인</text>
+  <rect x="54" y="814" width="316" height="160" rx="18" fill="#0F1623" stroke="#F59E0B" stroke-width="2"/>
+  <text x="212" y="848" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Bitcoin</text>
+  <text x="212" y="910" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F59E0B">$81,115</text>
+  <text x="212" y="942" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">+1.40%</text>
+  <text x="212" y="972" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">$80K 지지 유지</text><rect x="394" y="814" width="316" height="160" rx="18" fill="#0F1623" stroke="#FBBF24" stroke-width="2"/>
+  <text x="552" y="848" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Dogecoin</text>
+  <text x="552" y="910" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#FBBF24">$0.0787</text>
+  <text x="552" y="942" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">+2.00%</text>
+  <text x="552" y="972" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Elon 생태계</text><rect x="734" y="814" width="316" height="160" rx="18" fill="#0F1623" stroke="#FCD34D" stroke-width="2"/>
+  <text x="892" y="848" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">금 Gold</text>
+  <text x="892" y="910" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#FCD34D">$3,995</text>
+  <text x="892" y="942" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">-0.52%</text>
+  <text x="892" y="972" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">$4,000 목전</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 20261028 · INVESTUS SRP</text>
+</svg>

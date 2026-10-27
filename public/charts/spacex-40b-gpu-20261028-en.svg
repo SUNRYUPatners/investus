@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#08051A"/><stop offset="100%" stop-color="#04021A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="160" height="40" rx="20" fill="#1E1B4B"/>
+  <rect x="40" y="24" width="160" height="40" rx="20" fill="none" stroke="#6D28D9" stroke-width="2"/>
+  <text x="120" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C4B5FD">SPCX</text>
+  <rect x="218" y="24" width="140" height="40" rx="20" fill="#052E16"/>
+  <rect x="218" y="24" width="140" height="40" rx="20" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <text x="288" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#86EFAC">NVDA</text>
+  <rect x="376" y="24" width="150" height="40" rx="20" fill="#0F172A"/>
+  <rect x="376" y="24" width="150" height="40" rx="20" fill="none" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="451" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#93C5FD">Apollo</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#E9D5FF">SpaceX $40B GPU Financing — Apollo·Goldman·KKR·BlackRock</text>
+  <text x="540" y="278" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="155" font-weight="900" fill="#60A5FA" filter="url(#glow)">$40B</text>
+  <text x="540" y="338" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#93C5FD">Vera Rubin GPU Infrastructure — Largest Single AI Private Financing</text>
+  <line x1="54" y1="368" x2="1026" y2="368" stroke="#1E40AF" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="54" y="418" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#60A5FA">Consortium Structure</text>
+  <rect x="54" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#60A5FA" stroke-width="2.5"/>
+  <text x="212" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Apollo Global</text>
+  <text x="212" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#60A5FA">Lead Arranger</text>
+  <text x="212" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">$650B AUM</text><rect x="384" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#A78BFA" stroke-width="2.5"/>
+  <text x="542" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Goldman Sachs</text>
+  <text x="542" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#A78BFA">Sole Structuring</text>
+  <text x="542" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">Agent</text><rect x="714" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#34D399" stroke-width="2.5"/>
+  <text x="872" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">KKR · BlackRock</text>
+  <text x="872" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#34D399">Consortium</text>
+  <text x="872" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">Institutional</text>
+  <rect x="54" y="665" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1E40AF" stroke-width="2.5"/>
+  <line x1="54" y1="713" x2="1026" y2="713" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="698" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">📊 SpaceX $40B GPU Financing Structure</text>
+  <text x="108" y="737" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Purpose: NVIDIA Vera Rubin GPU procurement — H1 2027 delivery</text><text x="108" y="771" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Apollo leads · Goldman sole structuring agent · KKR·BlackRock consortium</text><text x="108" y="805" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Confirms SpaceX AI compute reality after Anthropic S-1 $120.5B</text><text x="108" y="839" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Largest single private AI infrastructure financing on record</text>
+  <rect x="54" y="915" width="972" height="202" rx="22" fill="#0F0A00" stroke="#065F46" stroke-width="2.5"/>
+  <line x1="54" y1="963" x2="1026" y2="963" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="948" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">🚀 SPCX · NVDA Investment Angle</text>
+  <text x="108" y="987" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">SpaceX Vera Rubin buy → NVDA 2027 demand pipeline confirmed</text><text x="108" y="1021" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Basis for Bernstein $268 · BofA $275 Buy SPCX PT upgrades</text><text x="108" y="1055" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">World&apos;s top institutions betting $40B = AI compute thesis validated</text>
+  <rect x="54" y="1135" width="316" height="160" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="212" y="1169" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Financing Size</text>
+  <text x="212" y="1231" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">$40B</text>
+  <text x="212" y="1263" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">GPU Infrastructure</text>
+  <text x="212" y="1293" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">H1 2027 delivery</text><rect x="394" y="1135" width="316" height="160" rx="18" fill="#0F1623" stroke="#A78BFA" stroke-width="2"/>
+  <text x="552" y="1169" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Goldman Role</text>
+  <text x="552" y="1231" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A78BFA">Sole</text>
+  <text x="552" y="1263" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Structuring Agent</text>
+  <text x="552" y="1293" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Top institutions</text><rect x="734" y="1135" width="316" height="160" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="892" y="1169" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">GPU Type</text>
+  <text x="892" y="1231" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">Vera Rubin</text>
+  <text x="892" y="1263" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">NVDA Next-Gen</text>
+  <text x="892" y="1293" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Post-Blackwell</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 20261028 · INVESTUS SRP</text>
+</svg>

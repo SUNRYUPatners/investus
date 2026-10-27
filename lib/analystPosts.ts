@@ -18,6 +18,49 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-10-28 (수) 추가 ──────────────────────
+  {
+        id: -1685, alias: "마포 두루미 #55", symbol: "SPCX",
+    content: "SpaceX $40B GPU 파이낸싱에 Apollo·Goldman·KKR·BlackRock이 참여했습니다. 민간 최대 기관들이 $40B를 배팅했다는 건 SpaceX AI 컴퓨팅 사업성에 기관 신뢰가 확립됐다는 신호입니다. Vera Rubin GPU가 2027 H1에 들어오면 컴퓨팅 용량이 또 한번 비약합니다.",
+    contentEn: "$40B SpaceX GPU financing with Apollo, Goldman, KKR, BlackRock. When the world's biggest institutions put $40B behind you, the business case is no longer a question. Vera Rubin delivery in H1 2027 — capacity step-change incoming.",
+    likes: 28, comments: 2, created_at: "2026-10-28T01:00:00.000Z", liked: false,
+  },
+  {
+        id: -1686, alias: "종로 두견새 #39", symbol: "TSLA",
+    content: "Tesla Q3 조정 EPS $0.48이 컨센서스 $0.45를 넘었습니다. 순이익 -43%는 비현금 항목 영향이 크고, CapEx $20B 하향 가이던스가 FCF 개선 방향 전환 신호입니다. FSD 1.7M 사용자도 소프트웨어 플라이휠이 돌아가고 있다는 증거입니다.",
+    contentEn: "Tesla Q3 adj EPS $0.48 beat $0.45 est. Net income -43% YoY is largely non-cash. CapEx guide cut to $20B signals FCF pivot. FSD at 1.7M active users — software flywheel is real and growing.",
+    likes: 25, comments: 2, created_at: "2026-10-28T01:09:00.000Z", liked: false,
+  },
+  {
+        id: -1687, alias: "여의도 도요새 #62", symbol: "SPCX",
+    content: "번스타인 $268, BofA $275. SPCX 현재가 $150에서 목표가까지 업사이드가 각각 44%·83%입니다. Anthropic $120.5B + $40B 파이낸싱 두 가지가 이틀 만에 나왔는데 아직 이 수치들이 주가에 충분히 반영됐다고 보기 어렵습니다.",
+    contentEn: "Bernstein $268, BofA $275 on SPCX at $150 — that's 44% and 83% upside. Two confirming events in two days (Anthropic S-1 + $40B financing) and both probably not fully priced in yet.",
+    likes: 23, comments: 2, created_at: "2026-10-28T01:18:00.000Z", liked: false,
+  },
+  {
+        id: -1688, alias: "강남 뜸부기 #88", symbol: null,
+    content: "FOMC 동결 후 S&P +0.70%, Nasdaq +0.83%. 인상 확률 11%로 시장이 예상한 결과인데 반응은 안도 랠리였습니다. 금리 동결 사이클 유지 중에는 TSLA·NVDA·SPCX처럼 성장주 밸류에이션에 유리한 환경이 계속됩니다.",
+    contentEn: "FOMC hold → S&P +0.70%, Nasdaq +0.83%. Market was pricing 11% hike odds, so the reaction was pure relief. Rate-hold environment means growth multiples stay supported — good for TSLA, NVDA, SPCX.",
+    likes: 21, comments: 2, created_at: "2026-10-28T01:27:00.000Z", liked: false,
+  },
+  {
+        id: -1689, alias: "광화문 논병아리 #14", symbol: "NVDA",
+    content: "Meta가 NVDA에 $3B 투자하고 Oracle이 NVL72 Supercluster를 수주했습니다. SpaceX·Anthropic 파이프라인 위에 Meta·Oracle까지 더해지면 NVDA 수요가 다층화됩니다. 단일 고객 의존도가 낮아지면서 오히려 안정적인 구조가 만들어지는 겁니다.",
+    contentEn: "Meta invests $3B in NVDA; Oracle wins NVL72 Supercluster. Stack SpaceX + Anthropic + Meta + Oracle demand — that's a multi-layered, de-risked pipeline. Single-customer risk diminishing while total demand grows.",
+    likes: 20, comments: 2, created_at: "2026-10-28T01:36:00.000Z", liked: false,
+  },
+  {
+        id: -1690, alias: "노원 알락할미새 #71", symbol: "BTC",
+    content: "BTC $81,115, DOGE $0.0787, 금 $3,995. FOMC 동결 이후 BTC·DOGE 소폭 올랐고 금은 소폭 빠졌습니다. $80,000선이 지지되는 동안은 BTC 상승 추세가 살아있다고 봅니다. 현물 ETF 자금 유입이 계속되는 한 방향은 위입니다.",
+    contentEn: "BTC $81,115, DOGE $0.0787, Gold $3,995 post-FOMC. Crypto up, gold slightly down — mild risk-on shift. $80K holding is the key floor to watch. Spot ETF inflows continuing = structural bid underneath.",
+    likes: 18, comments: 2, created_at: "2026-10-28T01:45:00.000Z", liked: false,
+  },
+  {
+        id: -1691, alias: "용산 뻐꾸기 #27", symbol: "TSLA",
+    content: "오늘 요약 — SpaceX $40B GPU Apollo·Goldman 파이낸싱, Tesla Q3 EPS $0.48 어닝 비트, FOMC 3.75-4% 동결, BTC $81K DOGE $0.079, NVDA Meta $3B+Oracle NVL72, SPCX 번스타인$268·BofA$275 상향. TSLA+SPCX+NVDA 투자자한테 데이터가 또 쌓인 날.",
+    contentEn: "Today's digest: SpaceX $40B Apollo/Goldman GPU financing, Tesla Q3 EPS $0.48 beat, FOMC hold 3.75-4%, BTC $81K, NVDA Meta $3B + Oracle NVL72, SPCX Bernstein $268 / BofA $275. Another data-rich day for TSLA+SPCX+NVDA investors.",
+    likes: 16, comments: 2, created_at: "2026-10-28T01:54:00.000Z", liked: false,
+  },
   // ── 2026-10-27 (화) 추가 ──────────────────────
   {
     id: -1678, alias: "마포 두루미 #55", symbol: "SPCX",
@@ -10573,6 +10616,35 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   [-1684]: [
     { alias: "노원 알락할미새 #71", content: "오늘은 SPCX 리레이팅 근거 데이터가 집중적으로 나왔네요. S-1 확인이 제일 큰 것 같아요", created_at: "2026-10-27T02:06:00.000Z" },
     { alias: "판교 민물도요 #33", content: "NVDA 분기 $130B 예상은 시장이 얼마나 선반영했는지 모르겠는데 아직 모르는 사람이 많을 것 같아요", created_at: "2026-10-27T02:19:00.000Z" },
+  ],
+  // ── 2026-10-28 애널 댓글 ──────────────────────
+  [-1685]: [
+    { alias: "종로 두견새 #39", content: "Goldman이 단독 구조 설계라는 게 인상적. Goldman이 이 딜 구조를 다 짰다는 건 수수료 독점이고 신뢰도 독점임", created_at: "2026-10-28T02:00:00.000Z" },
+    { alias: "여의도 도요새 #62", content: "Vera Rubin이 2027 H1이면 $40B를 쓴 효과가 2027년 하반기부터 매출로 찍히는 구조. 선행 투자라 지금 주가에 선반영 될 수 있음", created_at: "2026-10-28T02:10:00.000Z" },
+  ],
+  [-1686]: [
+    { alias: "광화문 논병아리 #14", content: "CapEx $20B로 낮춘 게 오히려 주가엔 좋을 수 있어. FCF 개선되면 밸류에이션 멀티플 확장 여지가 생기거든", created_at: "2026-10-28T02:00:00.000Z" },
+    { alias: "강남 뜸부기 #88", content: "FSD 1.7M이면 구독 $99 기준으로도 분기 $500M 넘는 소프트웨어 수익. 마진이 80%+인 소프트웨어가 이만큼 되면 나중에 게임 바뀜", created_at: "2026-10-28T02:15:00.000Z" },
+  ],
+  [-1687]: [
+    { alias: "마포 두루미 #55", content: "83% 업사이드면 1년 안에 달성 못해도 2~3년 시계에서는 충분히 현실적인 목표가임. BofA가 Buy 유지한 게 핵심", created_at: "2026-10-28T02:00:00.000Z" },
+    { alias: "노원 알락할미새 #71", content: "지금 $150에서 $275면 연 단순 수익률로 봐도 대단한 수치. 물론 시나리오대로 가야 하지만 근거가 이번 주에 두 개나 나온 거잖아", created_at: "2026-10-28T02:12:00.000Z" },
+  ],
+  [-1688]: [
+    { alias: "용산 뻐꾸기 #27", content: "금리 동결이 유지되면 채권 수익률 압력이 없어서 주식에 자금이 머무름. FOMC가 버텨주는 동안은 기술주 환경이 나쁘지 않아", created_at: "2026-10-28T02:00:00.000Z" },
+    { alias: "마포 두루미 #55", content: "2027년 초 인하 기대가 현실화되면 추가 랠리 촉매가 될 수 있음. 지금은 동결이 기술주 지지 역할을 하는 중", created_at: "2026-10-28T02:08:00.000Z" },
+  ],
+  [-1689]: [
+    { alias: "종로 두견새 #39", content: "Oracle NVL72 수주가 어느 정도 규모인지가 궁금한데 NVDA 입장에선 대형 계약 하나 더 확인된 거. SpaceX 단독 의존 줄어들수록 NVDA 리스크가 분산됨", created_at: "2026-10-28T02:00:00.000Z" },
+    { alias: "여의도 도요새 #62", content: "Meta $3B가 전략적 투자인지 단순 지분 매입인지에 따라 의미가 달라. 전략적이면 NVDA-Meta 협력 관계가 공식화되는 거임", created_at: "2026-10-28T02:12:00.000Z" },
+  ],
+  [-1690]: [
+    { alias: "강남 뜸부기 #88", content: "$4,000 넘기 전에 금이 한번 숨 고르는 건 자연스러움. FOMC 이후 위험선호로 소폭 자금 이동인데 방향이 바뀐 건 아님", created_at: "2026-10-28T02:00:00.000Z" },
+    { alias: "광화문 논병아리 #14", content: "BTC $81K 유지가 핵심. $80K 깨지지 않는 한 상승 추세 살아있다고 봐야 함. 현물 ETF 자금이 받쳐주는 구조", created_at: "2026-10-28T02:10:00.000Z" },
+  ],
+  [-1691]: [
+    { alias: "노원 알락할미새 #71", content: "오늘만 봐도 TSLA·SPCX·NVDA 다 긍정적인 뉴스들. 개별 이슈가 아니고 AI 인프라 사이클 전체가 강화되는 흐름임", created_at: "2026-10-28T02:00:00.000Z" },
+    { alias: "종로 두견새 #39", content: "이 정도 호재들이 쌓이면 시장이 조만간 본격 반응할 것 같긴 한데. 지금까지 선반영 얼마나 됐는지 가늠이 안 되는 게 고민", created_at: "2026-10-28T02:10:00.000Z" },
   ],
   // ── 2026-10-18 애널 댓글 ──────────────────────
   [-1626]: [

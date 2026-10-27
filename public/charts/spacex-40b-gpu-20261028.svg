@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#08051A"/><stop offset="100%" stop-color="#04021A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="160" height="40" rx="20" fill="#1E1B4B"/>
+  <rect x="40" y="24" width="160" height="40" rx="20" fill="none" stroke="#6D28D9" stroke-width="2"/>
+  <text x="120" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C4B5FD">SPCX</text>
+  <rect x="218" y="24" width="140" height="40" rx="20" fill="#052E16"/>
+  <rect x="218" y="24" width="140" height="40" rx="20" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <text x="288" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#86EFAC">NVDA</text>
+  <rect x="376" y="24" width="150" height="40" rx="20" fill="#0F172A"/>
+  <rect x="376" y="24" width="150" height="40" rx="20" fill="none" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="451" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#93C5FD">Apollo</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#E9D5FF">SpaceX $40B GPU 파이낸싱 — Apollo·Goldman·KKR·BlackRock</text>
+  <text x="540" y="278" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="155" font-weight="900" fill="#60A5FA" filter="url(#glow)">$40B</text>
+  <text x="540" y="338" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#93C5FD">Vera Rubin GPU 인프라 파이낸싱 — 민간 단일 AI 역대 최대</text>
+  <line x1="54" y1="368" x2="1026" y2="368" stroke="#1E40AF" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="54" y="418" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#60A5FA">컨소시엄 구조</text>
+  <rect x="54" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#60A5FA" stroke-width="2.5"/>
+  <text x="212" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Apollo Global</text>
+  <text x="212" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#60A5FA">리드</text>
+  <text x="212" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">대체투자 $650B 운용</text><rect x="384" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#A78BFA" stroke-width="2.5"/>
+  <text x="542" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Goldman Sachs</text>
+  <text x="542" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#A78BFA">단독 구조</text>
+  <text x="542" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">설계 에이전트</text><rect x="714" y="460" width="316" height="185" rx="18" fill="#130C2A" stroke="#34D399" stroke-width="2.5"/>
+  <text x="872" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">KKR · BlackRock</text>
+  <text x="872" y="558" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#34D399">컨소시엄</text>
+  <text x="872" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#D1D5DB">기관투자자 참여</text>
+  <rect x="54" y="665" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1E40AF" stroke-width="2.5"/>
+  <line x1="54" y1="713" x2="1026" y2="713" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="698" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">📊 SpaceX $40B GPU 파이낸싱 구조</text>
+  <text x="108" y="737" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Vera Rubin GPU (NVDA 차세대) 확보 목적 — 2027년 상반기 인도</text><text x="108" y="771" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Apollo 리드 · Goldman Sachs 단독 구조 설계 · KKR·BlackRock 컨소시엄</text><text x="108" y="805" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Anthropic S-1 $120.5B에 이은 AI 인프라 실체 재확인</text><text x="108" y="839" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">민간 단일 AI 인프라 파이낸싱 역대 최대 규모</text>
+  <rect x="54" y="915" width="972" height="202" rx="22" fill="#0F0A00" stroke="#065F46" stroke-width="2.5"/>
+  <line x1="54" y1="963" x2="1026" y2="963" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="948" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">🚀 SPCX·NVDA 투자 포인트</text>
+  <text x="108" y="987" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">SpaceX Vera Rubin 확보 → NVDA 2027년 수요 파이프라인 추가 확인</text><text x="108" y="1021" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">번스타인 $268 · BofA $275(Buy) 목표주가 상향 근거</text><text x="108" y="1055" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">기관 최고 수준이 $40B 배팅 = AI 컴퓨팅 사업성 공식 인정</text>
+  <rect x="54" y="1135" width="316" height="160" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="212" y="1169" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">파이낸싱 규모</text>
+  <text x="212" y="1231" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">$40B</text>
+  <text x="212" y="1263" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">GPU 인프라</text>
+  <text x="212" y="1293" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">2027 H1 인도</text><rect x="394" y="1135" width="316" height="160" rx="18" fill="#0F1623" stroke="#A78BFA" stroke-width="2"/>
+  <text x="552" y="1169" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Goldman 역할</text>
+  <text x="552" y="1231" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A78BFA">단독</text>
+  <text x="552" y="1263" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">구조 설계 에이전트</text>
+  <text x="552" y="1293" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">최고 기관 참여</text><rect x="734" y="1135" width="316" height="160" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="892" y="1169" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">GPU 종류</text>
+  <text x="892" y="1231" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">Vera Rubin</text>
+  <text x="892" y="1263" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">NVDA 차세대</text>
+  <text x="892" y="1293" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Blackwell 이후</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 20261028 · INVESTUS SRP</text>
+</svg>

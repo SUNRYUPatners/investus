@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#08051A"/><stop offset="100%" stop-color="#04021A"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="120" height="40" rx="20" fill="#1A0505"/>
+  <rect x="40" y="24" width="120" height="40" rx="20" fill="none" stroke="#B91C1C" stroke-width="2"/>
+  <text x="100" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCA5A5">TSLA</text>
+  <rect x="178" y="24" width="120" height="40" rx="20" fill="#1E1B4B"/>
+  <rect x="178" y="24" width="120" height="40" rx="20" fill="none" stroke="#6D28D9" stroke-width="2"/>
+  <text x="238" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C4B5FD">SPCX</text>
+  <rect x="316" y="24" width="120" height="40" rx="20" fill="#052E16"/>
+  <rect x="316" y="24" width="120" height="40" rx="20" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <text x="376" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#86EFAC">NVDA</text>
+  <rect x="454" y="24" width="120" height="40" rx="20" fill="#1C1400"/>
+  <rect x="454" y="24" width="120" height="40" rx="20" fill="none" stroke="#B45309" stroke-width="2"/>
+  <text x="514" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCD34D">BTC</text>
+  <text x="540" y="148" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#E9D5FF">한장요약 2026-10-28</text>
+  <text x="540" y="196" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">오늘의 핵심 6가지</text>
+  <line x1="54" y1="220" x2="1026" y2="220" stroke="#A78BFA" stroke-width="2"/>
+  <text x="54" y="300" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#60A5FA">SpaceX $40B GPU · Tesla Q3 · FOMC 동결 · BTC $81K · NVDA · SPCX</text>
+  <text x="54" y="340" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">2026년 10월 28일 (수) · investus.kr SRP</text>
+  <rect x="54" y="360" width="972" height="68" rx="14" fill="rgba(255,255,255,0.03)" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="90" y="403" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#60A5FA">1</text>
+  <text x="140" y="403" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">SpaceX $40B GPU 파이낸싱 — Apollo·Goldman·KKR·BlackRock · Vera Rubin 2027H1</text><rect x="54" y="440" width="972" height="68" rx="14" fill="rgba(255,255,255,0.03)" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="90" y="483" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#EF4444">2</text>
+  <text x="140" y="483" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">Tesla Q3 EPS $0.48 어닝 비트 · 매출 $28.05B · CapEx $25B→$20B · FSD 1.7M</text><rect x="54" y="520" width="972" height="68" rx="14" fill="rgba(255,255,255,0.03)" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="90" y="563" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F59E0B">3</text>
+  <text x="140" y="563" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">FOMC 3.75-4.00% 동결 만장일치 · S&amp;P +0.70% · Nasdaq +0.83%</text><rect x="54" y="600" width="972" height="68" rx="14" fill="rgba(255,255,255,0.03)" stroke="#FBBF24" stroke-width="1.5"/>
+  <text x="90" y="643" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FBBF24">4</text>
+  <text x="140" y="643" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">BTC $81,115(+1.4%) · DOGE $0.0787(+2.0%) · 금 $3,995(-0.5%)</text><rect x="54" y="680" width="972" height="68" rx="14" fill="rgba(255,255,255,0.03)" stroke="#86EFAC" stroke-width="1.5"/>
+  <text x="90" y="723" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#86EFAC">5</text>
+  <text x="140" y="723" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">NVDA: Meta $3B 신규 투자 · Oracle NVL72 Supercluster 수주</text><rect x="54" y="760" width="972" height="68" rx="14" fill="rgba(255,255,255,0.03)" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="90" y="803" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A78BFA">6</text>
+  <text x="140" y="803" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">SPCX: 번스타인 $268 · BofA $275 Buy · $150.33(+2.33%)</text>
+  <rect x="54" y="856" width="316" height="160" rx="18" fill="#0F1623" stroke="#EF4444" stroke-width="2"/>
+  <text x="212" y="890" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">어닝</text>
+  <text x="212" y="952" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#EF4444">EPS 비트</text>
+  <text x="212" y="984" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">TSLA $0.48</text>
+  <text x="212" y="1014" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">컨센 $0.45 상회</text><rect x="394" y="856" width="316" height="160" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="552" y="890" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">AI 파이낸싱</text>
+  <text x="552" y="952" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">$40B</text>
+  <text x="552" y="984" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">SpaceX GPU</text>
+  <text x="552" y="1014" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Apollo 리드</text><rect x="734" y="856" width="316" height="160" rx="18" fill="#0F1623" stroke="#A78BFA" stroke-width="2"/>
+  <text x="892" y="890" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">SPCX</text>
+  <text x="892" y="952" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A78BFA">$150.33</text>
+  <text x="892" y="984" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">+2.33%</text>
+  <text x="892" y="1014" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">목표가 $268~275</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 20261028 · INVESTUS SRP</text>
+</svg>
