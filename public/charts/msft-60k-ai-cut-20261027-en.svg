@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#030C1A"/><stop offset="100%" stop-color="#040D1F"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#0B1D35"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#93C5FD">MSFT</text>
+  <text x="40" y="92" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#93C5FD">Microsoft — AI Restructuring Official</text>
+  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="160" font-weight="900" fill="#60A5FA" filter="url(#glow)">60K</text>
+  <text x="540" y="310" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="60" font-weight="900" fill="#FFFFFF">Buyouts</text>
+  <text x="540" y="388" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#93C5FD">27% of 220,000 headcount — AI replacement explicitly cited</text>
+  <line x1="54" y1="418" x2="1026" y2="418" stroke="#1E3A5F" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <rect x="54" y="444" width="460" height="250" rx="20" fill="#0A1628" stroke="#60A5FA" stroke-width="2"/>
+  <text x="274" y="492" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#93C5FD">Buyout Scale</text>
+  <text x="274" y="572" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="80" font-weight="900" fill="#60A5FA">27%</text>
+  <text x="274" y="634" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">of 220,000</text>
+  <text x="274" y="664" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">One of biggest AI workforce transitions</text>
+
+  <rect x="566" y="444" width="460" height="250" rx="20" fill="#0A1628" stroke="#FBBF24" stroke-width="2"/>
+  <text x="796" y="492" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#FDE68A">Est. Annual Savings</text>
+  <text x="796" y="572" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="80" font-weight="900" fill="#FBBF24">$9B</text>
+  <text x="796" y="634" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">/yr (simple est.)</text>
+  <text x="796" y="664" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">Realized from 2027</text>
+
+  <rect x="54" y="720" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <line x1="54" y1="768" x2="1026" y2="768" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="753" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">📋 Buyout Details</text>
+  <text x="108" y="792" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Target: VP-level and below in US, Canada, India, UK</text><text x="108" y="826" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Focus: data centers, sales, marketing departments</text><text x="108" y="860" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Stated reason: &quot;retool its workforce for the artificial intelligence era&quot;</text><text x="108" y="894" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Simple est: $9B/yr savings (reflected in P&amp;L from 2027)</text>
+  <rect x="54" y="970" width="972" height="202" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="1018" x2="1026" y2="1018" stroke="#FBBF24" stroke-width="2"/>
+  <text x="108" y="1003" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FBBF24">💡 Big Tech AI Restructuring Wave</text>
+  <text x="108" y="1042" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Google → Meta → Microsoft: Big Tech AI replacement wave spreads</text><text x="108" y="1076" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">MSFT first to explicitly state &quot;AI is replacing the work&quot; in an announcement</text><text x="108" y="1110" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Implication: MSFT operating margin improvement visible in numbers from 2027</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 2026-10-27 · INVESTUS SRP</text>
+</svg>

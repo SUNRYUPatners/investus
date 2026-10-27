@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0507"/><stop offset="100%" stop-color="#0A0304"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#2D0A0A"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#DC2626" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCA5A5">TSLA</text>
+  <text x="40" y="92" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FCA5A5">Tesla 초당 매출 — 15년 성장 궤적</text>
+  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="#EF4444" filter="url(#glow)">$3,284</text>
+  <text x="540" y="290" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="60" font-weight="900" fill="#D1D5DB">/초 (2026년)</text>
+  <text x="540" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#9CA3AF">2011년 $6.38 대비 514배 · 연환산 $103.6B</text>
+  <line x1="80" y1="970" x2="1000" y2="970" stroke="#374151" stroke-width="2"/>
+  
+    <rect x="110" y="966" width="160" height="4" rx="6" fill="#374151"/>
+    <text x="190" y="952" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#374151">$6.38</text>
+    <text x="190" y="1002" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#D1D5DB">2011</text>
+    <text x="190" y="1028" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">기준</text>
+    <rect x="350" y="938" width="160" height="32" rx="6" fill="#6B7280"/>
+    <text x="430" y="924" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#6B7280">$188.01</text>
+    <text x="430" y="1002" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#D1D5DB">2016</text>
+    <text x="430" y="1028" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">전기比 29.5×</text>
+    <rect x="590" y="717" width="160" height="253" rx="6" fill="#DC2626"/>
+    <text x="670" y="703" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#DC2626">$1485.61</text>
+    <text x="670" y="1002" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#D1D5DB">2021</text>
+    <text x="670" y="1028" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">전기比 7.9×</text>
+    <rect x="800" y="410" width="160" height="560" rx="6" fill="#EF4444"/>
+    <text x="880" y="396" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#EF4444">$3284.18</text>
+    <text x="880" y="1002" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#D1D5DB">2026</text>
+    <text x="880" y="1028" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">전기比 2.2×</text>
+  <rect x="54" y="1020" width="972" height="202" rx="22" fill="#0F0A00" stroke="#7F1D1D" stroke-width="2.5"/>
+  <line x1="54" y1="1068" x2="1026" y2="1068" stroke="#EF4444" stroke-width="2"/>
+  <text x="108" y="1053" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#EF4444">📈 15년 성장 요약</text>
+  <text x="108" y="1092" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">2011($6.38) → 2016($188) → 2021($1,486) → 2026($3,284) — 514배 성장</text><text x="108" y="1126" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">초당 $3,284 = 분당 $197,051 = 하루 $283.8M = 연환산 $103.6B</text><text x="108" y="1160" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">절대 증가액은 매 5년 커짐: +$5.7B → +$40.9B → +$56.8B</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 2026-10-27 TTM Q3 · INVESTUS SRP</text>
+</svg>

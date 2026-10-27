@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#021A0E"/><stop offset="100%" stop-color="#030F07"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#052E16"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#86EFAC">TSLA</text>
+  <text x="40" y="92" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#A7F3D0">Tesla FSD × Turo</text>
+  <text x="540" y="220" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="130" font-weight="900" fill="#34D399" filter="url(#glow)">FSD</text>
+  <text x="540" y="320" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="70" font-weight="900" fill="#FFFFFF">× Turo</text>
+  <text x="540" y="390" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#6EE7B7">P2P Car Rental Platform Launch — October 28</text>
+  <line x1="54" y1="420" x2="1026" y2="420" stroke="#065F46" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <rect x="54" y="446" width="460" height="246" rx="20" fill="#0A2416" stroke="#34D399" stroke-width="2"/>
+  <text x="274" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6EE7B7">Already Listed</text>
+  <text x="274" y="572" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="88" font-weight="900" fill="#34D399">수천</text>
+  <text x="274" y="634" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#A7F3D0">FSD-enabled Teslas (pre-launch)</text>
+  <text x="274" y="666" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">Real demand confirmed</text>
+
+  <rect x="566" y="446" width="460" height="246" rx="20" fill="#0A2416" stroke="#FBBF24" stroke-width="2"/>
+  <text x="796" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#FDE68A">Owner Extra Income</text>
+  <text x="796" y="560" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="50" font-weight="900" fill="#FBBF24">FSD Fee</text>
+  <text x="796" y="608" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="50" font-weight="900" fill="#FBBF24">+α</text>
+  <text x="796" y="650" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#FDE68A">Monetize parked time</text>
+  <text x="796" y="678" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">→ incentivizes FSD purchase</text>
+
+  <rect x="54" y="720" width="972" height="202" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="768" x2="1026" y2="768" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="753" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">📣 Turo CEO Andre Haddad Official Announcement</text>
+  <text x="108" y="792" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">From Oct 28: search &amp; book FSD-enabled Tesla on Turo</text><text x="108" y="826" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Thousands of FSD-activated Teslas already listed on platform</text><text x="108" y="860" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Owners: earn extra income through FSD rental premium</text>
+  <rect x="54" y="936" width="972" height="202" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="984" x2="1026" y2="984" stroke="#FBBF24" stroke-width="2"/>
+  <text x="108" y="969" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FBBF24">💡 FSD Monetization 3-Layer</text>
+  <text x="108" y="1008" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">① Personal buy/subscribe → ② Turo P2P rental → ③ Cybercab robotaxi (future)</text><text x="108" y="1042" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Turo opens P2P monetization channel alongside B2C</text><text x="108" y="1076" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">True driverless rental: Cybercab joining Turo will be the real game-changer</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 2026-10-27 · INVESTUS SRP</text>
+</svg>

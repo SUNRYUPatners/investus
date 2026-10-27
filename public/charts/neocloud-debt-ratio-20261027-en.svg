@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0D0804"/><stop offset="100%" stop-color="#080503"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#F97316"/><stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="210" height="40" rx="20" fill="#1C0A00"/>
+  <rect x="40" y="24" width="210" height="40" rx="20" fill="none" stroke="#EA580C" stroke-width="2"/>
+  <text x="145" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FED7AA">AI인프라 (NeoCloud)</text>
+  <text x="40" y="92" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FED7AA">NeoCloud 7-Firm Debt/Equity Ratio Comparison</text>
+  <text x="540" y="200" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="160" font-weight="900" fill="#C084FC" filter="url(#glow)">10.27x</text>
+  <text x="540" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#C4B5FD">CRWV (CoreWeave) D/E — highest leverage among 7 firms</text>
+  <text x="540" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">vs WYFI 0.95x · NBIS 0.97x (safe zone)</text>
+  <line x1="80" y1="930" x2="1000" y2="930" stroke="#374151" stroke-width="2"/>
+  
+    <rect x="86" y="883" width="119" height="47" rx="6" fill="#34D399"/>
+    <text x="145.5" y="871" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#34D399">0.95x</text>
+    <text x="145.5" y="960" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="21" font-weight="900" fill="#D1D5DB">WYFI</text>
+    <text x="145.5" y="984" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#34D399">Safe</text>
+    <rect x="217" y="882" width="119" height="48" rx="6" fill="#34D399"/>
+    <text x="276.5" y="870" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#34D399">0.97x</text>
+    <text x="276.5" y="960" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="21" font-weight="900" fill="#D1D5DB">NBIS</text>
+    <text x="276.5" y="984" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#34D399">Safe</text>
+    <rect x="348" y="838" width="119" height="92" rx="6" fill="#FBBF24"/>
+    <text x="407.5" y="826" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#FBBF24">1.87x</text>
+    <text x="407.5" y="960" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="21" font-weight="900" fill="#D1D5DB">IREN</text>
+    <text x="407.5" y="984" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#FBBF24">Mid</text>
+    <rect x="479" y="825" width="119" height="105" rx="6" fill="#FBBF24"/>
+    <text x="538.5" y="813" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#FBBF24">2.13x</text>
+    <text x="538.5" y="960" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="21" font-weight="900" fill="#D1D5DB">DOCN</text>
+    <text x="538.5" y="984" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#FBBF24">High</text>
+    <rect x="610" y="816" width="119" height="114" rx="6" fill="#FBBF24"/>
+    <text x="669.5" y="804" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#FBBF24">2.32x</text>
+    <text x="669.5" y="960" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="21" font-weight="900" fill="#D1D5DB">ORCL</text>
+    <text x="669.5" y="984" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#FBBF24">High</text>
+    <rect x="741" y="705" width="119" height="225" rx="6" fill="#EF4444"/>
+    <text x="800.5" y="693" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#EF4444">4.58x</text>
+    <text x="800.5" y="960" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="21" font-weight="900" fill="#D1D5DB">HUT</text>
+    <text x="800.5" y="984" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#EF4444">V.High</text>
+    <rect x="872" y="426" width="119" height="504" rx="6" fill="#C084FC"/>
+    <text x="931.5" y="414" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#C084FC">10.27x</text>
+    <text x="931.5" y="960" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="21" font-weight="900" fill="#D1D5DB">CRWV</text>
+    <text x="931.5" y="984" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#C084FC">Ultra-Lev</text>
+  <rect x="54" y="1014" width="972" height="202" rx="22" fill="#0F0A00" stroke="#7C2D12" stroke-width="2.5"/>
+  <line x1="54" y1="1062" x2="1026" y2="1062" stroke="#F97316" stroke-width="2"/>
+  <text x="108" y="1047" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F97316">💡 Leverage Strategy — Risk &amp; Reward</text>
+  <text x="108" y="1086" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">CoreWeave (CRWV) 10.27x — 10x leveraged bet on AI GPU cloud dominance</text><text x="108" y="1120" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">SpaceX AI compute monopoly speed determines NeoCloud survival (Musk: 200 to fail)</text><text x="108" y="1154" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">WYFI &amp; NBIS below 1x — safe structure, slower growth but high shock absorption</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 2026-10-27 · INVESTUS SRP</text>
+</svg>

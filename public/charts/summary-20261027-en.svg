@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#030712"/><stop offset="100%" stop-color="#040A14"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="200" height="40" rx="20" fill="#052E16"/>
+  <rect x="40" y="24" width="200" height="40" rx="20" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <text x="140" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#A7F3D0">Elon Ecosystem Daily Summary</text>
+  <text x="540" y="100" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#34D399">2026-10-27 Daily Summary</text>
+  <text x="540" y="152" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF" filter="url(#glow2)">TOP 6</text>
+  <text x="540" y="206" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#6EE7B7">Anthropic S-1 · SpaceX CAPEX · FSD Turo · MSFT · NeoCloud</text>
+  <line x1="54" y1="340" x2="1026" y2="340" stroke="#065F46" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="540" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#374151">— Today's Key Topics —</text>
+  
+    <rect x="54" y="380" width="472" height="288" rx="18" fill="#0A0F1A" stroke="#A78BFA" stroke-width="2"/>
+    <rect x="54" y="380" width="56" height="56" rx="18" fill="#A78BFA"/>
+    <text x="82" y="418" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#000000">1</text>
+    <text x="124" y="418" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#A78BFA">Anthropic S-1</text>
+    <text x="78" y="480" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF">SpaceX $120.5B ($3.1B/mo)</text>
+    <text x="78" y="522" font-family="Arial,sans-serif" font-size="24" fill="#D1D5DB">Amazon $110B · AMD $20B+</text>
+    <line x1="78" y1="540" x2="502" y2="540" stroke="#A78BFA" stroke-width="1" opacity="0.4"/>
+    <text x="78" y="578" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">$250B+ total · SEC confirmed</text>
+    <rect x="566" y="380" width="472" height="288" rx="18" fill="#0A0F1A" stroke="#60A5FA" stroke-width="2"/>
+    <rect x="566" y="380" width="56" height="56" rx="18" fill="#60A5FA"/>
+    <text x="594" y="418" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#000000">2</text>
+    <text x="636" y="418" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#60A5FA">SpaceX CAPEX Surge</text>
+    <text x="590" y="480" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF">Q4&apos;26 $40B → Q4&apos;27 $130B</text>
+    <text x="590" y="522" font-family="Arial,sans-serif" font-size="24" fill="#D1D5DB">NVDA gets $116B (89%)</text>
+    <line x1="590" y1="540" x2="1014" y2="540" stroke="#60A5FA" stroke-width="1" opacity="0.4"/>
+    <text x="590" y="578" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">MACROHARD campus under construction</text>
+    <rect x="54" y="688" width="472" height="288" rx="18" fill="#0A0F1A" stroke="#34D399" stroke-width="2"/>
+    <rect x="54" y="688" width="56" height="56" rx="18" fill="#34D399"/>
+    <text x="82" y="726" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#000000">3</text>
+    <text x="124" y="726" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#34D399">Tesla FSD × Turo</text>
+    <text x="78" y="788" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF">Oct 28 P2P rental launch</text>
+    <text x="78" y="830" font-family="Arial,sans-serif" font-size="24" fill="#D1D5DB">Thousands already listed</text>
+    <line x1="78" y1="848" x2="502" y2="848" stroke="#34D399" stroke-width="1" opacity="0.4"/>
+    <text x="78" y="886" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">Owners earn FSD rental premium</text>
+    <rect x="566" y="688" width="472" height="288" rx="18" fill="#0A0F1A" stroke="#EF4444" stroke-width="2"/>
+    <rect x="566" y="688" width="56" height="56" rx="18" fill="#EF4444"/>
+    <text x="594" y="726" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#000000">4</text>
+    <text x="636" y="726" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#EF4444">Tesla $3,284/sec</text>
+    <text x="590" y="788" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF">2011($6.38) → 2026($3,284)</text>
+    <text x="590" y="830" font-family="Arial,sans-serif" font-size="24" fill="#D1D5DB">514× in 15 yrs · $103.6B ARR</text>
+    <line x1="590" y1="848" x2="1014" y2="848" stroke="#EF4444" stroke-width="1" opacity="0.4"/>
+    <text x="590" y="886" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">Absolute dollar gains growing per 5yr</text>
+    <rect x="54" y="996" width="472" height="288" rx="18" fill="#0A0F1A" stroke="#93C5FD" stroke-width="2"/>
+    <rect x="54" y="996" width="56" height="56" rx="18" fill="#93C5FD"/>
+    <text x="82" y="1034" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#000000">5</text>
+    <text x="124" y="1034" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#93C5FD">MSFT 60K AI Buyouts</text>
+    <text x="78" y="1096" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF">27% of 220,000 headcount</text>
+    <text x="78" y="1138" font-family="Arial,sans-serif" font-size="24" fill="#D1D5DB">AI replacement explicitly cited</text>
+    <line x1="78" y1="1156" x2="502" y2="1156" stroke="#93C5FD" stroke-width="1" opacity="0.4"/>
+    <text x="78" y="1194" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">Margin improvement from 2027</text>
+    <rect x="566" y="996" width="472" height="288" rx="18" fill="#0A0F1A" stroke="#F97316" stroke-width="2"/>
+    <rect x="566" y="996" width="56" height="56" rx="18" fill="#F97316"/>
+    <text x="594" y="1034" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="28" font-weight="900" fill="#000000">6</text>
+    <text x="636" y="1034" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#F97316">NeoCloud D/E</text>
+    <text x="590" y="1096" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF">CRWV 10.27x ultra-leverage</text>
+    <text x="590" y="1138" font-family="Arial,sans-serif" font-size="24" fill="#D1D5DB">WYFI 0.95x · NBIS 0.97x safe</text>
+    <line x1="590" y1="1156" x2="1014" y2="1156" stroke="#F97316" stroke-width="1" opacity="0.4"/>
+    <text x="590" y="1194" font-family="Arial,sans-serif" font-size="21" fill="#9CA3AF">SpaceX dominance speed = key variable</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 2026-10-27 · INVESTUS SRP</text>
+</svg>

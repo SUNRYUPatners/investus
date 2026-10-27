@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#030C1A"/><stop offset="100%" stop-color="#040D1F"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="#0B1D35"/>
+  <rect x="40" y="24" width="130" height="40" rx="20" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="105" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#93C5FD">MSFT</text>
+  <text x="40" y="92" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#93C5FD">Microsoft — AI 구조조정 공식화</text>
+  <text x="540" y="210" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="160" font-weight="900" fill="#60A5FA" filter="url(#glow)">6만</text>
+  <text x="540" y="310" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="60" font-weight="900" fill="#FFFFFF">희망퇴직</text>
+  <text x="540" y="388" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#93C5FD">전체 직원 22만명의 27% — AI 업무 대체 공식화</text>
+  <line x1="54" y1="418" x2="1026" y2="418" stroke="#1E3A5F" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <rect x="54" y="444" width="460" height="250" rx="20" fill="#0A1628" stroke="#60A5FA" stroke-width="2"/>
+  <text x="274" y="492" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#93C5FD">희망퇴직 규모</text>
+  <text x="274" y="572" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="80" font-weight="900" fill="#60A5FA">27%</text>
+  <text x="274" y="634" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">of 220,000</text>
+  <text x="274" y="664" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">역사상 최대 AI 전환 조정 중 하나</text>
+
+  <rect x="566" y="444" width="460" height="250" rx="20" fill="#0A1628" stroke="#FBBF24" stroke-width="2"/>
+  <text x="796" y="492" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#FDE68A">연 인건비 절감 추산</text>
+  <text x="796" y="572" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="80" font-weight="900" fill="#FBBF24">$9B</text>
+  <text x="796" y="634" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#D1D5DB">/년 (단순추산)</text>
+  <text x="796" y="664" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6B7280">실현 2027년~</text>
+
+  <rect x="54" y="720" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <line x1="54" y1="768" x2="1026" y2="768" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="753" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">📋 구조조정 세부 사항</text>
+  <text x="108" y="792" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">대상: 미국·캐나다·인도·영국 · 부사장(VP)급 이하</text><text x="108" y="826" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">집중 부서: 데이터센터 · 판매 · 마케팅</text><text x="108" y="860" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">공식 이유: &quot;AI 시대를 위한 인력 재편(retool workforce for AI era)&quot;</text><text x="108" y="894" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">단순 추산: 연 $90B 인건비 절감 (실현은 2027년~)</text>
+  <rect x="54" y="970" width="972" height="202" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="1018" x2="1026" y2="1018" stroke="#FBBF24" stroke-width="2"/>
+  <text x="108" y="1003" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FBBF24">💡 Big Tech AI 구조조정 흐름</text>
+  <text x="108" y="1042" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Google → Meta → Microsoft 순서로 AI 대체 구조조정 공식화</text><text x="108" y="1076" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Microsoft가 최초로 &quot;AI로 대체&quot; 이유를 명시적으로 공개 발표</text><text x="108" y="1110" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">투자 시사점: MSFT 영업이익률 개선 2027년부터 숫자로 확인 가능</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 2026-10-27 · INVESTUS SRP</text>
+</svg>
