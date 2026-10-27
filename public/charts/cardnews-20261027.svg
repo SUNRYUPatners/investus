@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06021A"/>
+      <stop offset="50%" stop-color="#0A0420"/>
+      <stop offset="100%" stop-color="#04011A"/>
+    </linearGradient>
+    <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C4B5FD"/>
+      <stop offset="50%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <radialGradient id="glowBg" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#6D28D9" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#06021A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="url(#glowBg)"/>
+  <polygon points="73.0,135.2 73.0,184.8 30.0,209.6 -13.0,184.8 -13.0,135.2 30.0,110.4" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="181.5,135.2 181.5,184.8 138.5,209.6 95.5,184.8 95.5,135.2 138.5,110.4" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="290.0,135.2 290.0,184.8 247.0,209.6 204.0,184.8 204.0,135.2 247.0,110.4" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="398.5,135.2 398.5,184.8 355.5,209.6 312.5,184.8 312.5,135.2 355.5,110.4" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="507.0,135.2 507.0,184.8 464.0,209.6 421.0,184.8 421.0,135.2 464.0,110.4" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="615.5,135.2 615.5,184.8 572.5,209.6 529.5,184.8 529.5,135.2 572.5,110.4" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="724.0,135.2 724.0,184.8 681.0,209.6 638.0,184.8 638.0,135.2 681.0,110.4" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="832.5,135.2 832.5,184.8 789.5,209.6 746.5,184.8 746.5,135.2 789.5,110.4" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="941.0,135.2 941.0,184.8 898.0,209.6 855.0,184.8 855.0,135.2 898.0,110.4" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="127.2,229.1 127.2,278.7 84.3,303.5 41.3,278.7 41.3,229.1 84.2,204.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="235.7,229.1 235.7,278.7 192.8,303.5 149.8,278.7 149.8,229.1 192.8,204.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="344.2,229.1 344.2,278.7 301.3,303.5 258.3,278.7 258.3,229.1 301.3,204.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="452.7,229.1 452.7,278.7 409.8,303.5 366.8,278.7 366.8,229.1 409.8,204.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="561.2,229.1 561.2,278.7 518.3,303.5 475.3,278.7 475.3,229.1 518.3,204.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="669.7,229.1 669.7,278.7 626.8,303.5 583.8,278.7 583.8,229.1 626.8,204.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="778.2,229.1 778.2,278.7 735.3,303.5 692.3,278.7 692.3,229.1 735.3,204.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="886.7,229.1 886.7,278.7 843.8,303.5 800.8,278.7 800.8,229.1 843.8,204.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="995.2,229.1 995.2,278.7 952.3,303.5 909.3,278.7 909.3,229.1 952.3,204.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="73.0,323.1 73.0,372.7 30.0,397.5 -13.0,372.7 -13.0,323.1 30.0,298.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="181.5,323.1 181.5,372.7 138.5,397.5 95.5,372.7 95.5,323.1 138.5,298.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="290.0,323.1 290.0,372.7 247.0,397.5 204.0,372.7 204.0,323.1 247.0,298.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="398.5,323.1 398.5,372.7 355.5,397.5 312.5,372.7 312.5,323.1 355.5,298.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="507.0,323.1 507.0,372.7 464.0,397.5 421.0,372.7 421.0,323.1 464.0,298.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="615.5,323.1 615.5,372.7 572.5,397.5 529.5,372.7 529.5,323.1 572.5,298.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="724.0,323.1 724.0,372.7 681.0,397.5 638.0,372.7 638.0,323.1 681.0,298.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="832.5,323.1 832.5,372.7 789.5,397.5 746.5,372.7 746.5,323.1 789.5,298.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="941.0,323.1 941.0,372.7 898.0,397.5 855.0,372.7 855.0,323.1 898.0,298.3" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="127.2,417.0 127.2,466.6 84.3,491.4 41.3,466.6 41.3,417.0 84.2,392.2" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="235.7,417.0 235.7,466.6 192.8,491.4 149.8,466.6 149.8,417.0 192.8,392.2" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="344.2,417.0 344.2,466.6 301.3,491.4 258.3,466.6 258.3,417.0 301.3,392.2" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="452.7,417.0 452.7,466.6 409.8,491.4 366.8,466.6 366.8,417.0 409.8,392.2" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="561.2,417.0 561.2,466.6 518.3,491.4 475.3,466.6 475.3,417.0 518.3,392.2" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="669.7,417.0 669.7,466.6 626.8,491.4 583.8,466.6 583.8,417.0 626.8,392.2" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="778.2,417.0 778.2,466.6 735.3,491.4 692.3,466.6 692.3,417.0 735.3,392.2" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="886.7,417.0 886.7,466.6 843.8,491.4 800.8,466.6 800.8,417.0 843.8,392.2" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="995.2,417.0 995.2,466.6 952.3,491.4 909.3,466.6 909.3,417.0 952.3,392.2" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="73.0,510.9 73.0,560.5 30.0,585.3 -13.0,560.5 -13.0,510.9 30.0,486.1" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="181.5,510.9 181.5,560.5 138.5,585.3 95.5,560.5 95.5,510.9 138.5,486.1" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="290.0,510.9 290.0,560.5 247.0,585.3 204.0,560.5 204.0,510.9 247.0,486.1" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="398.5,510.9 398.5,560.5 355.5,585.3 312.5,560.5 312.5,510.9 355.5,486.1" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="507.0,510.9 507.0,560.5 464.0,585.3 421.0,560.5 421.0,510.9 464.0,486.1" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="615.5,510.9 615.5,560.5 572.5,585.3 529.5,560.5 529.5,510.9 572.5,486.1" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="724.0,510.9 724.0,560.5 681.0,585.3 638.0,560.5 638.0,510.9 681.0,486.1" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="832.5,510.9 832.5,560.5 789.5,585.3 746.5,560.5 746.5,510.9 789.5,486.1" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="941.0,510.9 941.0,560.5 898.0,585.3 855.0,560.5 855.0,510.9 898.0,486.1" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="127.2,604.9 127.2,654.4 84.3,679.3 41.3,654.4 41.3,604.9 84.2,580.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="235.7,604.9 235.7,654.4 192.8,679.3 149.8,654.4 149.8,604.9 192.8,580.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="344.2,604.9 344.2,654.4 301.3,679.3 258.3,654.4 258.3,604.9 301.3,580.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="452.7,604.9 452.7,654.4 409.8,679.3 366.8,654.4 366.8,604.9 409.8,580.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="561.2,604.9 561.2,654.4 518.3,679.3 475.3,654.4 475.3,604.9 518.3,580.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="669.7,604.9 669.7,654.4 626.8,679.3 583.8,654.4 583.8,604.9 626.8,580.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="778.2,604.9 778.2,654.4 735.3,679.3 692.3,654.4 692.3,604.9 735.3,580.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="886.7,604.9 886.7,654.4 843.8,679.3 800.8,654.4 800.8,604.9 843.8,580.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="995.2,604.9 995.2,654.4 952.3,679.3 909.3,654.4 909.3,604.9 952.3,580.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="73.0,698.8 73.0,748.4 30.0,773.2 -13.0,748.4 -13.0,698.8 30.0,674.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="181.5,698.8 181.5,748.4 138.5,773.2 95.5,748.4 95.5,698.8 138.5,674.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="290.0,698.8 290.0,748.4 247.0,773.2 204.0,748.4 204.0,698.8 247.0,674.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="398.5,698.8 398.5,748.4 355.5,773.2 312.5,748.4 312.5,698.8 355.5,674.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="507.0,698.8 507.0,748.4 464.0,773.2 421.0,748.4 421.0,698.8 464.0,674.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="615.5,698.8 615.5,748.4 572.5,773.2 529.5,748.4 529.5,698.8 572.5,674.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="724.0,698.8 724.0,748.4 681.0,773.2 638.0,748.4 638.0,698.8 681.0,674.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="832.5,698.8 832.5,748.4 789.5,773.2 746.5,748.4 746.5,698.8 789.5,674.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="941.0,698.8 941.0,748.4 898.0,773.2 855.0,748.4 855.0,698.8 898.0,674.0" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="127.2,792.7 127.2,842.3 84.3,867.1 41.3,842.3 41.3,792.7 84.2,767.9" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="235.7,792.7 235.7,842.3 192.8,867.1 149.8,842.3 149.8,792.7 192.8,767.9" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="344.2,792.7 344.2,842.3 301.3,867.1 258.3,842.3 258.3,792.7 301.3,767.9" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="452.7,792.7 452.7,842.3 409.8,867.1 366.8,842.3 366.8,792.7 409.8,767.9" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="561.2,792.7 561.2,842.3 518.3,867.1 475.3,842.3 475.3,792.7 518.3,767.9" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="669.7,792.7 669.7,842.3 626.8,867.1 583.8,842.3 583.8,792.7 626.8,767.9" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="778.2,792.7 778.2,842.3 735.3,867.1 692.3,842.3 692.3,792.7 735.3,767.9" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="886.7,792.7 886.7,842.3 843.8,867.1 800.8,842.3 800.8,792.7 843.8,767.9" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/><polygon points="995.2,792.7 995.2,842.3 952.3,867.1 909.3,842.3 909.3,792.7 952.3,767.9" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1"/>
+  <rect x="0" y="0" width="1080" height="8" fill="url(#heroG)"/>
+
+  <!-- Rocket silhouette (bg) -->
+  <g transform="translate(870,390) scale(1.5)" opacity="0.13">
+    <ellipse cx="0" cy="0" rx="38" ry="110" fill="#A78BFA"/>
+    <polygon points="0,-148 -38,0 38,0" fill="#C4B5FD"/>
+    <polygon points="-38,62 -82,132 -38,110" fill="#7C3AED"/>
+    <polygon points="38,62 82,132 38,110" fill="#7C3AED"/>
+    <ellipse cx="0" cy="148" rx="22" ry="42" fill="#F97316" opacity="0.7"/>
+    <ellipse cx="0" cy="172" rx="12" ry="24" fill="#FBBF24" opacity="0.5"/>
+  </g>
+
+  <!-- Badge row -->
+  <rect x="54" y="32" width="152" height="44" rx="22" fill="#1E1B4B"/>
+  <rect x="54" y="32" width="152" height="44" rx="22" fill="none" stroke="#6D28D9" stroke-width="2"/>
+  <text x="130" y="61" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#C4B5FD">SPCX</text>
+  <rect x="222" y="32" width="152" height="44" rx="22" fill="#052E16"/>
+  <rect x="222" y="32" width="152" height="44" rx="22" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <text x="298" y="61" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#86EFAC">NVDA</text>
+  <rect x="390" y="32" width="152" height="44" rx="22" fill="#1C1917"/>
+  <rect x="390" y="32" width="152" height="44" rx="22" fill="none" stroke="#D97706" stroke-width="2"/>
+  <text x="466" y="61" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="19" font-weight="900" fill="#FCD34D">AMZN</text>
+
+  <!-- Pre-title -->
+  <text x="54" y="136" font-family="Arial,sans-serif" font-size="27" fill="#9CA3AF">Anthropic S-1 SEC 공식 확인 · 2026.10.27</text>
+
+  <!-- HERO -->
+  <text x="54" y="330" font-family="Arial Black,Arial,sans-serif" font-size="190" font-weight="900" fill="url(#heroG)" filter="url(#glow)">$120.5B</text>
+  <text x="54" y="392" font-family="Arial Black,Arial,sans-serif" font-size="46" font-weight="900" fill="#E9D5FF">SpaceX AI 컴퓨팅 5년 계약</text>
+
+  <line x1="54" y1="434" x2="1026" y2="434" stroke="#4C1D95" stroke-width="2" stroke-dasharray="8,5"/>
+
+  <!-- 3 contract blocks -->
+  <rect x="54" y="458" width="300" height="196" rx="20" fill="#0D0620" stroke="#A78BFA" stroke-width="2.5"/>
+  <text x="204" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">SpaceXAI</text>
+  <text x="204" y="570" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A78BFA" filter="url(#glow2)">$120.5B</text>
+  <text x="204" y="610" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#C4B5FD">月 $3.1B · NVDA GPU</text>
+  <text x="204" y="640" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">2029년까지</text>
+
+  <rect x="390" y="458" width="300" height="196" rx="20" fill="#0D0620" stroke="#60A5FA" stroke-width="2.5"/>
+  <text x="540" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Amazon AWS</text>
+  <text x="540" y="570" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA" filter="url(#glow2)">$110B</text>
+  <text x="540" y="610" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#93C5FD">10년 비해약</text>
+  <text x="540" y="640" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">2026–2036</text>
+
+  <rect x="726" y="458" width="300" height="196" rx="20" fill="#0D0620" stroke="#34D399" stroke-width="2.5"/>
+  <text x="876" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">AMD Helios</text>
+  <text x="876" y="570" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399" filter="url(#glow2)">$20B+</text>
+  <text x="876" y="610" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#6EE7B7">2027년부터</text>
+  <text x="876" y="640" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">공급 다변화</text>
+
+  <!-- Total -->
+  <text x="54" y="714" font-family="Arial Black,Arial,sans-serif" font-size="34" font-weight="900" fill="#A78BFA">합산 $250B+ — AI 인프라 역대 최대 계약 규모</text>
+
+  <!-- Box 1: Financials -->
+  <rect x="54" y="742" width="972" height="218" rx="22" fill="#08030F" stroke="#5B21B6" stroke-width="2"/>
+  <line x1="54" y1="790" x2="1026" y2="790" stroke="#7C3AED" stroke-width="1.8"/>
+  <text x="108" y="776" font-family="Arial Black,Arial,sans-serif" font-size="25" font-weight="900" fill="#A78BFA">📊  Anthropic 재무 현황 (S-1)</text>
+  <text x="108" y="826" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">H1 2026 매출 $16.3B — 2025년 연간($4.6B)의 3.5배</text>
+  <text x="108" y="860" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">연환산 ARR $37.2B · 영업손실 $693M (-4.3%)</text>
+  <text x="108" y="894" font-family="Arial,sans-serif" font-size="22" fill="#FDE68A">순손실 $80.7B 중 $72.4B = 전환사채 공정가치 변동 (비현금)</text>
+  <text x="108" y="936" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">전환사채 제외 시 실질 손실 $693M — 사실상 손익분기점 도달</text>
+
+  <!-- Box 2: SPCX -->
+  <rect x="54" y="980" width="972" height="216" rx="22" fill="#030A00" stroke="#16A34A" stroke-width="2"/>
+  <line x1="54" y1="1026" x2="1026" y2="1026" stroke="#22C55E" stroke-width="1.8"/>
+  <text x="108" y="1014" font-family="Arial Black,Arial,sans-serif" font-size="25" font-weight="900" fill="#4ADE80">🚀  SPCX 투자자가 봐야 할 것</text>
+  <text x="108" y="1062" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">SpaceX = AI 인프라 핵심 공급자, SEC 문서로 공식 최초 확인</text>
+  <text x="108" y="1096" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">로켓 외 AI 수익원 확보 → 기업가치 $1T 재평가 근거 추가</text>
+  <text x="108" y="1130" font-family="Arial,sans-serif" font-size="22" fill="#BBF7D0">AI 수요 → NVDA GPU → SpaceX 매출 연결고리 직접 확인</text>
+  <text x="108" y="1174" font-family="Arial,sans-serif" font-size="19" fill="#6B7280">SPCX 상장 후 첫 공식 AI 수익 공시 — 밸류에이션 재산정 시작</text>
+
+  <!-- Mini stats row -->
+  <rect x="54" y="1218" width="302" height="64" rx="14" fill="#0D0620" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="205" y="1242" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#9CA3AF">Anthropic ARR</text>
+  <text x="205" y="1270" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#A78BFA">$37.2B</text>
+
+  <rect x="390" y="1218" width="302" height="64" rx="14" fill="#0D0620" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="541" y="1242" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#9CA3AF">H1 2026 매출</text>
+  <text x="541" y="1270" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#60A5FA">$16.3B</text>
+
+  <rect x="726" y="1218" width="302" height="64" rx="14" fill="#0D0620" stroke="#34D399" stroke-width="1.5"/>
+  <text x="877" y="1242" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#9CA3AF">3대 계약 합산</text>
+  <text x="877" y="1270" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#34D399">$250B+</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1300" width="1080" height="42" fill="#06021A"/>
+  <text x="54" y="1328" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#A78BFA">investus.kr</text>
+  <text x="270" y="1328" font-family="Arial,sans-serif" font-size="18" fill="#4B5563">투자 참고용 · 투자 권유 아닙니다 · 2026-10-27</text>
+  <rect x="0" y="1342" width="1080" height="8" fill="url(#heroG)"/>
+</svg>
