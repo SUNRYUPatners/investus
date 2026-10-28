@@ -591,10 +591,10 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
   const localeCode = useLocaleCode();
   const [showOlder, setShowOlder] = useState(false);
 
-  const uiLang: "ko" | "en" = lang ?? "en";
+  const uiLang: "ko" | "en" = lang ?? localeCode;
   const [feedLang, setFeedLang] = useState<"ko" | "en">(uiLang);
-  const cioIntro = getReportCioIntro(market, uiLang);
-  const reportSubtitle = getReportSubtitle(market, uiLang);
+  const cioIntro = getReportCioIntro(market, feedLang);
+  const reportSubtitle = getReportSubtitle(market, feedLang);
 
   const seed = market === "us" ? SEED_REPORTS : getReportsForMarket(market);
   const recent = seed.filter(isWithinWeek);
@@ -656,7 +656,7 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
                     ? { color: "var(--text)", fontWeight: 700 }
                     : { color: "var(--muted)" }}
                 >
-                  {l === "ko" ? "한글" : "EN"}
+                  {l === "ko" ? "한글" : feedLang === "ko" ? "영어" : "EN"}
                 </button>
               </>
             ))}
