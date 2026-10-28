@@ -38,10 +38,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     likes: 23, comments: 2, created_at: "2026-10-28T01:18:00.000Z", liked: false,
   },
   {
-        id: -1688, alias: "강남 뜸부기 #88", symbol: null,
-    content: "FOMC 동결 후 S&P +0.70%, Nasdaq +0.83%. 인상 확률 11%로 시장이 예상한 결과인데 반응은 안도 랠리였습니다. 금리 동결 사이클 유지 중에는 TSLA·NVDA·SPCX처럼 성장주 밸류에이션에 유리한 환경이 계속됩니다.",
-    contentEn: "FOMC hold → S&P +0.70%, Nasdaq +0.83%. Market was pricing 11% hike odds, so the reaction was pure relief. Rate-hold environment means growth multiples stay supported — good for TSLA, NVDA, SPCX.",
-    likes: 21, comments: 2, created_at: "2026-10-28T01:27:00.000Z", liked: false,
+        id: -1692, alias: "강동 뿔논병아리 #19", symbol: "TSLA",
+    content: "텍사스 TxDMV 데이터가 나왔습니다. Cybercab 544대, Model Y 507대, 합계 1,051대. Cybercab이 처음으로 Model Y를 추월했고 하루 13대 페이스면 와이모까지 12일입니다. 생산 라인이 배포를 앞지른다는 Lars 발언이 핵심이에요.",
+    contentEn: "TxDMV data: Cybercab 544, Model Y 507, total 1,051. Cybercab now leads for the first time. At 13 units/day, Waymo crossover in ~12 days. Lars: the production line runs so fast it outpaces deployment.",
+    likes: 24, comments: 2, created_at: "2026-10-28T01:27:00.000Z", liked: false,
   },
   {
         id: -1689, alias: "광화문 논병아리 #14", symbol: "NVDA",
@@ -50,15 +50,9 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     likes: 20, comments: 2, created_at: "2026-10-28T01:36:00.000Z", liked: false,
   },
   {
-        id: -1690, alias: "노원 알락할미새 #71", symbol: "BTC",
-    content: "BTC $81,115, DOGE $0.0787, 금 $3,995. FOMC 동결 이후 BTC·DOGE 소폭 올랐고 금은 소폭 빠졌습니다. $80,000선이 지지되는 동안은 BTC 상승 추세가 살아있다고 봅니다. 현물 ETF 자금 유입이 계속되는 한 방향은 위입니다.",
-    contentEn: "BTC $81,115, DOGE $0.0787, Gold $3,995 post-FOMC. Crypto up, gold slightly down — mild risk-on shift. $80K holding is the key floor to watch. Spot ETF inflows continuing = structural bid underneath.",
-    likes: 18, comments: 2, created_at: "2026-10-28T01:45:00.000Z", liked: false,
-  },
-  {
         id: -1691, alias: "용산 뻐꾸기 #27", symbol: "TSLA",
-    content: "오늘 요약 — SpaceX $40B GPU Apollo·Goldman 파이낸싱, Tesla Q3 EPS $0.48 어닝 비트, FOMC 3.75-4% 동결, BTC $81K DOGE $0.079, NVDA Meta $3B+Oracle NVL72, SPCX 번스타인$268·BofA$275 상향. TSLA+SPCX+NVDA 투자자한테 데이터가 또 쌓인 날.",
-    contentEn: "Today's digest: SpaceX $40B Apollo/Goldman GPU financing, Tesla Q3 EPS $0.48 beat, FOMC hold 3.75-4%, BTC $81K, NVDA Meta $3B + Oracle NVL72, SPCX Bernstein $268 / BofA $275. Another data-rich day for TSLA+SPCX+NVDA investors.",
+    content: "오늘 요약 — Tesla 로보택시 텍사스 1,051대(Cybercab 544 Model Y 추월), SpaceX $40B GPU Apollo·Goldman 파이낸싱, NVDA Meta $3B+Oracle NVL72, SPCX Deutsche Bank $250 목표가 상향. TSLA+SPCX+NVDA 투자자한테 데이터가 연속으로 쌓인 날.",
+    contentEn: "Today's digest: Tesla Robotaxi TX 1,051 units (Cybercab passes Model Y), SpaceX $40B Apollo/Goldman GPU financing, NVDA Meta $3B + Oracle NVL72, SPCX Deutsche Bank $250 PT. Data-rich day for TSLA+SPCX+NVDA.",
     likes: 16, comments: 2, created_at: "2026-10-28T01:54:00.000Z", liked: false,
   },
   // ── 2026-10-27 (화) 추가 ──────────────────────
@@ -10630,17 +10624,13 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
     { alias: "마포 두루미 #55", content: "83% 업사이드면 1년 안에 달성 못해도 2~3년 시계에서는 충분히 현실적인 목표가임. BofA가 Buy 유지한 게 핵심", created_at: "2026-10-28T02:00:00.000Z" },
     { alias: "노원 알락할미새 #71", content: "지금 $150에서 $275면 연 단순 수익률로 봐도 대단한 수치. 물론 시나리오대로 가야 하지만 근거가 이번 주에 두 개나 나온 거잖아", created_at: "2026-10-28T02:12:00.000Z" },
   ],
-  [-1688]: [
-    { alias: "용산 뻐꾸기 #27", content: "금리 동결이 유지되면 채권 수익률 압력이 없어서 주식에 자금이 머무름. FOMC가 버텨주는 동안은 기술주 환경이 나쁘지 않아", created_at: "2026-10-28T02:00:00.000Z" },
-    { alias: "마포 두루미 #55", content: "2027년 초 인하 기대가 현실화되면 추가 랠리 촉매가 될 수 있음. 지금은 동결이 기술주 지지 역할을 하는 중", created_at: "2026-10-28T02:08:00.000Z" },
+  [-1692]: [
+    { alias: "종로 두견새 #39", content: "Cybercab이 Model Y를 추월한 게 중요한 포인트임. 전용 로보택시가 메인이 됐다는 신호고 배포 속도가 빨라지면 수익화 타임라인도 앞당겨질 수 있어", created_at: "2026-10-28T02:00:00.000Z" },
+    { alias: "여의도 도요새 #62", content: "12일이면 11월 초잖아. 와이모 역전이 실제로 일어나면 로보택시 경쟁에서 분위기가 완전히 달라짐. 지금 주가가 이걸 얼마나 선반영했는지가 관건", created_at: "2026-10-28T02:10:00.000Z" },
   ],
   [-1689]: [
     { alias: "종로 두견새 #39", content: "Oracle NVL72 수주가 어느 정도 규모인지가 궁금한데 NVDA 입장에선 대형 계약 하나 더 확인된 거. SpaceX 단독 의존 줄어들수록 NVDA 리스크가 분산됨", created_at: "2026-10-28T02:00:00.000Z" },
     { alias: "여의도 도요새 #62", content: "Meta $3B가 전략적 투자인지 단순 지분 매입인지에 따라 의미가 달라. 전략적이면 NVDA-Meta 협력 관계가 공식화되는 거임", created_at: "2026-10-28T02:12:00.000Z" },
-  ],
-  [-1690]: [
-    { alias: "강남 뜸부기 #88", content: "$4,000 넘기 전에 금이 한번 숨 고르는 건 자연스러움. FOMC 이후 위험선호로 소폭 자금 이동인데 방향이 바뀐 건 아님", created_at: "2026-10-28T02:00:00.000Z" },
-    { alias: "광화문 논병아리 #14", content: "BTC $81K 유지가 핵심. $80K 깨지지 않는 한 상승 추세 살아있다고 봐야 함. 현물 ETF 자금이 받쳐주는 구조", created_at: "2026-10-28T02:10:00.000Z" },
   ],
   [-1691]: [
     { alias: "노원 알락할미새 #71", content: "오늘만 봐도 TSLA·SPCX·NVDA 다 긍정적인 뉴스들. 개별 이슈가 아니고 AI 인프라 사이클 전체가 강화되는 흐름임", created_at: "2026-10-28T02:00:00.000Z" },

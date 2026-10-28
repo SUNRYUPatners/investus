@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#12020A"/><stop offset="100%" stop-color="#1A0305"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="120" height="40" rx="20" fill="#1A0505"/>
+  <rect x="40" y="24" width="120" height="40" rx="20" fill="none" stroke="#B91C1C" stroke-width="2"/>
+  <text x="100" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCA5A5">TSLA</text>
+  <rect x="178" y="24" width="150" height="40" rx="20" fill="#12020A"/>
+  <rect x="178" y="24" width="150" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+  <text x="253" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FCA5A5">텍사스</text>
+  <rect x="346" y="24" width="160" height="40" rx="20" fill="#0A1505"/>
+  <rect x="346" y="24" width="160" height="40" rx="20" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <text x="426" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#86EFAC">TxDMV Roster</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#FCA5A5">Tesla 로보택시 텍사스 — Cybercab이 Model Y를 추월하다</text>
+
+  <text x="540" y="260" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="140" font-weight="900" fill="#EF4444" filter="url(#glow)">1,051</text>
+  <text x="540" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#FCA5A5">총 등록 대수 (2026-10-28 기준)</text>
+
+  <rect x="54" y="340" width="472" height="130" rx="18" fill="rgba(239,68,68,0.1)" stroke="#EF4444" stroke-width="2"/>
+  <text x="290" y="382" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#EF4444">Cybercab</text>
+  <text x="290" y="438" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="64" font-weight="900" fill="#EF4444">544</text>
+  <text x="290" y="462" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#FCA5A5">52% · 처음 Model Y 추월</text>
+
+  <rect x="554" y="340" width="472" height="130" rx="18" fill="rgba(249,115,22,0.1)" stroke="#F97316" stroke-width="2"/>
+  <text x="790" y="382" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F97316">Model Y</text>
+  <text x="790" y="438" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="64" font-weight="900" fill="#F97316">507</text>
+  <text x="790" y="462" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#FDBA74">48% · TxDMV 등록</text>
+
+  <rect x="54" y="488" width="972" height="80" rx="16" fill="rgba(52,211,153,0.08)" stroke="#34D399" stroke-width="2"/>
+  <text x="540" y="522" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#34D399">Tesla +737 vs 와이모 +471 (9월 1일 이후)</text>
+  <text x="540" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#6EE7B7">와이모 텍사스 현재 1,207대 — 역전까지 156대 차이</text>
+
+  <rect x="54" y="658" width="972" height="236" rx="22" fill="#0F0A00" stroke="#7F1D1D" stroke-width="2.5"/>
+  <line x1="54" y1="706" x2="1026" y2="706" stroke="#EF4444" stroke-width="2"/>
+  <text x="108" y="691" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#EF4444">📡 Waymo vs Tesla Austin</text>
+  <text x="108" y="730" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Tesla: 438K마일/주 (2026년 10월 18일 기준)</text><text x="108" y="764" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Waymo: 406K마일/주 (Q2 2026 — 분기 데이터)</text><text x="108" y="798" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Tesla가 Austin 주간 마일리지에서 Waymo 추월</text><text x="108" y="832" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ Waymo 데이터는 수개월 뒤처짐, 실제 격차 더 클 수 있음</text>
+  <rect x="54" y="908" width="972" height="202" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="956" x2="1026" y2="956" stroke="#F59E0B" stroke-width="2"/>
+  <text x="108" y="941" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F59E0B">🏭 기가텍사스 생산 라인</text>
+  <text x="108" y="980" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Lars (라인 책임자): &quot;라인이 너무 빠르게 돌아서 매일 가동하지 않습니다&quot;</text><text x="108" y="1014" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">&quot;생산 라인이 실제 배포 속도를 앞지르고 있습니다&quot;</text><text x="108" y="1048" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ 공급(생산)이 아닌 배포·규제가 속도 조절 요인</text>
+  <rect x="54" y="1128" width="316" height="160" rx="18" fill="#0F1623" stroke="#EF4444" stroke-width="2"/>
+  <text x="212" y="1162" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Cybercab</text>
+  <text x="212" y="1224" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#EF4444">544</text>
+  <text x="212" y="1256" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">대 (52%)</text>
+  <text x="212" y="1286" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">처음 Model Y 추월</text><rect x="394" y="1128" width="316" height="160" rx="18" fill="#0F1623" stroke="#F97316" stroke-width="2"/>
+  <text x="552" y="1162" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Model Y</text>
+  <text x="552" y="1224" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F97316">507</text>
+  <text x="552" y="1256" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">대 (48%)</text>
+  <text x="552" y="1286" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">TxDMV 등록</text><rect x="734" y="1128" width="316" height="160" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="892" y="1162" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">와이모까지</text>
+  <text x="892" y="1224" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">~12일</text>
+  <text x="892" y="1256" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">13대/일 페이스</text>
+  <text x="892" y="1286" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">역전 예상 ~11월 8일</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 20261028 · INVESTUS SRP</text>
+</svg>
