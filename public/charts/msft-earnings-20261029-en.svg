@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0A0F1E"/><stop offset="100%" stop-color="#050A14"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="58" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">investus.kr</text>
+  <text x="1040" y="58" text-anchor="end" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Oct 29, 2026</text>
+  <rect x="40" y="78" width="180" height="40" rx="20" fill="rgba(96,165,250,0.15)"/>
+  <rect x="40" y="78" width="180" height="40" rx="20" fill="none" stroke="#60A5FA" stroke-width="2"/>
+  <text x="130" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#60A5FA">💰 Earnings</text>
+  <rect x="234" y="78" width="100" height="40" rx="20" fill="rgba(96,165,250,0.2)"/>
+  <rect x="234" y="78" width="100" height="40" rx="20" fill="none" stroke="#60A5FA" stroke-width="2"/>
+  <text x="284" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9FAFB">MSFT</text>
+  <text x="540" y="190" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#60A5FA" filter="url(#glow)">MSFT Q3 2026</text>
+  <text x="540" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#9CA3AF">Earnings Beat · Azure Acceleration</text>
+  <rect x="54" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="204" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">EPS (Adj)</text>
+  <text x="204" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">$4.89</text>
+  <text x="204" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Beat +4%</text>
+  <text x="204" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">vs est $4.72</text>
+<rect x="390" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="540" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Revenue</text>
+  <text x="540" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">$92.2B</text>
+  <text x="540" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Beat +2%</text>
+  <text x="540" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">vs est $90.7B</text>
+<rect x="726" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="876" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Stock Reaction</text>
+  <text x="876" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">+6.11%</text>
+  <text x="876" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Post-Earnings</text>
+  <text x="876" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Day return</text>
+  <rect x="54" y="494" width="460" height="190" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="284" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">EPS Growth</text>
+  <text x="284" y="590" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">+18%</text>
+  <text x="284" y="622" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">YoY</text>
+  <text x="284" y="652" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">QoQ +3%</text>
+<rect x="566" y="494" width="460" height="190" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="796" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Revenue Growth</text>
+  <text x="796" y="590" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">+19%</text>
+  <text x="796" y="622" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">YoY</text>
+  <text x="796" y="652" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">QoQ +3%</text>
+  <rect x="54" y="716" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <line x1="54" y1="764" x2="1026" y2="764" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="749" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">💡 Key Drivers</text>
+  <text x="108" y="788" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Azure AI demand — enterprise adoption accelerating, ahead of forecast</text><text x="108" y="822" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Copilot monetization — Office 365 enterprise ARPU rising</text><text x="108" y="856" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">EPS +18% YoY — AI demand converting to earnings consistently</text><text x="108" y="890" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ Cleanest print of big-tech earnings season</text>
+  <rect x="54" y="966" width="972" height="202" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="1014" x2="1026" y2="1014" stroke="#FBBF24" stroke-width="2"/>
+  <text x="108" y="999" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FBBF24">⚠️ Pre-Earnings Options Detected</text>
+  <text x="108" y="1038" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Oct 30 expiry MSFT 540 calls: $572K sweep</text><text x="108" y="1072" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Nov 6 expiry MSFT 540 calls: $3.7M sweep — paid off post-earnings</text><text x="108" y="1106" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Post-earnings: Nov 6 640 calls $2.7M new position</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · MSFT Q3 2026 · INVESTUS SRP</text>
+</svg>

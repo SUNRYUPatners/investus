@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#140808"/><stop offset="100%" stop-color="#0A0404"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="58" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">investus.kr</text>
+  <text x="1040" y="58" text-anchor="end" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Oct 29, 2026</text>
+  <rect x="40" y="78" width="220" height="40" rx="20" fill="rgba(248,113,113,0.15)"/>
+  <rect x="40" y="78" width="220" height="40" rx="20" fill="none" stroke="#F87171" stroke-width="2"/>
+  <text x="150" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F87171">🔍 Stock Analysis</text>
+  <rect x="274" y="78" width="100" height="40" rx="20" fill="rgba(239,68,68,0.2)"/>
+  <rect x="274" y="78" width="100" height="40" rx="20" fill="none" stroke="#EF4444" stroke-width="2"/>
+  <text x="324" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9FAFB">TSLA</text>
+  <text x="540" y="185" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="46" font-weight="900" fill="#F87171" filter="url(#glow)">Optimus Robot University</text>
+  <text x="540" y="235" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Palo Alto · 24lb Suit · 40 Cameras · 24/7</text>
+  <rect x="54" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#F87171" stroke-width="2"/>
+  <text x="204" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Camera Count</text>
+  <text x="204" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F87171">40</text>
+  <text x="204" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">cameras</text>
+  <text x="204" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">vs Tesla car: 9</text>
+<rect x="390" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#F87171" stroke-width="2"/>
+  <text x="540" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Suit Weight</text>
+  <text x="540" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F87171">24lb</text>
+  <text x="540" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">~11kg</text>
+  <text x="540" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">3D sensors built-in</text>
+<rect x="726" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#C084FC" stroke-width="2"/>
+  <text x="876" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Operations</text>
+  <text x="876" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#C084FC">24/7</text>
+  <text x="876" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">3 shifts</text>
+  <text x="876" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">365 days/year</text>
+  <rect x="54" y="494" width="972" height="304" rx="22" fill="#0F0A00" stroke="#7F1D1D" stroke-width="2.5"/>
+  <line x1="54" y1="542" x2="1026" y2="542" stroke="#F87171" stroke-width="2"/>
+  <text x="108" y="527" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F87171">🤖 How The Facility Works</text>
+  <text x="108" y="566" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Workers: 24lb suit, 40 cameras + 3D sensor grid</text><text x="108" y="600" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Mirror robot motions → ultra-dense data capture</text><text x="108" y="634" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">3 shifts, 24/7 — non-stop data pipeline</text><text x="108" y="668" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Multiple teams, each working independently (siloed)</text><text x="108" y="702" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Home team: sandwich making, daily activities</text><text x="108" y="736" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Factory team: HVAC install, industrial tasks</text>
+  <rect x="54" y="812" width="972" height="236" rx="22" fill="#0F0A00" stroke="#4C1D95" stroke-width="2.5"/>
+  <line x1="54" y1="860" x2="1026" y2="860" stroke="#C084FC" stroke-width="2"/>
+  <text x="108" y="845" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#C084FC">📡 Data Flywheel vs Tesla Vehicles</text>
+  <text x="108" y="884" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Tesla vehicle cameras: 9  →  Optimus suit: 40 (4.4x)</text><text x="108" y="918" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">24/7 collection without fleet deployment — data explosion</text><text x="108" y="952" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Same structure as FSD flywheel — data → model → more data</text><text x="108" y="986" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ Elon: &quot;not playing around&quot; (via Robert Scoble)</text>
+  <rect x="54" y="1062" width="972" height="202" rx="22" fill="#0F0A00" stroke="#7F1D1D" stroke-width="2.5"/>
+  <line x1="54" y1="1110" x2="1026" y2="1110" stroke="#F87171" stroke-width="2"/>
+  <text x="108" y="1095" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F87171">💡 Why It Matters</text>
+  <text x="108" y="1134" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Training data scale determines Optimus commercialization timeline</text><text x="108" y="1168" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Same playbook as Robotaxi: data first → product follows</text><text x="108" y="1202" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ ARK: Optimus data flywheel dominates vs competition</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · TSLA Optimus · INVESTUS SRP</text>
+</svg>

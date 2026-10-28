@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#020E0A"/><stop offset="100%" stop-color="#010806"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="58" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">investus.kr</text>
+  <text x="1040" y="58" text-anchor="end" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Oct 29, 2026</text>
+  <rect x="40" y="78" width="160" height="40" rx="20" fill="rgba(52,211,153,0.15)"/>
+  <rect x="40" y="78" width="160" height="40" rx="20" fill="none" stroke="#34D399" stroke-width="2"/>
+  <text x="120" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#34D399">🌐 Macro</text>
+  <rect x="214" y="78" width="100" height="40" rx="20" fill="rgba(5,150,105,0.2)"/>
+  <rect x="214" y="78" width="100" height="40" rx="20" fill="none" stroke="#059669" stroke-width="2"/>
+  <text x="264" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9FAFB">FOMC</text>
+  <text x="540" y="185" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#34D399" filter="url(#glow)">Fed FOMC Restructure</text>
+  <text x="540" y="235" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Chair Warsh · -1 Voter · Meetings 8→6</text>
+  <rect x="54" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="204" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Voting Members</text>
+  <text x="204" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">-1명</text>
+  <text x="204" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">From Fall 2027</text>
+  <text x="204" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">More concentrated</text>
+<rect x="390" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="540" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Annual Meetings</text>
+  <text x="540" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">8→6</text>
+  <text x="540" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">From 2028</text>
+  <text x="540" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">2 become strategy sessions</text>
+<rect x="726" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#FBBF24" stroke-width="2"/>
+  <text x="876" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Current Stance</text>
+  <text x="876" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#FBBF24">관망</text>
+  <text x="876" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Wait and See</text>
+  <text x="876" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Inflation still elevated</text>
+  <rect x="54" y="494" width="972" height="236" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="542" x2="1026" y2="542" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="527" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">📋 Chair Warsh Key Statements</text>
+  <text x="108" y="566" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">&quot;Monetary medicine is starting to work&quot; — overwhelming consensus</text><text x="108" y="600" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">&quot;Unwilling and unable to call financial conditions tight&quot;</text><text x="108" y="634" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">&quot;US inflation remains elevated&quot;</text><text x="108" y="668" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">&quot;Fed is in wait and see mode&quot;</text>
+  <rect x="54" y="744" width="972" height="236" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="792" x2="1026" y2="792" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="777" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">💡 What the Restructure Means</text>
+  <text x="108" y="816" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">6 meetings: Less frequent policy changes → more deliberate pace</text><text x="108" y="850" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">-1 voter: Majority formation potentially harder</text><text x="108" y="884" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">2 strategy sessions: More focus on long-term framework</text><text x="108" y="918" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ Fewer near-term rate moves, shift in market predictability</text>
+  <rect x="54" y="994" width="972" height="236" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="1042" x2="1026" y2="1042" stroke="#FBBF24" stroke-width="2"/>
+  <text x="108" y="1027" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FBBF24">🔮 Rate Path Outlook 2025-2027</text>
+  <text x="108" y="1066" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">2025: 3 cuts already delivered (Goldman Sachs)</text><text x="108" y="1100" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">2026-2027: Hold bias maintained</text><text x="108" y="1134" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Post-Warsh era: stronger data-dependence</text><text x="108" y="1168" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ Less forward guidance → market more sensitive per meeting</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · Fed FOMC · Warsh · INVESTUS SRP</text>
+</svg>

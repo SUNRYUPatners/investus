@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#030A18"/><stop offset="100%" stop-color="#020610"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="58" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">investus.kr</text>
+  <text x="1040" y="58" text-anchor="end" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Oct 29, 2026</text>
+  <rect x="40" y="78" width="220" height="40" rx="20" fill="rgba(96,165,250,0.15)"/>
+  <rect x="40" y="78" width="220" height="40" rx="20" fill="none" stroke="#60A5FA" stroke-width="2"/>
+  <text x="150" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#60A5FA">🔍 Stock Analysis</text>
+  <rect x="274" y="78" width="120" height="40" rx="20" fill="rgba(37,99,235,0.2)"/>
+  <rect x="274" y="78" width="120" height="40" rx="20" fill="none" stroke="#2563EB" stroke-width="2"/>
+  <text x="334" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9FAFB">GOOGL</text>
+  <text x="540" y="190" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#60A5FA" filter="url(#glow)">Gemini 4 Carbon</text>
+  <text x="540" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">96% Long-Context · 9.6% SWE-sweep · Agentic SOTA</text>
+  <rect x="54" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="204" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Long-Context</text>
+  <text x="204" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">96%</text>
+  <text x="204" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Rivals ~70%</text>
+  <text x="204" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Industry leading</text>
+<rect x="390" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="540" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">SWE-sweep</text>
+  <text x="540" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">9.6%</text>
+  <text x="540" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">vs rivals 4.3% (2x)</text>
+  <text x="540" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Coding agent</text>
+<rect x="726" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#FB923C" stroke-width="2"/>
+  <text x="876" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Vals Index v5.0</text>
+  <text x="876" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#FB923C">59</text>
+  <text x="876" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">GPT-4 Atlas: 67</text>
+  <text x="876" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Claude Opus 5.5: 58</text>
+  <rect x="54" y="494" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <line x1="54" y1="542" x2="1026" y2="542" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="527" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">📊 Key Benchmarks</text>
+  <text x="108" y="566" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">FrontierMath 2.0 (Agentic): 61.2% vs 55.0%</text><text x="108" y="600" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Terminal-Bench 4.0: 65.2% vs 57%</text><text x="108" y="634" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">OSWorld 2.1: 81.5% vs 74.7%</text><text x="108" y="668" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">Agents&apos; Last Exam v1.1: 77.4%</text>
+  <rect x="54" y="744" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <line x1="54" y1="792" x2="1026" y2="792" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="777" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">💡 Enterprise Implications</text>
+  <text x="108" y="816" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">96% long-context: process thousands of pages at once</text><text x="108" y="850" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Targets law, medicine, engineering enterprise workflows</text><text x="108" y="884" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Google Cloud +103% growth + Gemini 4 enterprise effect incoming</text><text x="108" y="918" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ Gemini 4 enterprise adoption is the key to GOOGL recovery</text>
+  <rect x="54" y="994" width="972" height="202" rx="22" fill="#0F0A00" stroke="#7C2D12" stroke-width="2.5"/>
+  <line x1="54" y1="1042" x2="1026" y2="1042" stroke="#FB923C" stroke-width="2"/>
+  <text x="108" y="1027" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FB923C">⚠️ Caveat — Vals Index 59 vs GPT-4 Atlas 67</text>
+  <text x="108" y="1066" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Overall Vals Index 59 trails GPT-4 Atlas 67</text><text x="108" y="1100" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Best in class for long-context, 2nd-tier on overall composite</text><text x="108" y="1134" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ Specialized vs generalist model positioning tradeoff</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · Gemini 4 Carbon · Google · INVESTUS SRP</text>
+</svg>

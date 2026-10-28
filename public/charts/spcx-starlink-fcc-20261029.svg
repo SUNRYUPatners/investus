@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#020814"/><stop offset="100%" stop-color="#020510"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="58" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">investus.kr</text>
+  <text x="1040" y="58" text-anchor="end" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Oct 29, 2026</text>
+  <rect x="40" y="78" width="180" height="40" rx="20" fill="rgba(96,165,250,0.15)"/>
+  <rect x="40" y="78" width="180" height="40" rx="20" fill="none" stroke="#60A5FA" stroke-width="2"/>
+  <text x="130" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#60A5FA">🔍 종목분析</text>
+  <rect x="234" y="78" width="100" height="40" rx="20" fill="rgba(37,99,235,0.2)"/>
+  <rect x="234" y="78" width="100" height="40" rx="20" fill="none" stroke="#2563EB" stroke-width="2"/>
+  <text x="284" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9FAFB">SPCX</text>
+  <text x="540" y="185" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#60A5FA" filter="url(#glow)">Starlink FCC 482 MHz</text>
+  <text x="540" y="235" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">위성-전화 주파수 추가 신청 · ABS Jets 1Gbps 첫 설치</text>
+  <rect x="54" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="204" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">추가 주파수</text>
+  <text x="204" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">482</text>
+  <text x="204" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">MHz 추가 신청</text>
+  <text x="204" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">FCC 투표 예정</text>
+<rect x="390" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="540" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">신청 대역</text>
+  <text x="540" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">902-928</text>
+  <text x="540" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">MHz ISM 대역</text>
+  <text x="540" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">유연 면허 방식</text>
+<rect x="726" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="876" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">항공기 탑재</text>
+  <text x="876" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">1Gbps</text>
+  <text x="876" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">ABS Jets 첫 설치</text>
+  <text x="876" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Legacy 650 기종</text>
+  <rect x="54" y="494" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <line x1="54" y1="542" x2="1026" y2="542" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="527" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">📡 FCC 신청 핵심 내용</text>
+  <text x="108" y="566" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">대상: 위성-전화(Satellite-to-Phone) 서비스용 주파수</text><text x="108" y="600" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">신청 방식: 902~928 MHz ISM 대역 유연 면허</text><text x="108" y="634" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Verizon·AT&amp;T: 전체 482 MHz 중 290 MHz 희망</text><text x="108" y="668" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">효과: 음영 지역 해소 → 문자→실제 데이터 서비스 확장</text>
+  <rect x="54" y="744" width="972" height="236" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="792" x2="1026" y2="792" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="777" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">✈️ ABS Jets — Starlink Aviation 첫 설치</text>
+  <text x="108" y="816" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">ABS Jets: Starlink 공인 딜러 인증 완료</text><text x="108" y="850" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Legacy 650 기종 첫 설치 완료 (최대 1Gbps 다운로드)</text><text x="108" y="884" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Starlink Aviation Performance Kit 적용</text><text x="108" y="918" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ 고급 비즈니스 항공기 연결성 수요 강세 확인</text>
+  <rect x="54" y="994" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <line x1="54" y1="1042" x2="1026" y2="1042" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="1027" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">💡 SPCX 수익화 함의</text>
+  <text x="108" y="1066" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">FCC 승인 → Starlink 위성 통신 대역폭 대폭 확대</text><text x="108" y="1100" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">기존 기기 호환 가능 → 신규 단말 없이 서비스 확장</text><text x="108" y="1134" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">스마트폰 기본 위성 연결 표준화 시나리오</text><text x="108" y="1168" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ Starlink ARR 상방 요인 추가</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · SPCX Starlink · INVESTUS SRP</text>
+</svg>

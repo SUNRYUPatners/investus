@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#110800"/><stop offset="100%" stop-color="#080400"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#EA580C"/><stop offset="100%" stop-color="#FB923C"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="58" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">investus.kr</text>
+  <text x="1040" y="58" text-anchor="end" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Oct 29, 2026</text>
+  <rect x="40" y="78" width="180" height="40" rx="20" fill="rgba(251,146,60,0.15)"/>
+  <rect x="40" y="78" width="180" height="40" rx="20" fill="none" stroke="#FB923C" stroke-width="2"/>
+  <text x="130" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FB923C">🏭 섹터</text>
+  <rect x="234" y="78" width="100" height="40" rx="20" fill="rgba(234,88,12,0.2)"/>
+  <rect x="234" y="78" width="100" height="40" rx="20" fill="none" stroke="#EA580C" stroke-width="2"/>
+  <text x="284" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9FAFB">AMZN</text>
+  <text x="540" y="190" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#FB923C" filter="url(#glow)">AWS 2028E $373.6B</text>
+  <text x="540" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">모건스탠리 전망 · 2025년 대비 약 3배</text>
+  <text x="54" y="278" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F9FAFB">AWS 연간 매출 추이 (B$)</text><rect x="60" y="682" width="150" height="138" rx="8" fill="rgba(251,146,60,0.5)" stroke="#F97316" stroke-width="2"/><text x="135" y="674" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#FB923C">$107.6B</text><text x="135" y="845" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">2024</text><text x="135" y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#9CA3AF">+19%</text><rect x="262.5" y="655" width="150" height="165" rx="8" fill="rgba(251,146,60,0.5)" stroke="#F97316" stroke-width="2"/><text x="337.5" y="647" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#FB923C">$128.7B</text><text x="337.5" y="845" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">2025</text><text x="337.5" y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#9CA3AF">+20%</text><rect x="465" y="591" width="150" height="229" rx="8" fill="#FB923C" stroke="#EA580C" stroke-width="2"/><text x="540" y="583" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#FB923C">$178.3B</text><text x="540" y="845" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">2026E</text><text x="540" y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#FB923C">+38%</text><rect x="667.5" y="483" width="150" height="337" rx="8" fill="#FB923C" stroke="#EA580C" stroke-width="2"/><text x="742.5" y="475" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#FB923C">$262.3B</text><text x="742.5" y="845" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">2027E</text><text x="742.5" y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#FB923C">+47%</text><rect x="870" y="340" width="150" height="480" rx="8" fill="#FB923C" stroke="#EA580C" stroke-width="2"/><text x="945" y="332" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#FB923C">$373.6B</text><text x="945" y="845" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">2028E</text><text x="945" y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#FB923C">+42%</text>
+  <rect x="54" y="920" width="972" height="236" rx="22" fill="#0F0A00" stroke="#7C2D12" stroke-width="2.5"/>
+  <line x1="54" y1="968" x2="1026" y2="968" stroke="#FB923C" stroke-width="2"/>
+  <text x="108" y="953" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FB923C">💡 3배 성장 시나리오 핵심 가정</text>
+  <text x="108" y="992" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">AI 워크로드 퍼블릭 클라우드 집중 지속</text><text x="108" y="1026" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Anthropic $110B AWS 컴퓨팅 계약 2026~2028 집행</text><text x="108" y="1060" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Trainium 자체 칩 + GPU 확보로 공급 병목 해소</text><text x="108" y="1094" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ 2026~2028 CAGR ~42%: 현재 시장 컨센서스 초과</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · AWS 2028 Forecast · Morgan Stanley · INVESTUS SRP</text>
+</svg>

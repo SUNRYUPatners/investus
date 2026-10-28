@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#120A02"/><stop offset="100%" stop-color="#0A0500"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#FB923C"/><stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="58" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">investus.kr</text>
+  <text x="1040" y="58" text-anchor="end" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Oct 29, 2026</text>
+  <rect x="40" y="78" width="180" height="40" rx="20" fill="rgba(251,146,60,0.15)"/>
+  <rect x="40" y="78" width="180" height="40" rx="20" fill="none" stroke="#FB923C" stroke-width="2"/>
+  <text x="130" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#FB923C">💰 어닝</text>
+  <rect x="234" y="78" width="120" height="40" rx="20" fill="rgba(251,146,60,0.2)"/>
+  <rect x="234" y="78" width="120" height="40" rx="20" fill="none" stroke="#FB923C" stroke-width="2"/>
+  <text x="294" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9FAFB">GOOGL</text>
+  <text x="540" y="190" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="900" fill="#FB923C" filter="url(#glow)">GOOGL Q3 2026</text>
+  <text x="540" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#9CA3AF">실망 서프라이즈 · FCF 연속 적자</text>
+  <rect x="54" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#F87171" stroke-width="2"/>
+  <text x="204" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">주가 반응</text>
+  <text x="204" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F87171">-9%</text>
+  <text x="204" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">어닝 발표 후</text>
+  <text x="204" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">당일 급락</text>
+<rect x="390" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#FB923C" stroke-width="2"/>
+  <text x="540" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">영업마진</text>
+  <text x="540" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#FB923C">31.8%</text>
+  <text x="540" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Q2 34%에서 하락</text>
+  <text x="540" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">마진 압박</text>
+<rect x="726" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#F87171" stroke-width="2"/>
+  <text x="876" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Q3 FCF</text>
+  <text x="876" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F87171">-$9.1B</text>
+  <text x="876" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">2분기 연속</text>
+  <text x="876" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Q2: -$5.9B</text>
+  <rect x="54" y="494" width="300" height="190" rx="18" fill="#0F1623" stroke="#FB923C" stroke-width="2"/>
+  <text x="204" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">매출</text>
+  <text x="204" y="590" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#FB923C">$127.6B</text>
+  <text x="204" y="622" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">+25% YoY</text>
+  <text x="204" y="652" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">예상 대비 인라인</text>
+<rect x="390" y="494" width="300" height="190" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="540" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Google Cloud</text>
+  <text x="540" y="590" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">$30.7B</text>
+  <text x="540" y="622" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">+5% 예상 초과</text>
+  <text x="540" y="652" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">Cloud 강세</text>
+<rect x="726" y="494" width="300" height="190" rx="18" fill="#0F1623" stroke="#F87171" stroke-width="2"/>
+  <text x="876" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Capex 변화</text>
+  <text x="876" y="590" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#F87171">×2배</text>
+  <text x="876" y="622" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">1년 만에 두 배</text>
+  <text x="876" y="652" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">AI 인프라 투자</text>
+  <rect x="54" y="716" width="972" height="236" rx="22" fill="#0F0A00" stroke="#7F1D1D" stroke-width="2.5"/>
+  <line x1="54" y1="764" x2="1026" y2="764" stroke="#F87171" stroke-width="2"/>
+  <text x="108" y="749" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F87171">📊 FCF 추이</text>
+  <text x="108" y="788" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Q2 2026: -$5.9B  ←  2분기 연속 음수 FCF</text><text x="108" y="822" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Q3 2026: -$9.1B  ←  악화 추세</text><text x="108" y="856" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Q3 2025: +$24.5B  vs  Q3 2026: -$9.1B</text><text x="108" y="890" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ AI 인프라 CapEx 급증이 현금 흐름 역전</text>
+  <rect x="54" y="966" width="972" height="236" rx="22" fill="#0F0A00" stroke="#7C2D12" stroke-width="2.5"/>
+  <line x1="54" y1="1014" x2="1026" y2="1014" stroke="#FB923C" stroke-width="2"/>
+  <text x="108" y="999" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FB923C">⚠️ 투자 관건 — Gemini 4가 이익 전환의 키</text>
+  <text x="108" y="1038" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Cloud +103% — AI 수요 강세 확인</text><text x="108" y="1072" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Search 광고 $63.4B — 예상 -2% 하회 · 구조적 둔화 우려</text><text x="108" y="1106" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Gemini 4 Carbon 96% long-context — 기업 고객 채택 속도가 관건</text><text x="108" y="1140" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ Capex 두 배 투자의 성과를 2027년 어닝에서 검증해야</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · GOOGL Q3 2026 · INVESTUS SRP</text>
+</svg>

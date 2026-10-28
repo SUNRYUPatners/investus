@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#020E0A"/><stop offset="100%" stop-color="#010806"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="58" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">investus.kr</text>
+  <text x="1040" y="58" text-anchor="end" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Oct 29, 2026</text>
+  <rect x="40" y="78" width="140" height="40" rx="20" fill="rgba(52,211,153,0.15)"/>
+  <rect x="40" y="78" width="140" height="40" rx="20" fill="none" stroke="#34D399" stroke-width="2"/>
+  <text x="110" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#34D399">🌐 매크로</text>
+  <rect x="194" y="78" width="100" height="40" rx="20" fill="rgba(5,150,105,0.2)"/>
+  <rect x="194" y="78" width="100" height="40" rx="20" fill="none" stroke="#059669" stroke-width="2"/>
+  <text x="244" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9FAFB">FOMC</text>
+  <text x="540" y="185" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#34D399" filter="url(#glow)">Fed FOMC 구조 개편</text>
+  <text x="540" y="235" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#9CA3AF">Warsh 의장 · 투표권 1명 축소 · 회의 8→6회</text>
+  <rect x="54" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="204" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">투표권 위원</text>
+  <text x="204" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">-1명</text>
+  <text x="204" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">2027년 가을부터</text>
+  <text x="204" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">결정 집중도 강화</text>
+<rect x="390" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="540" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">연간 회의</text>
+  <text x="540" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">8→6</text>
+  <text x="540" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">2028년부터</text>
+  <text x="540" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">2회 전략 회의로 전환</text>
+<rect x="726" y="272" width="300" height="190" rx="18" fill="#0F1623" stroke="#FBBF24" stroke-width="2"/>
+  <text x="876" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">현재 기조</text>
+  <text x="876" y="368" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#FBBF24">관망</text>
+  <text x="876" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">Wait and See</text>
+  <text x="876" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">인플레이션 여전히 높음</text>
+  <rect x="54" y="494" width="972" height="236" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="542" x2="1026" y2="542" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="527" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">📋 Warsh 의장 주요 발언</text>
+  <text x="108" y="566" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">&quot;통화 의학이 효과를 내기 시작하고 있다&quot; — 압도적 내부 공감대</text><text x="108" y="600" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">&quot;금융 여건이 빡빡하다고 부르기를 꺼리고 꺼린다&quot;</text><text x="108" y="634" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">&quot;미국 인플레이션은 여전히 높다&quot;</text><text x="108" y="668" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">&quot;Fed는 지켜보며 기다리는 모드&quot;</text>
+  <rect x="54" y="744" width="972" height="236" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="792" x2="1026" y2="792" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="777" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">💡 구조 변경이 의미하는 것</text>
+  <text x="108" y="816" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">회의 6회: 정책 변경 빈도 낮아짐 → 신중한 속도</text><text x="108" y="850" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">투표권 -1명: 다수결 형성 더 어려워질 가능성</text><text x="108" y="884" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">2회 전략 회의: 장기 프레임 논의 강화</text><text x="108" y="918" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ 단기 금리 변동 줄어들고 시장 예측 가능성 변화</text>
+  <rect x="54" y="994" width="972" height="236" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="1042" x2="1026" y2="1042" stroke="#FBBF24" stroke-width="2"/>
+  <text x="108" y="1027" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FBBF24">🔮 2025~2027년 금리 경로 전망</text>
+  <text x="108" y="1066" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">2025년: 인하 3회 기시행 (골드만삭스 기준)</text><text x="108" y="1100" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">2026년~2027년: 동결 유지 기조</text><text x="108" y="1134" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Warsh 취임 후 데이터 의존적 기조 강화</text><text x="108" y="1168" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">→ 포워드 가이던스 감소 → 각 회의마다 민감도 상승</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · Fed FOMC · Warsh · INVESTUS SRP</text>
+</svg>
