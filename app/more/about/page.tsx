@@ -24,12 +24,12 @@ export default function AboutPage() {
   ];
 
   const PHILOSOPHIES = isKo ? [
-    { color: "#10b981", title: "절대 잃지 않는 투자", desc: "수익 극대화 이전에 원금 보존을 최우선합니다. 리스크를 철저히 계산하고, 확신이 없는 자리에는 들어가지 않습니다." },
+    { color: "#10b981", title: "원금 보존 우선", desc: "수익 극대화 이전에 원금 보존을 최우선합니다. 리스크를 철저히 계산하고, 확신이 없는 자리에는 들어가지 않습니다." },
     { color: "#60a5fa", title: "미국을 축으로, 글로벌 자산까지", desc: "세계 최고 기업이 모인 미국 시장을 축으로 하되, 한국 주식·안전자산·부동산까지 한 화면에서 배분을 봅니다. 선택이 아니라 연결입니다." },
     { color: "#c084fc", title: "실전 데이터 기반", desc: "감이 아닌 데이터로 봅니다. 실시간 시세·섹터 흐름·거시 지표를 모아 아침 브리핑과 포트폴리오 분석에 넣습니다." },
     { color: "#fb923c", title: "투명한 공개 원칙", desc: "운용 철학과 리포트 근거를 공개합니다. 숨길 것이 없는 설명만이 신뢰를 만든다고 믿습니다." },
   ] : [
-    { color: "#10b981", title: "Never Lose", desc: "Capital preservation comes before maximizing returns. Risks are calculated meticulously — we never enter without conviction." },
+    { color: "#10b981", title: "Capital Preservation First", desc: "Capital preservation comes before maximizing returns. Risks are calculated meticulously — we never enter without conviction." },
     { color: "#60a5fa", title: "US as the Axis, Global Assets Around It", desc: "The US market is the core — home to the world’s leading companies — with Korean stocks, safe assets, and real estate on the same screen. Connection, not isolation." },
     { color: "#c084fc", title: "Data-Driven", desc: "We look at data, not gut feel. Live prices, sector flows, and macro indicators feed the morning brief and portfolio analysis." },
     { color: "#fb923c", title: "Full Transparency", desc: "Philosophy and report rationale are disclosed. Explanations that can withstand scrutiny earn trust." },
@@ -50,15 +50,15 @@ export default function AboutPage() {
   ];
 
   const STATS = isKo ? [
-    { value: "100%+", label: "전 종목 수익률", sub: "보유 전 종목 플러스" },
-    { value: "0",     label: "누적 손실 종목", sub: "단 한 종목도 손실 없음" },
-    { value: "4",     label: "시장 한 화면",     sub: "미국 · 한국 · 안전 · 부동산" },
-    { value: "S/O",   label: "싱글패밀리오피스", sub: "독립 운용 구조" },
+    { value: "매일",  label: "아침 브리핑",       sub: "장전 업데이트" },
+    { value: "CIO",   label: "자체 분석 리포트",   sub: "외부 요약 없는 직접 분석" },
+    { value: "4",     label: "시장 한 화면",        sub: "미국 · 한국 · 안전 · 부동산" },
+    { value: "S/O",   label: "싱글패밀리오피스",    sub: "독립 운용 구조" },
   ] : [
-    { value: "100%+", label: "All-Position Returns", sub: "Every held position is in the green" },
-    { value: "0",     label: "Losing Positions",     sub: "Not a single losing position ever" },
-    { value: "4",     label: "Four Markets",        sub: "US · KR · Safe · Real estate" },
-    { value: "S/O",   label: "Single Family Office",  sub: "Independent management structure" },
+    { value: "Daily", label: "Morning Brief",       sub: "Pre-market update every day" },
+    { value: "CIO",   label: "In-House Reports",    sub: "Direct analysis, not summaries" },
+    { value: "4",     label: "Four Markets",         sub: "US · KR · Safe · Real estate" },
+    { value: "S/O",   label: "Single Family Office", sub: "Independent management structure" },
   ];
 
   const LEGAL_ITEMS = isKo ? [
@@ -319,8 +319,8 @@ export default function AboutPage() {
           </div>
           <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
             {isKo
-              ? <>손실 없이, 오직 수익만. 미국주식 전 보유 종목 <span style={{ color: "var(--text)", fontWeight: 600 }}>수익률 100% 이상</span>을 기록한 팀이 만든 투자 정보 플랫폼입니다.</>
-              : <>No losses. Profits only. Built by a team that has achieved <span style={{ color: "var(--text)", fontWeight: 600 }}>100%+ returns</span> on every US stock position held.</>}
+              ? <>미국·한국·안전자산·부동산을 아침마다 <span style={{ color: "var(--text)", fontWeight: 600 }}>한 화면에서 정리</span>하는 AI 자산관리 플랫폼입니다.</>
+              : <>An AI wealth platform that organizes US, Korea, safe assets, and real estate <span style={{ color: "var(--text)", fontWeight: 600 }}>in one morning screen</span>.</>}
           </p>
         </div>
 

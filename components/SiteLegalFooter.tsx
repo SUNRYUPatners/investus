@@ -122,7 +122,12 @@ export async function SiteLegalFooter() {
           </div>
         </div>
 
-        <p className="text-[10px] mt-4" style={{ color: "var(--muted)" }}>
+        <p className="text-[10px] mt-4 pt-4 leading-relaxed border-t" style={{ color: "var(--muted)", borderColor: "var(--border)" }}>
+          {isKo
+            ? "본 서비스에서 제공하는 모든 정보(리포트·시세·AI 분석 등)는 투자 참고용이며, 특정 종목의 매수·매도를 권유하거나 수익을 보장하지 않습니다. 투자 결과에 대한 책임은 투자자 본인에게 있으며, 원금 손실이 발생할 수 있습니다. 과거 성과는 미래 수익을 보장하지 않습니다."
+            : "All information provided by this service (reports, prices, AI analysis, etc.) is for reference only and does not constitute investment advice, solicitation to buy or sell any security, or a guarantee of returns. Investors are solely responsible for their own investment decisions. Principal loss may occur. Past performance does not guarantee future results."}
+        </p>
+        <p className="text-[10px] mt-2" style={{ color: "var(--muted)" }}>
           © {new Date().getFullYear()} {companyName}. All rights reserved.
         </p>
       </div>
