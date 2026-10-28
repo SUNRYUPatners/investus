@@ -171,6 +171,9 @@ const ALLOW = new Set([
   "nplatforms", "nellison", "nlarry", "nsrp",
   "banthropic", "spacexanthropic", "metaoracle", "infrastructureoci",
   "awsazure", "kkrblackrock",
+  // 2026-10-28 추가 — Neocloud 고객·DB·ROI 용어
+  "bank", "contracted", "exiting", "upside", "customer", "reflection", "roi", "xai", "investus",
+  "nbank", "ncustomer", "nreflection", "nroi", "nxai", "ninvestus",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */

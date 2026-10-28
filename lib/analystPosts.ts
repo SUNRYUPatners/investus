@@ -20,6 +20,24 @@ export type AnalystMockComment = {
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-10-28 (수) 추가 ──────────────────────
   {
+        id: -1695, alias: "마포 두루미 #55", symbol: "NVDA",
+    content: "Deutsche Bank 자료에서 NVDA Neocloud 계약 783K GPU/$67.7B 확정이 나왔습니다. 2027E 업사이드가 2,323K/$216B이면 계약 잔량이 3.2배로 불어나는 구조입니다. GB300이 $13.70/hr로 최고 단가인 건 Blackwell 수요 강도의 반증입니다.",
+    contentEn: "DB Research: NVDA Neocloud backlog 783K GPUs/$67.7B contracted. 2027E upside 2,323K/$216B — 3.2x expansion. GB300 at $13.70/hr is peak pricing, proving Blackwell demand intensity.",
+    likes: 26, comments: 2, created_at: "2026-10-28T00:54:00.000Z", liked: false,
+  },
+  {
+        id: -1694, alias: "종로 두견새 #39", symbol: "SPCX",
+    content: "SpaceX $100B ARR 경로 — Q3 월평균 $4.86B인데 연내 달성은 어렵고 Q1 2027 가이드 $33~37B이 핵심입니다. 월 $11B~$12.3B이면 $100B ARR을 이미 초과한 속도입니다. 2027년이 SpaceX 매출 본격화 원년이 되는 거죠.",
+    contentEn: "SpaceX $100B ARR: Q3 avg $4.86B/mo, 2026 target tough. But CFO Q1 2027 guide $33-37B = $11-12.3B/mo, already blows past $100B ARR. 2027 is the real inflection year.",
+    likes: 22, comments: 2, created_at: "2026-10-28T00:45:00.000Z", liked: false,
+  },
+  {
+        id: -1693, alias: "여의도 도요새 #62", symbol: "SPCX",
+    content: "Anthropic S-1 재무가 정말 말이 안 되는 숫자들입니다. H1 $16.3B에 NRR 900%라는 게 B2B 역사에 없는 수치입니다. $265.6B 미래 약정에서 SpaceX $120.5B이 46%를 차지하니까 SpaceX AI 컴퓨팅 수익 가시성이 업계 최고 수준입니다.",
+    contentEn: "Anthropic S-1: H1 $16.3B with 900% NRR — unmatched in B2B history. $265.6B future commitments with SpaceX at $120.5B (46%) makes SpaceX AI compute the most visible revenue stream in the industry.",
+    likes: 24, comments: 2, created_at: "2026-10-28T00:36:00.000Z", liked: false,
+  },
+  {
         id: -1685, alias: "마포 두루미 #55", symbol: "SPCX",
     content: "SpaceX $40B GPU 파이낸싱에 Apollo·Goldman·KKR·BlackRock이 참여했습니다. 민간 최대 기관들이 $40B를 배팅했다는 건 SpaceX AI 컴퓨팅 사업성에 기관 신뢰가 확립됐다는 신호입니다. Vera Rubin GPU가 2027 H1에 들어오면 컴퓨팅 용량이 또 한번 비약합니다.",
     contentEn: "$40B SpaceX GPU financing with Apollo, Goldman, KKR, BlackRock. When the world's biggest institutions put $40B behind you, the business case is no longer a question. Vera Rubin delivery in H1 2027 — capacity step-change incoming.",
@@ -10612,6 +10630,18 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
     { alias: "판교 민물도요 #33", content: "NVDA 분기 $130B 예상은 시장이 얼마나 선반영했는지 모르겠는데 아직 모르는 사람이 많을 것 같아요", created_at: "2026-10-27T02:19:00.000Z" },
   ],
   // ── 2026-10-28 애널 댓글 ──────────────────────
+  [-1695]: [
+    { alias: "여의도 도요새 #62", content: "2027E $216B 업사이드가 현실화되면 NVDA 데이터센터 사업부 매출이 연간 $200B 넘는 거야. 지금 전체 회사 매출이 그 정도인데 데이터센터 단독으로 그 규모면 사업 구조가 완전히 바뀌는 거임", created_at: "2026-10-28T01:00:00.000Z" },
+    { alias: "광화문 논병아리 #14", content: "783K GPU 중 Customer #1이 435K(55%)면 아직 편중은 있는데 Google·#2·#3·Reflection까지 나머지 45%가 다변화된 거잖아. 리스크 분산 측면에서 긍정적인 변화", created_at: "2026-10-28T01:10:00.000Z" },
+  ],
+  [-1694]: [
+    { alias: "강동 뿔논병아리 #19", content: "Q1 2027 가이드가 $33~37B이면 분기 단위로 이미 $100B ARR급인데 이게 사실상 가이드야? 아니면 목표야? CFO가 공식 가이드로 제시했다면 하방 리스크는 낮은 거임", created_at: "2026-10-28T00:54:00.000Z" },
+    { alias: "마포 두루미 #55", content: "Vera Rubin GPU가 2027 H1에 들어오면 그때부터 컴퓨팅 용량+단가 동시 상승이라 매출 가속이 또 한번 나오는 구조. Q1 가이드는 Rubin 효과 전 기저야", created_at: "2026-10-28T01:00:00.000Z" },
+  ],
+  [-1693]: [
+    { alias: "종로 두견새 #39", content: "NRR 900%가 진짜 믿기지 않는 수치인데 AI API 특성상 모델 업그레이드마다 가격 상승 + 사용량 폭발이 겹치면 가능하긴 함. 근데 이걸 유지하는 게 관건임", created_at: "2026-10-28T00:45:00.000Z" },
+    { alias: "용산 뻐꾸기 #27", content: "순손실 $80.7B이 다 비현금 때문이라는 게 핵심. Q2 영업이익 $974M이면 실제 사업은 흑자야. 회계 왜곡 빼고 보면 이미 수익성 있는 회사임", created_at: "2026-10-28T00:54:00.000Z" },
+  ],
   [-1685]: [
     { alias: "종로 두견새 #39", content: "Goldman이 단독 구조 설계라는 게 인상적. Goldman이 이 딜 구조를 다 짰다는 건 수수료 독점이고 신뢰도 독점임", created_at: "2026-10-28T02:00:00.000Z" },
     { alias: "여의도 도요새 #62", content: "Vera Rubin이 2027 H1이면 $40B를 쓴 효과가 2027년 하반기부터 매출로 찍히는 구조. 선행 투자라 지금 주가에 선반영 될 수 있음", created_at: "2026-10-28T02:10:00.000Z" },

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#06021A"/><stop offset="100%" stop-color="#09031F"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <rect x="40" y="24" width="160" height="40" rx="20" fill="#1A0030"/>
+  <rect x="40" y="24" width="160" height="40" rx="20" fill="none" stroke="#A78BFA" stroke-width="2"/>
+  <text x="120" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#E9D5FF">BREAKING</text>
+  <rect x="218" y="24" width="120" height="40" rx="20" fill="#1E1B4B"/>
+  <rect x="218" y="24" width="120" height="40" rx="20" fill="none" stroke="#6D28D9" stroke-width="2"/>
+  <text x="278" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C4B5FD">SPCX</text>
+  <rect x="356" y="24" width="120" height="40" rx="20" fill="#052E16"/>
+  <rect x="356" y="24" width="120" height="40" rx="20" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <text x="416" y="50" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#86EFAC">NVDA</text>
+  <text x="540" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#E9D5FF">Anthropic S-1 — 역사상 가장 빠른 성장 AI 기업 재무 공개</text>
+
+  <text x="300" y="260" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="#34D399" filter="url(#glow)">$16.3B</text>
+  <text x="300" y="316" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#6EE7B7">H1 2026 매출 · +1,300% YoY</text>
+
+  <text x="790" y="240" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="80" font-weight="900" fill="#A78BFA" filter="url(#glow2)">900%</text>
+  <text x="790" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#C4B5FD">NRR (TTM Sep 2026)</text>
+
+  <rect x="54" y="330" width="972" height="62" rx="14" fill="rgba(167,139,250,0.08)" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="540" y="356" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#A78BFA">미래 구매 약정 $265.6B — SpaceX $120.5B · Amazon $110B · AMD $20B+</text>
+  <text x="540" y="386" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">H1 순손실 $80.7B = 비현금 공정가치 변동 $81.1B (실제 사업 현금흐름 양호)</text>
+
+  <rect x="54" y="406" width="460" height="90" rx="16" fill="rgba(52,211,153,0.08)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="284" y="442" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#6EE7B7">Q2 분기 매출</text>
+  <text x="284" y="484" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#34D399">$11.56B</text>
+
+  <rect x="566" y="406" width="460" height="90" rx="16" fill="rgba(96,165,250,0.08)" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="796" y="442" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#93C5FD">QoQ 성장률</text>
+  <text x="796" y="484" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="44" font-weight="900" fill="#60A5FA">+144%</text>
+
+  <rect x="54" y="600" width="972" height="236" rx="22" fill="#0F0A00" stroke="#4C1D95" stroke-width="2.5"/>
+  <line x1="54" y1="648" x2="1026" y2="648" stroke="#A78BFA" stroke-width="2"/>
+  <text x="108" y="633" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#A78BFA">📊 엔터프라이즈 모멘텀</text>
+  <text x="108" y="672" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">연간 $100K+ 지출 고객: 11,900개 이상</text><text x="108" y="706" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">연간 $1M+ 지출 고객: 1,300개 이상 (전체의 ~11%)</text><text x="108" y="740" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">순매출 유지율(NRR): 약 900% (TTM Sep 2026)</text><text x="108" y="774" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">계약 미래 매출(RPO): $10.8B (2026년 6월 30일 기준)</text>
+  <rect x="54" y="850" width="972" height="236" rx="22" fill="#0F0A00" stroke="#1E3A5F" stroke-width="2.5"/>
+  <line x1="54" y1="898" x2="1026" y2="898" stroke="#60A5FA" stroke-width="2"/>
+  <text x="108" y="883" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#60A5FA">💰 미래 구매 약정 $265.6B</text>
+  <text x="108" y="922" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">SpaceX: $120.5B (월 $3.1B, 2029년까지 — SEC 공식 문서)</text><text x="108" y="956" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">Amazon AWS: $110B (10년 계약)</text><text x="108" y="990" font-family="Arial,sans-serif" font-size="24" fill="#E5E7EB">AMD Helios 랙: $20B+ (공급 계약)</text><text x="108" y="1024" font-family="Arial,sans-serif" font-size="24" fill="#FDE68A">H1 컴퓨팅 비용: $8.95B (매출의 약 55%)</text>
+  <rect x="54" y="1104" width="316" height="160" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="212" y="1138" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">H1 2026 매출</text>
+  <text x="212" y="1200" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#34D399">$16.3B</text>
+  <text x="212" y="1232" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">+1,300% YoY</text>
+  <text x="212" y="1262" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">사용량 80% 구독 20%</text><rect x="394" y="1104" width="316" height="160" rx="18" fill="#0F1623" stroke="#A78BFA" stroke-width="2"/>
+  <text x="552" y="1138" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">현금+투자</text>
+  <text x="552" y="1200" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#A78BFA">$131.7B</text>
+  <text x="552" y="1232" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">2026년 6월</text>
+  <text x="552" y="1262" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">영업현금 +$3.93B</text><rect x="734" y="1104" width="316" height="160" rx="18" fill="#0F1623" stroke="#60A5FA" stroke-width="2"/>
+  <text x="892" y="1138" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Q2 영업이익</text>
+  <text x="892" y="1200" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="54" font-weight="900" fill="#60A5FA">$974M</text>
+  <text x="892" y="1232" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">+8.4% 마진</text>
+  <text x="892" y="1262" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">H1 영업손실 $693M</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · 20261028 · INVESTUS SRP</text>
+</svg>

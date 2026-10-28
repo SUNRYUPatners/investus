@@ -169,6 +169,18 @@ const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
   // ── 2026-10-28 (수) 추가 ────────────────
+  { id: 122441, symbol: "NVDA", nickname: "엔비디아Neocloud육십칠점칠B", holdingLabel: "보유중",
+    content: "Deutsche Bank NVDA Neocloud 수주 잔량 — 계약 783K GPU/$67.7B 확정, 2027E 업사이드 2,323K/$216B. GB300 $13.70/hr로 최고가. Customer #1이 435K로 전체 55%. 이 숫자들 보면 NVDA 데이터센터 사업이 어느 규모인지 다시 실감됨",
+    contentEn: "DB Research NVDA Neocloud backlog: 783K GPUs/$67.7B contracted, 2027E upside 2,323K/$216B. GB300 leads at $13.70/hr. Customer #1 holds 435K (55%). These numbers redefine what NVDA's datacenter business actually is.",
+    createdAt: T28OCT + 60*60_000, likes: 31, comments: 2 },
+  { id: 122440, symbol: "SPCX", nickname: "SpaceX백B아르일루경로분석", holdingLabel: "보유중",
+    content: "SpaceX $100B ARR 경로 나왔는데 핵심은 연내 달성보다 Q1 2027 가이드야. Q3 월평균 $4.86B에서 Q1 2027 가이드가 $33~37B($11~12.3B/월)이면 $100B ARR을 이미 한참 넘어선 속도. 2027년이 SpaceX 매출 원년임",
+    contentEn: "SpaceX $100B ARR path: Q3 avg $4.86B/mo. The real signal is Q1 2027 CFO guide of $33-37B ($11-12.3B/mo) — already blows through $100B ARR. 2027 is the revenue inflection year.",
+    createdAt: T28OCT + 68*60_000, likes: 28, comments: 2 },
+  { id: 122439, symbol: "SPCX", nickname: "앤트로픽S1십육점삼B천삼백퍼센트", holdingLabel: "관심종목",
+    content: "Anthropic S-1 숫자가 진짜 충격적임. H1 $16.3B +1300% YoY, 현금 $131.7B, NRR 900%, Q2 영업이익 $974M. 순손실 $80.7B은 비현금 항목. $265.6B 미래 약정에서 SpaceX $120.5B이 46%야. SpaceX AI 컴퓨팅 수익 가시성이 이만큼이면 SPCX 재평가는 당연함",
+    contentEn: "Anthropic S-1 is wild: H1 $16.3B +1300% YoY, $131.7B cash, 900% NRR, Q2 op profit $974M. Net loss $80.7B is non-cash. SpaceX gets $120.5B of $265.6B (46%) future commitments. With this visibility on SpaceX AI revenue, SPCX rerating is justified.",
+    createdAt: T28OCT + 72*60_000, likes: 35, comments: 2 },
   { id: 122431, symbol: "SPCX", nickname: "SpaceX사십B아폴로골드만", holdingLabel: "보유중",
     content: "SpaceX $40B GPU 파이낸싱 나왔다. Apollo 리드에 Goldman 단독 구조, KKR BlackRock까지 들어온 거잖아. 어제 Anthropic S-1 $120.5B 나오고 오늘 $40B 파이낸싱. 이틀 만에 AI 컴퓨팅 실체 두 번 확인됨",
     contentEn: "SpaceX $40B GPU financing dropped. Apollo leading, Goldman structuring, KKR and BlackRock in the consortium. Yesterday Anthropic S-1 $120.5B, today $40B financing. AI compute reality confirmed twice in two days.",
@@ -6259,6 +6271,18 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   122432: [
     { id: 1224321, nickname: "SpaceX사십B아폴로골드만", holdingLabel: "보유중", content: "CapEx 낮춘 게 오히려 주가엔 좋을 수 있어. FCF 개선되면 자사주 매입이나 투자 유연성이 생기거든", likes: 7, createdAt: T28OCT + 4920000 },
     { id: 1224322, nickname: "FOMC동결삼점칠오사점영영", holdingLabel: "관심종목", content: "FSD 1.7M이면 소프트웨어 수익이 진짜 커지고 있는 거야. 마진이 80%+인 구독 수익이 이 규모면 게임 체인저", likes: 6, createdAt: T28OCT + 5100000 },
+  ],
+  122441: [
+    { id: 1224411, nickname: "앤트로픽S1십육점삼B천삼백퍼센트", holdingLabel: "관심종목", content: "2027E $216B가 현실화되면 NVDA 데이터센터 단독 매출이 전체 매출 규모를 넘어서는 거잖아. 3.2배 확장이 3년 안에 가능한지 지켜봐야", likes: 8, createdAt: T28OCT + 3960000 },
+    { id: 1224412, nickname: "SpaceX백B아르일루경로분석", holdingLabel: "보유중", content: "GB300 $13.70/hr는 H100 $3.50/hr 대비 거의 4배야. 단가 프리미엄에도 고객들이 GB300 주문을 몰아가는 건 성능 ROI가 그만큼 크다는 증거임", likes: 7, createdAt: T28OCT + 4140000 },
+  ],
+  122440: [
+    { id: 1224401, nickname: "엔비디아Neocloud육십칠점칠B", holdingLabel: "보유중", content: "CFO가 공식 가이드로 Q1 2027 $33~37B 제시한 거면 실제 결과가 크게 못 미치면 신뢰 문제가 생기니까 보수적으로 잡았을 거야. 실제는 더 클 수 있음", likes: 7, createdAt: T28OCT + 4080000 },
+    { id: 1224402, nickname: "SpaceX사십B아폴로골드만", holdingLabel: "보유중", content: "Rubin GPU 2027 H1 인도 이후에 컴퓨팅 단가가 올라가면 그때부터 또 한번 매출 가속. $40B 파이낸싱 효과가 2027년부터 본격 나오는 구조임", likes: 6, createdAt: T28OCT + 4260000 },
+  ],
+  122439: [
+    { id: 1224391, nickname: "텍사스로보택시천오십일대", holdingLabel: "보유중", content: "NRR 900%가 진짜 비현실적인 수치인데 AI API 특성상 모델 업그레이드마다 사용량 폭발 + 가격 상승이 겹치면 가능. Anthropic 모델이 계속 좋아지는 게 SpaceX 컴퓨팅 수익과 직결임", likes: 9, createdAt: T28OCT + 4320000 },
+    { id: 1224392, nickname: "도이치뱅크이백오십목표가", holdingLabel: "보유중", content: "$265.6B 미래 약정 중 SpaceX 46% = $120.5B. 이게 SEC 문서에 명기됐다는 게 핵심. 루머가 아니고 법적 구속력 있는 약정임", likes: 8, createdAt: T28OCT + 4500000 },
   ],
   122438: [
     { id: 1224381, nickname: "SpaceX사십B아폴로골드만", holdingLabel: "보유중", content: "Cybercab이 Model Y 넘은 게 진짜 중요한 변곡점. 전용 자율주행 차량이 메인이 된다는 거고 배포 속도 더 빨라지면 수익화 타임라인도 앞당겨짐", likes: 9, createdAt: T28OCT + 4980000 },
