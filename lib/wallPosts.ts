@@ -47,6 +47,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T29OCT = 1793228400000; // 2026-10-29 08:00 KST (목)
 const T26OCT = 1792969200000; // 2026-10-26 08:00 KST (월)
 const T27OCT = 1793055600000; // 2026-10-27 08:00 KST (화)
 const T28OCT = 1793142000000; // 2026-10-28 08:00 KST (수)
@@ -168,6 +169,51 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-10-29 (목) 추가 ────────────────
+  { id: 122452, symbol: "TSLA", nickname: "오늘요약1029", holdingLabel: "보유중",
+    content: "오늘 핵심 — MSFT 어닝 EPS $4.89 비트/매출 $92.2B 비트(+19% YoY) +6.11%. GOOGL -9%: FCF 2분기 연속 음수, Capex 2배. TSLA Cybercab 573대(주간 +222). Waymo 비용 7배. AWS 2028E $373.6B 3배 전망. Anthropic 현금 $131.7B 비금융 3위. Gemini 4 Carbon 장문 96%. FCC 482MHz. Fed Warsh FOMC 8→6회",
+    contentEn: "Today's key: MSFT Q3 beat EPS $4.89/Rev $92.2B (+19% YoY) +6.11%. GOOGL -9%: 2nd straight neg FCF, capex doubled. TSLA Cybercab 573 (+222/week). Waymo 7x cost. AWS 2028E $373.6B 3x. Anthropic $131.7B cash #3 non-bank. Gemini 4 Carbon 96% long-ctx. FCC 482MHz. Fed Warsh 8→6 meetings.",
+    createdAt: T29OCT + 128*60_000, likes: 29, comments: 0 },
+  { id: 122451, symbol: "", nickname: "Fed워시FOMC여덟회의에서여섯회의", holdingLabel: "관심종목",
+    content: "Fed Warsh FOMC 구조 개편 — 2027년 가을부터 투표권 1명 축소, 2028년부터 연 8회→6회로. 나머지 2회는 전략 회의. '통화 의학이 효과 내기 시작' 내부 공감대. 인플레이션 여전히 높고 지금은 wait and see. 금리 빨리 내리긴 어렵다는 신호",
+    contentEn: "Fed Warsh FOMC restructure: -1 voter from Fall 2027, meetings 8→6 in 2028 (2 become strategy sessions, no vote). Overwhelming internal consensus: 'monetary medicine is starting to work.' Inflation still elevated. Fed in wait and see mode — no rush to cut.",
+    createdAt: T29OCT + 120*60_000, likes: 21, comments: 0 },
+  { id: 122450, symbol: "GOOGL", nickname: "구글Gemini4Carbon장문맥락구십육퍼센트", holdingLabel: "관심종목",
+    content: "Google Gemini 4 Carbon — 장문 맥락 점수 96%(경쟁 모델 70% 대비 압도), SWE-sweep 9.6%(경쟁 4.3%). Vals Index v5.0은 59점으로 GPT-4 Atlas 67점보다 낮음. 코딩·에이전틱 분야에서 특히 강하고 장문 처리는 세계 최강급. GOOGL Cloud 수요에 긍정 시그널",
+    contentEn: "Google Gemini 4 Carbon: 96% long-context (rivals ~70%), SWE-sweep 9.6% (rivals 4.3%). Vals Index v5.0: 59 vs GPT-4 Atlas 67. Leads on agentic/coding benchmarks, trails on overall index. Positive signal for Google Cloud enterprise demand.",
+    createdAt: T29OCT + 112*60_000, likes: 23, comments: 0 },
+  { id: 122449, symbol: "SPCX", nickname: "앤트로픽현금백삼십이B미국비금융삼위", holdingLabel: "관심종목",
+    content: "Anthropic S-1 나온 것 중 충격적인 게 현금 $131.7B이야. Berkshire $365B·Alphabet $242B 다음 3위임. Amazon $123B·SpaceX $100B·Meta $90B·MSFT $76B·NVDA $62B 다 제쳤음. 창업 6년 된 회사가 이 순위에 있다는 거 자체가 AI 자본집중의 규모를 보여줌",
+    contentEn: "Anthropic S-1 shock: $131.7B in cash+ST investments. That's #3 non-banking US company — behind only Berkshire $365B and Alphabet $242B. Ahead of Amazon $123B, SpaceX $100B, Meta $90B, MSFT $76B, NVDA $62B. A 6-year-old company at this level shows the scale of AI capital concentration.",
+    createdAt: T29OCT + 104*60_000, likes: 32, comments: 0 },
+  { id: 122448, symbol: "AMZN", nickname: "AWS2028년삼백칠십삼B모건스탠리삼배전망", holdingLabel: "관심종목",
+    content: "Morgan Stanley AWS 전망 — 2025 $128.7B → 2026E $178.3B(+38%) → 2027E $262.3B(+47%) → 2028E $373.6B(+42%). 3년 만에 2.9배. 성장률이 오히려 가속되는 게 핵심. AI 클라우드 수요가 구조적으로 쭉 간다는 거임. Anthropic Amazon 약정 $110B이 이 숫자의 실체야",
+    contentEn: "Morgan Stanley AWS: 2025 $128.7B → 2026E $178.3B (+38%) → 2027E $262.3B (+47%) → 2028E $373.6B (+42%). Nearly 3x in 3 years with accelerating growth rates. Anthropic's $110B Amazon commitment is one of the foundations of this forecast.",
+    createdAt: T29OCT + 96*60_000, likes: 27, comments: 0 },
+  { id: 122447, symbol: "SPCX", nickname: "스타링크FCC482MHz추가주파수신청", holdingLabel: "보유중",
+    content: "FCC가 Starlink 위성-전화용 주파수 482 MHz 추가 개방 투표 예정. SpaceX가 직접 FCC에 902~928 MHz 유연 면허 제안 제출함. AT&T·Verizon은 290 MHz 가져가길 원함. 더 넓은 주파수 = 문자에서 실제 데이터까지 → Starlink B2C 수익화 확장. ABS Jets는 공인 딜러로 첫 Starlink 탑재 완료(1Gbps)",
+    contentEn: "FCC set to vote on 482 MHz more spectrum for Starlink satellite-to-phone. SpaceX filed directly with FCC proposing 902-928 MHz flexible-use license. AT&T/Verizon want 290 MHz if split. More spectrum = texts to real data → Starlink B2C revenue expansion. ABS Jets certified dealer, first Starlink aviation install done (1Gbps).",
+    createdAt: T29OCT + 88*60_000, likes: 24, comments: 0 },
+  { id: 122446, symbol: "SPCX", nickname: "SPCX주간거래량1위두번기관매집패턴", holdingLabel: "보유중",
+    content: "10월 20~27일 SPCX 주간 — ETF 제외 전체 거래량 1위를 2번 찍었다(21일 217M주, 23일 109M주). 가격은 $144~148 구간에서 꼼짝 않음. 이게 기관이 주가 안 올리면서 물량 조용히 쌓는 패턴임. 일반 투자자 반응으로 저런 거래량 나올 수가 없음",
+    contentEn: "SPCX weekly (Oct 20-27): #1 volume twice (Oct21 217M shares, Oct23 109M shares). Price held $144-148 range throughout. That's not retail — institutions accumulating without moving the price. 4 of 5 trading days in TOP 5 volume.",
+    createdAt: T29OCT + 80*60_000, likes: 28, comments: 0 },
+  { id: 122445, symbol: "TSLA", nickname: "옵티머스팔로알토로봇유니버시티사십카메라", holdingLabel: "보유중",
+    content: "Tesla 팔로알토 Optimus 연구 시설 — 24파운드 슈트에 카메라 40개+3D 센서 그리드. 3교대 24시간 돌아가고 가정 데이터팀·공장 데이터팀 따로 있음. Tesla 차량 카메라 9개인데 Optimus 슈트는 40개. 데이터 flywheel이 차원이 다름. Elon 장난 아님",
+    contentEn: "Tesla Palo Alto Optimus facility — 24lb suits with 40 cameras + 3D sensor grids, 24/7 across 3 shifts. Separate teams for home data and factory data. Tesla car has 9 cameras; Optimus suit has 40. The data flywheel isn't comparable. Elon isn't playing around.",
+    createdAt: T29OCT + 72*60_000, likes: 31, comments: 0 },
+  { id: 122444, symbol: "TSLA", nickname: "사이버캡오백칠십삼대와이모비용칠배차이", holdingLabel: "보유중",
+    content: "텍사스 DMV 업데이트 — Cybercab 573대. 지난주에만 +222대 추가. Waymo는 1,207대인데 플릿 비용이 $212M(대당 $175K). Tesla는 573대에 $14M(대당 $25K). 1,000대 기준으로 Waymo $175M vs Tesla $25M 7배 차이. 규모 키울수록 Tesla가 훨씬 유리한 구조",
+    contentEn: "Texas DMV: Cybercab now 573 (+222 last week alone). Waymo 1,207 units = $212M fleet cost ($175K/unit). Tesla 573 units = $14M ($25K/unit). Per 1,000 vehicles: Waymo $175M vs Tesla $25M — 7x cost difference. Scale favors Tesla massively.",
+    createdAt: T29OCT + 64*60_000, likes: 33, comments: 0 },
+  { id: 122443, symbol: "GOOGL", nickname: "구글Q3어닝마이너스구퍼센트FCF연속음수Capex두배", holdingLabel: "관심종목",
+    content: "GOOGL Q3 — 매출 $127.6B(+25%) 인라인인데 주가 -9%. Cloud $30.7B(+5% 예상 상회)은 좋은데 Search $63.4B이 예상 -2% 밑돌고, 영업마진 34%→31.8% 하락, FCF 2분기 연속 마이너스(-$5.9B→-$9.1B), Capex 1년 만에 2배. AI 투자 비용이 수익보다 빠르게 늘어나는 중",
+    contentEn: "GOOGL Q3: Revenue $127.6B (+25%) inline but stock -9%. Cloud $30.7B strong (+5% vs est). Search $63.4B missed -2%. Op margin 34%→31.8%. FCF -$5.9B Q2 → -$9.1B Q3 (2nd straight negative). Capex doubled in a year. AI investment outpacing revenue conversion.",
+    createdAt: T29OCT + 56*60_000, likes: 26, comments: 0 },
+  { id: 122442, symbol: "MSFT", nickname: "MSFT어닝EPS사점팔구달러비트플러스육퍼센트", holdingLabel: "보유중",
+    content: "MSFT Q3 어닝 — EPS $4.89(예상 $4.72, +4% 비트), 매출 $92.2B(예상 $90.7B, +2% 비트). EPS +18% YoY, 매출 +19% YoY. 발표 후 +6.11%. 어닝 전에 540콜 스윕 $572K·$3.7M 포착됐었는데 그게 맞았네. AI 수요 실적으로 계속 연결되는 중",
+    contentEn: "MSFT Q3: EPS $4.89 beat $4.72 (+4%), Revenue $92.2B beat $90.7B (+2%). EPS +18% YoY, Rev +19% YoY. Stock +6.11% post-earnings. Pre-earnings 540 call sweeps ($572K, $3.7M) played out perfectly. AI demand converting to earnings.",
+    createdAt: T29OCT + 48*60_000, likes: 34, comments: 0 },
   // ── 2026-10-28 (수) 추가 ────────────────
   { id: 122441, symbol: "NVDA", nickname: "엔비디아Neocloud육십칠점칠B", holdingLabel: "보유중",
     content: "Deutsche Bank NVDA Neocloud 수주 잔량 — 계약 783K GPU/$67.7B 확정, 2027E 업사이드 2,323K/$216B. GB300 $13.70/hr로 최고가. Customer #1이 435K로 전체 55%. 이 숫자들 보면 NVDA 데이터센터 사업이 어느 규모인지 다시 실감됨",
@@ -6271,6 +6317,50 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   122432: [
     { id: 1224321, nickname: "SpaceX사십B아폴로골드만", holdingLabel: "보유중", content: "CapEx 낮춘 게 오히려 주가엔 좋을 수 있어. FCF 개선되면 자사주 매입이나 투자 유연성이 생기거든", likes: 7, createdAt: T28OCT + 4920000 },
     { id: 1224322, nickname: "FOMC동결삼점칠오사점영영", holdingLabel: "관심종목", content: "FSD 1.7M이면 소프트웨어 수익이 진짜 커지고 있는 거야. 마진이 80%+인 구독 수익이 이 규모면 게임 체인저", likes: 6, createdAt: T28OCT + 5100000 },
+  ],
+  122452: [
+    { id: 1224521, nickname: "SPCX주간거래량1위두번기관매집패턴", holdingLabel: "보유중", content: "MSFT 어닝 비트에 구글은 Capex 두 배, 어닝 미스까지. AI 투자하는 쪽이랑 못 따라가는 쪽이 완전히 갈리는 날이었음", likes: 9, createdAt: T29OCT + 3600000 },
+    { id: 1224522, nickname: "사이버캡오백칠십삼대와이모비용칠배차이", holdingLabel: "보유중", content: "사이버캡 573대에 와이모 운영비 7배 차이. 이 두 가지가 같은 날 나온 게 로보택시 경쟁 구도를 완전히 정리해줬다", likes: 8, createdAt: T29OCT + 3780000 },
+  ],
+  122451: [
+    { id: 1224511, nickname: "Fed워시FOMC여덟회의에서여섯회의", holdingLabel: "관심종목", content: "FOMC 8회 중 6회 참석이면 사실상 의결권 없이 앉아 있는 거잖아. 파월 임기 끝나고 워시가 의장되면 회의 분위기 자체가 달라질 것 같음", likes: 7, createdAt: T29OCT + 3660000 },
+    { id: 1224512, nickname: "앤트로픽현금백삼십이B미국비금융삼위", holdingLabel: "관심종목", content: "2025년 3회 인하 후 동결 기조가 유지되는 게 시장엔 오히려 안정감. 급격한 변화보다 예측 가능한 패턴이 낫다", likes: 6, createdAt: T29OCT + 3840000 },
+  ],
+  122450: [
+    { id: 1224501, nickname: "구글Gemini4Carbon장문맥락구십육퍼센트", holdingLabel: "관심종목", content: "long-context 96%가 실제 업무에서 뭘 의미하냐면 수천 페이지 문서를 한번에 처리하는 게 가능하다는 거. 법률, 의료, 엔지니어링 분야 실수요가 폭발할 수 있음", likes: 8, createdAt: T29OCT + 3720000 },
+    { id: 1224502, nickname: "구글Q3어닝마이너스구퍼센트FCF연속음수Capex두배", holdingLabel: "관심종목", content: "Capex가 두 배인데 FCF가 마이너스면 AI 모델 경쟁에 쏟아붓는 거잖아. Gemini 4가 실패하면 어디다 설명하냐. 구글 입장에서 이번 Gemini는 반드시 성과내야 하는 모델임", likes: 7, createdAt: T29OCT + 3900000 },
+  ],
+  122449: [
+    { id: 1224491, nickname: "앤트로픽현금백삼십이B미국비금융삼위", holdingLabel: "관심종목", content: "현금 $131.7B이 미국 비금융 기업 3위면 Apple, Alphabet, Microsoft 수준인 거잖아. AI 스타트업이라는 게 말이 안 되는 포지션임", likes: 10, createdAt: T29OCT + 3780000 },
+    { id: 1224492, nickname: "SPCX주간거래량1위두번기관매집패턴", holdingLabel: "보유중", content: "SpaceX가 Anthropic 컴퓨팅 인프라 46% 쥐고 있는 게 이제 SEC 문서로 확인됐으니까 SPCX한테 직접 수혜 경로가 공식화된 거야", likes: 9, createdAt: T29OCT + 3960000 },
+  ],
+  122448: [
+    { id: 1224481, nickname: "AWS2028년삼백칠십삼B모건스탠리삼배전망", holdingLabel: "관심종목", content: "AWS가 $373B 가는 시나리오면 지금 $100B 수준에서 3배가 넘는 거잖아. 모건스탠리가 2년 안에 이걸 예측한다는 게 컨센서스 대비 엄청 공격적임", likes: 9, createdAt: T29OCT + 3840000 },
+    { id: 1224482, nickname: "Fed워시FOMC여덟회의에서여섯회의", holdingLabel: "관심종목", content: "AI 수요가 AWS를 밀어올리는 구조가 GPU 공급 제약만 없으면 가속될 수 있어. 모건스탠리 전망의 핵심 가정이 공급 확보 여부일 것 같음", likes: 7, createdAt: T29OCT + 4020000 },
+  ],
+  122447: [
+    { id: 1224471, nickname: "스타링크FCC482MHz추가주파수신청", holdingLabel: "보유중", content: "FCC에 482MHz 추가 신청하면 기존 대역 포함해서 스타링크 위성 통신 대역폭이 두 배 가까이 늘어나는 거잖아. 지상망 없는 나라들이 엄청 혜택 받음", likes: 8, createdAt: T29OCT + 3900000 },
+    { id: 1224472, nickname: "SPCX주간거래량1위두번기관매집패턴", holdingLabel: "보유중", content: "902~928MHz ISM 대역 공유 신청이면 기기 제조업체들이랑 협력 모델도 가능해짐. 스마트폰 기본 위성 연결이 스타링크로 표준화되는 시나리오", likes: 7, createdAt: T29OCT + 4080000 },
+  ],
+  122446: [
+    { id: 1224461, nickname: "SPCX주간거래량1위두번기관매집패턴", holdingLabel: "보유중", content: "ETF 제외 거래량 1위를 2주 연속 찍은 게 단기 이벤트가 아니야. 기관이 물량 쌓는 패턴이 이렇게 나옴. 분기 보고서 나오면 바로 확인될 것", likes: 11, createdAt: T29OCT + 3960000 },
+    { id: 1224462, nickname: "앤트로픽현금백삼십이B미국비금융삼위", holdingLabel: "보유중", content: "거래량 1위인데 주가가 안 튀는 건 매수 측이 가격 안 올리면서 모으는 거임. 진짜 큰 손들이 공개 매집할 때 이런 패턴 자주 나옴", likes: 9, createdAt: T29OCT + 4140000 },
+  ],
+  122445: [
+    { id: 1224451, nickname: "옵티머스팔로알토로봇유니버시티사십카메라", holdingLabel: "보유중", content: "로봇 대학이라는 개념이 신기하긴 한데 거기서 학습한 데이터가 실제 Optimus 배포에 반영되면 학습 속도가 기하급수적으로 빨라지겠지", likes: 9, createdAt: T29OCT + 4020000 },
+    { id: 1224452, nickname: "사이버캡오백칠십삼대와이모비용칠배차이", holdingLabel: "보유중", content: "카메라 40개짜리가 Palo Alto에 실제 배포됐다는 거면 이제 FSD 학습 데이터가 또 한번 폭발적으로 늘어나는 구조. 모델 개선이 더 빨라짐", likes: 8, createdAt: T29OCT + 4200000 },
+  ],
+  122444: [
+    { id: 1224441, nickname: "사이버캡오백칠십삼대와이모비용칠배차이", holdingLabel: "보유중", content: "Waymo 운영비 7배 차이가 핵심이야. 같은 거리를 달리는 데 비용이 7배 차이나면 규모의 경제로 역전되는 게 아니라 구조 자체가 다른 거임", likes: 12, createdAt: T29OCT + 4080000 },
+    { id: 1224442, nickname: "SPCX주간거래량1위두번기관매집패턴", holdingLabel: "보유중", content: "Cybercab 573대에서 일일 +13대 페이스 유지되면 Waymo 잡는 게 시간 문제야. 그때 시장이 어떻게 반응하는지가 진짜 변곡점", likes: 10, createdAt: T29OCT + 4260000 },
+  ],
+  122443: [
+    { id: 1224431, nickname: "구글Q3어닝마이너스구퍼센트FCF연속음수Capex두배", holdingLabel: "관심종목", content: "EPS $2.12 미스인데 매출은 괜찮았어. Cloud $30.7B이 컨센 넘었고 유튜브 광고도 견조했는데 Capex 두 배가 이익률을 다 잡아먹은 구조임", likes: 8, createdAt: T29OCT + 4140000 },
+    { id: 1224432, nickname: "구글Gemini4Carbon장문맥락구십육퍼센트", holdingLabel: "관심종목", content: "FCF 2분기 연속 마이너스가 투자자한테 설명하기 제일 어려운 부분이지. 하지만 Gemini 4 Carbon이 실제 성과를 내면 이 투자가 정당화됨. 결과로 증명해야 함", likes: 7, createdAt: T29OCT + 4320000 },
+  ],
+  122442: [
+    { id: 1224421, nickname: "MSFT어닝EPS사점팔구달러비트플러스육퍼센트", holdingLabel: "보유중", content: "Azure +40%가 AI 클라우드 수요가 둔화 없이 가속 중이라는 증거야. MSFT가 기업 AI 도입의 최대 수혜자 포지션을 확실히 굳히는 어닝이었음", likes: 11, createdAt: T29OCT + 4200000 },
+    { id: 1224422, nickname: "AWS2028년삼백칠십삼B모건스탠리삼배전망", holdingLabel: "관심종목", content: "EPS +6% 비트에 Azure 가속. 이게 나오는 날 구글이 미스 내면 AI 클라우드 투자 선택지가 MSFT, AWS로 집중되는 거야. 오늘 시장 반응이 그걸 보여줌", likes: 9, createdAt: T29OCT + 4380000 },
   ],
   122441: [
     { id: 1224411, nickname: "앤트로픽S1십육점삼B천삼백퍼센트", holdingLabel: "관심종목", content: "2027E $216B가 현실화되면 NVDA 데이터센터 단독 매출이 전체 매출 규모를 넘어서는 거잖아. 3.2배 확장이 3년 안에 가능한지 지켜봐야", likes: 8, createdAt: T28OCT + 3960000 },

@@ -174,6 +174,25 @@ const ALLOW = new Set([
   // 2026-10-28 추가 — Neocloud 고객·DB·ROI 용어
   "bank", "contracted", "exiting", "upside", "customer", "reflection", "roi", "xai", "investus",
   "nbank", "ncustomer", "nreflection", "nroi", "nxai", "ninvestus",
+  // 2026-10-29 추가 — MSFT/GOOGL 어닝·Gemini 4·AWS·Anthropic·FOMC·Starlink
+  "msft", "googl", "amzn", "alphabet", "youtube", "search", "management", "commentary",
+  "jaguar", "zeekr", "ojai", "pace", "total", "ownership", "hybrid",
+  "solutions", "systems", "cash", "flow", "quarterly", "operating", "free",
+  "atlas", "vals", "haiku", "sweep", "context", "long", "agentic", "frontier",
+  "terminal", "bench", "agents", "exam", "vending", "osworld",
+  "warsh", "carbon", "legacy", "jets", "aviation", "gbps", "dealer", "certified",
+  "satellite", "phone", "flexible", "license", "zone", "texts", "verizon",
+  "coverage", "ism", "band", "petition", "spectrum", "standard",
+  "enterprise", "adoption", "workflows", "analytics", "automation",
+  "composite", "benchmark", "index", "acceleration", "agentic",
+  "hardware", "infrastructure", "compute", "throughput", "latency",
+  "quarterly", "negative", "sequential", "margin", "lagging",
+  "commitment", "contracted", "tranche", "structured",
+  // \n 아티팩트
+  "nmsft", "ngoogl", "namzn", "nalphabet", "nyoutube", "nsearch",
+  "natlas", "nvals", "nwarsh", "ncarbon", "nlegacy", "njets",
+  "naviation", "ngbps", "nzone", "ntexts", "nverizon", "nspectrum",
+  "nenterprise", "nadoption", "nworkflows", "nanalytics",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */

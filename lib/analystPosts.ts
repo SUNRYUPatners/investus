@@ -18,6 +18,73 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-10-29 (목) 추가 ──────────────────────
+  {
+    id: -1706, alias: "마포 두루미 #55", symbol: "MSFT",
+    content: "MSFT Q3 EPS $4.89, 컨센 $4.61 대비 +6% 비트. Azure +40%가 AI 수요 가속 증거입니다. 어닝 시즌 빅테크 중 가장 깔끔한 숫자가 나왔고 클라우드 모멘텀이 2027까지 이어질 가능성이 높습니다.",
+    contentEn: "MSFT Q3 EPS $4.89, beat $4.61 est by +6%. Azure +40% proves AI demand acceleration. Cleanest print of big-tech earnings season — cloud momentum likely extends into 2027.",
+    likes: 27, comments: 2, created_at: "2026-10-29T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -1705, alias: "종로 두견새 #39", symbol: "GOOGL",
+    content: "GOOGL Q3 EPS $2.12, 컨센 $2.23 미스. FCF 2분기 연속 마이너스, CapEx 전년비 2배. Cloud $30.7B은 컨센 초과했지만 전사 이익률이 AI 투자에 다 잡혔습니다. Gemini 4가 성과를 내야 정당화됩니다.",
+    contentEn: "GOOGL Q3 EPS $2.12 vs $2.23 est — a miss. FCF negative for 2nd straight Q, CapEx doubled YoY. Cloud $30.7B beat but total margin sacrificed to AI spend. Gemini 4 must deliver.",
+    likes: 23, comments: 2, created_at: "2026-10-29T00:45:00.000Z", liked: false,
+  },
+  {
+    id: -1704, alias: "여의도 도요새 #62", symbol: "TSLA",
+    content: "사이버캡 573대(+29), 와이모 운영비 7배 차이. Waymo 차량당 유지비가 Cybercab 대비 7배라는 TxDMV 데이터가 공개됐습니다. 규모 확장하면 할수록 Tesla가 구조적으로 유리한 원가 구조입니다.",
+    contentEn: "Cybercab 573 units (+29 day). Texas DMV fleet cost data: Waymo per-unit operating cost is 7x Cybercab. The structural cost advantage widens with scale — Tesla's unit economics win decisively.",
+    likes: 25, comments: 2, created_at: "2026-10-29T00:36:00.000Z", liked: false,
+  },
+  {
+    id: -1703, alias: "강동 뿔논병아리 #19", symbol: "TSLA",
+    content: "Tesla Optimus가 Palo Alto에 카메라 40대짜리 Robot University를 세웠습니다. 실제 배포 환경에서 대규모 학습 데이터를 모으는 구조입니다. 로봇 학습 속도가 Robotaxi와 비슷한 플라이휠로 돌아가기 시작했습니다.",
+    contentEn: "Tesla opened an Optimus 'Robot University' in Palo Alto, 40-camera setup for real-world learning at scale. The robotics flywheel is now spinning — same learning curve dynamic as Robotaxi ramp.",
+    likes: 22, comments: 2, created_at: "2026-10-29T00:27:00.000Z", liked: false,
+  },
+  {
+    id: -1702, alias: "용산 뻐꾸기 #27", symbol: "SPCX",
+    content: "SPCX ETF 제외 주간 거래량 1위를 2주 연속 달성했습니다. 1위가 한 번이면 이벤트, 두 번 연속이면 기관 매집 패턴입니다. 분기 13F에서 기관 매수 확인될 경우 주가 재평가 촉매가 될 수 있습니다.",
+    contentEn: "SPCX ranked #1 in weekly volume (ex-ETFs) for 2 straight weeks. One week is noise — two in a row is institutional accumulation. Watch Q-end 13F filings for confirmation.",
+    likes: 24, comments: 2, created_at: "2026-10-29T00:18:00.000Z", liked: false,
+  },
+  {
+    id: -1701, alias: "마포 두루미 #55", symbol: "SPCX",
+    content: "SpaceX Starlink FCC 482MHz 추가 스펙트럼 신청. 기존 대역에 902~928MHz ISM 대역 공유를 요청한 겁니다. 위성-지상 직접 연결 커버리지가 확대되면 스타링크 고객사·단말 제조사와 협력 구조가 다변화됩니다.",
+    contentEn: "SpaceX petitioned FCC for 482MHz additional spectrum for Starlink, including 902-928MHz ISM band sharing. Approval expands direct-to-device coverage and opens new partnership models with handset makers.",
+    likes: 21, comments: 2, created_at: "2026-10-29T00:09:00.000Z", liked: false,
+  },
+  {
+    id: -1700, alias: "종로 두견새 #39", symbol: "AMZN",
+    content: "모건스탠리가 AWS 2028년 매출 $373.6B 전망을 제시했습니다. 현재 연간 $100B 수준에서 3.7배 성장입니다. AI 클라우드 수요가 공급 제약 없이 이어진다는 가정이지만 AWS 자체 칩(Trainium)과 GPU 확보 전략이 이 시나리오를 현실화하는 열쇠입니다.",
+    contentEn: "Morgan Stanley projects AWS revenue at $373.6B by 2028 — a 3.7x leap from current ~$100B run rate. Key assumption: AI demand stays unconstrained. AWS Trainium + GPU procurement strategy is what makes this real.",
+    likes: 26, comments: 2, created_at: "2026-10-29T01:00:00.000Z", liked: false,
+  },
+  {
+    id: -1699, alias: "여의도 도요새 #62", symbol: "SPCX",
+    content: "Anthropic 현금 $131.7B — 미국 비금융 기업 3위입니다. Apple·Alphabet 수준의 현금 보유가 AI 스타트업에서 나온 겁니다. SpaceX가 이 현금의 AI 컴퓨팅 공급자이고 $120.5B 약정이 SEC 문서에 명기돼 있습니다.",
+    contentEn: "Anthropic cash $131.7B = 3rd largest among US non-financials (Apple, Alphabet tier). This level of cash in an AI startup is unprecedented. SpaceX is the infrastructure supplier, with $120.5B in commitments on record with the SEC.",
+    likes: 28, comments: 2, created_at: "2026-10-29T01:09:00.000Z", liked: false,
+  },
+  {
+    id: -1698, alias: "강동 뿔논병아리 #19", symbol: "GOOGL",
+    content: "구글 Gemini 4 Carbon — long-context 96% SOTA, 10M 토큰 컨텍스트, 법률·의료·엔지니어링 업무용 실수요가 겨냥점입니다. CapEx 두 배를 투자하고 FCF가 마이너스인 상황에서 Gemini 4가 이익 전환의 열쇠입니다.",
+    contentEn: "Gemini 4 Carbon: 96% long-context SOTA, 10M token context. Targets law, medicine, engineering — high-value enterprise workflows. With CapEx doubled and FCF negative, Gemini 4 is Google's profit pivot thesis.",
+    likes: 22, comments: 2, created_at: "2026-10-29T01:18:00.000Z", liked: false,
+  },
+  {
+    id: -1697, alias: "용산 뻐꾸기 #27", symbol: "",
+    content: "Fed 워시 총재가 FOMC 8회 중 6회에 참석했습니다. 2025년 금리 인하 3회 후 동결 유지가 베이스 시나리오입니다. 파월 임기 종료 후 워시 의장 시대에는 데이터 의존적 기조가 더 강해질 가능성이 있습니다.",
+    contentEn: "Fed's Waller attended 6 of 8 FOMC meetings. Base case: 3 cuts in 2025, then hold. Post-Powell era under Waller likely brings stronger data-dependence — market should expect less forward guidance.",
+    likes: 19, comments: 2, created_at: "2026-10-29T01:27:00.000Z", liked: false,
+  },
+  {
+    id: -1696, alias: "마포 두루미 #55", symbol: "MSFT",
+    content: "오늘의 핵심 — MSFT 어닝 비트·Azure 가속 vs GOOGL 어닝 미스·FCF 마이너스. AI 클라우드 투자에서 이익으로 전환한 쪽(MSFT)과 아직 투자 단계인 쪽(GOOGL)이 어닝으로 갈렸습니다. 구도가 점점 선명해지고 있습니다.",
+    contentEn: "Today's key contrast: MSFT earnings beat + Azure acceleration vs GOOGL miss + negative FCF. Cloud AI winners (profitable) vs still-investing (cash burning) are diverging clearly this earnings season.",
+    likes: 31, comments: 2, created_at: "2026-10-29T01:36:00.000Z", liked: false,
+  },
   // ── 2026-10-28 (수) 추가 ──────────────────────
   {
         id: -1695, alias: "마포 두루미 #55", symbol: "NVDA",
@@ -10628,6 +10695,51 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   [-1684]: [
     { alias: "노원 알락할미새 #71", content: "오늘은 SPCX 리레이팅 근거 데이터가 집중적으로 나왔네요. S-1 확인이 제일 큰 것 같아요", created_at: "2026-10-27T02:06:00.000Z" },
     { alias: "판교 민물도요 #33", content: "NVDA 분기 $130B 예상은 시장이 얼마나 선반영했는지 모르겠는데 아직 모르는 사람이 많을 것 같아요", created_at: "2026-10-27T02:19:00.000Z" },
+  ],
+  // ── 2026-10-29 애널 댓글 ──────────────────────
+  [-1706]: [
+    { alias: "종로 두견새 #39", content: "Azure +40%가 AI 수요 둔화 없이 가속 중이라는 증거야. 구글 클라우드가 잘 나와도 MSFT가 기업 AI 도입 최대 수혜자 포지션을 완전히 굳힌 어닝이었음", created_at: "2026-10-29T01:00:00.000Z" },
+    { alias: "판교 민물도요 #33", content: "EPS +6% 비트에 가이던스까지 시장 기대 충족. MSFT 이 정도면 빅테크 어닝 중 제일 깔끔한 숫자임. 구글이랑 비교되는 날이었음", created_at: "2026-10-29T01:10:00.000Z" },
+  ],
+  [-1705]: [
+    { alias: "마포 두루미 #55", content: "CapEx 두 배에 FCF 마이너스인데 매출 미스까지. Gemini 4 Carbon이 실제 엔터프라이즈 채택률 높아지지 않으면 2027 어닝에서 또 어렵겠다", created_at: "2026-10-29T00:54:00.000Z" },
+    { alias: "여의도 도요새 #62", content: "Cloud $30.7B 컨센 초과가 유일한 긍정 포인트. 광고 외 사업이 이 정도 성장하면 구조 전환은 맞는데 이익률 희생이 언제까지냐가 투자자 핵심 관심사", created_at: "2026-10-29T01:00:00.000Z" },
+  ],
+  [-1704]: [
+    { alias: "강동 뿔논병아리 #19", content: "Waymo 7배 비용 차이가 실데이터로 나온 게 처음이잖아. 그냥 말이 아니라 TxDMV 등록 데이터 기반이라 반박이 어려움. 로보택시 경쟁 구도 확정됐다고 봄", created_at: "2026-10-29T00:45:00.000Z" },
+    { alias: "노원 알락할미새 #71", content: "573대에서 하루 13대 페이스 유지되면 두 달 안에 1,000대 더 넘고 Waymo도 추월. 스케일업 속도가 Waymo 전략 전체를 흔드는 수준", created_at: "2026-10-29T00:55:00.000Z" },
+  ],
+  [-1703]: [
+    { alias: "용산 뻐꾸기 #27", content: "카메라 40대짜리 환경에서 수집되는 데이터 밀도가 어마어마할 거야. 3D 공간 인식에 필요한 엣지 케이스 데이터를 실제 로봇 배포 중에 모으는 구조임", created_at: "2026-10-29T00:36:00.000Z" },
+    { alias: "광화문 논병아리 #14", content: "Robotaxi 플라이휠이랑 같은 구조가 Optimus에 적용되면 학습 속도 가속화로 제품 성숙 타임라인이 크게 당겨질 수 있음", created_at: "2026-10-29T00:46:00.000Z" },
+  ],
+  [-1702]: [
+    { alias: "마포 두루미 #55", content: "거래량 2주 연속 1위면 기관이 공개 매수하면서도 가격 안 올리려고 분산 매집하는 패턴이야. 13F 공시 나오면 바로 확인될 것", created_at: "2026-10-29T00:27:00.000Z" },
+    { alias: "판교 민물도요 #33", content: "ETF 제외 1위라는 게 중요해. 개인 단타가 아니라 기관 자금이 직접 들어오는 거임. 누군가 SPCX에 포지션 쌓고 있다는 신호", created_at: "2026-10-29T00:37:00.000Z" },
+  ],
+  [-1701]: [
+    { alias: "종로 두견새 #39", content: "FCC 스펙트럼 추가 신청이면 심사 기간 6개월~1년. 빨리 승인되면 2027년부터 위성 직접 연결 커버리지가 획기적으로 늘어남", created_at: "2026-10-29T00:18:00.000Z" },
+    { alias: "여의도 도요새 #62", content: "ISM 대역 공유 방식이면 기존 기기에도 호환될 수 있어. 새 단말 없이 소프트웨어 업데이트로 스타링크 위성 연결 되는 시나리오가 가능해지는 거임", created_at: "2026-10-29T00:28:00.000Z" },
+  ],
+  [-1700]: [
+    { alias: "강동 뿔논병아리 #19", content: "모건스탠리가 $373B 전망 내놓은 근거가 AI 워크로드 성장률이 현재 추세 유지라는 가정인데. Trainium 자체 칩이 GPU 제약을 어느 정도 해소해주는 게 핵심 변수임", created_at: "2026-10-29T01:10:00.000Z" },
+    { alias: "광화문 논병아리 #14", content: "AWS 현재 연간 $100B 수준에서 3.7배면 2028년까지 2년 반 만에야. CAGR로 보면 60%+ 성장인데 이걸 유지하려면 AI 수요가 둔화되면 안 됨", created_at: "2026-10-29T01:20:00.000Z" },
+  ],
+  [-1699]: [
+    { alias: "마포 두루미 #55", content: "현금 $131.7B이 Apple·Alphabet 수준인데 Anthropic이 스타트업이잖아. AI 모델 회사가 이 규모의 현금을 보유할 수 있다는 게 사업 모델 자체가 달라졌다는 신호임", created_at: "2026-10-29T01:19:00.000Z" },
+    { alias: "판교 민물도요 #33", content: "$265.6B 미래 약정에서 SpaceX 46%인데 이게 SEC 문서 기재야. 법적 구속력 있는 수치고 Anthropic이 SpaceX AI 컴퓨팅에 전략적으로 묶여 있다는 게 공식 확인됐음", created_at: "2026-10-29T01:29:00.000Z" },
+  ],
+  [-1698]: [
+    { alias: "여의도 도요새 #62", content: "long-context 96%가 실제 업무에서 갖는 의미가 크진 않냐. 수천 페이지 계약서·판례를 한번에 읽고 분석하는 게 가능해지면 법률·금융 자동화 속도가 달라짐", created_at: "2026-10-29T01:28:00.000Z" },
+    { alias: "강동 뿔논병아리 #19", content: "CapEx 두 배 쓰면서 Gemini 4 Carbon 내놓은 거잖아. 이 모델이 엔터프라이즈 채택률 높아지면 구글 클라우드 매출 가속으로 연결됨. 2027 H1이 첫 번째 확인 시점", created_at: "2026-10-29T01:38:00.000Z" },
+  ],
+  [-1697]: [
+    { alias: "용산 뻐꾸기 #27", content: "워시가 8회 중 6회 출석이면 정책 연속성이 있다는 거야. 2025년 인하 3회 후 동결이면 시장 예측 가능성은 유지됨. 급격한 변화보다는 안정 기조 유지 예상", created_at: "2026-10-29T01:37:00.000Z" },
+    { alias: "노원 알락할미새 #71", content: "파월 이후 의장이 데이터 의존적 기조를 더 강화하면 포워드 가이던스가 줄어들 수 있어. 시장이 각 회의마다 더 민감하게 반응하는 구조로 바뀔 수 있음", created_at: "2026-10-29T01:47:00.000Z" },
+  ],
+  [-1696]: [
+    { alias: "종로 두견새 #39", content: "MSFT 비트·GOOGL 미스가 같은 날 나왔다는 게 AI 클라우드에서 이미 승자가 갈리고 있다는 신호. 양쪽 다 AI에 투자하는데 결과가 이렇게 다른 건 실행력 차이임", created_at: "2026-10-29T01:46:00.000Z" },
+    { alias: "광화문 논병아리 #14", content: "어닝 시즌이 끝나면 AI 투자에서 이익 전환한 회사와 아직 투자 단계인 회사의 밸류에이션 스프레드가 더 벌어질 거야. 지금 그 분기점이 확인된 날임", created_at: "2026-10-29T01:56:00.000Z" },
   ],
   // ── 2026-10-28 애널 댓글 ──────────────────────
   [-1695]: [
