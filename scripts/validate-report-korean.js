@@ -193,6 +193,22 @@ const ALLOW = new Set([
   "natlas", "nvals", "nwarsh", "ncarbon", "nlegacy", "njets",
   "naviation", "ngbps", "nzone", "ntexts", "nverizon", "nspectrum",
   "nenterprise", "nadoption", "nworkflows", "nanalytics",
+  // 2026-10-29 저녁 — Semi 화재·Megacharger · SpaceXSI 주택 · 베트남
+  "hayward", "electrek", "lambert", "pilot", "flying", "ellabell", "tulare",
+  "georgia", "california", "stockton", "megacharger", "megachargers",
+  "priestley", "wattev", "oakland", "scale", "pepsico", "nfpa", "ntsb",
+  "premier", "leasing", "trailer", "hayward", "chp", "mcs", "fmcsa",
+  "southaven", "mississippi", "colonial", "hills", "guardian", "forbes",
+  "colossus", "macrohardrr", "naacp", "desoto", "musselwhite", "reeves",
+  "elonville", "airstream", "spacexsi", "spacexai", "selc", "epa",
+  "vinfast", "vietnam", "ricky", "haiphong", "asean", "toyota", "hyundai",
+  "mitsubishi", "ford", "green", "dong", "hochiminh", "saigon",
+  "collins", "roeloffs", "milman", "haley", "rose",
+  "cantor", "fitzgerald", "neutral", "andrew", "jason", "elizabeth",
+  "oliver", "mary", "duke", "watch", "center", "xanh", "drive",
+  "whitfill", "darren", "pham", "vuong", "nhat",
+  "nhayward", "nelectrek", "npilot", "nmegacharger", "nvinfast", "nvietnam",
+  "nsouthaven", "nmississippi", "nguardian", "nforbes", "nnaacp",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */

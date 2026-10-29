@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#120808"/><stop offset="100%" stop-color="#080404"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="58" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">investus.kr</text>
+  <text x="1040" y="58" text-anchor="end" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Oct 29, 2026</text>
+  <rect x="40" y="78" width="200" height="40" rx="20" fill="#F8717126"/>
+  <rect x="40" y="78" width="200" height="40" rx="20" fill="none" stroke="#F87171" stroke-width="2"/>
+  <text x="140" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F87171">🔍 종목분석</text>
+  <rect x="254" y="78" width="110" height="40" rx="20" fill="rgba(255,255,255,0.08)"/>
+  <rect x="254" y="78" width="110" height="40" rx="20" fill="none" stroke="#F87171" stroke-width="2"/>
+  <text x="309" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9FAFB">TSLA</text>
+  <text x="540" y="188" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#F87171" filter="url(#glow)">Semi 화재 · 1.2MW 충전</text>
+  <text x="540" y="236" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">헤이워드 I-880 · 충돌 없음 · Pilot 휴게소 개방</text>
+  <rect x="54" y="268" width="300" height="190" rx="18" fill="#0F1623" stroke="#F87171" stroke-width="2"/>
+  <text x="204" y="302" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">고속도로 통제</text>
+  <text x="204" y="364" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#F87171">~10h</text>
+  <text x="204" y="396" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">남·북 전면 통제</text>
+  <text x="204" y="426" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">수요일 새벽 재개</text>
+<rect x="390" y="268" width="300" height="190" rx="18" fill="#0F1623" stroke="#34D399" stroke-width="2"/>
+  <text x="540" y="302" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">공개 충전 출력</text>
+  <text x="540" y="364" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#34D399">1.2MW</text>
+  <text x="540" y="396" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">파일럿·플라잉J</text>
+  <text x="540" y="426" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">엘라벨·툴레어</text>
+<rect x="726" y="268" width="300" height="190" rx="18" fill="#0F1623" stroke="#FBBF24" stroke-width="2"/>
+  <text x="876" y="302" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">네바다 캐파</text>
+  <text x="876" y="364" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FBBF24">25,000</text>
+  <text x="876" y="396" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">대/년 양산</text>
+  <text x="876" y="426" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">Q3 투자자 자료</text>
+  <rect x="54" y="490" width="972" height="228" rx="22" fill="#0F0A00" stroke="#7F1D1D" stroke-width="2.5"/>
+  <line x1="54" y1="538" x2="1026" y2="538" stroke="#F87171" stroke-width="2"/>
+  <text x="108" y="523" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#F87171">🔥 무슨 일이 있었나요</text>
+  <text x="108" y="562" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">10월 27일 저녁 헤이워드 I-880, 충돌 없이 Semi 화재</text><text x="108" y="596" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">운전자 무사 · 원인 조사 중 · 테슬라 공식 설명 없음</text><text x="108" y="630" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">CHP는 유해 연기 위험을 이유로 전 차로를 막았습니다</text><text x="108" y="664" font-family="Arial,sans-serif" font-size="23" fill="#FDE68A">→ 작은 플릿에서 무충돌 화재는 안전 데이터 포인트입니다</text>
+  <rect x="54" y="732" width="972" height="228" rx="22" fill="#0F0A00" stroke="#064E3B" stroke-width="2.5"/>
+  <line x1="54" y1="780" x2="1026" y2="780" stroke="#34D399" stroke-width="2"/>
+  <text x="108" y="765" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#34D399">⚡ 같은 주, 인프라는 앞으로 갔습니다</text>
+  <text x="108" y="804" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">파일럿 엘라벨(조지아) 6스톨 · 다음날 툴레어 플라잉J</text><text x="108" y="838" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">다음: 포트 스톡턴 TX, 노스 라스베이거스 · 12곳 공사 중</text><text x="108" y="872" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">1.2MW는 30분에 약 60% — 법정 휴게 시간과 맞춰 설계</text><text x="108" y="906" font-family="Arial,sans-serif" font-size="23" fill="#FDE68A">→ 충전망은 열리는데, 배터리 신뢰 질문이 같이 열립니다</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · TSLA Semi · INVESTUS SRP</text>
+</svg>

@@ -171,11 +171,15 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return {
       // Korean locale pages are served under /ko/* by rendering the same routes.
-      // afterFiles runs only when no real file route matches, so real /ko/news/*
-      // routes keep their own files; everything else maps to the default route.
+      // afterFiles runs after the filesystem check but BEFORE dynamic routes, so
+      // a blanket `/ko/:path*` rewrite would steal `app/ko/news/[slug]` (and any
+      // other dynamic /ko page) and serve the English /news/[slug] instead.
+      // Static /ko/news/page.tsx still wins on the filesystem. Exclude /ko/news/*
+      // so the dedicated Korean article files run.
       afterFiles: [
         { source: "/ko", destination: "/" },
-        { source: "/ko/:path*", destination: "/:path*" },
+        { source: "/ko/:segment((?!news)[^/]+)/:path*", destination: "/:segment/:path*" },
+        { source: "/ko/:segment((?!news)[^/]+)", destination: "/:segment" },
       ],
     };
   },
