@@ -32,11 +32,19 @@ export async function GET(req: NextRequest) {
 
   if (error) return NextResponse.json([]);
 
+  // Hide AI-generated "bot" persona posts (AdSense/E-E-A-T compliance). These
+  // were created by the now-disabled market-open-posts cron under fabricated
+  // analyst names; all use bot*@investus.kr user_ids.
+  const isBot = (uid: string | null | undefined) =>
+    typeof uid === "string" && uid.startsWith("bot");
+
   // Strip user_id (email) — never expose to client. Replace with is_mine boolean.
-  const safe = (data ?? []).map(({ user_id, ...rest }) => ({
-    ...rest,
-    is_mine: !!authUser && user_id === authUser.email,
-  }));
+  const safe = (data ?? [])
+    .filter(({ user_id }) => !isBot(user_id))
+    .map(({ user_id, ...rest }) => ({
+      ...rest,
+      is_mine: !!authUser && user_id === authUser.email,
+    }));
   return NextResponse.json(safe);
 }
 
