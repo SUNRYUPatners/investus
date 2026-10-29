@@ -1,108 +1,104 @@
 import type { MetadataRoute } from "next";
+import { getAllArticles } from "@/lib/articles";
 
-// 한국 투자자 인기 종목 + 주요 지수 ETF
-const SYMBOLS = [
-  // 빅테크
-  "AAPL","MSFT","GOOGL","GOOG","AMZN","META","NVDA","TSLA","AVGO","ORCL",
-  // 반도체
-  "AMD","INTC","QCOM","MU","AMAT","LRCX","KLAC","MRVL","ARM","SMCI",
-  // AI / 클라우드
-  "PLTR","SNOW","NET","DDOG","AI","SOUN","BBAI","IONQ","RGTI",
-  // 우주 / 방산
-  "RKLB","PL","SPCE","LMT","RTX","NOC","GD",
-  // 금융
-  "JPM","BAC","GS","MS","V","MA","BRK-B","BRK-A","AXP",
-  // 헬스케어
-  "UNH","LLY","JNJ","ABBV","MRK","PFE","NVO","ISRG",
-  // 에너지
-  "XOM","CVX","COP","SLB",
-  // 소비재 / 리테일
-  "AMZN","COST","WMT","TGT","NKE","SBUX","MCD","NFLX","DIS",
-  // 크립토 관련
-  "COIN","MSTR","MARA","RIOT","HUT",
-  // ETF
-  "SPY","QQQ","TQQQ","SOXL","SOXS","ARKK","IWM","DIA","GLD","SLV",
-  // 한국인 인기
-  "PLTR","RKLB","IONQ","SMCI","TSM","ASML","BABA","JD","SE",
+const base = "https://www.investus.kr";
+
+// Learn hub guides (real, substantive content).
+const LEARN_SLUGS = [
+  "us-stock-basics", "korea-stocks", "safe-assets", "korea-real-estate",
+  "value-investing", "etf", "kr-us-etf", "reits", "options", "technical-analysis",
+  "sp500", "nasdaq", "valuation", "financial-statements", "dividend", "bonds",
+  "safe-haven-etfs", "commodities", "crypto", "macro-rates", "futures",
+  "earnings-season", "buy-checklist", "13f-guide", "economic-calendar", "myths",
+  "dca", "compound", "investing-psychology", "us-stock-tax", "korea-accounts",
+  "usd-krw", "sectors", "fear-greed", "buffett-indicator", "portfolio-strategy",
 ];
 
-// 중복 제거
-const UNIQUE = [...new Set(SYMBOLS)];
-
-const MARKET_PATHS = ["kr", "safe", "kr-re"] as const;
-const MARKET_TABS = ["", "/wall", "/insight", "/search", "/portfolio", "/more"] as const;
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://www.investus.kr";
-  const now  = new Date();
-  const marketEntries: MetadataRoute.Sitemap = MARKET_PATHS.flatMap((m) =>
-    MARKET_TABS.map((tab) => ({
-      url: `${base}/${m}${tab}`,
-      lastModified: now,
-      changeFrequency: tab === "" ? ("always" as const) : tab === "/insight" ? ("daily" as const) : ("always" as const),
-      priority: tab === "" ? 0.95 : tab === "/insight" ? 0.9 : 0.8,
-    })),
-  );
+  const now = new Date();
+  const articles = getAllArticles();
+
+  // Only stock pages that actually have substantive report coverage are indexable.
+  const tickerCount = new Map<string, number>();
+  for (const a of articles) {
+    for (const t of a.tickers) tickerCount.set(t, (tickerCount.get(t) ?? 0) + 1);
+    if (a.ticker) tickerCount.set(a.ticker, (tickerCount.get(a.ticker) ?? 0) + 1);
+  }
+  const coveredTickers = [...tickerCount.entries()]
+    .filter(([t, n]) => n >= 2 && /^[A-Z.]+$/.test(t) && t !== "SPCX")
+    .map(([t]) => t);
+
+  const newsLocalized = (path: string, priority: number, freq: MetadataRoute.Sitemap[number]["changeFrequency"]) => ({
+    url: `${base}${path}`,
+    lastModified: now,
+    changeFrequency: freq,
+    priority,
+    alternates: {
+      languages: {
+        en: `${base}${path}`,
+        ko: `${base}/ko${path}`,
+        "x-default": `${base}${path}`,
+      },
+    },
+  });
+
+  const articleEntries: MetadataRoute.Sitemap = articles.map((a) => ({
+    url: `${base}/news/${a.slug}`,
+    lastModified: a.date ? new Date(a.date) : now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+    alternates: {
+      languages: {
+        en: `${base}/news/${a.slug}`,
+        ko: `${base}/ko/news/${a.slug}`,
+        "x-default": `${base}/news/${a.slug}`,
+      },
+    },
+  }));
+
   return [
-    { url: base,                          lastModified: now, changeFrequency: "always",  priority: 1    },
-    { url: `${base}/insight`,             lastModified: now, changeFrequency: "daily",   priority: 0.95 },
-    { url: `${base}/search`,              lastModified: now, changeFrequency: "always",  priority: 0.9  },
-    { url: `${base}/wall`,                lastModified: now, changeFrequency: "always",  priority: 0.85 },
-    { url: `${base}/portfolio`,           lastModified: now, changeFrequency: "always",  priority: 0.8  },
-    { url: `${base}/more`,                lastModified: now, changeFrequency: "monthly", priority: 0.5  },
-    { url: `${base}/more/about`,          lastModified: now, changeFrequency: "monthly", priority: 0.7  },
-    { url: `${base}/more/contact`,        lastModified: now, changeFrequency: "monthly", priority: 0.7  },
-    { url: `${base}/more/us-investing-guide`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${base}/more/guide`,          lastModified: now, changeFrequency: "monthly", priority: 0.65 },
-    { url: `${base}/more/faq`,            lastModified: now, changeFrequency: "monthly", priority: 0.65 },
-    { url: `${base}/more/privacy`,        lastModified: now, changeFrequency: "yearly",  priority: 0.55  },
-    { url: `${base}/more/terms`,          lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
-    { url: `${base}/more/refund`,         lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
-    { url: `${base}/more/disclaimer`,     lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
-    // 투자 지식 허브 (심화 가이드)
-    { url: `${base}/learn`,                        lastModified: now, changeFrequency: "weekly",  priority: 0.9  },
-    { url: `${base}/learn/us-stock-basics`,        lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/korea-stocks`,           lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/safe-assets`,            lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/korea-real-estate`,      lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/value-investing`,        lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/etf`,                    lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/kr-us-etf`,              lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/reits`,                  lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/options`,                lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/technical-analysis`,     lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/sp500`,                  lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/nasdaq`,                 lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/valuation`,              lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/financial-statements`,   lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/dividend`,               lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/bonds`,                  lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/safe-haven-etfs`,       lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/commodities`,            lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/crypto`,                 lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/macro-rates`,            lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/futures`,                lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/earnings-season`,        lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/buy-checklist`,          lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/13f-guide`,              lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/economic-calendar`,      lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/myths`,                  lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/dca`,                    lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/compound`,               lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/investing-psychology`,   lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/us-stock-tax`,           lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/korea-accounts`,         lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/usd-krw`,                lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/sectors`,                lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/fear-greed`,             lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/buffett-indicator`,      lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    { url: `${base}/learn/portfolio-strategy`,     lastModified: now, changeFrequency: "monthly", priority: 0.8  },
-    ...marketEntries,
-    ...UNIQUE.map((sym) => ({
+    { url: base, lastModified: now, changeFrequency: "always", priority: 1 },
+
+    // Musk-ecosystem news hub (primary positioning) — localized en/ko.
+    newsLocalized("/news", 0.95, "daily"),
+    newsLocalized("/news/analysis", 0.85, "daily"),
+    newsLocalized("/news/earnings", 0.85, "daily"),
+    newsLocalized("/news/spacex", 0.85, "weekly"),
+    newsLocalized("/news/about", 0.6, "monthly"),
+
+    ...articleEntries,
+
+    // Core app sections.
+    { url: `${base}/insight`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
+    { url: `${base}/search`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${base}/kr`, lastModified: now, changeFrequency: "daily", priority: 0.7 },
+    { url: `${base}/safe`, lastModified: now, changeFrequency: "daily", priority: 0.7 },
+    { url: `${base}/kr-re`, lastModified: now, changeFrequency: "daily", priority: 0.7 },
+
+    // Trust / legal.
+    { url: `${base}/more/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/more/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/more/us-investing-guide`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/more/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/more/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${base}/more/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${base}/more/disclaimer`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
+
+    // Learn hub guides.
+    { url: `${base}/learn`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    ...LEARN_SLUGS.map((slug) => ({
+      url: `${base}/learn/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
+
+    // Stock pages — only tickers with real report coverage.
+    ...coveredTickers.map((sym) => ({
       url: `${base}/stock/${sym}`,
       lastModified: now,
-      changeFrequency: "always" as const,
-      priority: ["NVDA","TSLA","AAPL","MSFT","AMZN","META","GOOGL"].includes(sym) ? 0.9 : 0.75,
+      changeFrequency: "daily" as const,
+      priority: ["NVDA", "TSLA", "AAPL", "MSFT", "AMZN", "META", "GOOGL"].includes(sym) ? 0.8 : 0.6,
     })),
   ];
 }
