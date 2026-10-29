@@ -11,8 +11,7 @@ const FAQS_KO = [
     category: "서비스 기본",
     items: [
       { q: "Investus는 어떤 서비스인가요?", a: "Investus는 미국 주식 시장의 실시간 정보를 제공하는 투자 정보 플랫폼입니다. S&P500, 나스닥, 다우존스 지수와 개별 종목 시세, 공포&탐욕 지수, 버핏 지수, 선물·원자재 데이터 등을 한곳에서 확인할 수 있습니다. 투자 권유가 아닌 데이터 열람 목적의 서비스입니다." },
-      { q: "무료로 이용할 수 있나요?", a: "기본 기능(실시간 시세, 오늘자 리포트, 종토방 등)은 무료입니다. Investus Pro 구독(월 5,900원·연간 할인)과 투자 전략 전자책(19,900원)은 유료 상품이며, /shop 또는 더보기·인사이트에서 구매할 수 있습니다." },
-      { q: "유료 상품은 어디서 구매하나요?", a: "https://www.investus.kr/shop 스토어에서 Pro 구독·전자책 상품과 결제 경로를 확인할 수 있습니다. Pro는 /subscribe, 전자책은 /buy 페이지에서 신용·체크카드(KG이니시스)로 결제합니다." },
+      { q: "무료로 이용할 수 있나요?", a: "네, 모든 기능이 무료입니다. 실시간 시세, 리포트, 종토방, 투자 교육 콘텐츠를 광고 기반으로 제공하며, 유료 구독·전자책·강의 등 결제 상품은 판매하지 않습니다." },
       { q: "회원가입 없이도 이용할 수 있나요?", a: "네, 주가 조회·지수 확인·관심종목·차트 등 대부분의 기능은 비로그인으로 이용 가능합니다. 종목토론 글쓰기, 피드백 발송, 투자클럽 개설 등 일부 기능은 로그인이 필요합니다." },
       { q: "미국 주식만 제공하나요?", a: "현재 미국 증시(NYSE·NASDAQ·AMEX 상장 종목) 중심으로 서비스하고 있습니다. 미국 지수 선물, 원자재(금·원유 등), 채권, 외환, 비트코인·이더리움 등 가상자산 데이터도 함께 제공합니다. 국내 주식(코스피·코스닥)은 현재 지원하지 않습니다." },
     ],
@@ -52,7 +51,7 @@ const FAQS_EN = [
     category: "Service Basics",
     items: [
       { q: "What is Investus?", a: "Investus is an investment information platform providing real-time US stock market data. You can track S&P500, Nasdaq, and Dow Jones indices, individual stock prices, the Fear & Greed Index, Buffett Indicator, futures, and commodities — all in one place. It is a data viewing service, not investment advice." },
-      { q: "Is it free to use?", a: "Yes, all features are completely free. AI questions, reports, and Invest Club content (courses, e-books, posts) are all ad-supported and available at no charge." },
+      { q: "Is it free to use?", a: "Yes, all features are completely free. Real-time prices, reports, community and investment-education content are ad-supported and available at no charge. We do not sell any paid subscriptions, e-books or courses." },
       { q: "Can I use it without registering?", a: "Yes. Most features — stock lookup, index tracking, watchlist, charts — are available without logging in. Some features (posting in stock discussions, sending feedback, creating an Invest Club) require an account." },
       { q: "Is it US stocks only?", a: "Currently the service focuses on US-listed stocks (NYSE, NASDAQ, AMEX). We also provide US index futures, commodities (gold, crude oil, etc.), bonds, forex, and crypto (Bitcoin, Ethereum) data. Korean domestic stocks (KOSPI, KOSDAQ) are not currently supported." },
     ],

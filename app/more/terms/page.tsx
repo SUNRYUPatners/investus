@@ -32,7 +32,7 @@ const SECTIONS_KO = [
   },
   {
     title: "제7조 (유료 서비스 및 결제)",
-    body: "서비스는 광고 기반 무료 기능과 함께, 선택적 유료 상품을 제공합니다.\n\n[Investus Pro 구독]\n• 월간 또는 연간 구독으로 Pro 전용 리포트·기능 등을 이용할 수 있습니다.\n• 결제는 신용·체크카드(KG이니시스)를 통해 이루어지며, 결제는 포트원(PortOne)을 경유합니다.\n• 구독은 이용 기간 종료 시 동일 주기로 자동 갱신될 수 있으며, 이용자는 갱신 전에 해지할 수 있습니다.\n\n[전자책 등 디지털 콘텐츠]\n• 일회성 결제로 디지털 파일을 구매할 수 있으며, 결제 완료 후 즉시 제공됩니다.\n\n요금·상품 구성은 서비스 화면에 표시된 내용이 우선하며, 변경 시 사전 고지합니다. 환불·청약철회는 별도 「환불정책」(/more/refund)에 따릅니다.",
+    body: "서비스는 광고 기반 무료로 제공됩니다. 유료 구독(Investus Pro), 전자책, 유료 강의 등 결제가 발생하는 상품은 판매하지 않습니다. 시세·리포트·커뮤니티·투자 교육 콘텐츠는 모두 무료로 이용할 수 있습니다. 관련 내용은 「환불정책」(/more/refund)을 참고하세요.",
   },
   {
     title: "제8조 (광고 및 크리에이터 수익)",
@@ -52,7 +52,7 @@ const SECTIONS_KO = [
   },
   {
     title: "부칙",
-    body: "본 약관은 2026년 5월 18일부터 시행되었습니다.\n유료 구독·결제 관련 조항은 2026년 7월 21일 개정·시행됩니다.",
+    body: "본 약관은 2026년 5월 18일부터 시행되었습니다.\n유료 상품 운영 종료 및 광고 기반 무료 전환에 따라 결제 관련 조항은 삭제되었습니다.",
   },
 ];
 
@@ -83,7 +83,7 @@ const SECTIONS_EN = [
   },
   {
     title: "Article 7 (Paid Services and Payments)",
-    body: "The Service offers optional paid products alongside ad-supported free features.\n\n[Investus Pro]\n• Monthly or annual subscription for Pro reports and features.\n• Payments via card and simple pay (Kakao Pay, Naver Pay, Toss Pay, etc.) through PortOne.\n• Subscriptions may auto-renew; users may cancel before renewal.\n\n[Ebooks and other digital content]\n• One-time purchase with immediate digital delivery after payment.\n\nPrices shown on the Service prevail. Refunds follow the separate Refund Policy (/more/refund).",
+    body: "The Service is provided free of charge and supported by advertising. We do not sell any paid products — no paid subscriptions (Investus Pro), e-books, or paid courses. Prices, reports, community and investment-education content are all available at no cost. See the Refund Policy (/more/refund) for details.",
   },
   {
     title: "Article 8 (Advertising and Creator Revenue)",
@@ -103,7 +103,7 @@ const SECTIONS_EN = [
   },
   {
     title: "Supplementary Provisions",
-    body: "These Terms took effect as of May 18, 2026.\nPaid subscription and payment provisions were amended effective July 21, 2026.",
+    body: "These Terms took effect as of May 18, 2026.\nPayment-related provisions were removed when all paid products were discontinued and the service became free and ad-supported.",
   },
 ];
 
