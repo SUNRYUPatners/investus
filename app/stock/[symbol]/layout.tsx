@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { STOCK_SEARCH_DB } from "@/lib/stockSearchDb";
-import { isKrSymbol } from "@/lib/markets/krSymbol";
+import { isKnownStockSymbol } from "@/lib/stockValidation";
 import { getArticles } from "@/lib/articles";
 import { localizedAlternates } from "@/lib/localeMeta";
 
@@ -36,22 +35,6 @@ const STOCK_META: Record<string, { name: string; kr: string; desc: string }> = {
 
 type Props = { params: Promise<{ symbol: string }> };
 
-// Known, real tickers: the comprehensive search registry + the curated meta
-// map + any KR (numeric) symbol. Unknown tickers (e.g. /stock/ZZZZ) 404.
-const KNOWN_SYMBOLS = new Set<string>(STOCK_SEARCH_DB.map((x) => x.symbol.toUpperCase()));
-
-function isKnownSymbol(s: string): boolean {
-  const up = s.toUpperCase();
-  if (KNOWN_SYMBOLS.has(up)) return true;
-  if (STOCK_META[up]) return true;
-  try {
-    if (isKrSymbol(up)) return true;
-  } catch {
-    /* ignore */
-  }
-  return false;
-}
-
 // A stock page is only index-worthy once it has real report coverage; otherwise
 // it is a thin "no posts yet" shell and should be noindex.
 function hasReportCoverage(s: string): boolean {
@@ -62,9 +45,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { symbol } = await params;
   const s = symbol.toUpperCase();
 
-  if (!isKnownSymbol(s)) {
-    return { title: "Not found | Investus", robots: { index: false, follow: false } };
-  }
+  // Trigger the 404 here (metadata is resolved before the response body streams),
+  // so unknown tickers return a real HTTP 404 instead of a soft 404 (200). The
+  // layout body check below is kept as a defensive fallback.
+  if (!isKnownStockSymbol(s)) notFound();
 
   const indexable = hasReportCoverage(s);
   const m = STOCK_META[s];
@@ -115,6 +99,6 @@ export default async function StockLayout({
   params: Promise<{ symbol: string }>;
 }) {
   const { symbol } = await params;
-  if (!isKnownSymbol(symbol)) notFound();
+  if (!isKnownStockSymbol(symbol)) notFound();
   return <>{children}</>;
 }

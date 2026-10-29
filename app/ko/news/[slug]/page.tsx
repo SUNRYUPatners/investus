@@ -18,7 +18,9 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const a = getArticleBySlug(slug);
-  if (!a) return { robots: { index: false, follow: false } };
+  // Trigger the 404 during metadata (before the body streams) so unknown slugs
+  // return a real HTTP 404 instead of a soft 404 (200).
+  if (!a) notFound();
   return articleMetadata(a, "ko");
 }
 
