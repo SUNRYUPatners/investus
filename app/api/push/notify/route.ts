@@ -1,16 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAdminSupabase } from "@/lib/supabase";
+import { getAdminSupabaseLazy } from "@/lib/supabase";
 import webpush from "web-push";
 
 export const maxDuration = 30;
 
-webpush.setVapidDetails(
-  process.env.VAPID_MAILTO!,
-  process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
-  process.env.VAPID_PRIVATE_KEY!,
-);
+if (process.env.VAPID_MAILTO && process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY) {
+  webpush.setVapidDetails(
+    process.env.VAPID_MAILTO,
+    process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY,
+    process.env.VAPID_PRIVATE_KEY,
+  );
+}
 
-const supabase = getAdminSupabase();
+const supabase = getAdminSupabaseLazy();
 
 export async function POST(req: NextRequest) {
   // 비밀 토큰으로 보호

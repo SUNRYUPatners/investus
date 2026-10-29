@@ -8,11 +8,13 @@ import { isNYSEHoliday } from "@/lib/marketHours";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-webpush.setVapidDetails(
-  process.env.VAPID_MAILTO!,
-  process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
-  process.env.VAPID_PRIVATE_KEY!,
-);
+if (process.env.VAPID_MAILTO && process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY) {
+  webpush.setVapidDetails(
+    process.env.VAPID_MAILTO,
+    process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY,
+    process.env.VAPID_PRIVATE_KEY,
+  );
+}
 
 /** 미국 정규장 대략 창 (ET 9:30–16:05) */
 function isUsSessionWindow(): boolean {

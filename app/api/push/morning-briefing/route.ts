@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAdminSupabase } from "@/lib/supabase";
+import { getAdminSupabaseLazy } from "@/lib/supabase";
 import webpush from "web-push";
 import { getOrCreatePreMarketBriefing } from "@/lib/postMarketBriefing";
 import { sendBriefingDigestEmails } from "@/lib/newsletter";
@@ -7,13 +7,15 @@ import { sendBriefingDigestEmails } from "@/lib/newsletter";
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
 
-webpush.setVapidDetails(
-  process.env.VAPID_MAILTO!,
-  process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
-  process.env.VAPID_PRIVATE_KEY!,
-);
+if (process.env.VAPID_MAILTO && process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY) {
+  webpush.setVapidDetails(
+    process.env.VAPID_MAILTO,
+    process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY,
+    process.env.VAPID_PRIVATE_KEY,
+  );
+}
 
-const supabase = getAdminSupabase();
+const supabase = getAdminSupabaseLazy();
 
 function isAuthorized(req: NextRequest): boolean {
   const cronSecret = process.env.CRON_SECRET?.trim();
