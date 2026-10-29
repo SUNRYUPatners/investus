@@ -11,6 +11,7 @@ import { parseMarketPath, marketHref, type MarketTab } from "@/lib/markets/marke
 import { GuestStartButton } from "@/components/GuestStartButton";
 import { useAuth } from "@/hooks/useAuth";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
+import { localePath } from "@/lib/localePath";
 
 const NAV_TABS: MarketTab[] = ["home", "search", "portfolio", "wall", "insight", "more"];
 
@@ -55,7 +56,7 @@ export function Header() {
   }, [market, cfg.timezone]);
 
   const navItems = NAV_TABS.map((tabKey) => ({
-    href: marketHref(market, tabKey),
+    href: localePath(marketHref(market, tabKey), locale),
     label:
       tabKey === "home"      ? t.nav.home
       : tabKey === "search"  ? t.nav.search
@@ -79,7 +80,7 @@ export function Header() {
         <div className="max-w-[480px] lg:max-w-screen-2xl mx-auto px-4 lg:px-8 h-14 flex items-center justify-between gap-4">
 
           {/* 로고 + 브랜드 */}
-          <Link href={marketHref(market, "home")} className="flex items-center gap-2 no-underline flex-shrink-0">
+          <Link href={localePath(marketHref(market, "home"), locale)} className="flex items-center gap-2 no-underline flex-shrink-0">
             <LogoMark size="sm" />
             <div className="leading-none">
               <div
@@ -100,7 +101,7 @@ export function Header() {
           {/* 데스크탑 수평 nav */}
           <nav className="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
             <Link
-              href="/news"
+              href={localePath("/news", locale)}
               className="px-3.5 py-1.5 rounded-xl text-sm font-bold transition-all no-underline"
               style={{ color: "var(--mint)" }}
             >

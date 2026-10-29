@@ -24,8 +24,14 @@ export function parseMarketPath(pathname: string): {
   suffix: string;
   isPreview: boolean;
 } {
+  // Strip the Korean locale prefix so `/ko/search` parses as the search tab.
+  const logical =
+    pathname === "/ko" || pathname.startsWith("/ko/")
+      ? pathname.replace(/^\/ko/, "") || "/"
+      : pathname;
+
   // Legacy preview: /preview/{market}(/tab...)
-  const preview = pathname.match(/^\/preview\/([^/]+)(\/.*)?$/);
+  const preview = logical.match(/^\/preview\/([^/]+)(\/.*)?$/);
   if (preview) {
     const raw = preview[1];
     if ((MARKET_IDS as string[]).includes(raw)) {
@@ -40,8 +46,8 @@ export function parseMarketPath(pathname: string): {
   for (const id of MARKET_IDS) {
     if (id === "us") continue;
     const base = `/${id}`;
-    if (pathname === base || pathname.startsWith(`${base}/`)) {
-      const rest = pathname.slice(base.length) || "";
+    if (logical === base || logical.startsWith(`${base}/`)) {
+      const rest = logical.slice(base.length) || "";
       const tab = parseTab(rest);
       const suffix = tab === "home" ? "" : TAB_PREFIXES.find((t) => t.tab === tab)!.prefix;
       return { market: id, tab, suffix, isPreview: false };
@@ -49,7 +55,7 @@ export function parseMarketPath(pathname: string): {
   }
 
   // US main: /, /search, ...
-  const tab = parseTab(pathname);
+  const tab = parseTab(logical);
   const suffix = tab === "home" ? "" : TAB_PREFIXES.find((t) => t.tab === tab)!.prefix;
   return { market: "us", tab, suffix, isPreview: false };
 }

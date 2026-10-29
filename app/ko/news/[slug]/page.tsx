@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllArticles, getArticleBySlug } from "@/lib/articles";
 import { articleMetadata, articleJsonLd } from "@/lib/articleSeo";
-import { NewsChrome, ArticleFull } from "@/components/news/NewsUI";
+import { ArticlePageFrame, ArticleFull } from "@/components/news/NewsUI";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -29,12 +29,12 @@ export default async function ArticlePageKo({ params }: Props) {
   const a = getArticleBySlug(slug);
   if (!a) notFound();
   return (
-    <NewsChrome locale="ko" altHref={`/news/${a.slug}`}>
+    <ArticlePageFrame>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd(a, "ko")) }}
       />
       <ArticleFull a={a} locale="ko" />
-    </NewsChrome>
+    </ArticlePageFrame>
   );
 }

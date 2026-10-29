@@ -285,6 +285,14 @@ const ko = {
     olderCount:   (n: number) => `이전 리포트 ${n}건 더보기`,
     collapse:     "접기",
   },
+  homeFeed: {
+    tabNews:       "뉴스",
+    tabReports:    "리포트",
+    newsSubtitle:  "테슬라 · 스페이스X · xAI — 머스크 생태계 최신 리서치",
+    loadMoreCount: (n: number) => `${n}건 더보기`,
+    allCaughtUp:   "최신 글을 모두 봤어요",
+    empty:         "아직 기사가 없습니다",
+  },
   onboarding: {
     steps: [
       { emoji: "🌅", title: "매일 아침, 내 자산을 정리합니다", desc: "미국·한국·안전자산·부동산까지 — 전날 흐름과 오늘 일정을 AI가 5분에 맞춰 보여 줍니다. 뉴스 나열이 아니라 내 자산 기준입니다." },
@@ -707,6 +715,14 @@ const en: typeof ko = {
     swipeClose:   "Swipe to close · Pinch to zoom",
     olderCount:   (n: number) => `Show ${n} older report${n === 1 ? "" : "s"}`,
     collapse:     "Collapse",
+  },
+  homeFeed: {
+    tabNews:       "News",
+    tabReports:    "Reports",
+    newsSubtitle:  "Tesla · SpaceX · xAI — latest Musk-ecosystem research",
+    loadMoreCount: (n: number) => `Load ${n} more`,
+    allCaughtUp:   "You're all caught up",
+    empty:         "No articles yet",
   },
   onboarding: {
     steps: [

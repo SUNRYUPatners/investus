@@ -10,7 +10,10 @@
 // `supabase/migrations/*_articles.sql` and `getArticlesFromDb()` below, which is
 // intentionally a no-op placeholder until the table exists.
 
-import { SEED_REPORTS, REPORT_TICKERS, type Report } from "./reports";
+import { CATEGORY_STYLE, SEED_REPORTS, REPORT_TICKERS, type Report } from "./reports";
+import type { HomeArticleCard } from "./homeArticleCard";
+
+export type { HomeArticleCard } from "./homeArticleCard";
 
 export type ArticleLocale = "en" | "ko";
 
@@ -230,6 +233,24 @@ export function getArticles(opts?: { ticker?: string; limit?: number }): Article
 
 export function pickText(a: Article, locale: ArticleLocale) {
   return locale === "en" ? a.en : a.ko;
+}
+
+export function getHomeArticleCards(locale: ArticleLocale): HomeArticleCard[] {
+  return getAllArticles().map((a) => {
+    const t = pickText(a, locale);
+    const style = CATEGORY_STYLE[a.categoryColor];
+    return {
+      slug: a.slug,
+      date: a.date,
+      displayDate: a.displayDate,
+      tickerLabel: a.ticker ? tickerName(a.ticker, locale) : null,
+      category: a.category,
+      categoryBg: style.bg,
+      categoryFg: style.color,
+      title: t.title,
+      excerpt: t.summary,
+    };
+  });
 }
 
 export type NewsKind = "analysis" | "earnings" | "spacex";

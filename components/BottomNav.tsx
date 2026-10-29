@@ -2,17 +2,19 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useLocale } from "@/contexts/LocaleContext";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { marketHref, parseMarketPath, type MarketTab } from "@/lib/markets/marketPath";
+import { localePath } from "@/lib/localePath";
 
 export function BottomNav() {
   const pathname = usePathname() ?? "";
   const t = useLocale();
+  const locale = useLocaleCode();
   const { market, tab } = parseMarketPath(pathname);
 
   const tabs: MarketTab[] = ["home", "search", "portfolio", "wall", "insight", "more"];
   const navItems = tabs.map((tabKey) => ({
-    href: marketHref(market, tabKey),
+    href: localePath(marketHref(market, tabKey), locale),
     emoji:
       tabKey === "home"
         ? "📊"
