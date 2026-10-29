@@ -65,6 +65,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 투자 지식 허브 (심화 가이드)
     { url: `${base}/learn`,                        lastModified: now, changeFrequency: "weekly",  priority: 0.9  },
     { url: `${base}/learn/us-stock-basics`,        lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/korea-stocks`,           lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/safe-assets`,            lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/korea-real-estate`,      lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/value-investing`,        lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/etf`,                    lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/kr-us-etf`,              lastModified: now, changeFrequency: "monthly", priority: 0.8  },
