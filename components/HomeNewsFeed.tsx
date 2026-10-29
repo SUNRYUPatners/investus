@@ -9,7 +9,13 @@ import { localePath } from "@/lib/localePath";
 
 const PAGE_SIZE = 6;
 
-export function HomeNewsFeed({ articles }: { articles: HomeArticleCard[] }) {
+export function HomeNewsFeed({
+  articles,
+  intro,
+}: {
+  articles: HomeArticleCard[];
+  intro?: string;
+}) {
   const t = useLocale();
   const locale = useLocaleCode();
   const [shown, setShown] = useState(PAGE_SIZE);
@@ -26,9 +32,11 @@ export function HomeNewsFeed({ articles }: { articles: HomeArticleCard[] }) {
 
   return (
     <div className="px-4 lg:px-0">
+      {(intro ?? t.homeFeed.newsSubtitle) && (
       <p className="text-[10px] mb-3" style={{ color: "var(--muted)" }}>
-        {t.homeFeed.newsSubtitle}
+        {intro ?? t.homeFeed.newsSubtitle}
       </p>
+      )}
       <div className="flex flex-col gap-3">
         {visible.map((a) => (
           <HomeArticleRow key={a.slug} a={a} href={localePath(`/news/${a.slug}`, locale)} />
