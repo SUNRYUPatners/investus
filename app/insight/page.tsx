@@ -6,7 +6,6 @@ import { YoutubeChannels } from "@/components/YoutubeChannels";
 import { BookCarousel } from "@/components/BookCarousel";
 import Link from "next/link";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
-import { EbookProductSection } from "@/components/PaidProductsSection";
 import { useLocaleCode } from "@/contexts/LocaleContext";
 import { getT } from "@/lib/i18n";
 import { LEARN_ARTICLES } from "@/lib/learnArticles";
@@ -135,7 +134,6 @@ export default function InsightPage() {
         </div>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">{EduBanner}</section>
-        {isKo && <section className="px-4 mb-6"><EbookProductSection /></section>}
         <section className="px-4 mb-6"><InsightReportSection /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-4">{LearnBanner}</section>
@@ -203,7 +201,6 @@ export default function InsightPage() {
             <AdFitStrip />
             {LearnBanner}
             <TodaysGuideCard locale={locale} />
-            {isKo && <EbookProductSection />}
             <AdFitBanner />
             <section>
               <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>

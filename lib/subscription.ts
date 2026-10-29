@@ -49,12 +49,12 @@ export function isAdminEmail(email?: string | null): boolean {
   return (ADMIN_EMAILS as readonly string[]).includes(email.trim().toLowerCase());
 }
 
-/** Pro 메타데이터 또는 관리자 이메일 */
-export function hasProAccess(opts: {
+/** 구독 폐지 — 전체 무료 개방 (2026-10-29) */
+export function hasProAccess(_opts?: {
   email?: string | null;
   investusPro?: boolean;
 }): boolean {
-  return opts.investusPro === true || isAdminEmail(opts.email);
+  return true;
 }
 
 export function formatSubPrice(n: number = SUBSCRIPTION.priceKrw): string {
@@ -91,8 +91,7 @@ export function reportDateKey(r: { date?: string; updatedAt?: string }): string 
   return m ? `${m[1]}-${m[2]}-${m[3]}` : "";
 }
 
-/** 오늘(KST) 리포트는 무료, 이전 날짜는 Pro 필요 */
-export function isFreeReport(r: { date?: string; updatedAt?: string }, now = new Date()): boolean {
-  const key = reportDateKey(r);
-  return key !== "" && key === kstTodayKey(now);
+/** 구독 폐지 — 모든 리포트 무료 개방 (2026-10-29) */
+export function isFreeReport(_r?: { date?: string; updatedAt?: string }, _now?: Date): boolean {
+  return true;
 }

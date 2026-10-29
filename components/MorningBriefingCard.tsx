@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Bell, ChevronDown, Moon, Sun, Wallet } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
 import { PreviewFade } from "@/components/SubscribeGate";
 import { openGuestLogin } from "@/lib/guestLogin";
 import type { SessionBriefing } from "@/lib/morningBriefing";
@@ -106,8 +105,6 @@ export function MorningBriefingCard({
   locale?: string;
   market?: MarketId;
 }) {
-  const { user } = useAuth();
-  const isPro = user?.isPro === true;
   const [briefing, setBriefing] = useState<SessionBriefing | null>(null);
   const [loading, setLoading] = useState(true);
   const [openId, setOpenId] = useState<string | null>(null);
@@ -145,7 +142,7 @@ export function MorningBriefingCard({
     return () => { cancelled = true; };
   }, [apiUrl]);
 
-  if (!isPro && (loading || !briefing)) {
+  if (loading || !briefing) {
     return <BriefingValueCard isKo={isKo} />;
   }
 
@@ -189,60 +186,6 @@ export function MorningBriefingCard({
       : isKr
         ? (isPre ? "Before KRX open" : "After KRX close")
         : (isPre ? "Before the open" : "After the close");
-
-  if (!isPro) {
-    return (
-      <section
-        className="rounded-2xl border overflow-hidden p-4"
-        style={{
-          background: `linear-gradient(135deg, ${accent}1a 0%, var(--card) 50%)`,
-          borderColor: `${accent}4d`,
-        }}
-        aria-label={label}
-      >
-        <div className="flex items-center justify-between gap-2 mb-2">
-          <div className="flex items-center gap-2 min-w-0">
-            <Icon className="w-4 h-4 flex-shrink-0" style={{ color: accent }} />
-            <span
-              className="text-[9px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: `${accent}2e`, color: accent }}
-            >
-              {label}
-            </span>
-            <span
-              className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
-              style={{ background: "rgba(var(--mint-rgb),0.14)", color: "var(--mint)" }}
-            >
-              {isKo ? "예시" : "Sample"}
-            </span>
-          </div>
-          <LangToggle value={viewLang} onChange={setViewLang} />
-        </div>
-        <PreviewFade label={isKo ? "광고 보고 무료로 읽기" : "Watch a short ad · Free"} maxHeight={156}>
-          <p className="text-sm font-bold leading-snug mb-2" style={{ color: "var(--text)" }}>
-            {headline || teaserTitle}
-          </p>
-          {bullets.length > 0 && (
-            <ul className="flex flex-col gap-1.5 mb-2">
-              {bullets.map((b, i) => (
-                <li key={i} className="flex gap-2 text-[12px] leading-snug" style={{ color: "var(--muted)" }}>
-                  <span className="font-bold flex-shrink-0" style={{ color: accent }}>{i + 1}.</span>
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
-          )}
-          <div className="flex flex-col gap-1.5">
-            {briefing.reports.slice(0, 3).map((r) => (
-              <p key={r.id} className="text-[11px] font-semibold leading-snug" style={{ color: "var(--text)" }}>
-                {pickText(viewEn, r.title, r.titleEn)}
-              </p>
-            ))}
-          </div>
-        </PreviewFade>
-      </section>
-    );
-  }
 
   return (
     <section

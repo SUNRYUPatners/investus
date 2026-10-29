@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { Wallet } from "lucide-react";
 import { openGuestLogin } from "@/lib/guestLogin";
 import { useLocaleCode } from "@/contexts/LocaleContext";
@@ -107,20 +106,13 @@ export function GuestPortfolioPreview({
       </div>
       {variant === "card" && (
       <div className="px-4 pb-3.5 pt-1">
-        <Link
-          href="/subscribe"
-          className="block w-full py-2.5 rounded-xl text-center text-[12px] font-bold"
-          style={{ background: "var(--mint)", color: "var(--on-accent)" }}
-        >
-          {isKo ? "구독하고 내 계좌로 바꾸기" : "Subscribe and use my account"}
-        </Link>
         <button
           type="button"
           onClick={connect}
-          className="w-full mt-2 py-2 text-[11px] font-semibold"
-          style={{ color: "var(--muted)" }}
+          className="block w-full py-2.5 rounded-xl text-center text-[12px] font-bold"
+          style={{ background: "var(--mint)", color: "var(--on-accent)" }}
         >
-          {isKo ? "먼저 계정 연동하기" : "Link an account first"}
+          {isKo ? "내 계좌 연동하기" : "Link my account"}
         </button>
       </div>
       )}

@@ -37,10 +37,6 @@ export async function SiteLegalFooter() {
           className="flex flex-wrap gap-x-3 gap-y-1.5 text-[12px] mb-5"
           aria-label={isKo ? "약관 및 정책" : "Terms and policies"}
         >
-          <Link href="/shop" className="hover:underline" style={{ color: "var(--text)" }}>
-            {isKo ? "유료상품" : "Shop"}
-          </Link>
-          <span style={{ color: "var(--border)" }} aria-hidden>|</span>
           <Link href="/more/terms" className="hover:underline" style={{ color: "var(--text)" }}>
             {isKo ? "이용약관" : "Terms"}
           </Link>

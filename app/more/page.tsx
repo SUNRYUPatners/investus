@@ -8,7 +8,6 @@ import { LogoMark } from "@/components/LogoMark";
 import { useAuth } from "@/hooks/useAuth";
 import { ProfileEditModal } from "@/components/ProfileEditModal";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
-import { ProPricingSection, EbookProductSection } from "@/components/PaidProductsSection";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { ThemeSettingsCard } from "@/components/ThemeSettingsCard";
 
@@ -1089,25 +1088,6 @@ export default function MorePage() {
             {/* 화면 테마 — 라이트 기본 / 다크 선택 */}
             <ThemeSettingsCard locale={isKo ? "ko" : "en"} />
 
-            {/* Investus Pro — 가격 상세 (한국어 사용자에게만 표시) */}
-            {isKo && <ProPricingSection />}
-            {isKo && <EbookProductSection />}
-
-            {isKo && (
-              <div className="mb-4">
-                <Link
-                  href="/shop"
-                  className="flex items-center justify-between rounded-2xl border px-4 py-3.5 active:opacity-80"
-                  style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.35)" }}
-                >
-                  <div>
-                    <p className="text-sm font-bold" style={{ color: "var(--text)" }}>🛒 유료 상품 스토어</p>
-                    <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>Pro 구독 · 전자책 · 결제 경로 안내</p>
-                  </div>
-                  <ChevronRight className="w-4 h-4 opacity-40" style={{ color: "var(--muted)" }} />
-                </Link>
-              </div>
-            )}
 
             {/* Mobile: creator + brand card here */}
             <div className="lg:hidden">

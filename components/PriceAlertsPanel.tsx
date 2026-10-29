@@ -1,8 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import Link from "next/link";
-import { Bell, Lock, Plus, Trash2 } from "lucide-react";
+import { Bell, Plus, Trash2 } from "lucide-react";
 import { getSupabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
 import { useLocaleCode } from "@/contexts/LocaleContext";
@@ -63,7 +62,6 @@ export function PriceAlertsPanel({
   livePrices: Record<string, number>;
 }) {
   const { user } = useAuth();
-  const isPro = user?.isPro === true;
   const localeCode = useLocaleCode();
   const isKo = localeCode === "ko";
 
@@ -76,7 +74,6 @@ export function PriceAlertsPanel({
   const [target, setTarget] = useState("");
 
   const refresh = useCallback(async () => {
-    if (!isPro) return;
     try {
       const res = await fetch("/api/price-alerts", { headers: await authHeaders() });
       if (!res.ok) return;
@@ -84,7 +81,7 @@ export function PriceAlertsPanel({
       setAlerts(data.alerts ?? []);
       setMax(data.max ?? 10);
     } catch { /* ignore */ }
-  }, [isPro]);
+  }, []);
 
   useEffect(() => {
     void refresh();
@@ -126,13 +123,11 @@ export function PriceAlertsPanel({
           ? {
               limit_reached: `최대 ${max}개까지 설정할 수 있어요`,
               duplicate: "같은 종목·방향 알림이 이미 있어요",
-              pro_required: "Pro 구독이 필요합니다",
               push_subscription_required: "푸시 구독이 필요합니다",
             }
           : {
               limit_reached: `Maximum ${max} alerts allowed`,
               duplicate: "An alert for this symbol & direction already exists",
-              pro_required: "Pro subscription required",
               push_subscription_required: "Push subscription required",
             };
         setError(map[data.error ?? ""] ?? (isKo ? "저장에 실패했습니다" : "Failed to save"));
@@ -158,39 +153,6 @@ export function PriceAlertsPanel({
   };
 
   if (!user) return null;
-
-  if (!isPro) {
-    return (
-      <div
-        className="rounded-2xl border p-4"
-        style={{ background: "var(--card)", borderColor: "rgba(244,114,182,0.25)" }}
-      >
-        <div className="flex items-center gap-2 mb-2">
-          <Bell className="w-4 h-4" style={{ color: "#f472b6" }} />
-          <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "가격 알림" : "Price Alerts"}</p>
-          <span
-            className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
-            style={{ background: "rgba(244,114,182,0.15)", color: "#f472b6" }}
-          >
-            Pro
-          </span>
-        </div>
-        <p className="text-[12px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
-          {isKo
-            ? "보유·관심 종목 목표가 도달 시 푸시로 알려드립니다. 종목당 상·하한가 각 1개."
-            : "Get push notifications when your holdings hit a target price. One above & one below per ticker."}
-        </p>
-        <Link
-          href="/subscribe"
-          className="inline-flex items-center gap-1.5 text-[12px] font-bold px-3 py-2 rounded-xl"
-          style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}
-        >
-          <Lock className="w-3.5 h-3.5" />
-          {isKo ? "Pro로 알림 설정" : "Set alerts with Pro"}
-        </Link>
-      </div>
-    );
-  }
 
   const active = alerts.filter((a) => !a.firedAt);
   const live = symbol ? livePrices[symbol] : undefined;
