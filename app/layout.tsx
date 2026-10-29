@@ -15,7 +15,6 @@ import { VersionBanner } from "@/components/VersionBanner";
 import { ReportUpdateBanner } from "@/components/ReportUpdateBanner";
 import { getLocale } from "@/lib/getLocale";
 import { localizedAlternates, currentLogicalPath } from "@/lib/localeMeta";
-import { guardRoute } from "@/lib/notFoundGuard";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SiteLegalFooter } from "@/components/SiteLegalFooter";
@@ -200,9 +199,6 @@ function buildJsonLd(isKo: boolean) {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
-  // Decide unknown-route 404s here, above the global loading.tsx Suspense
-  // boundary, so they return a real HTTP 404 instead of a soft 404 (200).
-  await guardRoute(await currentLogicalPath());
   return (
     <html
       lang={locale}
