@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0C0618"/><stop offset="100%" stop-color="#050210"/>
+    </linearGradient>
+    <linearGradient id="accentG" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bgG)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="58" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900" fill="#F9FAFB">investus.kr</text>
+  <text x="1040" y="58" text-anchor="end" font-family="Arial,sans-serif" font-size="22" fill="#9CA3AF">Oct 29, 2026</text>
+  <rect x="40" y="78" width="200" height="40" rx="20" fill="#C084FC26"/>
+  <rect x="40" y="78" width="200" height="40" rx="20" fill="none" stroke="#C084FC" stroke-width="2"/>
+  <text x="140" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#C084FC">🔍 종목분석</text>
+  <rect x="254" y="78" width="110" height="40" rx="20" fill="rgba(255,255,255,0.08)"/>
+  <rect x="254" y="78" width="110" height="40" rx="20" fill="none" stroke="#C084FC" stroke-width="2"/>
+  <text x="309" y="104" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#F9FAFB">SPCX</text>
+  <text x="540" y="188" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="46" font-weight="900" fill="#C084FC" filter="url(#glow)">주택 418채 매입 제안</text>
+  <text x="540" y="236" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#9CA3AF">사우스헤이븐 콜로니얼힐스 · 소음 소송 조건부</text>
+  <rect x="54" y="268" width="300" height="190" rx="18" fill="#0F1623" stroke="#C084FC" stroke-width="2"/>
+  <text x="204" y="302" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">매입 목표(보도)</text>
+  <text x="204" y="364" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#C084FC">418</text>
+  <text x="204" y="396" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">채 · 미확인</text>
+  <text x="204" y="426" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">중개인 녹취</text>
+<rect x="390" y="268" width="300" height="190" rx="18" fill="#0F1623" stroke="#FBBF24" stroke-width="2"/>
+  <text x="540" y="302" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">평균 주택가</text>
+  <text x="540" y="364" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#FBBF24">$180K</text>
+  <text x="540" y="396" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">인근 시세</text>
+  <text x="540" y="426" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">가디언 인용</text>
+<rect x="726" y="268" width="300" height="190" rx="18" fill="#0F1623" stroke="#F87171" stroke-width="2"/>
+  <text x="876" y="302" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#9CA3AF">Q3 AI 비중</text>
+  <text x="876" y="364" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" fill="#F87171">48%</text>
+  <text x="876" y="396" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#D1D5DB">최대 매출 부문</text>
+  <text x="876" y="426" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#6B7280">총매출 $14.6B</text>
+  <rect x="54" y="490" width="972" height="228" rx="22" fill="#0F0A00" stroke="#4C1D95" stroke-width="2.5"/>
+  <line x1="54" y1="538" x2="1026" y2="538" stroke="#C084FC" stroke-width="2"/>
+  <text x="108" y="523" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#C084FC">⚖️ 조건부 매입의 구조</text>
+  <text x="108" y="562" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">시세 매입 + 집단소송 청구권 포기 조건 (가디언·포브스)</text><text x="108" y="596" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">18가구 합의 보도 · 10월 9일 이후 등기 5건</text><text x="108" y="630" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">회사는 소음 피해를 부인하고 방음벽·정규 발전소를 약속</text><text x="108" y="664" font-family="Arial,sans-serif" font-size="23" fill="#FDE68A">→ 현금은 작아도, 허가·ESG 리스크는 컴퓨트 확장과 묶입니다</text>
+  <rect x="54" y="732" width="972" height="228" rx="22" fill="#0F0A00" stroke="#78350F" stroke-width="2.5"/>
+  <line x1="54" y1="780" x2="1026" y2="780" stroke="#FBBF24" stroke-width="2"/>
+  <text x="108" y="765" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="#FBBF24">🔌 왜 투자 이야기인가</text>
+  <text x="108" y="804" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">AI 솔루션이 Q3에 처음으로 스페이스X 최대 매출 부문</text><text x="108" y="838" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">69기 임시 가스터빈 · 청정대기법 허가 공백 (EPA)</text><text x="108" y="872" font-family="Arial,sans-serif" font-size="23" fill="#E5E7EB">NAACP·환경단체 연방 소송 · 데이터센터 지연 120건+</text><text x="108" y="906" font-family="Arial,sans-serif" font-size="23" fill="#FDE68A">→ 전력·인허가가 이 부문의 속도 제한입니다</text>
+  <rect x="0" y="1340" width="1080" height="10" fill="url(#accentG)"/>
+  <text x="40" y="1333" font-family="Arial,sans-serif" font-size="18" fill="#6B7280">investus.kr · Not investment advice · SPCX SpaceXSI · INVESTUS SRP</text>
+</svg>

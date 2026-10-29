@@ -43,10 +43,9 @@ export type Article = {
   sources: ArticleSource[];
 };
 
-// ── Official primary-source links per ticker (E-E-A-T) ───────────────────────
-// We do not fabricate article-specific citations. Instead every article links to
-// the authoritative investor-relations / regulatory source for its subject so
-// readers can verify the underlying filings and announcements themselves.
+// ── Official primary-source links (E-E-A-T) ──────────────────────────────────
+// Story-specific press/regulator citations live in STORY_SOURCES. Every article
+// also links to the authoritative IR / regulatory source for its ticker.
 const TICKER_SOURCES: Record<string, ArticleSource[]> = {
   TSLA: [
     { label: "Tesla Investor Relations", url: "https://ir.tesla.com/" },
@@ -71,6 +70,24 @@ const TICKER_SOURCES: Record<string, ArticleSource[]> = {
 const SEC_FULLTEXT: ArticleSource = {
   label: "SEC EDGAR full-text search",
   url: "https://efts.sec.gov/LATEST/search-index?q=",
+};
+
+/** Story-specific citations (press, regulators, IR). Prepended ahead of ticker IR links. */
+const STORY_SOURCES: Record<string, ArticleSource[]> = {
+  "seed-2143": [
+    { label: "Electrek — Tesla Semi fire on I-880 (Oct. 28, 2026)", url: "https://electrek.co/2026/10/28/tesla-semi-fire-i-880-hayward-no-crash/" },
+    { label: "The Drive — Pilot/Flying J 1.2 MW Megachargers (Oct. 28, 2026)", url: "https://www.thedrive.com/news/tesla-semis-are-now-charging-at-mainstream-truck-stops" },
+    { label: "Tesla Investor Relations", url: "https://ir.tesla.com/" },
+  ],
+  "seed-2144": [
+    { label: "The Guardian — Southaven home buyouts and noise suit (Oct. 28, 2026)", url: "https://www.theguardian.com/us-news/2026/oct/28/datacenter-noise-lawsuit-elon-musk-mississippi" },
+    { label: "Forbes — xAI / SpaceXSI buyout offers (Oct. 28, 2026)", url: "https://www.forbes.com/sites/maryroeloffs/2026/10/28/xai-offers-home-buyouts-in-mississippi-to-quash-data-center-lawsuit/" },
+    { label: "SpaceX — Official site", url: "https://www.spacex.com/" },
+  ],
+  "seed-2145": [
+    { label: "Electrek — Tesla confirms Vietnam entry (Oct. 28, 2026)", url: "https://electrek.co/2026/10/28/tesla-vietnam-entry-vinfast/" },
+    { label: "Tesla Investor Relations", url: "https://ir.tesla.com/" },
+  ],
 };
 
 // English display names for the Musk-ecosystem + major tickers.
@@ -162,11 +179,20 @@ function buildArticle(r: Report): Article {
   const pt = primaryTicker(r);
   const hasEnglish = hasRealEnglish(r);
   const sources: ArticleSource[] = [];
-  if (pt && TICKER_SOURCES[pt]) sources.push(...TICKER_SOURCES[pt]);
+  const seen = new Set<string>();
+  const push = (list: ArticleSource[]) => {
+    for (const s of list) {
+      if (!s?.url || seen.has(s.url)) continue;
+      seen.add(s.url);
+      sources.push(s);
+    }
+  };
+  if (STORY_SOURCES[r.id]) push(STORY_SOURCES[r.id]);
+  if (pt && TICKER_SOURCES[pt]) push(TICKER_SOURCES[pt]);
   for (const t of tickers) {
-    if (t !== pt && TICKER_SOURCES[t]) sources.push(...TICKER_SOURCES[t]);
+    if (t !== pt && TICKER_SOURCES[t]) push(TICKER_SOURCES[t]);
   }
-  if (sources.length === 0) sources.push(SEC_FULLTEXT);
+  if (sources.length === 0) push([SEC_FULLTEXT]);
 
   return {
     slug: articleSlug(r),
@@ -186,7 +212,7 @@ function buildArticle(r: Report): Article {
       summary: r.summaryEn?.trim() || r.summary,
       body: hasEnglish ? (r.bodyEn as string) : r.body,
     },
-    sources: sources.slice(0, 4),
+    sources: sources.slice(0, 6),
   };
 }
 
