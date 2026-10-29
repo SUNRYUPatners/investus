@@ -98,6 +98,13 @@ export function Header() {
 
           {/* 데스크탑 수평 nav */}
           <nav className="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
+            <Link
+              href="/news"
+              className="px-3.5 py-1.5 rounded-xl text-sm font-bold transition-all no-underline"
+              style={{ color: "var(--mint)" }}
+            >
+              🚀 News
+            </Link>
             {navItems.map(({ href, label, tabKey }) => {
               const isActive = tabKey === tab;
               return (

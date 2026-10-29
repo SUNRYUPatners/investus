@@ -80,7 +80,7 @@ export default function InsightPage() {
         }
       `}</style>
       <Link
-        href="/education"
+        href="/news"
         className="block rounded-2xl overflow-hidden border edu-banner-glow active:opacity-90 transition-opacity"
         style={{ borderColor: "rgba(var(--mint-rgb),0.3)" }}
       >
@@ -93,20 +93,20 @@ export default function InsightPage() {
           style={{ background: "radial-gradient(circle at 80% 50%, rgba(var(--mint-rgb),0.12) 0%, transparent 60%)" }} />
         <div className="relative w-[68px] h-[68px] rounded-2xl flex-shrink-0 flex items-center justify-center shadow-lg"
           style={{ background: "linear-gradient(145deg, #1a2744, #10203c)", border: "1px solid rgba(var(--mint-rgb),0.4)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.2)" }}>
-          <span className="text-3xl">🎓</span>
+          <span className="text-3xl">🚀</span>
         </div>
         <div className="flex-1 min-w-0">
           <div className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-2"
             style={{ background: "rgba(var(--mint-rgb),0.18)", color: "var(--mint)" }}>
-            {t.exclusiveClass}
+            {isKo ? "머스크 생태계 리서치" : "Musk ecosystem research"}
           </div>
-          <p className="text-sm font-bold leading-snug mb-1" style={{ color: "#f5f6f8" }}>{t.courseTitle}</p>
-          <p className="text-[11px] mb-2.5" style={{ color: "rgba(255,255,255,0.72)" }}>{t.courseSub}</p>
+          <p className="text-sm font-bold leading-snug mb-1" style={{ color: "#f5f6f8" }}>{isKo ? "테슬라 · 스페이스X · xAI 뉴스" : "Tesla · SpaceX · xAI news"}</p>
+          <p className="text-[11px] mb-2.5" style={{ color: "rgba(255,255,255,0.72)" }}>{isKo ? "매일 업데이트되는 투자 리서치 — 뉴스 · 실적 · 밸류에이션" : "Daily investor research — news, earnings & valuation"}</p>
           <div className="flex items-center justify-between">
-            <p className="text-xs" style={{ color: "var(--mint)" }}>{t.limitedSpots}</p>
+            <p className="text-xs" style={{ color: "var(--mint)" }}>{isKo ? "무료 · 매일 업데이트" : "Free · updated daily"}</p>
             <span className="text-[11px] font-bold px-3 py-1.5 rounded-full"
               style={{ background: "linear-gradient(135deg, var(--mint), #d4b56a)", color: "var(--on-accent)" }}>
-              {t.apply}
+              {isKo ? "보기" : "Read"}
             </span>
           </div>
         </div>
