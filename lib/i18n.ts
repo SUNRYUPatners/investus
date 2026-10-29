@@ -6,6 +6,7 @@ const ko = {
     search:    "검색",
     portfolio: "자산",
     wall:      "피드",
+    news:      "뉴스",
     insight:   "인사이트",
     more:      "더보기",
   },
@@ -288,6 +289,7 @@ const ko = {
   homeFeed: {
     tabNews:       "뉴스",
     tabReports:    "리포트",
+    newsTitle:     "뉴스",
     newsSubtitle:  "테슬라 · 스페이스X · xAI — 머스크 생태계 최신 리서치",
     loadMoreCount: (n: number) => `${n}건 더보기`,
     allCaughtUp:   "최신 글을 모두 봤어요",
@@ -437,6 +439,7 @@ const en: typeof ko = {
     search:    "Search",
     portfolio: "Portfolio",
     wall:      "Discussion",
+    news:      "News",
     insight:   "Insights",
     more:      "More",
   },
@@ -719,6 +722,7 @@ const en: typeof ko = {
   homeFeed: {
     tabNews:       "News",
     tabReports:    "Reports",
+    newsTitle:     "News",
     newsSubtitle:  "Tesla · SpaceX · xAI — latest Musk-ecosystem research",
     loadMoreCount: (n: number) => `Load ${n} more`,
     allCaughtUp:   "You're all caught up",

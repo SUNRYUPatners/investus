@@ -11,9 +11,11 @@ import { parseMarketPath, marketHref, type MarketTab } from "@/lib/markets/marke
 import { GuestStartButton } from "@/components/GuestStartButton";
 import { useAuth } from "@/hooks/useAuth";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
+import { isShellHomePath, useHomeShellTab } from "@/contexts/HomeShellTabContext";
 import { localePath } from "@/lib/localePath";
 
-const NAV_TABS: MarketTab[] = ["home", "search", "portfolio", "wall", "insight", "more"];
+type ShellTab = MarketTab | "news";
+const NAV_TABS: ShellTab[] = ["home", "search", "portfolio", "news", "insight", "more"];
 
 export function Header() {
   const t = useLocale();
@@ -22,6 +24,8 @@ export function Header() {
   const pathname = usePathname() ?? "";
   const router = useRouter();
   const { market, tab } = parseMarketPath(pathname);
+  const { view, setView, openNews, openHome } = useHomeShellTab();
+  const newsActive = view === "news" && isShellHomePath(pathname);
   const cfg = getMarketConfig(market);
   const { user, loaded } = useAuth();
   const isGuest = loaded && !user;
@@ -56,12 +60,12 @@ export function Header() {
   }, [market, cfg.timezone]);
 
   const navItems = NAV_TABS.map((tabKey) => ({
-    href: localePath(marketHref(market, tabKey), locale),
+    href: localePath(marketHref(market, tabKey === "news" ? "home" : tabKey), locale),
     label:
       tabKey === "home"      ? t.nav.home
       : tabKey === "search"  ? t.nav.search
       : tabKey === "portfolio" ? t.nav.portfolio
-      : tabKey === "wall"    ? t.nav.wall
+      : tabKey === "news"    ? t.nav.news
       : tabKey === "insight" ? t.nav.insight
       : t.nav.more,
     tabKey,
@@ -80,7 +84,14 @@ export function Header() {
         <div className="max-w-[480px] lg:max-w-screen-2xl mx-auto px-4 lg:px-8 h-14 flex items-center justify-between gap-4">
 
           {/* 로고 + 브랜드 */}
-          <Link href={localePath(marketHref(market, "home"), locale)} className="flex items-center gap-2 no-underline flex-shrink-0">
+          <Link
+            href={localePath(marketHref(market, "home"), locale)}
+            onClick={(e) => {
+              if (isShellHomePath(pathname)) e.preventDefault();
+              openHome();
+            }}
+            className="flex items-center gap-2 no-underline flex-shrink-0"
+          >
             <LogoMark size="sm" />
             <div className="leading-none">
               <div
@@ -108,11 +119,21 @@ export function Header() {
               🚀 News
             </Link>
             {navItems.map(({ href, label, tabKey }) => {
-              const isActive = tabKey === tab;
+              const isActive =
+                tabKey === "news" ? newsActive : tabKey === tab && !newsActive;
               return (
                 <button
-                  key={href}
+                  key={tabKey}
                   onClick={() => {
+                    if (tabKey === "news") {
+                      openNews();
+                      return;
+                    }
+                    if (tabKey === "home") {
+                      openHome();
+                      return;
+                    }
+                    setView("home");
                     if (isActive) window.scrollTo({ top: 0, behavior: "smooth" });
                     else router.push(href);
                   }}

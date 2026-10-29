@@ -9,6 +9,7 @@ import { getMarketConfig } from "@/lib/markets/config";
 import { isMarketSessionOpen } from "@/lib/markets/hours";
 import { marketHref, parseMarketPath, type MarketTab } from "@/lib/markets/marketPath";
 import { localePath } from "@/lib/localePath";
+import { isShellHomePath, useHomeShellTab } from "@/contexts/HomeShellTabContext";
 import { GuestStartButton } from "@/components/GuestStartButton";
 
 function useClock(timezone: string, market: ReturnType<typeof parseMarketPath>["market"]) {
@@ -45,14 +46,17 @@ export function DesktopSidebar() {
   const pathname = usePathname() ?? "";
   const router = useRouter();
   const { market, tab } = parseMarketPath(pathname);
+  const { view, setView, openNews, openHome } = useHomeShellTab();
+  const newsActive = view === "news" && isShellHomePath(pathname);
   const cfg = getMarketConfig(market);
   const { time, open, mounted } = useClock(cfg.timezone, market);
 
-  const tabs: MarketTab[] = ["home", "search", "portfolio", "wall", "insight", "more"];
+  type ShellTab = MarketTab | "news";
+  const tabs: ShellTab[] = ["home", "search", "portfolio", "news", "insight", "more"];
   const NAV = tabs.map((tabKey) => ({
-    href: localePath(marketHref(market, tabKey), locale),
-    emoji: tabKey === "home" ? "📊" : tabKey === "search" ? "🔍" : tabKey === "portfolio" ? "💼" : tabKey === "wall" ? "💬" : tabKey === "insight" ? "💡" : "···",
-    label: tabKey === "home" ? t.nav.home : tabKey === "search" ? t.nav.search : tabKey === "portfolio" ? t.nav.portfolio : tabKey === "wall" ? t.nav.wall : tabKey === "insight" ? t.nav.insight : t.nav.more,
+    href: localePath(marketHref(market, tabKey === "news" ? "home" : tabKey), locale),
+    emoji: tabKey === "home" ? "📊" : tabKey === "search" ? "🔍" : tabKey === "portfolio" ? "💼" : tabKey === "news" ? "📰" : tabKey === "insight" ? "💡" : "···",
+    label: tabKey === "home" ? t.nav.home : tabKey === "search" ? t.nav.search : tabKey === "portfolio" ? t.nav.portfolio : tabKey === "news" ? t.nav.news : tabKey === "insight" ? t.nav.insight : t.nav.more,
     tab: tabKey,
   }));
 
@@ -65,7 +69,14 @@ export function DesktopSidebar() {
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
       <div className="px-5 py-5 border-b" style={{ borderColor: "var(--border)" }}>
-        <Link href={homeHref} className="flex items-center gap-2.5">
+        <Link
+          href={homeHref}
+          onClick={(e) => {
+            if (isShellHomePath(pathname)) e.preventDefault();
+            openHome();
+          }}
+          className="flex items-center gap-2.5"
+        >
           <LogoMark size="md" />
           <div className="min-w-0">
             <div
@@ -94,22 +105,37 @@ export function DesktopSidebar() {
       </div>
 
       <nav className="flex-1 px-3 py-4 overflow-y-auto">
-        <Link
-          href={localePath("/news", locale)}
+        <button
+          type="button"
+          onClick={() => openNews()}
           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl mb-2 transition-all text-left"
-          style={{ background: "rgba(var(--mint-rgb),0.14)", color: "var(--navy)" }}
+          style={
+            newsActive
+              ? { background: "rgba(var(--mint-rgb),0.14)", color: "var(--navy)" }
+              : { color: "var(--sidebar-label)" }
+          }
         >
           <span className="text-lg w-6 text-center flex-shrink-0">🚀</span>
-          <span className="text-sm font-bold flex-1" style={{ color: "var(--navy)" }}>
+          <span className="text-sm font-bold flex-1" style={{ color: newsActive ? "var(--navy)" : "var(--sidebar-label)" }}>
             {isKo ? "뉴스 · 테슬라/스페이스X/xAI" : "News · Tesla/SpaceX/xAI"}
           </span>
-        </Link>
+        </button>
         {NAV.map(({ href, emoji, label, tab: tabKey }) => {
-          const isActive = tabKey === tab;
+          const isActive =
+            tabKey === "news" ? newsActive : tabKey === tab && !newsActive;
           return (
             <button
-              key={href}
+              key={tabKey}
               onClick={() => {
+                if (tabKey === "news") {
+                  openNews();
+                  return;
+                }
+                if (tabKey === "home") {
+                  openHome();
+                  return;
+                }
+                setView("home");
                 if (isActive) window.scrollTo({ top: 0, behavior: "smooth" });
                 else router.push(href);
               }}
