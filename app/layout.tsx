@@ -8,6 +8,7 @@ import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistratio
 import { PullToRefresh } from "@/components/PullToRefresh";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import { LocaleProvider } from "@/contexts/LocaleContext";
+import { HomeShellTabProvider } from "@/contexts/HomeShellTabContext";
 import { MarketProvider } from "@/contexts/MarketContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider, THEME_BOOT_SCRIPT } from "@/contexts/ThemeContext";
@@ -245,6 +246,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         `}</Script>
         <ThemeProvider>
         <LocaleProvider locale={locale}>
+          <HomeShellTabProvider>
           <MarketProvider>
           <AuthProvider>
             <ServiceWorkerRegistration />
@@ -266,6 +268,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <KoreanSuggestion />
           </AuthProvider>
           </MarketProvider>
+          </HomeShellTabProvider>
         </LocaleProvider>
         </ThemeProvider>
         {/* Kakao AdFit SDK — afterInteractive로 React 렌더 후 실행 보장 */}

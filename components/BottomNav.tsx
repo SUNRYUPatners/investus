@@ -3,18 +3,24 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
-import { marketHref, parseMarketPath, type MarketTab } from "@/lib/markets/marketPath";
+import { isShellHomePath, useHomeShellTab } from "@/contexts/HomeShellTabContext";
+import { marketHref, parseMarketPath } from "@/lib/markets/marketPath";
 import { localePath } from "@/lib/localePath";
+
+type ShellTab = "home" | "search" | "portfolio" | "news" | "insight" | "more";
 
 export function BottomNav() {
   const pathname = usePathname() ?? "";
   const t = useLocale();
   const locale = useLocaleCode();
   const { market, tab } = parseMarketPath(pathname);
+  const { view, setView, openNews, openHome } = useHomeShellTab();
+  const onHome = isShellHomePath(pathname);
+  const newsActive = view === "news" && onHome;
 
-  const tabs: MarketTab[] = ["home", "search", "portfolio", "wall", "insight", "more"];
+  const tabs: ShellTab[] = ["home", "search", "portfolio", "news", "insight", "more"];
   const navItems = tabs.map((tabKey) => ({
-    href: localePath(marketHref(market, tabKey), locale),
+    href: localePath(marketHref(market, tabKey === "news" ? "home" : tabKey), locale),
     emoji:
       tabKey === "home"
         ? "📊"
@@ -22,8 +28,8 @@ export function BottomNav() {
           ? "🔍"
           : tabKey === "portfolio"
             ? "💼"
-            : tabKey === "wall"
-              ? "💬"
+            : tabKey === "news"
+              ? "📰"
               : tabKey === "insight"
                 ? "💡"
                 : "···",
@@ -34,8 +40,8 @@ export function BottomNav() {
           ? t.nav.search
           : tabKey === "portfolio"
             ? t.nav.portfolio
-            : tabKey === "wall"
-              ? t.nav.wall
+            : tabKey === "news"
+              ? t.nav.news
               : tabKey === "insight"
                 ? t.nav.insight
                 : t.nav.more,
@@ -55,15 +61,28 @@ export function BottomNav() {
     >
       <div className="max-w-[480px] mx-auto flex items-stretch h-[60px]">
         {navItems.map(({ href, emoji, label, tab: tabKey }) => {
-          const isActive = tabKey === tab;
+          const isActive =
+            tabKey === "news"
+              ? newsActive
+              : tabKey === tab && !newsActive;
 
           return (
             <Link
-              key={href}
+              key={tabKey}
               href={href}
               prefetch
               onClick={(e) => {
-                // 같은 탭 재탭 → 맨 위로 (라우팅 막지 않음: 다른 탭은 Link 기본 동작)
+                if (tabKey === "news") {
+                  e.preventDefault();
+                  openNews();
+                  return;
+                }
+                if (tabKey === "home") {
+                  e.preventDefault();
+                  openHome();
+                  return;
+                }
+                setView("home");
                 if (isActive) {
                   e.preventDefault();
                   window.scrollTo({ top: 0, behavior: "smooth" });

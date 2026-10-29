@@ -14,8 +14,10 @@ import { BuffettWidget } from "@/components/BuffettWidget";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { ReportFeed } from "@/components/ReportFeed";
-import { HomeFeedTabs } from "@/components/HomeFeedTabs";
+import { HomeNewsFeed } from "@/components/HomeNewsFeed";
 import type { HomeArticleCard } from "@/lib/homeArticleCard";
+import { useHomeShellTab } from "@/contexts/HomeShellTabContext";
+import { useLocale } from "@/contexts/LocaleContext";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
 import { HomeAIInsight } from "@/components/HomeAIInsight";
@@ -56,6 +58,9 @@ export function MarketHomeShell({
   const showFear = market === "us" || market === "kr" || market === "kr-re";
   const showBuffett = market === "us";
   const uiLocale: Locale = locale; // always follow user locale, not market
+  const { view } = useHomeShellTab();
+  const t = useLocale();
+  const showNews = view === "news";
 
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
@@ -86,6 +91,19 @@ export function MarketHomeShell({
 
 
       <main className="max-w-[480px] mx-auto lg:max-w-screen-2xl lg:px-8 lg:pb-10">
+        {showNews ? (
+        <section className="pt-4 pb-6">
+          <div className="px-4 lg:px-0 mb-3">
+            <h2
+              className="text-xs font-semibold tracking-widest uppercase font-syne"
+              style={{ color: "var(--muted)" }}
+            >
+              {t.homeFeed.newsTitle}
+            </h2>
+          </div>
+          <HomeNewsFeed articles={articles} />
+        </section>
+        ) : (
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-3">
           <div className="lg:flex-1 lg:min-w-0">
             {/* 1. 모닝 브리핑 */}
@@ -111,11 +129,9 @@ export function MarketHomeShell({
               <AdFitBanner />
             </section>
 
-            {/* 6. 뉴스 / 리포트 탭 — 홈에서 애널·종토 탭을 대체. 탭 전환은 페이지를 떠나지 않음 */}
+            {/* 6. 리포트 */}
             <section className="pt-3 lg:pt-4">
-              <HomeFeedTabs articles={articles}>
-                <ReportFeed market={market} />
-              </HomeFeedTabs>
+              <ReportFeed market={market} />
             </section>
 
             {/* 7. 뉴스 — 모바일 전용 (데스크탑: 사이드바) */}
@@ -186,6 +202,7 @@ export function MarketHomeShell({
             <NewsSection market={market} />
           </div>
         </div>
+        )}
       </main>
 
       <OnboardingModal />
