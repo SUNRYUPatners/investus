@@ -9,12 +9,23 @@ import {
   type NewsSectionTab,
 } from "@/components/news/newsStrings";
 import { HomeNewsFeed } from "@/components/HomeNewsFeed";
-import { AboutContent } from "@/components/news/AboutContent";
-import { LearnHubCards } from "@/components/LearnHubCards";
-import { LEARN_ARTICLES, LEARN_SERIES } from "@/lib/learnArticles";
+import { TeslaValuationView } from "@/components/TeslaValuationView";
 import type { HomeArticleCard } from "@/lib/homeArticleCard";
 import type { LiveNewsItem } from "@/lib/liveNewsTypes";
+import type { TeslaQuoteSnapshot } from "@/lib/teslaValuationTypes";
 import { localePath } from "@/lib/localePath";
+
+const EMPTY_TSLA: TeslaQuoteSnapshot = {
+  price: null,
+  changePercent: null,
+  marketCap: null,
+  pe: null,
+  eps: null,
+  week52High: null,
+  week52Low: null,
+  asOfIso: null,
+  quoteSource: null,
+};
 
 function relTime(iso: string, locale: "en" | "ko"): string {
   const s = Math.max(0, Math.floor((Date.now() - new Date(iso).getTime()) / 1000));
@@ -32,10 +43,14 @@ export function HomeNewsPanel({
   analysis,
   earnings,
   spacex,
+  tesla,
+  teslaValuation,
 }: {
   analysis: HomeArticleCard[];
   earnings: HomeArticleCard[];
   spacex: HomeArticleCard[];
+  tesla: HomeArticleCard[];
+  teslaValuation?: TeslaQuoteSnapshot;
 }) {
   const locale = useLocaleCode();
   const s = NEWS_STRINGS[locale];
@@ -135,11 +150,21 @@ export function HomeNewsPanel({
           emptyCta={s.allArticles}
         />
       )}
-      {tab === "guides" && <GuidesInline locale={locale} />}
-      {tab === "about" && (
-        <div className="px-4 lg:px-0">
-          <AboutContent locale={locale} />
-        </div>
+      {tab === "tesla" && (
+        <>
+          <div className="px-4 lg:px-0">
+            <p className="text-[10px] mb-3" style={{ color: "var(--muted)" }}>
+              {s.teslaIntro}
+            </p>
+            <TeslaValuationView locale={locale} snapshot={teslaValuation ?? EMPTY_TSLA} compact />
+          </div>
+          <OwnerFeed
+            articles={tesla}
+            intro=""
+            emptyHref={localePath("/tesla-valuation", locale)}
+            emptyCta={s.allArticles}
+          />
+        </>
       )}
     </section>
   );
@@ -246,39 +271,3 @@ function OwnerFeed({
   return <HomeNewsFeed articles={articles} intro={intro} />;
 }
 
-function GuidesInline({ locale }: { locale: "en" | "ko" }) {
-  const s = NEWS_STRINGS[locale];
-  const isKo = locale === "ko";
-  return (
-    <div className="px-4 lg:px-0">
-      <p className="text-[12px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
-        {s.guidesIntro}
-      </p>
-      <div className="flex flex-col gap-2 mb-5">
-        {LEARN_SERIES.map((series) => (
-          <Link
-            key={series.id}
-            href={localePath("/learn", locale)}
-            className="rounded-xl border px-4 py-3 no-underline"
-            style={{ background: "var(--card)", borderColor: "var(--border)" }}
-          >
-            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>
-              {isKo ? series.title : series.titleEn}
-            </p>
-            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
-              {isKo ? series.blurb : series.blurbEn}
-            </p>
-          </Link>
-        ))}
-      </div>
-      <LearnHubCards articles={LEARN_ARTICLES.slice(0, 8)} />
-      <Link
-        href={localePath("/learn", locale)}
-        className="mt-4 block text-center text-xs font-semibold py-3 rounded-2xl no-underline"
-        style={{ background: "var(--card)", color: "var(--mint)", border: "1px solid var(--border)" }}
-      >
-        {s.allGuides} →
-      </Link>
-    </div>
-  );
-}

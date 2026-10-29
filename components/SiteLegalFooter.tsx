@@ -49,6 +49,10 @@ export async function SiteLegalFooter() {
             {isKo ? "문의" : "Contact"}
           </Link>
           <span style={{ color: "var(--border)" }} aria-hidden>|</span>
+          <Link href={isKo ? "/ko/news/about" : "/news/about"} className="hover:underline" style={{ color: "var(--text)" }}>
+            {isKo ? "소개·편집방침" : "Editorial policy"}
+          </Link>
+          <span style={{ color: "var(--border)" }} aria-hidden>|</span>
           <Link href="/more/refund" className="hover:underline" style={{ color: "var(--text)" }}>
             {isKo ? "환불정책" : "Refund Policy"}
           </Link>

@@ -283,6 +283,10 @@ export function getMuskKindCards(kind: NewsKind, locale: ArticleLocale): HomeArt
     .map((a) => toHomeCard(a, locale));
 }
 
+export function getTickerCards(ticker: string, locale: ArticleLocale, limit?: number): HomeArticleCard[] {
+  return getArticles({ ticker, limit }).map((a) => toHomeCard(a, locale));
+}
+
 export type NewsKind = "analysis" | "earnings" | "spacex";
 
 export function getArticlesByKind(kind: NewsKind, limit?: number): Article[] {

@@ -1,7 +1,7 @@
 /** Chrome copy for the /news section and the home News tab sub-menu.
  *  Kept free of `reports.ts` / article bodies so client components can import it. */
 
-export type NewsSectionTab = "news" | "analysis" | "earnings" | "spacex" | "guides" | "about";
+export type NewsSectionTab = "news" | "analysis" | "earnings" | "spacex" | "tesla";
 
 export const NEWS_STRINGS = {
   en: {
@@ -12,6 +12,7 @@ export const NEWS_STRINGS = {
     analysis: "Analysis",
     earnings: "Earnings & data",
     spacex: "SpaceX valuation",
+    tesla: "Tesla valuation",
     guides: "Guides",
     about: "About & editorial",
     latest: "Latest research",
@@ -36,6 +37,7 @@ export const NEWS_STRINGS = {
     allGuides: "All guides",
     earningsIntro: "Earnings coverage and data trackers across the Musk ecosystem.",
     spacexIntro: "SpaceX valuation, Starlink, Starship and AI-compute coverage.",
+    teslaIntro: "Tesla market cap and multiples from live prices, plus sourced segment notes and ARK bear/base/bull scenarios.",
     analysisIntro: "Investus research on Tesla, SpaceX, xAI and the Musk ecosystem.",
   },
   ko: {
@@ -46,6 +48,7 @@ export const NEWS_STRINGS = {
     analysis: "분석",
     earnings: "실적·데이터",
     spacex: "스페이스X 밸류에이션",
+    tesla: "테슬라 밸류에이션",
     guides: "투자 가이드",
     about: "소개·편집 방침",
     latest: "최신 리서치",
@@ -69,6 +72,7 @@ export const NEWS_STRINGS = {
     allGuides: "전체 가이드",
     earningsIntro: "머스크 생태계 실적 커버리지와 데이터 트래커.",
     spacexIntro: "스페이스X 밸류에이션, 스타링크, 스타십, AI 컴퓨트 커버리지.",
+    teslaIntro: "실시간 시세 기준 테슬라 시가총액·배수, 인용된 부문 노트와 ARK 약세·기본·강세 시나리오.",
     analysisIntro: "테슬라·스페이스X·xAI 등 머스크 생태계 인베스트어스 리서치.",
   },
 } as const;
@@ -80,7 +84,6 @@ export function newsSectionTabs(locale: "en" | "ko"): { id: NewsSectionTab; labe
     { id: "analysis", label: s.analysis },
     { id: "earnings", label: s.earnings },
     { id: "spacex", label: s.spacex },
-    { id: "guides", label: s.guides },
-    { id: "about", label: s.about },
+    { id: "tesla", label: s.tesla },
   ];
 }

@@ -18,8 +18,7 @@ function navItems(locale: L) {
     { href: `${base}/news/analysis`, label: s.analysis, id: "analysis" },
     { href: `${base}/news/earnings`, label: s.earnings, id: "earnings" },
     { href: `${base}/news/spacex`, label: s.spacex, id: "spacex" },
-    { href: locale === "en" ? "/learn" : "/learn", label: s.guides, id: "guides" },
-    { href: `${base}/news/about`, label: s.about, id: "about" },
+    { href: `${base}/tesla-valuation`, label: s.tesla, id: "tesla" },
   ];
 }
 
