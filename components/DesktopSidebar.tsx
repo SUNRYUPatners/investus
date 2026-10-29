@@ -105,21 +105,6 @@ export function DesktopSidebar() {
       </div>
 
       <nav className="flex-1 px-3 py-4 overflow-y-auto">
-        <button
-          type="button"
-          onClick={() => openNews()}
-          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl mb-2 transition-all text-left"
-          style={
-            newsActive
-              ? { background: "rgba(var(--mint-rgb),0.14)", color: "var(--navy)" }
-              : { color: "var(--sidebar-label)" }
-          }
-        >
-          <span className="text-lg w-6 text-center flex-shrink-0">🚀</span>
-          <span className="text-sm font-bold flex-1" style={{ color: newsActive ? "var(--navy)" : "var(--sidebar-label)" }}>
-            {isKo ? "뉴스 · 테슬라/스페이스X/xAI" : "News · Tesla/SpaceX/xAI"}
-          </span>
-        </button>
         {NAV.map(({ href, emoji, label, tab: tabKey }) => {
           const isActive =
             tabKey === "news" ? newsActive : tabKey === tab && !newsActive;

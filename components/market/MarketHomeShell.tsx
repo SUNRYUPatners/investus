@@ -16,6 +16,7 @@ import { AdFitBanner } from "@/components/AdFitBanner";
 import { ReportFeed } from "@/components/ReportFeed";
 import { HomeNewsPanel } from "@/components/HomeNewsPanel";
 import type { HomeArticleCard } from "@/lib/homeArticleCard";
+import type { TeslaQuoteSnapshot } from "@/lib/teslaValuationTypes";
 import { useHomeShellTab } from "@/contexts/HomeShellTabContext";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
@@ -48,6 +49,8 @@ export function MarketHomeShell({
   analysisArticles = [],
   earningsArticles = [],
   spacexArticles = [],
+  teslaArticles = [],
+  teslaValuation,
 }: {
   market: MarketId;
   locale: Locale;
@@ -55,6 +58,8 @@ export function MarketHomeShell({
   analysisArticles?: HomeArticleCard[];
   earningsArticles?: HomeArticleCard[];
   spacexArticles?: HomeArticleCard[];
+  teslaArticles?: HomeArticleCard[];
+  teslaValuation?: TeslaQuoteSnapshot;
 }) {
   const cfg = getMarketConfig(market);
   const isUs = market === "us";
@@ -98,6 +103,8 @@ export function MarketHomeShell({
           analysis={analysisArticles}
           earnings={earningsArticles}
           spacex={spacexArticles}
+          tesla={teslaArticles}
+          teslaValuation={teslaValuation}
         />
         ) : (
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-3">

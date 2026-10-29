@@ -71,6 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     bi("/news/analysis", 0.85, "daily"),
     bi("/news/earnings", 0.85, "daily"),
     bi("/news/spacex", 0.85, "weekly"),
+    bi("/tesla-valuation", 0.85, "daily"),
     bi("/news/about", 0.6, "monthly"),
 
     ...articleEntries,

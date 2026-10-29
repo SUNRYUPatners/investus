@@ -10,6 +10,7 @@ import { ProfileEditModal } from "@/components/ProfileEditModal";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { ThemeSettingsCard } from "@/components/ThemeSettingsCard";
+import { localePath } from "@/lib/localePath";
 
 type MenuItem_t = { label: string; sub: string; emoji: string; href?: string; onClick?: () => void };
 
@@ -1023,6 +1024,8 @@ export default function MorePage() {
   const mo = t.more;
   const { user } = useAuth();
   const [showFeedback, setShowFeedback] = useState(false);
+  const locale = useLocaleCode();
+  const isKo = locale === "ko";
 
   const MENU_EMOJIS = [
     ["📖", "📚", "📊", "✉️", "🔖"],
@@ -1045,15 +1048,19 @@ export default function MorePage() {
       onClick: si === 1 && ii === 2 ? () => setShowFeedback(true) : undefined,
     })),
   }));
-
-  const locale    = useLocaleCode();
-  const isKo      = locale === "ko";
+  sections[0]?.items.splice(3, 0, {
+    label: isKo ? "소개·편집방침" : "About & editorial",
+    sub: isKo ? "누가 쓰는지, 출처와 정정 원칙" : "Who writes this, sources and corrections",
+    emoji: "✍️",
+    href: localePath("/news/about", locale),
+  });
 
   // Right sidebar quick-link tiles (3×3 grid)
   const sidebarLinks = [
     { emoji: "📖", label: isKo ? "사용 가이드" : "Guide",      href: "/more/guide" },
     { emoji: "📚", label: isKo ? "미국주식 가이드" : "US Guide", href: "/more/us-investing-guide" },
     { emoji: "📊", label: isKo ? "소개"        : "About",      href: "/more/about" },
+    { emoji: "✍️", label: isKo ? "소개·편집방침" : "Editorial", href: localePath("/news/about", locale) },
     { emoji: "✉️", label: isKo ? "문의·연락처" : "Contact",    href: "/more/contact" },
     { emoji: "🔖", label: isKo ? "업데이트"    : "Updates",    href: "/more/version" },
     { emoji: "📢", label: isKo ? "공지사항"    : "Notices",    href: "/more/notices" },

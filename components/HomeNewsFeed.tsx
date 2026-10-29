@@ -23,6 +23,7 @@ export function HomeNewsFeed({
   const remaining = Math.max(0, articles.length - shown);
 
   if (articles.length === 0) {
+    if (!intro) return null;
     return (
       <p className="text-sm px-4 lg:px-0 py-6 text-center" style={{ color: "var(--muted)" }}>
         {t.homeFeed.empty}
