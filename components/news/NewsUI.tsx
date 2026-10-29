@@ -4,71 +4,22 @@ import { Header } from "@/components/Header";
 import type { Article, ArticleLocale } from "@/lib/articles";
 import { parseBody, pickText, tickerName } from "@/lib/articles";
 import { CATEGORY_STYLE } from "@/lib/reports";
+import { NEWS_STRINGS } from "@/components/news/newsStrings";
+
+export { NEWS_STRINGS, newsSectionTabs, type NewsSectionTab } from "@/components/news/newsStrings";
 
 type L = ArticleLocale;
-
-export const NEWS_STRINGS = {
-  en: {
-    brand: "INVESTUS",
-    tagline: "Tesla · SpaceX · xAI — investor research on the Musk ecosystem",
-    home: "Home",
-    news: "News",
-    analysis: "Analysis",
-    earnings: "Earnings & data",
-    spacex: "SpaceX valuation",
-    guides: "Guides",
-    about: "About & editorial",
-    latest: "Latest research",
-    allArticles: "All articles",
-    readMore: "Read full analysis",
-    sources: "Sources & further reading",
-    published: "Published",
-    disclaimerTitle: "Disclaimer",
-    disclaimer:
-      "This article is editorial research for informational purposes only. It is not investment advice, a recommendation, or a solicitation to buy or sell any security, and does not guarantee any return. Markets carry risk of loss. Verify figures against the primary sources before making decisions.",
-    koVersion: "한국어로 보기",
-    byline: "By the Investus editorial desk",
-    relatedTicker: "More on",
-    backToNews: "Back to all news",
-    noEnglish:
-      "A full English translation of this report is in progress. The analysis below reflects the original Korean research.",
-  },
-  ko: {
-    brand: "INVESTUS",
-    tagline: "테슬라 · 스페이스X · xAI — 머스크 생태계 투자 리서치",
-    home: "홈",
-    news: "뉴스",
-    analysis: "분석",
-    earnings: "실적·데이터",
-    spacex: "스페이스X 밸류에이션",
-    guides: "투자 가이드",
-    about: "소개·편집 방침",
-    latest: "최신 리서치",
-    allArticles: "전체 글",
-    readMore: "분석 전문 보기",
-    sources: "출처 및 참고자료",
-    published: "발행",
-    disclaimerTitle: "투자 유의사항",
-    disclaimer:
-      "본 글은 정보 제공 목적의 편집 리서치입니다. 투자 자문이나 매수·매도 권유가 아니며 수익을 보장하지 않습니다. 투자에는 원금 손실 위험이 있습니다. 판단 전 반드시 원 출처로 수치를 확인하시기 바랍니다.",
-    koVersion: "View in English",
-    byline: "인베스트어스 편집팀",
-    relatedTicker: "관련 종목",
-    backToNews: "전체 뉴스로",
-    noEnglish: "",
-  },
-} as const;
 
 function navItems(locale: L) {
   const s = NEWS_STRINGS[locale];
   const base = locale === "en" ? "" : "/ko";
   return [
-    { href: `${base}/news`, label: s.news },
-    { href: `${base}/news/analysis`, label: s.analysis },
-    { href: `${base}/news/earnings`, label: s.earnings },
-    { href: `${base}/news/spacex`, label: s.spacex },
-    { href: locale === "en" ? "/learn" : "/learn", label: s.guides },
-    { href: `${base}/news/about`, label: s.about },
+    { href: `${base}/news`, label: s.news, id: "news" },
+    { href: `${base}/news/analysis`, label: s.analysis, id: "analysis" },
+    { href: `${base}/news/earnings`, label: s.earnings, id: "earnings" },
+    { href: `${base}/news/spacex`, label: s.spacex, id: "spacex" },
+    { href: locale === "en" ? "/learn" : "/learn", label: s.guides, id: "guides" },
+    { href: `${base}/news/about`, label: s.about, id: "about" },
   ];
 }
 

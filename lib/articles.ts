@@ -235,22 +235,52 @@ export function pickText(a: Article, locale: ArticleLocale) {
   return locale === "en" ? a.en : a.ko;
 }
 
+function toHomeCard(a: Article, locale: ArticleLocale): HomeArticleCard {
+  const t = pickText(a, locale);
+  const style = CATEGORY_STYLE[a.categoryColor];
+  return {
+    slug: a.slug,
+    date: a.date,
+    displayDate: a.displayDate,
+    tickerLabel: a.ticker ? tickerName(a.ticker, locale) : null,
+    category: a.category,
+    categoryBg: style.bg,
+    categoryFg: style.color,
+    title: t.title,
+    excerpt: t.summary,
+  };
+}
+
 export function getHomeArticleCards(locale: ArticleLocale): HomeArticleCard[] {
-  return getAllArticles().map((a) => {
-    const t = pickText(a, locale);
-    const style = CATEGORY_STYLE[a.categoryColor];
-    return {
-      slug: a.slug,
-      date: a.date,
-      displayDate: a.displayDate,
-      tickerLabel: a.ticker ? tickerName(a.ticker, locale) : null,
-      category: a.category,
-      categoryBg: style.bg,
-      categoryFg: style.color,
-      title: t.title,
-      excerpt: t.summary,
-    };
-  });
+  return getAllArticles().map((a) => toHomeCard(a, locale));
+}
+
+const MUSK_TICKERS = new Set(["TSLA", "SPCX"]);
+const MUSK_KW =
+  /tsla|tesla|spacex|spcx|xai|starlink|neuralink|boring|musk|테슬라|스페이스\s?x|머스크|스타링크|뉴럴링크|보링|사이버캡|옵티머스|스타십|cybercab|optimus|starship|grok/i;
+
+export function isMuskEcosystemArticle(a: Article): boolean {
+  if (a.ticker && MUSK_TICKERS.has(a.ticker.toUpperCase())) return true;
+  if (a.tickers.some((t) => MUSK_TICKERS.has(t.toUpperCase()))) return true;
+  const hay = [a.ticker, ...a.tickers, a.ko.title, a.en.title, a.ko.summary, a.en.summary].join(" ");
+  return MUSK_KW.test(hay);
+}
+
+export function getMuskEcosystemCards(locale: ArticleLocale): HomeArticleCard[] {
+  return getAllArticles()
+    .filter(isMuskEcosystemArticle)
+    .map((a) => toHomeCard(a, locale));
+}
+
+export function getKindCards(kind: NewsKind, locale: ArticleLocale): HomeArticleCard[] {
+  return getArticlesByKind(kind).map((a) => toHomeCard(a, locale));
+}
+
+/** Kind-filtered owner articles, still restricted to the Musk ecosystem. */
+export function getMuskKindCards(kind: NewsKind, locale: ArticleLocale): HomeArticleCard[] {
+  return getArticlesByKind(kind)
+    .filter(isMuskEcosystemArticle)
+    .map((a) => toHomeCard(a, locale));
 }
 
 export type NewsKind = "analysis" | "earnings" | "spacex";

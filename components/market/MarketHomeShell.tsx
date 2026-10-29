@@ -14,10 +14,9 @@ import { BuffettWidget } from "@/components/BuffettWidget";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { ReportFeed } from "@/components/ReportFeed";
-import { HomeNewsFeed } from "@/components/HomeNewsFeed";
+import { HomeNewsPanel } from "@/components/HomeNewsPanel";
 import type { HomeArticleCard } from "@/lib/homeArticleCard";
 import { useHomeShellTab } from "@/contexts/HomeShellTabContext";
-import { useLocale } from "@/contexts/LocaleContext";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
 import { HomeAIInsight } from "@/components/HomeAIInsight";
@@ -46,12 +45,16 @@ export function MarketHomeShell({
   market,
   locale,
   initialData = null,
-  articles = [],
+  analysisArticles = [],
+  earningsArticles = [],
+  spacexArticles = [],
 }: {
   market: MarketId;
   locale: Locale;
   initialData?: MarketSnap;
-  articles?: HomeArticleCard[];
+  analysisArticles?: HomeArticleCard[];
+  earningsArticles?: HomeArticleCard[];
+  spacexArticles?: HomeArticleCard[];
 }) {
   const cfg = getMarketConfig(market);
   const isUs = market === "us";
@@ -59,7 +62,6 @@ export function MarketHomeShell({
   const showBuffett = market === "us";
   const uiLocale: Locale = locale; // always follow user locale, not market
   const { view } = useHomeShellTab();
-  const t = useLocale();
   const showNews = view === "news";
 
   return (
@@ -92,17 +94,11 @@ export function MarketHomeShell({
 
       <main className="max-w-[480px] mx-auto lg:max-w-screen-2xl lg:px-8 lg:pb-10">
         {showNews ? (
-        <section className="pt-4 pb-6">
-          <div className="px-4 lg:px-0 mb-3">
-            <h2
-              className="text-xs font-semibold tracking-widest uppercase font-syne"
-              style={{ color: "var(--muted)" }}
-            >
-              {t.homeFeed.newsTitle}
-            </h2>
-          </div>
-          <HomeNewsFeed articles={articles} />
-        </section>
+        <HomeNewsPanel
+          analysis={analysisArticles}
+          earnings={earningsArticles}
+          spacex={spacexArticles}
+        />
         ) : (
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-3">
           <div className="lg:flex-1 lg:min-w-0">
