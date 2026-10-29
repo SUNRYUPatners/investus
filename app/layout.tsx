@@ -14,11 +14,13 @@ import { ThemeProvider, THEME_BOOT_SCRIPT } from "@/contexts/ThemeContext";
 import { VersionBanner } from "@/components/VersionBanner";
 import { ReportUpdateBanner } from "@/components/ReportUpdateBanner";
 import { getLocale } from "@/lib/getLocale";
+import { localizedAlternates, currentLogicalPath } from "@/lib/localeMeta";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SiteLegalFooter } from "@/components/SiteLegalFooter";
 import { GlobalSessionChatWidget } from "@/components/GlobalSessionChatWidget";
 import { GuestLoginSheet } from "@/components/GuestLoginSheet";
+import { KoreanSuggestion } from "@/components/KoreanSuggestion";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -45,6 +47,8 @@ const notoSansKR = Noto_Sans_KR({
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const isKo = locale === "ko";
+  const path = await currentLogicalPath();
+  const alternates = await localizedAlternates(path);
 
   return {
     title: isKo
@@ -97,9 +101,7 @@ export async function generateMetadata(): Promise<Metadata> {
         ? "글로벌 자산(주식·암호화폐·금·부동산)을 AI가 하나로 연결하는 투자 플랫폼."
         : "Stocks, crypto, gold, and real estate — connected by AI into one investment platform.",
     },
-    alternates: {
-      canonical: "https://www.investus.kr",
-    },
+    alternates,
     robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     appleWebApp: {
       capable: true,
@@ -261,6 +263,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <BottomNav />
             <GlobalSessionChatWidget />
             <GuestLoginSheet />
+            <KoreanSuggestion />
           </AuthProvider>
           </MarketProvider>
         </LocaleProvider>

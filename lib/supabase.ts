@@ -20,6 +20,27 @@ export function getAdminSupabase(): SupabaseClient {
   return createClient(url, key, { auth: { persistSession: false } });
 }
 
+/**
+ * Lazy admin client for module-scope usage. Returns a proxy that creates the
+ * real admin client on first property access, so importing a route that keeps
+ * a module-level `const supabase = getAdminSupabaseLazy()` does NOT read
+ * SUPABASE_SERVICE_ROLE_KEY at build time (page-data collection). At runtime,
+ * the first `.from(...)` call builds the real client exactly as before.
+ */
+export function getAdminSupabaseLazy(): SupabaseClient {
+  let real: SupabaseClient | null = null;
+  const resolve = () => (real ??= getAdminSupabase());
+  return new Proxy({} as SupabaseClient, {
+    get(_target, prop, receiver) {
+      const client = resolve() as unknown as Record<string | symbol, unknown>;
+      const value = client[prop];
+      return typeof value === "function"
+        ? (value as (...args: unknown[]) => unknown).bind(client)
+        : Reflect.get(client as object, prop, receiver);
+    },
+  });
+}
+
 // Verify a request's JWT and return { email, id }, or null if unauthenticated.
 // Usage: const user = await getUserFromRequest(req); if (!user) return 401;
 export async function getUserFromRequest(

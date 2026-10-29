@@ -1,18 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAdminSupabase } from "@/lib/supabase";
+import { getAdminSupabaseLazy } from "@/lib/supabase";
 import webpush from "web-push";
 import { isNYSEHoliday } from "@/lib/marketHours";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
 
-webpush.setVapidDetails(
-  process.env.VAPID_MAILTO!,
-  process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
-  process.env.VAPID_PRIVATE_KEY!,
-);
+if (process.env.VAPID_MAILTO && process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY) {
+  webpush.setVapidDetails(
+    process.env.VAPID_MAILTO,
+    process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY,
+    process.env.VAPID_PRIVATE_KEY,
+  );
+}
 
-const supabase = getAdminSupabase();
+const supabase = getAdminSupabaseLazy();
 
 // Vercel Cron이 Authorization: Bearer {CRON_SECRET} 헤더를 자동으로 추가
 // 수동 테스트 시: x-notify-secret 헤더로도 인증 가능

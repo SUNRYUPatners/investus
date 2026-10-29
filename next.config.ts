@@ -155,7 +155,29 @@ const nextConfig: NextConfig = {
         destination: "/learn",
         permanent: true,
       },
+      // Paid 1:1 course page removed (ads-only monetization, no performance claims).
+      {
+        source: "/education",
+        destination: "/learn",
+        permanent: true,
+      },
+      {
+        source: "/education/",
+        destination: "/learn",
+        permanent: true,
+      },
     ];
+  },
+  async rewrites() {
+    return {
+      // Korean locale pages are served under /ko/* by rendering the same routes.
+      // afterFiles runs only when no real file route matches, so real /ko/news/*
+      // routes keep their own files; everything else maps to the default route.
+      afterFiles: [
+        { source: "/ko", destination: "/" },
+        { source: "/ko/:path*", destination: "/:path*" },
+      ],
+    };
   },
   async headers() {
     return [
@@ -167,6 +189,13 @@ const nextConfig: NextConfig = {
           { key: "Cache-Control", value: "public, max-age=86400, must-revalidate" },
           { key: "X-Content-Type-Options", value: "nosniff" },
         ],
+      },
+      {
+        // Near-duplicate secondary tab pages under the market switchers are thin
+        // shells (wall/search/portfolio/more repeat per market). Keep them out of
+        // the index until they carry unique content.
+        source: "/:market(kr|safe|kr-re)/:tab(wall|search|portfolio|more)",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
       },
       {
         source: "/(.*)",

@@ -1,4 +1,9 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { STOCK_SEARCH_DB } from "@/lib/stockSearchDb";
+import { isKrSymbol } from "@/lib/markets/krSymbol";
+import { getArticles } from "@/lib/articles";
+import { localizedAlternates } from "@/lib/localeMeta";
 
 // 주요 종목 한국어 이름 매핑
 const STOCK_META: Record<string, { name: string; kr: string; desc: string }> = {
@@ -31,9 +36,37 @@ const STOCK_META: Record<string, { name: string; kr: string; desc: string }> = {
 
 type Props = { params: Promise<{ symbol: string }> };
 
+// Known, real tickers: the comprehensive search registry + the curated meta
+// map + any KR (numeric) symbol. Unknown tickers (e.g. /stock/ZZZZ) 404.
+const KNOWN_SYMBOLS = new Set<string>(STOCK_SEARCH_DB.map((x) => x.symbol.toUpperCase()));
+
+function isKnownSymbol(s: string): boolean {
+  const up = s.toUpperCase();
+  if (KNOWN_SYMBOLS.has(up)) return true;
+  if (STOCK_META[up]) return true;
+  try {
+    if (isKrSymbol(up)) return true;
+  } catch {
+    /* ignore */
+  }
+  return false;
+}
+
+// A stock page is only index-worthy once it has real report coverage; otherwise
+// it is a thin "no posts yet" shell and should be noindex.
+function hasReportCoverage(s: string): boolean {
+  return getArticles({ ticker: s, limit: 1 }).length > 0;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { symbol } = await params;
   const s = symbol.toUpperCase();
+
+  if (!isKnownSymbol(s)) {
+    return { title: "Not found | Investus", robots: { index: false, follow: false } };
+  }
+
+  const indexable = hasReportCoverage(s);
   const m = STOCK_META[s];
 
   const title = m
@@ -52,7 +85,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: m
       ? [s, m.name, m.kr, `${m.kr} 주가`, `${s} 주가`, `${m.kr} 주식`, `${s} 실시간`, "미국주식", "investus"]
       : [s, `${s} 주가`, `${s} 주식`, "미국주식", "investus"],
-    alternates: { canonical: `https://www.investus.kr/stock/${s}` },
+    alternates: await localizedAlternates(`/stock/${s}`),
+    robots: indexable
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
     openGraph: {
       title,
       description,
@@ -71,6 +107,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function StockLayout({ children }: { children: React.ReactNode }) {
+export default async function StockLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ symbol: string }>;
+}) {
+  const { symbol } = await params;
+  if (!isKnownSymbol(symbol)) notFound();
   return <>{children}</>;
 }
