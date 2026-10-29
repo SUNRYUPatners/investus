@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { LogoMark } from "@/components/LogoMark";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isMarketSessionOpen, isStockMarketOpen } from "@/lib/markets/hours";
 import { parseMarketPath, marketHref, type MarketTab } from "@/lib/markets/marketPath";
@@ -135,6 +136,7 @@ export function Header() {
 
           {/* 우측: 로그인 + 시간 + 마켓 상태 */}
           <div className="flex items-center gap-2 flex-shrink-0">
+            <LocaleSwitcher className="hidden sm:inline-block" />
             <GuestStartButton compact />
             {mounted && (
               <div className={isGuest ? "hidden sm:flex items-center gap-2" : "flex items-center gap-2"}>
