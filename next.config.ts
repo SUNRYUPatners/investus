@@ -168,6 +168,17 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return {
+      // Korean locale pages are served under /ko/* by rendering the same routes.
+      // afterFiles runs only when no real file route matches, so real /ko/news/*
+      // routes keep their own files; everything else maps to the default route.
+      afterFiles: [
+        { source: "/ko", destination: "/" },
+        { source: "/ko/:path*", destination: "/:path*" },
+      ],
+    };
+  },
   async headers() {
     return [
       {

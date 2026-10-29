@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localizedAlternates } from "@/lib/localeMeta";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -63,11 +64,12 @@ const jsonLd = {
   ],
 };
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
   title: "Investus 소개 — SUNRYU Partners CIO · AI 자산관리 플랫폼",
   description:
     "선류파트너스 CIO가 직접 분석하는 AI 자산관리 플랫폼. 미국·한국·안전자산·부동산을 한 화면에서 관리. KIFIN 유사투자자문업 사전교육 이수(2023). 투자 정보 제공 서비스.",
-  alternates: { canonical: "https://www.investus.kr/more/about" },
+  alternates: await localizedAlternates("/more/about"),
   openGraph: {
     title: "Investus 소개 — SUNRYU Partners CIO",
     description:
@@ -75,7 +77,8 @@ export const metadata: Metadata = {
     url: "https://www.investus.kr/more/about",
     type: "profile",
   },
-};
+  };
+}
 
 export default function AboutLayout({ children }: { children: React.ReactNode }) {
   return (

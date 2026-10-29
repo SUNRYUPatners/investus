@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localizedAlternates } from "@/lib/localeMeta";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -20,11 +21,12 @@ const jsonLd = {
   "inLanguage": ["ko-KR", "en"],
 };
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
   title: "투자 지식 허브 — Investus Learn · 미국주식 교육 가이드",
   description:
     "미국주식 ETF·밸류에이션·배당·세금·매크로·옵션·부동산·안전자산 투자 교육 가이드. 초보부터 심화까지 35편 이상 무료 제공. 선류파트너스 CIO 직접 정리.",
-  alternates: { canonical: "https://www.investus.kr/learn" },
+  alternates: await localizedAlternates("/learn"),
   openGraph: {
     title: "투자 지식 허브 — Investus Learn",
     description:
@@ -32,7 +34,8 @@ export const metadata: Metadata = {
     url: "https://www.investus.kr/learn",
     type: "website",
   },
-};
+  };
+}
 
 export default function LearnLayout({ children }: { children: React.ReactNode }) {
   return (

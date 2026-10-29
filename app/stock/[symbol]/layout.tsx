@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { STOCK_SEARCH_DB } from "@/lib/stockSearchDb";
 import { isKrSymbol } from "@/lib/markets/krSymbol";
 import { getArticles } from "@/lib/articles";
+import { localizedAlternates } from "@/lib/localeMeta";
 
 // 주요 종목 한국어 이름 매핑
 const STOCK_META: Record<string, { name: string; kr: string; desc: string }> = {
@@ -84,7 +85,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: m
       ? [s, m.name, m.kr, `${m.kr} 주가`, `${s} 주가`, `${m.kr} 주식`, `${s} 실시간`, "미국주식", "investus"]
       : [s, `${s} 주가`, `${s} 주식`, "미국주식", "investus"],
-    alternates: { canonical: `https://www.investus.kr/stock/${s}` },
+    alternates: await localizedAlternates(`/stock/${s}`),
     robots: indexable
       ? { index: true, follow: true }
       : { index: false, follow: true },

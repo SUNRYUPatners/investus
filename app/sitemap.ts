@@ -3,6 +3,9 @@ import { getAllArticles } from "@/lib/articles";
 
 const base = "https://www.investus.kr";
 
+type Entry = MetadataRoute.Sitemap[number];
+type Freq = Entry["changeFrequency"];
+
 // Learn hub guides (real, substantive content).
 const LEARN_SLUGS = [
   "us-stock-basics", "korea-stocks", "safe-assets", "korea-real-estate",
@@ -14,9 +17,27 @@ const LEARN_SLUGS = [
   "usd-krw", "sectors", "fear-greed", "buffett-indicator", "portfolio-strategy",
 ];
 
+// Trust / legal pages (bilingual).
+const MORE_PAGES = [
+  "about", "contact", "us-investing-guide", "faq", "privacy", "terms", "disclaimer",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const articles = getAllArticles();
+
+  // Bilingual entry: English default URL + ko alternate + x-default.
+  const bi = (path: string, priority: number, freq: Freq, lastModified: Date = now): Entry => {
+    const en = path === "/" ? `${base}/` : `${base}${path}`;
+    const ko = path === "/" ? `${base}/ko` : `${base}/ko${path}`;
+    return {
+      url: en,
+      lastModified,
+      changeFrequency: freq,
+      priority,
+      alternates: { languages: { en, ko, "x-default": en } },
+    };
+  };
 
   // Only stock pages that actually have substantive report coverage are indexable.
   const tickerCount = new Map<string, number>();
@@ -27,20 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const coveredTickers = [...tickerCount.entries()]
     .filter(([t, n]) => n >= 2 && /^[A-Z.]+$/.test(t) && t !== "SPCX")
     .map(([t]) => t);
-
-  const newsLocalized = (path: string, priority: number, freq: MetadataRoute.Sitemap[number]["changeFrequency"]) => ({
-    url: `${base}${path}`,
-    lastModified: now,
-    changeFrequency: freq,
-    priority,
-    alternates: {
-      languages: {
-        en: `${base}${path}`,
-        ko: `${base}/ko${path}`,
-        "x-default": `${base}${path}`,
-      },
-    },
-  });
 
   const articleEntries: MetadataRoute.Sitemap = articles.map((a) => ({
     url: `${base}/news/${a.slug}`,
@@ -57,48 +64,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   return [
-    { url: base, lastModified: now, changeFrequency: "always", priority: 1 },
+    bi("/", 1, "daily"),
 
-    // Musk-ecosystem news hub (primary positioning) — localized en/ko.
-    newsLocalized("/news", 0.95, "daily"),
-    newsLocalized("/news/analysis", 0.85, "daily"),
-    newsLocalized("/news/earnings", 0.85, "daily"),
-    newsLocalized("/news/spacex", 0.85, "weekly"),
-    newsLocalized("/news/about", 0.6, "monthly"),
+    // Musk-ecosystem news hub (primary positioning).
+    bi("/news", 0.95, "daily"),
+    bi("/news/analysis", 0.85, "daily"),
+    bi("/news/earnings", 0.85, "daily"),
+    bi("/news/spacex", 0.85, "weekly"),
+    bi("/news/about", 0.6, "monthly"),
 
     ...articleEntries,
 
     // Core app sections.
-    { url: `${base}/insight`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
-    { url: `${base}/search`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${base}/kr`, lastModified: now, changeFrequency: "daily", priority: 0.7 },
-    { url: `${base}/safe`, lastModified: now, changeFrequency: "daily", priority: 0.7 },
-    { url: `${base}/kr-re`, lastModified: now, changeFrequency: "daily", priority: 0.7 },
+    bi("/insight", 0.8, "daily"),
+    bi("/search", 0.5, "weekly"),
+    bi("/kr", 0.7, "daily"),
+    bi("/safe", 0.7, "daily"),
+    bi("/kr-re", 0.7, "daily"),
 
     // Trust / legal.
-    { url: `${base}/more/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/more/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${base}/more/us-investing-guide`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/more/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/more/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
-    { url: `${base}/more/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
-    { url: `${base}/more/disclaimer`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
+    ...MORE_PAGES.map((p) => bi(`/more/${p}`, p === "about" || p === "us-investing-guide" ? 0.7 : 0.5, "monthly")),
 
     // Learn hub guides.
-    { url: `${base}/learn`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    ...LEARN_SLUGS.map((slug) => ({
-      url: `${base}/learn/${slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    })),
+    bi("/learn", 0.8, "weekly"),
+    ...LEARN_SLUGS.map((slug) => bi(`/learn/${slug}`, 0.6, "monthly")),
 
     // Stock pages — only tickers with real report coverage.
-    ...coveredTickers.map((sym) => ({
-      url: `${base}/stock/${sym}`,
-      lastModified: now,
-      changeFrequency: "daily" as const,
-      priority: ["NVDA", "TSLA", "AAPL", "MSFT", "AMZN", "META", "GOOGL"].includes(sym) ? 0.8 : 0.6,
-    })),
+    ...coveredTickers.map((sym) =>
+      bi(
+        `/stock/${sym}`,
+        ["NVDA", "TSLA", "AAPL", "MSFT", "AMZN", "META", "GOOGL"].includes(sym) ? 0.8 : 0.6,
+        "daily",
+      ),
+    ),
   ];
 }

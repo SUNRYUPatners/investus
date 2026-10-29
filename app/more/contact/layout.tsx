@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localizedAlternates } from "@/lib/localeMeta";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -32,17 +33,19 @@ const jsonLd = {
   }
 };
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
   title: "문의하기 — Investus 고객센터",
   description:
     "Investus 서비스 문의, 광고·제휴 문의. 이메일: sunryupatners@gmail.com · 전화: 010-3461-2916 · 주식회사 선류파트너스.",
-  alternates: { canonical: "https://www.investus.kr/more/contact" },
+  alternates: await localizedAlternates("/more/contact"),
   openGraph: {
     title: "문의하기 — Investus",
     description: "Investus 서비스 문의 · 광고·제휴 · 이메일 sunryupatners@gmail.com",
     url: "https://www.investus.kr/more/contact",
   },
-};
+  };
+}
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localizedAlternates } from "@/lib/localeMeta";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -18,17 +19,19 @@ const jsonLd = {
   },
 };
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
   title: "투자 유의사항 — Investus 법적 고지",
   description:
     "Investus 투자 유의사항. 원금 손실 위험, 정보 제공 목적 명시, 과거 수익률과 미래 성과, 투자 책임 귀속 안내. 자본시장법상 투자자문업 미인가 서비스.",
-  alternates: { canonical: "https://www.investus.kr/more/disclaimer" },
+  alternates: await localizedAlternates("/more/disclaimer"),
   openGraph: {
     title: "투자 유의사항 — Investus 법적 고지",
     description: "Investus 투자 유의사항 · 원금 손실 위험 · 정보 제공 목적 · 투자 책임",
     url: "https://www.investus.kr/more/disclaimer",
   },
-};
+  };
+}
 
 export default function DisclaimerLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localizedAlternates } from "@/lib/localeMeta";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -19,11 +20,12 @@ const jsonLd = {
   },
 };
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
   title: "인베스트어스 리포트 — 미국주식 투자 분석 | Investus Insight",
   description:
     "선류파트너스 CIO의 미국주식 투자 리포트. S&P500·NASDAQ·AI·반도체·바이오·매크로 분석. 종목분석·시장분석·어닝·BREAKING 뉴스를 매일 업데이트.",
-  alternates: { canonical: "https://www.investus.kr/insight" },
+  alternates: await localizedAlternates("/insight"),
   openGraph: {
     title: "인베스트어스 리포트 — 미국주식 투자 분석",
     description:
@@ -31,7 +33,8 @@ export const metadata: Metadata = {
     url: "https://www.investus.kr/insight",
     type: "website",
   },
-};
+  };
+}
 
 export default function InsightLayout({ children }: { children: React.ReactNode }) {
   return (
