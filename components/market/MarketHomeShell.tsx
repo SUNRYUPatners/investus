@@ -14,6 +14,8 @@ import { BuffettWidget } from "@/components/BuffettWidget";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { ReportFeed } from "@/components/ReportFeed";
+import { HomeFeedTabs } from "@/components/HomeFeedTabs";
+import type { HomeArticleCard } from "@/lib/homeArticleCard";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
 import { HomeAIInsight } from "@/components/HomeAIInsight";
@@ -42,10 +44,12 @@ export function MarketHomeShell({
   market,
   locale,
   initialData = null,
+  articles = [],
 }: {
   market: MarketId;
   locale: Locale;
   initialData?: MarketSnap;
+  articles?: HomeArticleCard[];
 }) {
   const cfg = getMarketConfig(market);
   const isUs = market === "us";
@@ -107,9 +111,11 @@ export function MarketHomeShell({
               <AdFitBanner />
             </section>
 
-            {/* 6. 리포트 — 핵심 콘텐츠 (모바일: 가로 스와이프) */}
+            {/* 6. 뉴스 / 리포트 탭 — 홈에서 애널·종토 탭을 대체. 탭 전환은 페이지를 떠나지 않음 */}
             <section className="pt-3 lg:pt-4">
-              <ReportFeed market={market} />
+              <HomeFeedTabs articles={articles}>
+                <ReportFeed market={market} />
+              </HomeFeedTabs>
             </section>
 
             {/* 7. 뉴스 — 모바일 전용 (데스크탑: 사이드바) */}

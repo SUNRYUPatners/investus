@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
+import { Header } from "@/components/Header";
 import type { Article, ArticleLocale } from "@/lib/articles";
 import { parseBody, pickText, tickerName } from "@/lib/articles";
 import { CATEGORY_STYLE } from "@/lib/reports";
@@ -71,6 +72,16 @@ function navItems(locale: L) {
   ];
 }
 
+/** Article pages keep the site Header so users can return home via the top nav. */
+export function ArticlePageFrame({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
+      <Header />
+      <main className="max-w-5xl mx-auto px-4 py-6">{children}</main>
+    </div>
+  );
+}
+
 export function NewsChrome({
   locale,
   altHref,
@@ -102,7 +113,7 @@ export function NewsChrome({
               <Link href={altHref} className="text-[12px] font-semibold hover:underline" style={{ color: "var(--mint)" }}>
                 {s.koVersion}
               </Link>
-              <Link href="/" className="text-[12px] hover:underline" style={{ color: "var(--muted)" }}>
+              <Link href={locale === "ko" ? "/ko" : "/"} className="text-[12px] hover:underline" style={{ color: "var(--muted)" }}>
                 {s.home}
               </Link>
             </div>

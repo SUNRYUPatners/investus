@@ -8,6 +8,7 @@ import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isMarketSessionOpen } from "@/lib/markets/hours";
 import { marketHref, parseMarketPath, type MarketTab } from "@/lib/markets/marketPath";
+import { localePath } from "@/lib/localePath";
 import { GuestStartButton } from "@/components/GuestStartButton";
 
 function useClock(timezone: string, market: ReturnType<typeof parseMarketPath>["market"]) {
@@ -49,13 +50,13 @@ export function DesktopSidebar() {
 
   const tabs: MarketTab[] = ["home", "search", "portfolio", "wall", "insight", "more"];
   const NAV = tabs.map((tabKey) => ({
-    href: marketHref(market, tabKey),
+    href: localePath(marketHref(market, tabKey), locale),
     emoji: tabKey === "home" ? "📊" : tabKey === "search" ? "🔍" : tabKey === "portfolio" ? "💼" : tabKey === "wall" ? "💬" : tabKey === "insight" ? "💡" : "···",
     label: tabKey === "home" ? t.nav.home : tabKey === "search" ? t.nav.search : tabKey === "portfolio" ? t.nav.portfolio : tabKey === "wall" ? t.nav.wall : tabKey === "insight" ? t.nav.insight : t.nav.more,
     tab: tabKey,
   }));
 
-  const homeHref = marketHref(market, "home");
+  const homeHref = localePath(marketHref(market, "home"), locale);
   const isUsBrand = market === "us";
 
   return (
@@ -94,7 +95,7 @@ export function DesktopSidebar() {
 
       <nav className="flex-1 px-3 py-4 overflow-y-auto">
         <Link
-          href="/news"
+          href={localePath("/news", locale)}
           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl mb-2 transition-all text-left"
           style={{ background: "rgba(var(--mint-rgb),0.14)", color: "var(--navy)" }}
         >
